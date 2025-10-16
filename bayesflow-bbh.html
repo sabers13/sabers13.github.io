@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Prism (syntax highlighting) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"
+          data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1/components/"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parameter Estimation of Black-Hole Binary Waveforms — BayesFlow (SBI) | Saber Sojudi</title>
+
+  <!-- Match existing pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Simulation-Based Inference (BayesFlow) for gravitational-wave BBH signals. End-to-end pipeline: simulate → preprocess → train → calibrated posteriors."/>
+  <meta property="og:title" content="Parameter Estimation of Black-Hole Binary Waveforms — BayesFlow (SBI)" />
+  <meta property="og:description" content="Conv1D+GRU summary network + CouplingFlow posterior; PSD whitening & anti-alias decimation; calibration diagnostics and reproducible training." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/gw-cover.jpg" />
+  <meta property="og:url" content="https://YOUR_DOMAIN/projects/bayesflow-gw.html" />
+  <link rel="icon" href="../assets/favicon.png"/>
+
+  <style>
+    /* BLUE skill icons after Feather swaps <i> → <svg> */
+    .chip svg, .chip [data-feather]{ color:#2563eb !important; stroke:#2563eb !important; }
+
+    /* End buttons left aligned */
+    .end-actions{ display:flex; flex-wrap:wrap; gap:.75rem; justify-content:flex-start; }
+
+    /* Two-column section grid */
+    .section-grid{ display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    @media (max-width: 1024px){ .section-grid{ grid-template-columns:1fr; } }
+
+    /* Card look to match site */
+    .card-white{ background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:16px; }
+
+    /* Code block sizing for 2-col layout + theme */
+    pre.code, pre[class*="language-"]{
+      font-size:12.5px; line-height:1.45;
+      background:#0b1021; color:#e6edf3; padding:16px 18px; border-radius:12px;
+      overflow:auto; border:1px solid rgba(148,163,184,.25);
+      box-shadow: 0 6px 18px rgba(2,8,23,.15);
+    }
+    @media (max-width: 1024px){
+      pre.code, pre[class*="language-"]{ font-size:13.5px; }
+    }
+    .token.comment,.token.prolog,.token.doctype { color:#94a3b8; }
+    .token.keyword { color:#7aa2f7; }
+    .token.function { color:#c099ff; }
+    .token.number,.token.boolean { color:#f7768e; }
+    .token.string { color:#9ece6a; }
+    .token.operator { color:#89ddff; }
+
+    /* Clamp (collapse/expand) */
+    .clamp{ max-height: 18rem; }
+    .code-wrap { position: relative; }
+    .code-overlay {
+      content: ""; position:absolute; left:0; right:0; bottom:0; height:5rem;
+      background: linear-gradient(to bottom, rgba(11,16,33,0) 0%, #0b1021 65%);
+      border-bottom-left-radius:12px; border-bottom-right-radius:12px; pointer-events:none;
+    }
+    .expand-btn {
+      position:absolute; right:14px; bottom:10px; z-index:2; font-size:.85rem; padding:.35rem .6rem;
+      border-radius:8px; background:#111827; color:#fff; border:1px solid rgba(148,163,184,.35);
+    }
+    .expand-btn:hover { background:#0f172a; }
+
+    /* Media cards / gallery */
+    .media-card { background:#fff; border:1px solid rgba(100,116,139,.18); border-radius:16px; padding:.75rem; }
+    .media-card img { width:100%; height:auto; object-fit:cover; border-radius:12px; }
+
+    /* Simple chips (skills) */
+    .chip{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.45rem .9rem; border-radius:999px;
+      background:#fff; border:1px solid #e5e7eb; color:#1f2937;
+      font-weight:600; box-shadow:0 1px 2px rgba(2,8,23,.04);
+    }
+
+    /* Buttons (match your screenshots) */
+    .btnx{ display:inline-flex; align-items:center; gap:.55rem;
+           padding:.625rem 1rem; border-radius:.75rem; font-weight:700;
+           transition:transform .06s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+    .btnx:hover{ transform:translateY(-1px); }
+    .btnx-dark{ background:#0f172a; color:#fff; border:1px solid #0f172a; }
+    .btnx-dark:hover{ background:#0b1324; }
+    .btnx-outline{ background:#fff; color:#1d4ed8; border:1.5px solid #2563eb; }
+    .btnx-outline:hover{ background:#eef2ff; }
+    .btnx-blue{ background:#2563eb; color:#fff; border:1px solid #2563eb; }
+    .btnx-blue:hover{ background:#1e40af; }
+    .btnx-gradient{ background:linear-gradient(180deg,#3b82f6,#2563eb); color:#fff; border:1px solid #1d4ed8; }
+    .btnx-gradient:hover{ filter:brightness(.96); }
+
+    /* Fixed-header safe scroll */
+    html { scroll-padding-top: 96px; }
+    section[id] { scroll-margin-top: 96px; }
+
+    /* Header link underline (like other pages) */
+    .nav-link{ position: relative; font-size: 1rem; line-height: 1.5rem; color: #374151; }
+    .nav-link::after{
+      content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; width:0;
+      background-color:#3b82f6; transition:width .3s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after{ width:100%; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="../index.html" class="text-xl font-bold text-blue-600">Saber Sojudi</a>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#overview"  class="nav-link">Overview</a>
+          <a href="#pipeline"  class="nav-link">Data Pipeline</a>
+          <a href="#training"  class="nav-link">Training & Validation</a>
+          <a href="#results"   class="nav-link">Results</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="../index.html"
+             class="inline-flex items-center px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+             title="Back to main page">
+            <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i>
+            <span class="hidden sm:inline">Back</span>
+          </a>
+          <button id="menuBtn" class="md:hidden text-gray-700" aria-label="Open Menu">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div id="mobileMenu" class="md:hidden mt-3 hidden">
+        <div class="flex flex-col space-y-3">
+          <a href="#overview"  class="nav-link">Overview</a>
+          <a href="#pipeline"  class="nav-link">Data Pipeline</a>
+          <a href="#training"  class="nav-link">Training & Validation</a>
+          <a href="#results"   class="nav-link">Results</a>
+          <a href="../index.html#projects" class="nav-link">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10">
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview" class="pt-28 pb-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- LEFT: text -->
+          <div data-aos="fade-right">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">
+              Parameter Estimation of Black-Hole Binary Waveforms — BayesFlow (SBI)
+            </h1>
+
+            <p class="mt-3 text-slate-600 max-w-2xl">
+              End-to-end <strong>simulation-based inference</strong> for gravitational-wave signals. I simulate BBH
+              waveforms with <strong>PyCBC</strong>, add PSD-colored noise, whiten/decimate, and train a
+              <strong>BayesFlow</strong> model (Conv1D+GRU summary → <em>CouplingFlow</em> posterior) to infer
+              <code>[m1, m2, χ1, χ2, D, ι]</code> with <strong>calibrated uncertainty</strong>.
+            </p>
+
+            <p class="mt-3 text-slate-700 max-w-2xl">
+              Because public, labeled GW data are limited, I <strong>generate realistic waveforms</strong> from
+              first-principles simulators under <strong>reasonable astrophysical priors</strong> and detector noise models.
+              Classic ML regressors only provide point estimates; <strong>BayesFlow SBI</strong> learns
+              <em>full posteriors</em>—capturing <strong>uncertainty</strong>, <strong>multi-modality</strong>, and
+              <strong>parameter correlations</strong> efficiently.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip"><i data-feather="cpu" class="w-4 h-4 text-blue-600"></i> Python</span>
+              <span class="chip"><i data-feather="layers" class="w-4 h-4 text-blue-600"></i> Deep learning</span>
+              <span class="chip"><i data-feather="box" class="w-4 h-4 text-blue-600"></i> TensorFlow/Keras</span>
+              <span class="chip"><i data-feather="database" class="w-4 h-4 text-blue-600"></i> NumPy</span>
+              <span class="chip"><i data-feather="cloud-lightning" class="w-4 h-4 text-blue-600"></i> Google Colab</span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow"
+                 target="_blank" rel="noopener" class="btnx btnx-dark">
+                <i data-feather="github" class="w-5 h-5"></i> View on GitHub
+              </a>
+              <a href="https://colab.research.google.com/github/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/SBI_gw.ipynb"
+                 target="_blank" rel="noopener" class="btnx btnx-blue">
+                <i data-feather="play" class="w-5 h-5"></i> Open in Colab
+              </a>
+              <a href="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Complete%20Report.pdf"
+                 target="_blank" rel="noopener" class="btnx btnx-outline">
+                <i data-feather="file-text" class="w-5 h-5"></i> Full Report (PDF)
+              </a>
+              <a href="../index.html#contact" class="btnx btnx-gradient">
+                <i data-feather="briefcase" class="w-5 h-5"></i> Hire Me
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: single beautiful image + code map under it -->
+          <div data-aos="fade-left">
+            <figure class="media-card">
+              <!-- Replace with your image -->
+              <img src="https://imgsrv2.voi.id/QRznHSRVeXMavh6nNhcY9kkZgb0KoXmYPFuGpRDIQ_4/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8xNDI3NDIvMjAyMjAzMDgxNTIzLW1haW4uanBn.jpg" alt="Artistic visualization of a black-hole binary">
+            </figure>
+
+            <!-- Code Map under the image -->
+            <div class="card-white mt-4">
+              <p class="font-semibold text-slate-800 mb-2">Code Map (project structure)</p>
+              <pre class="code language-text"><code>.
+├── priors.py                      # Physics-informed parameter priors (m1, m2, spins, D, ι)
+├── simulator.py                   # PyCBC waveform + PSD-colored noise + whitening
+├── generate_shard.py              # Decimate 4096→1024 Hz + write NPZ shards
+├── merge_shards.py                # Merge shards → split → scale θ → save datasets + scaler
+├── train_gw_bayesflow_down4_pf2_float32.py
+│   └─ Conv1D+GRU summary → CouplingFlow posterior + AdamW + warmup→cosine
+├── gw_bayesflow_diagnostics_down4_pf2.py
+│   └─ Posterior sampling + rank/ECDF calibration + z-score QQ/hist
+├── plot_loss_trajectory.py        # CSV/NPY → smooth loss curves (moving averages)
+└── SBI_gw.ipynb                   # Colab: data → training → diagnostics end-to-end
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DATA PIPELINE ============ -->
+    <section id="pipeline" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Data Pipeline (simulate → preprocess → dataset)</h2>
+        <p class="text-slate-700 mb-3">
+          I generate paired examples <em>(x, θ)</em> end-to-end: sample physics-informed priors for
+          <code>θ = [m1, m2, χ1, χ2, D, ι]</code>, simulate BBH strain with <strong>PyCBC</strong>, inject PSD-colored
+          noise, then <strong>whiten (freq-domain)</strong>, <strong>decimate 4096→1024 Hz</strong>, and serialize to
+          <strong>NPZ</strong> with fixed splits for reproducible experiments.
+        </p>
+        <ul class="list-disc list-inside text-slate-700 mb-4">
+          <li>Priors → <strong>PyCBC</strong> waveform → PSD-colored noise</li>
+          <li><strong>Whitening → anti-alias decimation → standardization</strong></li>
+          <li>NPZ dataset + metadata; <strong>train/val</strong> split; fixed RNG seeds</li>
+        </ul>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">A) Prior sampler</p>
+            <p class="text-slate-700">Physics-informed priors (power-law masses, spins uniform, D uniform in volume, isotropic ι).</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import numpy as np, pandas as pd
+
+def sample_prior(n_samples, *, alpha=0.0,
+                 m_min=5.0, m_max=80.0,
+                 D_min=100.0, D_max=2000.0,
+                 rng_seed=None):
+    rng = np.random.default_rng(rng_seed)
+
+    # Primary mass m1: uniform or power-law p(m1) ∝ m1^{-α}
+    if np.isclose(alpha, 0.0):
+        m1 = rng.uniform(m_min, m_max, n_samples)
+    else:
+        expo = 1.0 - alpha
+        u = rng.random(n_samples)
+        m1 = (u*(m_max**expo - m_min**expo) + m_min**expo) ** (1.0/expo)
+
+    # Secondary mass m2 ≤ m1
+    m2 = rng.uniform(m_min, m1)
+
+    # Spins, distance (uniform in volume), isotropic inclination
+    chi1 = rng.uniform(0.0, 0.99, n_samples)
+    chi2 = rng.uniform(0.0, 0.99, n_samples)
+    uV   = rng.random(n_samples)
+    D    = (D_min**3 + uV*(D_max**3 - D_min**3)) ** (1.0/3.0)   # ∝ D^2
+    inc  = np.arccos(rng.uniform(-1.0, 1.0, n_samples))
+
+    return pd.DataFrame({
+        "m1": m1.astype(np.float32), "m2": m2.astype(np.float32),
+        "chi1": chi1.astype(np.float32), "chi2": chi2.astype(np.float32),
+        "D": D.astype(np.float32), "inc": inc.astype(np.float32)
+    })</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">B) Simulator & whitening</p>
+            <p class="text-slate-700">IMRPhenomD waveform + aLIGO PSD noise; min-SNR control; circular shift; PSD whitening.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import numpy as np, pandas as pd
+from pycbc.waveform import get_td_waveform
+from pycbc.noise    import noise_from_psd
+from pycbc.psd      import aLIGOZeroDetHighPower
+from pycbc.types    import TimeSeries, FrequencySeries
+
+DELTA_T  = np.float32(1/4096)
+DURATION = np.float32(8.0)
+F_LOWER  = 40.0
+N        = int(DURATION/DELTA_T)
+
+def _make_psd(nfft):
+    psd = aLIGOZeroDetHighPower(nfft, 1.0/float(DELTA_T), 20.0)
+    return psd.astype(np.float64)
+
+def _whiten(x: TimeSeries, sigma=1.0) -> TimeSeries:
+    Xf = x.to_frequencyseries()
+    psd = _make_psd(len(Xf))
+    Wf  = FrequencySeries(Xf.numpy() / np.sqrt(psd.numpy()/2.0), delta_f=Xf.delta_f)
+    y   = Wf.to_timeseries()[:len(x)]
+    y   = y / (float(y.std())/float(sigma))
+    y._delta_t = x.delta_t
+    return y.astype(np.float32)
+
+_CAL = 1.0  # one-time calibration so whitened noise has σ≈1
+
+def simulate_event(theta: pd.Series, seed=None, *, min_snr=8.0, snr_jitter=None) -> TimeSeries:
+    rng = np.random.default_rng(seed)
+
+    # 1) Clean signal (preserve distance amplitude)
+    hp, _ = get_td_waveform(
+        approximant="IMRPhenomD",
+        mass1=float(theta.m1), mass2=float(theta.m2),
+        spin1z=float(theta.chi1), spin2z=float(theta.chi2),
+        distance=float(theta.D), inclination=float(theta.inc),
+        delta_t=float(DELTA_T), f_lower=F_LOWER
+    )
+    h = hp.astype(np.float32)
+    h = (h[:N] if len(h) >= N else TimeSeries(np.pad(h.numpy(), (0, N-len(h))), delta_t=DELTA_T))
+
+    # 2) PSD-colored noise; enforce min SNR by scaling NOISE (not the signal)
+    noise = noise_from_psd(N, DELTA_T, _make_psd(N//2+1), seed=seed).astype(np.float32)
+    def _opt_snr(sig):
+        return float(np.sqrt((sig.numpy()**2).sum() / (noise.numpy()**2).sum()) * 10.0)
+
+    clean_snr = _opt_snr(h)
+    noise_scale = 1.0
+    if (min_snr is not None) and (clean_snr > 0) and (clean_snr < min_snr):
+        noise_scale = clean_snr / float(min_snr)
+    if snr_jitter is not None and clean_snr > 0:
+        lo, hi = snr_jitter
+        target = float(rng.uniform(lo, hi))
+        noise_scale = min(noise_scale, clean_snr / target)
+    noise *= np.float32(noise_scale)
+
+    # 3) Mix, random circular shift, whiten
+    x = h + noise
+    shift = int(rng.integers(0, N))
+    x = TimeSeries(np.roll(x.numpy(), shift).astype(np.float32), delta_t=DELTA_T)
+    return _whiten(x, _CAL)</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">C) Anti-alias decimation & sharding</p>
+            <p class="text-slate-700">Two-stage ×2 decimation 4096→1024 Hz via resample_poly; shard NPZ writer.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import numpy as np
+from scipy.signal import resample_poly, windows
+
+KAISER_BETA = 12.0
+PAD_SAMPLES = 1024
+TAPER_ALPHA = 0.02
+FS_IN, FS_OUT, DURATION = 4096, 1024, 8.0
+T = int(FS_OUT * DURATION)  # 8192
+
+def _taper_ends(x, alpha=TAPER_ALPHA):
+    if alpha <= 0.0: return x
+    return (x * windows.tukey(len(x), alpha=alpha, sym=True)).astype(np.float64, copy=False)
+
+def _pad_edges(x, pad=PAD_SAMPLES):
+    return np.pad(x, (pad, pad), mode="constant") if pad > 0 else x
+
+def _trim_edges(y, down, pad=PAD_SAMPLES):
+    s = (pad // down) if pad > 0 else 0
+    return y[s:-s] if s > 0 else y
+
+def _decimate_x2(x):
+    y = _taper_ends(_pad_edges(x))
+    y = resample_poly(y, up=1, down=2, window=("kaiser", KAISER_BETA))
+    y = _trim_edges(y, down=2)
+    return y
+
+def decimate_4096_to_1024(x4096: np.ndarray) -> np.ndarray:
+    y = _decimate_x2(x4096)  # 4096 → 2048
+    y = _decimate_x2(y)      # 2048 → 1024
+    return y.astype(np.float32)
+
+# simulate_event(θ) → x4096
+# y = decimate_4096_to_1024(x4096) → shape (8192,)
+# save shards: parameters (N,6), waveforms (N,1,8192)</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">D) Merge → split → scale → save</p>
+            <p class="text-slate-700">Concatenate shards, fixed split, StandardScaler(θ), save datasets + fitted scaler.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>from pathlib import Path
+import numpy as np, pickle
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+RAW_DIR, OUT_DIR = Path("datasets/raw"), Path("datasets")
+PREFIX = "gw_bbh_down4"
+
+def load_all():
+    xs, thetas = [], []
+    for p in sorted(RAW_DIR.glob(f"{PREFIX}_shard*.npz")):
+        data = np.load(p)
+        xs.append(data["waveforms"])      # (N, 1, 8192) float32
+        thetas.append(data["parameters"]) # (N, 6)       float32
+    return np.concatenate(xs, 0), np.concatenate(thetas, 0)
+
+def main():
+    X, θ = load_all()
+    X = X.astype(np.float32, copy=False)
+    θ = θ.astype(np.float32, copy=False)
+
+    X_train, X_val, θ_train, θ_val = train_test_split(X, θ, test_size=4000, random_state=42, shuffle=True)
+
+    scaler = StandardScaler().fit(θ_train)
+    θ_train = scaler.transform(θ_train).astype(np.float32)
+    θ_val   = scaler.transform(θ_val).astype(np.float32)
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(OUT_DIR / f"{PREFIX}_train.npz", parameters=θ_train, waveforms=X_train)
+    np.savez_compressed(OUT_DIR / f"{PREFIX}_val.npz",   parameters=θ_val,   waveforms=X_val)
+    with open(OUT_DIR / f"{PREFIX}_param_scaler.pkl", "wb") as f:
+        pickle.dump(scaler, f)
+
+if __name__ == "__main__":
+    main()</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRAINING & VALIDATION ============ -->
+    <section id="training" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Training & Validation</h2>
+        <p class="text-slate-700 mb-3">
+          Conv1D+GRU summary network encodes <em>x</em>; a CouplingFlow models <em>p(θ|x)</em>. NLL + AdamW, warm-up → cosine LR,
+          early stopping, gradient clipping. Validate with rank/ECDF calibration, coverage, and NRMSE.
+        </p>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">1) Mean-pool ×2 + standardize (save scaler)</p>
+            <p class="text-slate-700">Downsample by mean-pool ×2; standardize with TRAIN stats; persist scaler artifact.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import json, numpy as np
+POOL_FACTOR = 2
+
+def mean_pool_1d(arr, k):
+    N, T, C = arr.shape
+    cut = (T // k) * k
+    if cut != T: arr = arr[:, :cut, :]
+    return arr.reshape(N, cut // k, k, C).mean(axis=2, dtype=np.float32)
+
+x_train = mean_pool_1d(x_train, POOL_FACTOR)
+x_val   = mean_pool_1d(x_val,   POOL_FACTOR)
+
+def per_channel_standardise(x, mean=None, std=None):
+    if mean is None or std is None:
+        mean = x.mean(axis=(0,1), keepdims=True, dtype=np.float64)
+        std  = x.std(axis=(0,1),  keepdims=True, dtype=np.float64) + 1e-8
+    x = (x - mean) / std
+    return x.astype(np.float32), mean.squeeze(), std.squeeze()
+
+x_train, wmean, wstd = per_channel_standardise(x_train)
+x_val,   _,    _     = per_channel_standardise(x_val, wmean[None,None,...], wstd[None,None,...])
+np.savez(SCALER_NPZ, mean=wmean.astype(np.float32), std=wstd.astype(np.float32))</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">2) Model → Conv1D + GRU → CouplingFlow</p>
+            <p class="text-slate-700">TimeSeriesNetwork + CouplingFlow (depth 4, affine, permute, actnorm).</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>from bayesflow.networks import TimeSeriesNetwork, CouplingFlow
+
+summary_net = TimeSeriesNetwork(
+    summary_dim   = 64,
+    filters       = (48, 64, 96, 128),
+    kernel_sizes  = (5, 5, 3, 3),
+    recurrent_dim = 128,
+    bidirectional = False,
+    dropout       = 0.35,
+)
+
+invertible_net = CouplingFlow(
+    depth       = 4,
+    transform   = "affine",
+    permutation = "random",
+    use_actnorm = True,
+)</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">3) AdamW + warm-up → cosine (clipnorm)</p>
+            <p class="text-slate-700">AdamW, weight decay, clipnorm=1.0; WarmUpCosine schedule (~5% warm-up).</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import tensorflow as tf
+from tensorflow import keras
+
+EPOCHS, BATCH_SIZE = 80, 64
+steps_per_epoch = max(1, len(x_train) // BATCH_SIZE)
+total_steps     = EPOCHS * steps_per_epoch
+warmup_steps    = int(0.05 * total_steps)
+
+class WarmUpCosine(tf.keras.optimizers.schedules.LearningRateSchedule):
+    def __init__(self, base_lr, warmup_steps, total_steps, final_lr_ratio=5e-3):
+        super().__init__()
+        self.base_lr = tf.convert_to_tensor(float(base_lr), dtype=tf.float32)
+        self.warmup_steps = tf.cast(int(warmup_steps), tf.float32)
+        self.total_steps  = tf.cast(int(total_steps),  tf.float32)
+        self.cosine_decay = tf.keras.optimizers.schedules.CosineDecay(
+            initial_learning_rate=float(base_lr),
+            decay_steps=int(total_steps) - int(warmup_steps),
+            alpha=float(final_lr_ratio),
+        )
+    def __call__(self, step):
+        step = tf.cast(step, tf.float32)
+        warm = self.base_lr * (step / tf.maximum(1.0, self.warmup_steps))
+        cos  = self.cosine_decay(tf.cast(step - self.warmup_steps, tf.int64))
+        return tf.where(step &lt; self.warmup_steps, warm, cos)
+
+lr_schedule = WarmUpCosine(base_lr=3e-4, warmup_steps=warmup_steps, total_steps=total_steps)
+optimizer   = keras.optimizers.AdamW(learning_rate=lr_schedule, weight_decay=1e-4, clipnorm=1.0)</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 mb-2">4) Workflow, callbacks, and fitting</p>
+            <p class="text-slate-700">BasicWorkflow + EarlyStopping, Checkpoint(best .keras), CSVLogger, TerminateOnNaN.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>import bayesflow as bf, numpy as np
+from bayesflow.adapters import Adapter
+
+adapter = Adapter().rename("waveforms", "summary_variables").to_array()
+workflow = bf.workflows.BasicWorkflow(
+    adapter             = adapter,
+    summary_network     = summary_net,
+    invertible_network  = invertible_net,
+    optimizer           = optimizer,
+    inference_variables = ["inference_variables"],
+    summary_variables   = ["summary_variables"],
+)
+
+early = keras.callbacks.EarlyStopping(monitor="val_loss", patience=8, restore_best_weights=True)
+ckpt  = keras.callbacks.ModelCheckpoint(filepath=SAVE_PATH, monitor="val_loss", save_best_only=True, verbose=1)
+csv   = keras.callbacks.CSVLogger(HIST_CSV, append=False)
+nan   = keras.callbacks.TerminateOnNaN()
+
+history = workflow.fit_offline(
+    data            = {"waveforms": x_train, "inference_variables": theta_train},
+    validation_data = {"waveforms": x_val,   "inference_variables": theta_val},
+    epochs          = EPOCHS, batch_size = BATCH_SIZE,
+    callbacks       = [early, ckpt, csv, nan], verbose = 1,
+)
+np.save(HIST_NPY, {k: np.array(v) for k, v in history.history.items()}, allow_pickle=True)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS + HOW TO RUN ============ -->
+    <section id="results" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Results + How to Run & Skills</h2>
+        <p class="text-slate-700">
+          On held-out examples, posteriors <strong>contract around ground-truth</strong> as SNR rises. Calibration looks healthy:
+          rank histograms ~flat, ECDF near the diagonal, and z-score QQ/histograms close to <em>N(0,1)</em>. Loss curves are smooth.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4 mt-4">
+          <figure class="media-card">
+            <img src="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/Calibration.png?raw=true" data-zoom="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/Calibration.png?raw=true" alt="Rank histogram" />
+            <figcaption class="text-slate-500 text-xs mt-1 text-center">Calibration (rank histogram)</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/ECDF.png?raw=true" data-zoom="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/ECDF.png?raw=true" alt="ECDF difference" />
+            <figcaption class="text-slate-500 text-xs mt-1 text-center">ECDF calibration (95% bands)</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/z-score%20histograms.png?raw=true" data-zoom="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/z-score%20histograms.png?raw=true" alt="z-score histograms" />
+            <figcaption class="text-slate-500 text-xs mt-1 text-center">z-score histograms</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/z-score%20QQ%20plots.png?raw=true" data-zoom="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/z-score%20QQ%20plots.png?raw=true" alt="z-score QQ" />
+            <figcaption class="text-slate-500 text-xs mt-1 text-center">z-score QQ plots</figcaption>
+          </figure>
+          <figure class="media-card md:col-span-2">
+            <img src="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/Loss%20trajectory.png?raw=true" data-zoom="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow/blob/main/Results/Loss%20trajectory.png?raw=true" alt="Loss trajectory" />
+            <figcaption class="text-slate-500 text-xs mt-1 text-center">Training/Validation loss (raw + moving averages)</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-grid mt-8">
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 m-0 mb-2">A) Diagnostics pipeline</p>
+            <p class="text-slate-700">Restore model, apply preprocessing, sample posteriors, then render rank hist/ECDF and z-score QQ/hist plots.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code># gw_bayesflow_diagnostics_down4_pf2.py — highlights
+val       = np.load(VAL_PATH)
+theta_val = val["parameters"].astype(np.float32)
+x_val     = val["waveforms"].astype(np.float32)
+
+# channels-last & mean-pool ×2
+if x_val.ndim == 3 and x_val.shape[1] == 1: x_val = np.transpose(x_val, (0, 2, 1))
+elif x_val.ndim == 2: x_val = x_val[:, :, None]
+def mean_pool_1d(arr, k):
+    N, T, C = arr.shape; cut = (T // k) * k
+    if cut != T: arr = arr[:, :cut, :]
+    return arr.reshape(N, cut // k, k, C).mean(axis=2, dtype=np.float32)
+x_val = mean_pool_1d(x_val, k=2)
+
+# standardize with TRAIN scaler
+sc = np.load(SCALER_NPZ)
+mean, std = sc["mean"][None,None,:], sc["std"][None,None,:]
+x_val = ((x_val - mean) / std).astype(np.float32)
+
+# restore & sample
+adapter  = Adapter().rename("waveforms", "summary_variables").to_array()
+workflow = BasicWorkflow(adapter=adapter, optimizer=None)
+workflow.approximator = keras.saving.load_model(MODEL_PATH, compile=False)
+idx     = np.random.default_rng(42).choice(len(x_val), 300, replace=False)
+samples = workflow.sample(num_samples=1_000, conditions={"waveforms": x_val[idx]})["inference_variables"]
+
+# diagnostics
+plots.calibration_histogram(samples, theta_val[idx])
+figs = workflow.plot_default_diagnostics(
+  test_data={"waveforms": x_val[idx], "inference_variables": theta_val[idx]},
+  calibration_ecdf_kwargs={"difference": True, "figsize": (15,3)}
+)</code></pre>
+            </div>
+          </div>
+
+          <div class="card-white">
+            <p class="font-semibold text-slate-800 m-0 mb-2">B) Loss trajectory (raw points + moving averages)</p>
+            <p class="text-slate-700">Read CSVLogger / .npy history and draw a clean loss trajectory with centered moving averages.</p>
+            <div class="code-wrap">
+<pre class="code language-python"><code>def moving_average(x, window):
+    x = np.asarray(x, dtype=float)
+    if window &lt; 2: return x
+    w = int(window) | 1
+    mask = ~np.isnan(x)
+    num = np.convolve(np.where(mask, x, 0.0), np.ones(w), mode="same")
+    den = np.convolve(mask.astype(float), np.ones(w), mode="same")
+    return np.divide(num, np.maximum(den, 1e-12))
+
+# load loss + val_loss; pick ~5% window
+df = pd.read_csv(csv_path)  # fallback to npy if needed
+loss, val_loss = df["loss"].to_numpy(), df.get("val_loss", pd.Series(np.nan)).to_numpy()
+win = max(5, int(round(0.05 * len(loss))) | 1)
+
+plt.figure(figsize=(16,4))
+plt.plot(loss, "o", ms=3, lw=1, alpha=.35, label="Training")
+if val_loss.size: plt.plot(val_loss, "o--", ms=3, lw=1, alpha=.25, label="Validation")
+plt.plot(moving_average(loss, win), lw=2.5, label="Training (Moving Average)")
+if val_loss.size: plt.plot(moving_average(val_loss, win), "--", lw=2.5, label="Validation (Moving Average)")
+plt.title("Loss Trajectory"); plt.xlabel("Training epoch #"); plt.grid(axis="y", alpha:.25); plt.legend(); plt.tight_layout()</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-2">How to run</h3>
+<pre class="code language-bash"><code># 1) Build dataset shards → merge
+python generate_shard.py
+python merge_shards.py
+
+# 2) Train BayesFlow model
+python train_gw_bayesflow_down4_pf2_float32.py
+
+# 3) Diagnostics & plots
+python gw_bayesflow_diagnostics_down4_pf2.py
+python plot_loss_trajectory.py</code></pre>
+
+        <p class="text-slate-700 mt-3"><strong>Skills shown:</strong> Simulation-Based Inference, normalizing flows (CouplingFlow), TensorFlow/Keras, PSD whitening & anti-alias decimation, uncertainty calibration (rank/ECDF, z-normality), reproducible ML ops.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- End buttons (left aligned) -->
+  <section class="py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="end-actions">
+        <a href="../index.html#contact" class="btnx btnx-gradient">
+          <i data-feather="briefcase" class="w-5 h-5"></i> Hire Me
+        </a>
+        <a href="https://github.com/sabers13/Parameter-Estimation-of-Black-Hole-Binary-Waveforms-using-BayesFlow"
+           target="_blank" rel="noopener" class="btnx btnx-dark">
+          <i data-feather="github" class="w-5 h-5"></i> Repository
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-10 mt-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p>&copy; 2025 Saber Sojudi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Global Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[80] hidden">
+    <button class="absolute top-4 right-4 bg-white/95 hover:bg-white text-slate-900 rounded-full p-2 shadow" data-close aria-label="Close">
+      <i data-feather="x" class="w-5 h-5"></i>
+    </button>
+    <div class="w-full h-full flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="" class="max-w-7xl max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-lg bg-white">
+    </div>
+  </div>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll with offset for fixed header
+    function smoothTo(id){
+      const el = document.querySelector(id);
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        e.preventDefault();
+        smoothTo(href);
+        if (menu && !menu.classList.contains('hidden')) menu.classList.add('hidden');
+      });
+    });
+
+    // Active link underline while scrolling
+    const ids  = ['#overview','#pipeline','#training','#results'];
+    const secs = ids.map(i=>document.querySelector(i)).filter(Boolean);
+    const links = Array.from(document.querySelectorAll('.nav-link')).filter(l=>ids.includes(l.getAttribute('href')));
+    function setActive(){
+      let current = secs[0];
+      for (const s of secs){ if (s.getBoundingClientRect().top - 110 <= 0) current = s; }
+      links.forEach(l=> l.classList.toggle('active', l.getAttribute('href') === '#'+current.id));
+    }
+    document.addEventListener('scroll', setActive, { passive:true });
+    window.addEventListener('load', setActive);
+
+    // Collapsible long code blocks (expand/collapse)
+    const MAX = 320; // px
+    document.querySelectorAll('pre.code, pre[class*="language-"]').forEach(pre=>{
+      const wrap = pre.closest('.code-wrap') || pre.parentElement;
+      wrap.classList.add('code-wrap');
+      requestAnimationFrame(()=>{
+        if (pre.scrollHeight > MAX) {
+          pre.classList.add('clamp');
+          const overlay = document.createElement('div');
+          overlay.className = 'code-overlay';
+          wrap.appendChild(overlay);
+          const b = document.createElement('button');
+          b.className = 'expand-btn';
+          b.textContent = 'Expand';
+          b.addEventListener('click', ()=>{
+            const expanded = !pre.classList.contains('clamp');
+            pre.classList.toggle('clamp');
+            overlay.style.display = expanded ? 'block' : 'none';
+            b.textContent = expanded ? 'Expand' : 'Collapse';
+          });
+          wrap.appendChild(b);
+        }
+      });
+    });
+
+    // Lightbox — click ANY <img> with data-zoom
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const close = lb.querySelector('[data-close]');
+
+      document.addEventListener('click', (e)=>{
+        const pic = e.target.closest('img');
+        if(!pic || pic.closest('#lightbox')) return;
+        const src = pic.getAttribute('data-zoom') || pic.getAttribute('src');
+        if(!src) return;
+        img.src = src;
+        lb.classList.remove('hidden');
+      });
+
+      close.addEventListener('click', ()=> lb.classList.add('hidden'));
+      lb.addEventListener('click', (e)=> { if(e.target===lb) lb.classList.add('hidden'); });
+      document.addEventListener('keydown', (e)=> { if(e.key==='Escape') lb.classList.add('hidden'); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Prism (syntax highlighting) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"
+          data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1/components/"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management System — Python + SQL | Saber Sojudi</title>
+
+  <!-- Match existing pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Library Management System built with Python (Tkinter) and SQL Server. Role-based auth, CRUD for books & members, borrow/return transactions, subscriptions, and admin tools. Highlights: parameterized SQL, data validation, and Python↔SQL integration."/>
+  <meta property="og:title" content="Library Management System — Python + SQL" />
+  <meta property="og:description" content="Role-based auth, CRUD, circulation workflows, and membership controls. Parameterized SQL and clean Python data access." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/library/cover.jpg" />
+  <meta property="og:url" content="https://YOUR_DOMAIN/projects/library-management.html" />
+  <link rel="icon" href="../assets/favicon.png"/>
+
+  <style>
+    /* Fixed-header safe scroll */
+    html { scroll-padding-top: 96px; }
+    section[id] { scroll-margin-top: 96px; }
+
+    /* Header link underline like other pages */
+    .nav-link{ position:relative; color:#374151; }
+    .nav-link::after{
+      content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; width:0;
+      background-color:#3b82f6; transition:width .3s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after{ width:100%; }
+
+    /* Chips */
+    .chip{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.45rem .9rem; border-radius:999px;
+      background:#fff; border:1px solid #e5e7eb; color:#1f2937;
+      font-weight:600; box-shadow:0 1px 2px rgba(2,8,23,.04);
+    }
+    .chip svg, .chip [data-feather]{ color:#2563eb !important; stroke:#2563eb !important; }
+
+    /* Cards */
+    .card-white{ background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:16px; }
+
+    /* Code blocks (dark) */
+    pre.code, pre[class*="language-"]{
+      font-size:12.5px; line-height:1.5;
+      background:#0b1021; color:#e6edf3; padding:16px 18px; border-radius:12px;
+      overflow:auto; border:1px solid rgba(148,163,184,.25);
+      box-shadow: 0 6px 18px rgba(2,8,23,.15);
+    }
+    .token.comment,.token.prolog,.token.doctype { color:#94a3b8; }
+    .token.keyword { color:#7aa2f7; }
+    .token.function { color:#c099ff; }
+    .token.number,.token.boolean { color:#f7768e; }
+    .token.string { color:#9ece6a; }
+    .token.operator { color:#89ddff; }
+
+    /* Clamp (expand/collapse) */
+    .clamp{ max-height: 20rem; }
+    .code-wrap { position: relative; }
+    .code-overlay {
+      content: ""; position:absolute; left:0; right:0; bottom:0; height:5rem;
+      background: linear-gradient(to bottom, rgba(11,16,33,0) 0%, #0b1021 65%);
+      border-bottom-left-radius:12px; border-bottom-right-radius:12px; pointer-events:none;
+    }
+    .expand-btn {
+      position:absolute; right:14px; bottom:10px; z-index:2; font-size:.85rem; padding:.35rem .6rem;
+      border-radius:8px; background:#111827; color:#fff; border:1px solid rgba(148,163,184,.35);
+    }
+    .expand-btn:hover { background:#0f172a; }
+
+    /* Two-column helpers */
+    .section-grid{ display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    @media (max-width: 1024px){ .section-grid{ grid-template-columns:1fr; } }
+
+    /* Feature tiles */
+    .feature-tile{ background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:14px; display:flex; gap:.75rem; align-items:flex-start; }
+    .feature-tile i{ color:#2563eb; }
+
+    /* Slider */
+    [data-slider] .track{ display:flex; height:100%; transition:transform .5s ease-out; will-change:transform; }
+    [data-slider] .slide{ width:100%; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+    [data-slider] img{ max-width:100%; max-height:100%; object-fit:contain; cursor:zoom-in; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="../index.html" class="text-xl font-bold text-blue-600">Saber Sojudi</a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex gap-6">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#db-shared" class="nav-link">Database &amp; shared</a>
+          <a href="#auth" class="nav-link">Auth &amp; accounts</a>
+          <a href="#dashboards" class="nav-link">Dashboards &amp; profiles</a>
+          <a href="#books" class="nav-link">Books &amp; circulation</a>
+          <a href="#membership" class="nav-link">Membership controls</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="../index.html#projects"
+             class="inline-flex items-center px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+             title="Back to main page">
+            <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i>
+            <span class="hidden sm:inline">Back</span>
+          </a>
+          <button id="menuBtn" class="md:hidden text-gray-700" aria-label="Open Menu">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div id="mobileMenu" class="md:hidden mt-3 hidden">
+        <div class="flex flex-col space-y-3">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#db-shared" class="nav-link">Database &amp; shared</a>
+          <a href="#auth" class="nav-link">Auth &amp; accounts</a>
+          <a href="#dashboards" class="nav-link">Dashboards &amp; profiles</a>
+          <a href="#books" class="nav-link">Books &amp; circulation</a>
+          <a href="#membership" class="nav-link">Membership controls</a>
+          <a href="../index.html#projects" class="nav-link">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10">
+
+    <!-- =================== OVERVIEW =================== -->
+    <section id="overview" class="pt-28 pb-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- LEFT -->
+          <div data-aos="fade-right">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">
+              Library Management System — Python + SQL
+            </h1>
+            <p class="mt-3 text-slate-700 max-w-2xl">
+              A desktop system to manage a library’s catalog, members, and circulation: add/search books, register users, role-based admin/user dashboards,
+              and borrow/return workflows with transaction history and inventory status. The stack fits a CRUD app with forms and persistence:
+              <strong>Python (Tkinter)</strong> UI, <strong>parameterized SQL</strong> over ODBC to SQL Server, and small, focused modules.
+            </p>
+
+            <p class="mt-3 text-slate-700">
+              <strong>Skills shown:</strong> Python↔SQL integration (pyodbc), idempotent DB setup, input validation, credential hashing, joins & filtered queries,
+              and safe updates/deletes (child rows first). UI components (Treeview) are fed from parameterized queries to keep things secure and fast.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip"><i data-feather="terminal" class="w-4 h-4 text-blue-600"></i> Python</span>
+              <span class="chip"><i data-feather="database" class="w-4 h-4 text-blue-600"></i> SQL Server</span>
+              <span class="chip"><i data-feather="link" class="w-4 h-4 text-blue-600"></i> pyodbc</span>
+              <span class="chip"><i data-feather="shield" class="w-4 h-4 text-blue-600"></i> Param Queries</span>
+              <span class="chip"><i data-feather="layout" class="w-4 h-4 text-blue-600"></i> Tkinter</span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://github.com/sabers13/bachelor-projects/tree/main/semester%207/Library%20Management%20System"
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center px-5 py-2.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800">
+                <i data-feather="github" class="w-5 h-5 mr-2"></i> View on GitHub
+              </a>
+              <a href="../index.html#contact" class="inline-flex items-center px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:opacity-90">
+                <i data-feather="briefcase" class="w-5 h-5 mr-2"></i> Hire Me
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: UI SLIDESHOW (4 pics, zoomable) -->
+          <div class="relative group" data-slider data-aos="fade-left">
+            <div class="relative overflow-hidden rounded-2xl shadow ring-1 ring-slate-200 bg-white">
+              <div class="h-[22rem] md:h-[26rem] lg:h-[28rem] bg-white">
+                <div class="track" data-track>
+                  <!-- Use any 4 screenshots you like; two ERD images are reused as safe defaults -->
+                  <div class="slide">
+                    <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample.png?raw=true"
+                         data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample.png?raw=true"
+                         alt="UI/ERD preview 1" loading="lazy">
+                  </div>
+                  <div class="slide">
+                    <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample1.png?raw=true"
+                         data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample1.png?raw=true"
+                         alt="UI/ERD preview 2" loading="lazy">
+                  </div>
+                  <div class="slide">
+                    <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample2.png?raw=true"
+                         data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample2.png?raw=true"
+                         alt="UI/ERD preview 3" loading="lazy">
+                  </div>
+                  <div class="slide">
+                    <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample3.png?raw=true"
+                         data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/app%20screenshots/sample3.png?raw=true"
+                         alt="UI/ERD preview 4" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gradient edges -->
+              <div class="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+              <div class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white via-white/90 to-transparent"></div>
+
+              <!-- Arrows -->
+              <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-50 rounded-full p-2 shadow border" data-prev aria-label="Previous">
+                <i data-feather="chevron-left" class="w-5 h-5"></i>
+              </button>
+              <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-50 rounded-full p-2 shadow border" data-next aria-label="Next">
+                <i data-feather="chevron-right" class="w-5 h-5"></i>
+              </button>
+
+              <!-- Progress -->
+              <div class="absolute bottom-0 left-0 right-0 h-1 bg-slate-200/70">
+                <div class="h-full bg-blue-600/90 transition-[width] duration-100" data-progress style="width:0%"></div>
+              </div>
+            </div>
+
+            <!-- Dots + counter -->
+            <div class="mt-3 flex items-center justify-center gap-3">
+              <div class="flex gap-2" data-dots>
+                <button class="w-2.5 h-2.5 rounded-full bg-slate-300 shadow" data-dot="0"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-slate-300 shadow" data-dot="1"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-slate-300 shadow" data-dot="2"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-slate-300 shadow" data-dot="3"></button>
+              </div>
+              <span class="text-xs text-slate-500 select-none" data-counter>1 / 4</span>
+            </div>
+
+            <p class="text-slate-500 text-xs mt-2 text-center">Click any image to enlarge.</p>
+          </div>
+        </div>
+
+        <!-- ERD gallery (now 2 columns). The single button sits UNDER the main ERD image. -->
+        <div class="mt-10 grid md:grid-cols-2 gap-4">
+          <figure class="card-white">
+            <img
+              src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/erd/erd-screenshot.png?raw=true"
+              data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/erd/erd-screenshot.png?raw=true"
+              alt="ERD — Main"
+              class="w-full h-auto rounded-lg cursor-zoom-in bg-white">
+            <figcaption class="text-slate-500 text-xs mt-2 text-center">ERD — main diagram</figcaption>
+
+            <!-- The ONLY button requested -->
+            <div class="mt-3 flex justify-center">
+              <a href="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/erd/erd%20lib.html"
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                <i data-feather="database" class="w-5 h-5 mr-2"></i> Open ERD Maker
+              </a>
+            </div>
+          </figure>
+
+          <figure class="card-white">
+            <img
+              src="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/erd/erd-screenshot%20Microsoft%20Visio.png?raw=true"
+              data-zoom="https://github.com/sabers13/bachelor-projects/blob/main/semester%207/Library%20Management%20System/erd/erd-screenshot%20Microsoft%20Visio.png?raw=true"
+              alt="ERD — Visio"
+              class="w-full h-auto rounded-lg cursor-zoom-in bg-white">
+            <figcaption class="text-slate-500 text-xs mt-2 text-center">ERD — Visio version</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== DATABASE & SHARED =================== -->
+    <section id="db-shared" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Database &amp; shared</h2>
+        <p class="text-slate-700 mb-6">
+          This layer wires Python to SQL Server and bootstraps the schema. It centralizes ODBC connectivity and common helpers (validation, hashing),
+          and provides idempotent DDL to (re)create tables, indexes, constraints, and seed data. This is where Python↔SQL discipline shows up: parameterized
+          queries everywhere, clear transactions/commits, and predictable initialization.
+        </p>
+
+        <div class="section-grid">
+          <!-- utils.py -->
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">utils.py</h3>
+            <p class="text-slate-700 mb-3">
+              Houses the <em>single</em> database cursor factory and input hygiene: email/phone validators and a hashing helper used by auth and profile edits.
+              Everything downstream imports these, keeping DB code consistent and secure.
+            </p>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# - get_cursor(): returns a shared pyodbc cursor (DSN/connection string configured once)
+# - email_validation(s): simple pattern/format checks
+# - phone_number_validation(s): digits/length check (normalized)
+# - generate_md5(pwd): return md5(pwd).hexdigest() used before INSERT/UPDATE
+import pyodbc as odbc
+import os
+from tkinter import ttk
+
+data_source = 'SQL-ODBC'  # matches the System DSN you created
+
+def get_cursor():
+    # For Driver 17: either set Encrypt=No in the DSN,
+    # or keep Encrypt=Yes and TrustServerCertificate=Yes.
+    conn = odbc.connect(
+        f"DSN={data_source};"
+        "Database=LibraryDB;"
+        "Encrypt=no;"
+    )
+    return conn.cursor()
+
+cursor = get_cursor()
+#hashing and simple validators
+import hashlib, re
+
+def generate_md5(password_str: str) -&gt; str:
+    md5 = hashlib.md5()
+    md5.update(password_str.encode('utf-8'))
+    return md5.hexdigest()                # For production use bcrypt/argon2
+
+def email_validation(email_str: str) -&gt; bool:
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}\b'
+    return bool(re.fullmatch(regex, email_str))
+
+def phone_number_validation(phone_str: str) -&gt; bool:
+    regex = r'^\+?\d{10,15}$'             # portable E.164-ish; repo uses a stricter version
+    return bool(re.fullmatch(regex, phone_str))
+#seed runner (simplified)
+import os
+from typing import Iterable
+
+def insert_data_to_tables():
+    cursor = get_cursor()
+    for file in os.listdir():
+        if file.endswith('.sql'):
+            with open(file, encoding='utf-8') as f:
+                statements = [s.strip() for s in f.read().split(';') if s.strip()]
+            table = file.removesuffix('.sql').split('-')[1]   # insert-TableName.sql
+            cursor.execute(f"SELECT COUNT(*) FROM {table};")
+            (count,) = cursor.fetchone()
+            if count in (0, 1):                               # seed when empty
+                for stmt in statements:
+                    cursor.execute(stmt)
+                cursor.commit()</code></pre>
+            </div>
+          </div>
+
+          <!-- table_creation.py -->
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">table_creation.py</h3>
+            <p class="text-slate-700 mb-3">
+              Builds the schema safely if it doesn’t exist: members, user_tbl (status/expire_date), publishers, books, categories, transactions; then indexes and FKs.
+              Also seeds an Admin user if missing. Designed to be called at app start so dev/test runs are consistent.
+            </p>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# creating_table(), creating_indexes(), add_constraints(), create_admin(), insert_data_to_tables()
+#catalog guards (simplified)
+def check_table_exists(cursor, table_name: str) -&gt; bool:
+    q = ("SELECT COUNT(*) FROM information_schema.tables "
+         "WHERE table_name = ? AND table_type = 'BASE TABLE';")
+    cursor.execute(q, (table_name,))
+    return cursor.fetchone()[0] &gt; 0
+
+def check_index_exists(cursor, index_name: str) -&gt; bool:
+    cursor.execute("SELECT COUNT(*) FROM sys.indexes WHERE name = ?;", (index_name,))
+    return cursor.fetchone()[0] &gt; 0
+
+def check_constraint_exists(cursor, constraint_name: str) -&gt; bool:
+    q = "SELECT COUNT(*) FROM information_schema.table_constraints WHERE constraint_name = ?;"
+    cursor.execute(q, (constraint_name,))
+    return cursor.fetchone()[0] &gt; 0
+#core DDL (excerpt)
+CREATE TABLE book (
+  book_id INT IDENTITY(1,1) PRIMARY KEY,
+  name        NVARCHAR(200) NOT NULL,
+  author      NVARCHAR(150),
+  date_of_publish DATE,
+  price       DECIMAL(10,2) NOT NULL,
+  status      NVARCHAR(50) NOT NULL DEFAULT 'In Stock'
+              CHECK (status IN ('In Stock','Out of Stock','Borrowed')),
+  category_id   INT NOT NULL FOREIGN KEY REFERENCES category(category_id),
+  publisher_id  INT NOT NULL FOREIGN KEY REFERENCES publisher(publisher_id)
+);
+#indexes (excerpt)
+CREATE INDEX IX_book_name    ON book(name);
+CREATE INDEX IX_book_author  ON book(author);
+CREATE INDEX IX_member_user  ON member(username);
+CREATE INDEX IX_member_name  ON member(last_name, first_name);
+CREATE INDEX IX_pub_name     ON publisher(name);
+CREATE INDEX IX_cat_name     ON category(name);
+#FK constraints (excerpt)
+ALTER TABLE user_tbl
+  ADD CONSTRAINT fk_user_tbl_member
+  FOREIGN KEY (member_id) REFERENCES member(member_id)
+  ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE transactions
+  ADD CONSTRAINT fk_tx_book
+  FOREIGN KEY (book_id) REFERENCES book(book_id)
+  ON UPDATE CASCADE ON DELETE CASCADE;  -- likewise for category/member as designed
+#create an initial admin if none exists
+from utils import generate_md5
+
+def create_admin():
+    # Check if an admin already exists
+    check_admin_query = "SELECT COUNT(*) FROM member WHERE role = 'Admin';"
+    cursor.execute(check_admin_query)
+    admin_count = cursor.fetchone()[0]
+
+    if admin_count == 0:
+        # If no admin exists, create a new admin
+        creating_admin_query = """
+            INSERT INTO member (username, password, first_name, last_name, email, address, phone, role)
+            VALUES ('admin', ?, 'Saber', 'Sojudi', 'sojudisaber@gmail.com', 'Germany', '+49151111111', 'Admin')
+        """
+        hashed_password = generate_md5("123456")
+        cursor.execute(creating_admin_query, hashed_password)
+        cursor.connection.commit()
+        print("Admin Created Successfully!")
+    else:
+        pass</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== AUTH & ACCOUNTS =================== -->
+    <section id="auth" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Auth &amp; accounts</h2>
+        <p class="text-slate-700 mb-6">
+          Sign-up, sign-in with role routing, and password reset — all with parameterized queries and hashed passwords. On first launch, the app
+          initializes the database (DDL + seed admin) and then authenticates users into either the Admin or User panels.
+        </p>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">create_account.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# - Validate fields, enforce unique username
+# - Hash password; INSERT new member (parameterized); commit
+# Required fields + matching passwords + email/phone validation
+if firstname_Entry.get()=='' or lastname_Entry.get()=='' or username_Entry.get()=='' \
+   or email_entry.get()=='' or phone_num_entry.get()=='' or address_entry.get()=='' \
+   or password_Entry.get()=='' or re_enter_password_Entry.get()=='':
+    messagebox.showerror('Alert!', 'All Fields must be entered')
+elif password_Entry.get() != re_enter_password_Entry.get():
+    messagebox.showerror('Alert!', "Passwords didn't Match")
+elif not email_validation(email_entry.get()) or not phone_number_validation(phone_num_entry.get()):
+    messagebox.showerror('Alert!', 'Email Address Or Phone Number Are not valid!')
+# Prevent duplicate usernames, then insert with hashed password
+cursor = get_cursor()
+cursor.execute("SELECT username, COUNT(*) FROM member WHERE username=? GROUP BY username;", username_Entry.get())
+row = cursor.fetchone()
+if row and row[1] &gt; 0:
+    messagebox.showerror("Alert!", f"This username: {row[0]} Is Taken!")
+else:
+    cursor.execute(
+        "INSERT INTO member (username,password,first_name,last_name,email,address,phone,role) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, 'User')",
+        (username_Entry.get(), generate_md5(password_Entry.get()),
+         firstname_Entry.get(), lastname_Entry.get(),
+         email_entry.get(), address_entry.get(), phone_num_entry.get())
+    )
+    cursor.commit()
+    messagebox.showinfo('Success', 'Account created successfully')</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">login.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# - initialize_database()
+# - SELECT by username; compare hashes; route by role to admin_panel/user_panel
+# One-time, idempotent DB setup before auth
+def initialize_database():
+    cursor = get_cursor()
+    creating_table()
+    creating_indexes()
+    create_admin()
+    insert_data_to_tables()
+    add_constraints()
+    return cursor
+    # Fetch user and verify password hash, then route by role
+    cursor.execute("SELECT * FROM member WHERE username=?", (idEntry.get(),))
+    user = cursor.fetchone()
+    if not user:
+        messagebox.showerror('Alert!', 'User not found')
+    else:
+        stored_hash = user[2]
+        if generate_md5(password_entry.get()) == stored_hash:
+            role = user[-1]
+            if role == 'Admin':
+                admin_panel.main(user[1])   # go to admin UI
+            elif role == 'User':
+                user_panel.main(user[0])    # go to user UI
+            else:
+                messagebox.showerror('Alert!', 'Unknown role')
+        else:
+            messagebox.showerror('Alert!', 'Incorrect password')</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">forgetpassword.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# - Validate identity; update hash via parameterized UPDATE; commit
+# Lookup user safely, then update to a new hashed password
+cursor.execute("SELECT * FROM member WHERE username=?", usernameEntry.get())
+user = cursor.fetchone()
+if user is None:
+    messagebox.showerror('Error', 'User not found')
+else:
+    if NewpasswordEntry.get() != ReEnterNewPasswordEntry.get():
+        messagebox.showerror('Error', "Passwords didn't match")
+    else:
+        cursor.execute("UPDATE member SET password=? WHERE username=?",
+                       (generate_md5(NewpasswordEntry.get()), usernameEntry.get()))
+        cursor.commit()
+        messagebox.showinfo('Success', 'Password updated successfully')</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== DASHBOARDS & PROFILES =================== -->
+    <section id="dashboards" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Dashboards &amp; profiles</h2>
+        <p class="text-slate-700 mb-6">
+          Role-specific Tkinter dashboards wire buttons and tables (Treeview) to parameterized SQL reads/updates. Admin gets management shortcuts;
+          users get self-service profile and circulation actions.
+        </p>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">Admin</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+  # admin_panel.py / userList.py
+  # admin_panel.py — navigate to sub-screens, confirm logout
+  def show_book_list(username):
+      windows.destroy()
+      booklist.main(username)
+
+  def profile(username):
+      windows.destroy()
+      admin_profile.main(username)
+
+  def user_List(username):
+      windows.destroy()
+      userList.main(username)
+
+  def logout():
+      confirm = messagebox.askyesno("Confirmation", "Are you sure you want to Log Out?")
+      if confirm:
+          messagebox.showinfo("Success", "Logged Out successfully.")
+          windows.destroy()
+          login.main()
+# admin_profile.py — parameterized lookup then populate Treeview
+query = """
+    SELECT m.member_id, m.username, m.first_name, m.last_name,
+           m.email, m.address, m.phone, m.role
+    FROM member m WHERE m.username = ?;
+"""
+cursor.execute(query, username)
+row = cursor.fetchone()
+tree.insert('', 'end', values=(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]))
+# admin_edit_profile.py — update only fields that were provided
+non_empty = []
+if firstname_Entry.get(): non_empty.append(("first_name", firstname_Entry.get()))
+if password_Entry.get():  non_empty.append(("password", generate_md5(password_Entry.get())))
+
+cursor = get_cursor()
+for field, value in non_empty:
+    cursor.execute("UPDATE member SET " + field + " = ? WHERE username = ?", (value, username))
+    cursor.commit()
+# userList.py — list/clear/search in Treeview
+def allusers(tree):
+    cursor = get_cursor()
+    for row in tree.get_children(): tree.delete(row)
+    cursor.execute("""
+        SELECT m.member_id, m.username, m.first_name, m.last_name,
+               m.email, m.address, m.phone, m.role, u.status
+        FROM member m LEFT JOIN user_tbl u ON m.member_id = u.member_id
+        WHERE u.status IN ('Suspend', 'Valid');
+    """)
+    for u in cursor.fetchall():
+        tree.insert('', 'end', values=(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8]))
+# userList.py — mark user as suspended
+selected_id = tree.item(tree.selection(), 'values')[0]
+cursor.execute("UPDATE user_tbl SET status = 'Suspend' WHERE member_id = ?", selected_id)
+cursor.commit()
+allusers(tree)
+# userList.py — remove user safely (delete child rows first)
+selected_id = tree.item(tree.selection(), 'values')[0]
+cursor.execute("DELETE FROM transactions WHERE member_id = ?", selected_id)
+cursor.execute("DELETE FROM user_tbl     WHERE member_id = ?", selected_id)
+cursor.execute("DELETE FROM member       WHERE member_id = ?", selected_id)
+cursor.commit()
+allusers(tree)
+# userList.py — mark user as suspended
+selected_id = tree.item(tree.selection(), 'values')[0]
+cursor.execute("UPDATE user_tbl SET status = 'Suspend' WHERE member_id = ?", selected_id)
+cursor.commit()
+allusers(tree)</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">User</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# user_panel.py / user_profile.py / user_edit_profile.py
+# user_panel.py — pass user_id to target screens
+subscription_plans = Button(frame, text='Subscription Plans',
+    command=lambda: subscription_btn(user_id))
+borrow_book = Button(frame, text='Borrow a Book',
+    command=lambda: borrow_btn(user_id))
+return_book = Button(frame, text='Return a Book',
+    command=bokReturn)
+profile = Button(frame, text='Profile',
+    command=lambda: userprofile(user_id))
+# user_profile.py — get a single user's details
+query = """
+    SELECT m.username, m.first_name, m.last_name, m.email,
+           m.address, m.phone, m.role
+    FROM member m WHERE m.member_id = ?;
+"""
+cursor.execute(query, user_id)
+row = cursor.fetchone()
+tree.insert('', 'end', values=(row[0], row[1], row[2], row[3], row[4], row[5], row[6]))
+# user_edit_profile.py — collect non-empty fields then update
+non_empty = []
+if username_Entry.get(): non_empty.append(("username", username_Entry.get()))
+if password_Entry.get(): non_empty.append(("password", generate_md5(password_Entry.get())))
+
+for field, value in non_empty:
+    cursor.execute("UPDATE member SET " + field + " = ? WHERE member_id = ?", (value, user_id))
+    cursor.commit()</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BOOKS & CIRCULATION =================== -->
+    <section id="books" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Books &amp; circulation</h2>
+        <p class="text-slate-700 mb-6">
+          End-to-end book workflows: add with publisher lookup, list/search via JOINs, safe removal (delete child rows first), and borrow/return
+          transactions that keep <em>book.status</em> in sync (“In Stock” ↔ “Borrowed”) with a simple audit trail.
+        </p>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">addbook.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# - Lookup publisher_id; INSERT book; link category
+# 1) Find publisher_id by name (parameterized)
+cursor = get_cursor()
+cursor.execute("SELECT publisher_id FROM publisher WHERE name=?", bookPublisher_Entry.get())
+row = cursor.fetchone()
+if not row:
+    messagebox.showerror("Alert!", "Publisher not found."); return
+publisher_id = row[0]
+
+# 2) Insert book with initial status
+cursor.execute("""
+    INSERT INTO book (name, price, publisher_id, author, status, date_of_publish)
+    VALUES (?, ?, ?, ?, ?, ?)
+""", (bookname_Entry.get(), float(bookprice_Entry.get()), publisher_id,
+      bookauthor_Entry.get(), "In Stock", bookdate_Entry.get()))
+cursor.commit()
+
+# 3) Retrieve new book_id and attach a category
+cursor.execute("SELECT book_id FROM book WHERE name=?", bookname_Entry.get())
+book_id = cursor.fetchone()[0]
+
+cursor.execute("INSERT INTO category (book_id, name) VALUES (?, ?)",
+               (book_id, bookcategory_Entry.get()))
+cursor.commit()
+</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">booklist.py</h3>
+            <div class="code-wrap">
+<pre class="code language-sql"><code># Highlights:
+-- JOIN example
+SELECT b.book_id, b.name AS book_name, b.price, p.name AS publisher_name,
+       b.author, b.status, c.name AS category_name
+FROM   book b
+JOIN   publisher p ON b.publisher_id = p.publisher_id
+LEFT JOIN category  c ON b.book_id = c.book_id;
+# Example: search by author (parameterized LIKE)
+cursor.execute("""
+  SELECT b.book_id, b.name, b.price, p.name, b.author, b.status, c.name
+  FROM   book b JOIN publisher p ON b.publisher_id = p.publisher_id
+  LEFT JOIN category c ON b.book_id = c.book_id
+  WHERE  LOWER(b.author) LIKE ?;
+""", ('%' + search_var.get().lower() + '%',))
+# Delete category rows, then the book (parameterized + commit)
+cursor.execute("DELETE FROM category WHERE book_id = ?", (selected_book_id,))
+cursor.execute("DELETE FROM book     WHERE book_id = ?", (selected_book_id,))
+cursor.commit()</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">borrowBook.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# INSERT Borrow; UPDATE status='Borrowed'
+# Borrow flow (parameterized). Requires 'In Stock' selection in the UI.
+insert_tx = """
+  INSERT INTO transactions (member_id, book_id, status, transaction_date)
+  VALUES (?, ?, ?, ?)
+  UPDATE book SET status = ? WHERE book_id = ?;
+"""
+cursor.execute(insert_tx, user_id, book_id, "Borrow", date.today(), "Borrowed", book_id)
+cursor.commit()</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">bookReturn.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# INSERT Return; UPDATE status='In Stock'
+# Count Borrow vs Return per book, then list those with Borrow-Return == 1
+book_counts = {}
+for book_id, name, tx_date, status, member_id in books:
+    book_counts.setdefault(book_id, {'Borrow': 0, 'Return': 0})
+    book_counts[book_id][status] += 1
+borrowed_books = [bid for bid, c in book_counts.items() if c['Borrow'] - c['Return'] == 1]</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MEMBERSHIP CONTROLS =================== -->
+    <section id="membership" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Membership controls</h2>
+        <p class="text-slate-700 mb-6">
+          Subscriptions (expiry management) and suspension (blacklist/release). Users can renew by +3/+6/+12 months; admins can list suspended users
+          and restore access. It’s all parameterized SQL with clear confirmations for safety.
+        </p>
+
+        <div class="section-grid">
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">subscription.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# Read/extend expire_date with relativedelta
+# Fetch expire_date and render "days remaining"
+fetch_user_query = "SELECT expire_date FROM user_tbl WHERE member_id = ?"
+cursor.execute(fetch_user_query, user_id)
+expire_date = cursor.fetchall()[0][0]
+today = date.today()
+heading = Label(frame, text=str((expire_date - today).days) + " days of your\nsubscription remains")
+# Compute new expiry and persist it safely
+from dateutil.relativedelta import relativedelta
+
+def add_months(months: int):
+    new_date = expire_date + relativedelta(months=months)
+    cursor.execute("UPDATE user_tbl SET expire_date = ? WHERE member_id = ?", (new_date, user_id))
+    cursor.commit()
+    messagebox.showinfo('Success', 'Your membership has been successfully Renewed.')</code></pre>
+            </div>
+          </div>
+          <div class="card-white">
+            <h3 class="font-semibold text-slate-800 mb-2">suspendedUsers.py</h3>
+            <div class="code-wrap">
+<pre class="code language-python"><code># Highlights:
+# List suspended; confirm restore → status='Valid'
+SELECT m.member_id AS user_id, m.username, m.first_name, m.last_name,
+       m.email, m.address, m.phone, m.role, u.status
+FROM   member m
+LEFT JOIN user_tbl u ON m.member_id = u.member_id
+WHERE  u.status IN ('Suspend');
+# Confirm, then update status and refresh table
+selected_item = tree.selection()
+if not selected_item:
+    messagebox.showinfo("Information", "Please select a user.")
+else:
+    if messagebox.askyesno("Confirmation", "Release the user from blacklist?"):
+        selected_user_id = tree.item(selected_item, 'values')[0]
+        cursor.execute("UPDATE user_tbl SET status = 'Valid' WHERE member_id = ?", (selected_user_id,))
+        cursor.commit()
+        allusers(tree)  # refresh
+        messagebox.showinfo("Success", "User Removed From BlackList successfully.")
+# Utility: clear table before re-listing
+def clear_the_list(tree):
+  for row in tree.get_children():
+      tree.delete(row)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-8">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-wrap gap-3">
+          <a href="../index.html#contact"
+             class="inline-flex items-center px-5 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+            <i data-feather="briefcase" class="w-5 h-5 mr-2"></i> Hire Me
+          </a>
+          <a href="https://github.com/sabers13/bachelor-projects/tree/main/semester%207/Library%20Management%20System" target="_blank" rel="noopener"
+             class="inline-flex items-center px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100">
+            <i data-feather="github" class="w-5 h-5 mr-2"></i> Repository
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-10 mt-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p>&copy; 2025 Saber Sojudi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Global Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[80] hidden">
+    <button class="absolute top-4 right-4 bg-white/95 hover:bg-white text-slate-900 rounded-full p-2 shadow" data-close aria-label="Close">
+      <i data-feather="x" class="w-5 h-5"></i>
+    </button>
+    <div class="w-full h-full flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="" class="max-w-7xl max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-lg bg-white">
+    </div>
+  </div>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll with offset for fixed header
+    function smoothTo(id){
+      const el = document.querySelector(id);
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        e.preventDefault();
+        smoothTo(href);
+        if (menu && !menu.classList.contains('hidden')) menu.classList.add('hidden');
+      });
+    });
+
+    // Lightbox for all images
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('img[data-zoom]').forEach(img=>{
+      img.addEventListener('click', ()=>{ lbImg.src = img.getAttribute('data-zoom'); lb.classList.remove('hidden'); });
+    });
+    lb.querySelector('[data-close]').addEventListener('click', ()=> lb.classList.add('hidden'));
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.add('hidden'); });
+
+    // Simple slider (autoplay + dots + arrows + progress + counter)
+    document.querySelectorAll('[data-slider]').forEach(sl=>{
+      const track = sl.querySelector('[data-track]');
+      const slides = Array.from(sl.querySelectorAll('.slide'));
+      const prev = sl.querySelector('[data-prev]');
+      const next = sl.querySelector('[data-next]');
+      const dotsWrap = sl.querySelector('[data-dots]');
+      const progress = sl.querySelector('[data-progress]');
+      const counter = sl.querySelector('[data-counter]');
+      const N = slides.length;
+      let i = 0, timer, dur = 4200;
+
+      function go(k){
+        i = (k+N)%N;
+        track.style.transform = `translateX(-${i*100}%)`;
+        if (counter) counter.textContent = `${i+1} / ${N}`;
+        if (dotsWrap){
+          dotsWrap.querySelectorAll('button').forEach((b,idx)=>{
+            b.classList.toggle('bg-blue-600', idx===i);
+            b.classList.toggle('bg-slate-300', idx!==i);
+          });
+        }
+        if (progress){ progress.style.width = '0%'; setTimeout(()=>progress.style.width='100%', 10); }
+        restart();
+      }
+      function restart(){
+        clearInterval(timer);
+        timer = setInterval(()=> go(i+1), dur);
+      }
+
+      // Build dots if not provided
+      if (dotsWrap && !dotsWrap.children.length){
+        for (let d=0; d<N; d++){
+          const b = document.createElement('button');
+          b.className = 'w-2.5 h-2.5 rounded-full bg-slate-300 shadow';
+          b.addEventListener('click', ()=> go(d));
+          dotsWrap.appendChild(b);
+        }
+      }
+      prev && prev.addEventListener('click', ()=> go(i-1));
+      next && next.addEventListener('click', ()=> go(i+1));
+      go(0);
+    });
+  </script>
+</body>
+</html>

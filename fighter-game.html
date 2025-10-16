@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Prism (syntax highlighting) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"
+          data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1/components/"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2D Fighter Game — Java (OOP) | Saber Sojudi</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Arcade-style 2D side-view fighter built in Java. Real-time input, sprite animation, hitboxes and health/round system.">
+  <meta property="og:title" content="2D Fighter Game — Java (OOP)" />
+  <meta property="og:description" content="Arcade-style 2D fighter with sprite animation, hit detection, rounds & health UI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/fighter/hero.jpg" />
+  <meta property="og:url" content="https://YOUR_DOMAIN/projects/fighter-game.html" />
+  <link rel="icon" href="../assets/favicon.png"/>
+
+  <style>
+    /* Keep anchors from hiding under fixed header */
+    html { scroll-padding-top: 96px; }
+    section[id] { scroll-margin-top: 96px; }
+
+    /* Header links identical to main page (gray text + blue underline) */
+    .nav-link{
+      position: relative; font-size: 1rem; line-height: 1.5rem; color: #374151;
+    }
+    .nav-link::after{
+      content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; width:0;
+      background-color:#3b82f6; transition:width .3s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after{ width:100%; }
+
+    /* Code theme (dark, readable) */
+    .code-wrap { position: relative; }
+    pre.code, pre[class*="language-"]{
+      background:#0b1021; color:#e6edf3; padding:16px 18px; border-radius:12px;
+      overflow:auto; line-height:1.5; border:1px solid rgba(148,163,184,.25);
+      box-shadow: 0 6px 18px rgba(2,8,23,.15);
+      font-size: 12.5px;
+    }
+    .token.comment,.token.prolog,.token.doctype { color:#94a3b8; }
+    .token.keyword { color:#7aa2f7; }
+    .token.function { color:#c099ff; }
+    .token.number,.token.boolean { color:#f7768e; }
+    .token.string { color:#9ece6a; }
+    .token.operator { color:#89ddff; }
+
+    /* Collapsible long code blocks */
+    .clamp { max-height: 20rem; }
+    .code-overlay {
+      content: ""; position:absolute; left:0; right:0; bottom:0; height:5rem;
+      background: linear-gradient(to bottom, rgba(11,16,33,0) 0%, #0b1021 65%);
+      border-bottom-left-radius:12px; border-bottom-right-radius:12px; pointer-events:none;
+    }
+    .expand-btn {
+      position:absolute; right:14px; bottom:10px; z-index:2; font-size:.875rem; padding:.35rem .6rem;
+      border-radius:8px; background:#111827; color:#fff; border:1px solid rgba(148,163,184,.35);
+    }
+    .expand-btn:hover { background:#0f172a; }
+
+    /* Chip blue icon parity */
+    .chip i, .chip svg { color:#2563eb; }
+
+    /* Media tile helper */
+    .media { position:relative; overflow:hidden; border-radius:16px; background:#fff; border:1px solid rgba(100,116,139,.18); }
+    .media img { width:100%; height:auto; display:block; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="../index.html" class="text-xl font-bold text-blue-600">Saber Sojudi</a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#architecture" class="nav-link">Architecture & Code</a>
+          <a href="#demo" class="nav-link">Demo & How to Run</a>
+        </div>
+
+        <!-- Right cluster -->
+        <div class="flex items-center gap-3">
+          <a href="../index.html#projects"
+             class="inline-flex items-center px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+             title="Back to main page">
+            <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i>
+            <span class="hidden sm:inline">Back</span>
+          </a>
+          <button id="menuBtn" class="md:hidden text-gray-700" aria-label="Open Menu">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div id="mobileMenu" class="md:hidden mt-3 hidden">
+        <div class="flex flex-col space-y-3">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#architecture" class="nav-link">Architecture & Code</a>
+          <a href="#demo" class="nav-link">Demo & How to Run</a>
+          <a href="../index.html#projects" class="nav-link">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10">
+    <!-- OVERVIEW -->
+    <section id="overview" class="pt-28 pb-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- LEFT -->
+          <div data-aos="fade-right">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">2D Fighter Game — Java (OOP)</h1>
+            <p class="mt-3 text-slate-700 max-w-2xl">
+              Arcade-style 2D side-view fighter supporting <strong>PvP</strong> (same keyboard) ,
+              with rounds, health bars, timers, and snappy animations. Built as a Bachelor project to practice real-time input,
+              sprite handling, and collision/hitbox logic.
+            </p>
+            <p class="text-slate-700 mt-2 max-w-2xl">
+              <strong>Stack:</strong> Java + Java2D (AWT/Swing), sprite/animation sheets, lightweight SFX. Java’s event loop and
+              robust input handling make it ideal for clean game-loop architecture, per-frame collision checks, and sprite animation control.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="code" class="w-4 h-4"></i> Java
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="cpu" class="w-4 h-4"></i> Java2D / AWT
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="refresh-ccw" class="w-4 h-4"></i> Game loop
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="git-branch" class="w-4 h-4"></i> Finite State Machine
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="target" class="w-4 h-4"></i> Collision / Hitboxes
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="film" class="w-4 h-4"></i> Sprite Animation
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="volume-2" class="w-4 h-4"></i> Sound
+              </span>
+              <span class="chip inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+                <i data-feather="box" class="w-4 h-4"></i> OOP
+              </span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://github.com/sabers13/bachelor-projects/tree/main/semester%203/2D%20Fighter%20Game" target="_blank" rel="noopener"
+                 class="inline-flex items-center px-5 py-2.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800">
+                <i data-feather="github" class="w-5 h-5 mr-2"></i> View on GitHub
+              </a>
+              <a href="../index.html#contact"
+                 class="inline-flex items-center px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800">
+                <i data-feather="briefcase" class="w-5 h-5 mr-2"></i> Hire Me
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: hero -->
+          <figure class="media" data-aos="fade-left">
+            <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%203/2D%20Fighter%20Game/sample1.png?raw=true" alt="2D Fighter — hero" class="cursor-zoom-in" loading="lazy">
+          </figure>
+        </div>
+
+        <!-- Code Map -->
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
+          <div class="bg-white rounded-xl p-6 shadow border border-slate-200" data-aos="fade-up">
+            <h3 class="font-semibold text-slate-800 mb-2">Code Map</h3>
+            <ul class="list-disc list-inside text-slate-700 space-y-1">
+              <li><strong>game.java</strong> — entry point, window init, main loop</li>
+              <li><strong>input.java</strong> — keyboard input (pressed/held state)</li>
+              <li><strong>player.java / player2.java</strong> — player actors, state & animation</li>
+              <li><strong>object.java</strong> — base entity (pos/vel/size, update/draw)</li>
+              <li><strong>processor.java</strong> — update pipeline (physics, collisions)</li>
+              <li><strong>menu.java</strong> — main menu / pause / round UI</li>
+              <li><strong>res.java</strong> — sprite & sound loading (assets/)</li>
+              <li><strong>ID.java</strong> — enums (EntityID, State, Animation)</li>
+              <li><strong>bar.java</strong> — health/timer UI elements</li>
+              <li><strong>assets/</strong> — spritesheets, backgrounds</li>
+              <li><strong>sound/</strong> — sfx/music (optional)</li>
+            </ul>
+            <p class="text-xs text-slate-500 mt-2">Note: filenames derived from project; exact responsibilities may vary slightly.</p>
+          </div>
+
+          <figure class="bg-white rounded-xl p-4 shadow border border-slate-200" data-aos="fade-up">
+            <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%203/2D%20Fighter%20Game/sample2.png?raw=true" class="rounded-lg cursor-zoom-in" alt="Gameplay — sample 1" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Features</h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="sliders" class="text-blue-600"></i><h3 class="font-semibold">Responsive Controls</h3></div>
+            <p class="text-slate-700 text-sm">Keyboard mapping for move, jump, crouch, light/heavy attack, block. Debounce for taps + hold detection.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up" data-aos-delay="50">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="target" class="text-blue-600"></i><h3 class="font-semibold">Combo & Hit Detection</h3></div>
+            <p class="text-slate-700 text-sm">Per-frame hitboxes apply damage/knockback on contact; blocking reduces or nullifies damage (if enabled).</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="activity" class="text-blue-600"></i><h3 class="font-semibold">Health & Rounds</h3></div>
+            <p class="text-slate-700 text-sm">HP bars, round timer, KO detection, and best-of-N round logic.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up" data-aos-delay="150">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="film" class="text-blue-600"></i><h3 class="font-semibold">Sprite Animation</h3></div>
+            <p class="text-slate-700 text-sm">Idle/run/jump/attack/hurt/KO states with frame timing, state-driven animation switching.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="volume-2" class="text-blue-600"></i><h3 class="font-semibold">Audio</h3></div>
+            <p class="text-slate-700 text-sm">Punch/kick SFX and optional background music.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200" data-aos="fade-up" data-aos-delay="250">
+            <div class="flex items-center gap-2 mb-2"><i data-feather="rotate-ccw" class="text-blue-600"></i><h3 class="font-semibold">Pause & Restart</h3></div>
+            <p class="text-slate-700 text-sm">Game state transitions for pause, restart, and next round.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE & CODE -->
+    <section id="architecture" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Architecture & Code</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+          <!-- Text diagram -->
+          <div class="bg-white rounded-xl p-6 shadow border border-slate-200" data-aos="fade-right">
+            <h3 class="font-semibold text-slate-800">High-Level Design</h3>
+            <ul class="text-slate-700 list-disc list-inside space-y-1 mt-2">
+              <li><strong>Game Loop</strong>: <em>handleInput → update → physics/collision → render</em> (~60 FPS).</li>
+              <li><strong>Entities</strong>: <em>Player, Enemy</em> extend <em>Object</em> (pos/vel/size, update/draw).</li>
+              <li><strong>State Machine</strong>: Idle / Run / Jump / Attack / Hit / KO, with cooldowns.</li>
+              <li><strong>Systems</strong>: Input, Collision/Hitboxes, UI (health bars & timer), Audio.</li>
+            </ul>
+
+            <h4 class="font-semibold text-slate-800 mt-4">Implementation Notes</h4>
+            <ul class="text-slate-700 list-disc list-inside space-y-1">
+              <li><strong>Composition</strong>: entities hold current animation, state, direction, and physics params.</li>
+              <li><strong>Hitboxes</strong>: per-frame rectangles (or masks) checked each update.</li>
+              <li><strong>Animation</strong>: spritesheet slicing; frame index advances at fixed ticks; resets on state change.</li>
+              <li><strong>Input</strong>: pressed/held maps support simultaneous keys; optional tap vs hold differentiation.</li>
+            </ul>
+          </div>
+
+          <!-- Preview images -->
+          <figure class="bg-white rounded-xl p-4 shadow border border-slate-200" data-aos="fade-left">
+            <img src="https://github.com/sabers13/bachelor-projects/blob/main/semester%203/2D%20Fighter%20Game/sample3.png?raw=true" class="rounded-lg cursor-zoom-in" alt="Gameplay — sample 2" loading="lazy">
+          </figure>
+        </div>
+
+        <!-- Code Highlights -->
+        <div class="mt-10 space-y-8">
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-semibold text-slate-800 m-0">Game loop — window, timing, and render cycle</p>
+            </div>
+<div class="code-wrap">
+<pre class="code language-java"><code>public class Game implements Runnable {
+    private boolean running = true;
+    private final int targetFps = 60;
+    private final Input input = new Input();          // keyboard listener
+    private final Processor processor = new Processor(); // physics/collisions
+
+    @Override public void run() {
+        long nsPerTick = 1_000_000_000L / targetFps;
+        long last = System.nanoTime(), acc = 0;
+
+        while (running) {
+            long now = System.nanoTime();
+            acc += (now - last); last = now;
+
+            // Handle input events (non-blocking)
+            input.poll();
+
+            // Fixed updates (catch up if needed)
+            while (acc >= nsPerTick) {
+                update();
+                acc -= nsPerTick;
+            }
+            render();
+        }
+    }
+
+    private void update() {
+        processor.updateAll(); // moves entities, resolves hits, timers, round logic
+    }
+    private void render() {
+        // draw background → entities → UI (health bars, timer)
+    }
+}</code></pre>
+</div>
+            <p class="text-slate-600 text-sm mt-2">Fixed-step update keeps physics stable; rendering occurs as often as possible.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-semibold text-slate-800 m-0">Finite State Machine — player actions & transitions</p>
+            </div>
+<div class="code-wrap">
+<pre class="code language-java"><code>enum State { IDLE, RUN, JUMP, ATTACK_LIGHT, ATTACK_HEAVY, HIT, KO }
+
+public class Player extends Entity {
+    private State state = State.IDLE;
+    private int facing = 1; // 1: right, -1: left
+    private int attackCooldown = 0;
+
+    @Override public void update() {
+        // resolve input → desired state
+        if (hp <= 0) state = State.KO;
+        else if (wasHit()) state = State.HIT;
+        else if (input.attackHeavy() && attackCooldown == 0) { state = State.ATTACK_HEAVY; attackCooldown = 20; }
+        else if (input.attackLight() && attackCooldown == 0) { state = State.ATTACK_LIGHT; attackCooldown = 10; }
+        else if (input.jump()) state = State.JUMP;
+        else if (input.left() ^ input.right()) state = State.RUN;
+        else state = State.IDLE;
+
+        // physics + animation
+        applyPhysics();
+        updateAnimationFor(state, facing);
+
+        if (attackCooldown > 0) attackCooldown--;
+    }
+}</code></pre>
+</div>
+            <p class="text-slate-600 text-sm mt-2">Transitions are input-driven with cooldowns to gate combos and maintain readable combat.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-semibold text-slate-800 m-0">Hitbox collision — damage & knockback</p>
+            </div>
+<div class="code-wrap">
+<pre class="code language-java"><code>public class Processor {
+    public void resolveHit(Player attacker, Player defender){
+        Rectangle hit = attacker.getActiveHitbox();
+        Rectangle hurt = defender.getHurtbox();
+
+        if (hit != null && hurt != null && hit.intersects(hurt)) {
+            int dmg = attacker.isHeavy() ? 16 : 8;
+            if (defender.isBlocking(attacker.facing())) dmg /= 3; // block mitigates
+            defender.applyDamage(dmg);
+            defender.applyKnockback(attacker.facing() * (attacker.isHeavy() ? 6 : 4), 2);
+            defender.markHit(); // state → HIT
+        }
+    }
+}</code></pre>
+</div>
+            <p class="text-slate-600 text-sm mt-2">Simple rectangle checks per frame; blocking reduces damage; heavier attacks add knockback.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-semibold text-slate-800 m-0">Animation update — spritesheet frames</p>
+            </div>
+<div class="code-wrap">
+<pre class="code language-java"><code>public class Animator {
+    private BufferedImage[] frames; // current state's frames
+    private int idx = 0, tick = 0, ticksPerFrame = 5;
+
+    public void setClip(BufferedImage[] newFrames){
+        frames = newFrames; idx = 0; tick = 0;
+    }
+    public BufferedImage next(){
+        if (frames == null || frames.length == 0) return null;
+        if (++tick >= ticksPerFrame){ tick = 0; idx = (idx + 1) % frames.length; }
+        return frames[idx];
+    }
+}</code></pre>
+</div>
+            <p class="text-slate-600 text-sm mt-2">State changes swap animation clips; frame index advances at fixed cadence for consistent timing.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-5 shadow border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-semibold text-slate-800 m-0">UI — health bar & round timer</p>
+            </div>
+<div class="code-wrap">
+<pre class="code language-java"><code>public class HUD {
+    public void draw(Graphics2D g, int p1hp, int p2hp, int time, int round, int bestOf){
+        int w = 280, h = 16;
+        g.setColor(Color.darkGray);
+        g.fillRoundRect(40, 28, w, h, 8, 8);
+        g.fillRoundRect(720-w-40, 28, w, h, 8, 8);
+
+        g.setColor(new Color(34,197,94)); // emerald
+        g.fillRoundRect(40, 28, (int)(w * Math.max(0, p1hp)/100.0), h, 8, 8);
+        g.fillRoundRect(720-w-40 + (w - (int)(w * Math.max(0, p2hp)/100.0)), 28,
+                        (int)(w * Math.max(0, p2hp)/100.0), h, 8, 8);
+
+        g.setColor(Color.white);
+        g.drawString("Round " + round + " / " + bestOf, 360, 24);
+        g.setFont(g.getFont().deriveFont(Font.BOLD, 16f));
+        g.drawString(String.valueOf(time), 380, 44);
+    }
+}</code></pre>
+</div>
+            <p class="text-slate-600 text-sm mt-2">Lightweight immediate-mode UI: draw rects/text each frame for bars & timers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO & HOW TO RUN -->
+    <section id="demo" class="py-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Demo & How to Run</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+          <!-- Instructions -->
+          <div class="bg-white rounded-xl p-6 shadow border border-slate-200" data-aos="fade-right">
+            <h3 class="font-semibold text-slate-800 mb-2">Run Locally</h3>
+            <div class="code-wrap">
+<pre class="code language-bash"><code># Clone repo
+git clone https://github.com/sabers13/bachelor-projects.git
+cd "bachelor-projects/semester 3/2D Fighter Game"
+
+# Compile & run (Java 17+, adjust if using older JDK)
+javac -d out src/*.java
+java -cp out Game</code></pre>
+            </div>
+
+            <h3 class="font-semibold text-slate-800 mt-4 mb-2">Controls (example)</h3>
+            <ul class="text-slate-700 list-disc list-inside">
+              <li><strong>P1</strong>: A/D = move, W = jump, S = crouch, J = light, K = heavy, L = block</li>
+              <li><strong>P2</strong> (optional): arrows + numpad 1/2/3</li>
+              <li><strong>Esc</strong> = pause menu, <strong>R</strong> = restart round</li>
+            </ul>
+            <p class="text-xs text-slate-500 mt-2">Exact keys depend on <code>input.java</code>; adjust here if mappings differ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- CTA row -->
+        <section class="py-10">
+          <div class="max-w-6xl mx-auto px-6">
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="../index.html#contact"
+                 class="inline-flex items-center px-5 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                <i data-feather="briefcase" class="w-5 h-5 mr-2"></i> Hire Me
+              </a>
+              <a href="https://github.com/sabers13/bachelor-projects/tree/main/semester%205/Hex%20Game%20with%20AI(Alpha-Beta%20Pruning)"
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100">
+                <i data-feather="github" class="w-5 h-5 mr-2"></i> Repository
+              </a>
+            </div>
+          </div>
+        </section>
+        </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-10 mt-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p>&copy; 2025 Saber Sojudi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox (global for ALL images) -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[80] hidden">
+    <button class="absolute top-4 right-4 bg-white/95 hover:bg-white text-slate-900 rounded-full p-2 shadow" data-close aria-label="Close">
+      <i data-feather="x" class="w-5 h-5"></i>
+    </button>
+    <div class="w-full h-full flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="" class="max-w-7xl max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-lg bg-white">
+    </div>
+  </div>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll with offset for fixed header
+    function smoothTo(id){
+      const el = document.querySelector(id);
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        e.preventDefault();
+        smoothTo(href);
+        if (menu && !menu.classList.contains('hidden')) menu.classList.add('hidden');
+      });
+    });
+
+    // Active link underline while scrolling
+    const ids  = ['#overview','#features','#architecture','#demo'];
+    const secs = ids.map(i=>document.querySelector(i)).filter(Boolean);
+    const links = Array.from(document.querySelectorAll('.nav-link')).filter(l=>ids.includes(l.getAttribute('href')));
+    function setActive(){
+      let current = secs[0];
+      for (const s of secs){ if (s.getBoundingClientRect().top - 110 <= 0) current = s; }
+      links.forEach(l=> l.classList.toggle('active', l.getAttribute('href') === '#'+current.id));
+    }
+    document.addEventListener('scroll', setActive, { passive:true });
+    window.addEventListener('load', setActive);
+
+    // Collapsible long code blocks
+    const MAX = 320; // px
+    document.querySelectorAll('pre.code, pre[class*="language-"]').forEach(pre=>{
+      const wrap = pre.closest('.code-wrap') || pre.parentElement;
+      wrap.classList.add('code-wrap');
+      requestAnimationFrame(()=>{
+        if (pre.scrollHeight > MAX) {
+          pre.classList.add('clamp');
+          const overlay = document.createElement('div');
+          overlay.className = 'code-overlay';
+          wrap.appendChild(overlay);
+          const btn = document.createElement('button');
+          btn.className = 'expand-btn';
+          btn.textContent = 'Expand';
+          btn.addEventListener('click', ()=>{
+            const expanded = !pre.classList.contains('clamp');
+            pre.classList.toggle('clamp');
+            overlay.style.display = expanded ? 'block' : 'none';
+            btn.textContent = expanded ? 'Expand' : 'Collapse';
+          });
+          wrap.appendChild(btn);
+        }
+      });
+    });
+
+    // GLOBAL LIGHTBOX — click ANY <img> to enlarge
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const close = lb.querySelector('[data-close]');
+
+      document.addEventListener('click', (e)=>{
+        const pic = e.target.closest('img');
+        if(!pic || pic.closest('#lightbox')) return;
+        const src = pic.getAttribute('data-zoom') || pic.getAttribute('src');
+        if(!src) return;
+        img.src = src;
+        lb.classList.remove('hidden');
+      });
+
+      close.addEventListener('click', ()=> lb.classList.add('hidden'));
+      lb.addEventListener('click', (e)=> { if(e.target===lb) lb.classList.add('hidden'); });
+      document.addEventListener('keydown', (e)=> { if(e.key==='Escape') lb.classList.add('hidden'); });
+    })();
+  </script>
+</body>
+</html>
