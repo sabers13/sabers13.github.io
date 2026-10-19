@@ -1,0 +1,34 @@
+Third-party notices
+===================
+
+Images and annotations: LIVECell, Sartorius Corporate Research, licensed
+CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/).
+Upstream software: MIT. Reference: Edlund et al., LIVECell, and
+https://github.com/sartorius-research/LIVECell#license
+
+Changes made for this site: TIFF images were converted to PNG and
+downsampled for display; supplied annotation polygons are drawn over the
+display copy as an overlay (for dense images, as a separate transparent
+label layer with every supplied outline); a viewing aid may be added to a
+very small polygon so a person can find it. The overlay marks the supplied
+label, not a cell boundary detected by this project. No upstream file is
+modified.
+
+Upstream reports this site reproduces (sartorius-research/LIVECell):
+  issue #26, train/validation overlap and duplicate records: OasisArtisan
+  issue #21, incomplete annotations: ivan-ea (maintainer reply: Rickard
+            Sjögren, Sartorius)
+  issue #14, alternate annotation versions: explained by Christoffer
+            Edlund (Sartorius)
+
+Sartorius logo: Sartorius AG; used unmodified to identify the dataset company.
+Source: https://commons.wikimedia.org/wiki/File:Sartorius-Logo-2020.svg
+The company name and logo remain trademarks of their respective owner.
+
+Typeface: Inter, copyright 2016 The Inter Project Authors
+(https://github.com/rsms/inter), licensed under the SIL Open Font License
+1.1 (assets/fonts/OFL-inter.txt); the latin variable subsets (as packaged
+by Fontsource) are included unmodified.
+
+Intended use: independent, noncommercial portfolio and education work.
+This project is not affiliated with, endorsed by, or connected to Sartorius.
