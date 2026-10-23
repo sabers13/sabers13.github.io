@@ -1,9 +1,9 @@
 /* Review-only extension; the live dashboard and its data contract are untouched. */
 'use strict';
 const previewParams=new URLSearchParams(location.search);
-if(!location.hash)history.replaceState(null,'',location.pathname+location.search+'#characters');
 const previewLayout='split';
-root.dataset.theme=previewParams.get('theme')||root.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+// Opens in the light (Naruto) theme unless the link asks for another; the toggle still switches.
+root.dataset.theme=previewParams.get('theme')||'light';
 const topSix=C.slice(0,6);
 if(!topSix.some(c=>c.k===pick))pick=topSix[0].k;
 const requestedCharacter=previewParams.get('character');
