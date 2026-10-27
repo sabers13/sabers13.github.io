@@ -1,0 +1,74 @@
+{
+  "mock": true,
+  "version": "0.0.0-mock",
+  "generated_at": "2026-10-27T00:00:00Z",
+  "headline": [
+    {
+      "id": "spans",
+      "value": 1284,
+      "format": "int"
+    },
+    {
+      "id": "recall",
+      "value": 94.2,
+      "format": "pct1"
+    },
+    {
+      "id": "guard",
+      "value": 100,
+      "format": "pct0"
+    },
+    {
+      "id": "latency",
+      "value": 2.4,
+      "format": "dec1",
+      "unit": "s"
+    }
+  ],
+  "detection": {
+    "germeval": {
+      "status": "pending",
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "spans": null
+    },
+    "synthetic": {
+      "status": "mock",
+      "precision": 96.2,
+      "recall": 94.2,
+      "f1": 95.2,
+      "spans": 1284,
+      "documents": 240,
+      "labelled_misses": 3
+    }
+  },
+  "triage": {
+    "per_backend": [
+      {
+        "name": "cloud",
+        "model": "mock-cloud-model",
+        "valid_json": 99.5,
+        "category_accuracy": 94.0,
+        "median_latency_ms": 1900,
+        "calls": 240,
+        "mock": true
+      },
+      {
+        "name": "local",
+        "model": "mock-small-model",
+        "valid_json": 93.0,
+        "category_accuracy": 82.0,
+        "median_latency_ms": 7400,
+        "calls": 40,
+        "mock": true
+      }
+    ]
+  },
+  "meta": {
+    "version": "0.0.0-mock",
+    "commit": "mock",
+    "generated_at": "2026-10-27T00:00:00Z",
+    "sha256": "mock"
+  }
+}

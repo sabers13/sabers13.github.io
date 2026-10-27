@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="t">
+  <title id="t">An email with personal data replaced by typed placeholders, protected by a shield</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f19"/>
+      <stop offset=".55" stop-color="#111a2e"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f9"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020617" flood-opacity=".5"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+  <circle cx="255" cy="300" r="210" fill="#2563eb" opacity=".28" filter="url(#glow)"/>
+  <circle cx="980" cy="120" r="150" fill="#22d3ee" opacity=".12" filter="url(#glow)"/>
+
+  <!-- shield block -->
+  <g transform="translate(96 118)">
+    <circle cx="170" cy="182" r="152" fill="#ffffff" opacity=".055"/>
+    <circle cx="170" cy="182" r="152" fill="none" stroke="#ffffff" stroke-opacity=".14"/>
+    <path d="M170 58l118 48v78c0 84-49 135-118 164-69-29-118-80-118-164v-78z" fill="url(#shield)" opacity=".16" stroke="url(#shield)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M118 178l38 38 74-78" fill="none" stroke="#bfdbfe" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(62 300)">
+      <rect width="216" height="40" rx="20" fill="#ffffff" opacity=".10"/>
+      <circle cx="22" cy="20" r="5" fill="#4ade80"/>
+      <rect x="38" y="16" width="46" height="8" rx="4" fill="#94a3b8" opacity=".75"/>
+      <rect x="92" y="16" width="34" height="8" rx="4" fill="#94a3b8" opacity=".55"/>
+      <rect x="134" y="16" width="60" height="8" rx="4" fill="#94a3b8" opacity=".35"/>
+    </g>
+  </g>
+
+  <!-- email sheet -->
+  <g transform="translate(520 92)" filter="url(#sh)">
+    <rect width="584" height="416" rx="28" fill="url(#sheet)"/>
+    <path d="M0 28C0 12.5 12.5 0 28 0h528c15.5 0 28 12.5 28 28v46H0z" fill="#f1f5f9"/>
+    <circle cx="34" cy="37" r="7" fill="#fca5a5"/>
+    <circle cx="58" cy="37" r="7" fill="#fcd34d"/>
+    <circle cx="82" cy="37" r="7" fill="#86efac"/>
+    <rect x="112" y="30" width="180" height="14" rx="7" fill="#cbd5e1"/>
+
+    <rect x="40" y="102" width="116" height="28" rx="7" fill="#dbeafe" stroke="#93c5fd" stroke-dasharray="4 3"/>
+    <text x="50" y="121" fill="#1e40af" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700">[PERSON_1]</text>
+    <rect x="172" y="110" width="210" height="12" rx="6" fill="#e2e8f0"/>
+
+    <rect x="40" y="160" width="470" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="40" y="182" width="432" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="40" y="204" width="362" height="10" rx="5" fill="#e2e8f0"/>
+
+    <g transform="translate(40 240)">
+      <rect width="212" height="34" rx="8" fill="#dcfce7" stroke="#6ee7b7" stroke-dasharray="4 3"/>
+      <text x="12" y="22" fill="#065f46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700">[EMAIL_1]</text>
+    </g>
+    <g transform="translate(266 240)">
+      <rect width="196" height="34" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-dasharray="4 3"/>
+      <text x="12" y="22" fill="#92400e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700">[PHONE_1]</text>
+    </g>
+    <g transform="translate(40 290)">
+      <rect width="248" height="34" rx="8" fill="#d1fae5" stroke="#6ee7b7" stroke-dasharray="4 3"/>
+      <text x="12" y="22" fill="#065f46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700">[IBAN_1]</text>
+    </g>
+
+    <rect x="40" y="352" width="300" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="40" y="374" width="240" height="10" rx="5" fill="#e2e8f0"/>
+    <circle cx="492" cy="362" r="22" fill="#111827"/>
+    <path d="M482 362l7 7 13-14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

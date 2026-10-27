@@ -1,0 +1,777 @@
+[
+  {
+    "id": "ex-01",
+    "mock": true,
+    "featured": true,
+    "style": "formal",
+    "category": "QUOTE_REQUEST",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Angebot für Serverraum-Wartung",
+    "original": "Sehr geehrte Frau Carmen Binner,\n\nwir interessieren uns für Ihre Wartungsverträge für Serverräume. Bitte senden Sie uns ein Angebot für 24 Monate. Erreichbar bin ich unter +49 221 26590301 oder manja.ehlert@scheuermanngmbh.example.com.\n\nMit freundlichen Grüßen\nManja Ehlert\nGrein Groth AG\nRüdiger-Ditschlerin-Platz 8b\n07668 Bitterfeld",
+    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nwir interessieren uns für Ihre Wartungsverträge für Serverräume. Bitte senden Sie uns ein Angebot für 24 Monate. Erreichbar bin ich unter [PHONE_1] oder [EMAIL_1].\n\nMit freundlichen Grüßen\n[PERSON_2]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
+    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Anfrage. Anbei erhalten Sie ein unverbindliches Angebot über 24 Monate Wartung.\n\nDie Unterlagen senden wir an [EMAIL_1]. Bei Rückfragen erreichen Sie uns unter [PHONE_1].\n\nDie Rechnung geht an [ORG_1], [ADDRESS_STREET_1], [POSTCODE_CITY_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Frau Carmen Binner,\n\nvielen Dank für Ihre Anfrage. Anbei erhalten Sie ein unverbindliches Angebot über 24 Monate Wartung.\n\nDie Unterlagen senden wir an manja.ehlert@scheuermanngmbh.example.com. Bei Rückfragen erreichen Sie uns unter +49 221 26590301.\n\nDie Rechnung geht an Grein Groth AG, Rüdiger-Ditschlerin-Platz 8b, 07668 Bitterfeld.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 18,
+        "end": 31,
+        "type": "PERSON",
+        "text": "Carmen Binner",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 172,
+        "end": 188,
+        "type": "PHONE",
+        "text": "+49 221 26590301",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 194,
+        "end": 234,
+        "type": "EMAIL",
+        "text": "manja.ehlert@scheuermanngmbh.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 261,
+        "end": 273,
+        "type": "PERSON",
+        "text": "Manja Ehlert",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 274,
+        "end": 288,
+        "type": "ORG",
+        "text": "Grein Groth AG",
+        "score": 0.86,
+        "source": "spacy"
+      },
+      {
+        "start": 289,
+        "end": 317,
+        "type": "ADDRESS_STREET",
+        "text": "Rüdiger-Ditschlerin-Platz 8b",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 318,
+        "end": 334,
+        "type": "POSTCODE_CITY",
+        "text": "07668 Bitterfeld",
+        "score": 0.88,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-02",
+    "mock": true,
+    "featured": false,
+    "style": "formal",
+    "category": "QUOTE_REQUEST",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Reinigung unserer Büroräume",
+    "original": "Guten Tag,\n\nich möchte ein Angebot für die Reinigung unserer Büros anfragen (ca. 600 m²). Ansprechpartner ist Krzysztof Nowak. Sie erreichen uns unter +49 (521) 7365920 oder jana.lower@heintzekg.example.com.\n\nFreundliche Grüße\nMühle AG",
+    "redacted": "Guten Tag,\n\nich möchte ein Angebot für die Reinigung unserer Büros anfragen (ca. 600 m²). Ansprechpartner ist Krzysztof Nowak. Sie erreichen uns unter [PHONE_1] oder [EMAIL_1].\n\nFreundliche Grüße\n[ORG_1]",
+    "reply_draft_redacted": "Guten Tag Krzysztof Nowak,\n\nvielen Dank für Ihre Anfrage. Für 600 m² erstellen wir Ihnen gern ein Angebot.\n\nWir melden uns unter [PHONE_1] und senden die Unterlagen an [EMAIL_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Krzysztof Nowak,\n\nvielen Dank für Ihre Anfrage. Für 600 m² erstellen wir Ihnen gern ein Angebot.\n\nWir melden uns unter +49 (521) 7365920 und senden die Unterlagen an jana.lower@heintzekg.example.com.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 151,
+        "end": 168,
+        "type": "PHONE",
+        "text": "+49 (521) 7365920",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 174,
+        "end": 206,
+        "type": "EMAIL",
+        "text": "jana.lower@heintzekg.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 227,
+        "end": 235,
+        "type": "ORG",
+        "text": "Mühle AG",
+        "score": 0.86,
+        "source": "spacy"
+      }
+    ],
+    "misses": [
+      {
+        "type": "PERSON",
+        "text": "Krzysztof Nowak",
+        "reason": "name_not_in_list",
+        "start": 110,
+        "end": 125
+      }
+    ]
+  },
+  {
+    "id": "ex-03",
+    "mock": true,
+    "featured": false,
+    "style": "informal",
+    "category": "SUPPORT",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Drucker zieht kein Papier mehr",
+    "original": "Hallo Leokadia Oderwald,\n\nmein Drucker zieht seit gestern kein Papier mehr. Ich habe schon den Treiber neu installiert, ohne Erfolg. Die Seriennummer steht auf der Rückseite. Meine Bestellnummer ist 8812-4471. Ich wohne in 75624 Herzberg.\n\nDanke und viele Grüße\nLeokadia Oderwald",
+    "redacted": "Hallo [PERSON_1],\n\nmein Drucker zieht seit gestern kein Papier mehr. Ich habe schon den Treiber neu installiert, ohne Erfolg. Die Seriennummer steht auf der Rückseite. Meine Bestellnummer ist 8812-4471. Ich wohne in [POSTCODE_CITY_1].\n\nDanke und viele Grüße\n[PERSON_1]",
+    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für Ihre Nachricht. Bitte prüfen Sie zuerst die Papierführung und starten Sie das Gerät neu.\n\nWenn das nicht hilft, schicken wir Ihnen ein Ersatzteil nach [POSTCODE_CITY_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Hallo Leokadia Oderwald,\n\ndanke für Ihre Nachricht. Bitte prüfen Sie zuerst die Papierführung und starten Sie das Gerät neu.\n\nWenn das nicht hilft, schicken wir Ihnen ein Ersatzteil nach 75624 Herzberg.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 6,
+        "end": 23,
+        "type": "PERSON",
+        "text": "Leokadia Oderwald",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 223,
+        "end": 237,
+        "type": "POSTCODE_CITY",
+        "text": "75624 Herzberg",
+        "score": 0.88,
+        "source": "regex"
+      },
+      {
+        "start": 262,
+        "end": 279,
+        "type": "PERSON",
+        "text": "Leokadia Oderwald",
+        "score": 0.93,
+        "source": "spacy+list"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-04",
+    "mock": true,
+    "featured": false,
+    "style": "urgent",
+    "category": "SUPPORT",
+    "urgency": "HIGH",
+    "backend": "mock",
+    "subject": "Bestellung seit zwei Wochen nicht angekommen",
+    "original": "Sehr geehrtes Team,\n\nmeine Bestellung ist seit zwei Wochen nicht angekommen. Ich brauche die Ware bis Freitag für eine Veranstaltung. Bitte rufen Sie mich unter 0913 2069812 an.\n\nRotraut Trapp\nJens-Peter-Kraus-Platz 34a\n75624 Herzberg",
+    "redacted": "Sehr geehrtes Team,\n\nmeine Bestellung ist seit zwei Wochen nicht angekommen. Ich brauche die Ware bis Freitag für eine Veranstaltung. Bitte rufen Sie mich unter [PHONE_1] an.\n\n[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nvielen Dank für Ihren Hinweis. Wir haben die Sendung nachverfolgt und stoßen eine Ersatzlieferung an.\n\nDie Zustellung an [ADDRESS_STREET_1], [POSTCODE_CITY_1] ist für Donnerstag vorgemerkt. Wir melden uns unter [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Rotraut Trapp,\n\nvielen Dank für Ihren Hinweis. Wir haben die Sendung nachverfolgt und stoßen eine Ersatzlieferung an.\n\nDie Zustellung an Jens-Peter-Kraus-Platz 34a, 75624 Herzberg ist für Donnerstag vorgemerkt. Wir melden uns unter 0913 2069812.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 161,
+        "end": 173,
+        "type": "PHONE",
+        "text": "0913 2069812",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 179,
+        "end": 192,
+        "type": "PERSON",
+        "text": "Rotraut Trapp",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 193,
+        "end": 219,
+        "type": "ADDRESS_STREET",
+        "text": "Jens-Peter-Kraus-Platz 34a",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 220,
+        "end": 234,
+        "type": "POSTCODE_CITY",
+        "text": "75624 Herzberg",
+        "score": 0.88,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-05",
+    "mock": true,
+    "featured": false,
+    "style": "formal",
+    "category": "JOB_APPLICATION",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Bewerbung als Data Analystin",
+    "original": "Sehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die Stelle als Data Analystin. Meine Unterlagen und Zeugnisse finden Sie im Anhang. Geboren bin ich am 23.10.1968.\n\nDiethard Atzler\nLeif-Fischer-Weg 145\n34498 Gräfenhainichen\ndiethard.atzler@weitzelgmbhcokg.example.com\n069 6653173",
+    "redacted": "Sehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die Stelle als Data Analystin. Meine Unterlagen und Zeugnisse finden Sie im Anhang. Geboren bin ich am [DATE_OF_BIRTH_1].\n\n[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\n[EMAIL_1]\n[PHONE_1]",
+    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Bewerbung. Wir haben Ihre Unterlagen erhalten und melden uns in den nächsten Tagen.\n\nFür Rückfragen erreichen wir Sie unter [EMAIL_1] oder [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Frau Diethard Atzler,\n\nvielen Dank für Ihre Bewerbung. Wir haben Ihre Unterlagen erhalten und melden uns in den nächsten Tagen.\n\nFür Rückfragen erreichen wir Sie unter diethard.atzler@weitzelgmbhcokg.example.com oder 069 6653173.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 164,
+        "end": 174,
+        "type": "DATE_OF_BIRTH",
+        "text": "23.10.1968",
+        "score": 0.9,
+        "source": "presidio"
+      },
+      {
+        "start": 177,
+        "end": 192,
+        "type": "PERSON",
+        "text": "Diethard Atzler",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 193,
+        "end": 213,
+        "type": "ADDRESS_STREET",
+        "text": "Leif-Fischer-Weg 145",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 214,
+        "end": 235,
+        "type": "POSTCODE_CITY",
+        "text": "34498 Gräfenhainichen",
+        "score": 0.88,
+        "source": "regex"
+      },
+      {
+        "start": 236,
+        "end": 279,
+        "type": "EMAIL",
+        "text": "diethard.atzler@weitzelgmbhcokg.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 280,
+        "end": 291,
+        "type": "PHONE",
+        "text": "069 6653173",
+        "score": 0.91,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-06",
+    "mock": true,
+    "featured": false,
+    "style": "informal",
+    "category": "JOB_APPLICATION",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Praktikum im Bereich Datenanalyse",
+    "original": "Hi,\n\nich bin Reinhart Junitz und studiere Wirtschaftsinformatik im 5. Semester. Ich suche ein Praktikum ab März. Ich wohne Am Marktplatz in 91699 Sigmaringen.\n\nMeine E-Mail ist reinhart.junitz@sauerkg.example.com, telefonisch bin ich unter 0231/4930458 erreichbar.\n\nLG",
+    "redacted": "Hi,\n\nich bin [PERSON_1] und studiere Wirtschaftsinformatik im 5. Semester. Ich suche ein Praktikum ab März. Ich wohne Am Marktplatz in [POSTCODE_CITY_1].\n\nMeine E-Mail ist [EMAIL_1], telefonisch bin ich unter [PHONE_1] erreichbar.\n\nLG",
+    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für Ihr Interesse. Ein Praktikum ab März ist grundsätzlich möglich.\n\nWir melden uns unter [EMAIL_1] bei Ihnen.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Hallo Reinhart Junitz,\n\ndanke für Ihr Interesse. Ein Praktikum ab März ist grundsätzlich möglich.\n\nWir melden uns unter reinhart.junitz@sauerkg.example.com bei Ihnen.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 13,
+        "end": 28,
+        "type": "PERSON",
+        "text": "Reinhart Junitz",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 140,
+        "end": 157,
+        "type": "POSTCODE_CITY",
+        "text": "91699 Sigmaringen",
+        "score": 0.88,
+        "source": "regex"
+      },
+      {
+        "start": 177,
+        "end": 212,
+        "type": "EMAIL",
+        "text": "reinhart.junitz@sauerkg.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 240,
+        "end": 252,
+        "type": "PHONE",
+        "text": "0231/4930458",
+        "score": 0.91,
+        "source": "regex"
+      }
+    ],
+    "misses": [
+      {
+        "type": "ADDRESS_STREET",
+        "text": "Am Marktplatz",
+        "reason": "street_without_number",
+        "start": 123,
+        "end": 136
+      }
+    ]
+  },
+  {
+    "id": "ex-07",
+    "mock": true,
+    "featured": false,
+    "style": "formal",
+    "category": "PARTNERSHIP",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Kooperation im Bereich Datenschutzberatung",
+    "original": "Sehr geehrte Frau Nevenka Junken,\n\nwir sind ein Beratungsunternehmen und möchten eine Kooperation vorschlagen. Unsere Leistungen finden Sie unter https://www.zanker-ag.example.\n\nZänker AG\nNevenka Junken\nnevenka.junken@klappgmbh.example.com\n0351/3408498",
+    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nwir sind ein Beratungsunternehmen und möchten eine Kooperation vorschlagen. Unsere Leistungen finden Sie unter [URL_1].\n\n[ORG_1]\n[PERSON_1]\n[EMAIL_1]\n[PHONE_1]",
+    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihren Vorschlag. Eine Zusammenarbeit können wir uns gut vorstellen.\n\nWir schauen uns Ihre Seite [URL_1] an und melden uns unter [EMAIL_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Frau Nevenka Junken,\n\nvielen Dank für Ihren Vorschlag. Eine Zusammenarbeit können wir uns gut vorstellen.\n\nWir schauen uns Ihre Seite https://www.zanker-ag.example an und melden uns unter nevenka.junken@klappgmbh.example.com.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 18,
+        "end": 32,
+        "type": "PERSON",
+        "text": "Nevenka Junken",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 146,
+        "end": 175,
+        "type": "URL",
+        "text": "https://www.zanker-ag.example",
+        "score": 0.97,
+        "source": "regex"
+      },
+      {
+        "start": 178,
+        "end": 187,
+        "type": "ORG",
+        "text": "Zänker AG",
+        "score": 0.86,
+        "source": "spacy"
+      },
+      {
+        "start": 188,
+        "end": 202,
+        "type": "PERSON",
+        "text": "Nevenka Junken",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 203,
+        "end": 239,
+        "type": "EMAIL",
+        "text": "nevenka.junken@klappgmbh.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 240,
+        "end": 252,
+        "type": "PHONE",
+        "text": "0351/3408498",
+        "score": 0.91,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-08",
+    "mock": true,
+    "featured": false,
+    "style": "formal",
+    "category": "PARTNERSHIP",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Aufnahme in Ihr Händlernetz",
+    "original": "Sehr geehrter Herr Lukas Hövel,\n\nwir möchten Ihre Produkte in unser Sortiment aufnehmen. Unsere Bankverbindung für die erste Bestellung: DE09805904952657906078.\n\nLübs GmbH\nArne-Henk-Straße 57\n43908 Gadebusch",
+    "redacted": "Sehr geehrter Herr [PERSON_1],\n\nwir möchten Ihre Produkte in unser Sortiment aufnehmen. Unsere Bankverbindung für die erste Bestellung: [IBAN_1].\n\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
+    "reply_draft_redacted": "Guten Tag Herr [PERSON_1],\n\nvielen Dank für Ihr Interesse an einer Partnerschaft. Wir senden Ihnen gern unsere Händlerunterlagen.\n\nDie Zahlung verbuchen wir auf [IBAN_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Herr Lukas Hövel,\n\nvielen Dank für Ihr Interesse an einer Partnerschaft. Wir senden Ihnen gern unsere Händlerunterlagen.\n\nDie Zahlung verbuchen wir auf DE09805904952657906078.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 19,
+        "end": 30,
+        "type": "PERSON",
+        "text": "Lukas Hövel",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 137,
+        "end": 159,
+        "type": "IBAN",
+        "text": "DE09805904952657906078",
+        "score": 0.99,
+        "source": "regex+checksum"
+      },
+      {
+        "start": 162,
+        "end": 171,
+        "type": "ORG",
+        "text": "Lübs GmbH",
+        "score": 0.86,
+        "source": "spacy"
+      },
+      {
+        "start": 172,
+        "end": 191,
+        "type": "ADDRESS_STREET",
+        "text": "Arne-Henk-Straße 57",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 192,
+        "end": 207,
+        "type": "POSTCODE_CITY",
+        "text": "43908 Gadebusch",
+        "score": 0.88,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-09",
+    "mock": true,
+    "featured": false,
+    "style": "angry",
+    "category": "SUPPORT",
+    "urgency": "HIGH",
+    "backend": "mock",
+    "subject": "Dritte Reklamation, keine Antwort",
+    "original": "Das ist eine Frechheit!\n\nIch habe jetzt zum dritten Mal reklamiert und niemand antwortet. Ihre Hotline ist nicht erreichbar, die Seite https://www.ring-gmbh-co-kg.example zeigt nur Fehler. Ich erwarte heute eine Rückmeldung unter 0173 3144652 oder andreas.muhle@eigenwilligkg.example.com.\n\nAndreas Mühle",
+    "redacted": "Das ist eine Frechheit!\n\nIch habe jetzt zum dritten Mal reklamiert und niemand antwortet. Ihre Hotline ist nicht erreichbar, die Seite [URL_1] zeigt nur Fehler. Ich erwarte heute eine Rückmeldung unter [PHONE_1] oder [EMAIL_1].\n\n[PERSON_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nIhre Verärgerung kann ich verstehen. Bitte entschuldigen Sie die fehlende Rückmeldung.\n\nWir rufen Sie heute unter [PHONE_1] an und klären den Fall persönlich.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Andreas Mühle,\n\nIhre Verärgerung kann ich verstehen. Bitte entschuldigen Sie die fehlende Rückmeldung.\n\nWir rufen Sie heute unter 0173 3144652 an und klären den Fall persönlich.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 135,
+        "end": 170,
+        "type": "URL",
+        "text": "https://www.ring-gmbh-co-kg.example",
+        "score": 0.97,
+        "source": "regex"
+      },
+      {
+        "start": 230,
+        "end": 242,
+        "type": "PHONE",
+        "text": "0173 3144652",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 248,
+        "end": 287,
+        "type": "EMAIL",
+        "text": "andreas.muhle@eigenwilligkg.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 290,
+        "end": 303,
+        "type": "PERSON",
+        "text": "Andreas Mühle",
+        "score": 0.93,
+        "source": "spacy+list"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-10",
+    "mock": true,
+    "featured": false,
+    "style": "short",
+    "category": "QUOTE_REQUEST",
+    "urgency": "LOW",
+    "backend": "mock",
+    "subject": "Preis für 50 Stück",
+    "original": "Preis für 50 Stück? Bitte an irma.eckbauer@henkek.example.com senden.",
+    "redacted": "Preis für 50 Stück? Bitte an [EMAIL_1] senden.",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nfür 50 Stück erhalten Sie ein Angebot mit Staffelpreis. Wir senden es an die genannte Adresse.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Irma Eckbauer,\n\nfür 50 Stück erhalten Sie ein Angebot mit Staffelpreis. Wir senden es an die genannte Adresse.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 29,
+        "end": 61,
+        "type": "EMAIL",
+        "text": "irma.eckbauer@henkek.example.com",
+        "score": 0.99,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-11",
+    "mock": true,
+    "featured": false,
+    "style": "urgent",
+    "category": "QUOTE_REQUEST",
+    "urgency": "HIGH",
+    "backend": "mock",
+    "subject": "Eilige Lieferung nächste Woche",
+    "original": "Sehr geehrte Damen und Herren,\n\nwir brauchen dringend ein Angebot für 200 Einheiten, Lieferung nächste Woche an Telse-Hethur-Weg 173, 71985 Kulmbach. Bitte rufen Sie mich unter 0421 9127204 an.\n\nKornelius Sager",
+    "redacted": "Sehr geehrte Damen und Herren,\n\nwir brauchen dringend ein Angebot für 200 Einheiten, Lieferung nächste Woche an [ADDRESS_STREET_1], [POSTCODE_CITY_1]. Bitte rufen Sie mich unter [PHONE_1] an.\n\n[PERSON_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nein Angebot für 200 Einheiten senden wir Ihnen heute zu. Die Lieferung an [ADDRESS_STREET_1], [POSTCODE_CITY_1] ist für Dienstag möglich.\n\nWir bestätigen den Termin telefonisch unter [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Kornelius Sager,\n\nein Angebot für 200 Einheiten senden wir Ihnen heute zu. Die Lieferung an Telse-Hethur-Weg 173, 71985 Kulmbach ist für Dienstag möglich.\n\nWir bestätigen den Termin telefonisch unter 0421 9127204.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 112,
+        "end": 132,
+        "type": "ADDRESS_STREET",
+        "text": "Telse-Hethur-Weg 173",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 134,
+        "end": 148,
+        "type": "POSTCODE_CITY",
+        "text": "71985 Kulmbach",
+        "score": 0.88,
+        "source": "regex"
+      },
+      {
+        "start": 177,
+        "end": 189,
+        "type": "PHONE",
+        "text": "0421 9127204",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 195,
+        "end": 210,
+        "type": "PERSON",
+        "text": "Kornelius Sager",
+        "score": 0.93,
+        "source": "spacy+list"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-12",
+    "mock": true,
+    "featured": false,
+    "style": "informal",
+    "category": "SUPPORT",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Neue Bankverbindung für die Rechnung",
+    "original": "Hallo zusammen,\n\nbitte die nächste Rechnung auf die neue IBAN DE46613828568570745465 überweisen. Die alte Verbindung ist ungültig. Rückfragen gern unter +49 (231) 5959167.\n\nLG Ronny Trommler",
+    "redacted": "Hallo zusammen,\n\nbitte die nächste Rechnung auf die neue IBAN [IBAN_1] überweisen. Die alte Verbindung ist ungültig. Rückfragen gern unter [PHONE_1].\n\nLG [PERSON_1]",
+    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für die Information. Wir haben die neue Bankverbindung hinterlegt.\n\nDie nächste Rechnung geht an [IBAN_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Hallo Ronny Trommler,\n\ndanke für die Information. Wir haben die neue Bankverbindung hinterlegt.\n\nDie nächste Rechnung geht an DE46613828568570745465.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 62,
+        "end": 84,
+        "type": "IBAN",
+        "text": "DE46613828568570745465",
+        "score": 0.99,
+        "source": "regex+checksum"
+      },
+      {
+        "start": 153,
+        "end": 170,
+        "type": "PHONE",
+        "text": "+49 (231) 5959167",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 176,
+        "end": 190,
+        "type": "PERSON",
+        "text": "Ronny Trommler",
+        "score": 0.93,
+        "source": "spacy+list"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-13",
+    "mock": true,
+    "featured": false,
+    "style": "formal",
+    "category": "JOB_APPLICATION",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Bewerbung als Senior Data Engineer",
+    "original": "Sehr geehrte Frau Helena Stroh,\n\nich bewerbe mich auf die Stelle als Senior Data Engineer. Geburtsdatum: 03.02.1995. Meine Unterlagen finden Sie unter https://www.linkedin-profil.example.\n\nSödinggasse 131\n54788 Biedenkopf\nhelena.stroh@drubag.example.com\n0911 679528",
+    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nich bewerbe mich auf die Stelle als Senior Data Engineer. Geburtsdatum: [DATE_OF_BIRTH_1]. Meine Unterlagen finden Sie unter [URL_1].\n\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\n[EMAIL_1]\n[PHONE_1]",
+    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Bewerbung. Ihr Profil passt gut zu der ausgeschriebenen Stelle.\n\nWir melden uns unter [EMAIL_1] für ein erstes Gespräch.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Frau Helena Stroh,\n\nvielen Dank für Ihre Bewerbung. Ihr Profil passt gut zu der ausgeschriebenen Stelle.\n\nWir melden uns unter helena.stroh@drubag.example.com für ein erstes Gespräch.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 18,
+        "end": 30,
+        "type": "PERSON",
+        "text": "Helena Stroh",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 105,
+        "end": 115,
+        "type": "DATE_OF_BIRTH",
+        "text": "03.02.1995",
+        "score": 0.9,
+        "source": "presidio"
+      },
+      {
+        "start": 151,
+        "end": 186,
+        "type": "URL",
+        "text": "https://www.linkedin-profil.example",
+        "score": 0.97,
+        "source": "regex"
+      },
+      {
+        "start": 189,
+        "end": 204,
+        "type": "ADDRESS_STREET",
+        "text": "Södinggasse 131",
+        "score": 0.89,
+        "source": "regex"
+      },
+      {
+        "start": 205,
+        "end": 221,
+        "type": "POSTCODE_CITY",
+        "text": "54788 Biedenkopf",
+        "score": 0.88,
+        "source": "regex"
+      },
+      {
+        "start": 222,
+        "end": 253,
+        "type": "EMAIL",
+        "text": "helena.stroh@drubag.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 254,
+        "end": 265,
+        "type": "PHONE",
+        "text": "0911 679528",
+        "score": 0.91,
+        "source": "regex"
+      }
+    ],
+    "misses": []
+  },
+  {
+    "id": "ex-14",
+    "mock": true,
+    "featured": false,
+    "style": "informal",
+    "category": "PARTNERSHIP",
+    "urgency": "NORMAL",
+    "backend": "mock",
+    "subject": "Zusammenarbeit über LinkedIn",
+    "original": "Hey,\n\nich habe dein Profil gesehen und würde gern zusammenarbeiten. Melde dich doch per WhatsApp unter null eins sieben fünf eins zwei drei vier fünf sechs sieben oder per Mail an annemarie.hauffer@plathgmbh.example.com.\n\nAnnemarie Hauffer\nhttps://www.linkedin.example/in/annemarie-hauffer",
+    "redacted": "Hey,\n\nich habe dein Profil gesehen und würde gern zusammenarbeiten. Melde dich doch per WhatsApp unter null eins sieben fünf eins zwei drei vier fünf sechs sieben oder per Mail an [EMAIL_1].\n\n[PERSON_1]\n[URL_1]",
+    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für deine Nachricht. Eine Zusammenarbeit klingt spannend.\n\nSchreib mir gern an [EMAIL_1], dann finden wir einen Termin.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Hallo Annemarie Hauffer,\n\ndanke für deine Nachricht. Eine Zusammenarbeit klingt spannend.\n\nSchreib mir gern an annemarie.hauffer@plathgmbh.example.com, dann finden wir einen Termin.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 180,
+        "end": 219,
+        "type": "EMAIL",
+        "text": "annemarie.hauffer@plathgmbh.example.com",
+        "score": 0.99,
+        "source": "regex"
+      },
+      {
+        "start": 222,
+        "end": 239,
+        "type": "PERSON",
+        "text": "Annemarie Hauffer",
+        "score": 0.93,
+        "source": "spacy+list"
+      },
+      {
+        "start": 240,
+        "end": 289,
+        "type": "URL",
+        "text": "https://www.linkedin.example/in/annemarie-hauffer",
+        "score": 0.97,
+        "source": "regex"
+      }
+    ],
+    "misses": [
+      {
+        "type": "PHONE",
+        "text": "eins zwei drei vier fünf sechs sieben",
+        "reason": "phone_spelled_out",
+        "start": 125,
+        "end": 162
+      }
+    ]
+  },
+  {
+    "id": "ex-15",
+    "mock": true,
+    "featured": false,
+    "style": "short",
+    "category": "OTHER",
+    "urgency": "LOW",
+    "backend": "mock",
+    "subject": "Terminanfrage",
+    "original": "Termin nächste Woche möglich? Kurze Rückmeldung bitte. 0911 2390956 – Volker Klemt",
+    "redacted": "Termin nächste Woche möglich? Kurze Rückmeldung bitte. [PHONE_1] – [PERSON_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nein Termin nächste Woche ist möglich. Wir rufen Sie unter der angegebenen Nummer an.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "reply_draft_restored": "Guten Tag Volker Klemt,\n\nein Termin nächste Woche ist möglich. Wir rufen Sie unter der angegebenen Nummer an.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "spans": [
+      {
+        "start": 55,
+        "end": 67,
+        "type": "PHONE",
+        "text": "0911 2390956",
+        "score": 0.91,
+        "source": "regex"
+      },
+      {
+        "start": 70,
+        "end": 82,
+        "type": "PERSON",
+        "text": "Volker Klemt",
+        "score": 0.93,
+        "source": "spacy+list"
+      }
+    ],
+    "misses": []
+  }
+]
