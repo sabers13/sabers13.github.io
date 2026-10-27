@@ -1,777 +1,992 @@
 [
   {
-    "id": "ex-01",
-    "mock": true,
-    "featured": true,
-    "style": "formal",
+    "backend": "guard-blocked",
     "category": "QUOTE_REQUEST",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Angebot für Serverraum-Wartung",
-    "original": "Sehr geehrte Frau Carmen Binner,\n\nwir interessieren uns für Ihre Wartungsverträge für Serverräume. Bitte senden Sie uns ein Angebot für 24 Monate. Erreichbar bin ich unter +49 221 26590301 oder manja.ehlert@scheuermanngmbh.example.com.\n\nMit freundlichen Grüßen\nManja Ehlert\nGrein Groth AG\nRüdiger-Ditschlerin-Platz 8b\n07668 Bitterfeld",
-    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nwir interessieren uns für Ihre Wartungsverträge für Serverräume. Bitte senden Sie uns ein Angebot für 24 Monate. Erreichbar bin ich unter [PHONE_1] oder [EMAIL_1].\n\nMit freundlichen Grüßen\n[PERSON_2]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
-    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Anfrage. Anbei erhalten Sie ein unverbindliches Angebot über 24 Monate Wartung.\n\nDie Unterlagen senden wir an [EMAIL_1]. Bei Rückfragen erreichen Sie uns unter [PHONE_1].\n\nDie Rechnung geht an [ORG_1], [ADDRESS_STREET_1], [POSTCODE_CITY_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Frau Carmen Binner,\n\nvielen Dank für Ihre Anfrage. Anbei erhalten Sie ein unverbindliches Angebot über 24 Monate Wartung.\n\nDie Unterlagen senden wir an manja.ehlert@scheuermanngmbh.example.com. Bei Rückfragen erreichen Sie uns unter +49 221 26590301.\n\nDie Rechnung geht an Grein Groth AG, Rüdiger-Ditschlerin-Platz 8b, 07668 Bitterfeld.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 18,
-        "end": 31,
-        "type": "PERSON",
-        "text": "Carmen Binner",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 172,
-        "end": 188,
-        "type": "PHONE",
-        "text": "+49 221 26590301",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 194,
-        "end": 234,
-        "type": "EMAIL",
-        "text": "manja.ehlert@scheuermanngmbh.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 261,
-        "end": 273,
-        "type": "PERSON",
-        "text": "Manja Ehlert",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 274,
-        "end": 288,
-        "type": "ORG",
-        "text": "Grein Groth AG",
-        "score": 0.86,
-        "source": "spacy"
-      },
-      {
-        "start": 289,
-        "end": 317,
-        "type": "ADDRESS_STREET",
-        "text": "Rüdiger-Ditschlerin-Platz 8b",
-        "score": 0.89,
-        "source": "regex"
-      },
-      {
-        "start": 318,
-        "end": 334,
-        "type": "POSTCODE_CITY",
-        "text": "07668 Bitterfeld",
-        "score": 0.88,
-        "source": "regex"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-02",
-    "mock": true,
-    "featured": false,
-    "style": "formal",
-    "category": "QUOTE_REQUEST",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Reinigung unserer Büroräume",
-    "original": "Guten Tag,\n\nich möchte ein Angebot für die Reinigung unserer Büros anfragen (ca. 600 m²). Ansprechpartner ist Krzysztof Nowak. Sie erreichen uns unter +49 (521) 7365920 oder jana.lower@heintzekg.example.com.\n\nFreundliche Grüße\nMühle AG",
-    "redacted": "Guten Tag,\n\nich möchte ein Angebot für die Reinigung unserer Büros anfragen (ca. 600 m²). Ansprechpartner ist Krzysztof Nowak. Sie erreichen uns unter [PHONE_1] oder [EMAIL_1].\n\nFreundliche Grüße\n[ORG_1]",
-    "reply_draft_redacted": "Guten Tag Krzysztof Nowak,\n\nvielen Dank für Ihre Anfrage. Für 600 m² erstellen wir Ihnen gern ein Angebot.\n\nWir melden uns unter [PHONE_1] und senden die Unterlagen an [EMAIL_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Krzysztof Nowak,\n\nvielen Dank für Ihre Anfrage. Für 600 m² erstellen wir Ihnen gern ein Angebot.\n\nWir melden uns unter +49 (521) 7365920 und senden die Unterlagen an jana.lower@heintzekg.example.com.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 151,
-        "end": 168,
-        "type": "PHONE",
-        "text": "+49 (521) 7365920",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 174,
-        "end": 206,
-        "type": "EMAIL",
-        "text": "jana.lower@heintzekg.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 227,
-        "end": 235,
-        "type": "ORG",
-        "text": "Mühle AG",
-        "score": 0.86,
-        "source": "spacy"
-      }
-    ],
+    "id": "syn-test-0006",
     "misses": [
       {
-        "type": "PERSON",
-        "text": "Krzysztof Nowak",
-        "reason": "name_not_in_list",
-        "start": 110,
-        "end": 125
-      }
-    ]
-  },
-  {
-    "id": "ex-03",
-    "mock": true,
-    "featured": false,
-    "style": "informal",
-    "category": "SUPPORT",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Drucker zieht kein Papier mehr",
-    "original": "Hallo Leokadia Oderwald,\n\nmein Drucker zieht seit gestern kein Papier mehr. Ich habe schon den Treiber neu installiert, ohne Erfolg. Die Seriennummer steht auf der Rückseite. Meine Bestellnummer ist 8812-4471. Ich wohne in 75624 Herzberg.\n\nDanke und viele Grüße\nLeokadia Oderwald",
-    "redacted": "Hallo [PERSON_1],\n\nmein Drucker zieht seit gestern kein Papier mehr. Ich habe schon den Treiber neu installiert, ohne Erfolg. Die Seriennummer steht auf der Rückseite. Meine Bestellnummer ist 8812-4471. Ich wohne in [POSTCODE_CITY_1].\n\nDanke und viele Grüße\n[PERSON_1]",
-    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für Ihre Nachricht. Bitte prüfen Sie zuerst die Papierführung und starten Sie das Gerät neu.\n\nWenn das nicht hilft, schicken wir Ihnen ein Ersatzteil nach [POSTCODE_CITY_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Hallo Leokadia Oderwald,\n\ndanke für Ihre Nachricht. Bitte prüfen Sie zuerst die Papierführung und starten Sie das Gerät neu.\n\nWenn das nicht hilft, schicken wir Ihnen ein Ersatzteil nach 75624 Herzberg.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 6,
-        "end": 23,
-        "type": "PERSON",
-        "text": "Leokadia Oderwald",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 341,
+        "score": 1.0,
+        "source": "gold",
+        "start": 321,
+        "text": "van der Dussenring 7",
+        "type": "ADDRESS_STREET"
       },
       {
-        "start": 223,
-        "end": 237,
-        "type": "POSTCODE_CITY",
-        "text": "75624 Herzberg",
-        "score": 0.88,
-        "source": "regex"
-      },
-      {
-        "start": 262,
-        "end": 279,
-        "type": "PERSON",
-        "text": "Leokadia Oderwald",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 356,
+        "score": 1.0,
+        "source": "gold",
+        "start": 342,
+        "text": "00523 Eisleben",
+        "type": "POSTCODE_CITY"
       }
     ],
-    "misses": []
-  },
-  {
-    "id": "ex-04",
-    "mock": true,
-    "featured": false,
-    "style": "urgent",
-    "category": "SUPPORT",
-    "urgency": "HIGH",
-    "backend": "mock",
-    "subject": "Bestellung seit zwei Wochen nicht angekommen",
-    "original": "Sehr geehrtes Team,\n\nmeine Bestellung ist seit zwei Wochen nicht angekommen. Ich brauche die Ware bis Freitag für eine Veranstaltung. Bitte rufen Sie mich unter 0913 2069812 an.\n\nRotraut Trapp\nJens-Peter-Kraus-Platz 34a\n75624 Herzberg",
-    "redacted": "Sehr geehrtes Team,\n\nmeine Bestellung ist seit zwei Wochen nicht angekommen. Ich brauche die Ware bis Freitag für eine Veranstaltung. Bitte rufen Sie mich unter [PHONE_1] an.\n\n[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
-    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nvielen Dank für Ihren Hinweis. Wir haben die Sendung nachverfolgt und stoßen eine Ersatzlieferung an.\n\nDie Zustellung an [ADDRESS_STREET_1], [POSTCODE_CITY_1] ist für Donnerstag vorgemerkt. Wir melden uns unter [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Rotraut Trapp,\n\nvielen Dank für Ihren Hinweis. Wir haben die Sendung nachverfolgt und stoßen eine Ersatzlieferung an.\n\nDie Zustellung an Jens-Peter-Kraus-Platz 34a, 75624 Herzberg ist für Donnerstag vorgemerkt. Wir melden uns unter 0913 2069812.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "original": "Von: Norman Warmer <eimerhenriette@example.org>\nAn: Paola Rogner <ezimmer@example.com>\nUnternehmen: Flusslauf Logistik GmbH\nTelefon: +49(0) 025941072\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nRechnung bitte an:\nvan der Dussenring 7\n00523 Eisleben\nIBAN: DE45474642234746224345",
+    "redacted": "Von: [PERSON_1] <[EMAIL_1]>\nAn: [PERSON_2] <[EMAIL_2]>\nUnternehmen: [ORG_1]\nTelefon: [PHONE_1]\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nRechnung bitte an:\n[PERSON_3] 7\n00523 Eisleben\nIBAN: [IBAN_1]",
+    "reply_draft_redacted": "",
+    "reply_draft_restored": "",
     "spans": [
       {
-        "start": 161,
-        "end": 173,
-        "type": "PHONE",
-        "text": "0913 2069812",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 179,
-        "end": 192,
-        "type": "PERSON",
-        "text": "Rotraut Trapp",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 193,
-        "end": 219,
-        "type": "ADDRESS_STREET",
-        "text": "Jens-Peter-Kraus-Platz 34a",
-        "score": 0.89,
-        "source": "regex"
-      },
-      {
-        "start": 220,
-        "end": 234,
-        "type": "POSTCODE_CITY",
-        "text": "75624 Herzberg",
-        "score": 0.88,
-        "source": "regex"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-05",
-    "mock": true,
-    "featured": false,
-    "style": "formal",
-    "category": "JOB_APPLICATION",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Bewerbung als Data Analystin",
-    "original": "Sehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die Stelle als Data Analystin. Meine Unterlagen und Zeugnisse finden Sie im Anhang. Geboren bin ich am 23.10.1968.\n\nDiethard Atzler\nLeif-Fischer-Weg 145\n34498 Gräfenhainichen\ndiethard.atzler@weitzelgmbhcokg.example.com\n069 6653173",
-    "redacted": "Sehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die Stelle als Data Analystin. Meine Unterlagen und Zeugnisse finden Sie im Anhang. Geboren bin ich am [DATE_OF_BIRTH_1].\n\n[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\n[EMAIL_1]\n[PHONE_1]",
-    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Bewerbung. Wir haben Ihre Unterlagen erhalten und melden uns in den nächsten Tagen.\n\nFür Rückfragen erreichen wir Sie unter [EMAIL_1] oder [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Frau Diethard Atzler,\n\nvielen Dank für Ihre Bewerbung. Wir haben Ihre Unterlagen erhalten und melden uns in den nächsten Tagen.\n\nFür Rückfragen erreichen wir Sie unter diethard.atzler@weitzelgmbhcokg.example.com oder 069 6653173.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 164,
-        "end": 174,
-        "type": "DATE_OF_BIRTH",
-        "text": "23.10.1968",
+        "end": 18,
         "score": 0.9,
-        "source": "presidio"
+        "source": "NamesContextRecognizer",
+        "start": 5,
+        "text": "Norman Warmer",
+        "type": "PERSON"
       },
       {
-        "start": 177,
-        "end": 192,
-        "type": "PERSON",
-        "text": "Diethard Atzler",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 46,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 20,
+        "text": "eimerhenriette@example.org",
+        "type": "EMAIL"
       },
       {
-        "start": 193,
-        "end": 213,
-        "type": "ADDRESS_STREET",
-        "text": "Leif-Fischer-Weg 145",
-        "score": 0.89,
-        "source": "regex"
+        "end": 64,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 52,
+        "text": "Paola Rogner",
+        "type": "PERSON"
       },
       {
-        "start": 214,
-        "end": 235,
-        "type": "POSTCODE_CITY",
-        "text": "34498 Gräfenhainichen",
+        "end": 85,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 66,
+        "text": "ezimmer@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 123,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 100,
+        "text": "Flusslauf Logistik GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 149,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 133,
+        "text": "+49(0) 025941072",
+        "type": "PHONE"
+      },
+      {
+        "end": 339,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 321,
+        "text": "van der Dussenring",
+        "type": "PERSON"
+      },
+      {
+        "end": 385,
+        "score": 1.0,
+        "source": "DeIbanRecognizer",
+        "start": 363,
+        "text": "DE45474642234746224345",
+        "type": "IBAN"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "QUOTE_REQUEST",
+    "id": "syn-test-0001",
+    "misses": [],
+    "original": "Andy Drub\nBohlanderweg 839\n27333 Böblingen\nE-Mail: odaebert@example.com\nTelefon: (03419) 565816\n\nSehr geehrte Damen und Herren,\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nMit freundlichen Grüßen\nAndy Drub",
+    "redacted": "[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\n\nSehr geehrte Damen und Herren,\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nMit freundlichen Grüßen\n[PERSON_1]",
+    "reply_draft_redacted": "Sehr geehrte/r [PERSON_1],\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Wir prüfen Ihr Anliegen und senden Ihnen unsere Preisliste sowie Informationen zu den Lieferzeiten zu. Falls Sie bereits konkrete Vorstellungen zu Ausstattung oder Umfang haben, teilen Sie uns diese gerne mit, damit wir Ihnen ein passendes Angebot erstellen können.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Sehr geehrte/r Andy Drub,\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Wir prüfen Ihr Anliegen und senden Ihnen unsere Preisliste sowie Informationen zu den Lieferzeiten zu. Falls Sie bereits konkrete Vorstellungen zu Ausstattung oder Umfang haben, teilen Sie uns diese gerne mit, damit wir Ihnen ein passendes Angebot erstellen können.\n\nMit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 9,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 0,
+        "text": "Andy Drub",
+        "type": "PERSON"
+      },
+      {
+        "end": 26,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 10,
+        "text": "Bohlanderweg 839",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 42,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 27,
+        "text": "27333 Böblingen",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 71,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 51,
+        "text": "odaebert@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 95,
         "score": 0.88,
-        "source": "regex"
+        "source": "DePhoneRecognizer",
+        "start": 81,
+        "text": "(03419) 565816",
+        "type": "PHONE"
       },
       {
-        "start": 236,
-        "end": 279,
-        "type": "EMAIL",
-        "text": "diethard.atzler@weitzelgmbhcokg.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 280,
-        "end": 291,
-        "type": "PHONE",
-        "text": "069 6653173",
-        "score": 0.91,
-        "source": "regex"
+        "end": 313,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 304,
+        "text": "Andy Drub",
+        "type": "PERSON"
       }
     ],
-    "misses": []
+    "urgency": "NORMAL"
   },
   {
-    "id": "ex-06",
-    "mock": true,
-    "featured": false,
-    "style": "informal",
-    "category": "JOB_APPLICATION",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Praktikum im Bereich Datenanalyse",
-    "original": "Hi,\n\nich bin Reinhart Junitz und studiere Wirtschaftsinformatik im 5. Semester. Ich suche ein Praktikum ab März. Ich wohne Am Marktplatz in 91699 Sigmaringen.\n\nMeine E-Mail ist reinhart.junitz@sauerkg.example.com, telefonisch bin ich unter 0231/4930458 erreichbar.\n\nLG",
-    "redacted": "Hi,\n\nich bin [PERSON_1] und studiere Wirtschaftsinformatik im 5. Semester. Ich suche ein Praktikum ab März. Ich wohne Am Marktplatz in [POSTCODE_CITY_1].\n\nMeine E-Mail ist [EMAIL_1], telefonisch bin ich unter [PHONE_1] erreichbar.\n\nLG",
-    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für Ihr Interesse. Ein Praktikum ab März ist grundsätzlich möglich.\n\nWir melden uns unter [EMAIL_1] bei Ihnen.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Hallo Reinhart Junitz,\n\ndanke für Ihr Interesse. Ein Praktikum ab März ist grundsätzlich möglich.\n\nWir melden uns unter reinhart.junitz@sauerkg.example.com bei Ihnen.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "backend": "claude-cli",
+    "category": "QUOTE_REQUEST",
+    "id": "syn-test-0011",
+    "misses": [],
+    "original": "---------- Weitergeleitete Nachricht ----------\nVon: Frau Lucie Klemm B.Eng. <reni73@example.com>\nGesendet: Montag, 12. Oktober 2026\nAn: eboucsein@example.com\nBetreff: Anfrage: Angebot für die Besprechungsraum-Ausstattung\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nViele Grüße\nAmalia Gude B.Sc.\nNordlicht Systeme GmbH\nSorgatzallee 5817\n89841 Miesbach\nTelefon: 00411 90712",
+    "redacted": "---------- Weitergeleitete Nachricht ----------\nVon: [PERSON_1] <[EMAIL_1]>\nGesendet: Montag, 12. Oktober 2026\nAn: [EMAIL_2]\nBetreff: Anfrage: Angebot für die Besprechungsraum-Ausstattung\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nViele Grüße\n[PERSON_2]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]",
+    "reply_draft_redacted": "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Gerne erstellen wir Ihnen ein passendes Angebot und senden Ihnen unsere Preisliste sowie Informationen zu den Lieferzeiten zu. Für ein genaues Angebot wären wir Ihnen dankbar, wenn Sie uns kurz mitteilen könnten, welche Ausstattung Sie sich vorstellen und wie groß die Räume sind.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Gerne erstellen wir Ihnen ein passendes Angebot und senden Ihnen unsere Preisliste sowie Informationen zu den Lieferzeiten zu. Für ein genaues Angebot wären wir Ihnen dankbar, wenn Sie uns kurz mitteilen könnten, welche Ausstattung Sie sich vorstellen und wie groß die Räume sind.\n\nMit freundlichen Grüßen",
     "spans": [
       {
-        "start": 13,
-        "end": 28,
-        "type": "PERSON",
-        "text": "Reinhart Junitz",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 76,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 53,
+        "text": "Frau Lucie Klemm B.Eng.",
+        "type": "PERSON"
       },
       {
-        "start": 140,
-        "end": 157,
-        "type": "POSTCODE_CITY",
-        "text": "91699 Sigmaringen",
-        "score": 0.88,
-        "source": "regex"
+        "end": 96,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 78,
+        "text": "reni73@example.com",
+        "type": "EMAIL"
       },
       {
-        "start": 177,
-        "end": 212,
-        "type": "EMAIL",
-        "text": "reinhart.junitz@sauerkg.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 240,
-        "end": 252,
-        "type": "PHONE",
-        "text": "0231/4930458",
-        "score": 0.91,
-        "source": "regex"
-      }
-    ],
-    "misses": [
-      {
-        "type": "ADDRESS_STREET",
-        "text": "Am Marktplatz",
-        "reason": "street_without_number",
-        "start": 123,
-        "end": 136
-      }
-    ]
-  },
-  {
-    "id": "ex-07",
-    "mock": true,
-    "featured": false,
-    "style": "formal",
-    "category": "PARTNERSHIP",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Kooperation im Bereich Datenschutzberatung",
-    "original": "Sehr geehrte Frau Nevenka Junken,\n\nwir sind ein Beratungsunternehmen und möchten eine Kooperation vorschlagen. Unsere Leistungen finden Sie unter https://www.zanker-ag.example.\n\nZänker AG\nNevenka Junken\nnevenka.junken@klappgmbh.example.com\n0351/3408498",
-    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nwir sind ein Beratungsunternehmen und möchten eine Kooperation vorschlagen. Unsere Leistungen finden Sie unter [URL_1].\n\n[ORG_1]\n[PERSON_1]\n[EMAIL_1]\n[PHONE_1]",
-    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihren Vorschlag. Eine Zusammenarbeit können wir uns gut vorstellen.\n\nWir schauen uns Ihre Seite [URL_1] an und melden uns unter [EMAIL_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Frau Nevenka Junken,\n\nvielen Dank für Ihren Vorschlag. Eine Zusammenarbeit können wir uns gut vorstellen.\n\nWir schauen uns Ihre Seite https://www.zanker-ag.example an und melden uns unter nevenka.junken@klappgmbh.example.com.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 18,
-        "end": 32,
-        "type": "PERSON",
-        "text": "Nevenka Junken",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 146,
-        "end": 175,
-        "type": "URL",
-        "text": "https://www.zanker-ag.example",
-        "score": 0.97,
-        "source": "regex"
-      },
-      {
-        "start": 178,
-        "end": 187,
-        "type": "ORG",
-        "text": "Zänker AG",
-        "score": 0.86,
-        "source": "spacy"
-      },
-      {
-        "start": 188,
-        "end": 202,
-        "type": "PERSON",
-        "text": "Nevenka Junken",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 203,
-        "end": 239,
-        "type": "EMAIL",
-        "text": "nevenka.junken@klappgmbh.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 240,
-        "end": 252,
-        "type": "PHONE",
-        "text": "0351/3408498",
-        "score": 0.91,
-        "source": "regex"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-08",
-    "mock": true,
-    "featured": false,
-    "style": "formal",
-    "category": "PARTNERSHIP",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Aufnahme in Ihr Händlernetz",
-    "original": "Sehr geehrter Herr Lukas Hövel,\n\nwir möchten Ihre Produkte in unser Sortiment aufnehmen. Unsere Bankverbindung für die erste Bestellung: DE09805904952657906078.\n\nLübs GmbH\nArne-Henk-Straße 57\n43908 Gadebusch",
-    "redacted": "Sehr geehrter Herr [PERSON_1],\n\nwir möchten Ihre Produkte in unser Sortiment aufnehmen. Unsere Bankverbindung für die erste Bestellung: [IBAN_1].\n\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]",
-    "reply_draft_redacted": "Guten Tag Herr [PERSON_1],\n\nvielen Dank für Ihr Interesse an einer Partnerschaft. Wir senden Ihnen gern unsere Händlerunterlagen.\n\nDie Zahlung verbuchen wir auf [IBAN_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Herr Lukas Hövel,\n\nvielen Dank für Ihr Interesse an einer Partnerschaft. Wir senden Ihnen gern unsere Händlerunterlagen.\n\nDie Zahlung verbuchen wir auf DE09805904952657906078.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 19,
-        "end": 30,
-        "type": "PERSON",
-        "text": "Lukas Hövel",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
+        "end": 158,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
         "start": 137,
-        "end": 159,
-        "type": "IBAN",
-        "text": "DE09805904952657906078",
-        "score": 0.99,
-        "source": "regex+checksum"
+        "text": "eboucsein@example.com",
+        "type": "EMAIL"
       },
       {
-        "start": 162,
-        "end": 171,
-        "type": "ORG",
-        "text": "Lübs GmbH",
-        "score": 0.86,
-        "source": "spacy"
-      },
-      {
-        "start": 172,
-        "end": 191,
-        "type": "ADDRESS_STREET",
-        "text": "Arne-Henk-Straße 57",
-        "score": 0.89,
-        "source": "regex"
-      },
-      {
-        "start": 192,
-        "end": 207,
-        "type": "POSTCODE_CITY",
-        "text": "43908 Gadebusch",
-        "score": 0.88,
-        "source": "regex"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-09",
-    "mock": true,
-    "featured": false,
-    "style": "angry",
-    "category": "SUPPORT",
-    "urgency": "HIGH",
-    "backend": "mock",
-    "subject": "Dritte Reklamation, keine Antwort",
-    "original": "Das ist eine Frechheit!\n\nIch habe jetzt zum dritten Mal reklamiert und niemand antwortet. Ihre Hotline ist nicht erreichbar, die Seite https://www.ring-gmbh-co-kg.example zeigt nur Fehler. Ich erwarte heute eine Rückmeldung unter 0173 3144652 oder andreas.muhle@eigenwilligkg.example.com.\n\nAndreas Mühle",
-    "redacted": "Das ist eine Frechheit!\n\nIch habe jetzt zum dritten Mal reklamiert und niemand antwortet. Ihre Hotline ist nicht erreichbar, die Seite [URL_1] zeigt nur Fehler. Ich erwarte heute eine Rückmeldung unter [PHONE_1] oder [EMAIL_1].\n\n[PERSON_1]",
-    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nIhre Verärgerung kann ich verstehen. Bitte entschuldigen Sie die fehlende Rückmeldung.\n\nWir rufen Sie heute unter [PHONE_1] an und klären den Fall persönlich.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Andreas Mühle,\n\nIhre Verärgerung kann ich verstehen. Bitte entschuldigen Sie die fehlende Rückmeldung.\n\nWir rufen Sie heute unter 0173 3144652 an und klären den Fall persönlich.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 135,
-        "end": 170,
-        "type": "URL",
-        "text": "https://www.ring-gmbh-co-kg.example",
-        "score": 0.97,
-        "source": "regex"
-      },
-      {
-        "start": 230,
-        "end": 242,
-        "type": "PHONE",
-        "text": "0173 3144652",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 248,
-        "end": 287,
-        "type": "EMAIL",
-        "text": "andreas.muhle@eigenwilligkg.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 290,
-        "end": 303,
-        "type": "PERSON",
-        "text": "Andreas Mühle",
-        "score": 0.93,
-        "source": "spacy+list"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-10",
-    "mock": true,
-    "featured": false,
-    "style": "short",
-    "category": "QUOTE_REQUEST",
-    "urgency": "LOW",
-    "backend": "mock",
-    "subject": "Preis für 50 Stück",
-    "original": "Preis für 50 Stück? Bitte an irma.eckbauer@henkek.example.com senden.",
-    "redacted": "Preis für 50 Stück? Bitte an [EMAIL_1] senden.",
-    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nfür 50 Stück erhalten Sie ein Angebot mit Staffelpreis. Wir senden es an die genannte Adresse.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Irma Eckbauer,\n\nfür 50 Stück erhalten Sie ein Angebot mit Staffelpreis. Wir senden es an die genannte Adresse.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 29,
-        "end": 61,
-        "type": "EMAIL",
-        "text": "irma.eckbauer@henkek.example.com",
-        "score": 0.99,
-        "source": "regex"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-11",
-    "mock": true,
-    "featured": false,
-    "style": "urgent",
-    "category": "QUOTE_REQUEST",
-    "urgency": "HIGH",
-    "backend": "mock",
-    "subject": "Eilige Lieferung nächste Woche",
-    "original": "Sehr geehrte Damen und Herren,\n\nwir brauchen dringend ein Angebot für 200 Einheiten, Lieferung nächste Woche an Telse-Hethur-Weg 173, 71985 Kulmbach. Bitte rufen Sie mich unter 0421 9127204 an.\n\nKornelius Sager",
-    "redacted": "Sehr geehrte Damen und Herren,\n\nwir brauchen dringend ein Angebot für 200 Einheiten, Lieferung nächste Woche an [ADDRESS_STREET_1], [POSTCODE_CITY_1]. Bitte rufen Sie mich unter [PHONE_1] an.\n\n[PERSON_1]",
-    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nein Angebot für 200 Einheiten senden wir Ihnen heute zu. Die Lieferung an [ADDRESS_STREET_1], [POSTCODE_CITY_1] ist für Dienstag möglich.\n\nWir bestätigen den Termin telefonisch unter [PHONE_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Kornelius Sager,\n\nein Angebot für 200 Einheiten senden wir Ihnen heute zu. Die Lieferung an Telse-Hethur-Weg 173, 71985 Kulmbach ist für Dienstag möglich.\n\nWir bestätigen den Termin telefonisch unter 0421 9127204.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 112,
-        "end": 132,
-        "type": "ADDRESS_STREET",
-        "text": "Telse-Hethur-Weg 173",
-        "score": 0.89,
-        "source": "regex"
-      },
-      {
-        "start": 134,
-        "end": 148,
-        "type": "POSTCODE_CITY",
-        "text": "71985 Kulmbach",
-        "score": 0.88,
-        "source": "regex"
-      },
-      {
-        "start": 177,
-        "end": 189,
-        "type": "PHONE",
-        "text": "0421 9127204",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 195,
-        "end": 210,
-        "type": "PERSON",
-        "text": "Kornelius Sager",
-        "score": 0.93,
-        "source": "spacy+list"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-12",
-    "mock": true,
-    "featured": false,
-    "style": "informal",
-    "category": "SUPPORT",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Neue Bankverbindung für die Rechnung",
-    "original": "Hallo zusammen,\n\nbitte die nächste Rechnung auf die neue IBAN DE46613828568570745465 überweisen. Die alte Verbindung ist ungültig. Rückfragen gern unter +49 (231) 5959167.\n\nLG Ronny Trommler",
-    "redacted": "Hallo zusammen,\n\nbitte die nächste Rechnung auf die neue IBAN [IBAN_1] überweisen. Die alte Verbindung ist ungültig. Rückfragen gern unter [PHONE_1].\n\nLG [PERSON_1]",
-    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für die Information. Wir haben die neue Bankverbindung hinterlegt.\n\nDie nächste Rechnung geht an [IBAN_1].\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Hallo Ronny Trommler,\n\ndanke für die Information. Wir haben die neue Bankverbindung hinterlegt.\n\nDie nächste Rechnung geht an DE46613828568570745465.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 62,
-        "end": 84,
-        "type": "IBAN",
-        "text": "DE46613828568570745465",
-        "score": 0.99,
-        "source": "regex+checksum"
-      },
-      {
-        "start": 153,
-        "end": 170,
-        "type": "PHONE",
-        "text": "+49 (231) 5959167",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 176,
-        "end": 190,
-        "type": "PERSON",
-        "text": "Ronny Trommler",
-        "score": 0.93,
-        "source": "spacy+list"
-      }
-    ],
-    "misses": []
-  },
-  {
-    "id": "ex-13",
-    "mock": true,
-    "featured": false,
-    "style": "formal",
-    "category": "JOB_APPLICATION",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Bewerbung als Senior Data Engineer",
-    "original": "Sehr geehrte Frau Helena Stroh,\n\nich bewerbe mich auf die Stelle als Senior Data Engineer. Geburtsdatum: 03.02.1995. Meine Unterlagen finden Sie unter https://www.linkedin-profil.example.\n\nSödinggasse 131\n54788 Biedenkopf\nhelena.stroh@drubag.example.com\n0911 679528",
-    "redacted": "Sehr geehrte Frau [PERSON_1],\n\nich bewerbe mich auf die Stelle als Senior Data Engineer. Geburtsdatum: [DATE_OF_BIRTH_1]. Meine Unterlagen finden Sie unter [URL_1].\n\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\n[EMAIL_1]\n[PHONE_1]",
-    "reply_draft_redacted": "Guten Tag Frau [PERSON_1],\n\nvielen Dank für Ihre Bewerbung. Ihr Profil passt gut zu der ausgeschriebenen Stelle.\n\nWir melden uns unter [EMAIL_1] für ein erstes Gespräch.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Frau Helena Stroh,\n\nvielen Dank für Ihre Bewerbung. Ihr Profil passt gut zu der ausgeschriebenen Stelle.\n\nWir melden uns unter helena.stroh@drubag.example.com für ein erstes Gespräch.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 18,
-        "end": 30,
-        "type": "PERSON",
-        "text": "Helena Stroh",
-        "score": 0.93,
-        "source": "spacy+list"
-      },
-      {
-        "start": 105,
-        "end": 115,
-        "type": "DATE_OF_BIRTH",
-        "text": "03.02.1995",
+        "end": 403,
         "score": 0.9,
-        "source": "presidio"
+        "source": "NamesContextRecognizer",
+        "start": 386,
+        "text": "Amalia Gude B.Sc.",
+        "type": "PERSON"
       },
       {
-        "start": 151,
-        "end": 186,
-        "type": "URL",
-        "text": "https://www.linkedin-profil.example",
-        "score": 0.97,
-        "source": "regex"
+        "end": 426,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 404,
+        "text": "Nordlicht Systeme GmbH",
+        "type": "ORG"
       },
       {
-        "start": 189,
-        "end": 204,
-        "type": "ADDRESS_STREET",
-        "text": "Södinggasse 131",
-        "score": 0.89,
-        "source": "regex"
+        "end": 444,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 427,
+        "text": "Sorgatzallee 5817",
+        "type": "ADDRESS_STREET"
       },
       {
-        "start": 205,
-        "end": 221,
-        "type": "POSTCODE_CITY",
-        "text": "54788 Biedenkopf",
+        "end": 459,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 445,
+        "text": "89841 Miesbach",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 480,
         "score": 0.88,
-        "source": "regex"
-      },
-      {
-        "start": 222,
-        "end": 253,
-        "type": "EMAIL",
-        "text": "helena.stroh@drubag.example.com",
-        "score": 0.99,
-        "source": "regex"
-      },
-      {
-        "start": 254,
-        "end": 265,
-        "type": "PHONE",
-        "text": "0911 679528",
-        "score": 0.91,
-        "source": "regex"
+        "source": "DePhoneRecognizer",
+        "start": 469,
+        "text": "00411 90712",
+        "type": "PHONE"
       }
     ],
-    "misses": []
+    "urgency": "NORMAL"
   },
   {
-    "id": "ex-14",
-    "mock": true,
-    "featured": false,
-    "style": "informal",
-    "category": "PARTNERSHIP",
-    "urgency": "NORMAL",
-    "backend": "mock",
-    "subject": "Zusammenarbeit über LinkedIn",
-    "original": "Hey,\n\nich habe dein Profil gesehen und würde gern zusammenarbeiten. Melde dich doch per WhatsApp unter null eins sieben fünf eins zwei drei vier fünf sechs sieben oder per Mail an annemarie.hauffer@plathgmbh.example.com.\n\nAnnemarie Hauffer\nhttps://www.linkedin.example/in/annemarie-hauffer",
-    "redacted": "Hey,\n\nich habe dein Profil gesehen und würde gern zusammenarbeiten. Melde dich doch per WhatsApp unter null eins sieben fünf eins zwei drei vier fünf sechs sieben oder per Mail an [EMAIL_1].\n\n[PERSON_1]\n[URL_1]",
-    "reply_draft_redacted": "Hallo [PERSON_1],\n\ndanke für deine Nachricht. Eine Zusammenarbeit klingt spannend.\n\nSchreib mir gern an [EMAIL_1], dann finden wir einen Termin.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Hallo Annemarie Hauffer,\n\ndanke für deine Nachricht. Eine Zusammenarbeit klingt spannend.\n\nSchreib mir gern an annemarie.hauffer@plathgmbh.example.com, dann finden wir einen Termin.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
+    "backend": "claude-cli",
+    "category": "SUPPORT",
+    "id": "syn-test-0002",
+    "misses": [],
+    "original": "Name: Lina Metz-Ehlert\nE-Mail: salzphilipp@example.org\nTelefon: +49(0)1008 32324\nUnternehmen: Weitblick Medien GmbH\nNachricht:\nBei der Anmeldung im Kundenportal erscheint seit gestern eine Fehlermeldung. Bitte prüfen Sie den Fall und teilen Sie uns mit, wie wir weiter vorgehen können.\nStraße: Stollstr. 34-10\nPLZ/Ort: 94706 Wurzen",
+    "redacted": "Name: [PERSON_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\nUnternehmen: [ORG_1]\nNachricht:\nBei der Anmeldung im Kundenportal erscheint seit gestern eine Fehlermeldung. Bitte prüfen Sie den Fall und teilen Sie uns mit, wie wir weiter vorgehen können.\nStraße: [ADDRESS_STREET_1]\nPLZ/Ort: [POSTCODE_CITY_1]",
+    "reply_draft_redacted": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis auf die Fehlermeldung bei der Anmeldung im Kundenportal. Wir haben Ihr Anliegen an unser Support-Team weitergeleitet und prüfen den Fall. Damit wir das Problem schneller eingrenzen können, senden Sie uns bitte den genauen Wortlaut der Fehlermeldung oder einen Screenshot. Wir melden uns schnellstmöglich mit den nächsten Schritten bei Ihnen.",
+    "reply_draft_restored": "Sehr geehrte/r Lina Metz-Ehlert, vielen Dank für Ihre Nachricht und den Hinweis auf die Fehlermeldung bei der Anmeldung im Kundenportal. Wir haben Ihr Anliegen an unser Support-Team weitergeleitet und prüfen den Fall. Damit wir das Problem schneller eingrenzen können, senden Sie uns bitte den genauen Wortlaut der Fehlermeldung oder einen Screenshot. Wir melden uns schnellstmöglich mit den nächsten Schritten bei Ihnen.",
     "spans": [
       {
-        "start": 180,
-        "end": 219,
-        "type": "EMAIL",
-        "text": "annemarie.hauffer@plathgmbh.example.com",
-        "score": 0.99,
-        "source": "regex"
+        "end": 22,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 6,
+        "text": "Lina Metz-Ehlert",
+        "type": "PERSON"
       },
       {
-        "start": 222,
-        "end": 239,
-        "type": "PERSON",
-        "text": "Annemarie Hauffer",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 54,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 31,
+        "text": "salzphilipp@example.org",
+        "type": "EMAIL"
       },
       {
-        "start": 240,
-        "end": 289,
-        "type": "URL",
-        "text": "https://www.linkedin.example/in/annemarie-hauffer",
-        "score": 0.97,
-        "source": "regex"
+        "end": 80,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 64,
+        "text": "+49(0)1008 32324",
+        "type": "PHONE"
+      },
+      {
+        "end": 115,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 94,
+        "text": "Weitblick Medien GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 309,
+        "score": 0.95,
+        "source": "DeStreetRecognizer",
+        "start": 294,
+        "text": "Stollstr. 34-10",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 331,
+        "score": 0.9,
+        "source": "DePostcodeCityRecognizer",
+        "start": 319,
+        "text": "94706 Wurzen",
+        "type": "POSTCODE_CITY"
       }
     ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "SUPPORT",
+    "id": "syn-test-0007",
+    "misses": [],
+    "original": "Betreff: Störung im Kundenportal\n\nGuten Tag,\n\nim Kundenportal lässt sich unser Zugang seit gestern nicht mehr öffnen. Können Sie den Fehler prüfen und uns eine kurze Rückmeldung geben?\n\nMit freundlichen Grüßen\nRaisa Koch\nKoch & Söhne GmbH\nAlbersring 19\n57111 Büsingen am Hochrhein\nTelefon: 029 / 31 96 75 69\nE-Mail: leonid96@example.com\nIBAN: DE76 7794 4898\n0223 9735 58",
+    "redacted": "Betreff: Störung im Kundenportal\n\nGuten Tag,\n\nim Kundenportal lässt sich unser Zugang seit gestern nicht mehr öffnen. Können Sie den Fehler prüfen und uns eine kurze Rückmeldung geben?\n\nMit freundlichen Grüßen\n[PERSON_1]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]\nE-Mail: [EMAIL_1]\nIBAN: [IBAN_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis auf die Störung im Kundenportal. Wir haben Ihr Anliegen an unser technisches Team weitergeleitet und prüfen den Zugang für [ORG_1]. Sobald uns ein Ergebnis vorliegt, melden wir uns bei Ihnen. Mit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Raisa Koch, vielen Dank für Ihre Nachricht und den Hinweis auf die Störung im Kundenportal. Wir haben Ihr Anliegen an unser technisches Team weitergeleitet und prüfen den Zugang für Koch & Söhne GmbH. Sobald uns ein Ergebnis vorliegt, melden wir uns bei Ihnen. Mit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 220,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 210,
+        "text": "Raisa Koch",
+        "type": "PERSON"
+      },
+      {
+        "end": 238,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 221,
+        "text": "Koch & Söhne GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 252,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 239,
+        "text": "Albersring 19",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 280,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 253,
+        "text": "57111 Büsingen am Hochrhein",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 307,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 290,
+        "text": "029 / 31 96 75 69",
+        "type": "PHONE"
+      },
+      {
+        "end": 336,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 316,
+        "text": "leonid96@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 370,
+        "score": 1.0,
+        "source": "DeIbanRecognizer",
+        "start": 343,
+        "text": "DE76 7794 4898\n0223 9735 58",
+        "type": "IBAN"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "SUPPORT",
+    "id": "syn-test-0012",
+    "misses": [],
+    "original": "Hallo Georg,\n\nbei mir erscheint seit gestern eine Fehlermeldung im Kundenportal. Kannst du dir das mal anschauen und mir sagen, was ich tun soll?\n\nLG\nGeorg Conradi\nE-Mail: ralphstadelmann@example.com\nTelefon: 07322 72100",
+    "redacted": "Hallo [PERSON_1],\n\nbei mir erscheint seit gestern eine Fehlermeldung im Kundenportal. Kannst du dir das mal anschauen und mir sagen, was ich tun soll?\n\nLG\n[PERSON_2]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]",
+    "reply_draft_redacted": "Hallo [PERSON_2], danke für deine Nachricht, wir schauen uns die Fehlermeldung im Kundenportal gerne an. Kannst du uns bitte den genauen Wortlaut der Meldung oder einen Screenshot schicken und kurz beschreiben, bei welchem Schritt sie erscheint? Sobald wir die Angaben haben, melden wir uns mit einer Rückmeldung bei dir. Viele Grüße, [PERSON_1]",
+    "reply_draft_restored": "Hallo Georg Conradi, danke für deine Nachricht, wir schauen uns die Fehlermeldung im Kundenportal gerne an. Kannst du uns bitte den genauen Wortlaut der Meldung oder einen Screenshot schicken und kurz beschreiben, bei welchem Schritt sie erscheint? Sobald wir die Angaben haben, melden wir uns mit einer Rückmeldung bei dir. Viele Grüße, Georg",
+    "spans": [
+      {
+        "end": 11,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 6,
+        "text": "Georg",
+        "type": "PERSON"
+      },
+      {
+        "end": 163,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 150,
+        "text": "Georg Conradi",
+        "type": "PERSON"
+      },
+      {
+        "end": 199,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 172,
+        "text": "ralphstadelmann@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 220,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 209,
+        "text": "07322 72100",
+        "type": "PHONE"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "guard-blocked",
+    "category": "JOB_APPLICATION",
+    "id": "syn-test-0078",
     "misses": [
       {
-        "type": "PHONE",
-        "text": "eins zwei drei vier fünf sechs sieben",
-        "reason": "phone_spelled_out",
-        "start": 125,
-        "end": 162
-      }
-    ]
-  },
-  {
-    "id": "ex-15",
-    "mock": true,
-    "featured": false,
-    "style": "short",
-    "category": "OTHER",
-    "urgency": "LOW",
-    "backend": "mock",
-    "subject": "Terminanfrage",
-    "original": "Termin nächste Woche möglich? Kurze Rückmeldung bitte. 0911 2390956 – Volker Klemt",
-    "redacted": "Termin nächste Woche möglich? Kurze Rückmeldung bitte. [PHONE_1] – [PERSON_1]",
-    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nein Termin nächste Woche ist möglich. Wir rufen Sie unter der angegebenen Nummer an.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "reply_draft_restored": "Guten Tag Volker Klemt,\n\nein Termin nächste Woche ist möglich. Wir rufen Sie unter der angegebenen Nummer an.\n\nMit freundlichen Grüßen\nIhr Serviceteam",
-    "spans": [
-      {
-        "start": 55,
-        "end": 67,
-        "type": "PHONE",
-        "text": "0911 2390956",
-        "score": 0.91,
-        "source": "regex"
-      },
-      {
-        "start": 70,
-        "end": 82,
-        "type": "PERSON",
-        "text": "Volker Klemt",
-        "score": 0.93,
-        "source": "spacy+list"
+        "end": 60,
+        "score": 1.0,
+        "source": "gold",
+        "start": 45,
+        "text": "00355 Säckingen",
+        "type": "POSTCODE_CITY"
       }
     ],
-    "misses": []
+    "original": "Herr Damian Pechel\nGuiseppe-Pruschke-Weg 916\n00355 Säckingen\nE-Mail: fplath@example.com\nTelefon: +49(0) 283776850\n\nSehr geehrte Damen und Herren,\n\nich bewerbe mich auf die ausgeschriebene Stelle als Datenanalystin. Die Bewerbungsfrist endet am Freitag, daher reiche ich meine Unterlagen dringend heute ein.\n\nMit freundlichen Grüßen\nHerr Damian Pechel",
+    "redacted": "[PERSON_1]\n[ADDRESS_STREET_1]\n00355 Säckingen\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\n\nSehr geehrte Damen und Herren,\n\nich bewerbe mich auf die ausgeschriebene Stelle als Datenanalystin. Die Bewerbungsfrist endet am Freitag, daher reiche ich meine Unterlagen dringend heute ein.\n\nMit freundlichen Grüßen\n[PERSON_1]",
+    "reply_draft_redacted": "",
+    "reply_draft_restored": "",
+    "spans": [
+      {
+        "end": 18,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 0,
+        "text": "Herr Damian Pechel",
+        "type": "PERSON"
+      },
+      {
+        "end": 44,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 19,
+        "text": "Guiseppe-Pruschke-Weg 916",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 87,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 69,
+        "text": "fplath@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 113,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 97,
+        "text": "+49(0) 283776850",
+        "type": "PHONE"
+      },
+      {
+        "end": 350,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 332,
+        "text": "Herr Damian Pechel",
+        "type": "PERSON"
+      }
+    ],
+    "urgency": "HIGH"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "JOB_APPLICATION",
+    "id": "syn-test-0003",
+    "misses": [],
+    "original": "Betreff: Bewerbung als Datenanalystin\n\nGuten Tag,\n\nich bewerbe mich auf die ausgeschriebene Stelle als Datenanalystin. Die Bewerbungsfrist endet am Freitag, daher reiche ich meine Unterlagen dringend heute ein.\n\nMit freundlichen Grüßen\nGeza Dörr\nWeitblick Medien GmbH\nGerfried-Hiller-Gasse 907\n98248 Görlitz\nTelefon: +49(0)7056669654\nE-Mail: marcojessel@example.org\nIBAN: DE60848051576155567723",
+    "redacted": "Betreff: Bewerbung als Datenanalystin\n\nGuten Tag,\n\nich bewerbe mich auf die ausgeschriebene Stelle als Datenanalystin. Die Bewerbungsfrist endet am Freitag, daher reiche ich meine Unterlagen dringend heute ein.\n\nMit freundlichen Grüßen\n[PERSON_1]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]\nE-Mail: [EMAIL_1]\nIBAN: [IBAN_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nvielen Dank für Ihre Bewerbung auf die ausgeschriebene Stelle als Datenanalystin und Ihr Interesse an unserem Unternehmen. Wir bestätigen den Eingang Ihrer Nachricht und leiten Ihre Unterlagen an die zuständige Stelle weiter. Wir melden uns bei Ihnen, sobald wir Ihre Bewerbung geprüft haben.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Geza Dörr,\n\nvielen Dank für Ihre Bewerbung auf die ausgeschriebene Stelle als Datenanalystin und Ihr Interesse an unserem Unternehmen. Wir bestätigen den Eingang Ihrer Nachricht und leiten Ihre Unterlagen an die zuständige Stelle weiter. Wir melden uns bei Ihnen, sobald wir Ihre Bewerbung geprüft haben.\n\nMit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 245,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 236,
+        "text": "Geza Dörr",
+        "type": "PERSON"
+      },
+      {
+        "end": 267,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 246,
+        "text": "Weitblick Medien GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 293,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 268,
+        "text": "Gerfried-Hiller-Gasse 907",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 307,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 294,
+        "text": "98248 Görlitz",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 333,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 317,
+        "text": "+49(0)7056669654",
+        "type": "PHONE"
+      },
+      {
+        "end": 365,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 342,
+        "text": "marcojessel@example.org",
+        "type": "EMAIL"
+      },
+      {
+        "end": 394,
+        "score": 1.0,
+        "source": "DeIbanRecognizer",
+        "start": 372,
+        "text": "DE60848051576155567723",
+        "type": "IBAN"
+      }
+    ],
+    "urgency": "HIGH"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "JOB_APPLICATION",
+    "id": "syn-test-0008",
+    "misses": [],
+    "original": "Meral Albers B.A.\nPatrizia-Röhrdanz-Ring 36\n35676 Kulmbach\nE-Mail: ronald26@example.net\nTelefon: (02686) 954417\n\nSehr geehrte Damen und Herren,\n\ndie Stelle als Datenanalyst ist ausgeschrieben, und die Frist endet morgen. Deshalb sende ich meine Bewerbung dringend jetzt und bitte um eine kurze Bestätigung.\n\nMit freundlichen Grüßen\nMeral Albers B.A.",
+    "redacted": "[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\n\nSehr geehrte Damen und Herren,\n\ndie Stelle als Datenanalyst ist ausgeschrieben, und die Frist endet morgen. Deshalb sende ich meine Bewerbung dringend jetzt und bitte um eine kurze Bestätigung.\n\nMit freundlichen Grüßen\n[PERSON_1]",
+    "reply_draft_redacted": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir den Eingang Ihrer Unterlagen. Wir werden Ihre Bewerbung prüfen und uns so bald wie möglich bei Ihnen melden. Mit freundlichen Grüßen",
+    "reply_draft_restored": "Sehr geehrte/r Meral Albers B.A., vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir den Eingang Ihrer Unterlagen. Wir werden Ihre Bewerbung prüfen und uns so bald wie möglich bei Ihnen melden. Mit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 17,
+        "score": 0.85,
+        "source": "NamesContextRecognizer",
+        "start": 0,
+        "text": "Meral Albers B.A.",
+        "type": "PERSON"
+      },
+      {
+        "end": 43,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 18,
+        "text": "Patrizia-Röhrdanz-Ring 36",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 58,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 44,
+        "text": "35676 Kulmbach",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 87,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 67,
+        "text": "ronald26@example.net",
+        "type": "EMAIL"
+      },
+      {
+        "end": 111,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 97,
+        "text": "(02686) 954417",
+        "type": "PHONE"
+      },
+      {
+        "end": 349,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 332,
+        "text": "Meral Albers B.A.",
+        "type": "PERSON"
+      }
+    ],
+    "urgency": "HIGH"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "PARTNERSHIP",
+    "id": "syn-test-0014",
+    "misses": [
+      {
+        "end": 269,
+        "score": 1.0,
+        "source": "gold",
+        "start": 247,
+        "text": "van der Dussenplatz 62",
+        "type": "ADDRESS_STREET"
+      }
+    ],
+    "original": "Betreff: Anfrage: gemeinsame Workshop-Reihe\n\nGuten Tag,\n\nwir möchten prüfen, ob eine gemeinsame Workshop-Reihe für unsere Teams möglich ist. Über ein erstes Gespräch würden wir uns freuen.\n\nMit freundlichen Grüßen\nMikhail Vogel\nVogel Systeme GmbH\nvan der Dussenplatz 62\n46519 Nürtingen\nTelefon: +49 (0)64 5920-8674\nE-Mail: stadelmannkarl-werner@example.org\nIBAN: DE86 8940 8426\n9249 9079 28",
+    "redacted": "Betreff: Anfrage: gemeinsame Workshop-Reihe\n\nGuten Tag,\n\nwir möchten prüfen, ob eine gemeinsame Workshop-Reihe für unsere Teams möglich ist. Über ein erstes Gespräch würden wir uns freuen.\n\nMit freundlichen Grüßen\n[PERSON_1]\n[ORG_1]\nvan der [ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]\nE-Mail: [EMAIL_1]\nIBAN: [IBAN_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1], vielen Dank für Ihre Anfrage und Ihr Interesse an einer gemeinsamen Workshop-Reihe mit [ORG_1]. Wir prüfen Ihr Anliegen gerne und melden uns zeitnah bei Ihnen, um ein erstes Gespräch abzustimmen. Mit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Mikhail Vogel, vielen Dank für Ihre Anfrage und Ihr Interesse an einer gemeinsamen Workshop-Reihe mit Vogel Systeme GmbH. Wir prüfen Ihr Anliegen gerne und melden uns zeitnah bei Ihnen, um ein erstes Gespräch abzustimmen. Mit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 227,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 214,
+        "text": "Mikhail Vogel",
+        "type": "PERSON"
+      },
+      {
+        "end": 246,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 228,
+        "text": "Vogel Systeme GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 269,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 255,
+        "text": "Dussenplatz 62",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 285,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 270,
+        "text": "46519 Nürtingen",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 314,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 295,
+        "text": "+49 (0)64 5920-8674",
+        "type": "PHONE"
+      },
+      {
+        "end": 356,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 323,
+        "text": "stadelmannkarl-werner@example.org",
+        "type": "EMAIL"
+      },
+      {
+        "end": 390,
+        "score": 1.0,
+        "source": "DeIbanRecognizer",
+        "start": 363,
+        "text": "DE86 8940 8426\n9249 9079 28",
+        "type": "IBAN"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "PARTNERSHIP",
+    "id": "syn-test-0004",
+    "misses": [],
+    "original": "---------- Weitergeleitete Nachricht ----------\nVon: Pero Seifert <fredi40@example.net>\nGesendet: Montag, 12. Oktober 2026\nAn: mrosemann@example.net\nBetreff: Anfrage: gemeinsame Workshop-Reihe\n\nwir möchten prüfen, ob eine gemeinsame Workshop-Reihe für unsere Teams möglich ist. Über ein erstes Gespräch würden wir uns freuen.\n\nViele Grüße\nKonstantin Beier-Heser\nNordlicht Systeme GmbH\nDussen vanstr. 2-7\n21636 Pegnitz\nTelefon: 0410222140",
+    "redacted": "---------- Weitergeleitete Nachricht ----------\nVon: [PERSON_1] <[EMAIL_1]>\nGesendet: Montag, 12. Oktober 2026\nAn: [EMAIL_2]\nBetreff: Anfrage: gemeinsame Workshop-Reihe\n\nwir möchten prüfen, ob eine gemeinsame Workshop-Reihe für unsere Teams möglich ist. Über ein erstes Gespräch würden wir uns freuen.\n\nViele Grüße\n[PERSON_2]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_2],\n\nvielen Dank für Ihre Anfrage und Ihr Interesse an einer gemeinsamen Workshop-Reihe mit [ORG_1]. Wir prüfen Ihr Anliegen gerne und freuen uns auf ein erstes Gespräch. Wir melden uns zeitnah bei Ihnen, um einen passenden Termin abzustimmen.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Konstantin Beier-Heser,\n\nvielen Dank für Ihre Anfrage und Ihr Interesse an einer gemeinsamen Workshop-Reihe mit Nordlicht Systeme GmbH. Wir prüfen Ihr Anliegen gerne und freuen uns auf ein erstes Gespräch. Wir melden uns zeitnah bei Ihnen, um einen passenden Termin abzustimmen.\n\nMit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 65,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 53,
+        "text": "Pero Seifert",
+        "type": "PERSON"
+      },
+      {
+        "end": 86,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 67,
+        "text": "fredi40@example.net",
+        "type": "EMAIL"
+      },
+      {
+        "end": 148,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 127,
+        "text": "mrosemann@example.net",
+        "type": "EMAIL"
+      },
+      {
+        "end": 361,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 339,
+        "text": "Konstantin Beier-Heser",
+        "type": "PERSON"
+      },
+      {
+        "end": 384,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 362,
+        "text": "Nordlicht Systeme GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 403,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 385,
+        "text": "Dussen vanstr. 2-7",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 417,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 404,
+        "text": "21636 Pegnitz",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 437,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 427,
+        "text": "0410222140",
+        "type": "PHONE"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "PARTNERSHIP",
+    "id": "syn-test-0009",
+    "misses": [],
+    "original": "Name: Reimund Sauer\nE-Mail: jacob94@example.net\nTelefon: (08974) 94280\nUnternehmen: Blauwerk Technik GmbH\nNachricht:\nUns interessiert eine Zusammenarbeit bei gemeinsamen Workshops. Hätten Sie demnächst Zeit für ein kurzes Gespräch?\nStraße: Binnerplatz 0\nPLZ/Ort: 67132 Niesky",
+    "redacted": "Name: [PERSON_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\nUnternehmen: [ORG_1]\nNachricht:\nUns interessiert eine Zusammenarbeit bei gemeinsamen Workshops. Hätten Sie demnächst Zeit für ein kurzes Gespräch?\nStraße: [ADDRESS_STREET_1]\nPLZ/Ort: [POSTCODE_CITY_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht und Ihr Interesse an einer Zusammenarbeit bei gemeinsamen Workshops mit [ORG_1]. Wir freuen uns über Ihre Anfrage und melden uns zeitnah bei Ihnen, um einen passenden Termin für ein kurzes Gespräch abzustimmen. Mit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Reimund Sauer, vielen Dank für Ihre Nachricht und Ihr Interesse an einer Zusammenarbeit bei gemeinsamen Workshops mit Blauwerk Technik GmbH. Wir freuen uns über Ihre Anfrage und melden uns zeitnah bei Ihnen, um einen passenden Termin für ein kurzes Gespräch abzustimmen. Mit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 19,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 6,
+        "text": "Reimund Sauer",
+        "type": "PERSON"
+      },
+      {
+        "end": 47,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 28,
+        "text": "jacob94@example.net",
+        "type": "EMAIL"
+      },
+      {
+        "end": 70,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 57,
+        "text": "(08974) 94280",
+        "type": "PHONE"
+      },
+      {
+        "end": 105,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 84,
+        "text": "Blauwerk Technik GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 253,
+        "score": 0.95,
+        "source": "DeStreetRecognizer",
+        "start": 240,
+        "text": "Binnerplatz 0",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 275,
+        "score": 0.9,
+        "source": "DePostcodeCityRecognizer",
+        "start": 263,
+        "text": "67132 Niesky",
+        "type": "POSTCODE_CITY"
+      }
+    ],
+    "urgency": "NORMAL"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "OTHER",
+    "id": "syn-test-0005",
+    "misses": [],
+    "original": "Hallo Henryk,\n\nmich interessiert dein Schulungsprogramm, ich will mich aber noch nicht anmelden. Eine Antwort hat keine Eile.\n\nLG\nHenryk Hölzenbecher\nE-Mail: hoefigbela@example.com\nTelefon: 04468718122",
+    "redacted": "Hallo [PERSON_1],\n\nmich interessiert dein Schulungsprogramm, ich will mich aber noch nicht anmelden. Eine Antwort hat keine Eile.\n\nLG\n[PERSON_2]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]",
+    "reply_draft_redacted": "Hallo [PERSON_2],\n\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, ganz unverbindlich und ohne Anmeldung. Wenn du bestimmte Fragen hast, kannst du dich jederzeit bei uns melden.\n\nLiebe Grüße\n[PERSON_1]",
+    "reply_draft_restored": "Hallo Henryk Hölzenbecher,\n\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, ganz unverbindlich und ohne Anmeldung. Wenn du bestimmte Fragen hast, kannst du dich jederzeit bei uns melden.\n\nLiebe Grüße\nHenryk",
+    "spans": [
+      {
+        "end": 12,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 6,
+        "text": "Henryk",
+        "type": "PERSON"
+      },
+      {
+        "end": 149,
+        "score": 0.85,
+        "source": "SpacyRecognizer",
+        "start": 130,
+        "text": "Henryk Hölzenbecher",
+        "type": "PERSON"
+      },
+      {
+        "end": 180,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 158,
+        "text": "hoefigbela@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 201,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 190,
+        "text": "04468718122",
+        "type": "PHONE"
+      }
+    ],
+    "urgency": "LOW"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "OTHER",
+    "id": "syn-test-0010",
+    "misses": [],
+    "original": "Betreff: Allgemeine Frage zum Schulungsprogramm\n\nGuten Tag,\n\nmich interessiert Ihr Schulungsprogramm, ich möchte mich aber noch nicht anmelden. Eine Antwort hat keine Eile.\n\nMit freundlichen Grüßen\nDariusz Junck\nBlauwerk Technik GmbH\nNadeschda-Jacob-Ring 61/80\n79010 Wittstock\nTelefon: 08901753761\nE-Mail: katarzynatschentscher@example.com\nIBAN: DE55445489927824283985",
+    "redacted": "Betreff: Allgemeine Frage zum Schulungsprogramm\n\nGuten Tag,\n\nmich interessiert Ihr Schulungsprogramm, ich möchte mich aber noch nicht anmelden. Eine Antwort hat keine Eile.\n\nMit freundlichen Grüßen\n[PERSON_1]\n[ORG_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nTelefon: [PHONE_1]\nE-Mail: [EMAIL_1]\nIBAN: [IBAN_1]",
+    "reply_draft_redacted": "Guten Tag [PERSON_1],\n\nvielen Dank für Ihr Interesse an unserem Schulungsprogramm. Gerne senden wir Ihnen weitere Informationen dazu zu, ganz unverbindlich und ohne Verpflichtung zur Anmeldung. Falls Sie bestimmte Fragen haben, teilen Sie uns diese gerne mit.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Guten Tag Dariusz Junck,\n\nvielen Dank für Ihr Interesse an unserem Schulungsprogramm. Gerne senden wir Ihnen weitere Informationen dazu zu, ganz unverbindlich und ohne Verpflichtung zur Anmeldung. Falls Sie bestimmte Fragen haben, teilen Sie uns diese gerne mit.\n\nMit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 211,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 198,
+        "text": "Dariusz Junck",
+        "type": "PERSON"
+      },
+      {
+        "end": 233,
+        "score": 0.9,
+        "source": "OrgLegalFormRecognizer",
+        "start": 212,
+        "text": "Blauwerk Technik GmbH",
+        "type": "ORG"
+      },
+      {
+        "end": 260,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 234,
+        "text": "Nadeschda-Jacob-Ring 61/80",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 276,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 261,
+        "text": "79010 Wittstock",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 297,
+        "score": 0.88,
+        "source": "DePhoneRecognizer",
+        "start": 286,
+        "text": "08901753761",
+        "type": "PHONE"
+      },
+      {
+        "end": 339,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 306,
+        "text": "katarzynatschentscher@example.com",
+        "type": "EMAIL"
+      },
+      {
+        "end": 368,
+        "score": 1.0,
+        "source": "DeIbanRecognizer",
+        "start": 346,
+        "text": "DE55445489927824283985",
+        "type": "IBAN"
+      }
+    ],
+    "urgency": "LOW"
+  },
+  {
+    "backend": "claude-cli",
+    "category": "OTHER",
+    "id": "syn-test-0015",
+    "misses": [],
+    "original": "Nuri Hörle B.Sc.\nLea-Stadelmann-Allee 19\n97485 Lüdenscheid\nE-Mail: tilmann30@example.net\nTelefon: +49(0)4842892413\n\nSehr geehrte Damen und Herren,\n\nich habe eine kurze allgemeine Frage zu Ihrem Schulungsprogramm. Es eilt nicht, ich freue mich über eine Antwort, wenn Sie Zeit haben.\n\nMit freundlichen Grüßen\nNuri Hörle B.Sc.",
+    "redacted": "[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\n\nSehr geehrte Damen und Herren,\n\nich habe eine kurze allgemeine Frage zu Ihrem Schulungsprogramm. Es eilt nicht, ich freue mich über eine Antwort, wenn Sie Zeit haben.\n\nMit freundlichen Grüßen\n[PERSON_1]",
+    "reply_draft_redacted": "Sehr geehrte/r [PERSON_1],\n\nvielen Dank für Ihre Nachricht und Ihr Interesse an unserem Schulungsprogramm. Damit wir Ihnen gezielt weiterhelfen können, teilen Sie uns bitte mit, welche Frage Sie konkret zu unserem Schulungsprogramm haben. Wir melden uns anschließend gerne bei Ihnen.\n\nMit freundlichen Grüßen",
+    "reply_draft_restored": "Sehr geehrte/r Nuri Hörle B.Sc.,\n\nvielen Dank für Ihre Nachricht und Ihr Interesse an unserem Schulungsprogramm. Damit wir Ihnen gezielt weiterhelfen können, teilen Sie uns bitte mit, welche Frage Sie konkret zu unserem Schulungsprogramm haben. Wir melden uns anschließend gerne bei Ihnen.\n\nMit freundlichen Grüßen",
+    "spans": [
+      {
+        "end": 16,
+        "score": 0.85,
+        "source": "NamesContextRecognizer",
+        "start": 0,
+        "text": "Nuri Hörle B.Sc.",
+        "type": "PERSON"
+      },
+      {
+        "end": 40,
+        "score": 0.85,
+        "source": "DeStreetRecognizer",
+        "start": 17,
+        "text": "Lea-Stadelmann-Allee 19",
+        "type": "ADDRESS_STREET"
+      },
+      {
+        "end": 58,
+        "score": 0.8,
+        "source": "DePostcodeCityRecognizer",
+        "start": 41,
+        "text": "97485 Lüdenscheid",
+        "type": "POSTCODE_CITY"
+      },
+      {
+        "end": 88,
+        "score": 1.0,
+        "source": "DeEmailRecognizer",
+        "start": 67,
+        "text": "tilmann30@example.net",
+        "type": "EMAIL"
+      },
+      {
+        "end": 114,
+        "score": 1.0,
+        "source": "DePhoneRecognizer",
+        "start": 98,
+        "text": "+49(0)4842892413",
+        "type": "PHONE"
+      },
+      {
+        "end": 324,
+        "score": 0.9,
+        "source": "NamesContextRecognizer",
+        "start": 308,
+        "text": "Nuri Hörle B.Sc.",
+        "type": "PERSON"
+      }
+    ],
+    "urgency": "LOW"
   }
 ]

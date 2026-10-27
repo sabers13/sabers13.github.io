@@ -1,35 +1,37 @@
 /* AI Privacy Filter — page logic and the English/German dictionary.
    No build step: plain DOM, fetch for the two JSON files, localStorage for
-   language and theme (both wrapped in try/catch). */
+   language and theme (both wrapped in try/catch). Every headline number is
+   computed by assets/results-model.js from data/results.json. */
 (function () {
   'use strict';
 
   var I18N = {
     en: {
       "meta.title": "AI Privacy Filter — Saber Sojudi",
-      "meta.desc": "A filter that replaces personal data with placeholders before a customer email reaches an AI, then restores the real values in the draft. Demo, results and limits.",
+      "meta.desc": "A filter that replaces personal data with placeholders before a customer email reaches an AI, then puts the real values back into the reply. Measured results, demo and limits.",
       "skip": "Skip to the content",
       "brand.sub": "Pseudonymise before the AI sees it",
       "nav.example": "Example", "nav.gallery": "Gallery", "nav.try": "Try it",
-      "nav.how": "How it works", "nav.results": "Results", "nav.technical": "Details",
+      "nav.how": "How it works", "nav.workflow": "Review step", "nav.results": "Results",
+      "nav.technical": "Details",
       "a.light": "Light theme", "a.dark": "Dark theme", "a.github": "View the source on GitHub",
       "a.lang": "Language", "a.theme": "Theme", "a.sections": "Sections", "a.technology": "Technology", "a.footer": "Footer",
 
       "hero.eyebrow": "Portfolio project · Privacy engineering",
       "hero.title": "Use AI on customer emails without sending personal data",
-      "hero.lead": "A filter replaces names, addresses, IBANs and other personal data with placeholders before an email reaches a language model — and puts the real values back into the draft afterwards.",
+      "hero.lead": "A filter replaces names, addresses, IBANs and other personal data with placeholders before an email reaches a language model. The reply comes back with placeholders, and the real values go back in on your machine.",
       "hero.github": "View on GitHub", "hero.try": "Try it",
-      "hero.fine": "All examples on this page are synthetic. No real customer emails are shown.",
+      "hero.fine": "All examples are synthetic. No real customer emails appear on this page.",
       "hero.card.title": "Local first",
       "hero.card.s1.t": "Detect", "hero.card.s1.d": "Names, emails, phone numbers, IBANs",
       "hero.card.s2.t": "Replace", "hero.card.s2.d": "Typed placeholders, numbered per message",
       "hero.card.s3.t": "Draft", "hero.card.s3.d": "The AI writes with placeholders, not people",
-      "hero.card.s4.t": "Restore", "hero.card.s4.d": "Real values go back in on your machine",
+      "hero.card.s4.t": "Restore", "hero.card.s4.d": "Real values go back on your machine",
       "tech.python": "Python", "tech.presidio": "Presidio", "tech.fastapi": "FastAPI", "tech.n8n": "n8n",
 
       "demo.eyebrow": "Real example",
       "demo.title": "What goes in, what the AI sees, what comes out",
-      "demo.lead": "One synthetic quote request, shown end to end. Highlighted text is personal data; the middle column is what the model receives.",
+      "demo.lead": "One synthetic quote request, shown end to end. Highlighted text is personal data; the middle column is all the model receives.",
       "demo.col.original": "Original", "demo.col.original.sub": "Synthetic enquiry",
       "demo.col.ai": "What the AI sees", "demo.col.ai.sub": "Pseudonymised",
       "demo.col.final": "Final draft", "demo.col.final.sub": "Values restored",
@@ -37,33 +39,36 @@
       "demo.foot.ai": "[TYPE_n] = placeholder",
       "demo.foot.final": "Restored locally before sending",
       "demo.note": "The example is German because the target market is German-speaking. The interface is available in English and German.",
-      "mock.badge": "Preview data",
-      "mock.text": "the measured numbers and final examples will replace these before launch.",
 
-      "stats.eyebrow": "Headline numbers",
-      "stats.title": "What the filter found, and how fast",
-      "stats.lead": "Preview figures from the mock run. Each card says what the number means.",
-      "stats.note": "Preview values, already marked as mock in the data file. The measured run replaces them before launch.",
-      "stats.spans": "Personal-data spans found",
-      "stats.spans.meaning": "Across 240 synthetic test enquiries, duplicates counted once per span.",
-      "stats.recall": "Detection recall",
-      "stats.recall.meaning": "Share of labelled personal-data spans the filter replaced.",
-      "stats.guard": "Guard pass rate",
-      "stats.guard.meaning": "Share of messages that passed the re-scan before any AI call.",
-      "stats.latency": "Median end-to-end time",
-      "stats.latency.meaning": "From email in to draft out, measured locally.",
+      "stats.eyebrow": "Measured results",
+      "stats.title": "What the filter found, and what it missed",
+      "stats.lead": "Numbers from the test runs behind this project. The datasets and the limits follow below.",
+      "stats.note": "Measured once on held-out test data. No value here was tuned on the test split.",
+      "stats.caught.label": "Personal details caught",
+      "stats.caught.meaning": "Labelled spans in the synthetic test that the filter replaced.",
+      "stats.extra.label": "Extra text masked",
+      "stats.extra.meaning": "Replaced characters that were not personal data.",
+      "stats.germeval.label": "Names in German legal text",
+      "stats.germeval.meaning": "Recall for names and organisations in the GermEval 2014 test.",
+      "stats.leaks.label": "Personal values leaked",
+      "stats.leaks.meaning": "Mapped values that reached a backend across all reply-writing calls.",
+
+      "workflow.eyebrow": "The review step",
+      "workflow.title": "A person approves every reply",
+      "workflow.lead": "In n8n, an enquiry is pseudonymised, checked by the guard and drafted. A reviewer sees the pseudonymised text, the category, the urgency and the restored draft, then approves, edits or rejects it.",
+      "workflow.caption": "Workflow canvas: enquiry in, pseudonymise, guard, draft, review, write the result.",
+      "workflow.alt": "n8n workflow canvas with enquiry intake, guard branch, drafting and human review steps",
 
       "gallery.eyebrow": "Examples",
-      "gallery.title": "Fifteen synthetic enquiries",
-      "gallery.lead": "Filter by tone. Open any card to compare the original with what the AI sees. Three labelled misses stay visible on purpose.",
-      "gallery.filter": "Style", "gallery.all": "All",
+      "gallery.title": "Synthetic enquiries",
+      "gallery.lead": "Filter by category. Open a card to compare the original with what the AI saw. Labelled misses stay visible on purpose.",
+      "gallery.filter": "Category", "gallery.all": "All",
       "gallery.note": "Every text is synthetic. Names, addresses, phone numbers and IBANs were generated for this demo.",
       "gallery.count": "{n} of {total} examples",
       "gallery.showOriginal": "Show original",
       "gallery.missed": "Labelled miss",
-      "gallery.empty": "No examples in this style.",
-      "gallery.style.formal": "Formal", "gallery.style.informal": "Informal",
-      "gallery.style.urgent": "Urgent", "gallery.style.angry": "Angry", "gallery.style.short": "Short",
+      "gallery.blocked": "Stopped before the model",
+      "gallery.empty": "No examples in this category.",
       "gallery.cat.QUOTE_REQUEST": "Quote request", "gallery.cat.SUPPORT": "Support",
       "gallery.cat.JOB_APPLICATION": "Job application", "gallery.cat.PARTNERSHIP": "Partnership",
       "gallery.cat.OTHER": "Other",
@@ -73,23 +78,24 @@
       "type.PHONE": "Phone", "type.IBAN": "IBAN", "type.ADDRESS_STREET": "Street",
       "type.POSTCODE_CITY": "Postcode + city", "type.URL": "URL", "type.VAT_ID": "VAT ID",
       "type.DATE_OF_BIRTH": "Date of birth",
-      "miss.name_not_in_list": "name not in the German first-name list",
-      "miss.street_without_number": "street without a house number",
-      "miss.phone_spelled_out": "phone number written as words",
+
+      "backend.claude-cli": "Claude via CLI", "backend.codex-cli": "Codex via CLI",
+      "backend.byok": "Cloud model (BYOK)", "backend.ollama": "Ollama, local",
+      "backend.guard-blocked": "Stopped by the guard",
 
       "try.eyebrow": "Try it yourself",
       "try.title": "Paste an email and hide the personal data",
-      "try.lead": "The filter below runs in this browser tab only. It is a simplified version of the server-side pipeline.",
-      "try.banner": "Simplified browser version. Nothing you type leaves your browser.",
+      "try.lead": "A simplified version of the filter runs in this browser tab. It is not the server pipeline.",
+      "try.banner": "Runs in your browser. Nothing you type leaves this page.",
       "try.label": "Your text", "try.placeholder": "Paste a customer email here…",
       "try.button": "Hide personal data", "try.sample": "Use a sample", "try.clear": "Clear",
-      "try.inputNote": "Runs locally. Email, German phone, IBAN with checksum, postcode + city, street + number, URL, German first names and salutation cues.",
+      "try.inputNote": "Email, German phone, IBAN with checksum, postcode + city, street + number, URL, German first names and salutation cues.",
       "try.resultLabel": "What the AI would see",
       "try.empty": "The result appears here after you press the button.",
       "try.found": "{n} personal data items replaced",
       "try.none": "No personal data found by this simplified filter.",
       "try.replaced": "Replaced:",
-      "try.note": "Nothing is sent anywhere. The box makes no network requests; it uses only the checks listed on the left.",
+      "try.note": "This box makes no network requests. It runs only the checks listed on the left.",
 
       "how.eyebrow": "How it works",
       "how.title": "Five steps, one boundary",
@@ -101,42 +107,48 @@
       "how.s5.t": "Restore", "how.s5.d": "real values back",
       "how.svgTitle": "Five-step flow: detect, replace, guard, AI draft, restore",
       "how.legend.local": "On your machine", "how.legend.network": "Network call",
-      "how.note": "Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if anything was missed.",
+      "how.note": "Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if a mapped value is still there.",
 
       "res.eyebrow": "Results and limits",
-      "res.title": "Numbers with their caveats",
-      "res.lead": "Preview figures. GermEval numbers are pending; synthetic numbers are mock values. Misses are reported, not hidden.",
+      "res.title": "The numbers, with their caveats",
+      "res.lead": "One test split, measured once. Misses are reported as they are.",
       "res.detection.title": "Detection",
-      "res.detection.lead": "Span-level precision, recall and F1.",
+      "res.detection.lead": "A labelled span counts as caught only when every character is covered by a compatible prediction.",
       "res.detection.note": "GermEval 2014 is used only to compute detection rates; no sentences are shown.",
-      "res.th.dataset": "Dataset", "res.th.precision": "Precision", "res.th.recall": "Recall",
-      "res.th.f1": "F1", "res.th.spans": "Spans", "res.th.status": "Status",
-      "res.germeval.name": "GermEval 2014 (test)", "res.germeval.desc": "German legal texts · numbers only",
-      "res.synthetic.name": "Synthetic test", "res.synthetic.desc": "240 hand-written and Faker-built enquiries",
-      "res.status.pending": "Pending", "res.status.mock": "Preview",
+      "res.th.dataset": "Dataset", "res.th.recall": "Recall",
+      "res.th.missed": "Missed spans", "res.th.covers": "What it covers",
+      "res.germeval.name": "GermEval 2014 (test)",
+      "res.germeval.desc": "{n} sentences, names and organisations only",
+      "res.synthetic.name": "Synthetic test",
+      "res.synthetic.desc": "{n} synthetic emails, {types} personal-data types",
+      "res.misses": "Missed: {list}.",
+      "res.misses.none": "No labelled span was missed.",
       "res.triage.title": "Reply drafting",
-      "res.triage.lead": "Per backend, on the same mock test set.",
-      "res.triage.note": "Local figures are placeholder rows until the local run is finished; they do not claim a completed local test.",
-      "res.th.backend": "Backend", "res.th.model": "Model", "res.th.validJson": "Valid JSON",
-      "res.th.category": "Category accuracy", "res.th.latency": "Median latency", "res.th.calls": "Calls",
-      "res.backend.cloud": "Cloud model (BYOK)", "res.backend.local": "Local model (Ollama)",
+      "res.triage.lead": "Every backend answered the same enquiry set.",
+      "res.triage.note": "Valid JSON counts usable answers. Category and urgency are exact matches. Mapped values leaked: {leaks} in {calls} calls.",
+      "res.th.backend": "Backend",
+      "res.th.validJson": "Valid JSON",
+      "res.th.category": "Category",
+      "res.th.urgency": "Urgency",
+      "res.th.latency": "Median reply",
+      "res.th.calls": "Calls",
       "res.limits.title": "What this does not catch",
-      "res.limits.lead": "Known limits, shown before the numbers.",
+      "res.limits.lead": "Known limits, shown next to the numbers.",
       "res.th.limit": "Limit", "res.th.what": "What happens", "res.th.mitigation": "Mitigation",
       "res.limits.r1.l": "Names outside the list", "res.limits.r1.w": "Unusual or non-German names can stay in clear.", "res.limits.r1.m": "Salutation cues and a human check before sending.",
       "res.limits.r2.l": "Addresses without a number", "res.limits.r2.w": "A street name without a house number may not match.", "res.limits.r2.m": "Add a manual review step for address blocks.",
-      "res.limits.r3.l": "Phone numbers written as words", "res.limits.r3.w": "Spelled-out digits are not detected by the browser demo.", "res.limits.r3.m": "Review the demo output; the server pipeline adds a second pass.",
+      "res.limits.r3.l": "Postcode and city pairs", "res.limits.r3.w": "Some pairs are not matched, and the remaining text stays in clear.", "res.limits.r3.m": "The guard stops the call when it still finds a mapped value; a reviewer checks the rest.",
       "res.limits.r4.l": "Context inference", "res.limits.r4.w": "A model can still infer sensitive facts from the situation.", "res.limits.r4.m": "Keep a human in the loop; do not treat pseudonymised text as safe to publish.",
       "res.limits.r5.l": "Scanned documents", "res.limits.r5.w": "Text inside images is not covered by this filter.", "res.limits.r5.m": "OCR and manual review before sending.",
       "res.limits.r6.l": "Legal status", "res.limits.r6.w": "Replacing data does not by itself make a processing operation lawful.", "res.limits.r6.m": "Assess purpose, legal basis and contracts separately.",
       "res.notLegal.title": "Not legal advice",
       "res.notLegal.body": "This page describes a technical filter. It is not legal advice and does not replace a review of your processing under data-protection law.",
-      "res.pseudo.title": "Pseudonymisation, not anonymisation",
-      "res.pseudo.body": "The filter replaces personal data with placeholders. The original values still exist in the local map and can be restored, so the result is pseudonymised, not anonymous.",
+      "res.pseudo.title": "Pseudonymisation keeps the link",
+      "res.pseudo.body": "The filter replaces personal data with placeholders. The original values still exist in the local map and can be restored, so the result stays linked to the person.",
 
       "tech.eyebrow": "Technical details",
-      "tech.title": "Collapsed, because the page should stay readable",
-      "tech.lead": "Architecture, detection stack, guard, backends and the test behind the privacy claims.",
+      "tech.title": "The parts behind the claims",
+      "tech.lead": "Architecture, detection stack, guard, backends and the tests behind the privacy claims.",
       "tech.arch.sum": "Architecture",
       "tech.arch.body": "A FastAPI service receives an enquiry, runs detection, replaces values with typed placeholders, re-scans the result, calls one AI backend, and restores the placeholders in the returned draft. n8n triggers the flow; the placeholder map stays in memory and is never written to the page data.",
       "tech.detect.sum": "Detection stack",
@@ -144,13 +156,13 @@
       "tech.guard.sum": "The guard",
       "tech.guard.body": "Before any AI call, a second pass compares the pseudonymised text with the values found in the original. It checks normalised originals and digit-only forms for phone numbers and IBANs. On a leak the call is blocked and the verdict names the leaked types, never the values.",
       "tech.backends.sum": "AI backends",
-      "tech.backends.body": "A cloud backend through a BYOK chat-completions endpoint and a local Ollama backend behind the same interface. The page data is backend-agnostic; the results table records which backend produced each row.",
+      "tech.backends.body": "Four backends behind one interface: Claude and Codex through their CLIs, a BYOK chat-completions endpoint, and a local Ollama model. The results table records every call of the reply-writing test.",
       "tech.test.sum": "No-network test for the demo",
-      "tech.test.body": "The demo box above was checked with browser network logging: typing text and pressing the button made no requests. The claim covers the demo box only, not the rest of the page, which loads its JSON data once.",
+      "tech.test.body": "The try-it box was checked with browser network logging: typing text and pressing the button made no requests. The claim covers that box only; the rest of this page loads its two JSON files once.",
       "tech.data.sum": "Test data and reporting",
       "tech.data.body": "All enquiries on this page are synthetic, built from hand-written templates and Faker de_DE values. GermEval 2014 is downloaded by a script, git-ignored, never shown and never sent to a model; only detection rates are published. Labelled misses are reported as they are.",
       "tech.repro.sum": "Reproducibility",
-      "tech.repro.body": "Page data carries a mock flag, a version, a commit and a hash field. The measured run replaces the mock values; the shapes of examples.json and results.json stay the same.",
+      "tech.repro.body": "The page data carries the run's version, commit, timestamp and SHA-256. A small assertion script checks that every number in the stat cards equals the value in results.json.",
 
       "credits.eyebrow": "Data and credits",
       "credits.title": "What this page stands on",
@@ -159,7 +171,7 @@
       "credits.presidio.desc": "PII detection for names, organisations and more.",
       "credits.spacy.desc": "German NLP models behind Presidio.",
       "credits.faker.desc": "Synthetic German names, addresses and contact data; the de_DE first-name export powers the browser demo.",
-      "credits.n8n.desc": "Workflow glue for the server pipeline.",
+      "credits.n8n.desc": "Workflow glue and the human review step.",
       "credits.ollama.desc": "Local model runtime. The model's own licence is listed in the repository.",
       "credits.assets.name": "Icons and illustrations",
       "credits.assets.desc": "Hand-drawn SVG. No icon library and no external images.",
@@ -168,22 +180,23 @@
       "footer.built": "Built by Saber Sojudi.", "footer.legal": "Not legal advice.",
       "footer.portfolio": "Portfolio", "footer.top": "Back to top",
       "common.error": "Could not load the example data. Please open the page through a web server.",
-      "common.preview": "Preview", "common.dash": "—"
+      "common.dash": "—"
     },
 
     de: {
       "meta.title": "AI Privacy Filter — Saber Sojudi",
-      "meta.desc": "Ein Filter, der personenbezogene Daten durch Platzhalter ersetzt, bevor eine Kunden-E-Mail eine KI erreicht – und die echten Werte danach im Entwurf wiederherstellt. Demo, Ergebnisse und Grenzen.",
+      "meta.desc": "Ein Filter, der personenbezogene Daten durch Platzhalter ersetzt, bevor eine Kunden-E-Mail eine KI erreicht, und die echten Werte danach im Entwurf wiederherstellt. Gemessene Ergebnisse, Demo und Grenzen.",
       "skip": "Zum Inhalt springen",
       "brand.sub": "Pseudonymisieren, bevor die KI es sieht",
       "nav.example": "Beispiel", "nav.gallery": "Galerie", "nav.try": "Ausprobieren",
-      "nav.how": "So funktioniert es", "nav.results": "Ergebnisse", "nav.technical": "Details",
+      "nav.how": "So funktioniert es", "nav.workflow": "Prüfschritt", "nav.results": "Ergebnisse",
+      "nav.technical": "Details",
       "a.light": "Helles Design", "a.dark": "Dunkles Design", "a.github": "Quellcode auf GitHub ansehen",
       "a.lang": "Sprache", "a.theme": "Design", "a.sections": "Abschnitte", "a.technology": "Technologie", "a.footer": "Fußzeile",
 
       "hero.eyebrow": "Portfolioprojekt · Privacy Engineering",
       "hero.title": "KI für Kundenanfragen nutzen, ohne personenbezogene Daten weiterzugeben",
-      "hero.lead": "Ein Filter ersetzt Namen, Adressen, IBANs und andere personenbezogene Daten durch Platzhalter, bevor eine E-Mail ein Sprachmodell erreicht – und setzt die echten Werte danach wieder in den Entwurf ein.",
+      "hero.lead": "Ein Filter ersetzt Namen, Adressen, IBANs und andere personenbezogene Daten durch Platzhalter, bevor eine E-Mail ein Sprachmodell erreicht. Der Entwurf kommt mit Platzhaltern zurück, die echten Werte werden lokal wieder eingesetzt.",
       "hero.github": "Auf GitHub ansehen", "hero.try": "Ausprobieren",
       "hero.fine": "Alle Beispiele auf dieser Seite sind synthetisch. Es werden keine echten Kunden-E-Mails gezeigt.",
       "hero.card.title": "Lokal zuerst",
@@ -195,7 +208,7 @@
 
       "demo.eyebrow": "Beispiel",
       "demo.title": "Was hineingeht, was die KI sieht, was herauskommt",
-      "demo.lead": "Eine synthetische Angebotsanfrage, von Anfang bis Ende. Markierter Text sind personenbezogene Daten; die mittlere Spalte ist das, was das Modell erhält.",
+      "demo.lead": "Eine synthetische Angebotsanfrage, von Anfang bis Ende. Markierter Text sind personenbezogene Daten; die mittlere Spalte ist alles, was das Modell erhält.",
       "demo.col.original": "Original", "demo.col.original.sub": "Synthetische Anfrage",
       "demo.col.ai": "Was die KI sieht", "demo.col.ai.sub": "Pseudonymisiert",
       "demo.col.final": "Fertiger Entwurf", "demo.col.final.sub": "Werte zurückgesetzt",
@@ -203,33 +216,36 @@
       "demo.foot.ai": "[TYP_n] = Platzhalter",
       "demo.foot.final": "Lokal zurückgesetzt vor dem Versand",
       "demo.note": "Das Beispiel ist auf Deutsch, weil der Zielmarkt deutschsprachig ist. Die Oberfläche gibt es auf Englisch und Deutsch.",
-      "mock.badge": "Vorschaudaten",
-      "mock.text": "Die gemessenen Zahlen und finalen Beispiele ersetzen diese vor dem Start.",
 
-      "stats.eyebrow": "Kennzahlen",
-      "stats.title": "Was der Filter gefunden hat – und wie schnell",
-      "stats.lead": "Vorschauwerte aus dem Mock-Lauf. Jede Karte erklärt, was die Zahl bedeutet.",
-      "stats.note": "Vorschauwerte, in der Datendatei bereits als Mock markiert. Der gemessene Lauf ersetzt sie vor dem Start.",
-      "stats.spans": "Gefundene personenbezogene Stellen",
-      "stats.spans.meaning": "Über 240 synthetische Testanfragen, Doppelungen pro Stelle einmal gezählt.",
-      "stats.recall": "Erkennungsrate",
-      "stats.recall.meaning": "Anteil der markierten personenbezogenen Stellen, die der Filter ersetzt hat.",
-      "stats.guard": "Guard-Bestätigung",
-      "stats.guard.meaning": "Anteil der Nachrichten, die den erneuten Scan vor jedem KI-Aufruf bestanden.",
-      "stats.latency": "Median der Gesamtzeit",
-      "stats.latency.meaning": "Von der E-Mail bis zum Entwurf, lokal gemessen.",
+      "stats.eyebrow": "Gemessene Ergebnisse",
+      "stats.title": "Was der Filter gefunden hat – und was er verpasst hat",
+      "stats.lead": "Zahlen aus den Testläufen hinter diesem Projekt. Datensätze und Grenzen folgen weiter unten.",
+      "stats.note": "Einmal auf zurückgehaltenen Testdaten gemessen. Kein Wert wurde auf dem Testsplit abgestimmt.",
+      "stats.caught.label": "Erkannte personenbezogene Stellen",
+      "stats.caught.meaning": "Markierte Stellen im synthetischen Test, die der Filter ersetzt hat.",
+      "stats.extra.label": "Zusätzlich maskierter Text",
+      "stats.extra.meaning": "Ersetzte Zeichen, die keine personenbezogenen Daten waren.",
+      "stats.germeval.label": "Namen in deutschsprachigen Rechtstexten",
+      "stats.germeval.meaning": "Trefferquote für Namen und Organisationen im GermEval-2014-Test.",
+      "stats.leaks.label": "Ausgetretene Werte",
+      "stats.leaks.meaning": "Personenbezogene Werte, die statt eines Platzhalters ein Backend erreicht haben.",
+
+      "workflow.eyebrow": "Der Prüfschritt",
+      "workflow.title": "Ein Mensch gibt jeden Entwurf frei",
+      "workflow.lead": "In n8n wird eine Anfrage pseudonymisiert, vom Guard geprüft und entworfen. Eine Person sieht den pseudonymisierten Text, Kategorie, Dringlichkeit und den wiederhergestellten Entwurf und gibt ihn frei, bearbeitet oder verwirft ihn.",
+      "workflow.caption": "Workflow-Canvas: Anfrage rein, pseudonymisieren, Guard, Entwurf, Prüfung, Ergebnis schreiben.",
+      "workflow.alt": "n8n-Workflow-Canvas mit Anfrage-Eingang, Guard-Verzweigung, Entwurf und menschlicher Prüfung",
 
       "gallery.eyebrow": "Beispiele",
-      "gallery.title": "Fünfzehn synthetische Anfragen",
-      "gallery.lead": "Nach Ton filtern. Karte öffnen und Original mit dem vergleichen, was die KI sieht. Drei markierte Lücken bleiben absichtlich sichtbar.",
-      "gallery.filter": "Stil", "gallery.all": "Alle",
+      "gallery.title": "Synthetische Anfragen",
+      "gallery.lead": "Nach Kategorie filtern. Karte öffnen und Original mit dem vergleichen, was die KI gesehen hat. Markierte Lücken bleiben absichtlich sichtbar.",
+      "gallery.filter": "Kategorie", "gallery.all": "Alle",
       "gallery.note": "Jeder Text ist synthetisch. Namen, Adressen, Telefonnummern und IBANs wurden für diese Demo erzeugt.",
       "gallery.count": "{n} von {total} Beispielen",
       "gallery.showOriginal": "Original anzeigen",
       "gallery.missed": "Markierte Lücke",
-      "gallery.empty": "Keine Beispiele in diesem Stil.",
-      "gallery.style.formal": "Formell", "gallery.style.informal": "Locker",
-      "gallery.style.urgent": "Dringend", "gallery.style.angry": "Verärgert", "gallery.style.short": "Kurz",
+      "gallery.blocked": "Vor dem Modell gestoppt",
+      "gallery.empty": "Keine Beispiele in dieser Kategorie.",
       "gallery.cat.QUOTE_REQUEST": "Angebotsanfrage", "gallery.cat.SUPPORT": "Support",
       "gallery.cat.JOB_APPLICATION": "Bewerbung", "gallery.cat.PARTNERSHIP": "Partnerschaft",
       "gallery.cat.OTHER": "Sonstiges",
@@ -239,94 +255,101 @@
       "type.PHONE": "Telefon", "type.IBAN": "IBAN", "type.ADDRESS_STREET": "Straße",
       "type.POSTCODE_CITY": "PLZ + Ort", "type.URL": "URL", "type.VAT_ID": "USt-IdNr.",
       "type.DATE_OF_BIRTH": "Geburtsdatum",
-      "miss.name_not_in_list": "Name nicht in der deutschen Vornamenliste",
-      "miss.street_without_number": "Straße ohne Hausnummer",
-      "miss.phone_spelled_out": "Telefonnummer ausgeschrieben",
+
+      "backend.claude-cli": "Claude über CLI", "backend.codex-cli": "Codex über CLI",
+      "backend.byok": "Cloud-Modell (BYOK)", "backend.ollama": "Ollama, lokal",
+      "backend.guard-blocked": "Vom Guard gestoppt",
 
       "try.eyebrow": "Selbst ausprobieren",
       "try.title": "E-Mail einfügen und personenbezogene Daten ausblenden",
-      "try.lead": "Der Filter unten läuft nur in diesem Browser-Tab. Er ist eine vereinfachte Version der Server-Pipeline.",
-      "try.banner": "Vereinfachte Browserversion. Nichts, was Sie eingeben, verlässt Ihren Browser.",
-      "try.label": "Ihr Text", "try.placeholder": "Kunden-E-Mail hier einfügen …",
-      "try.button": "Personenbezogene Daten ausblenden", "try.sample": "Beispiel einsetzen", "try.clear": "Leeren",
-      "try.inputNote": "Läuft lokal. E-Mail, deutsche Telefonnummer, IBAN mit Prüfsumme, PLZ + Ort, Straße + Hausnummer, URL, deutsche Vornamen und Anrede-Hinweise.",
+      "try.lead": "Eine vereinfachte Version des Filters läuft in diesem Browser-Tab. Sie ist nicht die Server-Pipeline.",
+      "try.banner": "Läuft in Ihrem Browser. Nichts, was Sie eingeben, verlässt diese Seite.",
+      "try.label": "Ihr Text", "try.placeholder": "Kunden-E-Mail hier einfügen…",
+      "try.button": "Personenbezogene Daten ausblenden", "try.sample": "Beispiel verwenden", "try.clear": "Leeren",
+      "try.inputNote": "E-Mail, deutsche Telefonnummer, IBAN mit Prüfsumme, PLZ + Ort, Straße + Nummer, URL, deutsche Vornamen und Anrede-Hinweise.",
       "try.resultLabel": "Was die KI sehen würde",
-      "try.empty": "Das Ergebnis erscheint hier nach dem Klick.",
+      "try.empty": "Das Ergebnis erscheint hier, sobald Sie den Button drücken.",
       "try.found": "{n} personenbezogene Angaben ersetzt",
       "try.none": "Dieser vereinfachte Filter hat keine personenbezogenen Daten gefunden.",
       "try.replaced": "Ersetzt:",
-      "try.note": "Nichts wird irgendwohin gesendet. Die Box macht keine Netzwerkanfragen; sie nutzt nur die links genannten Prüfungen.",
+      "try.note": "Dieses Feld macht keine Netzwerkanfragen. Es führt nur die links genannten Prüfungen aus.",
 
       "how.eyebrow": "So funktioniert es",
       "how.title": "Fünf Schritte, eine Grenze",
-      "how.lead": "Personenbezogene Daten werden ersetzt, bevor die Anfrage an das KI-Backend geht. Die Platzhalter-Zuordnung verlässt den lokalen Prozess nie.",
+      "how.lead": "Personenbezogene Daten werden ersetzt, bevor die Anfrage die Grenze zum KI-Backend überschreitet. Die Platzhalter-Zuordnung bleibt im lokalen Prozess.",
       "how.s1.t": "Erkennen", "how.s1.d": "Namen, E-Mails, IBANs",
       "how.s2.t": "Ersetzen", "how.s2.d": "durch [TYP_n]",
-      "how.s3.t": "Prüfen", "how.s3.d": "vor dem Senden",
-      "how.s4.t": "KI-Entwurf", "how.s4.d": "pseudonymisierter Text",
+      "how.s3.t": "Guard", "how.s3.d": "erneut scannen vor dem Senden",
+      "how.s4.t": "KI-Entwurf", "how.s4.d": "auf pseudonymisiertem Text",
       "how.s5.t": "Zurücksetzen", "how.s5.d": "echte Werte zurück",
-      "how.svgTitle": "Fünf-Schritte-Ablauf: erkennen, ersetzen, prüfen, KI-Entwurf, zurücksetzen",
+      "how.svgTitle": "Fünf Schritte: erkennen, ersetzen, Guard, KI-Entwurf, zurücksetzen",
       "how.legend.local": "Auf Ihrem Rechner", "how.legend.network": "Netzwerkaufruf",
-      "how.note": "Schritt 4 ist der einzige, der mit einem KI-Backend spricht. Der Guard prüft den pseudonymisierten Text erneut und blockiert den Aufruf, wenn etwas übersehen wurde.",
+      "how.note": "Schritt 4 spricht als einziger mit einem KI-Backend. Der Guard prüft den pseudonymisierten Text erneut und stoppt den Aufruf, wenn noch ein zugeordneter Wert darin steht.",
 
       "res.eyebrow": "Ergebnisse und Grenzen",
-      "res.title": "Zahlen mit ihren Einschränkungen",
-      "res.lead": "Vorschauwerte. GermEval-Zahlen stehen noch aus; synthetische Zahlen sind Mock-Werte. Lücken werden berichtet, nicht versteckt.",
+      "res.title": "Die Zahlen mit ihren Einschränkungen",
+      "res.lead": "Ein Testsplit, einmal gemessen. Lücken werden so berichtet, wie sie sind.",
       "res.detection.title": "Erkennung",
-      "res.detection.lead": "Precision, Recall und F1 auf Span-Ebene.",
-      "res.detection.note": "GermEval 2014 wird nur zur Berechnung der Erkennungsraten verwendet; keine Sätze werden gezeigt.",
-      "res.th.dataset": "Datensatz", "res.th.precision": "Precision", "res.th.recall": "Recall",
-      "res.th.f1": "F1", "res.th.spans": "Stellen", "res.th.status": "Status",
-      "res.germeval.name": "GermEval 2014 (Test)", "res.germeval.desc": "Deutsche Rechtstexte · nur Zahlen",
-      "res.synthetic.name": "Synthetischer Test", "res.synthetic.desc": "240 handgeschriebene und Faker-gebaute Anfragen",
-      "res.status.pending": "Ausstehend", "res.status.mock": "Vorschau",
+      "res.detection.lead": "Eine markierte Stelle gilt nur als erkannt, wenn jedes Zeichen von einer passenden Vorhersage abgedeckt ist.",
+      "res.detection.note": "GermEval 2014 dient nur zur Berechnung der Erkennungsraten; es werden keine Sätze gezeigt.",
+      "res.th.dataset": "Datensatz", "res.th.recall": "Trefferquote",
+      "res.th.missed": "Verpasste Stellen", "res.th.covers": "Umfang",
+      "res.germeval.name": "GermEval 2014 (Test)",
+      "res.germeval.desc": "{n} Sätze, nur Namen und Organisationen",
+      "res.synthetic.name": "Synthetischer Test",
+      "res.synthetic.desc": "{n} synthetische E-Mails, {types} Typen personenbezogener Daten",
+      "res.misses": "Verpasst: {list}.",
+      "res.misses.none": "Keine markierte Stelle wurde verpasst.",
       "res.triage.title": "Antwortentwurf",
-      "res.triage.lead": "Pro Backend, auf demselben Mock-Testsatz.",
-      "res.triage.note": "Lokale Werte sind Platzhalterzeilen, bis der lokale Lauf abgeschlossen ist; sie behaupten keinen abgeschlossenen lokalen Test.",
-      "res.th.backend": "Backend", "res.th.model": "Modell", "res.th.validJson": "Gültiges JSON",
-      "res.th.category": "Kategorie-Treffer", "res.th.latency": "Median-Latenz", "res.th.calls": "Aufrufe",
-      "res.backend.cloud": "Cloud-Modell (BYOK)", "res.backend.local": "Lokales Modell (Ollama)",
-      "res.limits.title": "Was das nicht erkennt",
-      "res.limits.lead": "Bekannte Grenzen, vor den Zahlen.",
+      "res.triage.lead": "Jedes Backend hat denselben Fragensatz beantwortet.",
+      "res.triage.note": "Gültiges JSON zählt nutzbare Antworten. Kategorie und Dringlichkeit sind exakte Treffer. Ausgetretene Werte: {leaks} in {calls} Aufrufen.",
+      "res.th.backend": "Backend",
+      "res.th.validJson": "Gültiges JSON",
+      "res.th.category": "Kategorie",
+      "res.th.urgency": "Dringlichkeit",
+      "res.th.latency": "Median der Antwort",
+      "res.th.calls": "Aufrufe",
+      "res.limits.title": "Was der Filter nicht erfasst",
+      "res.limits.lead": "Bekannte Grenzen, direkt neben den Zahlen.",
       "res.th.limit": "Grenze", "res.th.what": "Was passiert", "res.th.mitigation": "Gegenmaßnahme",
-      "res.limits.r1.l": "Namen außerhalb der Liste", "res.limits.r1.w": "Ungewöhnliche oder nicht deutsche Namen bleiben sichtbar.", "res.limits.r1.m": "Anrede-Hinweise und eine menschliche Prüfung vor dem Versand.",
-      "res.limits.r2.l": "Adressen ohne Hausnummer", "res.limits.r2.w": "Ein Straßenname ohne Nummer wird möglicherweise nicht erkannt.", "res.limits.r2.m": "Einen manuellen Prüfschritt für Adressblöcke ergänzen.",
-      "res.limits.r3.l": "Telefonnummern in Worten", "res.limits.r3.w": "Ausgeschriebene Ziffern erkennt die Browser-Demo nicht.", "res.limits.r3.m": "Demo-Ausgabe prüfen; die Server-Pipeline ergänzt einen zweiten Durchlauf.",
-      "res.limits.r4.l": "Kontextschluss", "res.limits.r4.w": "Ein Modell kann aus dem Zusammenhang weiterhin sensible Fakten ableiten.", "res.limits.r4.m": "Menschen im Prozess behalten; pseudonymisierten Text nicht als veröffentlichungssicher behandeln.",
-      "res.limits.r5.l": "Gescannte Dokumente", "res.limits.r5.w": "Text in Bildern wird von diesem Filter nicht erfasst.", "res.limits.r5.m": "OCR und manuelle Prüfung vor dem Versand.",
-      "res.limits.r6.l": "Rechtlicher Status", "res.limits.r6.w": "Das Ersetzen von Daten macht eine Verarbeitung nicht automatisch rechtmäßig.", "res.limits.r6.m": "Zweck, Rechtsgrundlage und Verträge getrennt prüfen.",
+      "res.limits.r1.l": "Namen außerhalb der Liste", "res.limits.r1.w": "Ungewöhnliche oder nicht deutsche Namen können sichtbar bleiben.", "res.limits.r1.m": "Anrede-Hinweise und eine menschliche Prüfung vor dem Senden.",
+      "res.limits.r2.l": "Adressen ohne Nummer", "res.limits.r2.w": "Ein Straßenname ohne Hausnummer wird eventuell nicht erkannt.", "res.limits.r2.m": "Für Adressblöcke einen manuellen Prüfschritt ergänzen.",
+      "res.limits.r3.l": "PLZ- und Ort-Paare", "res.limits.r3.w": "Manche Paare werden nicht erkannt; der Rest bleibt sichtbar.", "res.limits.r3.m": "Der Guard stoppt den Aufruf, wenn er noch einen zugeordneten Wert findet; eine Person prüft den Rest.",
+      "res.limits.r4.l": "Kontext-Rückschlüsse", "res.limits.r4.w": "Ein Modell kann aus dem Zusammenhang weiterhin sensible Fakten ableiten.", "res.limits.r4.m": "Menschen im Prozess behalten; pseudonymisierten Text nicht als veröffentlichungssicher behandeln.",
+      "res.limits.r5.l": "Gescannte Dokumente", "res.limits.r5.w": "Text in Bildern wird von diesem Filter nicht erfasst.", "res.limits.r5.m": "OCR und manuelle Prüfung vor dem Senden.",
+      "res.limits.r6.l": "Rechtlicher Status", "res.limits.r6.w": "Das Ersetzen von Daten macht eine Verarbeitung nicht automatisch rechtmäßig.", "res.limits.r6.m": "Zweck, Rechtsgrundlage und Verträge separat prüfen.",
       "res.notLegal.title": "Keine Rechtsberatung",
       "res.notLegal.body": "Diese Seite beschreibt einen technischen Filter. Sie ist keine Rechtsberatung und ersetzt keine Prüfung Ihrer Verarbeitung nach Datenschutzrecht.",
-      "res.pseudo.title": "Pseudonymisierung, nicht Anonymisierung",
-      "res.pseudo.body": "Der Filter ersetzt personenbezogene Daten durch Platzhalter. Die Originalwerte bleiben in der lokalen Zuordnung erhalten und können wiederhergestellt werden. Das Ergebnis ist daher pseudonymisiert, nicht anonym.",
+      "res.pseudo.title": "Pseudonymisierung bleibt zuordenbar",
+      "res.pseudo.body": "Der Filter ersetzt personenbezogene Daten durch Platzhalter. Die Originalwerte bleiben in der lokalen Zuordnung und können wiederhergestellt werden; das Ergebnis bleibt also auf die Person beziehbar.",
 
       "tech.eyebrow": "Technische Details",
-      "tech.title": "Zugeklappt, damit die Seite lesbar bleibt",
-      "tech.lead": "Architektur, Erkennungs-Stack, Guard, Backends und der Test hinter den Datenschutzaussagen.",
+      "tech.title": "Die Teile hinter den Aussagen",
+      "tech.lead": "Architektur, Erkennungs-Stack, Guard, Backends und die Tests hinter den Datenschutzaussagen.",
       "tech.arch.sum": "Architektur",
-      "tech.arch.body": "Ein FastAPI-Dienst nimmt eine Anfrage entgegen, führt die Erkennung aus, ersetzt Werte durch typisierte Platzhalter, prüft das Ergebnis erneut, ruft ein KI-Backend auf und setzt die Platzhalter im zurückgegebenen Entwurf wieder ein. n8n stößt den Ablauf an; die Platzhalter-Zuordnung bleibt im Speicher und wird nie in die Seitendaten geschrieben.",
+      "tech.arch.body": "Ein FastAPI-Dienst nimmt eine Anfrage, erkennt personenbezogene Daten, ersetzt Werte durch typisierte Platzhalter, prüft das Ergebnis erneut, ruft ein KI-Backend und setzt die Platzhalter im zurückgegebenen Entwurf wieder ein. n8n startet den Ablauf; die Platzhalter-Zuordnung bleibt im Speicher und wird nie in die Seitendaten geschrieben.",
       "tech.detect.sum": "Erkennungs-Stack",
-      "tech.detect.body": "Microsoft Presidio und spaCy erkennen Namen und Organisationen. Reguläre Ausdrücke mit Prüfsummen erkennen E-Mails, deutsche Telefonnummern, IBANs, PLZ mit Ort, Straße mit Hausnummer, URLs und USt-IdNrn. Die Browser-Demo ergänzt eine Faker-de_DE-Vornamenliste und Anrede-Hinweise.",
+      "tech.detect.body": "Microsoft Presidio und spaCy erkennen Namen und Organisationen. Reguläre Ausdrücke mit Prüfsummen erkennen E-Mails, deutsche Telefonnummern, IBANs, PLZ mit Ort, Straße mit Nummer, URLs und USt-IdNrn. Die Browser-Demo ergänzt eine Faker-de_DE-Vornamenliste und Anrede-Hinweise.",
       "tech.guard.sum": "Der Guard",
-      "tech.guard.body": "Vor jedem KI-Aufruf vergleicht ein zweiter Durchlauf den pseudonymisierten Text mit den im Original gefundenen Werten. Er prüft normalisierte Originale und reine Ziffernformen bei Telefonnummern und IBANs. Bei einem Leck wird der Aufruf blockiert; das Urteil nennt die betroffenen Typen, nie die Werte.",
+      "tech.guard.body": "Vor jedem KI-Aufruf vergleicht ein zweiter Durchlauf den pseudonymisierten Text mit den Werten aus dem Original. Er prüft normalisierte Originale und reine Ziffernformen für Telefonnummern und IBANs. Bei einem Leck wird der Aufruf gestoppt; das Ergebnis nennt die Typen, nie die Werte.",
       "tech.backends.sum": "KI-Backends",
-      "tech.backends.body": "Ein Cloud-Backend über einen BYOK-Chat-Completions-Endpunkt und ein lokales Ollama-Backend hinter derselben Schnittstelle. Die Seitendaten sind backend-unabhängig; die Ergebnistabelle hält fest, welches Backend welche Zeile erzeugt hat.",
+      "tech.backends.body": "Vier Backends hinter einer Schnittstelle: Claude und Codex über ihre CLIs, ein BYOK-Chat-Completions-Endpunkt und ein lokales Ollama-Modell. Die Ergebnistabelle erfasst jeden Aufruf des Antwortentwurf-Tests.",
       "tech.test.sum": "Netzwerkfreier Test der Demo",
-      "tech.test.body": "Die Demo-Box oben wurde mit Browser-Netzwerkprotokollierung geprüft: Text eingeben und den Button drücken löste keine Anfragen aus. Die Aussage gilt nur für die Demo-Box, nicht für den Rest der Seite, der seine JSON-Daten einmal lädt.",
+      "tech.test.body": "Das Ausprobieren-Feld wurde mit Browser-Netzwerkprotokoll geprüft: Tippen und Drücken des Buttons erzeugten keine Anfragen. Die Aussage gilt nur für dieses Feld; der Rest der Seite lädt ihre zwei JSON-Dateien einmal.",
       "tech.data.sum": "Testdaten und Berichterstattung",
-      "tech.data.body": "Alle Anfragen auf dieser Seite sind synthetisch, aus handgeschriebenen Vorlagen und Faker-de_DE-Werten gebaut. GermEval 2014 wird per Skript heruntergeladen, ist git-ignoriert, wird nie gezeigt und nie an ein Modell gesendet; veröffentlicht werden nur Erkennungsraten. Markierte Lücken werden so berichtet, wie sie sind.",
+      "tech.data.body": "Alle Anfragen auf dieser Seite sind synthetisch, aus handgeschriebenen Vorlagen und Faker-de_DE-Werten. GermEval 2014 wird per Skript geladen, ist git-ignoriert, wird nie gezeigt und nie an ein Modell gesendet; veröffentlicht werden nur Erkennungsraten. Markierte Lücken werden so berichtet, wie sie sind.",
       "tech.repro.sum": "Reproduzierbarkeit",
-      "tech.repro.body": "Die Seitendaten tragen ein Mock-Flag, eine Version, einen Commit und ein Hash-Feld. Der gemessene Lauf ersetzt die Mock-Werte; die Form von examples.json und results.json bleibt gleich.",
+      "tech.repro.body": "Die Seitendaten tragen Version, Commit, Zeitstempel und SHA-256 des Laufs. Ein kleines Prüfskript kontrolliert, dass jede Zahl in den Kennzahlenkarten dem Wert in results.json entspricht.",
 
-      "credits.eyebrow": "Daten und Credits",
+      "credits.eyebrow": "Daten und Quellen",
       "credits.title": "Worauf diese Seite steht",
       "credits.lead": "Offene Werkzeuge und ein Forschungsdatensatz, mit Lizenz und Grenze.",
-      "credits.germeval.desc": "Deutsche Rechtstexte, nur zur Berechnung der Erkennungsraten verwendet; keine Sätze werden gezeigt.",
+      "credits.germeval.desc": "Deutschsprachige Rechtstexte. Nur zur Berechnung der Erkennungsraten; keine Sätze gezeigt.",
       "credits.presidio.desc": "PII-Erkennung für Namen, Organisationen und mehr.",
       "credits.spacy.desc": "Deutsche NLP-Modelle hinter Presidio.",
-      "credits.faker.desc": "Synthetische deutsche Namen, Adressen und Kontaktdaten; der de_DE-Vornamenexport treibt die Browser-Demo.",
-      "credits.n8n.desc": "Workflow-Klebstoff für die Server-Pipeline.",
-      "credits.ollama.desc": "Laufzeit für lokale Modelle. Die Lizenz des jeweiligen Modells steht im Repository.",
+      "credits.faker.desc": "Synthetische deutsche Namen, Adressen und Kontaktdaten; der de_DE-Vornamenexport betreibt die Browser-Demo.",
+      "credits.n8n.desc": "Workflow-Verklebung und der menschliche Prüfschritt.",
+      "credits.ollama.desc": "Laufzeit für lokale Modelle. Die Lizenz des Modells steht im Repository.",
       "credits.assets.name": "Icons und Illustrationen",
       "credits.assets.desc": "Handgezeichnetes SVG. Keine Icon-Bibliothek und keine externen Bilder.",
       "credits.assets.lic": "Diese Seite",
@@ -334,7 +357,7 @@
       "footer.built": "Gebaut von Saber Sojudi.", "footer.legal": "Keine Rechtsberatung.",
       "footer.portfolio": "Portfolio", "footer.top": "Nach oben",
       "common.error": "Die Beispieldaten konnten nicht geladen werden. Bitte die Seite über einen Webserver öffnen.",
-      "common.preview": "Vorschau", "common.dash": "—"
+      "common.dash": "—"
     }
   };
 
@@ -367,6 +390,7 @@
   }
   function pct(value, digits) { return fmt(value, digits == null ? 1 : digits) + '%'; }
   function entClass(type) { return 'ent-' + String(type).toLowerCase().replace(/_/g, '-'); }
+  function totals() { return window.AIPF_RESULTS_MODEL; }
 
   /* ---------- theme ---------- */
   function systemTheme() {
@@ -409,6 +433,7 @@
     });
     $$('[data-i18n-label]').forEach(function (el) { el.setAttribute('aria-label', t(el.dataset.i18nLabel)); });
     $$('[data-i18n-placeholder]').forEach(function (el) { el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder)); });
+    $$('[data-i18n-alt]').forEach(function (el) { el.setAttribute('alt', t(el.dataset.i18nAlt)); });
     syncLangButtons();
     syncThemeButtons();
     renderAll();
@@ -422,7 +447,7 @@
       all.push({ start: s.start, end: s.end, cls: 'ent ' + entClass(s.type), title: t('type.' + s.type) });
     });
     (misses || []).forEach(function (m) {
-      if (typeof m.start === 'number') all.push({ start: m.start, end: m.end, cls: 'ent miss', title: t('gallery.missed') + ': ' + t('miss.' + m.reason) });
+      if (typeof m.start === 'number') all.push({ start: m.start, end: m.end, cls: 'ent miss', title: t('gallery.missed') + ': ' + t('type.' + m.type) });
     });
     all.sort(function (a, b) { return a.start - b.start || b.end - a.end; });
     var out = '', pos = 0;
@@ -458,29 +483,28 @@
     var meta = $('#demo-meta');
     var legend = $('#demo-legend');
     if (!grid || !EXAMPLES.length) return;
-    var ex = EXAMPLES.filter(function (x) { return x.featured; })[0] || EXAMPLES[0];
+    var ex = EXAMPLES.filter(function (x) { return x.reply_draft_restored; })[0] || EXAMPLES[0];
 
     meta.innerHTML =
       '<span class="chip chip-accent">' + esc(t('gallery.cat.' + ex.category)) + '</span>' +
-      '<span class="chip">' + esc(t('gallery.style.' + ex.style)) + '</span>' +
       '<span class="chip ' + (ex.urgency === 'HIGH' ? 'chip-warn' : '') + '">' + esc(t('gallery.urgency.' + ex.urgency)) + '</span>' +
-      '<span class="chip chip-warn">' + esc(t('common.preview')) + '</span>';
+      '<span class="chip">' + esc(t('backend.' + ex.backend)) + '</span>';
 
     var restored = findSpans(ex.reply_draft_restored || '', ex.spans || []);
     var columns = [
       {
         cls: '', title: t('demo.col.original'), sub: t('demo.col.original.sub'),
-        body: '<span class="subject">' + esc(ex.subject || '') + '</span>' + marked(ex.original, ex.spans, ex.misses),
+        body: marked(ex.original, ex.spans, ex.misses),
         foot: t('demo.foot.original')
       },
       {
         cls: '', title: t('demo.col.ai'), sub: t('demo.col.ai.sub'),
-        body: '<span class="subject">' + esc(ex.subject || '') + '</span>' + phMarked(ex.redacted),
+        body: phMarked(ex.redacted),
         foot: t('demo.foot.ai')
       },
       {
         cls: ' final', title: t('demo.col.final'), sub: t('demo.col.final.sub'),
-        body: '<span class="subject">' + esc(ex.subject || '') + '</span>' + marked(ex.reply_draft_restored, restored, []),
+        body: marked(ex.reply_draft_restored, restored, []),
         foot: t('demo.foot.final')
       }
     ];
@@ -503,41 +527,36 @@
   }
 
   /* ---------- stats ---------- */
-  function statValue(item) {
-    if (item.format === 'pct1') return pct(item.value, 1);
-    if (item.format === 'pct0') return pct(item.value, 0);
-    if (item.format === 'dec1') return fmt(item.value, 1) + (item.unit ? ' ' + item.unit : '');
-    return fmt(item.value, 0) + (item.unit ? ' ' + item.unit : '');
-  }
   function renderStats() {
     var grid = $('#stats-grid');
-    if (!grid || !RESULTS || !RESULTS.headline) return;
-    grid.innerHTML = RESULTS.headline.map(function (item) {
-      return '<article class="stat">' +
-        '<span class="stat-value">' + esc(statValue(item)) + '</span>' +
-        '<span class="stat-label">' + esc(t('stats.' + item.id)) + '</span>' +
-        '<span class="stat-meaning">' + esc(t('stats.' + item.id + '.meaning')) + '</span>' +
-        '<span class="chip chip-warn">' + esc(t('common.preview')) + '</span>' +
+    if (!grid || !RESULTS) return;
+    var cards = totals().stats(RESULTS, LOCALE());
+    grid.innerHTML = cards.map(function (card) {
+      return '<article class="stat" data-stat="' + esc(card.id) + '">' +
+        '<span class="stat-value" data-value="' + esc(card.value) + '">' + esc(card.value) + '</span>' +
+        '<span class="stat-note" data-note="' + esc(card.note) + '">' + esc(card.note) + '</span>' +
+        '<span class="stat-label">' + esc(t('stats.' + card.id + '.label')) + '</span>' +
+        '<span class="stat-meaning">' + esc(t('stats.' + card.id + '.meaning')) + '</span>' +
         '</article>';
     }).join('');
   }
 
   /* ---------- gallery ---------- */
-  function styles() {
+  function categories() {
     var out = [];
-    EXAMPLES.forEach(function (x) { if (out.indexOf(x.style) === -1) out.push(x.style); });
+    EXAMPLES.forEach(function (x) { if (out.indexOf(x.category) === -1) out.push(x.category); });
     return out;
   }
   function renderFilters() {
     var box = $('#gallery-filters');
     if (!box) return;
-    var list = ['all'].concat(styles());
-    box.innerHTML = list.map(function (s) {
-      var label = s === 'all' ? t('gallery.all') : t('gallery.style.' + s);
-      return '<button type="button" class="filter" data-style="' + esc(s) + '" aria-pressed="' + String(FILTER === s) + '">' + esc(label) + '</button>';
+    var list = ['all'].concat(categories());
+    box.innerHTML = list.map(function (c) {
+      var label = c === 'all' ? t('gallery.all') : t('gallery.cat.' + c);
+      return '<button type="button" class="filter" data-category="' + esc(c) + '" aria-pressed="' + String(FILTER === c) + '">' + esc(label) + '</button>';
     }).join('');
     $$('.filter', box).forEach(function (b) {
-      b.addEventListener('click', function () { FILTER = b.dataset.style; renderGallery(); });
+      b.addEventListener('click', function () { FILTER = b.dataset.category; renderGallery(); });
     });
   }
   function renderGallery() {
@@ -545,7 +564,7 @@
     var count = $('#gallery-count');
     if (!grid) return;
     renderFilters();
-    var shown = EXAMPLES.filter(function (x) { return FILTER === 'all' || x.style === FILTER; });
+    var shown = EXAMPLES.filter(function (x) { return FILTER === 'all' || x.category === FILTER; });
     if (count) count.textContent = tf('gallery.count', { n: shown.length, total: EXAMPLES.length });
 
     if (!shown.length) {
@@ -553,20 +572,20 @@
       return;
     }
     grid.innerHTML = shown.map(function (x) {
+      var blocked = !x.reply_draft_restored;
       var miss = (x.misses || []).length
         ? '<div class="miss-box"><strong>' + esc(t('gallery.missed')) + '</strong><ul>' +
           x.misses.map(function (m) {
-            return '<li><code>' + esc(t('type.' + m.type)) + '</code> ' + esc(m.text) + ' — ' + esc(t('miss.' + m.reason)) + '</li>';
+            return '<li><code>' + esc(t('type.' + m.type)) + '</code> ' + esc(m.text) + '</li>';
           }).join('') + '</ul></div>'
         : '';
       return '<article class="ex-card' + (miss ? ' has-miss' : '') + '">' +
         '<div class="ex-top">' +
         '<span class="chip chip-accent">' + esc(t('gallery.cat.' + x.category)) + '</span>' +
-        '<span class="chip">' + esc(t('gallery.style.' + x.style)) + '</span>' +
         '<span class="chip ' + (x.urgency === 'HIGH' ? 'chip-warn' : '') + '">' + esc(t('gallery.urgency.' + x.urgency)) + '</span>' +
+        (blocked ? '<span class="chip chip-danger">' + esc(t('gallery.blocked')) + '</span>' : '') +
         (miss ? '<span class="chip chip-danger">' + esc(t('gallery.missed')) + '</span>' : '') +
         '</div>' +
-        '<h3>' + esc(x.subject || '') + '</h3>' +
         '<p class="ex-red">' + phMarked(x.redacted) + '</p>' +
         '<details><summary>' + esc(t('gallery.showOriginal')) + '</summary>' +
         '<div class="ex-orig">' + marked(x.original, x.spans, x.misses) + '</div></details>' +
@@ -576,9 +595,31 @@
   }
 
   /* ---------- results tables ---------- */
-  function statusChip(kind) {
-    if (kind === 'pending') return '<span class="chip chip-warn">' + esc(t('res.status.pending')) + '</span>';
-    return '<span class="chip">' + esc(t('res.status.mock')) + '</span>';
+  function detectionRows() {
+    var s = RESULTS.detection.synthetic;
+    var g = RESULTS.detection.germeval;
+    var syn = totals().syntheticTotals(s.baselines.B2);
+    var germ = g.baselines.B2;
+    var germMissed = germ.micro_primary.gold - germ.micro_primary.protected;
+    return {
+      syn: syn,
+      germ: germ,
+      germMissed: germMissed,
+      rows: [
+        {
+          name: t('res.synthetic.name'),
+          covers: tf('res.synthetic.desc', { n: fmt(s.records, 0), types: fmt(s.types.length, 0) }),
+          recall: totals().pct(syn.caught, syn.gold, 1, LOCALE()),
+          missed: fmt(syn.missed, 0)
+        },
+        {
+          name: t('res.germeval.name'),
+          covers: tf('res.germeval.desc', { n: fmt(g.sentences, 0) }),
+          recall: fmt(germ.micro_primary.recall_pct, 1) + '%',
+          missed: fmt(germMissed, 0)
+        }
+      ]
+    };
   }
   function renderResults() {
     var det = $('#detection-body');
@@ -587,35 +628,44 @@
     if (!RESULTS) return;
 
     if (det) {
-      var g = RESULTS.detection.germeval || {};
-      var s = RESULTS.detection.synthetic || {};
-      var row = function (name, desc, data, status) {
-        var cell = function (v) { return v == null ? t('common.dash') : pct(v, 1); };
+      var info = detectionRows();
+      det.innerHTML = info.rows.map(function (row) {
         return '<tr>' +
-          '<td><strong>' + esc(name) + '</strong><br><span style="font-size:11.5px;color:var(--ink-muted)">' + esc(desc) + '</span></td>' +
-          '<td class="num">' + cell(data.precision) + '</td>' +
-          '<td class="num">' + cell(data.recall) + '</td>' +
-          '<td class="num">' + cell(data.f1) + '</td>' +
-          '<td class="num">' + (data.spans == null ? t('common.dash') : fmt(data.spans, 0)) + '</td>' +
-          '<td>' + statusChip(status) + '</td>' +
+          '<td><strong>' + esc(row.name) + '</strong><br><span style="font-size:11.5px;color:var(--ink-muted)">' + esc(row.covers) + '</span></td>' +
+          '<td class="num">' + esc(row.recall) + '</td>' +
+          '<td class="num">' + esc(row.missed) + '</td>' +
           '</tr>';
-      };
-      det.innerHTML =
-        row(t('res.germeval.name'), t('res.germeval.desc'), g, 'pending') +
-        row(t('res.synthetic.name'), t('res.synthetic.desc'), s, 'mock');
+      }).join('');
+
+      var missedTypes = [];
+      var perType = RESULTS.detection.synthetic.baselines.B2.per_type;
+      Object.keys(perType).forEach(function (type) {
+        if (perType[type].missed > 0) {
+          missedTypes.push(t('type.' + type) + ' ×' + fmt(perType[type].missed, 0));
+        }
+      });
+      var list = missedTypes.join(' · ');
+      var miss = $('#detection-misses');
+      if (miss) miss.textContent = list
+        ? tf('res.misses', { list: list })
+        : t('res.misses.none');
     }
 
     if (tri) {
-      tri.innerHTML = (RESULTS.triage.per_backend || []).map(function (b) {
+      tri.innerHTML = Object.keys(RESULTS.triage.per_backend).map(function (name) {
+        var b = RESULTS.triage.per_backend[name];
         return '<tr>' +
-          '<td><strong>' + esc(t('res.backend.' + b.name)) + '</strong></td>' +
-          '<td><code style="font-family:var(--mono);font-size:11.5px">' + esc(b.model) + '</code> ' + statusChip('mock') + '</td>' +
-          '<td class="num">' + pct(b.valid_json, 1) + '</td>' +
-          '<td class="num">' + pct(b.category_accuracy, 1) + '</td>' +
-          '<td class="num">' + fmt(b.median_latency_ms / 1000, 1) + ' s</td>' +
+          '<td><strong>' + esc(t('backend.' + name)) + '</strong></td>' +
+          '<td class="num">' + pct(b.success / b.calls * 100, 1) + '</td>' +
+          '<td class="num">' + pct(b.category_only.rate * 100, 1) + '</td>' +
+          '<td class="num">' + pct(b.urgency_only.rate * 100, 1) + '</td>' +
+          '<td class="num">' + fmt(b.latency_ms.median / 1000, 1) + ' s</td>' +
           '<td class="num">' + fmt(b.calls, 0) + '</td>' +
           '</tr>';
       }).join('');
+      var triageTotals = totals().triageTotals(RESULTS.triage.per_backend);
+      var note = $('#triage-note');
+      if (note) note.textContent = tf('res.triage.note', { leaks: fmt(triageTotals.leaks, 0), calls: fmt(triageTotals.calls, 0) });
     }
 
     if (lim) {
@@ -648,7 +698,7 @@
     Promise.all([get('examples.json'), get('results.json')]).then(function (out) {
       EXAMPLES = Array.isArray(out[0]) ? out[0] : (out[0].examples || []);
       RESULTS = out[1];
-      var sample = EXAMPLES.filter(function (x) { return x.style === 'informal'; })[0] || EXAMPLES[0];
+      var sample = EXAMPLES.filter(function (x) { return x.reply_draft_restored; })[0] || EXAMPLES[0];
       window.AIPF_SAMPLE = sample ? sample.original : '';
       renderAll();
       if (window.AIPF_TRYIT && typeof window.AIPF_TRYIT.refresh === 'function') window.AIPF_TRYIT.refresh();

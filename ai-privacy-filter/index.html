@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%23111827%22%2F%3E%3Cpath%20d%3D%22M16%206l7%203v6c0%205-3%208-7%2010-4-2-7-5-7-10V9z%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M12.5%2016l2.5%202.5%204.5-5%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="A filter that replaces personal data with placeholders before a customer email reaches an AI, then restores the real values in the draft. Demo, results and limits.">
+<meta name="description" content="A filter that replaces personal data with placeholders before a customer email reaches an AI, then puts the real values back into the reply. Measured results, demo and limits.">
 <title>AI Privacy Filter — Saber Sojudi</title>
 <script>
 /* Set language and theme before first paint. Storage access is best-effort. */
@@ -23,6 +23,7 @@
 </script>
 <link rel="stylesheet" href="assets/page.css">
 <script defer src="assets/first-names-de.js"></script>
+<script defer src="assets/results-model.js"></script>
 <script defer src="assets/app.js"></script>
 <script defer src="assets/tryit.js"></script>
 </head>
@@ -46,6 +47,7 @@
       <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
       <a href="#try" data-i18n="nav.try">Try it</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#workflow" data-i18n="nav.workflow">Review step</a>
       <a href="#results" data-i18n="nav.results">Results</a>
       <a href="#technical" data-i18n="nav.technical">Details</a>
     </nav>
@@ -79,7 +81,7 @@
       <div>
         <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio project · Privacy engineering</p>
         <h1 id="hero-title" data-i18n="hero.title">Use AI on customer emails without sending personal data</h1>
-        <p class="lead" data-i18n="hero.lead">A filter replaces names, addresses, IBANs and other personal data with placeholders before an email reaches a language model — and puts the real values back into the draft afterwards.</p>
+        <p class="lead" data-i18n="hero.lead">A filter replaces names, addresses, IBANs and other personal data with placeholders before an email reaches a language model. The reply comes back with placeholders, and the real values go back in on your machine.</p>
         <ul class="tags" aria-label="Technology" data-i18n-label="a.technology">
           <li data-i18n="tech.python">Python</li>
           <li data-i18n="tech.presidio">Presidio</li>
@@ -116,11 +118,7 @@
     <div class="section-head">
       <p class="eyebrow" data-i18n="demo.eyebrow">Real example</p>
       <h2 id="example-title" data-i18n="demo.title">What goes in, what the AI sees, what comes out</h2>
-      <p class="lead" data-i18n="demo.lead">One synthetic quote request, shown end to end. Highlighted text is personal data; the middle column is what the model receives.</p>
-    </div>
-    <div class="mockbar" role="note">
-      <span class="dot" aria-hidden="true"></span>
-      <span><strong data-i18n="mock.badge">Preview data</strong> — <span data-i18n="mock.text">the measured numbers and final examples will replace these before launch.</span></span>
+      <p class="lead" data-i18n="demo.lead">One synthetic quote request, shown end to end. Highlighted text is personal data; the middle column is all the model receives.</p>
     </div>
     <div id="demo-meta" class="example-meta"></div>
     <div id="demo-grid" class="demo-grid" aria-live="polite"></div>
@@ -131,22 +129,22 @@
   <!-- ===================== NUMBERS ===================== -->
   <section class="section wrap" id="numbers" aria-labelledby="numbers-title">
     <div class="section-head">
-      <p class="eyebrow" data-i18n="stats.eyebrow">Headline numbers</p>
-      <h2 id="numbers-title" data-i18n="stats.title">What the filter found, and how fast</h2>
-      <p class="lead" data-i18n="stats.lead">Preview figures from the mock run. Each card says what the number means.</p>
+      <p class="eyebrow" data-i18n="stats.eyebrow">Measured results</p>
+      <h2 id="numbers-title" data-i18n="stats.title">What the filter found, and what it missed</h2>
+      <p class="lead" data-i18n="stats.lead">Numbers from the test runs behind this project. The datasets and the limits follow below.</p>
     </div>
     <div id="stats-grid" class="stats-grid"></div>
-    <p class="fine" data-i18n="stats.note">Preview values, already marked as mock in the data file. The measured run replaces them before launch.</p>
+    <p class="fine" data-i18n="stats.note">Measured once on held-out test data. No value here was tuned on the test split.</p>
   </section>
 
   <!-- ===================== GALLERY ===================== -->
   <section class="section wrap" id="gallery" aria-labelledby="gallery-title">
     <div class="section-head">
       <p class="eyebrow" data-i18n="gallery.eyebrow">Examples</p>
-      <h2 id="gallery-title" data-i18n="gallery.title">Fifteen synthetic enquiries</h2>
-      <p class="lead" data-i18n="gallery.lead">Filter by tone. Open any card to compare the original with what the AI sees. Three labelled misses stay visible on purpose.</p>
+      <h2 id="gallery-title" data-i18n="gallery.title">Synthetic enquiries</h2>
+      <p class="lead" data-i18n="gallery.lead">Filter by category. Open a card to compare the original with what the AI saw. Labelled misses stay visible on purpose.</p>
     </div>
-    <p class="try-label" id="filter-label" data-i18n="gallery.filter">Style</p>
+    <p class="try-label" id="filter-label" data-i18n="gallery.filter">Category</p>
     <div class="filters" id="gallery-filters" role="group" aria-labelledby="filter-label"></div>
     <p class="gallery-count" id="gallery-count" aria-live="polite"></p>
     <div class="gallery-grid" id="gallery-grid"></div>
@@ -158,12 +156,12 @@
     <div class="section-head">
       <p class="eyebrow" data-i18n="try.eyebrow">Try it yourself</p>
       <h2 id="try-title" data-i18n="try.title">Paste an email and hide the personal data</h2>
-      <p class="lead" data-i18n="try.lead">The filter below runs in this browser tab only. It is a simplified version of the server-side pipeline.</p>
+      <p class="lead" data-i18n="try.lead">A simplified version of the filter runs in this browser tab. It is not the server pipeline.</p>
     </div>
     <div class="try-card">
       <div class="banner" role="note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        <span data-i18n="try.banner">Simplified browser version. Nothing you type leaves your browser.</span>
+        <span data-i18n="try.banner">Runs in your browser. Nothing you type leaves this page.</span>
       </div>
       <div class="try-grid">
         <div class="try-pane">
@@ -177,14 +175,14 @@
             <button type="button" class="btn btn-secondary btn-small" id="try-sample" data-i18n="try.sample">Use a sample</button>
             <button type="button" class="btn btn-secondary btn-small" id="try-clear" data-i18n="try.clear">Clear</button>
           </div>
-          <p class="try-note" data-i18n="try.inputNote">Runs locally. Email, German phone, IBAN with checksum, postcode + city, street + number, URL, German first names and salutation cues.</p>
+          <p class="try-note" data-i18n="try.inputNote">Email, German phone, IBAN with checksum, postcode + city, street + number, URL, German first names and salutation cues.</p>
         </div>
         <div class="try-pane">
           <span class="try-label" id="try-result-label" data-i18n="try.resultLabel">What the AI would see</span>
           <div class="try-out is-empty" id="try-output" aria-labelledby="try-result-label" aria-live="polite" data-i18n="try.empty">The result appears here after you press the button.</div>
           <div class="try-summary" id="try-summary"></div>
           <div class="try-legend" id="try-legend"></div>
-          <p class="try-note" data-i18n="try.note">Nothing is sent anywhere. The box makes no network requests; it uses only the checks listed on the left.</p>
+          <p class="try-note" data-i18n="try.note">This box makes no network requests. It runs only the checks listed on the left.</p>
         </div>
       </div>
     </div>
@@ -268,66 +266,77 @@
         <span class="legend-item"><span class="swatch" style="background:var(--accent-soft);border-color:var(--accent-ring)"></span><span data-i18n="how.legend.local">On your machine</span></span>
         <span class="legend-item"><span class="swatch" style="background:var(--warn-soft);border-color:var(--warn)"></span><span data-i18n="how.legend.network">Network call</span></span>
       </div>
-      <p class="how-note" data-i18n="how.note">Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if anything was missed.</p>
+      <p class="how-note" data-i18n="how.note">Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if a mapped value is still there.</p>
     </div>
+  </section>
+
+  <!-- ===================== WORKFLOW ===================== -->
+  <section class="section wrap" id="workflow" aria-labelledby="workflow-title">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="workflow.eyebrow">The review step</p>
+      <h2 id="workflow-title" data-i18n="workflow.title">A person approves every reply</h2>
+      <p class="lead" data-i18n="workflow.lead">In n8n, an enquiry is pseudonymised, checked by the guard and drafted. A reviewer sees the pseudonymised text, the category, the urgency and the restored draft, then approves, edits or rejects it.</p>
+    </div>
+    <figure class="shot-card">
+      <img src="assets/n8n-workflow.png" width="1280" height="900" loading="lazy" alt="n8n workflow canvas with enquiry intake, guard branch, drafting and human review steps" data-i18n-alt="workflow.alt">
+      <figcaption data-i18n="workflow.caption">Workflow canvas: enquiry in, pseudonymise, guard, draft, review, write the result.</figcaption>
+    </figure>
   </section>
 
   <!-- ===================== RESULTS ===================== -->
   <section class="section wrap" id="results" aria-labelledby="results-title">
     <div class="section-head">
       <p class="eyebrow" data-i18n="res.eyebrow">Results and limits</p>
-      <h2 id="results-title" data-i18n="res.title">Numbers with their caveats</h2>
-      <p class="lead" data-i18n="res.lead">Preview figures. GermEval numbers are pending; synthetic numbers are mock values. Misses are reported, not hidden.</p>
+      <h2 id="results-title" data-i18n="res.title">The numbers, with their caveats</h2>
+      <p class="lead" data-i18n="res.lead">One test split, measured once. Misses are reported as they are.</p>
     </div>
 
     <div class="table-card">
       <header>
         <div>
           <h3 data-i18n="res.detection.title">Detection</h3>
-          <p data-i18n="res.detection.lead">Span-level precision, recall and F1.</p>
+          <p data-i18n="res.detection.lead">A labelled span counts as caught only when every character is covered by a compatible prediction.</p>
         </div>
       </header>
-      <div class="table-wrap">
+      <div class="table-wrap" tabindex="0">
         <table>
           <thead>
             <tr>
               <th data-i18n="res.th.dataset">Dataset</th>
-              <th class="num" data-i18n="res.th.precision">Precision</th>
               <th class="num" data-i18n="res.th.recall">Recall</th>
-              <th class="num" data-i18n="res.th.f1">F1</th>
-              <th class="num" data-i18n="res.th.spans">Spans</th>
-              <th data-i18n="res.th.status">Status</th>
+              <th class="num" data-i18n="res.th.missed">Missed spans</th>
             </tr>
           </thead>
           <tbody id="detection-body"></tbody>
         </table>
       </div>
       <p class="table-note" data-i18n="res.detection.note">GermEval 2014 is used only to compute detection rates; no sentences are shown.</p>
+      <p class="table-note" id="detection-misses"></p>
     </div>
 
     <div class="table-card">
       <header>
         <div>
           <h3 data-i18n="res.triage.title">Reply drafting</h3>
-          <p data-i18n="res.triage.lead">Per backend, on the same mock test set.</p>
+          <p data-i18n="res.triage.lead">Every backend answered the same enquiry set.</p>
         </div>
       </header>
-      <div class="table-wrap">
+      <div class="table-wrap" tabindex="0">
         <table>
           <thead>
             <tr>
               <th data-i18n="res.th.backend">Backend</th>
-              <th data-i18n="res.th.model">Model</th>
               <th class="num" data-i18n="res.th.validJson">Valid JSON</th>
-              <th class="num" data-i18n="res.th.category">Category accuracy</th>
-              <th class="num" data-i18n="res.th.latency">Median latency</th>
+              <th class="num" data-i18n="res.th.category">Category</th>
+              <th class="num" data-i18n="res.th.urgency">Urgency</th>
+              <th class="num" data-i18n="res.th.latency">Median reply</th>
               <th class="num" data-i18n="res.th.calls">Calls</th>
             </tr>
           </thead>
           <tbody id="triage-body"></tbody>
         </table>
       </div>
-      <p class="table-note" data-i18n="res.triage.note">Local figures are placeholder rows until the local run is finished; they do not claim a completed local test.</p>
+      <p class="table-note" id="triage-note"></p>
     </div>
 
     <div class="table-card">
@@ -337,7 +346,7 @@
           <p data-i18n="res.limits.lead">Known limits, shown before the numbers.</p>
         </div>
       </header>
-      <div class="table-wrap">
+      <div class="table-wrap" tabindex="0">
         <table>
           <thead>
             <tr>
@@ -362,9 +371,9 @@
       <div class="disclaimer info">
         <h3>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>
-          <span data-i18n="res.pseudo.title">Pseudonymisation, not anonymisation</span>
+          <span data-i18n="res.pseudo.title">Pseudonymisation keeps the link</span>
         </h3>
-        <p data-i18n="res.pseudo.body">The filter replaces personal data with placeholders. The original values still exist in the local map and can be restored, so the result is pseudonymised, not anonymous.</p>
+        <p data-i18n="res.pseudo.body">The filter replaces personal data with placeholders. The original values still exist in the local map and can be restored, so the result stays linked to the person.</p>
       </div>
     </div>
   </section>
@@ -373,8 +382,8 @@
   <section class="section wrap" id="technical" aria-labelledby="technical-title">
     <div class="section-head">
       <p class="eyebrow" data-i18n="tech.eyebrow">Technical details</p>
-      <h2 id="technical-title" data-i18n="tech.title">Collapsed, because the page should stay readable</h2>
-      <p class="lead" data-i18n="tech.lead">Architecture, detection stack, guard, backends and the test behind the privacy claims.</p>
+      <h2 id="technical-title" data-i18n="tech.title">The parts behind the claims</h2>
+      <p class="lead" data-i18n="tech.lead">Architecture, detection stack, guard, backends and the tests behind the privacy claims.</p>
     </div>
     <div class="details-list">
       <details class="tech">
@@ -391,11 +400,11 @@
       </details>
       <details class="tech">
         <summary data-i18n="tech.backends.sum">AI backends</summary>
-        <div class="tech-body"><p data-i18n="tech.backends.body">A cloud backend through a BYOK chat-completions endpoint and a local Ollama backend behind the same interface. The page data is backend-agnostic; the results table records which backend produced each row.</p></div>
+        <div class="tech-body"><p data-i18n="tech.backends.body">Four backends behind one interface: Claude and Codex through their CLIs, a BYOK chat-completions endpoint, and a local Ollama model. The results table records every call of the reply-writing test.</p></div>
       </details>
       <details class="tech">
         <summary data-i18n="tech.test.sum">No-network test for the demo</summary>
-        <div class="tech-body"><p data-i18n="tech.test.body">The demo box above was checked with browser network logging: typing text and pressing the button made no requests. The claim covers the demo box only, not the rest of the page, which loads its JSON data once.</p></div>
+        <div class="tech-body"><p data-i18n="tech.test.body">The try-it box was checked with browser network logging: typing text and pressing the button made no requests. The claim covers that box only; the rest of this page loads its two JSON files once.</p></div>
       </details>
       <details class="tech">
         <summary data-i18n="tech.data.sum">Test data and reporting</summary>
@@ -403,7 +412,7 @@
       </details>
       <details class="tech">
         <summary data-i18n="tech.repro.sum">Reproducibility</summary>
-        <div class="tech-body"><p data-i18n="tech.repro.body">Page data carries a mock flag, a version, a commit and a hash field. The measured run replaces the mock values; the shapes of <code>examples.json</code> and <code>results.json</code> stay the same.</p></div>
+        <div class="tech-body"><p data-i18n="tech.repro.body">The page data carries the run's version, commit, timestamp and SHA-256. A small assertion script checks that every number in the stat cards equals the value in results.json.</p></div>
       </details>
     </div>
   </section>
