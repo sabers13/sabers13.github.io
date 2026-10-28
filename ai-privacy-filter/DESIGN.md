@@ -22,7 +22,7 @@ use native disclosure elements; measured misses and limits remain visible.
 
 Reference: https://sabersojudi.com/livecell-audit/ and the current local LIVECell
 header and review stylesheet. Reuse the author-led navigation, detached utility
-rail, Inter, blue state accent and tonal rounded panels. Preserve this page's
+rail, blue state accent and tonal rounded panels. Preserve this page's
 entity highlight colors and color-blind-safe chart series, because they convey
 data categories. Do not copy LIVECell's cell imagery, labels or metrics.
 
@@ -57,17 +57,24 @@ hairlines reserved for controls, tables and the portfolio header.
 
 ## Typography, spacing and elevation
 
-Self-hosted variable Inter, weights 400, 500, 600 and 650/700. System monospace
-only for actual code/placeholder tokens. Sentence case in both UI languages.
+Owner's follow-up: the first pass still felt generic; change the font and inspect
+buttons/logos in the portfolio's GitHub source. The published source confirms
+Inter on the main site and LIVECell, Feather icons on the main site, and 8px
+project action buttons on LIVECell. This page now uses self-hosted IBM Plex Sans
+(400, 500, 600 and 700), with lighter headings and less compressed tracking.
+Keep the portfolio author mark in the existing Inter face for continuity.
+System monospace is only for actual code/placeholder tokens. Sentence case in
+both UI languages. All font files and licences ship locally; no font service.
 
 | Role | Desktop | Phone | Weight |
 |---|---|---|---|
-| Main title | 40px / 1.12 | 30px / 1.15 | 650 |
-| Section title | 28px / 1.2 | 24px / 1.2 | 650 |
+| Main title | 40px / 1.12 | 30px / 1.15 | 500 |
+| Section title | 28px / 1.2 | 24px / 1.2 | 500 |
 | Card title | 16px / 1.4 | 16px / 1.4 | 600 |
 | Lead and body | 16px / 1.6 | 16px / 1.6 | 400 |
+| Introduction lead | 18px / 1.6 | 18px / 1.6 | 400 |
 | Captions, labels and tables | 13px / 1.55 | 13px / 1.55 | 400–600 |
-| KPI value | 34px / 1.1 | 30px / 1.1 | 650 |
+| KPI value | 34px / 1.1 | 30px / 1.1 | 500 |
 
 Spacing scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64px. Maximum frame width 1440px,
 40px outer desktop padding, 24px tablet, 16px phone. Desktop utility rail 44px,
@@ -75,6 +82,11 @@ Spacing scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64px. Maximum frame width 1440p
 18px phone; card gap 20px; inset gap 12px. Radii: shell 32px, cards 24px,
 insets 16px, small controls 8px, pills 999px, placeholder highlights 4px.
 At rest, no card shadow. Floating tooltips may use a restrained shadow.
+Project actions use 8px corners, 15px regular text and 20px inline padding,
+matching LIVECell's project-actions. The demo action uses portfolio blue;
+the GitHub source action uses ink with the actual inline Feather GitHub icon
+referenced by the main portfolio. Inline SVG avoids an icon script or new requests.
+Technology badges use the same 18px outline-icon anatomy as LIVECell's badges.
 
 ## Components and responsive behavior
 
@@ -114,7 +126,7 @@ is added. Preserve the limits, misses, source evidence and credits.
 
 ## Explicit exceptions to generic Taste defaults
 
-Inter, rounded panels, pill utilities, header hairline and entity colors are
+The Inter author mark, rounded panels, pill utilities, header hairline and entity colors are
 required by the selected portfolio design and existing evidence conventions.
 The existing screenshots and real browser demo provide project imagery; no
 stock photos, external assets or motion quotas are appropriate. Long chart titles

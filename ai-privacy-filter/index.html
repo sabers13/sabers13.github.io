@@ -23,7 +23,8 @@
 })();
 </script>
 <meta name="theme-color" content="#f9fafb">
-<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-Medium-Latin1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/page.css">
 <script defer src="assets/first-names-de.js"></script>
 <script defer src="assets/results-model.js"></script>
@@ -72,18 +73,18 @@
   <section class="hero" id="top" data-nav-section="overview" aria-labelledby="hero-title">
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="project-context" data-i18n="hero.eyebrow">AI Privacy Filter · Portfolio project</p>
-        <h1 id="hero-title" data-i18n="hero.title">A filter before the AI</h1>
+        <p class="project-context" data-i18n="hero.eyebrow">Python pipeline · German emails</p>
+        <h1 id="hero-title" data-i18n="hero.title">AI Privacy Filter</h1>
         <p class="lead" data-i18n="hero.lead">I built a Python pipeline that replaces personal data in German emails with placeholders, then restores the values in the reply.</p>
         <ul class="tags" aria-label="Technology" data-i18n-label="a.technology">
-          <li data-i18n="tech.python">Python</li>
-          <li data-i18n="tech.presidio">Presidio</li>
-          <li data-i18n="tech.fastapi">FastAPI</li>
-          <li data-i18n="tech.n8n">n8n</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 5 6 7-6 7M13 19h7"/></svg><span data-i18n="tech.python">Python</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span data-i18n="tech.presidio">Presidio</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-3 8H4l7 12 3-8h6Z"/></svg><span data-i18n="tech.fastapi">FastAPI</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg><span data-i18n="tech.n8n">n8n</span></li>
         </ul>
         <div class="cta">
           <a class="btn btn-primary" href="#try"><span data-i18n="hero.try">Try it</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="source-link" href="https://github.com/sabers13/ai-privacy-filter" target="_blank" rel="noopener" data-i18n="hero.github">View on GitHub</a>
+          <a class="btn project-source" href="https://github.com/sabers13/ai-privacy-filter" target="_blank" rel="noopener"><svg class="github-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span data-i18n="hero.github">View on GitHub</span></a>
         </div>
         <p class="fine" data-i18n="hero.fine">All examples are synthetic. No real customer emails appear on this page.</p>
       </div>
@@ -490,12 +491,12 @@
       </div>
       <div class="credit">
         <strong data-i18n="credits.assets.name">Icons and illustrations</strong>
-        <span data-i18n="credits.assets.desc">Hand-drawn SVG. No icon library and no external images.</span>
-        <span class="lic" data-i18n="credits.assets.lic">This page</span>
+        <span data-i18n="credits.assets.desc">Inline SVG adapted from the portfolio source, including its Feather GitHub icon. No external images or icon script.</span>
+        <a class="lic" href="assets/icons/LICENSE-feather.txt" data-i18n="credits.assets.lic">Feather: MIT · Other SVG: this page</a>
       </div>
       <div class="credit">
-        <strong>Inter</strong>
-        <span data-i18n="credits.font.desc">Self-hosted typeface, copied from the portfolio&#x27;s other project pages.</span>
+        <strong data-i18n="credits.font.name">IBM Plex Sans + Inter</strong>
+        <span data-i18n="credits.font.desc">Plex Sans for the page; Inter for the portfolio author mark. Both typefaces are self-hosted.</span>
         <span class="lic">SIL OFL 1.1</span>
       </div>
     </div>
@@ -509,7 +510,7 @@
     <p><span data-i18n="footer.built">Built by Saber Sojudi.</span> <span data-i18n="footer.legal">Not legal advice.</span></p>
     <nav class="footer-links" aria-label="Footer" data-i18n-label="a.footer">
       <a href="https://sabersojudi.com/" data-i18n="footer.portfolio">Portfolio</a>
-      <a href="https://github.com/sabers13/ai-privacy-filter" target="_blank" rel="noopener">GitHub</a>
+      <a class="github-link" href="https://github.com/sabers13/ai-privacy-filter" target="_blank" rel="noopener"><svg class="github-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span data-i18n="footer.github">GitHub</span></a>
       <a href="#top" data-i18n="footer.top">Back to top</a>
     </nav>
   </div>
