@@ -279,10 +279,24 @@
       <h2 id="workflow-title" data-i18n="workflow.title">A person approves every reply</h2>
       <p class="lead" data-i18n="workflow.lead">In n8n, an enquiry is pseudonymised, checked by the guard and drafted. A reviewer sees the pseudonymised text, the category, the urgency and the restored draft, then approves, edits or rejects it.</p>
     </div>
-    <figure class="shot-card">
-      <img src="assets/n8n-workflow.png" width="1280" height="900" loading="lazy" alt="n8n workflow canvas with enquiry intake, guard branch, drafting and human review steps" data-i18n-alt="workflow.alt">
-      <figcaption data-i18n="workflow.caption">Workflow canvas: enquiry in, pseudonymise, guard, draft, review, write the result.</figcaption>
+    <figure class="shot-card shot-canvas">
+      <img src="assets/screenshots/n8n-execution-success.png" width="2248" height="574" loading="lazy" alt="n8n workflow canvas after a finished demo execution, with both the review and blocked branches marked successful" data-i18n-alt="workflow.alt">
+      <figcaption data-i18n="workflow.caption">Workflow canvas after one demo run: enquiry in, pseudonymise, guard, draft, review, write the result. Both branches finish green.</figcaption>
     </figure>
+    <div class="shot-gallery">
+      <figure class="shot-card shot-wide">
+        <img src="assets/screenshots/n8n-executions-list.png" width="1140" height="348" loading="lazy" alt="n8n executions list with the successful synthetic demo runs" data-i18n-alt="workflow.shot.list.alt">
+        <figcaption data-i18n="workflow.shot.list.caption">Executions list: the demo runs finish successfully, including the one the reviewer edited.</figcaption>
+      </figure>
+      <figure class="shot-card">
+        <img src="assets/screenshots/n8n-review-form.png" width="1280" height="1116" loading="lazy" alt="n8n review form with the edit decision selected and a corrected reply draft filled in" data-i18n-alt="workflow.shot.form.alt">
+        <figcaption data-i18n="workflow.shot.form.caption">Review form: the reviewer chose Edit and replaced the draft before submitting. The human step exists because a draft can be wrong or reuse the customer's details in the reply.</figcaption>
+      </figure>
+      <figure class="shot-card">
+        <img src="assets/screenshots/n8n-result.png" width="1280" height="900" loading="lazy" alt="Result card of the edited reply record, showing the text the model saw and the final corrected reply" data-i18n-alt="workflow.shot.result.alt">
+        <figcaption data-i18n="workflow.shot.result.caption">Result record: the edit decision and the corrected reply are what gets stored.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- ===================== RESULTS ===================== -->
@@ -381,6 +395,8 @@
         <p data-i18n="res.pseudo.body">The filter replaces personal data with placeholders. The original values still exist in the local map and can be restored, so the result stays linked to the person.</p>
       </div>
     </div>
+
+    <p class="adoption"><span data-i18n="res.adoption.lead">Interested in using this in your organisation?</span> <a href="/#contact" data-i18n="res.adoption.link">Get in touch</a>.</p>
   </section>
 
   <!-- ===================== TECHNICAL ===================== -->
