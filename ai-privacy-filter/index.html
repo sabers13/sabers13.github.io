@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="assets/page.css">
 <script defer src="assets/first-names-de.js"></script>
 <script defer src="assets/results-model.js"></script>
+<script defer src="assets/charts.js"></script>
 <script defer src="assets/app.js"></script>
 <script defer src="assets/tryit.js"></script>
 </head>
@@ -133,7 +134,8 @@
       <h2 id="numbers-title" data-i18n="stats.title">What the filter found, and what it missed</h2>
       <p class="lead" data-i18n="stats.lead">Numbers from the test runs behind this project. The datasets and the limits follow below.</p>
     </div>
-    <div id="stats-grid" class="stats-grid"></div>
+    <div id="kpi-grid" class="stats-grid kpi-grid"></div>
+    <div class="chart-slot" id="chart-slot-leak-rate" data-chart-slot="leak-rate-by-detector"></div>
     <p class="fine" data-i18n="stats.note">Measured once on held-out test data. No value here was tuned on the test split.</p>
   </section>
 
@@ -314,7 +316,9 @@
       <p class="table-note" id="detection-misses"></p>
     </div>
 
-    <div class="table-card">
+    <div class="chart-slot" id="chart-slot-recall-by-type" data-chart-slot="synthetic-recall-by-type"></div>
+
+    <div class="table-card" id="triage-card">
       <header>
         <div>
           <h3 data-i18n="res.triage.title">Reply drafting</h3>
@@ -337,6 +341,7 @@
         </table>
       </div>
       <p class="table-note" id="triage-note"></p>
+      <div class="chart-slot chart-slot-inset" id="chart-slot-triage-accuracy" data-chart-slot="triage-accuracy-by-backend"></div>
     </div>
 
     <div class="table-card">

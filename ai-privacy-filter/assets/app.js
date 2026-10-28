@@ -44,14 +44,17 @@
       "stats.title": "What the filter found, and what it missed",
       "stats.lead": "Numbers from the test runs behind this project. The datasets and the limits follow below.",
       "stats.note": "Measured once on held-out test data. No value here was tuned on the test split.",
-      "stats.caught.label": "Personal details caught",
-      "stats.caught.meaning": "Labelled spans in the synthetic test that the filter replaced.",
-      "stats.extra.label": "Extra text masked",
-      "stats.extra.meaning": "Replaced characters that were not personal data.",
-      "stats.germeval.label": "Names in German Wikipedia and news text",
-      "stats.germeval.meaning": "Recall for names and organisations in the GermEval 2014 test.",
-      "stats.leaks.label": "Test emails with a leaked personal value",
-      "stats.leaks.meaning": "Synthetic test emails whose outbound text still contained a labelled personal value after filtering. 95% CI from the Wilson interval.",
+      "kpi.ci.button": "95% CI",
+      "kpi.ci.value": "95% CI {range}",
+      "chart.note": "Bars show the measured value; the whiskers show the 95% Wilson confidence interval.",
+      "chart.desc": "Horizontal bar chart with 95% confidence intervals. The same numbers are listed in the table below the chart.",
+      "chart.legend": "Legend",
+      "chart.th.group": "Group",
+      "chart.th.value": "Value",
+      "chart.th.count": "n / N",
+      "chart.th.ci": "95% CI",
+      "chart.table.caption": "{title} — numbers behind the chart",
+      "chart.error": "The chart data could not be loaded.",
 
       "workflow.eyebrow": "The review step",
       "workflow.title": "A person approves every reply",
@@ -162,7 +165,7 @@
       "tech.data.sum": "Test data and reporting",
       "tech.data.body": "All enquiries on this page are synthetic, built from hand-written templates and Faker de_DE values. GermEval 2014 is downloaded by a script, git-ignored, never shown and never sent to a model; only detection rates are published. Labelled misses are reported as they are.",
       "tech.repro.sum": "Reproducibility",
-      "tech.repro.body": "The page data carries the run's version, commit, timestamp and SHA-256. A small assertion script checks that every number in the stat cards equals the value in results.json.",
+      "tech.repro.body": "The page data carries the run's version, commit, timestamp and SHA-256. A small assertion script checks that every KPI and every charted value equals the value in kpis.json and charts/*.json.",
 
       "credits.eyebrow": "Data and credits",
       "credits.title": "What this page stands on",
@@ -231,14 +234,17 @@
       "stats.title": "Was der Filter gefunden hat – und was er verpasst hat",
       "stats.lead": "Zahlen aus den Testläufen hinter diesem Projekt. Datensätze und Grenzen folgen weiter unten.",
       "stats.note": "Einmal auf zurückgehaltenen Testdaten gemessen. Kein Wert wurde auf dem Testsplit abgestimmt.",
-      "stats.caught.label": "Erkannte personenbezogene Stellen",
-      "stats.caught.meaning": "Markierte Stellen im synthetischen Test, die der Filter ersetzt hat.",
-      "stats.extra.label": "Zusätzlich maskierter Text",
-      "stats.extra.meaning": "Ersetzte Zeichen, die keine personenbezogenen Daten waren.",
-      "stats.germeval.label": "Namen in deutschsprachigen Wikipedia- und Nachrichtentexten",
-      "stats.germeval.meaning": "Trefferquote für Namen und Organisationen im GermEval-2014-Test.",
-      "stats.leaks.label": "Test-E-Mails mit ausgetretenem Wert",
-      "stats.leaks.meaning": "Synthetische Test-E-Mails, deren ausgehender Text nach dem Filtern noch einen markierten personenbezogenen Wert enthielt. 95%-KI nach Wilson.",
+      "kpi.ci.button": "95%-KI",
+      "kpi.ci.value": "95%-KI {range}",
+      "chart.note": "Die Balken zeigen den gemessenen Wert; die Whisker das 95%-Wilson-Konfidenzintervall.",
+      "chart.desc": "Horizontales Balkendiagramm mit 95%-Konfidenzintervallen. Dieselben Zahlen stehen in der Tabelle unter dem Diagramm.",
+      "chart.legend": "Legende",
+      "chart.th.group": "Gruppe",
+      "chart.th.value": "Wert",
+      "chart.th.count": "n / N",
+      "chart.th.ci": "95%-KI",
+      "chart.table.caption": "{title} — Zahlen hinter dem Diagramm",
+      "chart.error": "Die Diagrammdaten konnten nicht geladen werden.",
 
       "workflow.eyebrow": "Der Prüfschritt",
       "workflow.title": "Ein Mensch gibt jeden Entwurf frei",
@@ -349,7 +355,7 @@
       "tech.data.sum": "Testdaten und Berichterstattung",
       "tech.data.body": "Alle Anfragen auf dieser Seite sind synthetisch, aus handgeschriebenen Vorlagen und Faker-de_DE-Werten. GermEval 2014 wird per Skript geladen, ist git-ignoriert, wird nie gezeigt und nie an ein Modell gesendet; veröffentlicht werden nur Erkennungsraten. Markierte Lücken werden so berichtet, wie sie sind.",
       "tech.repro.sum": "Reproduzierbarkeit",
-      "tech.repro.body": "Die Seitendaten tragen Version, Commit, Zeitstempel und SHA-256 des Laufs. Ein kleines Prüfskript kontrolliert, dass jede Zahl in den Kennzahlenkarten dem Wert in results.json entspricht.",
+      "tech.repro.body": "Die Seitendaten tragen Version, Commit, Zeitstempel und SHA-256 des Laufs. Ein kleines Prüfskript kontrolliert, dass jede Kennzahl und jeder Diagrammwert dem Wert in kpis.json und charts/*.json entspricht.",
 
       "credits.eyebrow": "Daten und Quellen",
       "credits.title": "Worauf diese Seite steht",
@@ -385,6 +391,8 @@
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   var EXAMPLES = [];
   var RESULTS = null;
+  var KPIS = [];
+  var CHARTS = {};
   var FILTER = 'all';
   var LANG = (document.documentElement.lang || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en';
   var LOCALE = function () { return LANG === 'de' ? 'de-DE' : 'en-US'; };
@@ -546,19 +554,50 @@
       '<span class="legend-item"><span class="swatch" style="background:var(--accent-soft);border-color:var(--accent-ring)"></span><code style="font-family:var(--mono);font-size:11px">[TYPE_n]</code></span>';
   }
 
-  /* ---------- stats ---------- */
-  function renderStats() {
-    var grid = $('#stats-grid');
-    if (!grid || !RESULTS) return;
-    var cards = totals().stats(RESULTS, LOCALE());
-    grid.innerHTML = cards.map(function (card) {
-      return '<article class="stat" data-stat="' + esc(card.id) + '">' +
-        '<span class="stat-value" data-value="' + esc(card.value) + '">' + esc(card.value) + '</span>' +
-        '<span class="stat-note" data-note="' + esc(card.note) + '">' + esc(card.note) + '</span>' +
-        '<span class="stat-label">' + esc(t('stats.' + card.id + '.label')) + '</span>' +
-        '<span class="stat-meaning">' + esc(t('stats.' + card.id + '.meaning')) + '</span>' +
+  /* ---------- KPI row and charts ---------- */
+  /* Four cards in reading order. Every value, count and interval comes from
+     data/kpis.json; nothing is typed into this file. */
+  var KPI_ORDER = ['synthetic_recall_b2', 'leak_rate_b2', 'over_masking_b2', 'germeval_combined_recall_b2'];
+
+  function brief(value) {
+    return Number(value).toLocaleString(LOCALE(), { maximumFractionDigits: 1 });
+  }
+  function ciRange(ci) {
+    return brief(ci[0]) + '–' + brief(ci[1]) + '%';
+  }
+  function renderKpis() {
+    var grid = $('#kpi-grid');
+    if (!grid || !KPIS.length) return;
+    grid.innerHTML = KPI_ORDER.map(function (id) {
+      var kpi = null;
+      KPIS.forEach(function (item) { if (item.id === id) kpi = item; });
+      if (!kpi) return '';
+      var label = (kpi.label && (kpi.label[LANG] || kpi.label.en)) || kpi.id;
+      var range = ciRange(kpi.ci95);
+      var ciId = 'kpi-ci-' + kpi.id;
+      return '<article class="stat kpi" data-kpi="' + esc(kpi.id) + '" data-value="' + esc(kpi.value) + '">' +
+        '<span class="stat-value kpi-value">' + esc(brief(kpi.value) + '%') + '</span>' +
+        '<span class="stat-note kpi-count">' + esc(fmt(kpi.numerator, 0) + ' / ' + fmt(kpi.denominator, 0)) + '</span>' +
+        '<span class="stat-label kpi-label">' + esc(label) + '</span>' +
+        '<span class="kpi-ci-wrap">' +
+        '<button type="button" class="kpi-ci-btn" aria-describedby="' + esc(ciId) + '">' + esc(t('kpi.ci.button')) + '</button>' +
+        '<span class="kpi-ci" id="' + esc(ciId) + '" role="tooltip">' + esc(tf('kpi.ci.value', { range: range })) + '</span>' +
+        '</span>' +
         '</article>';
     }).join('');
+  }
+
+  function renderCharts() {
+    if (!window.AIPF_CHARTS) return;
+    $$('[data-chart-slot]').forEach(function (slot) {
+      var id = slot.dataset.chartSlot;
+      var chart = CHARTS[id];
+      if (!chart) {
+        slot.innerHTML = '<p class="notice">' + esc(t('chart.error')) + '</p>';
+        return;
+      }
+      window.AIPF_CHARTS.mount(slot, chart, { lang: LANG, locale: LOCALE(), t: t, tf: tf });
+    });
   }
 
   /* ---------- gallery ---------- */
@@ -701,7 +740,8 @@
 
   function renderAll() {
     renderDemo();
-    renderStats();
+    renderKpis();
+    renderCharts();
     renderGallery();
     renderResults();
   }
@@ -715,9 +755,21 @@
         return r.json();
       });
     };
-    Promise.all([get('examples.json'), get('results.json')]).then(function (out) {
+    Promise.all([
+      get('examples.json'),
+      get('results.json'),
+      get('kpis.json'),
+      get('charts/leak-rate-by-detector.json'),
+      get('charts/synthetic-recall-by-type.json'),
+      get('charts/triage-accuracy-by-backend.json')
+    ]).then(function (out) {
       EXAMPLES = Array.isArray(out[0]) ? out[0] : (out[0].examples || []);
       RESULTS = out[1];
+      KPIS = Array.isArray(out[2]) ? out[2] : (out[2].kpis || []);
+      CHARTS = {};
+      [out[3], out[4], out[5]].forEach(function (chart) {
+        if (chart && chart.id) CHARTS[chart.id] = chart;
+      });
       var sample = EXAMPLES.filter(function (x) { return x.reply_draft_restored; })[0] || EXAMPLES[0];
       window.AIPF_SAMPLE = sample ? sample.original : '';
       renderAll();
