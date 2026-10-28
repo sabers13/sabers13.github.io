@@ -164,7 +164,8 @@
       row.segments.forEach(function (segment, index) {
         var y = barTop + index * (group.barH + group.gap);
         var value = Math.max(0, Math.min(100, num(segment.value)));
-        var barW = Math.max(1.5, (value / 100) * plotW);
+        /* A measured 0% is an empty bar, not a stub: the CI whisker still shows. */
+        var barW = value > 0 ? Math.max(1.5, (value / 100) * plotW) : 0;
         var mid = y + group.barH / 2;
         var ci = segment.ci95 || [];
 
@@ -180,13 +181,13 @@
           var x2 = Math.max(0, Math.min(plotW, (num(ci[1]) / 100) * plotW));
           var lo = Math.min(x1, x2);
           var hi = Math.max(x1, x2);
-          var cap = group.barH / 2 + 2;
+          /* One thin line with small end caps, drawn on top of the solid bar.
+             No background-coloured halo: that halo cut a pale, outlined-looking
+             segment out of the bar between the lower CI bound and the value. */
+          var cap = Math.min(5, group.barH / 2);
           parts.push('<g class="ch-ci" data-ci="' + esc(ci[0]) + '|' + esc(ci[1]) + '">' +
-            '<line class="ch-ci-halo" x1="' + lo + '" y1="' + mid + '" x2="' + hi + '" y2="' + mid + '"/>' +
             '<line class="ch-ci-line" x1="' + lo + '" y1="' + mid + '" x2="' + hi + '" y2="' + mid + '"/>' +
-            '<line class="ch-ci-halo" x1="' + lo + '" y1="' + (mid - cap) + '" x2="' + lo + '" y2="' + (mid + cap) + '"/>' +
             '<line class="ch-ci-line" x1="' + lo + '" y1="' + (mid - cap) + '" x2="' + lo + '" y2="' + (mid + cap) + '"/>' +
-            '<line class="ch-ci-halo" x1="' + hi + '" y1="' + (mid - cap) + '" x2="' + hi + '" y2="' + (mid + cap) + '"/>' +
             '<line class="ch-ci-line" x1="' + hi + '" y1="' + (mid - cap) + '" x2="' + hi + '" y2="' + (mid + cap) + '"/>' +
             '</g>');
         }

@@ -67,6 +67,7 @@
   --chart-grid: #e5e7eb;
   --chart-axis: #6b7280;
   --chart-whisker: #111827;
+  --chart-whisker-edge: transparent;
 }
 
 :root[data-theme="dark"] {
@@ -118,6 +119,7 @@
   --chart-grid: #26304a;
   --chart-axis: #9ca3af;
   --chart-whisker: #e5e7eb;
+  --chart-whisker-edge: rgba(11, 15, 25, .9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -169,6 +171,7 @@
     --chart-grid: #26304a;
     --chart-axis: #9ca3af;
     --chart-whisker: #e5e7eb;
+    --chart-whisker-edge: rgba(11, 15, 25, .9);
   }
 }
 
@@ -563,8 +566,12 @@ h3 { font-size: 17px; line-height: 1.3; font-weight: 620; color: var(--ink); mar
 }
 .ch-group { fill: var(--ink-2); font-family: var(--font); font-size: 11.5px; font-weight: 620; }
 .ch-value { fill: var(--ink); font-family: var(--font); font-size: 10.5px; font-variant-numeric: tabular-nums; }
-.ch-ci-halo { stroke: var(--bg-card); stroke-width: 4.5; stroke-linecap: round; }
-.ch-ci-line { stroke: var(--chart-whisker); stroke-width: 1.6; stroke-linecap: round; }
+.ch-ci-line {
+  stroke: var(--chart-whisker); stroke-width: 1.6; stroke-linecap: round;
+  /* Dark theme: a hairline dark edge keeps the light whisker legible where it
+     crosses a light bar. It is ~0.6px, so the line still reads as one line. */
+  filter: drop-shadow(0 0 0.6px var(--chart-whisker-edge));
+}
 .chart-table-wrap { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .chart-table { width: 100%; min-width: 0; font-size: 12px; table-layout: fixed; }
 .chart-table caption { caption-side: top; text-align: left; font-size: 11.5px; color: var(--ink-muted); padding-bottom: 6px; }
