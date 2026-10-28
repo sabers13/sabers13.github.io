@@ -53,6 +53,7 @@
     var germ = results.detection.germeval.baselines.B2;
     var person = germ.per_type.PERSON;
     var org = germ.per_type.ORG;
+    var leak = results.leak.baselines.B2;
     var triage = triageTotals(results.triage.per_backend);
 
     return [
@@ -80,9 +81,15 @@
       },
       {
         id: 'leaks',
-        value: fmt(triage.leaks, 0, locale),
-        note: fmt(triage.leaks, 0, locale) + ' / ' + fmt(triage.calls, 0, locale),
-        source: { leaks: triage.leaks, calls: triage.calls }
+        value: fmt(leak.leak_rate_pct, 1, locale) + '%',
+        note: fmt(leak.leaked_enquiries, 0, locale) + ' / ' + fmt(leak.records, 0, locale) +
+          ' · 95% CI ' + fmt(leak.leak_wilson_pct[0], 1, locale) + '–' +
+          fmt(leak.leak_wilson_pct[1], 1, locale) + '%',
+        source: {
+          leaked_enquiries: leak.leaked_enquiries,
+          records: leak.records,
+          leak_wilson_pct: leak.leak_wilson_pct
+        }
       }
     ];
   }
