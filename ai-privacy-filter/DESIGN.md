@@ -107,6 +107,16 @@ Technology badges use the same 18px outline-icon anatomy as LIVECell's badges.
 - Details: native summary/actions, 44px minimum interactive target height.
 - Loading/errors: visible translated feedback; retry by reloading after a data
   fetch error. The local demo continues to operate independently of evidence loads.
+- Overview media: two compact previews after the contribution summary, using the
+  existing pipeline SVG and first n8n workflow screenshot. Two columns above
+  620px; one column on phones. Media frames are at least 112px high, with 20px
+  card padding, existing panel radii and a visible enlarge affordance.
+- Enlarged media: native modal dialog, at most 1440px wide and 86svh high, 16px
+  screen margins, existing theme tokens. Fit, original-size and plus/minus zoom
+  controls; scrolling/touch panning and mouse dragging while zoomed. Escape and
+  Close return focus to the opener. Keep captions and visible focus; no animation.
+  Copies of SVG definitions must have unique IDs. Reuse original assets rather
+  than generating a screenshot or maintaining another diagram.
 
 ## Motion and accessibility
 

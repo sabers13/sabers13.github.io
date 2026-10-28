@@ -30,6 +30,7 @@
 <script defer src="assets/results-model.js"></script>
 <script defer src="assets/charts.js"></script>
 <script defer src="assets/app.js"></script>
+<script defer src="assets/media.js"></script>
 <script defer src="assets/tryit.js"></script>
 </head>
 <body>
@@ -109,6 +110,18 @@
     <div class="role-strip">
       <h2 data-i18n="overview.role.title">What I built</h2>
       <p data-i18n="overview.role.body">Detection with Presidio and spaCy, typed placeholders, a second-pass guard, interchangeable AI backends and a human review step in n8n.</p>
+    </div>
+    <div class="overview-process" id="overview-process">
+      <button class="overview-preview" type="button" data-media="pipeline" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge the pipeline" data-i18n-label="overview.pipeline.open">
+        <strong data-i18n="how.title">The pipeline</strong>
+        <span class="overview-visual" id="overview-pipeline" aria-hidden="true"></span>
+        <span class="preview-enlarge"><span data-i18n="media.open">Open larger view</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5M3 3l6 6m12-6-6 6m6 12-6-6M3 21l6-6"/></svg></span>
+      </button>
+      <button class="overview-preview" type="button" data-media="workflow" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge the n8n workflow canvas" data-i18n-label="overview.workflow.open">
+        <strong data-i18n="overview.workflow.title">n8n workflow canvas</strong>
+        <span class="overview-visual"><img src="assets/screenshots/n8n-execution-success.png" width="2248" height="574" loading="lazy" alt="" aria-hidden="true"></span>
+        <span class="preview-enlarge"><span data-i18n="media.open">Open larger view</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5M3 3l6 6m12-6-6 6m6 12-6-6M3 21l6-6"/></svg></span>
+      </button>
     </div>
   </section>
 
@@ -370,7 +383,9 @@
       <p class="lead" data-i18n="workflow.lead">In n8n, an enquiry is pseudonymised, checked by the guard and drafted. A reviewer sees the pseudonymised text, the category, the urgency and the restored draft, then approves, edits or rejects it.</p>
     </div>
     <figure class="shot-card shot-canvas">
+      <button class="workflow-open" type="button" data-media="workflow" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge the n8n workflow canvas" data-i18n-label="overview.workflow.open">
       <img src="assets/screenshots/n8n-execution-success.png" width="2248" height="574" loading="lazy" alt="n8n workflow canvas after a finished demo execution, with both the review and blocked branches marked successful" data-i18n-alt="workflow.alt">
+      </button>
       <figcaption data-i18n="workflow.caption">Workflow canvas after one demo run: enquiry in, pseudonymise, guard, draft, review, write the result. Both branches finish green.</figcaption>
     </figure>
     <div class="shot-gallery">
@@ -504,6 +519,25 @@
 
 </main>
 </div>
+
+<dialog class="media-viewer" id="media-viewer" aria-labelledby="media-title" aria-describedby="media-caption media-help">
+  <div class="media-header">
+    <h2 id="media-title" data-i18n="how.title">The pipeline</h2>
+    <button class="btn btn-secondary btn-small" type="button" id="media-close" autofocus data-i18n="media.close">Close</button>
+  </div>
+  <div class="media-tools" role="group" aria-label="Zoom controls" data-i18n-label="media.controls">
+    <button class="btn btn-secondary media-zoom" type="button" id="media-out" aria-label="Zoom out" data-i18n-label="media.out"><span aria-hidden="true">−</span></button>
+    <output id="media-scale" aria-live="polite" aria-label="Zoom level" data-i18n-label="media.level"></output>
+    <button class="btn btn-secondary media-zoom" type="button" id="media-in" aria-label="Zoom in" data-i18n-label="media.in"><span aria-hidden="true">+</span></button>
+    <button class="btn btn-secondary btn-small" type="button" id="media-fit" data-i18n="media.fit">Fit</button>
+    <button class="btn btn-secondary btn-small" type="button" id="media-original" data-i18n="media.original">Original size</button>
+  </div>
+  <div class="media-stage" id="media-stage" role="region" tabindex="0" aria-label="Enlarged illustration" data-i18n-label="media.stage"><div class="media-canvas" id="media-canvas"></div></div>
+  <div class="media-footer">
+    <p id="media-caption" data-i18n="how.note">Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if a mapped value is still there.</p>
+    <p id="media-help" data-i18n="media.help">Zoom in, then scroll or drag to inspect the details.</p>
+  </div>
+</dialog>
 
 <footer class="site-footer">
   <div class="footer-inner">

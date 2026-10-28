@@ -220,7 +220,20 @@
       "overview.results": "See results and limits",
       "overview.role.title": "What I built",
       "overview.role.body": "Detection with Presidio and spaCy, typed placeholders, a second-pass guard, interchangeable AI backends and a human review step in n8n.",
-      "common.loading": "Loading the project data…"
+      "common.loading": "Loading the project data…",
+      "overview.pipeline.open": "Enlarge the pipeline",
+      "overview.workflow.open": "Enlarge the n8n workflow canvas",
+      "overview.workflow.title": "n8n workflow canvas",
+      "media.open": "Open larger view",
+      "media.close": "Close",
+      "media.controls": "Zoom controls",
+      "media.level": "Zoom level",
+      "media.in": "Zoom in",
+      "media.out": "Zoom out",
+      "media.fit": "Fit",
+      "media.original": "Original size",
+      "media.stage": "Enlarged illustration",
+      "media.help": "Zoom in, then scroll or drag to inspect the details."
     },
 
     de: {
@@ -437,7 +450,20 @@
       "overview.results": "Ergebnisse und Grenzen ansehen",
       "overview.role.title": "Was ich entwickelt habe",
       "overview.role.body": "Erkennung mit Presidio und spaCy, typisierte Platzhalter, einen zweiten Prüfpass, austauschbare KI-Backends und einen menschlichen Prüfschritt in n8n.",
-      "common.loading": "Projektdaten werden geladen…"
+      "common.loading": "Projektdaten werden geladen…",
+      "overview.pipeline.open": "Pipeline vergrößern",
+      "overview.workflow.open": "n8n-Workflow vergrößern",
+      "overview.workflow.title": "n8n-Workflow",
+      "media.open": "Große Ansicht öffnen",
+      "media.close": "Schließen",
+      "media.controls": "Zoom-Steuerung",
+      "media.level": "Zoom-Stufe",
+      "media.in": "Vergrößern",
+      "media.out": "Verkleinern",
+      "media.fit": "Einpassen",
+      "media.original": "Originalgröße",
+      "media.stage": "Vergrößerte Abbildung",
+      "media.help": "Vergrößern Sie die Ansicht und scrollen oder ziehen Sie, um Details zu sehen."
     }
   };
 
