@@ -93,10 +93,10 @@
         : opts.t('common.dash');
       return '<tr data-row="' + rowIndex + '" data-series="' + esc(segment.series) + '">' +
         '<th scope="row">' + esc(groupLabel(row, opts)) + '</th>' +
-        '<td class="num" data-value="' + esc(segment.value) + '">' + esc(pctText(segment.value, opts.locale)) + '</td>' +
-        '<td class="num" data-n="' + esc(segment.numerator) + '" data-total="' + esc(segment.denominator) + '">' +
+        '<td class="num" data-label="' + esc(opts.t('chart.th.value')) + '" data-value="' + esc(segment.value) + '">' + esc(pctText(segment.value, opts.locale)) + '</td>' +
+        '<td class="num" data-label="' + esc(opts.t('chart.th.count')) + '" data-n="' + esc(segment.numerator) + '" data-total="' + esc(segment.denominator) + '">' +
           esc(countText(segment.numerator, segment.denominator, opts.locale)) + '</td>' +
-        '<td class="num" data-ci="' + esc(ci[0]) + '|' + esc(ci[1]) + '">' + esc(text) + '</td>' +
+        '<td class="num" data-label="' + esc(opts.t('chart.th.ci')) + '" data-ci="' + esc(ci[0]) + '|' + esc(ci[1]) + '">' + esc(text) + '</td>' +
         '</tr>';
     }
 
@@ -213,13 +213,13 @@
 
   function shellMarkup(chart, opts) {
     var title = chartTitle(chart, opts);
-    return '<figcaption class="chart-head">' +
+    return '<div class="chart-head">' +
       '<h3 id="chart-heading-' + esc(chart.id) + '">' + esc(title) + '</h3>' +
       '<p class="chart-note">' + esc(opts.t('chart.note')) + '</p>' +
-      '</figcaption>' +
+      '</div>' +
       legendMarkup(chart, opts) +
-      '<div class="chart-plot"></div>' +
-      tableMarkup(chart, opts);
+      '<div class="chart-layout"><div class="chart-plot"></div>' +
+      tableMarkup(chart, opts) + '</div>';
   }
 
   function mount(container, chart, opts) {
@@ -229,6 +229,8 @@
       container.className = ('chart-card ' + container.className).trim();
     }
     container.setAttribute('data-chart', chart.id);
+    container.setAttribute('role', 'figure');
+    container.setAttribute('aria-labelledby', 'chart-heading-' + chart.id);
     container.innerHTML = shellMarkup(chart, opts);
 
     var plot = container.querySelector('.chart-plot');

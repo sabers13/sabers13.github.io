@@ -17,9 +17,9 @@
       "a.light": "Light theme", "a.dark": "Dark theme", "a.github": "View the source on GitHub",
       "a.lang": "Language", "a.theme": "Theme", "a.sections": "Sections", "a.technology": "Technology", "a.footer": "Footer",
 
-      "hero.eyebrow": "Portfolio project · Privacy engineering",
-      "hero.title": "Use AI on customer emails without sending personal data",
-      "hero.lead": "A filter replaces names, addresses, IBANs and other personal data with placeholders before an email reaches a language model. The reply comes back with placeholders, and the real values go back in on your machine.",
+      "hero.eyebrow": "AI Privacy Filter · Portfolio project",
+      "hero.title": "A filter before the AI",
+      "hero.lead": "I built a Python pipeline that replaces personal data in German emails with placeholders, then restores the values in the reply.",
       "hero.github": "View on GitHub", "hero.try": "Try it",
       "hero.fine": "All examples are synthetic. No real customer emails appear on this page.",
       "hero.card.title": "Local first",
@@ -30,7 +30,7 @@
       "tech.python": "Python", "tech.presidio": "Presidio", "tech.fastapi": "FastAPI", "tech.n8n": "n8n",
 
       "demo.eyebrow": "Worked example",
-      "demo.title": "What goes in, what the AI sees, what comes out",
+      "demo.title": "An email, end to end",
       "demo.lead": "One synthetic quote request, shown end to end. Highlighted text is personal data; the middle column is all the model receives.",
       "demo.col.original": "Original", "demo.col.original.sub": "Synthetic enquiry",
       "demo.col.ai": "What the AI sees", "demo.col.ai.sub": "Pseudonymised",
@@ -41,7 +41,7 @@
       "demo.note": "The filter is built for German text; the interface is available in English and German.",
 
       "stats.eyebrow": "Measured results",
-      "stats.title": "What the filter found, and what it missed",
+      "stats.title": "What it caught and missed",
       "stats.lead": "Numbers from the test runs behind this project. The datasets and the limits follow below.",
       "stats.note": "Measured once on held-out test data. No value here was tuned on the test split.",
       "kpi.ci.button": "95% CI",
@@ -93,8 +93,8 @@
       "backend.guard-blocked": "Stopped by the guard",
 
       "try.eyebrow": "Try it yourself",
-      "try.title": "Paste an email and hide the personal data",
-      "try.lead": "A simplified version of the filter runs in this browser tab. It is not the server pipeline.",
+      "try.title": "Try the filter",
+      "try.lead": "Paste a German email and replace personal data with placeholders. This simplified filter runs in your browser tab; it is not the server pipeline.",
       "try.banner": "Runs in your browser. Nothing you type leaves this page.",
       "try.label": "Your text", "try.placeholder": "Paste a customer email here…",
       "try.button": "Hide personal data", "try.sample": "Use a sample", "try.clear": "Clear",
@@ -107,7 +107,7 @@
       "try.note": "This box makes no network requests. It runs only the checks listed on the left.",
 
       "how.eyebrow": "How it works",
-      "how.title": "Five steps, one boundary",
+      "how.title": "The pipeline",
       "how.lead": "Personal data is replaced before the request crosses to the AI backend. The placeholder map never leaves the local process.",
       "how.s1.t": "Detect", "how.s1.d": "names, emails, IBANs",
       "how.s2.t": "Replace", "how.s2.d": "with [TYPE_n]",
@@ -119,7 +119,7 @@
       "how.note": "Step 4 is the only one that talks to an AI backend. The guard re-scans the pseudonymised text and blocks the call if a mapped value is still there.",
 
       "res.eyebrow": "Results and limits",
-      "res.title": "The numbers, with their caveats",
+      "res.title": "Results and limits",
       "res.lead": "One test split, measured once. Misses are reported as they are.",
       "res.detection.title": "Detection",
       "res.detection.lead": "A labelled span counts as caught only when every character is covered by a compatible prediction.",
@@ -158,7 +158,7 @@
       "res.adoption.link": "Get in touch",
 
       "tech.eyebrow": "Technical details",
-      "tech.title": "The parts behind the claims",
+      "tech.title": "Implementation details",
       "tech.lead": "Architecture, detection stack, guard, backends and the tests behind the privacy claims.",
       "tech.arch.sum": "Architecture",
       "tech.arch.body": "A FastAPI service receives an enquiry, runs detection, replaces values with typed placeholders, re-scans the result, calls one AI backend, and restores the placeholders in the returned draft. n8n triggers the flow; the placeholder map stays in memory and is never written to the page data.",
@@ -176,7 +176,7 @@
       "tech.repro.body": "The page data carries the run's version, commit, timestamp and SHA-256. A small assertion script checks that every KPI and every charted value equals the value in kpis.json and charts/*.json.",
 
       "credits.eyebrow": "Data and credits",
-      "credits.title": "What this page stands on",
+      "credits.title": "Sources and credits",
       "credits.lead": "Open tools and one research dataset, with the licence and the limit of each.",
       "credits.germeval.desc": "German Wikipedia and news text. Used only to compute detection rates; no sentences shown.",
       "credits.presidio.desc": "PII detection for names, organisations and more.",
@@ -200,8 +200,26 @@
       "credits.font.desc": "Self-hosted typeface, copied from the portfolio's other project pages.",
       "footer.built": "Built by Saber Sojudi.", "footer.legal": "Not legal advice.",
       "footer.portfolio": "Portfolio", "footer.top": "Back to top",
-      "common.error": "Could not load the example data. Please open the page through a web server.",
-      "common.dash": "—"
+      "common.error": "The project data could not be loaded. Reload the page to try again. The browser demo still works.",
+      "common.dash": "—",
+      "brand.author": "Saber Sojudi",
+      "brand.project": "AI Privacy Filter",
+      "nav.overview": "Overview",
+      "nav.demo": "Demo",
+      "nav.evidence": "Results",
+      "nav.method": "Method",
+      "nav.back": "Back",
+      "a.back": "Back to the portfolio",
+      "a.quick": "Quick navigation",
+      "overview.preview.note": "Synthetic example from the project data",
+      "overview.map.title": "The placeholder map stays local",
+      "overview.map.body": "The model works with the pseudonymised message. A guard checks it again before the call; the original values stay in the local process.",
+      "overview.evidence": "Measured, with limits",
+      "overview.caveat": "Detection can miss values. Read the results with their limits.",
+      "overview.results": "See results and limits",
+      "overview.role.title": "What I built",
+      "overview.role.body": "Detection with Presidio and spaCy, typed placeholders, a second-pass guard, interchangeable AI backends and a human review step in n8n.",
+      "common.loading": "Loading the project data…"
     },
 
     de: {
@@ -215,9 +233,9 @@
       "a.light": "Helles Design", "a.dark": "Dunkles Design", "a.github": "Quellcode auf GitHub ansehen",
       "a.lang": "Sprache", "a.theme": "Design", "a.sections": "Abschnitte", "a.technology": "Technologie", "a.footer": "Fußzeile",
 
-      "hero.eyebrow": "Portfolioprojekt · Privacy Engineering",
-      "hero.title": "KI für Kundenanfragen nutzen, ohne personenbezogene Daten weiterzugeben",
-      "hero.lead": "Ein Filter ersetzt Namen, Adressen, IBANs und andere personenbezogene Daten durch Platzhalter, bevor eine E-Mail ein Sprachmodell erreicht. Der Entwurf kommt mit Platzhaltern zurück, die echten Werte werden lokal wieder eingesetzt.",
+      "hero.eyebrow": "AI Privacy Filter · Portfolio-Projekt",
+      "hero.title": "Ein Filter vor der KI",
+      "hero.lead": "Ich habe eine Python-Pipeline entwickelt, die personenbezogene Daten in deutschen E-Mails durch Platzhalter ersetzt und die Werte in der Antwort wiederherstellt.",
       "hero.github": "Auf GitHub ansehen", "hero.try": "Ausprobieren",
       "hero.fine": "Alle Beispiele auf dieser Seite sind synthetisch. Es werden keine echten Kunden-E-Mails gezeigt.",
       "hero.card.title": "Lokal zuerst",
@@ -228,7 +246,7 @@
       "tech.python": "Python", "tech.presidio": "Presidio", "tech.fastapi": "FastAPI", "tech.n8n": "n8n",
 
       "demo.eyebrow": "Beispiel Schritt für Schritt",
-      "demo.title": "Was hineingeht, was die KI sieht, was herauskommt",
+      "demo.title": "Eine E-Mail, von Anfang bis Ende",
       "demo.lead": "Eine synthetische Angebotsanfrage, von Anfang bis Ende. Markierter Text sind personenbezogene Daten; die mittlere Spalte ist alles, was das Modell erhält.",
       "demo.col.original": "Original", "demo.col.original.sub": "Synthetische Anfrage",
       "demo.col.ai": "Was die KI sieht", "demo.col.ai.sub": "Pseudonymisiert",
@@ -239,7 +257,7 @@
       "demo.note": "Der Filter ist für deutschen Text gebaut; die Oberfläche gibt es auf Englisch und Deutsch.",
 
       "stats.eyebrow": "Gemessene Ergebnisse",
-      "stats.title": "Was der Filter gefunden hat – und was er verpasst hat",
+      "stats.title": "Erkannt und übersehen",
       "stats.lead": "Zahlen aus den Testläufen hinter diesem Projekt. Datensätze und Grenzen folgen weiter unten.",
       "stats.note": "Einmal auf zurückgehaltenen Testdaten gemessen. Kein Wert wurde auf dem Testsplit abgestimmt.",
       "kpi.ci.button": "95%-KI",
@@ -291,8 +309,8 @@
       "backend.guard-blocked": "Vom Guard gestoppt",
 
       "try.eyebrow": "Selbst ausprobieren",
-      "try.title": "E-Mail einfügen und personenbezogene Daten ausblenden",
-      "try.lead": "Eine vereinfachte Version des Filters läuft in diesem Browser-Tab. Sie ist nicht die Server-Pipeline.",
+      "try.title": "Den Filter ausprobieren",
+      "try.lead": "Fügen Sie eine deutsche E-Mail ein und ersetzen Sie personenbezogene Daten durch Platzhalter. Dieser vereinfachte Filter läuft im Browser-Tab; er ist nicht die Server-Pipeline.",
       "try.banner": "Läuft in Ihrem Browser. Nichts, was Sie eingeben, verlässt diese Seite.",
       "try.label": "Ihr Text", "try.placeholder": "Kunden-E-Mail hier einfügen…",
       "try.button": "Personenbezogene Daten ausblenden", "try.sample": "Beispiel verwenden", "try.clear": "Leeren",
@@ -305,7 +323,7 @@
       "try.note": "Dieses Feld macht keine Netzwerkanfragen. Es führt nur die links genannten Prüfungen aus.",
 
       "how.eyebrow": "So funktioniert es",
-      "how.title": "Fünf Schritte, eine Grenze",
+      "how.title": "Die Pipeline",
       "how.lead": "Personenbezogene Daten werden ersetzt, bevor die Anfrage die Grenze zum KI-Backend überschreitet. Die Platzhalter-Zuordnung bleibt im lokalen Prozess.",
       "how.s1.t": "Erkennen", "how.s1.d": "Namen, E-Mails, IBANs",
       "how.s2.t": "Ersetzen", "how.s2.d": "durch [TYP_n]",
@@ -317,7 +335,7 @@
       "how.note": "Schritt 4 spricht als einziger mit einem KI-Backend. Der Guard prüft den pseudonymisierten Text erneut und stoppt den Aufruf, wenn noch ein zugeordneter Wert darin steht.",
 
       "res.eyebrow": "Ergebnisse und Grenzen",
-      "res.title": "Die Zahlen mit ihren Einschränkungen",
+      "res.title": "Ergebnisse und Grenzen",
       "res.lead": "Ein Testsplit, einmal gemessen. Lücken werden so berichtet, wie sie sind.",
       "res.detection.title": "Erkennung",
       "res.detection.lead": "Eine markierte Stelle gilt nur als erkannt, wenn jedes Zeichen von einer passenden Vorhersage abgedeckt ist.",
@@ -356,7 +374,7 @@
       "res.adoption.link": "Kontakt aufnehmen",
 
       "tech.eyebrow": "Technische Details",
-      "tech.title": "Die Teile hinter den Aussagen",
+      "tech.title": "Technische Umsetzung",
       "tech.lead": "Architektur, Erkennungs-Stack, Guard, Backends und die Tests hinter den Datenschutzaussagen.",
       "tech.arch.sum": "Architektur",
       "tech.arch.body": "Ein FastAPI-Dienst nimmt eine Anfrage, erkennt personenbezogene Daten, ersetzt Werte durch typisierte Platzhalter, prüft das Ergebnis erneut, ruft ein KI-Backend und setzt die Platzhalter im zurückgegebenen Entwurf wieder ein. n8n startet den Ablauf; die Platzhalter-Zuordnung bleibt im Speicher und wird nie in die Seitendaten geschrieben.",
@@ -374,7 +392,7 @@
       "tech.repro.body": "Die Seitendaten tragen Version, Commit, Zeitstempel und SHA-256 des Laufs. Ein kleines Prüfskript kontrolliert, dass jede Kennzahl und jeder Diagrammwert dem Wert in kpis.json und charts/*.json entspricht.",
 
       "credits.eyebrow": "Daten und Quellen",
-      "credits.title": "Worauf diese Seite steht",
+      "credits.title": "Quellen und Lizenzen",
       "credits.lead": "Offene Werkzeuge und ein Forschungsdatensatz, mit Lizenz und Grenze.",
       "credits.germeval.desc": "Deutschsprachige Wikipedia- und Nachrichtentexte. Nur zur Berechnung der Erkennungsraten; keine Sätze gezeigt.",
       "credits.presidio.desc": "PII-Erkennung für Namen, Organisationen und mehr.",
@@ -398,8 +416,26 @@
       "credits.font.desc": "Selbst gehostete Schrift, aus den anderen Projektseiten des Portfolios übernommen.",
       "footer.built": "Gebaut von Saber Sojudi.", "footer.legal": "Keine Rechtsberatung.",
       "footer.portfolio": "Portfolio", "footer.top": "Nach oben",
-      "common.error": "Die Beispieldaten konnten nicht geladen werden. Bitte die Seite über einen Webserver öffnen.",
-      "common.dash": "—"
+      "common.error": "Die Projektdaten konnten nicht geladen werden. Laden Sie die Seite erneut. Die Browser-Demo funktioniert weiterhin.",
+      "common.dash": "—",
+      "brand.author": "Saber Sojudi",
+      "brand.project": "AI Privacy Filter",
+      "nav.overview": "Überblick",
+      "nav.demo": "Demo",
+      "nav.evidence": "Ergebnisse",
+      "nav.method": "Methode",
+      "nav.back": "Zurück",
+      "a.back": "Zurück zum Portfolio",
+      "a.quick": "Schnellnavigation",
+      "overview.preview.note": "Synthetisches Beispiel aus den Projektdaten",
+      "overview.map.title": "Die Zuordnung bleibt lokal",
+      "overview.map.body": "Das Modell arbeitet mit der pseudonymisierten Nachricht. Ein Guard prüft sie vor dem Aufruf erneut; die Originalwerte bleiben im lokalen Prozess.",
+      "overview.evidence": "Gemessen, mit Grenzen",
+      "overview.caveat": "Die Erkennung kann Werte übersehen. Ergebnisse und Grenzen gehören zusammen.",
+      "overview.results": "Ergebnisse und Grenzen ansehen",
+      "overview.role.title": "Was ich entwickelt habe",
+      "overview.role.body": "Erkennung mit Presidio und spaCy, typisierte Platzhalter, einen zweiten Prüfpass, austauschbare KI-Backends und einen menschlichen Prüfschritt in n8n.",
+      "common.loading": "Projektdaten werden geladen…"
     }
   };
 
@@ -409,6 +445,7 @@
   var RESULTS = null;
   var KPIS = [];
   var CHARTS = {};
+  var syncNavigation = null;
   var FILTER = 'all';
   var LANG = (document.documentElement.lang || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en';
   var LOCALE = function () { return LANG === 'de' ? 'de-DE' : 'en-US'; };
@@ -444,10 +481,17 @@
   function syncThemeButtons() {
     var current = document.documentElement.dataset.theme || systemTheme();
     $$('#theme button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.themeSet === current)); });
+    var color = $('meta[name="theme-color"]');
+    if (color) color.setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--bg-page').trim());
   }
   function setTheme(value) {
     document.documentElement.dataset.theme = value;
     try { localStorage.setItem('aipf-theme', value); } catch (e) { /* private mode */ }
+    try {
+      var url = new URL(location.href);
+      url.searchParams.set('theme', value);
+      history.replaceState(null, '', url);
+    } catch (e) { /* history is best-effort */ }
     syncThemeButtons();
   }
 
@@ -504,7 +548,7 @@
     return out + esc(text.slice(pos));
   }
   function phMarked(text) {
-    return esc(text).replace(/(\[[A-Z_]+_\d+\])/g, '<mark class="ph">$1</mark>');
+    return esc(text).replace(/(\[[A-Z_]+_\d+\])/g, '<code class="ph">$1</code>');
   }
   function findSpans(text, spans) {
     var found = [];
@@ -528,6 +572,8 @@
     var legend = $('#demo-legend');
     if (!grid || !EXAMPLES.length) return;
     var ex = EXAMPLES.filter(function (x) { return x.reply_draft_restored; })[0] || EXAMPLES[0];
+    var preview = $('#hero-preview');
+    if (preview) preview.innerHTML = phMarked(ex.redacted.split(/\n\s*\n/)[0]);
 
     meta.innerHTML =
       '<span class="chip chip-accent">' + esc(t('gallery.cat.' + ex.category)) + '</span>' +
@@ -557,9 +603,7 @@
       return '<article class="demo-col' + c.cls + '">' +
         '<header><strong>' + esc(c.title) + '</strong><span>' + esc(c.sub) + '</span></header>' +
         '<div class="demo-body">' + c.body + '</div>' +
-        '<div class="demo-foot">' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>' +
-        esc(c.foot) + '</div></article>';
+        '<div class="demo-foot">' + esc(c.foot) + '</div></article>';
     }).join('');
 
     var types = [];
@@ -567,7 +611,7 @@
     legend.innerHTML = types.map(function (type) {
       return '<span class="legend-item"><span class="swatch ' + entClass(type) + '"></span>' + esc(t('type.' + type)) + '</span>';
     }).join('') +
-      '<span class="legend-item"><span class="swatch" style="background:var(--accent-soft);border-color:var(--accent-ring)"></span><code style="font-family:var(--mono);font-size:11px">[TYPE_n]</code></span>';
+      '<span class="legend-item"><span class="swatch" style="background:var(--accent-soft)"></span><code>[TYPE_n]</code></span>';
   }
 
   /* ---------- KPI row and charts ---------- */
@@ -631,7 +675,15 @@
       return '<button type="button" class="filter" data-category="' + esc(c) + '" aria-pressed="' + String(FILTER === c) + '">' + esc(label) + '</button>';
     }).join('');
     $$('.filter', box).forEach(function (b) {
-      b.addEventListener('click', function () { FILTER = b.dataset.category; renderGallery(); });
+      b.addEventListener('click', function () {
+        var keyboard = document.activeElement === b && b.matches(':focus-visible');
+        FILTER = b.dataset.category;
+        renderGallery();
+        if (keyboard) {
+          var active = $('#gallery-filters [aria-pressed="true"]');
+          if (active) active.focus({ preventScroll: true });
+        }
+      });
     });
   }
   function renderGallery() {
@@ -651,7 +703,7 @@
       var miss = (x.misses || []).length
         ? '<div class="miss-box"><strong>' + esc(t('gallery.missed')) + '</strong><ul>' +
           x.misses.map(function (m) {
-            return '<li><code>' + esc(t('type.' + m.type)) + '</code> ' + esc(m.text) + '</li>';
+            return '<li><span class="miss-type">' + esc(t('type.' + m.type)) + '</span> ' + esc(m.text) + '</li>';
           }).join('') + '</ul></div>'
         : '';
       return '<article class="ex-card' + (miss ? ' has-miss' : '') + '">' +
@@ -663,7 +715,9 @@
         '</div>' +
         '<p class="ex-red">' + phMarked(x.redacted) + '</p>' +
         '<details><summary>' + esc(t('gallery.showOriginal')) + '</summary>' +
-        '<div class="ex-orig">' + marked(x.original, x.spans, x.misses) + '</div></details>' +
+        '<div class="ex-orig">' + marked(x.original, x.spans, x.misses) + '</div>' +
+        '<div class="ex-complete"><strong>' + esc(t('demo.col.ai')) + '</strong>' +
+        '<div class="ex-orig">' + phMarked(x.redacted) + '</div></div></details>' +
         miss +
         '</article>';
     }).join('');
@@ -706,7 +760,7 @@
       var info = detectionRows();
       det.innerHTML = info.rows.map(function (row) {
         return '<tr>' +
-          '<td><strong>' + esc(row.name) + '</strong><br><span style="font-size:11.5px;color:var(--ink-muted)">' + esc(row.covers) + '</span></td>' +
+          '<td><strong>' + esc(row.name) + '</strong><small>' + esc(row.covers) + '</small></td>' +
           '<td class="num">' + esc(row.recall) + '</td>' +
           '<td class="num">' + esc(row.missed) + '</td>' +
           '</tr>';
@@ -760,6 +814,59 @@
     renderCharts();
     renderGallery();
     renderResults();
+    labelTableCells();
+    if (syncNavigation) syncNavigation();
+  }
+
+  /* The translated headers label narrow rows; semantic tables stay intact. */
+  function labelTableCells() {
+    $$('.table-wrap > table').forEach(function (table) {
+      var labels = $$('thead th', table).map(function (th) { return th.textContent; });
+      $$('tbody tr', table).forEach(function (row) {
+        $$('td', row).forEach(function (cell, index) {
+          cell.setAttribute('data-label', labels[index] || '');
+        });
+      });
+      table.parentElement.removeAttribute('tabindex');
+    });
+  }
+
+  /* Native hashes retain deep links and Back; these links are not tabs. */
+  function initNavigation() {
+    function select(group) {
+      $$('[data-nav]').forEach(function (link) {
+        if (link.dataset.nav === group) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    function fromHash() {
+      var target = document.getElementById(location.hash.slice(1));
+      var section = target && target.closest('[data-nav-section]');
+      if (section) select(section.dataset.navSection);
+      else if (!location.hash) select('overview');
+    }
+    var sections = $$('[data-nav-section]');
+    var header = $('.site-header');
+    var scheduled = false;
+    function schedule() {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(function () {
+        scheduled = false;
+        var marker = Math.max(header.getBoundingClientRect().bottom + 24, innerHeight / 4);
+        var group = 'overview';
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= marker) group = section.dataset.navSection;
+        });
+        select(group);
+      });
+    }
+    syncNavigation = schedule;
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+    schedule();
   }
 
   /* ---------- data ---------- */
@@ -791,8 +898,10 @@
       renderAll();
       if (window.AIPF_TRYIT && typeof window.AIPF_TRYIT.refresh === 'function') window.AIPF_TRYIT.refresh();
     }).catch(function (err) {
-      var grid = $('#demo-grid');
-      if (grid) grid.innerHTML = '<p class="notice">' + esc(t('common.error')) + '</p>';
+      ['#hero-preview', '#demo-grid', '#kpi-grid', '#gallery-grid'].forEach(function (selector) {
+        var grid = $(selector);
+        if (grid) grid.innerHTML = '<p class="notice">' + esc(t('common.error')) + '</p>';
+      });
       // A missing data file is a real page error; keep it visible for the smoke test.
       console.error('AI Privacy Filter: data load failed', err);
     });
@@ -813,5 +922,6 @@
   });
 
   applyLang();
+  initNavigation();
   load();
 })();
