@@ -233,7 +233,9 @@
       "media.fit": "Fit",
       "media.original": "Original size",
       "media.stage": "Enlarged illustration",
-      "media.help": "Zoom in, then scroll or drag to inspect the details."
+      "media.carousel": "Workflow and pipeline",
+      "media.carousel.help": "Swipe or use the arrow keys to change images. Select an image to enlarge it.",
+      "media.help": "Scroll or pinch to zoom; drag to move. Double tap to fit or enlarge. Use + and − to zoom, 0 to fit, and Escape to close. Tap outside the image to close."
     },
 
     de: {
@@ -463,7 +465,9 @@
       "media.fit": "Einpassen",
       "media.original": "Originalgröße",
       "media.stage": "Vergrößerte Abbildung",
-      "media.help": "Vergrößern Sie die Ansicht und scrollen oder ziehen Sie, um Details zu sehen."
+      "media.carousel": "Workflow und Pipeline",
+      "media.carousel.help": "Wischen Sie oder verwenden Sie die Pfeiltasten, um das Bild zu wechseln. Wählen Sie ein Bild, um es zu vergrößern.",
+      "media.help": "Scrollen oder mit zwei Fingern zoomen; zum Verschieben ziehen. Doppeltippen passt das Bild ein oder vergrößert es. + und − zoomen, 0 passt ein, Escape schließt. Außerhalb des Bildes tippen schließt die Ansicht."
     }
   };
 

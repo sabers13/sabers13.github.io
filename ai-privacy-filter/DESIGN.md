@@ -107,14 +107,20 @@ Technology badges use the same 18px outline-icon anatomy as LIVECell's badges.
 - Details: native summary/actions, 44px minimum interactive target height.
 - Loading/errors: visible translated feedback; retry by reloading after a data
   fetch error. The local demo continues to operate independently of evidence loads.
-- Overview media: two compact previews after the contribution summary, using the
-  existing pipeline SVG and first n8n workflow screenshot. Two columns above
-  620px; one column on phones. Media frames are at least 112px high, with 20px
-  card padding, existing panel radii and a visible enlarge affordance.
-- Enlarged media: native modal dialog, at most 1440px wide and 86svh high, 16px
-  screen margins, existing theme tokens. Fit, original-size and plus/minus zoom
-  controls; scrolling/touch panning and mouse dragging while zoomed. Escape and
-  Close return focus to the opener. Keep captions and visible focus; no animation.
+- Overview media: image-only horizontal carousel above “Measured, with limits”,
+  n8n first and the existing pipeline SVG second. Reference anatomy and swipe /
+  keyboard behavior: https://ui.shadcn.com/docs/components/base/carousel.
+  Implement with native scroll snap and vanilla JS, without React or Embla.
+  Show a 16px glimpse of the next slide, with a 16px gap; no captions, toolbar,
+  navigation buttons or autoplay. Arrow keys, Home/End, touch swipe, trackpad
+  scrolling and mouse dragging change slides. Reuse existing inset radii.
+- Enlarged media: image-only native modal, at most 1440px wide and 86svh high,
+  16px screen margins, existing theme tokens. Wheel and trackpad pinch zoom
+  around the pointer; two-finger touch pinch zooms around its moving midpoint.
+  Drag to pan, double tap/click toggles fit and detail, +/- zoom, 0 fits.
+  Escape or tapping the surrounding backdrop closes and returns focus. A Close
+  control appears only when keyboard focused; help and title stay accessible.
+  No captions or visible zoom buttons, no animation.
   Copies of SVG definitions must have unique IDs. Reuse original assets rather
   than generating a screenshot or maintaining another diagram.
 
