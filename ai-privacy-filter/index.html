@@ -12,7 +12,7 @@
   try {
     var q = new URLSearchParams(location.search);
     var t = q.get("theme") || localStorage.getItem("aipf-theme");
-    if (t !== "light" && t !== "dark") t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    if (t !== "light" && t !== "dark") t = "light";
     document.documentElement.dataset.theme = t;
     var l = q.get("lang") || localStorage.getItem("aipf-lang");
     if (l !== "en" && l !== "de") {

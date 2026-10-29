@@ -506,12 +506,8 @@
   function totals() { return window.AIPF_RESULTS_MODEL; }
 
   /* ---------- theme ---------- */
-  function systemTheme() {
-    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-    catch (e) { return 'light'; }
-  }
   function syncThemeButtons() {
-    var current = document.documentElement.dataset.theme || systemTheme();
+    var current = document.documentElement.dataset.theme || 'light';
     $$('#theme button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.themeSet === current)); });
     var color = $('meta[name="theme-color"]');
     if (color) color.setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--bg-page').trim());
