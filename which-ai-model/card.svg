@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Which AI Model?</title><desc id="desc">Compare recorded model results by cost, quality and speed, after choosing a minimum score.</desc>
+<rect width="1200" height="630" fill="#f3f4f6"/>
+<g font-family="Arial, sans-serif"><text x="74" y="106" fill="#2563eb" font-size="24" font-weight="700">RECORDED RESULTS · INTERACTIVE COMPARISON</text>
+<text x="74" y="181" fill="#111827" font-size="57" font-weight="700">Which AI model fits the job?</text>
+<text x="76" y="233" fill="#626d7f" font-size="28">Set your quality floor. Then compare the trade-offs.</text>
+<rect x="74" y="287" width="1052" height="254" rx="24" fill="#fff"/>
+<text x="108" y="337" fill="#626d7f" font-size="23">CHOOSE WHAT MATTERS</text>
+<rect x="108" y="361" width="307" height="63" rx="31.5" fill="#111827"/>
+<text x="261" y="402" fill="#fff" font-size="28" text-anchor="middle">Lowest cost</text>
+<text x="593" y="402" fill="#374151" font-size="28" text-anchor="middle">Highest score</text>
+<text x="929" y="402" fill="#374151" font-size="28" text-anchor="middle">Fastest</text>
+<path d="M108 448H1092" stroke="#e5e7eb"/>
+<text x="108" y="501" fill="#626d7f" font-size="27">Minimum score</text>
+<text x="726" y="502" fill="#374151" font-size="28">65%</text>
+<rect x="832" y="465" width="108" height="54" rx="27" fill="#111827"/>
+<text x="886" y="502" fill="#fff" font-size="28" text-anchor="middle">75%</text>
+<text x="996" y="502" fill="#374151" font-size="28">85%</text></g></svg>
