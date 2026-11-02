@@ -1,0 +1,439 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2119792",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "LEGACY",
+    "narrative": "MAR 2024: 2018 Subaru Legacy, 36,000-miles. (1) Front Windshield had crack in it randomly one day. Coming up from bottom heating element. Easily able to find similar crack shape online. Find lots of windshield crack issues online for Subarus. Zero action from Subaru on this. (2) Broke again 11 months later [FEB 2025] in similar fashion, randomly one day.",
+    "received_at": "2025-08-12",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2119792",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2119792",
+    "decided_at": "2025-08-12T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2119792",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Front Windshield had crack in it randomly one day."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Coming up from bottom heating element."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Broke again 11 months later [FEB 2025] in similar fashion, randomly one day."
+      },
+      {
+        "kind": "other",
+        "quote": "2018 Subaru Legacy"
+      }
+    ],
+    "conditions": [
+      "random occurrence",
+      "bottom heating element involvement",
+      "recurrence after 11 months"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Test the windshield for a repeatable crack origin at the bottom heating element, because the same 2018 Legacy cracked twice in similar fashion with no rulebook match.",
+    "symptoms": [
+      "windshield cracked randomly",
+      "crack originating from bottom heating element",
+      "recurrent windshield crack 11 months later"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2119792",
+    "created_at": "2025-08-12T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Front Windshield had crack in it randomly one day.",
+        "source_id": "2119792",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Coming up from bottom heating element.",
+        "source_id": "2119792",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Broke again 11 months later [FEB 2025] in similar fashion, randomly one day.",
+        "source_id": "2119792",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "2018 Subaru Legacy",
+        "source_id": "2119792",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "Two spontaneous cracks, both reported as starting from the bottom heating element and recurring 11 months later, indicate a possible glass or defroster thermal-stress issue. No rulebook entry matches, so this should go to the standard visibility/wiper test rather than a targeted load test. Similar cases report windshield cracking on the same model and year but do not supply a rulebook condition.",
+    "requested_info": [],
+    "summary": "Test the windshield for a repeatable crack origin at the bottom heating element, because the same 2018 Legacy cracked twice in similar fashion with no rulebook match.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "18V935000",
+      "match": true,
+      "open_date": "2018-12-31",
+      "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2018 Legacy, Outback, and BRZ vehicles.  In the affected vehicles, a software issue may cause the audio display system to not initialize, resulting in the camera display remaining blank.  If this occurs, the rearview image will not display while backing up the vehicle.  As a result, the vehicles fail to comply with requirements of Federal Motor Vehicle Safety (FMVSS) number 111, \"Rearview Mirrors.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "WINDSHIELD: THE OEM WINDSHIELD CRACKS EASILY AND MANUFACTURE WILL SAY NOT RESPONSIBLE BECAUSE IT'S NOT A \"DEFECT\", BUT THEY USED INFERIOR GLASS. CURRENTLY, I HAVE OVER 6 CRACKS AND EVERY TIME THE SMALLEST ITEM HITS IT, THE WINDSHIELD CRACKS. I'VE BEEN WITH NEW CAR DEALERSHIP FOR...",
+      "group": "body_controls",
+      "id": "1718272",
+      "make": "SUBARU",
+      "model": "LEGACY",
+      "score": 4.0181,
+      "year": 2018
+    },
+    {
+      "excerpt": "I WORK AS A HOME HEALTH NURSE AND I JUST FINISHED A PATIENT VISIT. AFTER I GOT BACK INSIDE MY CAR I FOUND A HUGE CRACK ALONG THE RIGHT SIDE OF MY FRONT WINDSHIELD. WHILE I WAS COMPLETING MY PATIENT VISIT MY CAR WAS PARKED OUT FRONT OF THE HOUSE THE ENTIRE TIME AND WAS NOT IN MOTI...",
+      "group": "body_controls",
+      "id": "1663638",
+      "make": "SUBARU",
+      "model": "LEGACY",
+      "score": 1.7087,
+      "year": 2018
+    },
+    {
+      "excerpt": "I WAS ON THE HIGHWAY GOING ABOUT 70 AND DIDN'T HEAR A ROCK HIT THE WINDSHIELD AND WAS ON A SMOOTH SURFACE, HOWEVER SUDDENLY THERE WAS A FOOT LONG CRACK ON THE DRIVER'S SIDE.",
+      "group": "body_controls",
+      "id": "1656923",
+      "make": "SUBARU",
+      "model": "LEGACY",
+      "score": 0.3531,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-12T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007327,
+      "duration_ms": 8541,
+      "reason": "Front windshield cracked randomly from the bottom heating element in a 2018 Subaru Legacy and recurred 11 months later; no conditions stated.",
+      "started_at": "2025-08-12T07:00:01Z",
+      "step": 2,
+      "tokens": 1751,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-12T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "LEGACY",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WINDSHIELD: THE OEM WINDSHIELD CRACKS EASILY AND MANUFACTURE WILL SAY NOT RESPONSIBLE BECAUSE IT'S NOT A \"DEFECT\", BUT THEY USED INFERIOR GLASS. CURRENTLY, I HAVE OVER 6 CRACKS AND EVERY TIME THE SMALLEST ITEM HITS IT, THE WINDSHIELD CRACKS. I'VE BEEN WITH NEW CAR DEALERSHIP FOR...",
+            "group": "body_controls",
+            "id": "1718272",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 4.0181,
+            "year": 2018
+          },
+          {
+            "excerpt": "I WORK AS A HOME HEALTH NURSE AND I JUST FINISHED A PATIENT VISIT. AFTER I GOT BACK INSIDE MY CAR I FOUND A HUGE CRACK ALONG THE RIGHT SIDE OF MY FRONT WINDSHIELD. WHILE I WAS COMPLETING MY PATIENT VISIT MY CAR WAS PARKED OUT FRONT OF THE HOUSE THE ENTIRE TIME AND WAS NOT IN MOTI...",
+            "group": "body_controls",
+            "id": "1663638",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 1.7087,
+            "year": 2018
+          },
+          {
+            "excerpt": "I WAS ON THE HIGHWAY GOING ABOUT 70 AND DIDN'T HEAR A ROCK HIT THE WINDSHIELD AND WAS ON A SMOOTH SURFACE, HOWEVER SUDDENLY THERE WAS A FOOT LONG CRACK ON THE DRIVER'S SIDE.",
+            "group": "body_controls",
+            "id": "1656923",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 0.3531,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-08-12T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-12T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-08-12T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "MAR 2024: 2018 Subaru Legacy, 36,000-miles. (1) Front Windshield had crack in it randomly one day. Coming up from bottom heating element. Easily able to find similar crack shape online. Find lots of windshield crack issues online for Subarus. Zero action from Subaru on this. (2) Broke again 11 months later [FEB 2025] in similar fashion, randomly one day."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WINDSHIELD: THE OEM WINDSHIELD CRACKS EASILY AND MANUFACTURE WILL SAY NOT RESPONSIBLE BECAUSE IT'S NOT A \"DEFECT\", BUT THEY USED INFERIOR GLASS. CURRENTLY, I HAVE OVER 6 CRACKS AND EVERY TIME THE SMALLEST ITEM HITS IT, THE WINDSHIELD CRACKS. I'VE BEEN WITH NEW CAR DEALERSHIP FOR...",
+            "group": "body_controls",
+            "id": "1718272",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 4.0181,
+            "year": 2018
+          },
+          {
+            "excerpt": "I WORK AS A HOME HEALTH NURSE AND I JUST FINISHED A PATIENT VISIT. AFTER I GOT BACK INSIDE MY CAR I FOUND A HUGE CRACK ALONG THE RIGHT SIDE OF MY FRONT WINDSHIELD. WHILE I WAS COMPLETING MY PATIENT VISIT MY CAR WAS PARKED OUT FRONT OF THE HOUSE THE ENTIRE TIME AND WAS NOT IN MOTI...",
+            "group": "body_controls",
+            "id": "1663638",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 1.7087,
+            "year": 2018
+          },
+          {
+            "excerpt": "I WAS ON THE HIGHWAY GOING ABOUT 70 AND DIDN'T HEAR A ROCK HIT THE WINDSHIELD AND WAS ON A SMOOTH SURFACE, HOWEVER SUDDENLY THERE WAS A FOOT LONG CRACK ON THE DRIVER'S SIDE.",
+            "group": "body_controls",
+            "id": "1656923",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "score": 0.3531,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-12T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "SUBARU",
+        "model": "LEGACY",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+            "group": "body_controls",
+            "id": "18V935000",
+            "make": "SUBARU",
+            "model": "LEGACY",
+            "open_date": "2018-12-31",
+            "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2018 Legacy, Outback, and BRZ vehicles.  In the affected vehicles, a software issue may cause the audio display system to not initialize, resulting in the camera display remaining blank.  If this occurs, the rearview image will not display while backing up the vehicle.  As a result, the vehicles fail to comply with requirements of Federal Motor Vehicle Safety (FMVSS) number 111, \"Rearview Mirrors.\"",
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-12T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "SUBARU",
+        "model": "LEGACY",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-12T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00098175,
+      "duration_ms": 9861,
+      "reason": "Two spontaneous cracks, both reported as starting from the bottom heating element and recurring 11 months later, indicate a possible glass or defroster thermal-stress issue. No rulebook entry matches, so this should go to the standard visibility/wiper test rather than a targeted load test. Similar cases report windshield cracking on the same model and year but do not supply a rulebook condition.",
+      "started_at": "2025-08-12T07:00:09Z",
+      "step": 10,
+      "tokens": 2699,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-08-12T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Front Windshield had crack in it randomly one day.",
+          "Coming up from bottom heating element.",
+          "Broke again 11 months later [FEB 2025] in similar fashion, randomly one day.",
+          "2018 Subaru Legacy"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-12T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-12T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-12T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-12T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2084322",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD HYBRID",
+    "narrative": "I had an accident on I-85 I was rear ended after traffic slammed on breaks and the car behind had been riding my bumper for miles. He went through my trunk and almost came into my backseat. I was also pushed into the car infront of me which his directly on the drivers side of my car. My front end is completely pushed on the drivers side into to where you can see the metal frame. On the rear, the bumper and metal frame completely came off.   I was hit directly on impact sensors on both ends and none of my airbags went off. And my seatbelt did not lock up.   We were still going about 60-70mph when he hit me. The car is a total loss.",
+    "received_at": "2025-04-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2084322",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084322",
+    "decided_at": "2025-04-19T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2084322",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my seatbelt did not lock up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "none of my airbags went off"
+      },
+      {
+        "kind": "condition",
+        "quote": "I was rear ended"
+      },
+      {
+        "kind": "condition",
+        "quote": "We were still going about 60-70mph when he hit me"
+      },
+      {
+        "kind": "safety",
+        "quote": "I had an accident on I-85"
+      },
+      {
+        "kind": "safety",
+        "quote": "The car is a total loss"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "SEAT BELTS: seatbelt did not lock and airbags did not deploy in a 60–70 mph rear-end collision with front impact; vehicle total loss.",
+    "symptoms": [
+      "seatbelt did not lock up",
+      "airbags did not deploy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084322",
+    "created_at": "2025-04-19T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2024 Honda Accord. The contact received notification of NHTSA Campaign Number: 23V782000 (Seat Belts). The contact stated while driving 25 MPH, several communication features failed. The electrical system also experienced failures. The odometer gauges and elect...",
+      "group": "restraints",
+      "id": "1953544",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 0.5754,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010006,
+      "duration_ms": 12362,
+      "reason": "SEAT BELTS: seatbelt did not lock and airbags did not deploy in a 60–70 mph rear-end collision with front impact; vehicle total loss.",
+      "started_at": "2025-04-19T07:00:01Z",
+      "step": 2,
+      "tokens": 2238,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD HYBRID",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2024 Honda Accord. The contact received notification of NHTSA Campaign Number: 23V782000 (Seat Belts). The contact stated while driving 25 MPH, several communication features failed. The electrical system also experienced failures. The odometer gauges and elect...",
+            "group": "restraints",
+            "id": "1953544",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 0.5754,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-19T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-19T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-19T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-19T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

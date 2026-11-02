@@ -1,0 +1,289 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2054545",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "Water leaked into their vehicle into my Ram 1500 cabin. Water leaks from the third brake light above the rear window into the cabin. It caused the Radiofrequency hub to short circuit, and my vehicle wouldn't turn on; it killed my battery, and when I replaced my battery, it automatically drained. Also an issue in the cab is the following: bad odors, smells, and mildew. I have children and not knowing that there is mildew growing in my vehicle is a major health concern.",
+    "received_at": "2025-01-09",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2054545",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2054545",
+    "decided_at": "2025-01-09T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2054545",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "Water leaked into their vehicle into my Ram 1500 cabin."
+      },
+      {
+        "kind": "condition",
+        "quote": "Water leaks from the third brake light above the rear window into the cabin."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It caused the Radiofrequency hub to short circuit"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my vehicle wouldn't turn on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it killed my battery"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it automatically drained"
+      },
+      {
+        "kind": "symptom",
+        "quote": "bad odors, smells, and mildew"
+      },
+      {
+        "kind": "safety",
+        "quote": "I have children and not knowing that there is mildew growing in my vehicle is a major health concern."
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: water leak from third brake light caused RF hub short circuit, no-start, battery drain, and mildew odors.",
+    "symptoms": [
+      "water leak into cabin",
+      "radiofrequency hub short circuit",
+      "vehicle would not turn on",
+      "battery killed and repeatedly drained",
+      "bad odors, smells, and mildew"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2054545",
+    "created_at": "2025-01-09T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Truck leaks water from rear windshield, water runs down to receiver module for the key FOBs and causes truck not to turn off. Leaks from headliner into safety eq on windshield causing GPS issues, visability as water runs down inside of windshield. RAM will not fix under warranty....",
+      "group": "electrical_general",
+      "id": "1953863",
+      "make": "RAM",
+      "model": "1500",
+      "score": 15.2416,
+      "year": 2021
+    },
+    {
+      "excerpt": "On three separate occasions within two months, the truck completely shut down without any warning. The first time I was at a stop light, when light turned green, I stepped on gas and truck died. Nothing worked on the vehicle, there were no messages or warnings. The truck was towe...",
+      "group": "electrical_general",
+      "id": "1828374",
+      "make": "RAM",
+      "model": "1500",
+      "score": 15.0046,
+      "year": 2021
+    },
+    {
+      "excerpt": "When closing the drivers side window with the auto function the window will go up about a 1/4\" then go back down 1/4\" and stop. A number of times when open/closing the window with the auto window function it will also opens/closes the passenger window. Either way this presents a...",
+      "group": "electrical_general",
+      "id": "1988129",
+      "make": "RAM",
+      "model": "1500",
+      "score": 13.1833,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011254,
+      "duration_ms": 19071,
+      "reason": "Electrical system: water leak from third brake light caused RF hub short circuit, no-start, battery drain, and mildew odors.",
+      "started_at": "2025-01-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2407,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Truck leaks water from rear windshield, water runs down to receiver module for the key FOBs and causes truck not to turn off. Leaks from headliner into safety eq on windshield causing GPS issues, visability as water runs down inside of windshield. RAM will not fix under warranty....",
+            "group": "electrical_general",
+            "id": "1953863",
+            "make": "RAM",
+            "model": "1500",
+            "score": 15.2416,
+            "year": 2021
+          },
+          {
+            "excerpt": "On three separate occasions within two months, the truck completely shut down without any warning. The first time I was at a stop light, when light turned green, I stepped on gas and truck died. Nothing worked on the vehicle, there were no messages or warnings. The truck was towe...",
+            "group": "electrical_general",
+            "id": "1828374",
+            "make": "RAM",
+            "model": "1500",
+            "score": 15.0046,
+            "year": 2021
+          },
+          {
+            "excerpt": "When closing the drivers side window with the auto function the window will go up about a 1/4\" then go back down 1/4\" and stop. A number of times when open/closing the window with the auto window function it will also opens/closes the passenger window. Either way this presents a...",
+            "group": "electrical_general",
+            "id": "1988129",
+            "make": "RAM",
+            "model": "1500",
+            "score": 13.1833,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-09T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-09T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-09T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-09T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

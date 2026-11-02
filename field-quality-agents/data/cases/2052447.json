@@ -1,0 +1,277 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: WARNINGS",
+    "group": "adas",
+    "id": "2052447",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 5",
+    "narrative": "The rear video camera fails intermittently.  It works sometimes and doesn't at times.  The same with the rear cross traffic warning and pedestrian warning.  I've taken my car to the dealer service center but they claim to not being able to reproduce the issue. I know the issue still exists since my husband hit a parked car while backing out of a driveway since there was no alert provided and the rear camera did not work.",
+    "received_at": "2025-01-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2052447",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2052447",
+    "decided_at": "2025-01-01T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2052447",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The rear video camera fails intermittently."
+      },
+      {
+        "kind": "condition",
+        "quote": "It works sometimes and doesn't at times."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The same with the rear cross traffic warning and pedestrian warning."
+      },
+      {
+        "kind": "safety",
+        "quote": "my husband hit a parked car while backing out of a driveway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "there was no alert provided and the rear camera did not work."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Hyundai Ioniq 5 rear video camera and rear cross-traffic/pedestrian warnings fail intermittently; no alert or camera during a backing collision.",
+    "symptoms": [
+      "rear video camera fails intermittently",
+      "rear cross traffic warning fails intermittently",
+      "pedestrian warning fails intermittently",
+      "no alert provided when backing",
+      "rear camera did not work when backing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2052447",
+    "created_at": "2025-01-01T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Intermittent Electrical / Brake failure . Put vehicle in reverse . Brakes failed to stop vehicle . Vehicle has had electrical issues before . Waring lights came on for steering and tire pressure in the past . Recall then came from Hyundai for the ICCU .45 minutes before the colli...",
+      "group": "adas",
+      "id": "1951492",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 10.4719,
+      "year": 2023
+    },
+    {
+      "excerpt": "Driving on freeway when adaptive cruise control turns off and had a sudden complete loss of acceleration, we had steering and brakes only. Sudden reduction of car speed in traffic could cause accident. Has only happened once in 20k miles. (no acceleration) Adaptive cruise control...",
+      "group": "adas",
+      "id": "1937058",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 9.5652,
+      "year": 2023
+    },
+    {
+      "excerpt": "12/30/2023 at approximately 5:30pm I drove home with the iPedal engaged. The iPedal was installed as a download to the car in August 2023. My daughter was in the passenger seat. I began to back into my driveway but shifted to Drive to straighten out the car. The car began to roll...",
+      "group": "adas",
+      "id": "1967677",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 8.4246,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-01T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007894,
+      "duration_ms": 13812,
+      "reason": "2023 Hyundai Ioniq 5 rear video camera and rear cross-traffic/pedestrian warnings fail intermittently; no alert or camera during a backing collision.",
+      "started_at": "2025-01-01T07:00:16Z",
+      "step": 2,
+      "tokens": 1841,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-01T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Intermittent Electrical / Brake failure . Put vehicle in reverse . Brakes failed to stop vehicle . Vehicle has had electrical issues before . Waring lights came on for steering and tire pressure in the past . Recall then came from Hyundai for the ICCU .45 minutes before the colli...",
+            "group": "adas",
+            "id": "1951492",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 10.4719,
+            "year": 2023
+          },
+          {
+            "excerpt": "Driving on freeway when adaptive cruise control turns off and had a sudden complete loss of acceleration, we had steering and brakes only. Sudden reduction of car speed in traffic could cause accident. Has only happened once in 20k miles. (no acceleration) Adaptive cruise control...",
+            "group": "adas",
+            "id": "1937058",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 9.5652,
+            "year": 2023
+          },
+          {
+            "excerpt": "12/30/2023 at approximately 5:30pm I drove home with the iPedal engaged. The iPedal was installed as a download to the car in August 2023. My daughter was in the passenger seat. I began to back into my driveway but shifted to Drive to straighten out the car. The car began to roll...",
+            "group": "adas",
+            "id": "1967677",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 8.4246,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-01T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-01T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-01T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-01T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-01T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-01T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-01T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

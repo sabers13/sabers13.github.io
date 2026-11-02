@@ -1,0 +1,311 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2086567",
+    "make": "WINNEBAGO",
+    "mileage": null,
+    "model": "NAVION",
+    "narrative": "Window is loosened at Lippert Metallarte entry door.  VIN has not been included in recall under 24V824000",
+    "received_at": "2025-04-28",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2086567",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2086567",
+    "decided_at": "2025-04-28T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2086567",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Window is loosened at Lippert Metallarte entry door."
+      },
+      {
+        "kind": "other",
+        "quote": "VIN has not been included in recall"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V824000"
+    ],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Inspect and test the entry-door window attachment on the 2023 Winnebago Navion; no targeted rulebook entry or recall record was returned, so a standard test applies.",
+    "symptoms": [
+      "window loosened at Lippert Metallarte entry door"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2086567",
+    "created_at": "2025-04-28T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "Window is loosened at Lippert Metallarte entry door.",
+        "source_id": "2086567",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "VIN has not been included in recall",
+        "source_id": "2086567",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the window loosened at the Lippert Metallarte entry door. The rulebook returned no matching entry, and no recall or investigation records were returned, so no targeted load test is indicated; propose the standard test.",
+    "requested_info": [],
+    "summary": "Inspect and test the entry-door window attachment on the 2023 Winnebago Navion; no targeted rulebook entry or recall record was returned, so a standard test applies.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-28T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007441,
+      "duration_ms": 9781,
+      "reason": "VISIBILITY/WIPER: window loosened at Lippert Metallarte entry door; VIN not included in recall 24V824000.",
+      "started_at": "2025-04-28T07:00:21Z",
+      "step": 2,
+      "tokens": 1722,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-04-28T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "WINNEBAGO",
+        "model": "NAVION",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, mileage, date; analysis can proceed",
+      "started_at": "2025-04-28T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-28T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-04-28T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Window is loosened at Lippert Metallarte entry door.  VIN has not been included in recall under 24V824000"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-28T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "WINNEBAGO",
+        "model": "NAVION",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-28T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "WINNEBAGO",
+        "model": "NAVION",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-28T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00084345,
+      "duration_ms": 10019,
+      "reason": "The narrative reports the window loosened at the Lippert Metallarte entry door. The rulebook returned no matching entry, and no recall or investigation records were returned, so no targeted load test is indicated; propose the standard test.",
+      "started_at": "2025-04-28T07:00:29Z",
+      "step": 10,
+      "tokens": 1963,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 verified, 0 dropped",
+      "started_at": "2025-04-28T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Window is loosened at Lippert Metallarte entry door.",
+          "VIN has not been included in recall"
+        ]
+      },
+      "tool_output": {
+        "checked": 2,
+        "dropped": 0,
+        "verified": 2
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-28T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-28T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-28T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-28T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

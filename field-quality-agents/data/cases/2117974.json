@@ -1,0 +1,273 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE",
+    "group": "adas",
+    "id": "2117974",
+    "make": "AUDI",
+    "mileage": 60000,
+    "model": "Q5",
+    "narrative": "The contact owns a 2019 Audi Q5. The contact stated that while driving at an undisclosed speed, with no other vehicles or objects nearby, the Forward Collision Avoidance system unintendedly activated. The contact stated that within seconds, the Forward Collision Avoidance: Automatic Emergency Braking system engaged, greatly reducing the speed before returning to normal functionality. No warning lights were illuminated. The vehicle was taken to the dealer, who was unable to diagnose the failure with Forward Collision Avoidance system. The vehicle was not repaired. The manufacturer was not notified of the failure. The failure mileage was 60,000.",
+    "received_at": "2025-08-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2117974",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2117974",
+    "decided_at": "2025-08-06T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2117974",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Forward Collision Avoidance"
+      },
+      {
+        "kind": "symptom",
+        "quote": "unintendedly activated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Automatic Emergency Braking system engaged, greatly reducing the speed"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed, with no other vehicles or objects nearby"
+      },
+      {
+        "kind": "other",
+        "quote": "No warning lights were illuminated"
+      },
+      {
+        "kind": "safety",
+        "quote": "greatly reducing the speed"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Audi Q5 Forward Collision Avoidance unintendedly activated while driving with no nearby objects; Automatic Emergency Braking engaged and greatly reduced speed; no warning lights.",
+    "symptoms": [
+      "Forward Collision Avoidance unintended activation",
+      "Automatic Emergency Braking engaged and greatly reduced speed",
+      "No warning lights illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2117974",
+    "created_at": "2025-08-06T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving, the steering wheel suddenly locked up and could not be turned. Several warning lights simultaneously appeared on the dashboard including: \"Steering malfunction! Please stop vehicle\", \"Audi adaptive light malfunction! See owners manual\", \"Start/stop system malfuncti...",
+      "group": "adas",
+      "id": "2050823",
+      "make": "AUDI",
+      "model": "Q5",
+      "score": 13.1526,
+      "year": 2018
+    },
+    {
+      "excerpt": "The cars emergency brake system malfunctioned on our 2018 Audi Q5 Premium Plus, causing the brakes to lock up for no reason while traveling on a busy street at 35 mph. The force of the braking was enough to cause a bruise from the seatbelt. The risk is potential loss of control o...",
+      "group": "adas",
+      "id": "1800391",
+      "make": "AUDI",
+      "model": "Q5",
+      "score": 10.3543,
+      "year": 2018
+    },
+    {
+      "excerpt": "We purchased our 2018 AUDI Q5 in May 2018, which currently has 31,567 miles. Having done the majority of the driving, I am pleased overall, and continue to be a proud AUDI owner. However, as with all new cars, we had some glitches. For example, when backing out of the garage, the...",
+      "group": "adas",
+      "id": "1910700",
+      "make": "AUDI",
+      "model": "Q5",
+      "score": 6.8453,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-06T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00126745,
+      "duration_ms": 14672,
+      "reason": "Audi Q5 Forward Collision Avoidance unintendedly activated while driving with no nearby objects; Automatic Emergency Braking engaged and greatly reduced speed; no warning lights.",
+      "started_at": "2025-08-06T07:00:21Z",
+      "step": 2,
+      "tokens": 2667,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-06T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "Q5",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving, the steering wheel suddenly locked up and could not be turned. Several warning lights simultaneously appeared on the dashboard including: \"Steering malfunction! Please stop vehicle\", \"Audi adaptive light malfunction! See owners manual\", \"Start/stop system malfuncti...",
+            "group": "adas",
+            "id": "2050823",
+            "make": "AUDI",
+            "model": "Q5",
+            "score": 13.1526,
+            "year": 2018
+          },
+          {
+            "excerpt": "The cars emergency brake system malfunctioned on our 2018 Audi Q5 Premium Plus, causing the brakes to lock up for no reason while traveling on a busy street at 35 mph. The force of the braking was enough to cause a bruise from the seatbelt. The risk is potential loss of control o...",
+            "group": "adas",
+            "id": "1800391",
+            "make": "AUDI",
+            "model": "Q5",
+            "score": 10.3543,
+            "year": 2018
+          },
+          {
+            "excerpt": "We purchased our 2018 AUDI Q5 in May 2018, which currently has 31,567 miles. Having done the majority of the driving, I am pleased overall, and continue to be a proud AUDI owner. However, as with all new cars, we had some glitches. For example, when backing out of the garage, the...",
+            "group": "adas",
+            "id": "1910700",
+            "make": "AUDI",
+            "model": "Q5",
+            "score": 6.8453,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-08-06T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-06T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-06T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-06T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-06T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-06T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-06T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

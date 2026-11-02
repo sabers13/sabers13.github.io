@@ -1,0 +1,252 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2157589",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "ROGUE",
+    "narrative": "Vehicle stalls repeatedly at highway speeds. Loss of motive power. Occurred five times in one trip. No alerts. It just says engine malfunction. Powering down.",
+    "received_at": "2025-12-15",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2157589",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157589",
+    "decided_at": "2025-12-15T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2157589",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Vehicle stalls repeatedly at highway speeds."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Loss of motive power."
+      },
+      {
+        "kind": "condition",
+        "quote": "at highway speeds"
+      },
+      {
+        "kind": "condition",
+        "quote": "Occurred five times in one trip."
+      },
+      {
+        "kind": "other",
+        "quote": "No alerts."
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine malfunction"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Powering down."
+      },
+      {
+        "kind": "safety",
+        "quote": "Vehicle stalls repeatedly at highway speeds."
+      },
+      {
+        "kind": "safety",
+        "quote": "Loss of motive power."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: repeated stalls at highway speeds with loss of motive power, engine malfunction message, and powering down; occurred five times in one trip.",
+    "symptoms": [
+      "stalls repeatedly at highway speeds",
+      "loss of motive power",
+      "engine malfunction message",
+      "powering down"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157589",
+    "created_at": "2025-12-15T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Since I drove it off the lot, the display screen intermittently and frequently blacks out leaving me with no music, no GPS, no cameras, no hands free phone. Dealership says they can’t fix it, Nissan North America says they can”t fix it. So I just spent over $49,000 for a brand ne...",
+      "group": "electrical_general",
+      "id": "2006285",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 1.3665,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-15T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007576,
+      "duration_ms": 8734,
+      "reason": "Electrical system: repeated stalls at highway speeds with loss of motive power, engine malfunction message, and powering down; occurred five times in one trip.",
+      "started_at": "2025-12-15T07:00:51Z",
+      "step": 2,
+      "tokens": 1746,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-12-15T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ROGUE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since I drove it off the lot, the display screen intermittently and frequently blacks out leaving me with no music, no GPS, no cameras, no hands free phone. Dealership says they can’t fix it, Nissan North America says they can”t fix it. So I just spent over $49,000 for a brand ne...",
+            "group": "electrical_general",
+            "id": "2006285",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 1.3665,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-15T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-15T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-15T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-15T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-15T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-15T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-15T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

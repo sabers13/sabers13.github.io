@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2123638",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL X",
+    "narrative": "Hazard flasher button in my 2-weeks old new Tesla Model X is not working.  On August 23, 2025, I was in a parking lot and needed to turn on the hazard flashers to signal to the car behind me that I was waiting for another vehicle to leave a parking space. I discovered that the hazard flasher button on my 2025 Tesla Model X did not work at all. Since I could not activate the hazard lights, I had to continue driving to find another parking spot.  This was the first time I tried to use the hazard flashers since purchasing the vehicle two weeks earlier, and they have never worked. I attempted both a power cycle and vehicle reset, but the hazard button remains completely unresponsive. On this model, the hazard flasher is integrated into a touch-sensitive bar in the center console, and there is no alternative physical or touchscreen backup control.  The absence of functioning hazard lights poses a significant safety risk. If I only discovered this defect during a true emergency situation (e.g., breakdown or accident), I would not have been able to warn surrounding traffic. In my opinion, relying on a touch bar for such a critical safety function is unreliable; a physical pressable button should be required.  Tesla has scheduled a service appointment, but it is two weeks away, and in the meantime, I am driving a vehicle without working hazard lights. This is a safety-critical defect that should be investigated.",
+    "received_at": "2025-08-25",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123638",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123638",
+    "decided_at": "2025-08-25T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123638",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Hazard flasher button in my 2-weeks old new Tesla Model X is not working."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the hazard flasher button on my 2025 Tesla Model X did not work at all"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I could not activate the hazard lights"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I attempted both a power cycle and vehicle reset, but the hazard button remains completely unresponsive."
+      },
+      {
+        "kind": "component_group",
+        "quote": "hazard lights"
+      },
+      {
+        "kind": "other",
+        "quote": "there is no alternative physical or touchscreen backup control"
+      },
+      {
+        "kind": "safety",
+        "quote": "The absence of functioning hazard lights poses a significant safety risk."
+      },
+      {
+        "kind": "safety",
+        "quote": "safety-critical defect"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: hazard flasher button unresponsive and hazard lights inoperative on a new 2025 Tesla Model X; first noticed in a parking lot, with no environmental conditions reported.",
+    "symptoms": [
+      "hazard flasher button unresponsive",
+      "hazard lights do not activate",
+      "no alternative backup control"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123638",
+    "created_at": "2025-08-25T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016342,
+      "duration_ms": 16199,
+      "reason": "Exterior lighting: hazard flasher button unresponsive and hazard lights inoperative on a new 2025 Tesla Model X; first noticed in a parking lot, with no environmental conditions reported.",
+      "started_at": "2025-08-25T07:00:01Z",
+      "step": 2,
+      "tokens": 3408,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL X",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-25T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-25T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-25T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-25T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

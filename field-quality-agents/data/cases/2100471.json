@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2100471",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD HYBRID",
+    "narrative": "Honda Accord Hybrid Touring Edition 2022 [XXX] [XXX] Complete Brake System Failure while pulling in to a Starbucks parking lot in Wayzata, MN. Braking system did not react or stop the car. Automatic braking system did not function either. As a result the car collided into a My Burger wall. No dashboard warning lights.  After collision police and ambulance arrived on the scene. Driver was taken to Urgent Care after sustaining soft tissue injuries affecting clavicle, sternum, neck and back.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-06-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2100471",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2100471",
+    "decided_at": "2025-06-13T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2100471",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Complete Brake System Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Braking system did not react or stop the car."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Automatic braking system did not function either."
+      },
+      {
+        "kind": "symptom",
+        "quote": "No dashboard warning lights."
+      },
+      {
+        "kind": "condition",
+        "quote": "while pulling in to a Starbucks parking lot"
+      },
+      {
+        "kind": "safety",
+        "quote": "the car collided into a My Burger wall"
+      },
+      {
+        "kind": "safety",
+        "quote": "Driver was taken to Urgent Care after sustaining soft tissue injuries affecting clavicle, sternum, neck and back."
+      }
+    ],
+    "conditions": [
+      "pulling in to a Starbucks parking lot"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Automatic emergency braking and complete brake system failure while pulling into a parking lot, causing a collision and injuries; no warning lights.",
+    "symptoms": [
+      "complete brake system failure",
+      "braking system did not react or stop the car",
+      "automatic braking system did not function",
+      "no dashboard warning lights",
+      "vehicle collided into a wall"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2100471",
+    "created_at": "2025-06-13T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hello, I bought a new Honda Accord Hybrid from Schaumburg Honda, Illinois on 11/23/2022. Within one week of buying the car, the following error messages appeared on the dashboard with the Brake System light on 1.Adaptive Cruise Control Systems Problem See Dealer 2.Collision Mitig...",
+      "group": "adas",
+      "id": "1866824",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 33.3665,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Honda Accord Hybrid. The contact stated while driving 55 MPH, the vehicle was independently braking. The contact stated that the Lane Departure warning light was illuminated. The contact was able to continue driving to his destination. The contact stated t...",
+      "group": "adas",
+      "id": "1823984",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 13.4011,
+      "year": 2022
+    },
+    {
+      "excerpt": "My daughter and I just bought this 2022 Honda Accord on 04/29/2023. On 6/28/2023, she was headed home, driving North, and was coming to the busy intersection of a County Road and Highway. She went to brake, but the brakes did not respond. In order to avoid hitting another vehicle...",
+      "group": "adas",
+      "id": "1910976",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 12.7517,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-13T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011929,
+      "duration_ms": 12471,
+      "reason": "Automatic emergency braking and complete brake system failure while pulling into a parking lot, causing a collision and injuries; no warning lights.",
+      "started_at": "2025-06-13T07:00:16Z",
+      "step": 2,
+      "tokens": 2560,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-13T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD HYBRID",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello, I bought a new Honda Accord Hybrid from Schaumburg Honda, Illinois on 11/23/2022. Within one week of buying the car, the following error messages appeared on the dashboard with the Brake System light on 1.Adaptive Cruise Control Systems Problem See Dealer 2.Collision Mitig...",
+            "group": "adas",
+            "id": "1866824",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 33.3665,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Honda Accord Hybrid. The contact stated while driving 55 MPH, the vehicle was independently braking. The contact stated that the Lane Departure warning light was illuminated. The contact was able to continue driving to his destination. The contact stated t...",
+            "group": "adas",
+            "id": "1823984",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 13.4011,
+            "year": 2022
+          },
+          {
+            "excerpt": "My daughter and I just bought this 2022 Honda Accord on 04/29/2023. On 6/28/2023, she was headed home, driving North, and was coming to the busy intersection of a County Road and Highway. She went to brake, but the brakes did not respond. In order to avoid hitting another vehicle...",
+            "group": "adas",
+            "id": "1910976",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 12.7517,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-13T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-13T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-13T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-13T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-13T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-13T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-13T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

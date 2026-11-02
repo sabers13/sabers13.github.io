@@ -1,0 +1,263 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2137049",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "SILVERADO 1500",
+    "narrative": "My telematic control module has intermittent connectivity. The check engine light comes on and off and the go's, on star and wifi comes and goes as well.   This vehicle has 52k miles on it and is only 2 years old.  The shop I took this to said it is VIN specific so the dealer is the only place that can fix it.  This is a safety issue due to no onstar as onstar claims to be a safety feature.   This needs a recall because this issue is all over the place on gm products.",
+    "received_at": "2025-10-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2137049",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2137049",
+    "decided_at": "2025-10-07T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2137049",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My telematic control module has intermittent connectivity"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The check engine light comes on and off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "on star and wifi comes and goes as well"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittent"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a safety issue due to no onstar"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2023 Chevrolet Silverado 1500 electrical system: telematics control module intermittent connectivity with check engine light and OnStar/WiFi coming and going at 52k miles.",
+    "symptoms": [
+      "telematic control module has intermittent connectivity",
+      "check engine light comes on and off",
+      "OnStar comes and goes",
+      "WiFi comes and goes"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2137049",
+    "created_at": "2025-10-07T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Multiple random electrical issues, including, but not limited to: 1) \"Service ESC\" warning activates causing the truck to have greatly reduced speed and power. Extremely dangerous at expressway speeds in heavy traffic. 2) Electrical system & engine completely shuts down with no w...",
+      "group": "electrical_general",
+      "id": "1983020",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 5.3416,
+      "year": 2023
+    },
+    {
+      "excerpt": "Several things have happened multiple times now. While driving on an interstate the truck suddenly lost power then from 70 mph dropped almost immediately to 30-35 which almost caused the vehicles behind me to slam into me. Another time the auto stop came on waiting at a red light...",
+      "group": "electrical_general",
+      "id": "1956806",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 4.7803,
+      "year": 2023
+    },
+    {
+      "excerpt": "Within weeks of buying the truck the Auto STOP/START quit working. I never gave it much thought until after a service visit and it was again working. I asked the dealer and they said the battery voltage dropped below a set level, turning off the Auto STOP/START. It quit again day...",
+      "group": "electrical_general",
+      "id": "2032750",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 2.0979,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006127,
+      "duration_ms": 6511,
+      "reason": "2023 Chevrolet Silverado 1500 electrical system: telematics control module intermittent connectivity with check engine light and OnStar/WiFi coming and going at 52k miles.",
+      "started_at": "2025-10-07T07:00:01Z",
+      "step": 2,
+      "tokens": 1569,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "SILVERADO 1500",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Multiple random electrical issues, including, but not limited to: 1) \"Service ESC\" warning activates causing the truck to have greatly reduced speed and power. Extremely dangerous at expressway speeds in heavy traffic. 2) Electrical system & engine completely shuts down with no w...",
+            "group": "electrical_general",
+            "id": "1983020",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 5.3416,
+            "year": 2023
+          },
+          {
+            "excerpt": "Several things have happened multiple times now. While driving on an interstate the truck suddenly lost power then from 70 mph dropped almost immediately to 30-35 which almost caused the vehicles behind me to slam into me. Another time the auto stop came on waiting at a red light...",
+            "group": "electrical_general",
+            "id": "1956806",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 4.7803,
+            "year": 2023
+          },
+          {
+            "excerpt": "Within weeks of buying the truck the Auto STOP/START quit working. I never gave it much thought until after a service visit and it was again working. I asked the dealer and they said the battery voltage dropped below a set level, turning off the Auto STOP/START. It quit again day...",
+            "group": "electrical_general",
+            "id": "2032750",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 2.0979,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-07T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-07T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-07T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-07T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

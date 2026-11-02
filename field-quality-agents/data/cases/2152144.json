@@ -1,0 +1,256 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2152144",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "•Battery not charging •“Service Hybrid System” message •Hybrid system malfunction warnings •Repeated system shutdowns or warnings related to propulsion",
+    "received_at": "2025-11-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2152144",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2152144",
+    "decided_at": "2025-11-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2152144",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Battery not charging"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Service Hybrid System"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Hybrid system malfunction warnings"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Repeated system shutdowns or warnings related to propulsion"
+      },
+      {
+        "kind": "safety",
+        "quote": "Repeated system shutdowns or warnings related to propulsion"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: battery not charging, Service Hybrid System message, hybrid system malfunction warnings, and repeated propulsion-related shutdowns/warnings.",
+    "symptoms": [
+      "battery not charging",
+      "Service Hybrid System message",
+      "hybrid system malfunction warnings",
+      "repeated system shutdowns or warnings related to propulsion"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2152144",
+    "created_at": "2025-11-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Vehicle lost power on multiple occasions where it could not be operated or jump started to get moving. Odometer blinking/blind spot indicators staying illuminated/rear back-up camera fault reading \"system unavailable\" Brake pedal kicking back when trying to start the Jeep. Gear s...",
+      "group": "electrical_general",
+      "id": "1970205",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 0.935,
+      "year": 2024
+    },
+    {
+      "excerpt": "Speedometer does not function. We have no idea how fast or slow we are going at any given time. It shows random speeds. Fearful we could cause an accident by unknowingly driving too fast or too slow. The speedometer display indicates we are going 40+ mph while we are sitting abso...",
+      "group": "electrical_general",
+      "id": "2001414",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 0.8092,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009757,
+      "duration_ms": 14180,
+      "reason": "Electrical system: battery not charging, Service Hybrid System message, hybrid system malfunction warnings, and repeated propulsion-related shutdowns/warnings.",
+      "started_at": "2025-11-26T07:00:01Z",
+      "step": 2,
+      "tokens": 2120,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-11-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Vehicle lost power on multiple occasions where it could not be operated or jump started to get moving. Odometer blinking/blind spot indicators staying illuminated/rear back-up camera fault reading \"system unavailable\" Brake pedal kicking back when trying to start the Jeep. Gear s...",
+            "group": "electrical_general",
+            "id": "1970205",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 0.935,
+            "year": 2024
+          },
+          {
+            "excerpt": "Speedometer does not function. We have no idea how fast or slow we are going at any given time. It shows random speeds. Fearful we could cause an accident by unknowingly driving too fast or too slow. The speedometer display indicates we are going 40+ mph while we are sitting abso...",
+            "group": "electrical_general",
+            "id": "2001414",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 0.8092,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

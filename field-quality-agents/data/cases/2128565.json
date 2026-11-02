@@ -1,0 +1,249 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2128565",
+    "make": "FORD",
+    "mileage": null,
+    "model": "TRANSIT",
+    "narrative": "This will be our second Balmar alternator that failed.  The original alternator was replaced in March 2025 after the alternator basically melted.  In April the new alternator was no longer charging the battery.  It was finally serviced in July 2025.  The dealership replaced a sensor and the recall to reduce the alternator output was performed.  The recall was supposed to prevent the alternator from failing,however, two days later  the alternator was no longer working.  August 2025, the dealership has been discussing the issue with Winnebago and Balmar.  September 2025 it was confirmed that the alternator needs to be replaced. This is a huge safety issue since the alternator will create a fire under the hood which was the case in our first incidence.  This is also a continuos problem with the Winnebago Ekko’s and a solution should not be to keep replacing the alternator with the same exact make and model.",
+    "received_at": "2025-09-09",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2128565",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128565",
+    "decided_at": "2025-09-09T07:01:03Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2128565",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the alternator basically melted"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the new alternator was no longer charging the battery"
+      },
+      {
+        "kind": "condition",
+        "quote": "the recall to reduce the alternator output was performed"
+      },
+      {
+        "kind": "condition",
+        "quote": "the alternator was no longer working"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was confirmed that the alternator needs to be replaced"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a huge safety issue"
+      },
+      {
+        "kind": "safety",
+        "quote": "the alternator will create a fire under the hood"
+      },
+      {
+        "kind": "component_group",
+        "quote": "alternator"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2023 Ford Transit (Winnebago Ekko) alternator repeatedly fails to charge the battery, melting and failing again days after a sensor replacement and output-reduction recall, with fire risk under the hood",
+    "symptoms": [
+      "alternator melted",
+      "alternator no longer charging the battery",
+      "alternator failed again shortly after repair and recall work",
+      "alternator confirmed to need replacement"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128565",
+    "created_at": "2025-09-09T07:01:01Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I've been waiting on a van for 500 days from Ford Motor Company. They built the van with a recall and now aren't giving me a time when the repair will be completed.",
+      "group": "electrical_general",
+      "id": "1944235",
+      "make": "FORD",
+      "model": "TRANSIT",
+      "score": 0.5754,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-09T07:00:55Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00044065,
+      "duration_ms": 4769,
+      "reason": "2023 Ford Transit (Winnebago Ekko) alternator repeatedly fails to charge the battery, melting and failing again days after a sensor replacement and output-reduction recall, with fire risk under the hood",
+      "started_at": "2025-09-09T07:00:56Z",
+      "step": 2,
+      "tokens": 1346,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-09-09T07:00:57Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I've been waiting on a van for 500 days from Ford Motor Company. They built the van with a recall and now aren't giving me a time when the repair will be completed.",
+            "group": "electrical_general",
+            "id": "1944235",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "score": 0.5754,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-09T07:00:58Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-09T07:00:59Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-09T07:01:00Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-09T07:01:02Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-09T07:01:04Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-09T07:01:05Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-09T07:01:06Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

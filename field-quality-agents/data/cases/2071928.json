@@ -1,0 +1,280 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2071928",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "THE EPC LIGHT WILL COME ON AT ANYTIME. MEANING WHILE DRIVING ON A STREET HIGHWAY OR FREEWAY. WHICH IS A SAFETY ISSUE. THE VEICHLE WILL LOSE POWER AND START TO SHAKE. THE LIGHT WILL GO OFF ONCE TURNED OFF AND TURNED BACK ON. THERE MOST BE SOME ELECTRICAL ISSUE. NOT SURE WHY THERE HAS NOT BEEN A RECALL ON THE 2018. THEY HAVE MANY COMPLAINTS AND ISSUES. THIS HAS BEEN AN ISSUE FOR MONTHS.",
+    "received_at": "2025-03-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2071928",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2071928",
+    "decided_at": "2025-03-07T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2071928",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE EPC LIGHT WILL COME ON AT ANYTIME."
+      },
+      {
+        "kind": "condition",
+        "quote": "MEANING WHILE DRIVING ON A STREET HIGHWAY OR FREEWAY."
+      },
+      {
+        "kind": "safety",
+        "quote": "WHICH IS A SAFETY ISSUE."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE VEICHLE WILL LOSE POWER AND START TO SHAKE."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE LIGHT WILL GO OFF ONCE TURNED OFF AND TURNED BACK ON."
+      },
+      {
+        "kind": "other",
+        "quote": "THIS HAS BEEN AN ISSUE FOR MONTHS."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: EPC light comes on intermittently while driving, with loss of power and shaking.",
+    "symptoms": [
+      "EPC light comes on",
+      "loss of power",
+      "shaking",
+      "light resets after restart"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2071928",
+    "created_at": "2025-03-07T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When starting up my vehicle the battery turns on but the engine will not start. My dash will light up with multiple warnings. These are the specific ones that warn me: Error: electronic stabilization control (ESC) Error: hill hold assist BRAKE - Brake booster faulty ERROR: Hill h...",
+      "group": "electrical_general",
+      "id": "1933622",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 12.6399,
+      "year": 2018
+    },
+    {
+      "excerpt": "THIS HAS HAPPENED 3 TIMES NOW. WHEN DRIVING, ALL EMERGENCY NOTIFICATION LIGHTS COME ON WITHOUT WARNING AND THE CAR APPLIES EMERGENCY BRAKING. THE DRIVER IS UNABLE TO ACCELERATE AND MUST COME TO A STOP IMMEDIATELY OR THE CAR DOES IT FOR THEM. THE ONLY WAY TO THEN DRIVE AGAIN, IS T...",
+      "group": "electrical_general",
+      "id": "1740054",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 10.0964,
+      "year": 2018
+    },
+    {
+      "excerpt": "My 2018 VW Atlas came from the factory with the A/C condensation drain tube twisted. This is a known issue with almost 9700 2018 VW atlas vehicles. A safety recall was issued to replace the drain hose and the air bag module. Somehow my car was missed and the dealer and Volkswagen...",
+      "group": "electrical_general",
+      "id": "1755163",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 8.6471,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00097455,
+      "duration_ms": 10814,
+      "reason": "Electrical system: EPC light comes on intermittently while driving, with loss of power and shaking.",
+      "started_at": "2025-03-07T07:00:01Z",
+      "step": 2,
+      "tokens": 2084,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When starting up my vehicle the battery turns on but the engine will not start. My dash will light up with multiple warnings. These are the specific ones that warn me: Error: electronic stabilization control (ESC) Error: hill hold assist BRAKE - Brake booster faulty ERROR: Hill h...",
+            "group": "electrical_general",
+            "id": "1933622",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 12.6399,
+            "year": 2018
+          },
+          {
+            "excerpt": "THIS HAS HAPPENED 3 TIMES NOW. WHEN DRIVING, ALL EMERGENCY NOTIFICATION LIGHTS COME ON WITHOUT WARNING AND THE CAR APPLIES EMERGENCY BRAKING. THE DRIVER IS UNABLE TO ACCELERATE AND MUST COME TO A STOP IMMEDIATELY OR THE CAR DOES IT FOR THEM. THE ONLY WAY TO THEN DRIVE AGAIN, IS T...",
+            "group": "electrical_general",
+            "id": "1740054",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 10.0964,
+            "year": 2018
+          },
+          {
+            "excerpt": "My 2018 VW Atlas came from the factory with the A/C condensation drain tube twisted. This is a known issue with almost 9700 2018 VW atlas vehicles. A safety recall was issued to replace the drain hose and the air bag module. Somehow my car was missed and the dealer and Volkswagen...",
+            "group": "electrical_general",
+            "id": "1755163",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 8.6471,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-07T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-07T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-07T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-07T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

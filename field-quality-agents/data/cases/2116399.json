@@ -1,0 +1,254 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2116399",
+    "make": "LEXUS",
+    "mileage": null,
+    "model": "CT",
+    "narrative": "I’m reporting a serious safety issue with my 2014 Lexus CT200h involving the brake booster and ABS pump/accumulator system. This issue is well-documented across Lexus CT200h and Toyota Prius V models, which use the same components. Lexus quietly issued a Customer Support Program (CSP) for the affected part but never notified me. I contacted Lexus and was told they “didn’t have to” notify all owners. After escalating, they claimed a letter was sent, but I confirmed my address and never received anything.  Several months before the CSP expired, I noticed inconsistent brake response, a soft/spongy pedal, and warning lights: ABS, traction control, brake, and TPMS. I took the car to an independent mechanic who misdiagnosed it as a TPMS issue. Six months later, a loud chime began sounding repeatedly, unrelated to seatbelt use. I brought the car to Lexus of North Miami, where they diagnosed a failing ABS pump and accumulator — the exact components covered by the CSP.  This is a critical safety failure. Loss of braking pressure compromises stopping distance and puts my safety and others at risk. Lexus refused assistance because the CSP expired, even though the problem began earlier and I sought help. Corporate and their Resolution Team were dismissive and unprofessional. The issue is reproducible and confirmed by a certified Lexus dealer.  Thousands of drivers online report the same pattern: trouble code C1391, buzzing brake actuator, unexplained chimes, hissing noises after shutdown, and external fluid leaks. Some dealers reportedly told customers to disable the chime rather than investigate. Toyota Prius owners with the same part received repairs under warranty or recall — Lexus drivers did not.  I urge NHTSA to investigate this defect before it leads to serious injury or death. This is not normal wear. It’s a known mechanical failure affecting a critical safety system. What makes this even more dangerous is that most owners won’t do the deep digging I did to connect it.",
+    "received_at": "2025-08-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116399",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116399",
+    "decided_at": "2025-08-01T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116399",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "brake booster and ABS pump/accumulator system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "inconsistent brake response, a soft/spongy pedal, and warning lights: ABS, traction control, brake, and TPMS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a loud chime began sounding repeatedly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "diagnosed a failing ABS pump and accumulator"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "trouble code C1391, buzzing brake actuator, unexplained chimes, hissing noises after shutdown, and external fluid leaks"
+      },
+      {
+        "kind": "condition",
+        "quote": "after shutdown"
+      },
+      {
+        "kind": "safety",
+        "quote": "Loss of braking pressure compromises stopping distance and puts my safety and others at risk."
+      },
+      {
+        "kind": "safety",
+        "quote": "serious injury or death"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [
+      "C1391"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2014 Lexus CT200h brake booster/ABS pump/accumulator: inconsistent brake response, soft/spongy pedal, warning lights, repeated chimes; code C1391.",
+    "symptoms": [
+      "inconsistent brake response",
+      "soft/spongy brake pedal",
+      "ABS, traction control, brake and TPMS warning lights",
+      "loud repeated chime unrelated to seatbelt use",
+      "failing ABS pump and accumulator",
+      "buzzing brake actuator",
+      "hissing noises after shutdown",
+      "external fluid leaks"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116399",
+    "created_at": "2025-08-01T07:00:51Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ABS, TRACTION CONTROL , BRAKE, A YELLOW EXCLAMMATION POINT, RED BRAKE LIGHT ALL COME ON, AS WARNING LIGHTS ON THE DASH BOARD, AND THE BREAKS START TO FEEL SPONGEY AND NOT WORK AS WELL. THE ACTUATOR STARTS TO BUZZ EVERY FEW SECONDS TRYING TO KEEP PRESSURE IN THE BRAKING SYSTEM, BU...",
+      "group": "electrical_general",
+      "id": "2021482",
+      "make": "LEXUS",
+      "model": "CT",
+      "score": 8.9698,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-01T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00078115,
+      "duration_ms": 14075,
+      "reason": "2014 Lexus CT200h brake booster/ABS pump/accumulator: inconsistent brake response, soft/spongy pedal, warning lights, repeated chimes; code C1391.",
+      "started_at": "2025-08-01T07:00:46Z",
+      "step": 2,
+      "tokens": 2086,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-01T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "LEXUS",
+        "model": "CT",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ABS, TRACTION CONTROL , BRAKE, A YELLOW EXCLAMMATION POINT, RED BRAKE LIGHT ALL COME ON, AS WARNING LIGHTS ON THE DASH BOARD, AND THE BREAKS START TO FEEL SPONGEY AND NOT WORK AS WELL. THE ACTUATOR STARTS TO BUZZ EVERY FEW SECONDS TRYING TO KEEP PRESSURE IN THE BRAKING SYSTEM, BU...",
+            "group": "electrical_general",
+            "id": "2021482",
+            "make": "LEXUS",
+            "model": "CT",
+            "score": 8.9698,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-01T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-01T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-01T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-01T07:00:52Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-01T07:00:54Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-01T07:00:55Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-01T07:00:56Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

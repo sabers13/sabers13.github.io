@@ -1,0 +1,349 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2084809",
+    "make": "HONDA",
+    "mileage": 300000,
+    "model": "CIVIC",
+    "narrative": "Odometer Fraud. The contact purchased a 2010 Honda Civic. The contact stated that upon attempting to register the vehicle with his insurance company, he discovered that the VIN on the vehicle and the VIN listed in their private messages were different. The vehicle was a private sale through Facebook Messenger. The contact attempted to reach out to the seller, but the contact stated that his number was blocked.  At the time of purchase, the vehicle mileage was approximately 133,000. Upon investigation, the contact discovered two different registered mileages; one over 200,00 and another over 300,000.",
+    "received_at": "2025-04-21",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2084809",
+    "status": "decided",
+    "year": 2010
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084809",
+    "decided_at": "2025-04-21T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2084809",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud."
+      },
+      {
+        "kind": "symptom",
+        "quote": "discovered that the VIN on the vehicle and the VIN listed in their private messages were different"
+      },
+      {
+        "kind": "symptom",
+        "quote": "two different registered mileages; one over 200,00 and another over 300,000."
+      },
+      {
+        "kind": "condition",
+        "quote": "At the time of purchase, the vehicle mileage was approximately 133,000."
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle was a private sale through Facebook Messenger."
+      }
+    ],
+    "conditions": [
+      "private sale through Facebook Messenger",
+      "purchase-time mileage approximately 133,000",
+      "registered mileages over 200,000 and over 300,000"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Verify the odometer/instrument cluster identity and mileage records because the reported VIN mismatch and conflicting registered mileages point to odometer fraud rather than a component failure.",
+    "symptoms": [
+      "odometer fraud",
+      "VIN mismatch between vehicle and seller messages",
+      "multiple conflicting registered mileages"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084809",
+    "created_at": "2025-04-21T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud.",
+        "source_id": "2084809",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "discovered that the VIN on the vehicle and the VIN listed in their private messages were different",
+        "source_id": "2084809",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "two different registered mileages; one over 200,00 and another over 300,000.",
+        "source_id": "2084809",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase, the vehicle mileage was approximately 133,000.",
+        "source_id": "2084809",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was a private sale through Facebook Messenger.",
+        "source_id": "2084809",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative describes a private purchase where the VIN on the vehicle differed from the VIN in the seller's messages and where two different registered mileages (over 200,000 and over 300,000) were found against a purchase-time reading of about 133,000. This is a documentation/identity discrepancy in the speedometer/odometer component group; no rulebook entry, recall, investigation or similar case matched, so no targeted load test is indicated and the standard field-quality test is proposed.",
+    "requested_info": [],
+    "summary": "Verify the odometer/instrument cluster identity and mileage records because the reported VIN mismatch and conflicting registered mileages point to odometer fraud rather than a component failure.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00057625,
+      "duration_ms": 7186,
+      "reason": "Instrument panel speedometer/odometer: odometer fraud with VIN mismatch and inconsistent registered mileages after a private purchase.",
+      "started_at": "2025-04-21T07:00:01Z",
+      "step": 2,
+      "tokens": 1524,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-04-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-21T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-04-21T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2010 Honda Civic. The contact stated that upon attempting to register the vehicle with his insurance company, he discovered that the VIN on the vehicle and the VIN listed in their private messages were different. The vehicle was a private sale through Facebook Messenger. The contact attempted to reach out to the seller, but the contact stated that his number was blocked.  At the time of purchase, the vehicle mileage was approximately 133,000. Upon investig"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-21T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-21T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-21T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0004941,
+      "duration_ms": 7236,
+      "reason": "The narrative describes a private purchase where the VIN on the vehicle differed from the VIN in the seller's messages and where two different registered mileages (over 200,000 and over 300,000) were found against a purchase-time reading of about 133,000. This is a documentation/identity discrepancy in the speedometer/odometer component group; no rulebook entry, recall, investigation or similar case matched, so no targeted load test is indicated and the standard field-quality test is proposed.",
+      "started_at": "2025-04-21T07:00:08Z",
+      "step": 9,
+      "tokens": 1497,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 1 dropped",
+      "started_at": "2025-04-21T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+          "Odometer Fraud.",
+          "discovered that the VIN on the vehicle and the VIN listed in their private messages were different",
+          "two different registered mileages; one over 200,00 and another over 300,000.",
+          "At the time of purchase, the vehicle mileage was approximately 133,000.",
+          "The vehicle was a private sale through Facebook Messenger."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 1,
+        "verified": 5
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-04-21T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-21T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-21T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-21T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-21T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

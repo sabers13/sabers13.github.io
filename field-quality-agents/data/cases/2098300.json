@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2098300",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "C300",
+    "narrative": "Panoramic glass sliding plastic brackets broke off while driving at 25-35 mph Lifting up the glass off the vehicle. Quick reaction saved the large detached glass from flying off into the roadway injuring or killing someone. Vehicle was 5 years old and out of warranty. Dealer estimated repair cost at $2500",
+    "received_at": "2025-06-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2098300",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2098300",
+    "decided_at": "2025-06-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2098300",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY/WIPER"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Panoramic glass sliding plastic brackets broke off while driving at 25-35 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lifting up the glass off the vehicle."
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at 25-35 mph"
+      },
+      {
+        "kind": "safety",
+        "quote": "flying off into the roadway injuring or killing someone"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Visibility/wiper body control: panoramic glass sliding plastic brackets broke off while driving at 25-35 mph, lifting the glass off the vehicle and risking detached glass flying into the roadway.",
+    "symptoms": [
+      "panoramic glass sliding plastic brackets broke off",
+      "glass lifted off the vehicle",
+      "detached glass could fly into the roadway"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2098300",
+    "created_at": "2025-06-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 Mercedes-Benz C300. The contact stated while driving 35 MPH, the panoramic sunroof detached from the vehicle without warning. The vehicle was driven to the dealer, and she was informed that the vehicle was not under warranty or recall. The contact was prov...",
+      "group": "body_controls",
+      "id": "1860943",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 10.6073,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Mercedes-Benz C300. The contact stated while driving 55 MPH, an abnormal wind sound was coming from the sunroof. The contact then heard a loud banging sound and saw the dethatched sunroof panel in the rear-view mirror. The contact pulled over to assess the...",
+      "group": "body_controls",
+      "id": "1845159",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 3.5392,
+      "year": 2015
+    },
+    {
+      "excerpt": "During a drive, I had the sunroof opened and then it suddenly started raining. When I tried to close the sunroof using the button, it wouldn't budge. I had to continue driving on the highway with rain pouring inside the vehicle. When I finally found a place to stop and check the...",
+      "group": "body_controls",
+      "id": "1904469",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 2.5871,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00071395,
+      "duration_ms": 8411,
+      "reason": "Visibility/wiper body control: panoramic glass sliding plastic brackets broke off while driving at 25-35 mph, lifting the glass off the vehicle and risking detached glass flying into the roadway.",
+      "started_at": "2025-06-06T07:00:01Z",
+      "step": 2,
+      "tokens": 1701,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "C300",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Mercedes-Benz C300. The contact stated while driving 35 MPH, the panoramic sunroof detached from the vehicle without warning. The vehicle was driven to the dealer, and she was informed that the vehicle was not under warranty or recall. The contact was prov...",
+            "group": "body_controls",
+            "id": "1860943",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 10.6073,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Mercedes-Benz C300. The contact stated while driving 55 MPH, an abnormal wind sound was coming from the sunroof. The contact then heard a loud banging sound and saw the dethatched sunroof panel in the rear-view mirror. The contact pulled over to assess the...",
+            "group": "body_controls",
+            "id": "1845159",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 3.5392,
+            "year": 2015
+          },
+          {
+            "excerpt": "During a drive, I had the sunroof opened and then it suddenly started raining. When I tried to close the sunroof using the button, it wouldn't budge. I had to continue driving on the highway with rain pouring inside the vehicle. When I finally found a place to stop and check the...",
+            "group": "body_controls",
+            "id": "1904469",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 2.5871,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

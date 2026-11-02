@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2127264",
+    "make": "FORD",
+    "mileage": null,
+    "model": "BRONCO SPORT",
+    "narrative": "I reached out to ford due to my 2024 bronco sport overheating and running hot. During the time of that complaint I was advised that my bronco currently has a recall that the fuel tank needs to be replaced but it is currently being deemed as non safety and will only be addressed if the vehicle is in for service. I was also advised that due to this recall it is currently a part of fords customer satisfaction program. Anything fuel related should be deemed as a safety recall considering fuel is a flammable chemical. I have requested a buy back as I no longer feel safe operating the vehicle or comfortable transporting my daughter in the vehicle as it aligns too closely with the known fuel safety recall currently present on some 2021-2024 bronco sports.",
+    "received_at": "2025-09-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2127264",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2127264",
+    "decided_at": "2025-09-05T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2127264",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "overheating and running hot"
+      },
+      {
+        "kind": "safety",
+        "quote": "fuel is a flammable chemical"
+      },
+      {
+        "kind": "safety",
+        "quote": "I no longer feel safe operating the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "comfortable transporting my daughter"
+      },
+      {
+        "kind": "other",
+        "quote": "fuel tank needs to be replaced"
+      },
+      {
+        "kind": "other",
+        "quote": "customer satisfaction program"
+      },
+      {
+        "kind": "safety",
+        "quote": "fuel safety recall"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system (given) with overheating/running hot symptoms; fuel tank recall mentioned, no specific operating conditions.",
+    "symptoms": [
+      "overheating",
+      "running hot"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2127264",
+    "created_at": "2025-09-05T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On [XXX], my 2024 Ford Bronco Sport spontaneously burst into flames while driven by my [XXX] son. Per a local bystander, there was smoke and fire observed around the undercarriage as he drove down the road. Multiple vehicles began honking while stopped at a red light. A driver al...",
+      "group": "electrical_general",
+      "id": "1998721",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 10.5389,
+      "year": 2024
+    },
+    {
+      "excerpt": "Battery / 12V system failure. Vehicle will not start, requires jump start to start vehicle. Battery does not sufficiently re-charge while vehicle is running and requires jump start next time vehicle is needs to be started. This issue has left me stranded on multiple occasions. Th...",
+      "group": "electrical_general",
+      "id": "2044811",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 3.7372,
+      "year": 2024
+    },
+    {
+      "excerpt": "Bought car June 27 and now being July 15 the car is completely dead and battery is dead. Charged the battery up works now. But battery will need to be replaced. Picture attached of battery after charging for 3 hours.",
+      "group": "electrical_general",
+      "id": "2007850",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 2.8308,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-05T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012778,
+      "duration_ms": 16073,
+      "reason": "Electrical system (given) with overheating/running hot symptoms; fuel tank recall mentioned, no specific operating conditions.",
+      "started_at": "2025-09-05T07:00:01Z",
+      "step": 2,
+      "tokens": 2703,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-05T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On [XXX], my 2024 Ford Bronco Sport spontaneously burst into flames while driven by my [XXX] son. Per a local bystander, there was smoke and fire observed around the undercarriage as he drove down the road. Multiple vehicles began honking while stopped at a red light. A driver al...",
+            "group": "electrical_general",
+            "id": "1998721",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 10.5389,
+            "year": 2024
+          },
+          {
+            "excerpt": "Battery / 12V system failure. Vehicle will not start, requires jump start to start vehicle. Battery does not sufficiently re-charge while vehicle is running and requires jump start next time vehicle is needs to be started. This issue has left me stranded on multiple occasions. Th...",
+            "group": "electrical_general",
+            "id": "2044811",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 3.7372,
+            "year": 2024
+          },
+          {
+            "excerpt": "Bought car June 27 and now being July 15 the car is completely dead and battery is dead. Charged the battery up works now. But battery will need to be replaced. Picture attached of battery after charging for 3 hours.",
+            "group": "electrical_general",
+            "id": "2007850",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 2.8308,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-09-05T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-05T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-05T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-05T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-05T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-05T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-05T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

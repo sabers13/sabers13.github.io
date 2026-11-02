@@ -1,0 +1,258 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2061702",
+    "make": "JAGUAR",
+    "mileage": null,
+    "model": "F-TYPE",
+    "narrative": "What component or system failed, and is it available for inspection upon request? The following component failures occurred in my 2020 Jaguar F-PACE (VIN [XXX] ): Electrical System – Driver-side wiring harness short circuits near the footwell, disabling door locks/window controls. Cooling System – Bleed pipe and expansion tank coolant leaks triggering low-fluid warnings. Battery System – Energy control module failure causing recurrent low-battery alerts. Braking System – Front/rear linings worn to 3mm/2mm, below SAE J866 safety thresholds. The vehicle remains available for NHTSA inspection at your request.  How was your safety or the safety of others put at risk? Electrical: Exposed wiring poses fire hazards (violating FMVSS 305), while inoperative door controls risk occupant entrapment (FMVSS 208). Brakes: Worn linings impair stopping distances (FMVSS 135), increasing collision risks. Cooling: Repeated coolant loss risks sudden engine overheating and highway breakdowns.  Has the problem been reproduced or confirmed by a dealer or independent service center? Jaguar-certified technicians at authorized dealerships confirmed the electrical, cooling, and battery failures during repairs in October-November 2024. The brake wear was documented but deemed \"within tolerance\" despite sub-spec measurements.  Has the vehicle or component been inspected by the manufacturer, police, insurance representatives, or others? Only Jaguar’s manufacturer-authorized dealers inspected the vehicle. No police, insurance, or third-party assessments occurred.  Were there any warning lamps, messages, or other symptoms of the problem prior to the failure, and when did they first appear? Yes, the issues were preceded by multiple warning messages, including \"low battery charge\" warnings related to the electrical system, a low coolant warning due to the cooling system failure, and an SOS system limited notification.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-01-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2061702",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2061702",
+    "decided_at": "2025-01-31T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2061702",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Driver-side wiring harness short circuits near the footwell"
+      },
+      {
+        "kind": "symptom",
+        "quote": "disabling door locks/window controls"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Energy control module failure causing recurrent low-battery alerts"
+      },
+      {
+        "kind": "condition",
+        "quote": "recurrent low-battery alerts"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Bleed pipe and expansion tank coolant leaks triggering low-fluid warnings"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Front/rear linings worn to 3mm/2mm"
+      },
+      {
+        "kind": "symptom",
+        "quote": "low battery charge"
+      },
+      {
+        "kind": "symptom",
+        "quote": "low coolant warning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "SOS system limited notification"
+      },
+      {
+        "kind": "safety",
+        "quote": "Exposed wiring poses fire hazards"
+      },
+      {
+        "kind": "safety",
+        "quote": "inoperative door controls risk occupant entrapment"
+      },
+      {
+        "kind": "safety",
+        "quote": "Worn linings impair stopping distances"
+      },
+      {
+        "kind": "safety",
+        "quote": "increasing collision risks"
+      },
+      {
+        "kind": "safety",
+        "quote": "sudden engine overheating and highway breakdowns"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system wiring harness short near the footwell disables door locks/window controls; recurrent low-battery alerts, coolant leaks, and worn brake linings also reported.",
+    "symptoms": [
+      "driver-side wiring harness short circuits near the footwell",
+      "door locks/window controls disabled",
+      "recurrent low-battery alerts",
+      "coolant leaks triggering low-fluid warnings",
+      "brake linings worn to 3mm/2mm",
+      "warning messages for low battery charge, low coolant, and SOS system limited"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2061702",
+    "created_at": "2025-01-31T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-31T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0018043,
+      "duration_ms": 27333,
+      "reason": "Electrical system wiring harness short near the footwell disables door locks/window controls; recurrent low-battery alerts, coolant leaks, and worn brake linings also reported.",
+      "started_at": "2025-01-31T07:00:16Z",
+      "step": 2,
+      "tokens": 3789,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-31T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JAGUAR",
+        "model": "F-TYPE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-31T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-31T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-31T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-31T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-31T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-31T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-31T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

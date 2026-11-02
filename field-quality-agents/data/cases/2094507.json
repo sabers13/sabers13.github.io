@@ -1,0 +1,326 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2094507",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "COLORADO",
+    "narrative": "I was driving the truck and first I got a \"Software Update Needed Vehicle must be parked and off\" this was followed quickly be a \"low tire pressure alarm\" 3 times in a short distance then I got a message \"Antilock brake issue do not drive over 62 MPH or vehicle may not stop\" then the brakes began to randomly slam on and release and smoke began to come out of the air vents. The next alarm was \"ESV Shutting down \" and I lost power steering and brakes; I tried getting the vehicle off the road out of the traffic lanes and the smoke was rapidly increasing in the cab then the engine shut down and I did my best to get the truck out of the traffic lanes and flames started coming from under the hood. A man stopped to help me out of the truck and by then the engine compartment was fully involved quickly and spreading into the interior of the cab. This all happened on country roads at about 40 MPH. I went to the medical center 2 days later as I was still having problems breathing from all the smoke.  This was a new truck I bought in early November and only had 6900 miles on it.",
+    "received_at": "2025-05-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2094507",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2094507",
+    "decided_at": "2025-05-23T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2094507",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Software Update Needed Vehicle must be parked and off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "low tire pressure alarm"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Antilock brake issue do not drive over 62 MPH or vehicle may not stop"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brakes began to randomly slam on and release"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke began to come out of the air vents"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ESV Shutting down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I lost power steering and brakes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke was rapidly increasing in the cab"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the engine shut down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "flames started coming from under the hood"
+      },
+      {
+        "kind": "safety",
+        "quote": "engine compartment was fully involved quickly and spreading into the interior of the cab"
+      },
+      {
+        "kind": "safety",
+        "quote": "I went to the medical center 2 days later as I was still having problems breathing from all the smoke"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving the truck"
+      },
+      {
+        "kind": "condition",
+        "quote": "on country roads at about 40 MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "only had 6900 miles on it"
+      }
+    ],
+    "conditions": [
+      "driving",
+      "country roads",
+      "about 40 MPH"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system on a 2024 Chevrolet Colorado with 6900 miles: while driving on country roads at about 40 MPH, multiple warnings appeared, brakes randomly applied and released, smoke entered the cab, power steering and brakes were lost, the engine shut down, and a hood fire spread into the cab; smoke inhalation required medical care.",
+    "symptoms": [
+      "software update needed message requiring vehicle parked and off",
+      "repeated low tire pressure alarm",
+      "antilock brake warning limiting speed to 62 MPH",
+      "brakes randomly applying and releasing",
+      "smoke from air vents",
+      "ESV shutdown message",
+      "loss of power steering and brakes",
+      "smoke rapidly increasing in cab",
+      "engine shutdown",
+      "flames from under hood",
+      "fire spreading into cab interior",
+      "breathing problems from smoke"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2094507",
+    "created_at": "2025-05-23T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Driving down the road and truck just randomly slams on brakes and says something is in front of me when it is not.",
+      "group": "electrical_general",
+      "id": "2018843",
+      "make": "CHEVROLET",
+      "model": "COLORADO",
+      "score": 7.8849,
+      "year": 2024
+    },
+    {
+      "excerpt": "While driving my dash and infotainment system shut off and rebooted. This left me without any vehicle information like speed nor any safety assist devices.",
+      "group": "electrical_general",
+      "id": "1995000",
+      "make": "CHEVROLET",
+      "model": "COLORADO",
+      "score": 4.4888,
+      "year": 2024
+    },
+    {
+      "excerpt": "After completing a right turn with a right turn signal, the vehicle will sometimes signal a left turn for 3 blinks. I believe this is because the turn signal stalk 'bounces' down to the left turn signal area when returning back to normal position from a right turn.​ ​ This is a s...",
+      "group": "electrical_general",
+      "id": "2009741",
+      "make": "CHEVROLET",
+      "model": "COLORADO",
+      "score": 3.8307,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-23T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0018031,
+      "duration_ms": 20488,
+      "reason": "Electrical system on a 2024 Chevrolet Colorado with 6900 miles: while driving on country roads at about 40 MPH, multiple warnings appeared, brakes randomly applied and released, smoke entered the cab, power steering and brakes were lost, the engine shut down, and a hood fire spread into the cab; smoke inhalation required medical care.",
+      "started_at": "2025-05-23T07:00:16Z",
+      "step": 2,
+      "tokens": 3643,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-23T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "COLORADO",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Driving down the road and truck just randomly slams on brakes and says something is in front of me when it is not.",
+            "group": "electrical_general",
+            "id": "2018843",
+            "make": "CHEVROLET",
+            "model": "COLORADO",
+            "score": 7.8849,
+            "year": 2024
+          },
+          {
+            "excerpt": "While driving my dash and infotainment system shut off and rebooted. This left me without any vehicle information like speed nor any safety assist devices.",
+            "group": "electrical_general",
+            "id": "1995000",
+            "make": "CHEVROLET",
+            "model": "COLORADO",
+            "score": 4.4888,
+            "year": 2024
+          },
+          {
+            "excerpt": "After completing a right turn with a right turn signal, the vehicle will sometimes signal a left turn for 3 blinks. I believe this is because the turn signal stalk 'bounces' down to the left turn signal area when returning back to normal position from a right turn.​ ​ This is a s...",
+            "group": "electrical_general",
+            "id": "2009741",
+            "make": "CHEVROLET",
+            "model": "COLORADO",
+            "score": 3.8307,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-05-23T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-23T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-23T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-23T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-23T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-23T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-23T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

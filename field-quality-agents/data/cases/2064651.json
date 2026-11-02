@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2064651",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "Traveling on highway, heard noise coming from the engine. I was close to an off ramp and got off the highway. In the process of getting on the off ramp alarms went off. Turned on the flashers, came to a stop partially on the shoulder. Turned off the vehicle, turned it back on and it started right up. Turned to head into town to get some place safe to check the issue and all the alarms went off again. Put the car into neutral and coasted down the road to a local restaurant parking lot. Once safely parked, I opened the hood and my engine was on fire. I ran to the window of the restaurant to get a fire extinguisher and was able to put out the fire quickly.  I contacted my insurance carrier and went through the process of repairing the truck. One body shop got it back up and running. Another shop fixed the cosmetic issues. However insurance would only fix the damage from the fire, not the cause of the fire. The truck has been throwing a code stating the EGR Cooler is not functioning properly. Stellantis sent out an independent investigator, however he wasn't allowed to look at the pictures that the body shop took after the incident. Since the truck was put back together and the cosmetic damage was repaired, he couldn't tell the cause of the fire.   This EGR Cooler was supposed to be replaced during the recall (NHTSA Campaign # 19V757000), however I don't believe it was. Currently mine is cracked and supposedly the parts are on backorder. So there may need to be a recall to the recall.",
+    "received_at": "2025-02-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2064651",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2064651",
+    "decided_at": "2025-02-11T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2064651",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "heard noise coming from the engine"
+      },
+      {
+        "kind": "symptom",
+        "quote": "alarms went off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my engine was on fire"
+      },
+      {
+        "kind": "safety",
+        "quote": "my engine was on fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "throwing a code stating the EGR Cooler is not functioning properly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Currently mine is cracked"
+      },
+      {
+        "kind": "other",
+        "quote": "This EGR Cooler was supposed to be replaced during the recall (NHTSA Campaign # 19V757000), however I don't believe it was."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2018 RAM 1500 electrical system: engine noise and alarms, then engine fire; EGR Cooler code and cracked cooler noted after recall concern.",
+    "symptoms": [
+      "noise coming from the engine",
+      "alarms went off",
+      "engine fire",
+      "EGR Cooler is not functioning properly",
+      "cracked EGR cooler"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2064651",
+    "created_at": "2025-02-11T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Blower motor stopped working so couldn't get window to defrost so I could see to drive. Replaced blower motor, still didn't work took it to shop they said connector to the TIPM module had melted so had it replaced plus asked mechanic to check all wiring, grounds,ect to see why bl...",
+      "group": "electrical_general",
+      "id": "1952406",
+      "make": "RAM",
+      "model": "1500",
+      "score": 35.4884,
+      "year": 2018
+    },
+    {
+      "excerpt": "TL* THE CONTACT OWNS A 2018 RAM 1500. THE CONTACT STATED THAT WHILE THE VEHICLE WAS PARKED, THE CONTACT NOTICED THAT OIL WAS LEAKING FROM UNDERNEATH THE VEHICLE. THE VEHICLE WAS TAKEN TO AN INDEPENDENT MECHANIC WHERE IT WAS DIAGNOSED WITH A CRACKED ENGINE FILTER HOUSING AND COOLA...",
+      "group": "electrical_general",
+      "id": "1730852",
+      "make": "RAM",
+      "model": "1500",
+      "score": 31.4636,
+      "year": 2018
+    },
+    {
+      "excerpt": "The vehicle turns on and off by itself and the radio and ac also started to turn on and switched between hi and low and the radio stations kept switching stations the power lock window buttons in times worked other times it would be stuck and didn't work. The key fob was switched...",
+      "group": "electrical_general",
+      "id": "1982287",
+      "make": "RAM",
+      "model": "1500",
+      "score": 30.4656,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-11T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00087205,
+      "duration_ms": 16446,
+      "reason": "2018 RAM 1500 electrical system: engine noise and alarms, then engine fire; EGR Cooler code and cracked cooler noted after recall concern.",
+      "started_at": "2025-02-11T07:00:16Z",
+      "step": 2,
+      "tokens": 2158,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-11T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Blower motor stopped working so couldn't get window to defrost so I could see to drive. Replaced blower motor, still didn't work took it to shop they said connector to the TIPM module had melted so had it replaced plus asked mechanic to check all wiring, grounds,ect to see why bl...",
+            "group": "electrical_general",
+            "id": "1952406",
+            "make": "RAM",
+            "model": "1500",
+            "score": 35.4884,
+            "year": 2018
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNS A 2018 RAM 1500. THE CONTACT STATED THAT WHILE THE VEHICLE WAS PARKED, THE CONTACT NOTICED THAT OIL WAS LEAKING FROM UNDERNEATH THE VEHICLE. THE VEHICLE WAS TAKEN TO AN INDEPENDENT MECHANIC WHERE IT WAS DIAGNOSED WITH A CRACKED ENGINE FILTER HOUSING AND COOLA...",
+            "group": "electrical_general",
+            "id": "1730852",
+            "make": "RAM",
+            "model": "1500",
+            "score": 31.4636,
+            "year": 2018
+          },
+          {
+            "excerpt": "The vehicle turns on and off by itself and the radio and ac also started to turn on and switched between hi and low and the radio stations kept switching stations the power lock window buttons in times worked other times it would be stuck and didn't work. The key fob was switched...",
+            "group": "electrical_general",
+            "id": "1982287",
+            "make": "RAM",
+            "model": "1500",
+            "score": 30.4656,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-11T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-11T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-11T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-11T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-11T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-11T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-11T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

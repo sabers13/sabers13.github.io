@@ -1,0 +1,243 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2084135",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CIVIC",
+    "narrative": "The contact owns a 2001 Honda Civic. The contact received notification of NHTSA Campaign Number: 19V501000 (Air Bags) and would like to be removed from the recall distribution list. The local dealer and manufacturer were contacted.",
+    "received_at": "2025-04-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2084135",
+    "status": "needs_engineer",
+    "year": 2001
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084135",
+    "decided_at": "2025-04-18T07:00:36Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2084135",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 19V501000"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact received notification of NHTSA Campaign Number: 19V501000 (Air Bags)"
+      },
+      {
+        "kind": "other",
+        "quote": "would like to be removed from the recall distribution list"
+      },
+      {
+        "kind": "other",
+        "quote": "The local dealer and manufacturer were contacted."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "19V501000"
+    ],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "AIR BAGS: 2001 Honda Civic owner received recall 19V501000 notice and requests removal from distribution list; no symptom or conditions reported.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084135",
+    "created_at": "2025-04-18T07:00:33Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "symptom"
+    ],
+    "summary": "Information request: symptom",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I read and article about the advisory made by the Honda and the U.S. Government to \"do not drive\" for the 2001 through 2003 vehicles with Takata inflators that have a high possibility of exploiting and hurling shrapnel in a crash.",
+      "group": "restraints",
+      "id": "1871676",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "score": 2.9447,
+      "year": 2001
+    },
+    {
+      "excerpt": "NOT INVOLVED IN ANY ACCIDENT. BOUGHT THE VEHICLE USED AND TITLE WAS SALVAGED. PASSENGER SIDE AIRBAGS WERE DEPLOYED PRIOR TO PURCHASE. I TOOK THE CAR INTO HOBDA TO SEE ABOUT THIS RECALL AND WANTED THEM TO REOLACE THE AIRBAGS. THEY DID JOT DUE TO THE FACT THAT THEY WERE DEPLOYED AL...",
+      "group": "restraints",
+      "id": "1692178",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "score": 1.3635,
+      "year": 2001
+    },
+    {
+      "excerpt": "SEAT BELTS ARE VERY DIFFICULT TO FASTEN. IT TAKES SEVERAL QUICK JABS WITH THE BELT INTO THE RECEIVER TO GET BELT TO LOCK IN PLACE SO BELT IS ENGAGED. OTHERWISE BELT CANNOT BE WORN VEHICLE WAS STATIONARY, THIS ALL STARTED AS SOON AS I RECEIVED OWNERSHIP OF VEHICLE IN ABOUT 2007.",
+      "group": "restraints",
+      "id": "1725221",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "score": 1.3635,
+      "year": 2001
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-18T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00071785,
+      "duration_ms": 9293,
+      "reason": "AIR BAGS: 2001 Honda Civic owner received recall 19V501000 notice and requests removal from distribution list; no symptom or conditions reported.",
+      "started_at": "2025-04-18T07:00:31Z",
+      "step": 2,
+      "tokens": 1691,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-18T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2001
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I read and article about the advisory made by the Honda and the U.S. Government to \"do not drive\" for the 2001 through 2003 vehicles with Takata inflators that have a high possibility of exploiting and hurling shrapnel in a crash.",
+            "group": "restraints",
+            "id": "1871676",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "score": 2.9447,
+            "year": 2001
+          },
+          {
+            "excerpt": "NOT INVOLVED IN ANY ACCIDENT. BOUGHT THE VEHICLE USED AND TITLE WAS SALVAGED. PASSENGER SIDE AIRBAGS WERE DEPLOYED PRIOR TO PURCHASE. I TOOK THE CAR INTO HOBDA TO SEE ABOUT THIS RECALL AND WANTED THEM TO REOLACE THE AIRBAGS. THEY DID JOT DUE TO THE FACT THAT THEY WERE DEPLOYED AL...",
+            "group": "restraints",
+            "id": "1692178",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "score": 1.3635,
+            "year": 2001
+          },
+          {
+            "excerpt": "SEAT BELTS ARE VERY DIFFICULT TO FASTEN. IT TAKES SEVERAL QUICK JABS WITH THE BELT INTO THE RECEIVER TO GET BELT TO LOCK IN PLACE SO BELT IS ENGAGED. OTHERWISE BELT CANNOT BE WORN VEHICLE WAS STATIONARY, THIS ALL STARTED AS SOON AS I RECEIVED OWNERSHIP OF VEHICLE IN ABOUT 2007.",
+            "group": "restraints",
+            "id": "1725221",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "score": 1.3635,
+            "year": 2001
+          }
+        ]
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: symptom",
+      "started_at": "2025-04-18T07:00:34Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-18T07:00:35Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-04-18T07:00:37Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-18T07:00:38Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-04-18T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

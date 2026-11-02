@@ -1,0 +1,246 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2123297",
+    "make": "BUICK",
+    "mileage": null,
+    "model": "ENCORE",
+    "narrative": "When crossing through an intersection at approximately 45mph, I was struck by another vehicle, speed unknown, who failed to stop at a stop sign. My vehicle was struck on the front passenger corner. My vehicle continued in a forward motion for several hundred feet. Both driver and front passenger wore seat belts, however the driver struck her head on steering wheel, loosing consciousness for several minutes. Side airbags deployed, however front air bags did not",
+    "received_at": "2025-08-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123297",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123297",
+    "decided_at": "2025-08-23T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123297",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Side airbags deployed, however front air bags did not"
+      },
+      {
+        "kind": "condition",
+        "quote": "crossing through an intersection at approximately 45mph"
+      },
+      {
+        "kind": "safety",
+        "quote": "driver struck her head on steering wheel, loosing consciousness for several minutes"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2018 Buick Encore air bags: front air bags did not deploy after a ~45 mph intersection collision; side airbags deployed; driver lost consciousness.",
+    "symptoms": [
+      "front air bags did not deploy",
+      "driver struck head on steering wheel and lost consciousness"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123297",
+    "created_at": "2025-08-23T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Stabilitrak warning comes on and car stalls out. Passenger seat belt doesn't clip person in correctly.",
+      "group": "restraints",
+      "id": "1820744",
+      "make": "BUICK",
+      "model": "ENCORE",
+      "score": 1.7152,
+      "year": 2018
+    },
+    {
+      "excerpt": "previous airbag recall, but not including my VIN. However, my airbag light is on and malfunctioning. It will cost $200 to just diagnose the repair and no idea what the cost to fix this saftey issue on a car that is only 5 years old. Please help!",
+      "group": "restraints",
+      "id": "1858973",
+      "make": "BUICK",
+      "model": "ENCORE",
+      "score": 0.5816,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009556,
+      "duration_ms": 11785,
+      "reason": "2018 Buick Encore air bags: front air bags did not deploy after a ~45 mph intersection collision; side airbags deployed; driver lost consciousness.",
+      "started_at": "2025-08-23T07:00:01Z",
+      "step": 2,
+      "tokens": 2115,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-08-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BUICK",
+        "model": "ENCORE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Stabilitrak warning comes on and car stalls out. Passenger seat belt doesn't clip person in correctly.",
+            "group": "restraints",
+            "id": "1820744",
+            "make": "BUICK",
+            "model": "ENCORE",
+            "score": 1.7152,
+            "year": 2018
+          },
+          {
+            "excerpt": "previous airbag recall, but not including my VIN. However, my airbag light is on and malfunctioning. It will cost $200 to just diagnose the repair and no idea what the cost to fix this saftey issue on a car that is only 5 years old. Please help!",
+            "group": "restraints",
+            "id": "1858973",
+            "make": "BUICK",
+            "model": "ENCORE",
+            "score": 0.5816,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-23T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-23T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-23T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

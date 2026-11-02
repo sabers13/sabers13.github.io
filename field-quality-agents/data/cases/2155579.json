@@ -1,0 +1,277 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2155579",
+    "make": "CHRYSLER",
+    "mileage": 165000,
+    "model": "PACIFICA",
+    "narrative": "The contact owned a 2017 Chrysler Pacifica. The contact stated that while the contact's husband was driving at an undisclosed speed, the contact's vehicle was involved in a crash. The contact stated that a nearby vehicle drove in front of the contact's vehicle and then suddenly applied the brakes. In addition, the contact vehicle rear-ended another vehicle. The contact stated that the rear passenger seat belt did not restrain. The contact stated that the waist strap did not restrain. The contact's son, who was seated in the rear passenger seat, was thrown forward. The contact's son did not receive medical attention; however sustained injuries to his neck, back, and right and left shoulders. In addition, the contact's son sustained severe pain in his lap area. The contact, who was seated in the front passenger's seat, later went to the local medical center. The contact sustained severe pain and bruises to both legs from the air bag deployment. The contact stated that the ongoing pain was so severe. The vehicle was taken to a local tow yard. The vehicle was condemned as a total loss. A Police report was filed. In addition, the contact referenced an unknown seat belt recall that was initiated a while ago. The dealer was contacted; however, the contact was informed at that time that the contact's VIN was not associated with the unknown recall. The manufacturer was not made aware of the failure. The failure mileage was approximately 165,000.",
+    "received_at": "2025-12-09",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2155579",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2155579",
+    "decided_at": "2025-12-09T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2155579",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the contact's husband was driving at an undisclosed speed, the contact's vehicle was involved in a crash"
+      },
+      {
+        "kind": "condition",
+        "quote": "a nearby vehicle drove in front of the contact's vehicle and then suddenly applied the brakes"
+      },
+      {
+        "kind": "condition",
+        "quote": "the contact vehicle rear-ended another vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the rear passenger seat belt did not restrain"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the waist strap did not restrain"
+      },
+      {
+        "kind": "symptom",
+        "quote": "was thrown forward"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sustained injuries to his neck, back, and right and left shoulders"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the contact sustained severe pain and bruises to both legs from the air bag deployment"
+      },
+      {
+        "kind": "safety",
+        "quote": "the contact's vehicle was involved in a crash"
+      }
+    ],
+    "conditions": [
+      "crash",
+      "rear-ended another vehicle",
+      "nearby vehicle suddenly applied brakes"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2017 Chrysler Pacifica restraints: rear passenger seat belt and waist strap failed to restrain in a rear-end crash; occupant thrown forward and injured; air bag deployment caused leg pain and bruises.",
+    "symptoms": [
+      "rear passenger seat belt did not restrain",
+      "waist strap did not restrain",
+      "rear passenger thrown forward",
+      "injuries to neck, back, and shoulders",
+      "severe pain and bruises to both legs from air bag deployment"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2155579",
+    "created_at": "2025-12-09T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2017 Chrysler Pacifica. The contact stated that the driver's side rear seat belt was unable to extend to latch his child into the seat. The vehicle was taken to the dealer where it was diagnosed that the driver's side rear seat belt assembly needed to be replac...",
+      "group": "restraints",
+      "id": "1822956",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 14.9402,
+      "year": 2017
+    },
+    {
+      "excerpt": "My sliding door came off the hinge and shatter my backwindow. The door was hesitating and would not close it stood stuck. When I pulled it the back window shattered. I have no warranty it's now an out of pocket expense. My airbag light is on when I took it to the dealership for a...",
+      "group": "restraints",
+      "id": "1838640",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 0.9101,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001207,
+      "duration_ms": 13195,
+      "reason": "2017 Chrysler Pacifica restraints: rear passenger seat belt and waist strap failed to restrain in a rear-end crash; occupant thrown forward and injured; air bag deployment caused leg pain and bruises.",
+      "started_at": "2025-12-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2690,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-12-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2017 Chrysler Pacifica. The contact stated that the driver's side rear seat belt was unable to extend to latch his child into the seat. The vehicle was taken to the dealer where it was diagnosed that the driver's side rear seat belt assembly needed to be replac...",
+            "group": "restraints",
+            "id": "1822956",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 14.9402,
+            "year": 2017
+          },
+          {
+            "excerpt": "My sliding door came off the hinge and shatter my backwindow. The door was hesitating and would not close it stood stuck. When I pulled it the back window shattered. I have no warranty it's now an out of pocket expense. My airbag light is on when I took it to the dealership for a...",
+            "group": "restraints",
+            "id": "1838640",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 0.9101,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-12-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-09T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-09T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-09T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-09T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

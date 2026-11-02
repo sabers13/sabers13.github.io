@@ -1,0 +1,248 @@
+{
+  "case": {
+    "component": "HYBRID PROPULSION SYSTEM",
+    "group": "ev_propulsion",
+    "id": "2087150",
+    "make": "TOYOTA",
+    "mileage": 117000,
+    "model": "PRIUS",
+    "narrative": "The contact owns a 2011 Toyota Prius. The contact stated that while operating the vehicle, the check engine warning light remained illuminated, the vehicle had unexpectedly shut off. Additionally, the transmission failed to shift into the intended gear. The vehicle was towed to the local dealer who replaced the catalytic converter, but the failure persisted. The vehicle was towed back to the dealer who diagnosed that the inverter was faulty and needed to be replaced. The vehicle was not repaired. The manufacturer was notified of the failure, but no assistance was offered. The contact was informed that the VIN was not included in the NHTSA Campaign Number: 14V053000 (HYBRID PROPULSION SYSTEM, ELECTRICAL SYSTEM). The contact stated that the vehicle had experienced the failure listed in the recall. The failure mileage was 117,000.",
+    "received_at": "2025-04-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2087150",
+    "status": "decided",
+    "year": 2011
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2087150",
+    "decided_at": "2025-04-29T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2087150",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "HYBRID PROPULSION SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the check engine warning light remained illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle had unexpectedly shut off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the transmission failed to shift into the intended gear"
+      },
+      {
+        "kind": "condition",
+        "quote": "who replaced the catalytic converter, but the failure persisted"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the inverter was faulty and needed to be replaced"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle had unexpectedly shut off"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Number: 14V053000"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "ev_propulsion",
+    "safety_relevant": true,
+    "summary": "Hybrid propulsion system: check engine light stayed on, vehicle unexpectedly shut off, transmission failed to shift, and inverter was diagnosed faulty after catalytic converter replacement",
+    "symptoms": [
+      "check engine warning light remained illuminated",
+      "vehicle unexpectedly shut off",
+      "transmission failed to shift into the intended gear",
+      "failure persisted after catalytic converter replacement"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2087150",
+    "created_at": "2025-04-29T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "TL* THE CONTACT OWNS A 2011 TOYOTA PRIUS. THE CONTACT STATED THAT WHILE DRIVING AT 55 MPH, THE VEHICLE STALLED WITH SEVERAL UNKNOWN WARNING LIGHTS ILLUMINATED. THE VEHICLE WAS TOWED TO THE RESIDENCE. THE CONTACT STATED THAT THE VEHICLE WAS INCLUDED IN NHTSA CAMPAIGN NUMBERS: 18V6...",
+      "group": "ev_propulsion",
+      "id": "1666872",
+      "make": "TOYOTA",
+      "model": "PRIUS",
+      "score": 8.5706,
+      "year": 2011
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00062095,
+      "duration_ms": 8246,
+      "reason": "Hybrid propulsion system: check engine light stayed on, vehicle unexpectedly shut off, transmission failed to shift, and inverter was diagnosed faulty after catalytic converter replacement",
+      "started_at": "2025-04-29T07:00:01Z",
+      "step": 2,
+      "tokens": 1627,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "PRIUS",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "TL* THE CONTACT OWNS A 2011 TOYOTA PRIUS. THE CONTACT STATED THAT WHILE DRIVING AT 55 MPH, THE VEHICLE STALLED WITH SEVERAL UNKNOWN WARNING LIGHTS ILLUMINATED. THE VEHICLE WAS TOWED TO THE RESIDENCE. THE CONTACT STATED THAT THE VEHICLE WAS INCLUDED IN NHTSA CAMPAIGN NUMBERS: 18V6...",
+            "group": "ev_propulsion",
+            "id": "1666872",
+            "make": "TOYOTA",
+            "model": "PRIUS",
+            "score": 8.5706,
+            "year": 2011
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-04-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-29T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-29T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-29T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-29T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

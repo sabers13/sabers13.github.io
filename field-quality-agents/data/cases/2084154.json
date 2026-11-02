@@ -1,0 +1,241 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2084154",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "TACOMA",
+    "narrative": "I have a new 2024 Toyota Tacoma that I purchased December 2024. my dashboard lit up the morning of Thursday, April 17. Drive start warning on the dashboard and a secondary breaking malfunction warning I contacted my local Toyota dealer and informed him that my vehicle is giving me warnings and I only have 13,000  miles on the vehicle. I took the vehicle and they told me that it was the fuel pump they replaced the fuel pump return the vehicle to me, and before I could leave the parking lot both codes on the dashboard shut up again and the vehicle would not move. I am writing this report to document what is going on with the vehicle. I believe that it is a lemon and there’s something majorly wrong with it. I brought the vehicle brand new in December and again it’s only has 13,000 miles on it right now.",
+    "received_at": "2025-04-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2084154",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084154",
+    "decided_at": "2025-04-18T07:00:50Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2084154",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my dashboard lit up"
+      },
+      {
+        "kind": "condition",
+        "quote": "the morning of Thursday, April 17"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Drive start warning on the dashboard"
+      },
+      {
+        "kind": "symptom",
+        "quote": "secondary breaking malfunction warning"
+      },
+      {
+        "kind": "condition",
+        "quote": "they replaced the fuel pump"
+      },
+      {
+        "kind": "symptom",
+        "quote": "both codes on the dashboard shut up again"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle would not move"
+      },
+      {
+        "kind": "safety",
+        "quote": "secondary breaking malfunction warning"
+      }
+    ],
+    "conditions": [
+      "morning",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2024 Toyota Tacoma electrical system: dashboard lit up with drive start and secondary braking malfunction warnings; fuel pump replaced but codes returned and vehicle would not move.",
+    "symptoms": [
+      "dashboard lit up",
+      "drive start warning",
+      "secondary braking malfunction warning",
+      "dashboard codes returned",
+      "vehicle would not move"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084154",
+    "created_at": "2025-04-18T07:00:48Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Gas gauge is showing the incorrect amount of fuel left. I filled up for gas 3 days ago, my commute is very short so I know I didn't burn through that much gas in 3 days. I was in between 3/4ths and full with 229 DTE before leaving. Got to my destination and I now had a full tank...",
+      "group": "electrical_general",
+      "id": "2016562",
+      "make": "TOYOTA",
+      "model": "TACOMA",
+      "score": 3.2005,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-18T07:00:43Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012817,
+      "duration_ms": 14643,
+      "reason": "2024 Toyota Tacoma electrical system: dashboard lit up with drive start and secondary braking malfunction warnings; fuel pump replaced but codes returned and vehicle would not move.",
+      "started_at": "2025-04-18T07:00:44Z",
+      "step": 2,
+      "tokens": 2732,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-18T07:00:45Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "TACOMA",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Gas gauge is showing the incorrect amount of fuel left. I filled up for gas 3 days ago, my commute is very short so I know I didn't burn through that much gas in 3 days. I was in between 3/4ths and full with 229 DTE before leaving. Got to my destination and I now had a full tank...",
+            "group": "electrical_general",
+            "id": "2016562",
+            "make": "TOYOTA",
+            "model": "TACOMA",
+            "score": 3.2005,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-18T07:00:46Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-18T07:00:47Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-18T07:00:49Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-18T07:00:51Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-18T07:00:52Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-18T07:00:53Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

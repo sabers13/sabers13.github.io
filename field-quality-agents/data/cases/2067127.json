@@ -1,0 +1,378 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2067127",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "LEAF",
+    "narrative": "I was just at Empire Lakewood Nissan Dealership in Colorado on [XXX] for a few things. During my visit recall P4A17 was performed. I now notice on my drive in to work my heater isn't working now. It just blows cold air through the defroster and not at my feet as the HVAC indicator shows. I always have my auto climate feature set to 68 degrees F. It didn't finally come on until I'm almost to work. One of the best things about an electric car is I don't have to wait for the engine/coolant to warm up. My car was always warm by the time I left my neighborhood. Now I'm pulling into work and it's finally warm? What did P4A17 do to my car?  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-02-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2067127",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2067127",
+    "decided_at": "2025-02-19T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2067127",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "During my visit recall P4A17 was performed."
+      },
+      {
+        "kind": "fault_code",
+        "quote": "P4A17"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my heater isn't working now"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It just blows cold air through the defroster and not at my feet as the HVAC indicator shows."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I always have my auto climate feature set to 68 degrees F."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It didn't finally come on until I'm almost to work."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [
+      "P4A17"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Perform an installation check before testing because the heater blows cold and airflow is misdirected after recall P4A17 service.",
+    "symptoms": [
+      "heater not working",
+      "blows cold air through the defroster",
+      "air not directed to feet despite HVAC indicator",
+      "auto climate set to 68 degrees F",
+      "heater slow to warm"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2067127",
+    "created_at": "2025-02-19T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "During my visit recall P4A17 was performed.",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "P4A17",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "my heater isn't working now",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It just blows cold air through the defroster and not at my feet as the HVAC indicator shows.",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I always have my auto climate feature set to 68 degrees F.",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It didn't finally come on until I'm almost to work.",
+        "source_id": "2067127",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative states recall P4A17 was performed during a dealership visit and the heater now blows cold air through the defroster rather than to the feet despite auto climate being set to 68 degrees F. The rulebook matches the 'after service' condition and calls for checking connector seating, pin damage and correct part fit first.",
+    "requested_info": [],
+    "summary": "Perform an installation check before testing because the heater blows cold and airflow is misdirected after recall P4A17 service.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative states recall P4A17 was performed during a dealership visit and the heater now blows cold air through the defroster rather than to the feet despite auto climate being set to 68 degrees F. The rulebook matches the 'after service' condition and calls for checking connector seating, pin damage and correct part fit first."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00097665,
+      "duration_ms": 14118,
+      "reason": "2022 Nissan Leaf electrical system: heater blows cold air through defroster and not to feet after recall P4A17 service.",
+      "started_at": "2025-02-19T07:00:01Z",
+      "step": 2,
+      "tokens": 2134,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-02-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-02-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "I was just at Empire Lakewood Nissan Dealership in Colorado on [XXX] for a few things. During my visit recall P4A17 was performed. I now notice on my drive in to work my heater isn't working now. It just blows cold air through the defroster and not at my feet as the HVAC indicator shows. I always have my auto climate feature set to 68 degrees F. It didn't finally come on until I'm almost to work. One of the best things about an electric car is I don't have to wait for the engine/coolant to warm "
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-19T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-19T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-19T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00099675,
+      "duration_ms": 8869,
+      "reason": "The narrative states recall P4A17 was performed during a dealership visit and the heater now blows cold air through the defroster rather than to the feet despite auto climate being set to 68 degrees F. The rulebook matches the 'after service' condition and calls for checking connector seating, pin damage and correct part fit first.",
+      "started_at": "2025-02-19T07:00:09Z",
+      "step": 10,
+      "tokens": 2457,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-02-19T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "During my visit recall P4A17 was performed.",
+          "P4A17",
+          "my heater isn't working now",
+          "It just blows cold air through the defroster and not at my feet as the HVAC indicator shows.",
+          "I always have my auto climate feature set to 68 degrees F.",
+          "It didn't finally come on until I'm almost to work."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-19T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-19T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-19T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-19T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

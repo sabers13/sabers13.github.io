@@ -1,0 +1,443 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2093932",
+    "make": "FORD",
+    "mileage": null,
+    "model": "TRANSIT",
+    "narrative": "The contact owns a 2023 Ford Transit. The contact received notification of NHTSA Campaign Number: 25V315000 (BACK OVER PREVENTION); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the failure and referred the contact to the NHSTA Hotline for assistance. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-05-21",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2093932",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2093932",
+    "decided_at": "2025-05-21T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2093932",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 25V315000"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was not yet available"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "other",
+        "quote": "VIN tool confirms parts not available."
+      }
+    ],
+    "conditions": [
+      "Recall 25V315000 remedy part not yet available",
+      "2023 Ford Transit"
+    ],
+    "fault_codes": [
+      "25V315000"
+    ],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Recall 25V315000 remedy unavailable and no failure reported; verify recall/camera software status with a standard field-quality check rather than a targeted load test.",
+    "symptoms": [
+      "No failure experienced"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2093932",
+    "created_at": "2025-05-21T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "BACK OVER PREVENTION",
+        "source_id": "2093932",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 25V315000",
+        "source_id": "2093932",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was not yet available",
+        "source_id": "2093932",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2093932",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "VIN tool confirms parts not available.",
+        "source_id": "2093932",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a 2023 Ford Transit with notification of NHTSA Campaign Number 25V315000 for back-over prevention, but the recall repair part was not yet available. The contact had not experienced a failure, and the rulebook returned no matching entry, so no targeted load test is indicated. A similar case describes a rearview/360 camera malfunction, but this case itself reports no failure.",
+    "requested_info": [],
+    "summary": "Recall 25V315000 remedy unavailable and no failure reported; verify recall/camera software status with a standard field-quality check rather than a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V442000",
+      "match": true,
+      "open_date": "2025-06-27",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to display a blank image, or the image may remain on the display after the backing event has ended."
+    },
+    {
+      "id": "25V315000",
+      "match": true,
+      "open_date": "2025-05-09",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the vehicle is in reverse."
+    },
+    {
+      "id": "25V242000",
+      "match": true,
+      "open_date": "2025-04-11",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles previously repaired incorrectly under recall number 23V-598.  The rearview camera, or 360-degree view camera if equipped, may not display a rearview image when the vehicle is placed in reverse."
+    },
+    {
+      "id": "23V598000",
+      "match": true,
+      "open_date": "2023-08-25",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Lincoln Aviator, 2018-2021 Lincoln Navigator, 2022-2023 Ford Transit, and 2021 Ford Bronco vehicles.  The rearview camera, or 360-degree view camera if equipped, may not display a rearview image when the vehicle is placed in reverse."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "REAR VIEW/ 360 camera malfunction. (RECALL) all blue screen/ black screen, and no screen. I was backing up a drive way an damaged my whole right side of my roof. I did not get hurt thank god. Opened up a claim next day with Ford. I have opened 2 claims with FORD. It has been 8 mo...",
+      "group": "adas",
+      "id": "1986978",
+      "make": "FORD",
+      "model": "TRANSIT",
+      "score": 1.8425,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-21T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006661,
+      "duration_ms": 12966,
+      "reason": "2023 Ford Transit back-over prevention recall 25V315000; remedy part unavailable, no failure reported",
+      "started_at": "2025-05-21T07:00:16Z",
+      "step": 2,
+      "tokens": 1646,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-05-21T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "REAR VIEW/ 360 camera malfunction. (RECALL) all blue screen/ black screen, and no screen. I was backing up a drive way an damaged my whole right side of my roof. I did not get hurt thank god. Opened up a claim next day with Ford. I have opened 2 claims with FORD. It has been 8 mo...",
+            "group": "adas",
+            "id": "1986978",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "score": 1.8425,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-21T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-21T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-05-21T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2023 Ford Transit. The contact received notification of NHTSA Campaign Number: 25V315000 (BACK OVER PREVENTION); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the failure and referred the contact to the NHSTA Hotline for assistance. The contact had not experienced a failure. VIN tool confi"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "REAR VIEW/ 360 camera malfunction. (RECALL) all blue screen/ black screen, and no screen. I was backing up a drive way an damaged my whole right side of my roof. I did not get hurt thank god. Opened up a claim next day with Ford. I have opened 2 claims with FORD. It has been 8 mo...",
+            "group": "adas",
+            "id": "1986978",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "score": 1.8425,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-21T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION:SOFTWARE",
+            "group": "adas",
+            "id": "25V442000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2025-06-27",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to display a blank image, or the image may remain on the display after the backing event has ended.",
+            "year": 2023
+          },
+          {
+            "component": "BACK OVER PREVENTION:SOFTWARE",
+            "group": "adas",
+            "id": "25V315000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2025-05-09",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the vehicle is in reverse.",
+            "year": 2023
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "25V242000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2025-04-11",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles previously repaired incorrectly under recall number 23V-598.  The rearview camera, or 360-degree view camera if equipped, may not display a rearview image when the vehicle is placed in reverse.",
+            "year": 2023
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "23V598000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2023-08-25",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Lincoln Aviator, 2018-2021 Lincoln Navigator, 2022-2023 Ford Transit, and 2021 Ford Bronco vehicles.  The rearview camera, or 360-degree view camera if equipped, may not display a rearview image when the vehicle is placed in reverse.",
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-21T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-21T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00074175,
+      "duration_ms": 5991,
+      "reason": "The narrative reports a 2023 Ford Transit with notification of NHTSA Campaign Number 25V315000 for back-over prevention, but the recall repair part was not yet available. The contact had not experienced a failure, and the rulebook returned no matching entry, so no targeted load test is indicated. A similar case describes a rearview/360 camera malfunction, but this case itself reports no failure.",
+      "started_at": "2025-05-21T07:00:24Z",
+      "step": 10,
+      "tokens": 2458,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-05-21T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "BACK OVER PREVENTION",
+          "NHTSA Campaign Number: 25V315000",
+          "the part to do the recall repair was not yet available",
+          "The contact had not experienced a failure.",
+          "VIN tool confirms parts not available."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-21T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-21T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-21T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-21T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

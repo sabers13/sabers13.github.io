@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2135718",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL Y",
+    "narrative": "What component or system failed or malfunctioned, and is it available for inspection upon request? The Full Self-Driving (FSD) system malfunctioned. While traveling northbound with the flow of traffic in the middle lane of a surface street, the vehicle initiated a sudden right turn onto a freeway on-ramp at excessive speed and without adequate steering input. This resulted in the vehicle colliding with the left-side barrier. The vehicle is currently in the custody of State Farm Insurance and can be made available for inspection upon request. Dashcam footage of the incident has been preserved.  How was your safety or the safety of others put at risk? The unexpected maneuver caused the vehicle to lose control and strike the barrier, placing both the driver and other motorists at risk. The driver had no time to react to this unexpected action. The driver sustained a whiplash injury along with left shoulder and right chest pain. If another vehicle had been present in the adjacent lane, a collision could have occurred.   Has the problem been reproduced or confirmed by a dealer or independent service center? No. The issue has not been reproduced or confirmed by a dealer or service center at this time.  Has the vehicle or component been inspected by the manufacturer, police, insurance representatives or others? The vehicle has been inspected by State Farm Insurance for collision damage. A request has been made to Tesla to preserve and provide all electronic data logs, event data, and over-the-air communications. No law enforcement or EMS responded at the scene.  Were there any warning lamps, messages or other symptoms of the problem prior to the failure, and when did they first appear? No warning lamps, messages, or alerts were displayed prior to or during the incident. The maneuver occurred suddenly and without any indication that corrective driver action was needed.",
+    "received_at": "2025-10-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135718",
+    "status": "decided",
+    "year": 2026
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135718",
+    "decided_at": "2025-10-02T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135718",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Full Self-Driving (FSD) system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Full Self-Driving (FSD) system malfunctioned."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle initiated a sudden right turn onto a freeway on-ramp at excessive speed and without adequate steering input."
+      },
+      {
+        "kind": "symptom",
+        "quote": "This resulted in the vehicle colliding with the left-side barrier."
+      },
+      {
+        "kind": "safety",
+        "quote": "The unexpected maneuver caused the vehicle to lose control and strike the barrier, placing both the driver and other motorists at risk."
+      },
+      {
+        "kind": "safety",
+        "quote": "The driver sustained a whiplash injury along with left shoulder and right chest pain."
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning lamps, messages, or alerts were displayed prior to or during the incident."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS / Lane Departure Assist: FSD malfunction caused a sudden right turn at excessive speed without adequate steering input, barrier collision, loss of control, and injury.",
+    "symptoms": [
+      "FSD system malfunction",
+      "sudden right turn onto a freeway on-ramp",
+      "excessive speed",
+      "without adequate steering input",
+      "loss of control",
+      "collision with left-side barrier",
+      "no warning lamps, messages, or alerts before or during incident"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135718",
+    "created_at": "2025-10-02T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011353,
+      "duration_ms": 13607,
+      "reason": "ADAS / Lane Departure Assist: FSD malfunction caused a sudden right turn at excessive speed without adequate steering input, barrier collision, loss of control, and injury.",
+      "started_at": "2025-10-02T07:00:01Z",
+      "step": 2,
+      "tokens": 2623,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2026
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-02T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-02T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-02T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-02T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

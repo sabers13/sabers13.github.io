@@ -1,0 +1,296 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2147861",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EDGE",
+    "narrative": "Was told by mechanic that my engine has a coolant leak and has caused engine failure.  The car has been jerking whenever I accelerate.  The remote start does not function from my key fob and I have been unable to pair the Ford pass app with that.  The USB ports for Android Auto also don't seem to work. If I drive over a small bump on the road, it disconnects my phone from Android Auto. I then have to unplug the cable then replug back into my phone or the USB port to hopefully get it to work again.",
+    "received_at": "2025-11-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2147861",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2147861",
+    "decided_at": "2025-11-11T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2147861",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine has a coolant leak and has caused engine failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "engine failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "jerking whenever I accelerate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "remote start does not function from my key fob"
+      },
+      {
+        "kind": "symptom",
+        "quote": "unable to pair the Ford pass app"
+      },
+      {
+        "kind": "symptom",
+        "quote": "USB ports for Android Auto also don't seem to work"
+      },
+      {
+        "kind": "condition",
+        "quote": "drive over a small bump on the road"
+      },
+      {
+        "kind": "symptom",
+        "quote": "disconnects my phone from Android Auto"
+      },
+      {
+        "kind": "condition",
+        "quote": "hopefully get it to work again"
+      }
+    ],
+    "conditions": [
+      "vibration",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: coolant leak with reported engine failure, jerking on acceleration, remote start/FordPass/Android Auto USB faults, and intermittent Android Auto disconnects over road bumps.",
+    "symptoms": [
+      "engine coolant leak with reported engine failure",
+      "jerking on acceleration",
+      "remote start inoperative from key fob",
+      "unable to pair FordPass app",
+      "USB ports for Android Auto not working",
+      "Android Auto disconnects over small road bumps",
+      "requires unplugging and replugging cable or USB port to reconnect"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2147861",
+    "created_at": "2025-11-11T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ON DECEMBER 31, 2019, THE POWERTRAIN MALFUNCTION/REDUCED POWER ERROR LIGHT CAME ON IN THE VEHICLE WHEN I STARTED THE CAR WHILE I WAS AWAY FROM HOME. WHEN I TRIED TO TURN THE GEAR SHIFT KNOB FROM PARK TO DRIVE IT WOULD NOT TURN. AFTER I TURNED THE CAR OFF AND WAITED A MOMENT THE C...",
+      "group": "electrical_general",
+      "id": "1640069",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 8.8394,
+      "year": 2019
+    },
+    {
+      "excerpt": "Found 2 pea sized, spots of something on garage floor over 2 months period of time. Car had seemed to OK with exception of occasional delay in shifting gears. Returning from long drive home, car started jerking and studdering upon acceleration as merging onto highway. This happen...",
+      "group": "electrical_general",
+      "id": "1804807",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 4.9048,
+      "year": 2019
+    },
+    {
+      "excerpt": "Our 2019 Ford Edge started to have repeating issue with the Sync touch screen. The screen would turn blue and nothing can be done to reset it in the car. One time a when the screen went blue, I pulled over and turned the car for at least 30 minutes. And it still had an issue when...",
+      "group": "electrical_general",
+      "id": "1792933",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 2.3645,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-11T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00147775,
+      "duration_ms": 16549,
+      "reason": "Electrical system: coolant leak with reported engine failure, jerking on acceleration, remote start/FordPass/Android Auto USB faults, and intermittent Android Auto disconnects over road bumps.",
+      "started_at": "2025-11-11T07:00:51Z",
+      "step": 2,
+      "tokens": 3007,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-11T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EDGE",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ON DECEMBER 31, 2019, THE POWERTRAIN MALFUNCTION/REDUCED POWER ERROR LIGHT CAME ON IN THE VEHICLE WHEN I STARTED THE CAR WHILE I WAS AWAY FROM HOME. WHEN I TRIED TO TURN THE GEAR SHIFT KNOB FROM PARK TO DRIVE IT WOULD NOT TURN. AFTER I TURNED THE CAR OFF AND WAITED A MOMENT THE C...",
+            "group": "electrical_general",
+            "id": "1640069",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 8.8394,
+            "year": 2019
+          },
+          {
+            "excerpt": "Found 2 pea sized, spots of something on garage floor over 2 months period of time. Car had seemed to OK with exception of occasional delay in shifting gears. Returning from long drive home, car started jerking and studdering upon acceleration as merging onto highway. This happen...",
+            "group": "electrical_general",
+            "id": "1804807",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 4.9048,
+            "year": 2019
+          },
+          {
+            "excerpt": "Our 2019 Ford Edge started to have repeating issue with the Sync touch screen. The screen would turn blue and nothing can be done to reset it in the car. One time a when the screen went blue, I pulled over and turned the car for at least 30 minutes. And it still had an issue when...",
+            "group": "electrical_general",
+            "id": "1792933",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 2.3645,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-11-11T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-11T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-11T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-11T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-11T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-11T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-11T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

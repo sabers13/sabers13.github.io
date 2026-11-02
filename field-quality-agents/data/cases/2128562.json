@@ -1,0 +1,511 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2128562",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "REDUNDANT SIENNA",
+    "narrative": "Pre-Collision System Malfunction, Hybrid System Malfunction, AWD System Malfunction suddenly when restarting the vehicle.  Towed to Toyota of Downtown LA dealership.  Toyota of Downtown LA Service tells me that the CPU on my relative new Sienna 2022 was fried from jump start when Sienna starting-battery was low.  It was done by a AAA professional, I doubt that is the reason for the fried CPU.  I believe Toyota engineers would not design/allow the CPU vulnerable to being fried from a jump start.  This is a horrific design flaw if it is this way.  This happens now, just 6 months after the 3 year warranty coverage.  Toyota of Downtown LA Service is telling me it is going to cost me $2900 to replace this CPU.  I find this unacceptable.",
+    "received_at": "2025-09-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2128562",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128562",
+    "decided_at": "2025-09-09T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2128562",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Pre-Collision System Malfunction"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Hybrid System Malfunction"
+      },
+      {
+        "kind": "symptom",
+        "quote": "AWD System Malfunction"
+      },
+      {
+        "kind": "condition",
+        "quote": "when restarting the vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "jump start"
+      },
+      {
+        "kind": "condition",
+        "quote": "starting-battery was low"
+      },
+      {
+        "kind": "other",
+        "quote": "Toyota of Downtown LA Service tells me that the CPU on my relative new Sienna 2022 was fried from jump start"
+      }
+    ],
+    "conditions": [
+      "charging",
+      "jump start",
+      "starting-battery was low",
+      "when restarting the vehicle"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the charging/electrical supply path with an electrical load test because multiple system malfunctions appeared after restart with a low starting battery and a jump start.",
+    "symptoms": [
+      "Pre-Collision System Malfunction",
+      "Hybrid System Malfunction",
+      "AWD System Malfunction"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128562",
+    "created_at": "2025-09-09T07:00:46Z",
+    "evidence": [
+      {
+        "quote": "Pre-Collision System Malfunction",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Hybrid System Malfunction",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "AWD System Malfunction",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "when restarting the vehicle",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "jump start",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "starting-battery was low",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Toyota of Downtown LA Service tells me that the CPU on my relative new Sienna 2022 was fried from jump start",
+        "source_id": "2128562",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports Pre-Collision, Hybrid and AWD system malfunctions suddenly on restart after a low starting battery was jump-started, and the dealer attributed the CPU failure to the jump start. This matches the rulebook charging condition, so an electrical load test is the targeted test.",
+    "requested_info": [],
+    "summary": "Test the charging/electrical supply path with an electrical load test because multiple system malfunctions appeared after restart with a low starting battery and a jump start.",
+    "targeted_test": {
+      "conditions": [
+        "charging",
+        "jump start",
+        "starting-battery was low",
+        "when restarting the vehicle"
+      ],
+      "name": "Electrical load test",
+      "reason": "The narrative reports Pre-Collision, Hybrid and AWD system malfunctions suddenly on restart after a low starting battery was jump-started, and the dealer attributed the CPU failure to the jump start. This matches the rulebook charging condition, so an electrical load test is the targeted test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While operating the vehicle in the city of Helena, Montana, foreign matter entered the interior of the rear bumper. This caused the RCTA and BSW systems to fail because the sensors were obstructed by mud. This failure condition happens to my 2022 Toyota Sienna every three weeks....",
+      "group": "adas",
+      "id": "1800483",
+      "make": "TOYOTA",
+      "model": "REDUNDANT SIENNA",
+      "score": 7.4723,
+      "year": 2022
+    },
+    {
+      "excerpt": "Today in the morning while driving on normal road, suddenly Rear Cross Traffic alert and Blind spot Monitor became unavailable according to a message on the dash. This message persisted after restarting. In the afternoon another message gave these two company. The vehicle informe...",
+      "group": "adas",
+      "id": "1829002",
+      "make": "TOYOTA",
+      "model": "REDUNDANT SIENNA",
+      "score": 6.7298,
+      "year": 2022
+    },
+    {
+      "excerpt": "When pulling out of a parking lot, the accelerator disables leaving the car unable to move in the middle of the rode for a few seconds. The happens intermittently and usually when there is traffic going both ways in the area. This has happened several times but has not been repli...",
+      "group": "adas",
+      "id": "2047296",
+      "make": "TOYOTA",
+      "model": "REDUNDANT SIENNA",
+      "score": 5.8923,
+      "year": 2022
+    },
+    {
+      "excerpt": "We are not talking about malfunction, since it's underperforming by design. Rcta and BSM don't make any audible alert. Every other vehicle I owned had this. Here BSM is silent and rcta can't be heard, because volume can't be adjusted. This is dangerous, since relying on visual wi...",
+      "group": "adas",
+      "id": "1802504",
+      "make": "TOYOTA",
+      "model": "REDUNDANT SIENNA",
+      "score": 3.7592,
+      "year": 2022
+    },
+    {
+      "excerpt": "While driving approximately 25 mph my dash lit up with the cross traffic sensor is unavailable and my blind spot monitor is unavailable. I got out and cleaned off my sensors on the outside of my vehicle all around the vehicle front and back and the warning has stayed on. It was n...",
+      "group": "adas",
+      "id": "1862854",
+      "make": "TOYOTA",
+      "model": "REDUNDANT SIENNA",
+      "score": 0.5059,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-09T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012682,
+      "duration_ms": 12817,
+      "reason": "2022 Toyota Sienna forward collision avoidance/automatic emergency braking; Pre-Collision, Hybrid, and AWD system malfunctions suddenly on restart; dealer alleges CPU fried by jump start.",
+      "started_at": "2025-09-09T07:00:36Z",
+      "step": 2,
+      "tokens": 2711,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-09T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "REDUNDANT SIENNA",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While operating the vehicle in the city of Helena, Montana, foreign matter entered the interior of the rear bumper. This caused the RCTA and BSW systems to fail because the sensors were obstructed by mud. This failure condition happens to my 2022 Toyota Sienna every three weeks....",
+            "group": "adas",
+            "id": "1800483",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 7.4723,
+            "year": 2022
+          },
+          {
+            "excerpt": "Today in the morning while driving on normal road, suddenly Rear Cross Traffic alert and Blind spot Monitor became unavailable according to a message on the dash. This message persisted after restarting. In the afternoon another message gave these two company. The vehicle informe...",
+            "group": "adas",
+            "id": "1829002",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 6.7298,
+            "year": 2022
+          },
+          {
+            "excerpt": "When pulling out of a parking lot, the accelerator disables leaving the car unable to move in the middle of the rode for a few seconds. The happens intermittently and usually when there is traffic going both ways in the area. This has happened several times but has not been repli...",
+            "group": "adas",
+            "id": "2047296",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 5.8923,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-09T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-09T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-09-09T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Pre-Collision System Malfunction, Hybrid System Malfunction, AWD System Malfunction suddenly when restarting the vehicle.  Towed to Toyota of Downtown LA dealership.  Toyota of Downtown LA Service tells me that the CPU on my relative new Sienna 2022 was fried from jump start when Sienna starting-battery was low.  It was done by a AAA professional, I doubt that is the reason for the fried CPU.  I believe Toyota engineers would not design/allow the CPU vulnerable to being fried from a jump start. "
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While operating the vehicle in the city of Helena, Montana, foreign matter entered the interior of the rear bumper. This caused the RCTA and BSW systems to fail because the sensors were obstructed by mud. This failure condition happens to my 2022 Toyota Sienna every three weeks....",
+            "group": "adas",
+            "id": "1800483",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 7.4723,
+            "year": 2022
+          },
+          {
+            "excerpt": "Today in the morning while driving on normal road, suddenly Rear Cross Traffic alert and Blind spot Monitor became unavailable according to a message on the dash. This message persisted after restarting. In the afternoon another message gave these two company. The vehicle informe...",
+            "group": "adas",
+            "id": "1829002",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 6.7298,
+            "year": 2022
+          },
+          {
+            "excerpt": "When pulling out of a parking lot, the accelerator disables leaving the car unable to move in the middle of the rode for a few seconds. The happens intermittently and usually when there is traffic going both ways in the area. This has happened several times but has not been repli...",
+            "group": "adas",
+            "id": "2047296",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 5.8923,
+            "year": 2022
+          },
+          {
+            "excerpt": "We are not talking about malfunction, since it's underperforming by design. Rcta and BSM don't make any audible alert. Every other vehicle I owned had this. Here BSM is silent and rcta can't be heard, because volume can't be adjusted. This is dangerous, since relying on visual wi...",
+            "group": "adas",
+            "id": "1802504",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 3.7592,
+            "year": 2022
+          },
+          {
+            "excerpt": "While driving approximately 25 mph my dash lit up with the cross traffic sensor is unavailable and my blind spot monitor is unavailable. I got out and cleaned off my sensors on the outside of my vehicle all around the vehicle front and back and the warning has stayed on. It was n...",
+            "group": "adas",
+            "id": "1862854",
+            "make": "TOYOTA",
+            "model": "REDUNDANT SIENNA",
+            "score": 0.5059,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-09T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "TOYOTA",
+        "model": "REDUNDANT SIENNA",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-09T07:00:42Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "TOYOTA",
+        "model": "REDUNDANT SIENNA",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-09T07:00:43Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0012711,
+      "duration_ms": 11729,
+      "reason": "The narrative reports Pre-Collision, Hybrid and AWD system malfunctions suddenly on restart after a low starting battery was jump-started, and the dealer attributed the CPU failure to the jump start. This matches the rulebook charging condition, so an electrical load test is the targeted test.",
+      "started_at": "2025-09-09T07:00:44Z",
+      "step": 10,
+      "tokens": 3326,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-09-09T07:00:45Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Pre-Collision System Malfunction",
+          "Hybrid System Malfunction",
+          "AWD System Malfunction",
+          "when restarting the vehicle",
+          "jump start",
+          "starting-battery was low",
+          "Toyota of Downtown LA Service tells me that the CPU on my relative new Sienna 2022 was fried from jump start"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-09T07:00:47Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-09T07:00:49Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-09T07:00:50Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-09T07:00:51Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

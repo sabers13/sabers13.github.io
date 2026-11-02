@@ -1,0 +1,366 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2107841",
+    "make": "TOYOTA",
+    "mileage": 212000,
+    "model": "CAMRY",
+    "narrative": "Odometer Fraud. The contact purchased a 2011 Toyota Camry. The contact stated that while in the process of trading the vehicle at the dealer, it was discovered that there was a mileage discrepancy. The dealer informed the contact that the Carfax history report of the vehicle displayed that the mileage was 193,889 on January 12, 2023. The contact also discovered that the vehicle was previously listed for sale with a mileage of 212,000 on July 14, 2024. The vehicle was a private sale. At the time of purchase, the vehicle mileage was 121,000, and it was later discovered that the mileage was 212,000 on July 14, 2024.",
+    "received_at": "2025-07-08",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2107841",
+    "status": "decided",
+    "year": 2011
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2107841",
+    "decided_at": "2025-07-08T07:00:42Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2107841",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud."
+      },
+      {
+        "kind": "symptom",
+        "quote": "mileage discrepancy"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was a private sale."
+      },
+      {
+        "kind": "condition",
+        "quote": "while in the process of trading the vehicle at the dealer"
+      },
+      {
+        "kind": "other",
+        "quote": "mileage was 193,889 on January 12, 2023"
+      },
+      {
+        "kind": "other",
+        "quote": "previously listed for sale with a mileage of 212,000 on July 14, 2024"
+      },
+      {
+        "kind": "other",
+        "quote": "At the time of purchase, the vehicle mileage was 121,000"
+      },
+      {
+        "kind": "other",
+        "quote": "later discovered that the mileage was 212,000 on July 14, 2024"
+      }
+    ],
+    "conditions": [
+      "private sale",
+      "mileage discrepancy discovered during dealer trade"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Verify odometer and instrument cluster mileage records because conflicting mileage history suggests odometer fraud or recording error.",
+    "symptoms": [
+      "odometer fraud allegation",
+      "mileage discrepancy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2107841",
+    "created_at": "2025-07-08T07:00:40Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud.",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "mileage discrepancy",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was a private sale.",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while in the process of trading the vehicle at the dealer",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "mileage was 193,889 on January 12, 2023",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "previously listed for sale with a mileage of 212,000 on July 14, 2024",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase, the vehicle mileage was 121,000",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "later discovered that the mileage was 212,000 on July 14, 2024",
+        "source_id": "2107841",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports an odometer fraud allegation and a mileage discrepancy: a Carfax history report showed 193,889 on January 12, 2023, a later listing showed 212,000 on July 14, 2024, and the purchase-time mileage was 121,000. No rulebook entry, recall, or investigation matching this case was returned, so no targeted load test is named; propose the standard test.",
+    "requested_info": [],
+    "summary": "Verify odometer and instrument cluster mileage records because conflicting mileage history suggests odometer fraud or recording error.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-08T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00041695,
+      "duration_ms": 5250,
+      "reason": "2011 Toyota Camry instrument panel speedometer/odometer mileage discrepancy suggesting odometer fraud, noted during dealer trade and private sale history.",
+      "started_at": "2025-07-08T07:00:31Z",
+      "step": 2,
+      "tokens": 1275,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-08T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-08T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-08T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2011 Toyota Camry. The contact stated that while in the process of trading the vehicle at the dealer, it was discovered that there was a mileage discrepancy. The dealer informed the contact that the Carfax history report of the vehicle displayed that the mileage was 193,889 on January 12, 2023. The contact also discovered that the vehicle was previously listed for sale with a mileage of 212,000 on July 14, 2024. The vehicle was a private sale. At the time "
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-08T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-08T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-08T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00117915,
+      "duration_ms": 10846,
+      "reason": "The narrative reports an odometer fraud allegation and a mileage discrepancy: a Carfax history report showed 193,889 on January 12, 2023, a later listing showed 212,000 on July 14, 2024, and the purchase-time mileage was 121,000. No rulebook entry, recall, or investigation matching this case was returned, so no targeted load test is named; propose the standard test.",
+      "started_at": "2025-07-08T07:00:38Z",
+      "step": 9,
+      "tokens": 2680,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "8 verified, 0 dropped",
+      "started_at": "2025-07-08T07:00:39Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud.",
+          "mileage discrepancy",
+          "The vehicle was a private sale.",
+          "while in the process of trading the vehicle at the dealer",
+          "mileage was 193,889 on January 12, 2023",
+          "previously listed for sale with a mileage of 212,000 on July 14, 2024",
+          "At the time of purchase, the vehicle mileage was 121,000",
+          "later discovered that the mileage was 212,000 on July 14, 2024"
+        ]
+      },
+      "tool_output": {
+        "checked": 8,
+        "dropped": 0,
+        "verified": 8
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-08T07:00:41Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-08T07:00:43Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-08T07:00:44Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-08T07:00:45Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

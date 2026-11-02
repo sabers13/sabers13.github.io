@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2125349",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "SENTRA",
+    "narrative": "While driving, I noticed smoke coming from the front of the vehicle. Within moments, flames appeared in the engine area and spread quickly, causing severe damage to the front portion of the car including the engine, electrical system, and body.  No warning lamps, error messages, or unusual behavior were observed prior to the incident. The fire started suddenly without any indication of mechanical or electrical issues. My safety and the safety of others nearby were put at risk as the fire escalated rapidly.  The problem has not been reproduced or inspected by the manufacturer or dealer yet, but the vehicle was completely disabled and is no longer operable due to the fire damage. Cause of the fire is UNKNOWN at this time.",
+    "received_at": "2025-08-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2125349",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2125349",
+    "decided_at": "2025-08-29T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2125349",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "While driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke coming from the front of the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "flames appeared in the engine area and spread quickly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning lamps, error messages, or unusual behavior were observed prior to the incident."
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle was completely disabled and is no longer operable due to the fire damage"
+      },
+      {
+        "kind": "component_group",
+        "quote": "electrical system"
+      },
+      {
+        "kind": "safety",
+        "quote": "My safety and the safety of others nearby were put at risk as the fire escalated rapidly."
+      },
+      {
+        "kind": "other",
+        "quote": "Cause of the fire is UNKNOWN at this time."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Nissan Sentra electrical system — smoke and flames from front while driving; no prior warnings; vehicle disabled.",
+    "symptoms": [
+      "smoke coming from the front of the vehicle while driving",
+      "flames appeared in the engine area and spread quickly",
+      "no warning lamps, error messages, or unusual behavior before the incident",
+      "vehicle completely disabled and no longer operable due to fire damage"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2125349",
+    "created_at": "2025-08-29T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My Nissan Sentra burst into flames on July 27,2022-not sure why this occurred; the car was last serviced before this incident on June 17, 2022-the car's Compressor/AC were replaced. I had just parked the car at a hotel when the fire began. The only inspection was from a fire mars...",
+      "group": "electrical_general",
+      "id": "1847161",
+      "make": "NISSAN",
+      "model": "SENTRA",
+      "score": 5.6061,
+      "year": 2014
+    },
+    {
+      "excerpt": "FUEL PUMP FAILURE AT 75K MILES. RESULTED IN VEHICLE SPUTTERING, THEN STALLING, DASHBOARD LIGHTS GOING OUT AND THEN TURNING BACK ON WITH MORE THAN HALF A TANK DIFFERENCE IN THE FUEL READING, AND THEN RAN OUT OF GAS ENTIRELY. BROUGHT TO DEALERSHIP WHO DENIED THERE BEING AN OPEN REC...",
+      "group": "electrical_general",
+      "id": "1745366",
+      "make": "NISSAN",
+      "model": "SENTRA",
+      "score": 3.4445,
+      "year": 2014
+    },
+    {
+      "excerpt": "ALL OF A SUDDEN FOR THE PAST 2 DAYS I HAVE HAD AN ISSUE WITH THE SWITCH LOCKING AND WANT TURN WHILE PARKED(STATIONARY). THE STEERING WHEEL NEVER LOCKED AND WARNING LIGHT STAYS ON FOR SECURITY ALERT. TODAY IT WANT TURN ON AT ALL. *TR",
+      "group": "electrical_general",
+      "id": "1668988",
+      "make": "NISSAN",
+      "model": "SENTRA",
+      "score": 1.9307,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-29T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00078565,
+      "duration_ms": 13544,
+      "reason": "Nissan Sentra electrical system — smoke and flames from front while driving; no prior warnings; vehicle disabled.",
+      "started_at": "2025-08-29T07:00:21Z",
+      "step": 2,
+      "tokens": 1873,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-29T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "SENTRA",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My Nissan Sentra burst into flames on July 27,2022-not sure why this occurred; the car was last serviced before this incident on June 17, 2022-the car's Compressor/AC were replaced. I had just parked the car at a hotel when the fire began. The only inspection was from a fire mars...",
+            "group": "electrical_general",
+            "id": "1847161",
+            "make": "NISSAN",
+            "model": "SENTRA",
+            "score": 5.6061,
+            "year": 2014
+          },
+          {
+            "excerpt": "FUEL PUMP FAILURE AT 75K MILES. RESULTED IN VEHICLE SPUTTERING, THEN STALLING, DASHBOARD LIGHTS GOING OUT AND THEN TURNING BACK ON WITH MORE THAN HALF A TANK DIFFERENCE IN THE FUEL READING, AND THEN RAN OUT OF GAS ENTIRELY. BROUGHT TO DEALERSHIP WHO DENIED THERE BEING AN OPEN REC...",
+            "group": "electrical_general",
+            "id": "1745366",
+            "make": "NISSAN",
+            "model": "SENTRA",
+            "score": 3.4445,
+            "year": 2014
+          },
+          {
+            "excerpt": "ALL OF A SUDDEN FOR THE PAST 2 DAYS I HAVE HAD AN ISSUE WITH THE SWITCH LOCKING AND WANT TURN WHILE PARKED(STATIONARY). THE STEERING WHEEL NEVER LOCKED AND WARNING LIGHT STAYS ON FOR SECURITY ALERT. TODAY IT WANT TURN ON AT ALL. *TR",
+            "group": "electrical_general",
+            "id": "1668988",
+            "make": "NISSAN",
+            "model": "SENTRA",
+            "score": 1.9307,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-29T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-29T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-29T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-29T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-29T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-29T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-29T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

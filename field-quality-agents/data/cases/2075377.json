@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2075377",
+    "make": "FORD",
+    "mileage": 27000,
+    "model": "BRONCO SPORT",
+    "narrative": "The contact owns a 2022 Ford Bronco Sport. The contact received notification of NHTSA Campaign Number: 25V019000 (Electrical System); however, the part to do the recall repair was not yet available. The contact stated that while attempting to accelerate from a stop, the vehicle failed to accelerate while the accelerator pedal was depressed. An unknown message was displayed on the instrument panel. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the failure. The failure mileage was approximately 27,000. VIN tool confirms parts not available.",
+    "received_at": "2025-03-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2075377",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2075377",
+    "decided_at": "2025-03-19T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2075377",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to accelerate while the accelerator pedal was depressed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "An unknown message was displayed on the instrument panel"
+      },
+      {
+        "kind": "other",
+        "quote": "while attempting to accelerate from a stop"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 25V019000"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle failed to accelerate while the accelerator pedal was depressed"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "25V019000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system; vehicle failed to accelerate from a stop with accelerator pedal depressed and unknown instrument panel message; recall repair parts unavailable.",
+    "symptoms": [
+      "vehicle failed to accelerate while accelerator pedal was depressed",
+      "unknown message displayed on instrument panel"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2075377",
+    "created_at": "2025-03-19T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Ford Bronco Sport. The contact stated that while her daughter was driving at an undisclosed speed, the vehicle briefly jerked, after which the vehicle inadvertently lost motive power. The driver was able to pull to the shoulder of the roadway, where the ve...",
+      "group": "electrical_general",
+      "id": "1987472",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 27.5587,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Ford Bronco Sport. The contact stated while driving at an undisclosed speed, the vehicle lost motive power with the low battery warning light illuminated. The vehicle was towed to the dealer where it was determined that the 12-volt battery had failed and n...",
+      "group": "electrical_general",
+      "id": "2024404",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 25.0255,
+      "year": 2022
+    },
+    {
+      "excerpt": "At approximately 2000 miles , I had vehicle fueled, engine was off. After fueling was complete, put foot on break, pushed button to start every caution light imaginable lit up on dashboard, obviously, indicating something was wrong electronically. Vehicle said it was overheating....",
+      "group": "electrical_general",
+      "id": "1935536",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 5.4161,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00185335,
+      "duration_ms": 26299,
+      "reason": "Electrical system; vehicle failed to accelerate from a stop with accelerator pedal depressed and unknown instrument panel message; recall repair parts unavailable.",
+      "started_at": "2025-03-19T07:00:01Z",
+      "step": 2,
+      "tokens": 3648,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Ford Bronco Sport. The contact stated that while her daughter was driving at an undisclosed speed, the vehicle briefly jerked, after which the vehicle inadvertently lost motive power. The driver was able to pull to the shoulder of the roadway, where the ve...",
+            "group": "electrical_general",
+            "id": "1987472",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 27.5587,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Ford Bronco Sport. The contact stated while driving at an undisclosed speed, the vehicle lost motive power with the low battery warning light illuminated. The vehicle was towed to the dealer where it was determined that the 12-volt battery had failed and n...",
+            "group": "electrical_general",
+            "id": "2024404",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 25.0255,
+            "year": 2022
+          },
+          {
+            "excerpt": "At approximately 2000 miles , I had vehicle fueled, engine was off. After fueling was complete, put foot on break, pushed button to start every caution light imaginable lit up on dashboard, obviously, indicating something was wrong electronically. Vehicle said it was overheating....",
+            "group": "electrical_general",
+            "id": "1935536",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 5.4161,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-03-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-19T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-19T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-19T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-19T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

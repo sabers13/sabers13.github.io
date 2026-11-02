@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2058306",
+    "make": "CHEVROLET",
+    "mileage": 10500,
+    "model": "SILVERADO 1500",
+    "narrative": "The contact owns a 2024 Chevrolet Silverado 1500. The contact stated that after the vehicle was serviced at the local dealer for a manufacturer software update the vehicle's display console began to experience failures causing several safety features to become inoperable. Later, while driving in reverse the vehicle crashed into the pole. During the incident, the collision avoidance feature to alert the driver was not activated. The contact indicated that as the vehicle drove closer to the pole the driver's seat did not vibrate, the audible alarm was not active and the warning message was not displayed to alert the driver of an impending crash into the pole. During the crash, the contact experienced an injured back that did not require medical attention at the time. No police report was filed and the vehicle was driven from the scene. The manufacturer and local dealer were notified of the failure but no assistance was offered. The failure mileage was 10,500.",
+    "received_at": "2025-01-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2058306",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2058306",
+    "decided_at": "2025-01-22T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2058306",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "after the vehicle was serviced at the local dealer for a manufacturer software update"
+      },
+      {
+        "kind": "symptom",
+        "quote": "display console began to experience failures"
+      },
+      {
+        "kind": "symptom",
+        "quote": "several safety features to become inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the collision avoidance feature to alert the driver was not activated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the driver's seat did not vibrate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the audible alarm was not active"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the warning message was not displayed"
+      },
+      {
+        "kind": "safety",
+        "quote": "while driving in reverse the vehicle crashed into the pole"
+      },
+      {
+        "kind": "safety",
+        "quote": "experienced an injured back"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2024 Chevrolet Silverado 1500 electrical system: display console failures after dealer software update; collision avoidance alerts failed during reverse crash into pole, with back injury.",
+    "symptoms": [
+      "display console failures",
+      "safety features inoperable",
+      "collision avoidance alert not activated",
+      "driver seat vibration alert did not occur",
+      "audible alarm did not sound",
+      "warning message not displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2058306",
+    "created_at": "2025-01-22T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I am writing to request urgent assistance with my Chevrolet truck, which has experienced several serious issues recently. On September 25, 2024, while driving, the steering wheel became stiff, and the engine's power stopped. The dashboard lights remained on, and I was unable to s...",
+      "group": "electrical_general",
+      "id": "2021152",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 14.1666,
+      "year": 2024
+    },
+    {
+      "excerpt": "I purchased my truck in August of 2024, new off of the lot. Within the first week there was an issue with the infotainment system of the truck with muted all audio. This includes all safety features that have audio alerts, navigation, stereo, blinkers. Anything audio is affected....",
+      "group": "electrical_general",
+      "id": "2042937",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 5.7694,
+      "year": 2024
+    },
+    {
+      "excerpt": "I was taking a left from a stop sign onto a busy boulevard and as soon as I had passed the median I started losing acceleration and it felt like the transmission or engine was glitching or lugging. The engine began to try restarting itself possibly from the auto start-stop howeve...",
+      "group": "electrical_general",
+      "id": "2042926",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 5.6346,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-22T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00088,
+      "duration_ms": 14806,
+      "reason": "2024 Chevrolet Silverado 1500 electrical system: display console failures after dealer software update; collision avoidance alerts failed during reverse crash into pole, with back injury.",
+      "started_at": "2025-01-22T07:00:01Z",
+      "step": 2,
+      "tokens": 2070,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-22T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "SILVERADO 1500",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I am writing to request urgent assistance with my Chevrolet truck, which has experienced several serious issues recently. On September 25, 2024, while driving, the steering wheel became stiff, and the engine's power stopped. The dashboard lights remained on, and I was unable to s...",
+            "group": "electrical_general",
+            "id": "2021152",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 14.1666,
+            "year": 2024
+          },
+          {
+            "excerpt": "I purchased my truck in August of 2024, new off of the lot. Within the first week there was an issue with the infotainment system of the truck with muted all audio. This includes all safety features that have audio alerts, navigation, stereo, blinkers. Anything audio is affected....",
+            "group": "electrical_general",
+            "id": "2042937",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 5.7694,
+            "year": 2024
+          },
+          {
+            "excerpt": "I was taking a left from a stop sign onto a busy boulevard and as soon as I had passed the median I started losing acceleration and it felt like the transmission or engine was glitching or lugging. The engine began to try restarting itself possibly from the auto start-stop howeve...",
+            "group": "electrical_general",
+            "id": "2042926",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 5.6346,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-01-22T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-22T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-22T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-22T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-22T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-22T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-22T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

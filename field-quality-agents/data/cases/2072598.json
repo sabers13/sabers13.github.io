@@ -1,0 +1,248 @@
+{
+  "case": {
+    "component": "SERVICE BRAKES, AIR:ANTILOCK:ABS WARNING LIGHT",
+    "group": "safety_systems",
+    "id": "2072598",
+    "make": "JEEP",
+    "mileage": 98000,
+    "model": "GRAND CHEROKEE",
+    "narrative": "The contact owns a 2018 Jeep Grand Cherokee. The contact stated that while driving at 10 MPH, the wheels locked up. The contact was unable to identify which wheels had locked up. The vehicle began spinning in circles, and the vehicle crashed into a guardrail. The ABS warning light was illuminated. The contact was able to continue to drive; the driver sustained injuries to the head and lower back, and medical attention was provided. The air bags did not deploy. There was no reported fire or police report filed. The contact received notification of NHTSA Campaign Number: 24V838000 (Service Brakes, Hydraulic); however, the part to do the recall repair was not yet available. The local dealer was not contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. VIN tool confirms parts not available. The approximate failure mileage was 98,000.",
+    "received_at": "2025-03-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2072598",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2072598",
+    "decided_at": "2025-03-10T07:00:37Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2072598",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SERVICE BRAKES, AIR:ANTILOCK:ABS WARNING LIGHT"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at 10 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the wheels locked up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle began spinning in circles, and the vehicle crashed into a guardrail"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The ABS warning light was illuminated"
+      },
+      {
+        "kind": "safety",
+        "quote": "the driver sustained injuries to the head and lower back"
+      },
+      {
+        "kind": "safety",
+        "quote": "The air bags did not deploy"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Number: 24V838000"
+      }
+    ],
+    "conditions": [
+      "driving at 10 MPH"
+    ],
+    "fault_codes": [],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "2018 Jeep Grand Cherokee ABS warning light: wheels locked at 10 MPH, vehicle spun and hit a guardrail; driver injured.",
+    "symptoms": [
+      "wheels locked up",
+      "vehicle spun in circles",
+      "crashed into guardrail",
+      "ABS warning light illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2072598",
+    "created_at": "2025-03-10T07:00:35Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2018 Jeep Grand Cherokee. The contact stated that the radio and A/C would activate independently. The check engine and ABS warning lights were illuminated. The contact's husband replaced the auxiliary battery. While driving, the vehicle stalled but did not turn...",
+      "group": "safety_systems",
+      "id": "1830342",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 6.1172,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-10T07:00:29Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00100275,
+      "duration_ms": 11582,
+      "reason": "2018 Jeep Grand Cherokee ABS warning light: wheels locked at 10 MPH, vehicle spun and hit a guardrail; driver injured.",
+      "started_at": "2025-03-10T07:00:30Z",
+      "step": 2,
+      "tokens": 2194,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-03-10T07:00:31Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2018 Jeep Grand Cherokee. The contact stated that the radio and A/C would activate independently. The check engine and ABS warning lights were illuminated. The contact's husband replaced the auxiliary battery. While driving, the vehicle stalled but did not turn...",
+            "group": "safety_systems",
+            "id": "1830342",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 6.1172,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-03-10T07:00:32Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-10T07:00:33Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-10T07:00:34Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-10T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-10T07:00:38Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-10T07:00:39Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-10T07:00:40Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

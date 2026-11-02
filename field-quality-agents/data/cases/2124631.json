@@ -1,0 +1,244 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2124631",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CR-V",
+    "narrative": "This braking issue happened on 4 occasions. While in stop and go traffic I would be braking, nursing the brakes the car would take over and slam me to a complete stop. It would not go again until I hit the gas. On two of those occasions the car behind me had to move into the nxt lane or over to the shoulder. The last time the seatbelt caught me so hard I had shoulder and neck pain for about 3 weeks (I work in rehab so my co workers worked on my neck and shoulders)I did take it to Honda after the first two incidences and they said there was nothing wrong, that’s just how the sensors are. I asked if the sensors could be turned off and they replied No. After the last incident where my shoulder and neck got hurt and the poor guy behind me almost hit the wall on the shoulder, I went the next day and traded it in. I lost my 5K that I put down and the car depreciated by several thousand in 4mos but it was not worth driving it and ending up in a major accident with major injuries to myself or another driver.",
+    "received_at": "2025-08-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124631",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124631",
+    "decided_at": "2025-08-27T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124631",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "condition",
+        "quote": "This braking issue happened on 4 occasions."
+      },
+      {
+        "kind": "symptom",
+        "quote": "While in stop and go traffic I would be braking, nursing the brakes the car would take over and slam me to a complete stop."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It would not go again until I hit the gas."
+      },
+      {
+        "kind": "safety",
+        "quote": "On two of those occasions the car behind me had to move into the nxt lane or over to the shoulder."
+      },
+      {
+        "kind": "safety",
+        "quote": "The last time the seatbelt caught me so hard I had shoulder and neck pain for about 3 weeks"
+      },
+      {
+        "kind": "safety",
+        "quote": "the poor guy behind me almost hit the wall on the shoulder"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance warnings: unintended automatic braking in stop-and-go traffic on 4 occasions, stopping the car until accelerator pressed, with seatbelt injury and near misses.",
+    "symptoms": [
+      "unintended automatic braking",
+      "vehicle slams to a complete stop",
+      "vehicle will not move until accelerator pressed",
+      "seatbelt caught occupant hard, causing shoulder and neck pain"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124631",
+    "created_at": "2025-08-27T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I was trying to realign my vehicle to eventually reverse in and park. As I was going forward, I braked four times (3 slamming the brakes) and the vehicle did not slow down or stop and eventually hit my neighbors wall. -I have a video, but the system only allows photos. Please con...",
+      "group": "adas",
+      "id": "2035166",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 2.0138,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-27T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010699,
+      "duration_ms": 11275,
+      "reason": "Forward collision avoidance warnings: unintended automatic braking in stop-and-go traffic on 4 occasions, stopping the car until accelerator pressed, with seatbelt injury and near misses.",
+      "started_at": "2025-08-27T07:00:31Z",
+      "step": 2,
+      "tokens": 2418,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-27T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I was trying to realign my vehicle to eventually reverse in and park. As I was going forward, I braked four times (3 slamming the brakes) and the vehicle did not slow down or stop and eventually hit my neighbors wall. -I have a video, but the system only allows photos. Please con...",
+            "group": "adas",
+            "id": "2035166",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 2.0138,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-27T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-27T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-27T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-27T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-27T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-27T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-27T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

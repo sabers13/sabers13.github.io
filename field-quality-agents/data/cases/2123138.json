@@ -1,0 +1,267 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2123138",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "FORESTER",
+    "narrative": "Lately, Airbag warning light comes on intermittently often. Sierra subaru would not fix without charging me for inspection for $240 and then cost of rapair. Also cruise control is malfunctioning where it gets disengaged near the vehicle in front where I have to apply brake hard to avoid serious accident. Also the EyeSight NOT working warning has started showing lately.  My forester 2017 at 44K miles showing airbag light at times along with cruise control disengaing near front car and eyeSight not available mentioned above.   Detail on airbag fix at Sierra Subaru in Monrovia, California. On August 12, 2025, I want to get this intermittent error fixed under warranty. on August 12, 2025 Alexander in service told me that it will be $240 approximately of charge to inspect. Kindly let me know if the airbag warning light at such low milage not going to be covered for warranty. Please Note that I bought the Forester at Sierra Subaru Monrovia Ca and had every single service done there. Lately I have been charged in thousands of dollars at such low mileage to own the 2017 Subaru Forester",
+    "received_at": "2025-08-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123138",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123138",
+    "decided_at": "2025-08-22T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123138",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Airbag warning light comes on intermittently often"
+      },
+      {
+        "kind": "symptom",
+        "quote": "cruise control is malfunctioning where it gets disengaged near the vehicle in front"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have to apply brake hard to avoid serious accident"
+      },
+      {
+        "kind": "symptom",
+        "quote": "EyeSight NOT working warning has started showing lately"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently"
+      },
+      {
+        "kind": "safety",
+        "quote": "serious accident"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2017 Subaru Forester ADAS/adaptive cruise control with intermittent airbag warning, cruise disengagement near vehicles ahead, and EyeSight not working warning.",
+    "symptoms": [
+      "airbag warning light comes on intermittently",
+      "adaptive cruise control disengages near the vehicle in front",
+      "hard braking needed to avoid a serious accident",
+      "EyeSight not working warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123138",
+    "created_at": "2025-08-22T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We have a 2017 Subaru Forester 2.5i Premium with Eyesight with 58,582 miles. During the first week in June, 2022 the Eyesight System failed and displayed an error message that stated to “See Owner’s Manual “. The Owner’s Manual stated ”take the vehicle to Subaru dealer for servic...",
+      "group": "adas",
+      "id": "1832249",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 12.2989,
+      "year": 2017
+    },
+    {
+      "excerpt": "When operating the vehicle at low and high speeds, the EyeSight system intermittently turns off with a \"check owner's manual\" message and the system remains off until at least the next vehicle restart. Additionally, after the EyeSight system disengages, when making turns at low s...",
+      "group": "adas",
+      "id": "1787091",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 4.6624,
+      "year": 2017
+    },
+    {
+      "excerpt": "PULLING INTO A PARKING SPOT AT A LOW RATE OF SPEED (SINCE I'D NOT DRIVEN QUICKLY THROUGH THE PARKING LOT - TOO MANY BACKING UP TOO QUICKLY!). SUDDEN ACCELERATION AND RAMMED INTO BRICK WALL OF THE BUILDING. MY FOOT MUST OF SLIPPED, BUT IT WAS FAST. NO COLLISION DETERRENTS ACTIVATE...",
+      "group": "adas",
+      "id": "1714247",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 4.1385,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-22T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00097345,
+      "duration_ms": 9830,
+      "reason": "2017 Subaru Forester ADAS/adaptive cruise control with intermittent airbag warning, cruise disengagement near vehicles ahead, and EyeSight not working warning.",
+      "started_at": "2025-08-22T07:00:01Z",
+      "step": 2,
+      "tokens": 2273,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-22T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "FORESTER",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have a 2017 Subaru Forester 2.5i Premium with Eyesight with 58,582 miles. During the first week in June, 2022 the Eyesight System failed and displayed an error message that stated to “See Owner’s Manual “. The Owner’s Manual stated ”take the vehicle to Subaru dealer for servic...",
+            "group": "adas",
+            "id": "1832249",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 12.2989,
+            "year": 2017
+          },
+          {
+            "excerpt": "When operating the vehicle at low and high speeds, the EyeSight system intermittently turns off with a \"check owner's manual\" message and the system remains off until at least the next vehicle restart. Additionally, after the EyeSight system disengages, when making turns at low s...",
+            "group": "adas",
+            "id": "1787091",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 4.6624,
+            "year": 2017
+          },
+          {
+            "excerpt": "PULLING INTO A PARKING SPOT AT A LOW RATE OF SPEED (SINCE I'D NOT DRIVEN QUICKLY THROUGH THE PARKING LOT - TOO MANY BACKING UP TOO QUICKLY!). SUDDEN ACCELERATION AND RAMMED INTO BRICK WALL OF THE BUILDING. MY FOOT MUST OF SLIPPED, BUT IT WAS FAST. NO COLLISION DETERRENTS ACTIVATE...",
+            "group": "adas",
+            "id": "1714247",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 4.1385,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-22T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-22T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-22T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-22T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-22T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-22T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

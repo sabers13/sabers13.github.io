@@ -1,0 +1,376 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2116818",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 6",
+    "narrative": "I was crossing the Mackinac Bridge, northbound, this afternoon, at the time traveling over the bridge deck's grates in the left lane. Traffic was backed up and I was traveling in the single-digit MPH. There was more that a car's length between myself and the next car ahead, and as I accelerated a little bit to close the distance my emergency braking activated. Fortunately, the car behind me was trailing by a little bit and was also traveling slowly.",
+    "received_at": "2025-08-03",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2116818",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116818",
+    "decided_at": "2025-08-03T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2116818",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "my emergency braking activated"
+      },
+      {
+        "kind": "condition",
+        "quote": "traveling over the bridge deck's grates in the left lane"
+      },
+      {
+        "kind": "condition",
+        "quote": "Traffic was backed up and I was traveling in the single-digit MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "as I accelerated a little bit to close the distance"
+      },
+      {
+        "kind": "other",
+        "quote": "the car behind me was trailing by a little bit and was also traveling slowly"
+      }
+    ],
+    "conditions": [
+      "traveling over the bridge deck's grates in the left lane",
+      "Traffic was backed up and traveling at single-digit MPH",
+      "accelerating slightly to close the distance"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "No rulebook entry matches; test the ADAS forward-collision/AEB system under low-speed grated-bridge and backed-up traffic conditions to reproduce the reported phantom activation.",
+    "symptoms": [
+      "unexpected automatic emergency braking activation"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116818",
+    "created_at": "2025-08-03T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "my emergency braking activated",
+        "source_id": "2116818",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "traveling over the bridge deck's grates in the left lane",
+        "source_id": "2116818",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Traffic was backed up and I was traveling in the single-digit MPH",
+        "source_id": "2116818",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "as I accelerated a little bit to close the distance",
+        "source_id": "2116818",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the car behind me was trailing by a little bit and was also traveling slowly",
+        "source_id": "2116818",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports unexpected automatic emergency braking while traveling at single-digit MPH over bridge deck grates in backed-up traffic, with more than a car length ahead. No recall, investigation, or rulebook match was returned, so this is not a targeted rulebook test. A similar IONIQ 6 case describes phantom braking with an emergency braking warning, supporting an ADAS reproduction test.",
+    "requested_info": [],
+    "summary": "No rulebook entry matches; test the ADAS forward-collision/AEB system under low-speed grated-bridge and backed-up traffic conditions to reproduce the reported phantom activation.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My Ioniq 6 Limited AWD experienced a phantom braking event in a covered parking lot with no cars or pedestrians anywhere near the front of my car. The car just stopped suddenly with a warning message \"Emergency Braking\", and it wouldn't allow me to proceed until I turned off the...",
+      "group": "adas",
+      "id": "1952572",
+      "make": "HYUNDAI",
+      "model": "IONIQ 6",
+      "score": 3.209,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00221335,
+      "duration_ms": 26861,
+      "reason": "Forward collision avoidance automatic emergency braking activated unexpectedly at single-digit MPH over Mackinac Bridge grates in backed-up traffic.",
+      "started_at": "2025-08-03T07:00:01Z",
+      "step": 2,
+      "tokens": 4227,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 6",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My Ioniq 6 Limited AWD experienced a phantom braking event in a covered parking lot with no cars or pedestrians anywhere near the front of my car. The car just stopped suddenly with a warning message \"Emergency Braking\", and it wouldn't allow me to proceed until I turned off the...",
+            "group": "adas",
+            "id": "1952572",
+            "make": "HYUNDAI",
+            "model": "IONIQ 6",
+            "score": 3.209,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-08-03T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "I was crossing the Mackinac Bridge, northbound, this afternoon, at the time traveling over the bridge deck's grates in the left lane. Traffic was backed up and I was traveling in the single-digit MPH. There was more that a car's length between myself and the next car ahead, and as I accelerated a little bit to close the distance my emergency braking activated. Fortunately, the car behind me was trailing by a little bit and was also traveling slowly."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My Ioniq 6 Limited AWD experienced a phantom braking event in a covered parking lot with no cars or pedestrians anywhere near the front of my car. The car just stopped suddenly with a warning message \"Emergency Braking\", and it wouldn't allow me to proceed until I turned off the...",
+            "group": "adas",
+            "id": "1952572",
+            "make": "HYUNDAI",
+            "model": "IONIQ 6",
+            "score": 3.209,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-03T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HYUNDAI",
+        "model": "IONIQ 6",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-03T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HYUNDAI",
+        "model": "IONIQ 6",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-03T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008127,
+      "duration_ms": 8685,
+      "reason": "The narrative reports unexpected automatic emergency braking while traveling at single-digit MPH over bridge deck grates in backed-up traffic, with more than a car length ahead. No recall, investigation, or rulebook match was returned, so this is not a targeted rulebook test. A similar IONIQ 6 case describes phantom braking with an emergency braking warning, supporting an ADAS reproduction test.",
+      "started_at": "2025-08-03T07:00:09Z",
+      "step": 10,
+      "tokens": 2082,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-08-03T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "my emergency braking activated",
+          "traveling over the bridge deck's grates in the left lane",
+          "Traffic was backed up and I was traveling in the single-digit MPH",
+          "as I accelerated a little bit to close the distance",
+          "the car behind me was trailing by a little bit and was also traveling slowly"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-03T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-03T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-03T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-03T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

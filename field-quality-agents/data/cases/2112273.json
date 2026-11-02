@@ -1,0 +1,535 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "group": "power_and_wiring",
+    "id": "2112273",
+    "make": "DODGE",
+    "mileage": 104000,
+    "model": "DURANGO",
+    "narrative": "The contact owns a 2014 Dodge Durango. The contact stated that while attempting to start the vehicle, the vehicle failed to start as intended. The contact stated that an intermittent warning light for EVAP failure was illuminated. The contact performed an inspection of the vehicle and noticed that the fuel pump fuse was blown and had melted into the fuse box. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The contact referenced an unknown recall; however, the VIN was not under recall. The manufacturer was not made aware of the failure. The failure mileage was approximately 104,000.",
+    "received_at": "2025-07-21",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2112273",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2112273",
+    "decided_at": "2025-07-21T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2112273",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to start as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "an intermittent warning light for EVAP failure was illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the fuel pump fuse was blown and had melted into the fuse box"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": false,
+    "summary": "Test for an intermittent power-feed fault causing the fuel pump fuse to blow and melt into the fuse box, leaving the vehicle unable to start.",
+    "symptoms": [
+      "vehicle failed to start as intended",
+      "intermittent EVAP failure warning light illuminated",
+      "fuel pump fuse blown and melted into the fuse box"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "RQ15003",
+      "match": true,
+      "open_date": "2015-05-01",
+      "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1"
+    },
+    {
+      "id": "RQ15003",
+      "match": true,
+      "open_date": "2015-05-01",
+      "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1"
+    },
+    {
+      "id": "RQ15003",
+      "match": true,
+      "open_date": "2015-05-01",
+      "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1"
+    },
+    {
+      "id": "EA14001",
+      "match": true,
+      "open_date": "2014-01-10",
+      "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con"
+    },
+    {
+      "id": "EA14001",
+      "match": true,
+      "open_date": "2014-01-10",
+      "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con"
+    },
+    {
+      "id": "EA14001",
+      "match": true,
+      "open_date": "2014-01-10",
+      "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con"
+    }
+  ],
+  "proposal": {
+    "case_id": "2112273",
+    "created_at": "2025-07-21T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "the vehicle failed to start as intended",
+        "source_id": "2112273",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "an intermittent warning light for EVAP failure was illuminated",
+        "source_id": "2112273",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the fuel pump fuse was blown and had melted into the fuse box",
+        "source_id": "2112273",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a no-start with an intermittent EVAP warning light and a fuel pump fuse found blown and melted into the fuse box, indicating an intermittent electrical fault in the fuse/breaker wiring circuit. The rulebook's 'intermittent' entry matches these reported conditions and specifies a long-run power cycling test to reproduce faults that appear only after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test for an intermittent power-feed fault causing the fuel pump fuse to blow and melt into the fuse box, leaving the vehicle unable to start.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports a no-start with an intermittent EVAP warning light and a fuel pump fuse found blown and melted into the fuse box, indicating an intermittent electrical fault in the fuse/breaker wiring circuit. The rulebook's 'intermittent' entry matches these reported conditions and specifies a long-run power cycling test to reproduce faults that appear only after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [
+    {
+      "id": "18V332000",
+      "match": true,
+      "open_date": "2018-05-17",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating."
+    },
+    {
+      "id": "17V741000",
+      "match": true,
+      "open_date": "2017-11-21",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2014 Dodge Challenger, Charger, Durango, Chrysler 300, and Jeep Grand Cherokee vehicles equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+    },
+    {
+      "id": "17V435000",
+      "match": true,
+      "open_date": "2017-07-10",
+      "summary": "Chrysler (FCA US LLC) is recalling certain model year 2011-2014 Dodge Challenger, Dodge Charger, Chrysler 300, Dodge Durango, and 2012-2014 Jeep Grand Cherokee vehicles.  The affected vehicles have electro-hydraulic power steering (EHPS) and are equipped with a 5.7L or a 3.6L engine and a 160, 180 or 220 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+    },
+    {
+      "id": "14V634000",
+      "match": true,
+      "open_date": "2014-10-08",
+      "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Chrysler 300, Dodge Charger, Challenger, and Durango; and 2012-2014 Jeep Grand Cherokee vehicles manufactured April 22, 2010, to January 2, 2014, and equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+    },
+    {
+      "id": "14V391000",
+      "match": true,
+      "open_date": "2014-07-02",
+      "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Dodge Durango and Jeep Grand Cherokee vehicles manufactured January 5, 2010, through December 11, 2013.  In the affected vehicles, the wiring for the vanity lamp in the sun visor may short circuit, after a service repair is performed."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000607,
+      "duration_ms": 7694,
+      "reason": "Fuel pump fuse blown and melted into fuse box; vehicle failed to start with intermittent EVAP warning light while attempting to start.",
+      "started_at": "2025-07-21T07:00:01Z",
+      "step": 2,
+      "tokens": 1573,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-21T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-21T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-21T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2014 Dodge Durango. The contact stated that while attempting to start the vehicle, the vehicle failed to start as intended. The contact stated that an intermittent warning light for EVAP failure was illuminated. The contact performed an inspection of the vehicle and noticed that the fuel pump fuse was blown and had melted into the fuse box. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The contact referenced an unknown recall; however, the VIN"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-21T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING",
+            "group": "power_and_wiring",
+            "id": "18V332000",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2018-05-17",
+            "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating.",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+            "group": "power_and_wiring",
+            "id": "17V741000",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2017-11-21",
+            "summary": "Chrysler (FCA US LLC) is recalling certain 2014 Dodge Challenger, Charger, Durango, Chrysler 300, and Jeep Grand Cherokee vehicles equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail.",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+            "group": "power_and_wiring",
+            "id": "17V435000",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2017-07-10",
+            "summary": "Chrysler (FCA US LLC) is recalling certain model year 2011-2014 Dodge Challenger, Dodge Charger, Chrysler 300, Dodge Durango, and 2012-2014 Jeep Grand Cherokee vehicles.  The affected vehicles have electro-hydraulic power steering (EHPS) and are equipped with a 5.7L or a 3.6L engine and a 160, 180 or 220 amp alternator.  In the affected vehicles, the alternator may suddenly fail.",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+            "group": "power_and_wiring",
+            "id": "14V634000",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2014-10-08",
+            "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Chrysler 300, Dodge Charger, Challenger, and Durango; and 2012-2014 Jeep Grand Cherokee vehicles manufactured April 22, 2010, to January 2, 2014, and equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail.",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING",
+            "group": "power_and_wiring",
+            "id": "14V391000",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2014-07-02",
+            "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Dodge Durango and Jeep Grand Cherokee vehicles manufactured January 5, 2010, through December 11, 2013.  In the affected vehicles, the wiring for the vanity lamp in the sun visor may short circuit, after a service repair is performed.",
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-21T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING",
+            "group": "power_and_wiring",
+            "id": "RQ15003",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2015-05-01",
+            "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+            "group": "power_and_wiring",
+            "id": "RQ15003",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2015-05-01",
+            "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING:INTERIOR/UNDER DASH",
+            "group": "power_and_wiring",
+            "id": "RQ15003",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2015-05-01",
+            "summary": "In response to this investigation, Fiat Chrysler Automobiles (FCA) is conducting a recall to address headliner fires that occur post 14V-391.On December 22, 2015 FCA notified the Office of Defects Investigation (ODI) of safety recall 15V-879 to remedy potential headliner fires occurring in 389,252 model year (MY) 2011-2013 Dodge Durango and Jeep Grand Cherokee vehicles manufactured from December 3, 2009 to September 1, 2012.Note this recall, which was scoped based on vehicle design level and field events, does not include all MY 2013 or any MY 2014 Durango and Grand Cherokee vehicles; ODI and FCA will continue to monitor the field experience for this population.ODI opened this investigation based on allegations of fires occurring in the headliner area after the remedy for recall 14V-391 had been conducted.Recall 14V-391 involved MY 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured by FCA from January 5, 2010 to December 11, 2013.The recall was influenced by ODI investigation EA14-001.During EA14-001, data provided by FCA indicated fires were caused by an electrical short in the vanity lamp wiring for either visor.Visors are mounted to the (metal) roof of the vehicle through the headliner with three screws. EA14-001 determined it was possible for the wiring to be pierced or abraded by one of the screws, or otherwise become electrically shorted either during initial vehicle assembly or subsequent headliner area repairs presenting a fire risk.Most of the fires occurred while the vehicle was being driven.The 14V-391 remedy consisted of installing a plastic guide way on each visor to route wiring away from the attachment screws and prevent electrical shorting.Additionally abrasion resistant tape was installed in key areas to protect the wiring integrity.In order to install the guide, the headliner had to be lowered and the existing visor and headliner wiring rerouted, a somewhat complex procedure that required sufficient service technician care and expertise.FCA modified the 14V-391 remedy multiple times to improve it.ODI has identified a total of 43 NHTSA complaints across affected vehicles indicating a fire occurring after the vehicle had been remedied under 14V-391.FCA reported 159 additional unique complaints of post-remedy fires. The fire events primarily occurred while driving however a few reported fires starting after the vehicle was parked. Ten customers incurred injuries including minor burns and smoke inhalation, no crashes were reported.According to FCA, the vehicles recalled under 15V-879 were manufactured with longer wiring connecting the visors to the main harness in the headliner.Field experience clearly shows these vehicles are experiencing more post 14V-391 fires, 189 out of 202 known incidents to date.Recall 15V-879 addresses any remaining risk of fire after the 14V-391 recall remedy is performed.The 15V-879 remedy installs new design level visor assemblies containing added wire sheathing, shortened wiring, revised wiring retainer and wiring loop relief.In addition, part of the metal structure (body in white) where the wiring is routed will be modified (removed) using a template to allow more clearance.The recall action initiated by the vehicle manufacturer address the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at SaferCar.gov under the following identification (ODI) numbers:10640524, 10653417, 10684130, 10691520, 10692710, 10703058, 10705802, 10711836, 10715282, 10717265, 10717266, 10723677, 10726438, 10733003, 10733598, 10735042, 10743410, 10744097, 10745129, 1",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING",
+            "group": "power_and_wiring",
+            "id": "EA14001",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2014-01-10",
+            "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+            "group": "power_and_wiring",
+            "id": "EA14001",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2014-01-10",
+            "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con",
+            "year": 2014
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:WIRING:INTERIOR/UNDER DASH",
+            "group": "power_and_wiring",
+            "id": "EA14001",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "open_date": "2014-01-10",
+            "summary": "On July 1st, 2014 Chrysler Group LLC (Chrysler) notified the Office of Defects Investigation (ODI) that it would conduct a safety recall to remedy a wiring-related fire hazard on the headliner of approximately 661,888 model year (MY) 2011-2014 Jeep Grand Cherokee and Dodge Durango vehicles manufactured between January 5, 2010 and December 11, 2013 (see NHTSA Safety Recall 14V-391), with notifications to begin in August 2014. According to Chrysler, the fire is caused by an electrical short in the vanity lamp wiring for either one of the sun visors mounted on the vehicle. The sun visors are mounted to the roof of the vehicle through the headliner with three metal screws. It is possible for the sun visor wiring to be pierced by one of these screws either during initial vehicle assembly or later headliner area repairs which may cause an electrical short potentially resulting in fire.ODI opened an investigation involving MY 2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles based on consumer reports of headliners catching fire at the front of the passenger's compartment near the sun visors. Complainants reported failure symptoms that ranged from discoloration to open flame burning of the headliner and/or sun visor material. Complainants reported a burning plastic smell and smoke from the headliner, often occurring while the vehicle was in motion. Damage ranged from a small burn spot on the headliner to a near complete burn of the vehicle resulting in a total loss; sunroof damage/glass shattering occurred in some cases. Incidents are more likely to occur when the ignition key is in the on position.However, several vehicles continued to burn after the key was turned off, and key-off fires, while highly unlikely, cannot be fully eliminated as a potential problem. The earliest incidents chronologically were often associated with vehicle assembly or in-plant repair procedures. Chrysler revised assembly and in-plant repair procedures for the headliner which reduced the number of fields incidents.However, anytime a repair is made to the headliner of the vehicle there could still be a risk of shorting the wiring and creating a hazard.Dealership technicians will inspect the vehicles for damaged wiring caused by an improper service procedure and repair any damage. Also, all vehicles will have a plastic guideway installed on each sun visor that routes the wiring away from the attachment screws preventing the wiring from being shorted. All MY 2011-2014 Grand Cherokee and Dodge Durango built before December 11, 2013 are affected by the recall; vehicles manufactured after this date had the guideway installed during vehicle production.ODI received a total of 6 complaints as of June 2014, all of which reported a fire and two of which alleged related injuries. All 6 incidents occurred while the vehicle was being driven. In each case the driver smelled smoke and witnessed the headliner burning on either the driver or passenger side. Two complaints indicate smoke inhalation injuries to the driver. In response to ODI's information request letters of 8/28/2013 and 2/26/2014, Chrysler provided consumer and warranty data which was received by ODI on 10/7/2013 and 3/19/2014. Analysis of the Chrysler data indicated a total of 91 unique incidents related to the investigation of which about two thirds reported an open flame and smoke, the remaining showed only small burn marks with no visible flame. Three Chrysler reports indicated injuries consisting of minor burns on the customer?s hands and smoke inhalation.The investigation is closed on the basis of the recall action the manufacturer has undertaken which is sufficient to address NHTSA?s con",
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-21T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00141375,
+      "duration_ms": 4759,
+      "reason": "The narrative reports a no-start with an intermittent EVAP warning light and a fuel pump fuse found blown and melted into the fuse box, indicating an intermittent electrical fault in the fuse/breaker wiring circuit. The rulebook's 'intermittent' entry matches these reported conditions and specifies a long-run power cycling test to reproduce faults that appear only after repeated wake and sleep cycles.",
+      "started_at": "2025-07-21T07:00:09Z",
+      "step": 10,
+      "tokens": 7709,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-07-21T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "the vehicle failed to start as intended",
+          "an intermittent warning light for EVAP failure was illuminated",
+          "the fuel pump fuse was blown and had melted into the fuse box",
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-07-21T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-21T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-21T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-21T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-21T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

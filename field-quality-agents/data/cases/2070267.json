@@ -1,0 +1,240 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2070267",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "LEGACY",
+    "narrative": "This issue started on the trip back from Nashville. Upon cold start in the morning the center console display won't start. This affected infotainment, climate, eyesight, cruise etc. The system didn't work during the entire trip of 3 5 hours  and inability to operate climate control caused the car to build up fog on all windows reducing visibility significantly at times. Turning ignition off, lock-unlock sequences didn't help the issue.   The system booted normally after it sat locked for few hours upon arrival. A visit to dealer didn't find any issues. The usual comment the car needed software update, which I couldn't verify.",
+    "received_at": "2025-03-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2070267",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2070267",
+    "decided_at": "2025-03-02T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2070267",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "cold start in the morning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the center console display won't start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This affected infotainment, climate, eyesight, cruise etc."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system didn't work during the entire trip of 3 5 hours"
+      },
+      {
+        "kind": "symptom",
+        "quote": "inability to operate climate control caused the car to build up fog on all windows reducing visibility significantly at times."
+      },
+      {
+        "kind": "safety",
+        "quote": "reducing visibility significantly at times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Turning ignition off, lock-unlock sequences didn't help the issue."
+      },
+      {
+        "kind": "condition",
+        "quote": "The system booted normally after it sat locked for few hours upon arrival."
+      },
+      {
+        "kind": "other",
+        "quote": "A visit to dealer didn't find any issues."
+      },
+      {
+        "kind": "other",
+        "quote": "the car needed software update"
+      }
+    ],
+    "conditions": [
+      "cold",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Subaru Legacy adaptive cruise control/forward collision avoidance; center console display fails on cold start, disabling infotainment, climate, Eyesight and cruise; fogged windows reduce visibility; intermittent recovery after hours locked.",
+    "symptoms": [
+      "center console display won't start on cold start",
+      "infotainment, climate, Eyesight and cruise do not work",
+      "climate control cannot be operated",
+      "fog builds up on all windows",
+      "visibility is significantly reduced at times",
+      "ignition off and lock-unlock sequences do not help",
+      "system boots normally after sitting locked for a few hours"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2070267",
+    "created_at": "2025-03-02T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00100605,
+      "duration_ms": 10652,
+      "reason": "2023 Subaru Legacy adaptive cruise control/forward collision avoidance; center console display fails on cold start, disabling infotainment, climate, Eyesight and cruise; fogged windows reduce visibility; intermittent recovery after hours locked.",
+      "started_at": "2025-03-02T07:00:01Z",
+      "step": 2,
+      "tokens": 2147,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "LEGACY",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-02T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-02T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-02T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-02T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

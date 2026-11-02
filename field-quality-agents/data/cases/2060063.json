@@ -1,0 +1,289 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2060063",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "ROGUE",
+    "narrative": "On Friday, 24 Jan 25, at highway speeds between 60 and 70 mph the Automatic Emergency Braking (AEB)  system unexpectedly engaged three times.  On Sunday, 26 Jan 25, while in a neighborhood street the AEB engaged unexpectedly at 25 mph. That same day at highway speeds between 60 and 70 mph the AEB system unexpectedly engaged four times. Additionally, on that day the AEB warning light flashed and a chime was heard, but the system did not brake two times.  This car was at a Nissan dealer on 2 Dec 2019 for recall 1-P9327 - Rogue AEB NTB19-064 and recall 2 - R1911 - NIS AV CONT UNIT MULTI TSB",
+    "received_at": "2025-01-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2060063",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2060063",
+    "decided_at": "2025-01-27T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2060063",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "at highway speeds between 60 and 70 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the Automatic Emergency Braking (AEB)  system unexpectedly engaged three times"
+      },
+      {
+        "kind": "condition",
+        "quote": "while in a neighborhood street"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the AEB engaged unexpectedly at 25 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the AEB system unexpectedly engaged four times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the AEB warning light flashed and a chime was heard, but the system did not brake two times"
+      },
+      {
+        "kind": "other",
+        "quote": "This car was at a Nissan dealer on 2 Dec 2019 for recall 1-P9327 - Rogue AEB NTB19-064 and recall 2 - R1911 - NIS AV CONT UNIT MULTI TSB"
+      },
+      {
+        "kind": "safety",
+        "quote": "unexpectedly engaged three times"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [
+      "1-P9327",
+      "R1911"
+    ],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Nissan Rogue AEB unexpectedly engaged multiple times at 25-70 mph on 24-26 Jan 2025; warning light/chime without braking twice.",
+    "symptoms": [
+      "Automatic Emergency Braking unexpectedly engaged",
+      "AEB warning light flashed with chime but system did not brake"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2060063",
+    "created_at": "2025-01-27T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving at speeds between 30-40 miles per hour my 2018 Nissan Rogue suddenly brakes with no warning. I did not touch the brakes and there was no other vehicle in front or behind me. These incidents really scared me. This Sudden braking has happened six different times betwe...",
+      "group": "adas",
+      "id": "1751546",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 22.217,
+      "year": 2018
+    },
+    {
+      "excerpt": "In the first incident, I was in the middle of an intersection (going through on a green light) on a a normally busy road going approximately 35-40 mph and my automatic brake system braked hard without a warning. It beeped with a warning on the dash as it simultaneously braked. No...",
+      "group": "adas",
+      "id": "1866072",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 16.6479,
+      "year": 2018
+    },
+    {
+      "excerpt": "I have purchased certified pre-owned 2018 Nissan Rouge SL on July 17th 2021 from a Dealer in TOTOWA, NJ, 07512.Recently we encountered a serious problem, where the AEB system malfunctions suddenly and unexpectedly when there is no car or object in front of the car. we are at a sp...",
+      "group": "adas",
+      "id": "1863439",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 15.4563,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-27T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00158815,
+      "duration_ms": 25308,
+      "reason": "Nissan Rogue AEB unexpectedly engaged multiple times at 25-70 mph on 24-26 Jan 2025; warning light/chime without braking twice.",
+      "started_at": "2025-01-27T07:00:01Z",
+      "step": 2,
+      "tokens": 3233,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-27T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ROGUE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving at speeds between 30-40 miles per hour my 2018 Nissan Rogue suddenly brakes with no warning. I did not touch the brakes and there was no other vehicle in front or behind me. These incidents really scared me. This Sudden braking has happened six different times betwe...",
+            "group": "adas",
+            "id": "1751546",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 22.217,
+            "year": 2018
+          },
+          {
+            "excerpt": "In the first incident, I was in the middle of an intersection (going through on a green light) on a a normally busy road going approximately 35-40 mph and my automatic brake system braked hard without a warning. It beeped with a warning on the dash as it simultaneously braked. No...",
+            "group": "adas",
+            "id": "1866072",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 16.6479,
+            "year": 2018
+          },
+          {
+            "excerpt": "I have purchased certified pre-owned 2018 Nissan Rouge SL on July 17th 2021 from a Dealer in TOTOWA, NJ, 07512.Recently we encountered a serious problem, where the AEB system malfunctions suddenly and unexpectedly when there is no car or object in front of the car. we are at a sp...",
+            "group": "adas",
+            "id": "1863439",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 15.4563,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-27T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-27T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-27T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-27T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-27T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-27T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-27T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

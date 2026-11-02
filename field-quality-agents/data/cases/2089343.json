@@ -1,0 +1,238 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2089343",
+    "make": "AUDI",
+    "mileage": null,
+    "model": "Q3",
+    "narrative": "The sunroof in the Audi Q3 leaks and the water drops from the ceiling INTO the cabin. Water also comes through the passenger side panel and drips onto the floor causing flooding of the floorboards. This is a KNOWN issue and Audi has released a TSB (technical service bulletin) to attempt to fix these, but it’s just a band aid. It keeps coming back over and over. Water intrudes into the center lights and they flicker and short out. Water drips from these lights into the center gearshift area and it is an extreme safety hazard. PLEASE force Audi to fix this and make it right with their customers. THIS IS A SAFETY ISSUE AND SHOULD BE A FULL RECALL",
+    "received_at": "2025-05-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089343",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089343",
+    "decided_at": "2025-05-05T07:00:37Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089343",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The sunroof in the Audi Q3 leaks and the water drops from the ceiling INTO the cabin."
+      },
+      {
+        "kind": "condition",
+        "quote": "Water also comes through the passenger side panel and drips onto the floor causing flooding of the floorboards."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Water intrudes into the center lights and they flicker and short out."
+      },
+      {
+        "kind": "safety",
+        "quote": "Water drips from these lights into the center gearshift area and it is an extreme safety hazard."
+      },
+      {
+        "kind": "safety",
+        "quote": "THIS IS A SAFETY ISSUE AND SHOULD BE A FULL RECALL"
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "EXTERIOR LIGHTING: water from a leaking sunroof and passenger side panel intrudes into center lights, causing flicker and shorting, with water dripping into the gearshift area.",
+    "symptoms": [
+      "sunroof leaks water into the cabin",
+      "water comes through the passenger side panel and floods the floorboards",
+      "water intrudes into the center lights",
+      "center lights flicker",
+      "center lights short out",
+      "water drips from the lights into the center gearshift area"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089343",
+    "created_at": "2025-05-05T07:00:35Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The Sun roof is leaking into the cabin through the overhead control panel and the driver door.",
+      "group": "lighting",
+      "id": "2028033",
+      "make": "AUDI",
+      "model": "Q3",
+      "score": 0.863,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-05T07:00:29Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005638,
+      "duration_ms": 6395,
+      "reason": "EXTERIOR LIGHTING: water from a leaking sunroof and passenger side panel intrudes into center lights, causing flicker and shorting, with water dripping into the gearshift area.",
+      "started_at": "2025-05-05T07:00:30Z",
+      "step": 2,
+      "tokens": 1510,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-05-05T07:00:31Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "Q3",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The Sun roof is leaking into the cabin through the overhead control panel and the driver door.",
+            "group": "lighting",
+            "id": "2028033",
+            "make": "AUDI",
+            "model": "Q3",
+            "score": 0.863,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-05T07:00:32Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-05T07:00:33Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-05T07:00:34Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-05T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-05T07:00:38Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-05T07:00:39Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-05T07:00:40Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

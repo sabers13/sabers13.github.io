@@ -1,0 +1,286 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2149750",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "After having fuel pump replaced by recall at random times dashboard will light up with all system lights, car will go into limp mode and loose power for a few seconds and then I am able to resume driving. Extremely scary as there is no warning. This has happened both on the freeway at high rates of speed and on neighborhood roadways. Safety has been compromised several times and Honda dealer is not able to reproduce the issue, retrieve any warning codes or offer any assistance. This has randomly been occurring for several months. When not having this exact issue car runs with no other issues.",
+    "received_at": "2025-11-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2149750",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2149750",
+    "decided_at": "2025-11-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2149750",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "After having fuel pump replaced by recall"
+      },
+      {
+        "kind": "symptom",
+        "quote": "dashboard will light up with all system lights"
+      },
+      {
+        "kind": "symptom",
+        "quote": "car will go into limp mode and loose power for a few seconds"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has happened both on the freeway at high rates of speed and on neighborhood roadways."
+      },
+      {
+        "kind": "safety",
+        "quote": "Safety has been compromised several times"
+      },
+      {
+        "kind": "other",
+        "quote": "Honda dealer is not able to reproduce the issue, retrieve any warning codes or offer any assistance"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has randomly been occurring for several months."
+      },
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2018 Honda Accord ADAS/electrical warnings: after recall fuel pump replacement, random all-system dash lights with brief limp mode and power loss, including at freeway speed",
+    "symptoms": [
+      "all dashboard system lights illuminate at random times",
+      "vehicle enters limp mode",
+      "brief loss of power for a few seconds",
+      "driving resumes on its own afterwards",
+      "dealer cannot reproduce the issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2149750",
+    "created_at": "2025-11-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "This is the second time in a year and a half, fuel injectors went bad an were replaced and im assuming this time is same issue. The car had a little rough idle . The car throws a check engine light and all other lights on dash come on and vehicle went into a sort of limp mode.. c...",
+      "group": "adas",
+      "id": "2026719",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 30.0733,
+      "year": 2018
+    },
+    {
+      "excerpt": "my car has been severely malfunctioning due to the fuel pump recall. I have had to avoid several accidents due to the loss of power at high speeds, stalling, and sputtering. My car started experiencing these issues last December and I was told by Honda to take it in to be diagnos...",
+      "group": "adas",
+      "id": "2001656",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 27.2442,
+      "year": 2018
+    },
+    {
+      "excerpt": "my car has been severely malfunctioning due to the fuel pump recall. I have had to avoid several accidents due to the loss of power at high speeds, stalling, and sputtering. My car started experiencing these issues last December and I was told by Honda to take it in to be diagnos...",
+      "group": "adas",
+      "id": "2001657",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 27.2442,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0004906,
+      "duration_ms": 6671,
+      "reason": "2018 Honda Accord ADAS/electrical warnings: after recall fuel pump replacement, random all-system dash lights with brief limp mode and power loss, including at freeway speed",
+      "started_at": "2025-11-18T07:00:01Z",
+      "step": 2,
+      "tokens": 1367,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "This is the second time in a year and a half, fuel injectors went bad an were replaced and im assuming this time is same issue. The car had a little rough idle . The car throws a check engine light and all other lights on dash come on and vehicle went into a sort of limp mode.. c...",
+            "group": "adas",
+            "id": "2026719",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 30.0733,
+            "year": 2018
+          },
+          {
+            "excerpt": "my car has been severely malfunctioning due to the fuel pump recall. I have had to avoid several accidents due to the loss of power at high speeds, stalling, and sputtering. My car started experiencing these issues last December and I was told by Honda to take it in to be diagnos...",
+            "group": "adas",
+            "id": "2001656",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 27.2442,
+            "year": 2018
+          },
+          {
+            "excerpt": "my car has been severely malfunctioning due to the fuel pump recall. I have had to avoid several accidents due to the loss of power at high speeds, stalling, and sputtering. My car started experiencing these issues last December and I was told by Honda to take it in to be diagnos...",
+            "group": "adas",
+            "id": "2001657",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 27.2442,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

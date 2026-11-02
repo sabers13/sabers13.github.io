@@ -1,0 +1,259 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:INFOTAINMENT",
+    "group": "infotainment",
+    "id": "2111275",
+    "make": "FORD",
+    "mileage": 32000,
+    "model": "F-150",
+    "narrative": "The contact owns a 2021 Ford F-150. The contact stated that while driving 45-50 MPH on the freeway, the navigation screen turned blank, and the speedometer decreased to zero. There was no warning light illuminated. The vehicle was taken to the local dealer, where it was diagnosed that the rear end of the vehicle was detaching.  The dealer determined that the vehicle was unsafe to drive. The vehicle was then taken to unknown local dealer, where it was determined that the rear axle was in good condition. The vehicle was not repaired. The manufacturer was notified of the failure and denied the contact's buyback request. The failure mileage was approximately 32,000.",
+    "received_at": "2025-07-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2111275",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2111275",
+    "decided_at": "2025-07-17T07:00:57Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2111275",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EQUIPMENT:ELECTRICAL:INFOTAINMENT"
+      },
+      {
+        "kind": "symptom",
+        "quote": "navigation screen turned blank"
+      },
+      {
+        "kind": "symptom",
+        "quote": "speedometer decreased to zero"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving 45-50 MPH on the freeway"
+      },
+      {
+        "kind": "safety",
+        "quote": "dealer determined that the vehicle was unsafe to drive"
+      },
+      {
+        "kind": "safety",
+        "quote": "rear end of the vehicle was detaching"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": true,
+    "summary": "Infotainment: navigation screen turned blank and speedometer decreased to zero while driving 45-50 MPH on the freeway; dealer found rear end detaching and vehicle unsafe to drive.",
+    "symptoms": [
+      "navigation screen turned blank",
+      "speedometer decreased to zero"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2111275",
+    "created_at": "2025-07-17T07:00:55Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Ford F-150. The contact stated that the check engine warning light was illuminated, and the GPS was inoperable. Additionally, the interior lights failed to illuminate as needed. The contact stated that the battery had drained on three occasions. The contac...",
+      "group": "infotainment",
+      "id": "1970345",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 25.3111,
+      "year": 2021
+    },
+    {
+      "excerpt": "Speaker system/amplifier created a loud sonic boom type noise while I was driving. Made my ears ring and felt very unsafe to drive afterwards. First time this happened, making an appointment with dealership to get it checked out. No error messages came up on the screen or dash. S...",
+      "group": "infotainment",
+      "id": "2034818",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 6.5208,
+      "year": 2021
+    },
+    {
+      "excerpt": "Speaker Issue: When starting the truck, after about 3 seconds of sitting in the truck, the speakers made a really loud pop noise and then continued to make a loud static noise and cracking noise for the duration of my 15 minute drive home. If this happened on the freeway, it may...",
+      "group": "infotainment",
+      "id": "1865440",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 4.5221,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-17T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010594,
+      "duration_ms": 14798,
+      "reason": "Infotainment: navigation screen turned blank and speedometer decreased to zero while driving 45-50 MPH on the freeway; dealer found rear end detaching and vehicle unsafe to drive.",
+      "started_at": "2025-07-17T07:00:51Z",
+      "step": 2,
+      "tokens": 2336,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-17T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Ford F-150. The contact stated that the check engine warning light was illuminated, and the GPS was inoperable. Additionally, the interior lights failed to illuminate as needed. The contact stated that the battery had drained on three occasions. The contac...",
+            "group": "infotainment",
+            "id": "1970345",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 25.3111,
+            "year": 2021
+          },
+          {
+            "excerpt": "Speaker system/amplifier created a loud sonic boom type noise while I was driving. Made my ears ring and felt very unsafe to drive afterwards. First time this happened, making an appointment with dealership to get it checked out. No error messages came up on the screen or dash. S...",
+            "group": "infotainment",
+            "id": "2034818",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.5208,
+            "year": 2021
+          },
+          {
+            "excerpt": "Speaker Issue: When starting the truck, after about 3 seconds of sitting in the truck, the speakers made a really loud pop noise and then continued to make a loud static noise and cracking noise for the duration of my 15 minute drive home. If this happened on the freeway, it may...",
+            "group": "infotainment",
+            "id": "1865440",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 4.5221,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-17T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-17T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-17T07:00:56Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-17T07:00:58Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-17T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-17T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

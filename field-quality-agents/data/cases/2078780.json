@@ -1,0 +1,216 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2078780",
+    "make": "JEEP",
+    "mileage": 4000,
+    "model": "GLADIATOR",
+    "narrative": "The contact owns a 2022 Jeep Gladiator. The contact stated that while the vehicle was occupied and driven at 5 MPH in the residential driveway, smoke started to be emitted from under the hood. The contact opened the hood and discovered fire primarily emitting from the top of the battery. No warning lights illuminated. The contact then used a broom to try to turn off the fire, and the contact then used water to turn off the fire. There were no injuries sustained. The contact did not file a fire report, and a police report was not filed. The fire was extinguished by the contact with water to certain the fire was extinguished. The vehicle had damage due to the fire, however, it was not destroyed. The dealer was informed of the failure, and the contact was informed that the vehicle was no longer under warranty; however, due to costs was taken back to the residence and remained in the contact's possession. The contact took the vehicle to an independent mechanic the vehicle was inspected; however, the vehicle was not diagnosed. The local dealer was contacted; however, the vehicle was not diagnosed or repaired. The manufacturer was made aware of the failure. The contact referenced Investigation ID: PE24024 for Subject: Underhood fires. The failure mileage was approximately 4,000.",
+    "received_at": "2025-03-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2078780",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2078780",
+    "decided_at": "2025-03-31T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2078780",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke started to be emitted from under the hood"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fire primarily emitting from the top of the battery"
+      },
+      {
+        "kind": "condition",
+        "quote": "driven at 5 MPH in the residential driveway"
+      },
+      {
+        "kind": "safety",
+        "quote": "fire primarily emitting from the top of the battery"
+      },
+      {
+        "kind": "other",
+        "quote": "Investigation ID: PE24024"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "12V/24V/48V battery: underhood smoke and fire from the top of the battery while driven at 5 MPH in a residential driveway.",
+    "symptoms": [
+      "smoke from under the hood",
+      "fire from the top of the battery"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2078780",
+    "created_at": "2025-03-31T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-31T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00128455,
+      "duration_ms": 14179,
+      "reason": "12V/24V/48V battery: underhood smoke and fire from the top of the battery while driven at 5 MPH in a residential driveway.",
+      "started_at": "2025-03-31T07:00:16Z",
+      "step": 2,
+      "tokens": 2805,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-31T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GLADIATOR",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-03-31T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-31T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-31T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-31T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-31T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-31T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-31T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

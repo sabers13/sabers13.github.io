@@ -1,0 +1,266 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:HYBRID MANAGEMENT",
+    "group": "ev_propulsion",
+    "id": "2142721",
+    "make": "JEEP",
+    "mileage": 30000,
+    "model": "WRANGLER",
+    "narrative": "The contact leased a 2022 Jeep Wrangler. The contact stated that the hybrid battery became inoperable, and the regular battery failed to operate properly. While driving at an undisclosed speed, the steering wheel was wobbling. Several unknown warning lights were illuminated and were turning on and off. The vehicle failed to start after an hour but eventually restarted. The contact stated that the failure was related to NHTSA Campaign Number: 23V787000 (Electrical System). The vehicle was towed to the local dealer, where it was diagnosed with a malfunctioning hybrid battery. The regular batter was also inoperable. The contact stated that a software update was completed. The vehicle was partially repaired, but the failure recurred. The manufacturer was contacted, but no assistance was provided. The failure mileage was approximately 30,000.",
+    "received_at": "2025-10-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2142721",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2142721",
+    "decided_at": "2025-10-24T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2142721",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:HYBRID MANAGEMENT"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hybrid battery became inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "regular battery failed to operate properly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "steering wheel was wobbling"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving at an undisclosed speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Several unknown warning lights were illuminated and were turning on and off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle failed to start after an hour but eventually restarted"
+      },
+      {
+        "kind": "condition",
+        "quote": "software update was completed"
+      },
+      {
+        "kind": "condition",
+        "quote": "failure recurred"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 23V787000"
+      },
+      {
+        "kind": "safety",
+        "quote": "steering wheel was wobbling"
+      }
+    ],
+    "conditions": [
+      "while driving",
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [
+      "23V787000"
+    ],
+    "group": "ev_propulsion",
+    "safety_relevant": true,
+    "summary": "2022 Jeep Wrangler hybrid propulsion: hybrid and regular batteries inoperable, steering wobble and warning lights while driving, intermittent no-start; recurred after software update.",
+    "symptoms": [
+      "hybrid battery became inoperable",
+      "regular battery failed to operate properly",
+      "steering wheel wobbled while driving",
+      "unknown warning lights illuminated and turned on and off",
+      "vehicle failed to start after an hour but eventually restarted",
+      "failure recurred after partial repair and software update"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2142721",
+    "created_at": "2025-10-24T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Jeep Wrangler. The contact stated while driving approximately 70 MPH, the vehicle stalled. The contact stated that the vehicle lost power steering and the power assist braking was inoperable. The contact stated that there was a warning chime and a notifica...",
+      "group": "ev_propulsion",
+      "id": "1937270",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 9.1591,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-24T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001138,
+      "duration_ms": 12039,
+      "reason": "2022 Jeep Wrangler hybrid propulsion: hybrid and regular batteries inoperable, steering wobble and warning lights while driving, intermittent no-start; recurred after software update.",
+      "started_at": "2025-10-24T07:00:16Z",
+      "step": 2,
+      "tokens": 2494,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-10-24T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Jeep Wrangler. The contact stated while driving approximately 70 MPH, the vehicle stalled. The contact stated that the vehicle lost power steering and the power assist braking was inoperable. The contact stated that there was a warning chime and a notifica...",
+            "group": "ev_propulsion",
+            "id": "1937270",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 9.1591,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-10-24T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-24T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-24T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-24T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-24T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-24T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-24T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

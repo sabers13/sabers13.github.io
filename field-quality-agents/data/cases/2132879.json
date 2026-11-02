@@ -1,0 +1,294 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2132879",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EXPLORER",
+    "narrative": "Ongoing issues with the screen displaying upside down, blurry, red/green lines, powering on and completely off. Rearview calibration issue off centered (dealership fixed). This also impacts the cruise control alerts, lane keeping assist, etc. and occasionally powers vehicle off. Dealership was able to fix delayed reverse transmission via software for the PCM. Multiple dealership repair attempts have not fixed this ongoing issue from 2022-2025. Videos available via email request.  Dealership verified some of the concerns and Ford would only authorize software updates, new battery, some camera components. When this failed to fix they were not authorized to further repair. As a courtesy the dealership rebuilt the software and this did not fix the issues.",
+    "received_at": "2025-09-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2132879",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2132879",
+    "decided_at": "2025-09-22T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2132879",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "screen displaying upside down, blurry, red/green lines, powering on and completely off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Rearview calibration issue off centered"
+      },
+      {
+        "kind": "symptom",
+        "quote": "impacts the cruise control alerts, lane keeping assist"
+      },
+      {
+        "kind": "safety",
+        "quote": "occasionally powers vehicle off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "delayed reverse transmission via software for the PCM"
+      },
+      {
+        "kind": "condition",
+        "quote": "Multiple dealership repair attempts have not fixed this ongoing issue from 2022-2025"
+      },
+      {
+        "kind": "other",
+        "quote": "software updates, new battery, some camera components"
+      },
+      {
+        "kind": "other",
+        "quote": "rebuilt the software and this did not fix the issues"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS adaptive cruise control: screen upside down/blurry/red-green lines and powering off, affecting cruise/lane alerts and occasionally vehicle power; intermittent 2022-2025 after repeated repairs.",
+    "symptoms": [
+      "screen displaying upside down",
+      "blurry screen",
+      "red/green lines on screen",
+      "screen powering on and completely off",
+      "rearview calibration off centered",
+      "cruise control alerts affected",
+      "lane keeping assist affected",
+      "vehicle occasionally powers off",
+      "delayed reverse transmission"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2132879",
+    "created_at": "2025-09-22T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While merging on to the freeway, while trying to achieve freeway speed, the Explorer lost all power for about 10 seconds. During that time, multiple error messages appeared on my dashboard. The messages included \"Pre-Collision Assist Not Available\" and \"See Manual\". Several Error...",
+      "group": "adas",
+      "id": "1925515",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 13.531,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Ford Explorer. The contact received notification of NHTSA Campaign Number: 23V022000 (Back Over Prevention) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time f...",
+      "group": "adas",
+      "id": "1898393",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 12.101,
+      "year": 2022
+    },
+    {
+      "excerpt": "APIM Module failure at 148 miles on a brand new 2022 Explorer XLT. SYNC display went black. No response to touch. No warning lamps or alerts. Radio still plays and can be controlled by steering wheel controls. Contacted dealer and they said to disconnect negative battery terminal...",
+      "group": "adas",
+      "id": "1835618",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 11.9775,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-22T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0019636,
+      "duration_ms": 18510,
+      "reason": "ADAS adaptive cruise control: screen upside down/blurry/red-green lines and powering off, affecting cruise/lane alerts and occasionally vehicle power; intermittent 2022-2025 after repeated repairs.",
+      "started_at": "2025-09-22T07:00:31Z",
+      "step": 2,
+      "tokens": 3849,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-22T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While merging on to the freeway, while trying to achieve freeway speed, the Explorer lost all power for about 10 seconds. During that time, multiple error messages appeared on my dashboard. The messages included \"Pre-Collision Assist Not Available\" and \"See Manual\". Several Error...",
+            "group": "adas",
+            "id": "1925515",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 13.531,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Ford Explorer. The contact received notification of NHTSA Campaign Number: 23V022000 (Back Over Prevention) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time f...",
+            "group": "adas",
+            "id": "1898393",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 12.101,
+            "year": 2022
+          },
+          {
+            "excerpt": "APIM Module failure at 148 miles on a brand new 2022 Explorer XLT. SYNC display went black. No response to touch. No warning lamps or alerts. Radio still plays and can be controlled by steering wheel controls. Contacted dealer and they said to disconnect negative battery terminal...",
+            "group": "adas",
+            "id": "1835618",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 11.9775,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-22T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-22T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-22T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-22T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-22T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-22T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-22T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

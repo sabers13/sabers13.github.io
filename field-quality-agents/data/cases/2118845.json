@@ -1,0 +1,189 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2118845",
+    "make": "FORD",
+    "mileage": null,
+    "model": "TRANSIT",
+    "narrative": "VIN: [XXX]  Recall data refreshed on Aug 09,2025 0 Unrepaired Recalls associated with this VIN  Please BROADCAST   2025 Transit Safety Recalls*  High voltage battery hvb side rail inspection Recall incomplete   Rear camera screen software update Recall incomplete   Connecting rod inspection Recall incomplete INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2118845",
+    "status": "needs_engineer",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2118845",
+    "decided_at": "2025-08-09T07:00:06Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2118845",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "other",
+        "quote": "Recall data refreshed on Aug 09,2025"
+      },
+      {
+        "kind": "other",
+        "quote": "Unrepaired Recalls associated with this VIN"
+      },
+      {
+        "kind": "other",
+        "quote": "High voltage battery hvb side rail inspection"
+      },
+      {
+        "kind": "other",
+        "quote": "Rear camera screen software update"
+      },
+      {
+        "kind": "other",
+        "quote": "Connecting rod inspection"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Forward collision avoidance warnings (ADAS); no warning symptom described; only unrepaired recall statuses listed.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2118845",
+    "created_at": "2025-08-09T07:00:03Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "symptom"
+    ],
+    "summary": "Information request: symptom",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00058135,
+      "duration_ms": 6774,
+      "reason": "Forward collision avoidance warnings (ADAS); no warning symptom described; only unrepaired recall statuses listed.",
+      "started_at": "2025-08-09T07:00:01Z",
+      "step": 2,
+      "tokens": 1504,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: symptom",
+      "started_at": "2025-08-09T07:00:04Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-09T07:00:05Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-08-09T07:00:07Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-09T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-08-09T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

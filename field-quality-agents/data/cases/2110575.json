@@ -1,0 +1,230 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: WARNINGS",
+    "group": "adas",
+    "id": "2110575",
+    "make": "POLESTAR",
+    "mileage": null,
+    "model": "POLESTAR 2",
+    "narrative": "The manafactuer distributed a software update to correct issues regarding reverse camera settings. This update has not corrected the issue in my polestar and, in fact, has caused many other disturbances forcing me to seek service at a the closest dealership. When reversing, it will activate the emergency stop function, which has caused much anxiety and stress because not only are the parking sensors nonfunctional, but the thought of the emergency breaks being activated without threat or my regard again is distressing and misleading.",
+    "received_at": "2025-07-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2110575",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2110575",
+    "decided_at": "2025-07-16T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2110575",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "reverse camera settings"
+      },
+      {
+        "kind": "symptom",
+        "quote": "has not corrected the issue in my polestar"
+      },
+      {
+        "kind": "other",
+        "quote": "caused many other disturbances forcing me to seek service"
+      },
+      {
+        "kind": "condition",
+        "quote": "When reversing"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it will activate the emergency stop function"
+      },
+      {
+        "kind": "symptom",
+        "quote": "parking sensors nonfunctional"
+      },
+      {
+        "kind": "safety",
+        "quote": "the emergency breaks being activated without threat or my regard again is distressing and misleading"
+      },
+      {
+        "kind": "symptom",
+        "quote": "much anxiety and stress"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Back over prevention warnings on a 2024 Polestar 2: reverse camera settings issue persists after software update, and reversing can trigger emergency stop while parking sensors are nonfunctional.",
+    "symptoms": [
+      "reverse camera settings issue not corrected by software update",
+      "emergency stop function activates when reversing",
+      "parking sensors nonfunctional",
+      "anxiety and stress from unintended emergency braking"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2110575",
+    "created_at": "2025-07-16T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00127885,
+      "duration_ms": 15183,
+      "reason": "Back over prevention warnings on a 2024 Polestar 2: reverse camera settings issue persists after software update, and reversing can trigger emergency stop while parking sensors are nonfunctional.",
+      "started_at": "2025-07-16T07:00:01Z",
+      "step": 2,
+      "tokens": 2665,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-07-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-16T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-16T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-16T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-16T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

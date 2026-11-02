@@ -1,0 +1,473 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2086923",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "FIT",
+    "narrative": "A glitchy and/or blank main display often fails to show important information such as fuel level, odometer, etc., especially in colder weather. Driving with an inoperative display can increase the risk of being stranded somewhere without fuel.",
+    "received_at": "2025-04-28",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2086923",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2086923",
+    "decided_at": "2025-04-28T07:01:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2086923",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "glitchy and/or blank main display"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fails to show important information such as fuel level, odometer"
+      },
+      {
+        "kind": "condition",
+        "quote": "especially in colder weather"
+      },
+      {
+        "kind": "other",
+        "quote": "Driving with an inoperative display can increase the risk of being stranded somewhere without fuel."
+      }
+    ],
+    "conditions": [
+      "cold"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the Honda Fit main display for a cold-dependent glitch/blank fault that hides fuel level and odometer.",
+    "symptoms": [
+      "glitchy main display",
+      "blank main display",
+      "fuel level not displayed",
+      "odometer not displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2086923",
+    "created_at": "2025-04-28T07:01:21Z",
+    "evidence": [
+      {
+        "quote": "glitchy and/or blank main display",
+        "source_id": "2086923",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "fails to show important information such as fuel level, odometer",
+        "source_id": "2086923",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "especially in colder weather",
+        "source_id": "2086923",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Driving with an inoperative display can increase the risk of being stranded somewhere without fuel.",
+        "source_id": "2086923",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a glitchy or blank main display that often fails to show fuel level and odometer, especially in colder weather. The rulebook matches the cold condition and names a low-temperature cycling test to separate a temperature-dependent fault from a permanent one.",
+    "requested_info": [],
+    "summary": "Test the Honda Fit main display for a cold-dependent glitch/blank fault that hides fuel level and odometer.",
+    "targeted_test": {
+      "conditions": [
+        "cold"
+      ],
+      "name": "Low-temperature cycling test",
+      "reason": "The narrative reports a glitchy or blank main display that often fails to show fuel level and odometer, especially in colder weather. The rulebook matches the cold condition and names a low-temperature cycling test to separate a temperature-dependent fault from a permanent one."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The multi information display which includes the gas gauge, odometer, and repair reminders began having problems around September 2022. The display would blink on and off, sometimes go completely blank or sometimes show jumbled characters. When I first noticed this the weather wa...",
+      "group": "electrical_general",
+      "id": "1874709",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 7.405,
+      "year": 2019
+    },
+    {
+      "excerpt": "Fuel Gauge Cluster fails in weather sometimes outside of weather conditions and will glitch out causing an inability to see mileage and fuel amount.",
+      "group": "electrical_general",
+      "id": "1782571",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 6.0257,
+      "year": 2019
+    },
+    {
+      "excerpt": "Console display flickers with garbage characters (sometimes) or is blank (most times). This is a safety concern because: 1) a blank display prevents viewing of gas tank level, 2) the TPMS warning light remains lit despite being checked and reset by the dealer, and 3) other warnin...",
+      "group": "electrical_general",
+      "id": "1972924",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 5.5466,
+      "year": 2019
+    },
+    {
+      "excerpt": "There's an electrical defect on the 2019 Honda Fit dashboard. The Electrical part of the dashboard that shows the Odometer, fuel level, speed and temp glitches, especially when cold. I bought my vehicle in March of 2022 form a Honda Dealership. It happened a few times towards the...",
+      "group": "electrical_general",
+      "id": "1886695",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 4.9418,
+      "year": 2019
+    },
+    {
+      "excerpt": "Instrument cluster display failing. Unable to get fuel gauge or miles off the vehicle. Without The fuel gauge hard to tell when running low on fuel",
+      "group": "electrical_general",
+      "id": "1967009",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 3.8189,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-28T07:01:10Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00072175,
+      "duration_ms": 8774,
+      "reason": "ELECTRICAL SYSTEM main display glitchy or blank, failing to show fuel level and odometer, especially in colder weather",
+      "started_at": "2025-04-28T07:01:11Z",
+      "step": 2,
+      "tokens": 1696,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-28T07:01:12Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "FIT",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The multi information display which includes the gas gauge, odometer, and repair reminders began having problems around September 2022. The display would blink on and off, sometimes go completely blank or sometimes show jumbled characters. When I first noticed this the weather wa...",
+            "group": "electrical_general",
+            "id": "1874709",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 7.405,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fuel Gauge Cluster fails in weather sometimes outside of weather conditions and will glitch out causing an inability to see mileage and fuel amount.",
+            "group": "electrical_general",
+            "id": "1782571",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 6.0257,
+            "year": 2019
+          },
+          {
+            "excerpt": "Console display flickers with garbage characters (sometimes) or is blank (most times). This is a safety concern because: 1) a blank display prevents viewing of gas tank level, 2) the TPMS warning light remains lit despite being checked and reset by the dealer, and 3) other warnin...",
+            "group": "electrical_general",
+            "id": "1972924",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 5.5466,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-04-28T07:01:13Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-28T07:01:14Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-04-28T07:01:15Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "A glitchy and/or blank main display often fails to show important information such as fuel level, odometer, etc., especially in colder weather. Driving with an inoperative display can increase the risk of being stranded somewhere without fuel."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The multi information display which includes the gas gauge, odometer, and repair reminders began having problems around September 2022. The display would blink on and off, sometimes go completely blank or sometimes show jumbled characters. When I first noticed this the weather wa...",
+            "group": "electrical_general",
+            "id": "1874709",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 7.405,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fuel Gauge Cluster fails in weather sometimes outside of weather conditions and will glitch out causing an inability to see mileage and fuel amount.",
+            "group": "electrical_general",
+            "id": "1782571",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 6.0257,
+            "year": 2019
+          },
+          {
+            "excerpt": "Console display flickers with garbage characters (sometimes) or is blank (most times). This is a safety concern because: 1) a blank display prevents viewing of gas tank level, 2) the TPMS warning light remains lit despite being checked and reset by the dealer, and 3) other warnin...",
+            "group": "electrical_general",
+            "id": "1972924",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 5.5466,
+            "year": 2019
+          },
+          {
+            "excerpt": "There's an electrical defect on the 2019 Honda Fit dashboard. The Electrical part of the dashboard that shows the Odometer, fuel level, speed and temp glitches, especially when cold. I bought my vehicle in March of 2022 form a Honda Dealership. It happened a few times towards the...",
+            "group": "electrical_general",
+            "id": "1886695",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 4.9418,
+            "year": 2019
+          },
+          {
+            "excerpt": "Instrument cluster display failing. Unable to get fuel gauge or miles off the vehicle. Without The fuel gauge hard to tell when running low on fuel",
+            "group": "electrical_general",
+            "id": "1967009",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 3.8189,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-28T07:01:16Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "FIT",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-28T07:01:17Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "FIT",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-28T07:01:18Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "cold"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "cold",
+            "matched_conditions": [
+              "cold"
+            ],
+            "reason": "Cold-soak and cold-start behaviour separates a temperature-dependent fault from a permanent one.",
+            "test": "Low-temperature cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00057765,
+      "duration_ms": 5455,
+      "reason": "The narrative reports a glitchy or blank main display that often fails to show fuel level and odometer, especially in colder weather. The rulebook matches the cold condition and names a low-temperature cycling test to separate a temperature-dependent fault from a permanent one.",
+      "started_at": "2025-04-28T07:01:19Z",
+      "step": 10,
+      "tokens": 1952,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-04-28T07:01:20Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "glitchy and/or blank main display",
+          "fails to show important information such as fuel level, odometer",
+          "especially in colder weather",
+          "Driving with an inoperative display can increase the risk of being stranded somewhere without fuel."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-28T07:01:22Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-28T07:01:24Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-28T07:01:25Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-28T07:01:26Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

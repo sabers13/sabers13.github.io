@@ -1,0 +1,235 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2067507",
+    "make": "FORD",
+    "mileage": null,
+    "model": "MAVERICK HYBRID",
+    "narrative": "When having the vehicle in reverse, the rear-camera’s image oftentimes freezes for several moments which causes unreal expectations of what is actually in the rear and how close objects actually are. This has caused fear to my wife, and she prefers not to drive the vehicle in part due to this unresolved issue.",
+    "received_at": "2025-02-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2067507",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2067507",
+    "decided_at": "2025-02-20T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2067507",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "rear-camera’s image oftentimes freezes for several moments"
+      },
+      {
+        "kind": "condition",
+        "quote": "When having the vehicle in reverse"
+      },
+      {
+        "kind": "safety",
+        "quote": "causes unreal expectations of what is actually in the rear and how close objects actually are"
+      },
+      {
+        "kind": "safety",
+        "quote": "prefers not to drive the vehicle"
+      },
+      {
+        "kind": "component_group",
+        "quote": "body_controls"
+      }
+    ],
+    "conditions": [
+      "reverse",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Rear camera (VISIBILITY/WIPER) image freezes for several moments in reverse, misleading rear distance perception and prompting driver avoidance.",
+    "symptoms": [
+      "rear camera image freezes for several moments",
+      "misleading rear-view distance perception"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2067507",
+    "created_at": "2025-02-20T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Rear window driver side passenger failed and won’t go up or down bad regulator Transmission failure needs replaced at 1 year old Rear camera frozen no remedy on recall Engine failure during acceleration shifts to neutral then shifts to acceleration Engine acceleration at slow sto...",
+      "group": "body_controls",
+      "id": "2049461",
+      "make": "FORD",
+      "model": "MAVERICK HYBRID",
+      "score": 0.6832,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-20T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012837,
+      "duration_ms": 15334,
+      "reason": "Rear camera (VISIBILITY/WIPER) image freezes for several moments in reverse, misleading rear distance perception and prompting driver avoidance.",
+      "started_at": "2025-02-20T07:00:31Z",
+      "step": 2,
+      "tokens": 2555,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-02-20T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MAVERICK HYBRID",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Rear window driver side passenger failed and won’t go up or down bad regulator Transmission failure needs replaced at 1 year old Rear camera frozen no remedy on recall Engine failure during acceleration shifts to neutral then shifts to acceleration Engine acceleration at slow sto...",
+            "group": "body_controls",
+            "id": "2049461",
+            "make": "FORD",
+            "model": "MAVERICK HYBRID",
+            "score": 0.6832,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-20T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-20T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-20T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-20T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-20T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-20T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-20T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

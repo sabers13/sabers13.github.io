@@ -1,0 +1,232 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2076881",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "COLORADO",
+    "narrative": "While driving in heavy and slow moving traffic at approximately 15 mph, the vehicle in front stopped. The forward collision and automatic emergency braking failed to activate. These safety features are not a replacement for active driving attention, but if they properly function and activate, they could have prevented the rear end collision that occurred.",
+    "received_at": "2025-03-25",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2076881",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2076881",
+    "decided_at": "2025-03-25T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2076881",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving in heavy and slow moving traffic at approximately 15 mph, the vehicle in front stopped."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The forward collision and automatic emergency braking failed to activate."
+      },
+      {
+        "kind": "safety",
+        "quote": "rear end collision"
+      }
+    ],
+    "conditions": [
+      "heavy and slow moving traffic",
+      "approximately 15 mph",
+      "vehicle in front stopped"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance warnings: forward collision and automatic emergency braking failed to activate in heavy, slow traffic at approximately 15 mph with a stopped vehicle ahead.",
+    "symptoms": [
+      "forward collision failed to activate",
+      "automatic emergency braking failed to activate"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2076881",
+    "created_at": "2025-03-25T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "These features no longer work in the vehicle. There may be others that I have not noticed yet. Chevrolet requires you to purchase a Onstar subscription at the price of 25.99 a month for these safety features to work. It also requires Onstar for the talk button on steering wheel t...",
+      "group": "adas",
+      "id": "1995619",
+      "make": "CHEVROLET",
+      "model": "COLORADO",
+      "score": 0.9709,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00049945,
+      "duration_ms": 6051,
+      "reason": "Forward collision avoidance warnings: forward collision and automatic emergency braking failed to activate in heavy, slow traffic at approximately 15 mph with a stopped vehicle ahead.",
+      "started_at": "2025-03-25T07:00:01Z",
+      "step": 2,
+      "tokens": 1342,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-03-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "COLORADO",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "These features no longer work in the vehicle. There may be others that I have not noticed yet. Chevrolet requires you to purchase a Onstar subscription at the price of 25.99 a month for these safety features to work. It also requires Onstar for the talk button on steering wheel t...",
+            "group": "adas",
+            "id": "1995619",
+            "make": "CHEVROLET",
+            "model": "COLORADO",
+            "score": 0.9709,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-25T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-25T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-25T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-25T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

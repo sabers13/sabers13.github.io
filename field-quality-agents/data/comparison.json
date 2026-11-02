@@ -1,0 +1,356 @@
+{
+  "after": {
+    "budget_hits": 0,
+    "cases": 600,
+    "citation_validity_rate": {
+      "ci_high": 1.0,
+      "ci_low": 0.994808,
+      "n": 736,
+      "value": 1.0
+    },
+    "cost_per_1000_cases_usd": 1.3316631666666667,
+    "decided_without_edits_share": 1.0,
+    "evaluation_labels_in_model_input": true,
+    "group_coverage": null,
+    "group_macro_f1": null,
+    "human_touches_per_case": 1.0,
+    "issue_base_rate": 0.2,
+    "issue_median_lead_days": 65.0,
+    "issue_precision": {
+      "ci_high": null,
+      "ci_low": null,
+      "n": 5,
+      "value": 0.4
+    },
+    "latency_p50_ms": 14754.5,
+    "latency_p95_ms": 29454.94999999998,
+    "quote_grounding_rate": {
+      "ci_high": 0.91486,
+      "ci_low": 0.897161,
+      "n": 4166,
+      "value": 0.906385
+    },
+    "quotes_dropped": 27,
+    "recall_link_match_rate": {
+      "ci_high": 0.563503,
+      "ci_low": 0.030053,
+      "n": 6,
+      "value": 0.166667
+    },
+    "safety_precision": null,
+    "safety_recall": null,
+    "steps_per_case": 4.26,
+    "targeted_test_share": {
+      "ci_high": 0.505464,
+      "ci_low": 0.338798,
+      "n": 131,
+      "value": 0.419847
+    },
+    "targeted_test_with_quote_share": {
+      "ci_high": 0.686266,
+      "ci_low": 0.432698,
+      "n": 55,
+      "value": 0.563636
+    }
+  },
+  "before": {
+    "budget_hits": 0,
+    "cases": 600,
+    "citation_validity_rate": null,
+    "cost_per_1000_cases_usd": 0.0,
+    "decided_without_edits_share": null,
+    "evaluation_labels_in_model_input": false,
+    "group_coverage": {
+      "ci_high": 1.0,
+      "ci_low": 0.993638,
+      "n": 600,
+      "value": 1.0
+    },
+    "group_macro_f1": {
+      "ci_high": 0.769053,
+      "ci_low": 0.686986,
+      "n": 600,
+      "value": 0.733967
+    },
+    "human_touches_per_case": 1.0,
+    "issue_base_rate": null,
+    "issue_median_lead_days": null,
+    "issue_precision": null,
+    "latency_p50_ms": 0.0,
+    "latency_p95_ms": 0.0,
+    "quote_grounding_rate": null,
+    "quotes_dropped": null,
+    "recall_link_match_rate": null,
+    "safety_precision": {
+      "ci_high": 0.504832,
+      "ci_low": 0.392804,
+      "n": 299,
+      "value": 0.448161
+    },
+    "safety_recall": {
+      "ci_high": 0.904989,
+      "ci_low": 0.795705,
+      "n": 156,
+      "value": 0.858974
+    },
+    "steps_per_case": 4.0,
+    "targeted_test_share": {
+      "ci_high": 0.012601,
+      "ci_low": 0.0,
+      "n": 301,
+      "value": 0.0
+    },
+    "targeted_test_with_quote_share": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "n": 0,
+      "value": 0.0
+    }
+  },
+  "rows": [
+    {
+      "after": null,
+      "before": {
+        "ci_high": 0.769053,
+        "ci_low": 0.686986,
+        "n": 600,
+        "value": 0.733967
+      },
+      "label": "Component group macro-F1",
+      "metric": "group_macro_f1",
+      "note": "withheld: the recorded requests carried this NHTSA label"
+    },
+    {
+      "after": null,
+      "before": {
+        "ci_high": 1.0,
+        "ci_low": 0.993638,
+        "n": 600,
+        "value": 1.0
+      },
+      "label": "Component group coverage",
+      "metric": "group_coverage",
+      "note": "withheld: the recorded requests carried this NHTSA label"
+    },
+    {
+      "after": null,
+      "before": {
+        "ci_high": 0.504832,
+        "ci_low": 0.392804,
+        "n": 299,
+        "value": 0.448161
+      },
+      "label": "Safety precision",
+      "metric": "safety_precision",
+      "note": "withheld: the recorded requests carried this NHTSA label"
+    },
+    {
+      "after": null,
+      "before": {
+        "ci_high": 0.904989,
+        "ci_low": 0.795705,
+        "n": 156,
+        "value": 0.858974
+      },
+      "label": "Safety recall",
+      "metric": "safety_recall",
+      "note": "withheld: the recorded requests carried this NHTSA label"
+    },
+    {
+      "after": {
+        "ci_high": 0.91486,
+        "ci_low": 0.897161,
+        "n": 4166,
+        "value": 0.906385
+      },
+      "before": null,
+      "label": "Quote grounding",
+      "metric": "quote_grounding_rate",
+      "note": "higher is better; agentic evidence only"
+    },
+    {
+      "after": {
+        "ci_high": 1.0,
+        "ci_low": 0.994808,
+        "n": 736,
+        "value": 1.0
+      },
+      "before": null,
+      "label": "Citation validity",
+      "metric": "citation_validity_rate",
+      "note": "higher is better; agentic evidence only"
+    },
+    {
+      "after": {
+        "ci_high": 0.505464,
+        "ci_low": 0.338798,
+        "n": 131,
+        "value": 0.419847
+      },
+      "before": {
+        "ci_high": 0.012601,
+        "ci_low": 0.0,
+        "n": 301,
+        "value": 0.0
+      },
+      "label": "Targeted test share",
+      "metric": "targeted_test_share",
+      "note": "behaviour, no ground truth"
+    },
+    {
+      "after": {
+        "ci_high": 0.686266,
+        "ci_low": 0.432698,
+        "n": 55,
+        "value": 0.563636
+      },
+      "before": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "n": 0,
+        "value": 0.0
+      },
+      "label": "Targeted test with verified quote",
+      "metric": "targeted_test_with_quote_share",
+      "note": "higher is better"
+    },
+    {
+      "after": {
+        "ci_high": null,
+        "ci_low": null,
+        "n": 5,
+        "value": 0.4
+      },
+      "before": null,
+      "label": "Issue early share",
+      "metric": "issue_precision",
+      "note": "higher is better"
+    },
+    {
+      "after": 65.0,
+      "before": null,
+      "label": "Issue median lead days",
+      "metric": "issue_median_lead_days",
+      "note": "higher is better"
+    },
+    {
+      "after": 0.2,
+      "before": null,
+      "label": "Issue random-week base rate",
+      "metric": "issue_base_rate",
+      "note": "reference line, not a score"
+    },
+    {
+      "after": {
+        "ci_high": 0.563503,
+        "ci_low": 0.030053,
+        "n": 6,
+        "value": 0.166667
+      },
+      "before": null,
+      "label": "Recall link match rate",
+      "metric": "recall_link_match_rate",
+      "note": "higher is better"
+    },
+    {
+      "after": 1.0,
+      "before": 1.0,
+      "label": "Human touches per case",
+      "metric": "human_touches_per_case",
+      "note": "lower is better"
+    },
+    {
+      "after": 1.0,
+      "before": null,
+      "label": "Decided without edits",
+      "metric": "decided_without_edits_share",
+      "note": "higher is better"
+    },
+    {
+      "after": 4.26,
+      "before": 4.0,
+      "label": "Steps per case",
+      "metric": "steps_per_case",
+      "note": "lower is better"
+    },
+    {
+      "after": 1.3316631666666667,
+      "before": 0.0,
+      "label": "Cost per 1,000 cases (USD)",
+      "metric": "cost_per_1000_cases_usd",
+      "note": "lower is better"
+    },
+    {
+      "after": 14754.5,
+      "before": 0.0,
+      "label": "Latency p50 (ms)",
+      "metric": "latency_p50_ms",
+      "note": "lower is better"
+    },
+    {
+      "after": 29454.94999999998,
+      "before": 0.0,
+      "label": "Latency p95 (ms)",
+      "metric": "latency_p95_ms",
+      "note": "lower is better"
+    },
+    {
+      "after": 0,
+      "before": 0,
+      "label": "Budget hits",
+      "metric": "budget_hits",
+      "note": "lower is better"
+    }
+  ],
+  "summary": {
+    "examples": [
+      {
+        "after": "The issue agent opened I-20250711-002 on 2025-07-11, 66 days before NHTSA published recall 25V615000 (2025-09-15).",
+        "before": "The linear pipeline has no fleet-level issue step.",
+        "case_id": "2102878",
+        "note": "The earliest issue that preceded a matching recall or investigation."
+      },
+      {
+        "after": "Targeted load test requested after 16 trace steps.",
+        "before": "Standard test; the linear simulation always passes it.",
+        "case_id": "2156317",
+        "note": "The longest agent trace that ended in a targeted test."
+      },
+      {
+        "after": "The agent verified a quotation and proposed an evidence-backed test.",
+        "before": "Closed as no trouble found.",
+        "case_id": "2052717",
+        "note": "Where the linear pipeline missed what the agent found."
+      },
+      {
+        "after": "The agent also found no verified evidence.",
+        "before": "Closed as no trouble found with the keyword rules.",
+        "case_id": "2052447",
+        "note": "Reverse: where the linear pipeline was right too."
+      }
+    ],
+    "headline": [
+      {
+        "after": 1.0,
+        "before": 1.0,
+        "id": "human_touches_per_case",
+        "label": "Human touches per case",
+        "unit": "per case"
+      },
+      {
+        "after": 0.4198,
+        "before": 0.0,
+        "id": "targeted_test_share",
+        "label": "Targeted test share",
+        "unit": "share"
+      },
+      {
+        "after": 1.3317,
+        "before": 0.0,
+        "id": "cost_per_1000_cases_usd",
+        "label": "Cost per 1,000 cases",
+        "unit": "USD"
+      }
+    ]
+  }
+}

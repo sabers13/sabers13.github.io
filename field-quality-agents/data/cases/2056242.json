@@ -1,0 +1,263 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2056242",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "SILVERADO 1500",
+    "narrative": "The truck has been having the inactive airbag sign on for about the two years that we have had it.",
+    "received_at": "2025-01-15",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2056242",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2056242",
+    "decided_at": "2025-01-15T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2056242",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "inactive airbag sign on"
+      },
+      {
+        "kind": "condition",
+        "quote": "for about the two years"
+      },
+      {
+        "kind": "safety",
+        "quote": "inactive airbag sign"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS: inactive airbag sign on for about two years.",
+    "symptoms": [
+      "inactive airbag sign on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2056242",
+    "created_at": "2025-01-15T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hi, I had all my side curtain airbags deploy in my truck without any accident and under normal driving conditions. The fronts did not deploy. I had no warning lights or airbag light prior to this event. I spoke with my insurance and they wanted to have my truck inspected. I took...",
+      "group": "restraints",
+      "id": "2002840",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 4.41,
+      "year": 2014
+    },
+    {
+      "excerpt": "On DECEMBER 14th 2021 while traveling on interstate 90 from Hardin Montana to Billings Montana I hit a large granite boulder that had fallen off of a semi, I had my cruise control set where I always set it at 77 mph. The boulder was around 500 lbs and was roughly 30 inches tall b...",
+      "group": "restraints",
+      "id": "1797195",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 2.5993,
+      "year": 2014
+    },
+    {
+      "excerpt": "The contact owned a 2014 Chevrolet Silverado 1500. The contact stated while driving approximately 45-50 MPH, the contact started feeling sick and lost control of the vehicle and drove off the roadway. It was unclear what the vehicle struck after leaving the roadway. The contact s...",
+      "group": "restraints",
+      "id": "1816388",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 1.7134,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-15T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00066325,
+      "duration_ms": 10956,
+      "reason": "AIR BAGS: inactive airbag sign on for about two years.",
+      "started_at": "2025-01-15T07:00:31Z",
+      "step": 2,
+      "tokens": 1582,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-15T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "SILVERADO 1500",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hi, I had all my side curtain airbags deploy in my truck without any accident and under normal driving conditions. The fronts did not deploy. I had no warning lights or airbag light prior to this event. I spoke with my insurance and they wanted to have my truck inspected. I took...",
+            "group": "restraints",
+            "id": "2002840",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 4.41,
+            "year": 2014
+          },
+          {
+            "excerpt": "On DECEMBER 14th 2021 while traveling on interstate 90 from Hardin Montana to Billings Montana I hit a large granite boulder that had fallen off of a semi, I had my cruise control set where I always set it at 77 mph. The boulder was around 500 lbs and was roughly 30 inches tall b...",
+            "group": "restraints",
+            "id": "1797195",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 2.5993,
+            "year": 2014
+          },
+          {
+            "excerpt": "The contact owned a 2014 Chevrolet Silverado 1500. The contact stated while driving approximately 45-50 MPH, the contact started feeling sick and lost control of the vehicle and drove off the roadway. It was unclear what the vehicle struck after leaving the roadway. The contact s...",
+            "group": "restraints",
+            "id": "1816388",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 1.7134,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-01-15T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-15T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-15T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-15T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-15T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-15T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-15T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2065732",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "The engine lost power while driving and was almost T-boned the first time the issue happened. No warning lights were present before the loss of power. I was leaving a stop sign and crossing traffic did not have to stop. The posted speed limit for the cross street is 40 MPH. The dealership updated the software, and the Wrangler 4XE was returned the same day. Less than two weeks later, the loss of motive power occurred again. The dealership had the vehicle for almost 40 days and replaced the high-voltage battery pack. About 50 miles after the car was returned, the check engine light came on. I was almost home when this happened and had the 4XE towed for the third time. Texan Jeep claims they had engineers from Jeep look at the vehicle while it was in the shop for an extended period of time. These vehicles are not safe to be on the road! The safety of any other vehicle around a 4XE is at risk. They can shut down and go into limp mode without warning, with or without the recalls being complied with. The only reason I did not have a significant accident was my training as a commercial airline pilot and dealing with simulated emergencies.",
+    "received_at": "2025-02-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2065732",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065732",
+    "decided_at": "2025-02-14T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2065732",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The engine lost power while driving and was almost T-boned the first time the issue happened."
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning lights were present before the loss of power."
+      },
+      {
+        "kind": "condition",
+        "quote": "The dealership updated the software, and the Wrangler 4XE was returned the same day."
+      },
+      {
+        "kind": "condition",
+        "quote": "Less than two weeks later, the loss of motive power occurred again."
+      },
+      {
+        "kind": "condition",
+        "quote": "The dealership had the vehicle for almost 40 days and replaced the high-voltage battery pack."
+      },
+      {
+        "kind": "symptom",
+        "quote": "About 50 miles after the car was returned, the check engine light came on."
+      },
+      {
+        "kind": "symptom",
+        "quote": "They can shut down and go into limp mode without warning, with or without the recalls being complied with."
+      },
+      {
+        "kind": "safety",
+        "quote": "These vehicles are not safe to be on the road!"
+      },
+      {
+        "kind": "safety",
+        "quote": "The safety of any other vehicle around a 4XE is at risk."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Jeep Wrangler 4XE electrical/general fault: repeated loss of motive power while driving, no warning, after software update and high-voltage battery replacement; later check engine light and limp mode.",
+    "symptoms": [
+      "engine lost power while driving",
+      "loss of motive power",
+      "check engine light came on",
+      "shut down and go into limp mode without warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2065732",
+    "created_at": "2025-02-14T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My 2022 4xe Rubicon has been at the shop for 60 days now for slamming in to a dead stop while driving over 8 -18 mph. This happened 4 times early in the morning trying to drive to work. The dealership towed it in that morning, but failed to look at it for over 2 weeks. - they tho...",
+      "group": "electrical_general",
+      "id": "1928954",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 33.4788,
+      "year": 2022
+    },
+    {
+      "excerpt": "In October, my brand new car straight from factory with only 3900 miles on it broke down at a gas station. The dashboard said “service charging system”. The car would not move or allow me to switch gears. It was locked. It took 3.5 hours for a tow truck to come. The car was in th...",
+      "group": "electrical_general",
+      "id": "1853732",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 31.8481,
+      "year": 2022
+    },
+    {
+      "excerpt": "During routine driving at highway speed, the vehicle’s electronic stability control (ESC) warning light illuminated on the dashboard. Within seconds, the vehicles check engine light (CEL) also illuminated. At that point, the vehicle stalled without battery or engine power via any...",
+      "group": "electrical_general",
+      "id": "1827060",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 31.4772,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-14T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007137,
+      "duration_ms": 8016,
+      "reason": "Jeep Wrangler 4XE electrical/general fault: repeated loss of motive power while driving, no warning, after software update and high-voltage battery replacement; later check engine light and limp mode.",
+      "started_at": "2025-02-14T07:00:36Z",
+      "step": 2,
+      "tokens": 1737,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-14T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My 2022 4xe Rubicon has been at the shop for 60 days now for slamming in to a dead stop while driving over 8 -18 mph. This happened 4 times early in the morning trying to drive to work. The dealership towed it in that morning, but failed to look at it for over 2 weeks. - they tho...",
+            "group": "electrical_general",
+            "id": "1928954",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 33.4788,
+            "year": 2022
+          },
+          {
+            "excerpt": "In October, my brand new car straight from factory with only 3900 miles on it broke down at a gas station. The dashboard said “service charging system”. The car would not move or allow me to switch gears. It was locked. It took 3.5 hours for a tow truck to come. The car was in th...",
+            "group": "electrical_general",
+            "id": "1853732",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 31.8481,
+            "year": 2022
+          },
+          {
+            "excerpt": "During routine driving at highway speed, the vehicle’s electronic stability control (ESC) warning light illuminated on the dashboard. Within seconds, the vehicles check engine light (CEL) also illuminated. At that point, the vehicle stalled without battery or engine power via any...",
+            "group": "electrical_general",
+            "id": "1827060",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 31.4772,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-14T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-14T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-14T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-14T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-14T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-14T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-14T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

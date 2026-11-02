@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2084487",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "ABS control module failed. Dash warning lights are on and error code present for ABS module failure. There is no replacement available and no one can give any kind of estimate for when the part may ever be available. They poses a huge safety risk and is a known problem in which it appears they are doing nothing about correcting.",
+    "received_at": "2025-04-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2084487",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084487",
+    "decided_at": "2025-04-20T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2084487",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "ABS control module failed."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Dash warning lights are on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "error code present for ABS module failure"
+      },
+      {
+        "kind": "other",
+        "quote": "There is no replacement available"
+      },
+      {
+        "kind": "safety",
+        "quote": "They poses a huge safety risk"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ABS control module failure with dash warning lights and error code; no replacement available and owner cites safety risk",
+    "symptoms": [
+      "ABS control module failure",
+      "dash warning lights on",
+      "error code present for ABS module failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084487",
+    "created_at": "2025-04-20T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ABS Code C2200-49, anti-lock brake module internal electronic failure. Have not been able to source a new ABS control module for my vehicle. Apparently Dodge/Mopar/Chrysler has stopped producing this part. No ABS makes it dangerous to drive in the snowy/wet conditions prevalent d...",
+      "group": "electrical_general",
+      "id": "2051879",
+      "make": "RAM",
+      "model": "1500",
+      "score": 17.0084,
+      "year": 2016
+    },
+    {
+      "excerpt": "ABS module, traction control, cruise control not working due to failed ABS module. Yes it can be inspected. RAM dealership saying to drive it. Puts myself, my family, and others at risk due to failed braking. ABS is a safety feature that is required in newer vehicles but isn’t wo...",
+      "group": "electrical_general",
+      "id": "1968466",
+      "make": "RAM",
+      "model": "1500",
+      "score": 16.4724,
+      "year": 2016
+    },
+    {
+      "excerpt": "ABS / BRAKE / TRACTION CONTROL/CRUISE CONTROL I am having problems with the list above. I have had my brakes, rotors and abs sensors replaced. Not to mention the dealership (Nyle Maxwell -Killeen, TX) supposedly did thorough check up and also changed out all the brake necessities...",
+      "group": "electrical_general",
+      "id": "2029648",
+      "make": "RAM",
+      "model": "1500",
+      "score": 12.8649,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005326,
+      "duration_ms": 7157,
+      "reason": "ABS control module failure with dash warning lights and error code; no replacement available and owner cites safety risk",
+      "started_at": "2025-04-20T07:00:01Z",
+      "step": 2,
+      "tokens": 1392,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ABS Code C2200-49, anti-lock brake module internal electronic failure. Have not been able to source a new ABS control module for my vehicle. Apparently Dodge/Mopar/Chrysler has stopped producing this part. No ABS makes it dangerous to drive in the snowy/wet conditions prevalent d...",
+            "group": "electrical_general",
+            "id": "2051879",
+            "make": "RAM",
+            "model": "1500",
+            "score": 17.0084,
+            "year": 2016
+          },
+          {
+            "excerpt": "ABS module, traction control, cruise control not working due to failed ABS module. Yes it can be inspected. RAM dealership saying to drive it. Puts myself, my family, and others at risk due to failed braking. ABS is a safety feature that is required in newer vehicles but isn’t wo...",
+            "group": "electrical_general",
+            "id": "1968466",
+            "make": "RAM",
+            "model": "1500",
+            "score": 16.4724,
+            "year": 2016
+          },
+          {
+            "excerpt": "ABS / BRAKE / TRACTION CONTROL/CRUISE CONTROL I am having problems with the list above. I have had my brakes, rotors and abs sensors replaced. Not to mention the dealership (Nyle Maxwell -Killeen, TX) supposedly did thorough check up and also changed out all the brake necessities...",
+            "group": "electrical_general",
+            "id": "2029648",
+            "make": "RAM",
+            "model": "1500",
+            "score": 12.8649,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-04-20T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-20T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-20T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-20T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-20T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-20T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-20T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

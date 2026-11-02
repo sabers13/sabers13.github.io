@@ -1,0 +1,408 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2143773",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CIVIC",
+    "narrative": "The contact owns a 2021 Honda Civic. The contact received notification of NHTSA Campaign Number: 24V064000 (Air Bags); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure.",
+    "received_at": "2025-10-28",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2143773",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2143773",
+    "decided_at": "2025-10-28T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2143773",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Air Bags"
+      },
+      {
+        "kind": "condition",
+        "quote": "The contact received notification of NHTSA Campaign Number: 24V064000 (Air Bags)"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was not yet available"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "other",
+        "quote": "2021 Honda Civic"
+      }
+    ],
+    "conditions": [
+      "NHTSA recall 24V064000 applies",
+      "Recall repair part was not yet available",
+      "No failure experienced"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "Verify recall 24V064000 remedy availability and perform a standard air bag system inspection; the owner reports no failure.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2143773",
+    "created_at": "2025-10-28T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Air Bags",
+        "source_id": "2143773",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact received notification of NHTSA Campaign Number: 24V064000 (Air Bags)",
+        "source_id": "2143773",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was not yet available",
+        "source_id": "2143773",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2143773",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "2021 Honda Civic",
+        "source_id": "2143773",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative confirms an open NHTSA air bag recall (24V064000) for a 2021 Honda Civic, but the repair part was unavailable and the contact had not experienced a failure. No rulebook entry supports a targeted load test, so the standard test is proposed.",
+    "requested_info": [],
+    "summary": "Verify recall 24V064000 remedy availability and perform a standard air bag system inspection; the owner reports no failure.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "26V332000",
+      "match": true,
+      "open_date": "2026-05-21",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 CR-V, 2017-2018, 2021 Civic Type R, 2017-2021 Civic hatchback, 2016-2020 Civic coupe, 2016-2022 Civic, 2017-2022 Accord Hybrid, and 2016-2022 Accord vehicles. The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally during a crash."
+    },
+    {
+      "id": "24V064000",
+      "match": true,
+      "open_date": "2024-02-01",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RDX, and 2020-2021 Acura TLX vehicles.  The front passenger seat weight sensor may crack and short circuit, failing to suppress the air bag as intended."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "I have contacted Honda Dealer and Customer Service in regards to NHTSA Recall Number 24V-064. Honda is declining to correct the recall due to shortage in supply of parts. Honda is indicating that only vehicle with the airbag sensor light on are being prioritize. This makes me une...",
+      "group": "restraints",
+      "id": "1988172",
+      "make": "HONDA",
+      "model": "CIVIC",
+      "score": 3.8872,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-28T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007975,
+      "duration_ms": 15028,
+      "reason": "Air bags (2021 Honda Civic) recall repair parts unavailable; owner reports no failure experienced.",
+      "started_at": "2025-10-28T07:00:01Z",
+      "step": 2,
+      "tokens": 1850,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-10-28T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have contacted Honda Dealer and Customer Service in regards to NHTSA Recall Number 24V-064. Honda is declining to correct the recall due to shortage in supply of parts. Honda is indicating that only vehicle with the airbag sensor light on are being prioritize. This makes me une...",
+            "group": "restraints",
+            "id": "1988172",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "score": 3.8872,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-10-28T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-28T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-10-28T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2021 Honda Civic. The contact received notification of NHTSA Campaign Number: 24V064000 (Air Bags); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have contacted Honda Dealer and Customer Service in regards to NHTSA Recall Number 24V-064. Honda is declining to correct the recall due to shortage in supply of parts. Honda is indicating that only vehicle with the airbag sensor light on are being prioritize. This makes me une...",
+            "group": "restraints",
+            "id": "1988172",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "score": 3.8872,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-28T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+            "group": "restraints",
+            "id": "26V332000",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "open_date": "2026-05-21",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 CR-V, 2017-2018, 2021 Civic Type R, 2017-2021 Civic hatchback, 2016-2020 Civic coupe, 2016-2022 Civic, 2017-2022 Accord Hybrid, and 2016-2022 Accord vehicles. The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally during a crash.",
+            "year": 2021
+          },
+          {
+            "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+            "group": "restraints",
+            "id": "24V064000",
+            "make": "HONDA",
+            "model": "CIVIC",
+            "open_date": "2024-02-01",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RDX, and 2020-2021 Acura TLX vehicles.  The front passenger seat weight sensor may crack and short circuit, failing to suppress the air bag as intended.",
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-28T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-28T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00110355,
+      "duration_ms": 11104,
+      "reason": "The narrative confirms an open NHTSA air bag recall (24V064000) for a 2021 Honda Civic, but the repair part was unavailable and the contact had not experienced a failure. No rulebook entry supports a targeted load test, so the standard test is proposed.",
+      "started_at": "2025-10-28T07:00:09Z",
+      "step": 10,
+      "tokens": 2872,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-10-28T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Air Bags",
+          "The contact received notification of NHTSA Campaign Number: 24V064000 (Air Bags)",
+          "the part to do the recall repair was not yet available",
+          "The contact had not experienced a failure.",
+          "2021 Honda Civic"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-28T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-28T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-28T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-28T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

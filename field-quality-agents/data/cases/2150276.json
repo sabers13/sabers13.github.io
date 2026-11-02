@@ -1,0 +1,219 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2150276",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE L",
+    "narrative": "Malfunction of the Steering Column Control Module causing a disconnect with all associated components such as causing wipers to run continuously on max, and all listed functions stopped working including; SOS, Jeep Assist, blind spot, high & low beams, brake lights, turn signals, lane assist, horn, rear wiper, windshield washer fluid, airbag deployment, infotainment system, etc. Vehicle is currently at the Dealership in Delmont, PA and is available for inspection. This is a significant safety concern to myself and other drivers due a visibility issue with wipers on a continuous cycle, headlights and brake lights not functioning as intended, unable to use turn signals, airbags will not deployment in the event of an accident, among other safety related issues. The vehicle has been inspected for this specific issue at the Dealership December 21, 2023 and November 11-17, 2025, and was temporarily resolved with a software update. 24 hours later, on 11/18, the same issue reoccurred and is back at the Dealership with no update on a permanent solution. There are no warnings or symptoms prior to the failure of the SCCM. This issue first occurred 12/21/2023 with only 3,439 miles one it. The vehicle currently has 32,091 miles. Pictures and videos are available upon request.",
+    "received_at": "2025-11-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2150276",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2150276",
+    "decided_at": "2025-11-19T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2150276",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Malfunction of the Steering Column Control Module causing a disconnect with all associated components"
+      },
+      {
+        "kind": "symptom",
+        "quote": "wipers to run continuously on max"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all listed functions stopped working including; SOS, Jeep Assist, blind spot, high & low beams, brake lights, turn signals, lane assist, horn, rear wiper, windshield washer fluid, airbag deployment, infotainment system, etc."
+      },
+      {
+        "kind": "condition",
+        "quote": "was temporarily resolved with a software update. 24 hours later, on 11/18, the same issue reoccurred"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a significant safety concern to myself and other drivers"
+      },
+      {
+        "kind": "safety",
+        "quote": "airbags will not deployment in the event of an accident"
+      },
+      {
+        "kind": "other",
+        "quote": "There are no warnings or symptoms prior to the failure of the SCCM."
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle currently has 32,091 miles."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS / restraints: Steering Column Control Module malfunction disconnects wipers, lights, signals, horn, airbag deployment and infotainment; recurred after software update.",
+    "symptoms": [
+      "Steering Column Control Module malfunction causing disconnect with associated components",
+      "wipers run continuously on max",
+      "SOS, Jeep Assist, blind spot, high and low beams, brake lights, turn signals, lane assist, horn, rear wiper, windshield washer fluid, airbag deployment, and infotainment stopped working",
+      "airbags will not deploy in an accident"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2150276",
+    "created_at": "2025-11-19T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00172045,
+      "duration_ms": 18765,
+      "reason": "AIR BAGS / restraints: Steering Column Control Module malfunction disconnects wipers, lights, signals, horn, airbag deployment and infotainment; recurred after software update.",
+      "started_at": "2025-11-19T07:00:01Z",
+      "step": 2,
+      "tokens": 3536,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE L",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-19T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-19T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-19T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-19T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

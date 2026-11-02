@@ -1,0 +1,354 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2139393",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "CHEROKEE",
+    "narrative": "Last year in 2024 our vehicle started having significant issues with the transmission. We took it to a dealership and through our warranty that we purchased, we were told that the transmission control module had lost its programming but no one understood why. It wasn't covered under our warranty and we paid full price out of pocket for that. Less than a year later we are back with the same issues again where it's not holding on to its programming. It locks itself into neutral when we are driving, it will have surges of power with the battery, and no longer has any emergency braking system. We cannot put the emergency brake on in fact. We lost all of our 4x4 variations such as snow sport and four wheel drive low. Full drive is no longer able to be engaged at all with the transmission. It will not shift in or out of 5th gear which means every time we push on the gas that means it's going to be starting out in 5th gear which is obviously a strain on the transmission. Due to that it has no towing power whatsoever right now. It has shut off completely in the middle of us driving bfore. These issues are causing it to slowly lose it's communication with all of the other modules in the vehicle and the engine itself is no longer communicating with the transmission which makes driving the vehicle almost impossible.",
+    "received_at": "2025-10-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2139393",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2139393",
+    "decided_at": "2025-10-13T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2139393",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "emergency braking system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "transmission control module had lost its programming"
+      },
+      {
+        "kind": "symptom",
+        "quote": "not holding on to its programming"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It locks itself into neutral when we are driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "surges of power with the battery"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no longer has any emergency braking system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "We cannot put the emergency brake on in fact."
+      },
+      {
+        "kind": "symptom",
+        "quote": "We lost all of our 4x4 variations such as snow sport and four wheel drive low."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Full drive is no longer able to be engaged at all with the transmission."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It will not shift in or out of 5th gear"
+      },
+      {
+        "kind": "symptom",
+        "quote": "starting out in 5th gear"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no towing power whatsoever right now"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It has shut off completely in the middle of us driving bfore."
+      },
+      {
+        "kind": "symptom",
+        "quote": "lose it's communication with all of the other modules in the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine itself is no longer communicating with the transmission"
+      },
+      {
+        "kind": "symptom",
+        "quote": "makes driving the vehicle almost impossible."
+      },
+      {
+        "kind": "condition",
+        "quote": "We took it to a dealership"
+      },
+      {
+        "kind": "condition",
+        "quote": "Less than a year later we are back with the same issues again"
+      },
+      {
+        "kind": "condition",
+        "quote": "when we are driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "in the middle of us driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "It locks itself into neutral when we are driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "It has shut off completely in the middle of us driving bfore."
+      },
+      {
+        "kind": "safety",
+        "quote": "no longer has any emergency braking system"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Jeep Cherokee ADAS automatic emergency braking: recurring TCM programming loss with neutral lock, battery power surges, loss of emergency braking/4x4/5th gear, and engine-transmission communication loss while driving.",
+    "symptoms": [
+      "transmission control module loses programming repeatedly",
+      "locks into neutral while driving",
+      "battery power surges",
+      "loss of emergency braking system",
+      "cannot apply emergency brake",
+      "loss of 4x4 modes including snow sport and four-wheel drive low",
+      "full drive cannot be engaged",
+      "will not shift in or out of 5th gear",
+      "starts in 5th gear",
+      "no towing power",
+      "complete shutdown while driving",
+      "loss of communication among vehicle modules and between engine and transmission",
+      "driving nearly impossible"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2139393",
+    "created_at": "2025-10-13T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "2nd time, I did not put auto brake on but it engaged itself and than was stuck and would not disengage. Luckily I was not in traffic, because that could have been a serious safety issue. The e brake engages on its own and than won’t dislodge. Multiple times this has happened now....",
+      "group": "adas",
+      "id": "1987144",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 22.0248,
+      "year": 2014
+    },
+    {
+      "excerpt": "The electronic parking brake module was damaged due and corroded, due to water, leading to the Jeep being unable to disengage the parking brake. The module is located in the rear of the trunk and no other signs of water were present when inspected. All of the Jeeps safety systems...",
+      "group": "adas",
+      "id": "1888698",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 18.696,
+      "year": 2014
+    },
+    {
+      "excerpt": "My vehicle dashboard gave me a \"service park brake\" message. The emergency brake would automatically engage if attempting to shift the car into park. The emergency brake could not be disengaged. The vehicle was towed to a Jeep dealership. The dealership has determined that the \"p...",
+      "group": "adas",
+      "id": "1976895",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 14.2465,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-13T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0027637,
+      "duration_ms": 25804,
+      "reason": "Jeep Cherokee ADAS automatic emergency braking: recurring TCM programming loss with neutral lock, battery power surges, loss of emergency braking/4x4/5th gear, and engine-transmission communication loss while driving.",
+      "started_at": "2025-10-13T07:00:15Z",
+      "step": 2,
+      "tokens": 5277,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-13T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "CHEROKEE",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2nd time, I did not put auto brake on but it engaged itself and than was stuck and would not disengage. Luckily I was not in traffic, because that could have been a serious safety issue. The e brake engages on its own and than won’t dislodge. Multiple times this has happened now....",
+            "group": "adas",
+            "id": "1987144",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 22.0248,
+            "year": 2014
+          },
+          {
+            "excerpt": "The electronic parking brake module was damaged due and corroded, due to water, leading to the Jeep being unable to disengage the parking brake. The module is located in the rear of the trunk and no other signs of water were present when inspected. All of the Jeeps safety systems...",
+            "group": "adas",
+            "id": "1888698",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 18.696,
+            "year": 2014
+          },
+          {
+            "excerpt": "My vehicle dashboard gave me a \"service park brake\" message. The emergency brake would automatically engage if attempting to shift the car into park. The emergency brake could not be disengaged. The vehicle was towed to a Jeep dealership. The dealership has determined that the \"p...",
+            "group": "adas",
+            "id": "1976895",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 14.2465,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-13T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-13T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-13T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-13T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-13T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-13T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-13T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

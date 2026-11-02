@@ -1,0 +1,223 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2083646",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "BLAZER EV",
+    "narrative": "Windshield has terrible glare and reflects the dashboard as to limit visibility. Front collision and auto braking including rear collision and braking are a safety hazard as they create hard braking events for no reason. Car will stop sudden for no reason. These are both serious safety issues. These are problems we have had with the car since purchase and have had the dealership shop work on the problem and were told just to leave it turned off. This is not the correct way to fix a problem with a vehicle.",
+    "received_at": "2025-04-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2083646",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2083646",
+    "decided_at": "2025-04-16T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2083646",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Windshield has terrible glare and reflects the dashboard as to limit visibility."
+      },
+      {
+        "kind": "symptom",
+        "quote": "create hard braking events for no reason"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Car will stop sudden for no reason."
+      },
+      {
+        "kind": "safety",
+        "quote": "These are both serious safety issues."
+      },
+      {
+        "kind": "condition",
+        "quote": "since purchase"
+      },
+      {
+        "kind": "condition",
+        "quote": "have had the dealership shop work on the problem"
+      },
+      {
+        "kind": "other",
+        "quote": "were told just to leave it turned off"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "VISIBILITY/WIPER: windshield glare and dashboard reflection limit visibility; collision/auto braking causes hard braking and sudden stops; present since purchase after dealer service.",
+    "symptoms": [
+      "windshield glare and dashboard reflection limit visibility",
+      "front and rear collision/auto braking create hard braking events for no reason",
+      "car stops suddenly for no reason"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2083646",
+    "created_at": "2025-04-16T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00058255,
+      "duration_ms": 8651,
+      "reason": "VISIBILITY/WIPER: windshield glare and dashboard reflection limit visibility; collision/auto braking causes hard braking and sudden stops; present since purchase after dealer service.",
+      "started_at": "2025-04-16T07:00:01Z",
+      "step": 2,
+      "tokens": 1506,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-04-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "BLAZER EV",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-16T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-16T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-16T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-16T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

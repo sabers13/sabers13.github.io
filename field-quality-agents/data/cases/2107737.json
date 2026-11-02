@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: BLIND SPOT DETECTION",
+    "group": "adas",
+    "id": "2107737",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CR-V HYBRID",
+    "narrative": "As I was backing out of a driveway the car suddenly accelerated in reverse. The brake did not stop or slow the vehicle. As a result the car's right fender hit a large oak tree. There was damage to the fender, the door and to the undercarriage. In addition, my wife who was sitting in the passenger seat was thrown back and she struck her head on the top seat belt connection. She had a cut in the back of her head that required an emergency room visit to the local hiospital. They did a CAT scan and they used seven staples close the wound.   There were several messages flashed on the dash that indicated brake and cruise control issues. These messages wer of very short duration and could not be recazlled.",
+    "received_at": "2025-07-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2107737",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2107737",
+    "decided_at": "2025-07-08T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2107737",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: BLIND SPOT DETECTION"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car suddenly accelerated in reverse"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The brake did not stop or slow the vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "the car's right fender hit a large oak tree"
+      },
+      {
+        "kind": "other",
+        "quote": "There was damage to the fender, the door and to the undercarriage."
+      },
+      {
+        "kind": "safety",
+        "quote": "my wife who was sitting in the passenger seat was thrown back and she struck her head on the top seat belt connection"
+      },
+      {
+        "kind": "safety",
+        "quote": "She had a cut in the back of her head that required an emergency room visit to the local hiospital."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There were several messages flashed on the dash that indicated brake and cruise control issues."
+      },
+      {
+        "kind": "condition",
+        "quote": "These messages wer of very short duration and could not be recazlled."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Honda CR-V Hybrid ADAS lane departure/blind spot report: sudden reverse acceleration, brake did not stop or slow the vehicle, tree impact with passenger injury, and short-lived dash brake/cruise messages while backing out of a driveway.",
+    "symptoms": [
+      "sudden acceleration in reverse",
+      "brake did not stop or slow the vehicle",
+      "impact with a tree",
+      "fender, door and undercarriage damage",
+      "passenger head injury requiring emergency room visit",
+      "dash messages indicating brake and cruise control issues"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2107737",
+    "created_at": "2025-07-08T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving in adaptive Cruise control Car applied brake even though no vehicle present can n front of the car. This lead to car behind me apply the brakes. This could be dangerous in future.",
+      "group": "adas",
+      "id": "1847117",
+      "make": "HONDA",
+      "model": "CR-V HYBRID",
+      "score": 6.5194,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was driving on a straight road (daylight, dry conditions) in my 2022 Honda CR-V (mid trim level) using my adaptive cruise control. The closest cars ahead of me, and in the periphery, were at least three quarters of a mile away. All of a sudden, the car, independent of me, SLAMM...",
+      "group": "adas",
+      "id": "2029233",
+      "make": "HONDA",
+      "model": "CR-V HYBRID",
+      "score": 4.319,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was going south bound up a hill. Less then 20 mph and was blinded by the sun. The old folks in front of me were also blinded by the sun and stopped in the middle of the hill. My automatic emergency braking system did not kick in and I ran right into them. We could have been hur...",
+      "group": "adas",
+      "id": "1804906",
+      "make": "HONDA",
+      "model": "CR-V HYBRID",
+      "score": 3.8689,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-08T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001408,
+      "duration_ms": 15249,
+      "reason": "Honda CR-V Hybrid ADAS lane departure/blind spot report: sudden reverse acceleration, brake did not stop or slow the vehicle, tree impact with passenger injury, and short-lived dash brake/cruise messages while backing out of a driveway.",
+      "started_at": "2025-07-08T07:00:16Z",
+      "step": 2,
+      "tokens": 2926,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-08T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V HYBRID",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving in adaptive Cruise control Car applied brake even though no vehicle present can n front of the car. This lead to car behind me apply the brakes. This could be dangerous in future.",
+            "group": "adas",
+            "id": "1847117",
+            "make": "HONDA",
+            "model": "CR-V HYBRID",
+            "score": 6.5194,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was driving on a straight road (daylight, dry conditions) in my 2022 Honda CR-V (mid trim level) using my adaptive cruise control. The closest cars ahead of me, and in the periphery, were at least three quarters of a mile away. All of a sudden, the car, independent of me, SLAMM...",
+            "group": "adas",
+            "id": "2029233",
+            "make": "HONDA",
+            "model": "CR-V HYBRID",
+            "score": 4.319,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was going south bound up a hill. Less then 20 mph and was blinded by the sun. The old folks in front of me were also blinded by the sun and stopped in the middle of the hill. My automatic emergency braking system did not kick in and I ran right into them. We could have been hur...",
+            "group": "adas",
+            "id": "1804906",
+            "make": "HONDA",
+            "model": "CR-V HYBRID",
+            "score": 3.8689,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-08T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-08T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-08T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-08T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-08T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-08T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-08T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

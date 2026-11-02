@@ -1,0 +1,301 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2122890",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "I was driving on the SB 55fwy in light stop and go traffic and had my ACC w/ traffic aware system engaged. My car was doing as it normally does, keeping a safe distance to the vehicle in front of me, automatically slowing, stopping and accelerating at a safe speed for the conditions. This feature I had been using on my car since I originally purchased it and paid for these safety features. When traffic was not stopped it was traveling between 15-20mph. All of the sudden my dashboard lit up with error messages, audible warnings, and check engine light, all flashing and beeping at me and before I quickly glanced at the dash to the alarming warnings, I had rear ended the car in front of me. This took me by complete shock as my car had always been overly cautious about applying emergency braking in close situations. This time it did nothing. The error message said Adaptive Cruise Control sensor had failed and along with that it had disabled all of the safety features I had become accustomed to and paid extra for, including, the emergency braking and front end collision warning. This caused almost $14k in damage to my vehicle and more so potentially could have put my entire family in danger. The sensor failure caused the accident, the damage to the other car that I was traveling behind and any potential injuries from the driver of that car. I have given this same statement to my insurance company, however no one has reached out to investigate the cause of the failure, not even the dealership service center, where I had originally had my damaged car towed to so they could check and verify with their scan tools that I had a faulty sensor. Also my vehicle had just been serviced the month prior and all software was updated at Norm Reeves Volkswagen, Irvine, CA.",
+    "received_at": "2025-08-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2122890",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2122890",
+    "decided_at": "2025-08-21T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2122890",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my dashboard lit up with error messages, audible warnings, and check engine light, all flashing and beeping at me"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The error message said Adaptive Cruise Control sensor had failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it had disabled all of the safety features I had become accustomed to and paid extra for, including, the emergency braking and front end collision warning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This time it did nothing."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I had rear ended the car in front of me"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving on the SB 55fwy in light stop and go traffic"
+      },
+      {
+        "kind": "condition",
+        "quote": "had my ACC w/ traffic aware system engaged"
+      },
+      {
+        "kind": "condition",
+        "quote": "traveling between 15-20mph"
+      },
+      {
+        "kind": "condition",
+        "quote": "my vehicle had just been serviced the month prior and all software was updated"
+      },
+      {
+        "kind": "safety",
+        "quote": "could have put my entire family in danger"
+      },
+      {
+        "kind": "safety",
+        "quote": "any potential injuries from the driver of that car"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance / automatic emergency braking (ADAS) on a 2019 Volkswagen Atlas: ACC sensor failure disabled emergency braking and warnings, and the car rear-ended another vehicle in light stop-and-go traffic at 15-20 mph after recent service.",
+    "symptoms": [
+      "dashboard error messages and audible warnings with check engine light flashing/beeping",
+      "Adaptive Cruise Control sensor failed",
+      "emergency braking and front collision warning disabled",
+      "vehicle failed to apply automatic emergency braking",
+      "rear-ended the car in front"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2122890",
+    "created_at": "2025-08-21T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Started with entertainment center reboot itself and dash navigation. Dealer did an software update . then front collision warning would go off… NO ONE AROUND . No cars on road. dealer did another software update to resolve issue. Then Remote start stopped working acc light ecc on...",
+      "group": "adas",
+      "id": "1879916",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 46.9258,
+      "year": 2019
+    },
+    {
+      "excerpt": "9/2019Just purchased and driving home from dealership, approximately 4 miles driven, stopped at traffic light. Light turned green. Car started going forward and then engine turned off completely. Sudden stop. Car was in drive, no warning lights, just the auto wasn’t operating. St...",
+      "group": "adas",
+      "id": "1793836",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 45.5706,
+      "year": 2019
+    },
+    {
+      "excerpt": "I was driving on the freeway on 10/13/2023, it was raining and I was startled by an alarm and a flashing warning on my dash stating brake booster failure, the abs light went on and I was concerned because I recently had by brakes done at the Volkswagen dealership in Brooklyn Cent...",
+      "group": "adas",
+      "id": "1938522",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 44.2229,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017452,
+      "duration_ms": 16371,
+      "reason": "Forward collision avoidance / automatic emergency braking (ADAS) on a 2019 Volkswagen Atlas: ACC sensor failure disabled emergency braking and warnings, and the car rear-ended another vehicle in light stop-and-go traffic at 15-20 mph after recent service.",
+      "started_at": "2025-08-21T07:00:01Z",
+      "step": 2,
+      "tokens": 3644,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Started with entertainment center reboot itself and dash navigation. Dealer did an software update . then front collision warning would go off… NO ONE AROUND . No cars on road. dealer did another software update to resolve issue. Then Remote start stopped working acc light ecc on...",
+            "group": "adas",
+            "id": "1879916",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 46.9258,
+            "year": 2019
+          },
+          {
+            "excerpt": "9/2019Just purchased and driving home from dealership, approximately 4 miles driven, stopped at traffic light. Light turned green. Car started going forward and then engine turned off completely. Sudden stop. Car was in drive, no warning lights, just the auto wasn’t operating. St...",
+            "group": "adas",
+            "id": "1793836",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 45.5706,
+            "year": 2019
+          },
+          {
+            "excerpt": "I was driving on the freeway on 10/13/2023, it was raining and I was startled by an alarm and a flashing warning on my dash stating brake booster failure, the abs light went on and I was concerned because I recently had by brakes done at the Volkswagen dealership in Brooklyn Cent...",
+            "group": "adas",
+            "id": "1938522",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 44.2229,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-21T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-21T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-21T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-21T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-21T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-21T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-21T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

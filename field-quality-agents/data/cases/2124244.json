@@ -1,0 +1,343 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2124244",
+    "make": "HONDA",
+    "mileage": 211529,
+    "model": "CIVIC",
+    "narrative": "Odometer Fraud. The contact purchased a 2000 Honda Civic. The contact discovered a mileage discrepancy after the purchase. The vehicle was a private sale. At the time of purchase, the vehicle mileage was 193,786. It was later discovered through a Carfax Report that the Title mileage was 211,529.",
+    "received_at": "2025-08-26",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2124244",
+    "status": "decided",
+    "year": 2000
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124244",
+    "decided_at": "2025-08-26T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2124244",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud"
+      },
+      {
+        "kind": "symptom",
+        "quote": "mileage discrepancy"
+      },
+      {
+        "kind": "other",
+        "quote": "private sale"
+      },
+      {
+        "kind": "other",
+        "quote": "At the time of purchase, the vehicle mileage was 193,786"
+      },
+      {
+        "kind": "other",
+        "quote": "Title mileage was 211,529"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Run the standard test for a reported odometer/mileage discrepancy after a private sale, since no rulebook match supports a targeted load test.",
+    "symptoms": [
+      "odometer fraud",
+      "mileage discrepancy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124244",
+    "created_at": "2025-08-26T07:00:46Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud",
+        "source_id": "2124244",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "mileage discrepancy",
+        "source_id": "2124244",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "private sale",
+        "source_id": "2124244",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase, the vehicle mileage was 193,786",
+        "source_id": "2124244",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Title mileage was 211,529",
+        "source_id": "2124244",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports odometer fraud and a mileage discrepancy: the purchase mileage was stated as 193,786 while a Carfax report showed a title mileage of 211,529. No operating conditions, fault codes, recalls, investigations, similar cases, or rulebook entries were returned, so the standard test is proposed rather than a targeted test.",
+    "requested_info": [],
+    "summary": "Run the standard test for a reported odometer/mileage discrepancy after a private sale, since no rulebook match supports a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-26T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00060115,
+      "duration_ms": 7553,
+      "reason": "Instrument panel speedometer/odometer; mileage discrepancy/odometer fraud reported after a private sale; no operating conditions stated.",
+      "started_at": "2025-08-26T07:00:36Z",
+      "step": 2,
+      "tokens": 1522,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-26T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-08-26T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-26T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-08-26T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2000 Honda Civic. The contact discovered a mileage discrepancy after the purchase. The vehicle was a private sale. At the time of purchase, the vehicle mileage was 193,786. It was later discovered through a Carfax Report that the Title mileage was 211,529."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-26T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-26T07:00:42Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "HONDA",
+        "model": "CIVIC",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-26T07:00:43Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00052215,
+      "duration_ms": 7554,
+      "reason": "The narrative reports odometer fraud and a mileage discrepancy: the purchase mileage was stated as 193,786 while a Carfax report showed a title mileage of 211,529. No operating conditions, fault codes, recalls, investigations, similar cases, or rulebook entries were returned, so the standard test is proposed rather than a targeted test.",
+      "started_at": "2025-08-26T07:00:44Z",
+      "step": 10,
+      "tokens": 1483,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-08-26T07:00:45Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud",
+          "mileage discrepancy",
+          "private sale",
+          "At the time of purchase, the vehicle mileage was 193,786",
+          "Title mileage was 211,529"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-26T07:00:47Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-26T07:00:49Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-26T07:00:50Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-26T07:00:51Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

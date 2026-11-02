@@ -1,0 +1,368 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE",
+    "group": "adas",
+    "id": "2144511",
+    "make": "BMW",
+    "mileage": 71000,
+    "model": "X3",
+    "narrative": "The contact owns a 2018 BMW X3.  The contact stated that while driving over 45 MPH, the Lane Departure and Blind Spot features deactivated unintendedly. The message that the system was deactivated was displayed. The local dealer was contacted. The vehicle was not diagnosed or repaired. The manufacturer was contacted and referred the contact to the NHTSA Hotline. The failure mileage was approximately 71,000.",
+    "received_at": "2025-10-30",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2144511",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2144511",
+    "decided_at": "2025-10-30T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2144511",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Lane Departure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Departure and Blind Spot features deactivated unintendedly"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving over 45 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The message that the system was deactivated was displayed."
+      }
+    ],
+    "conditions": [
+      "while driving over 45 MPH"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the 2018 BMW X3 ADAS lane-departure and blind-spot system for unintended deactivation above 45 MPH; no targeted rulebook entry applies, so use the standard test.",
+    "symptoms": [
+      "Lane Departure and Blind Spot features deactivated unintendedly",
+      "system deactivated message displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2144511",
+    "created_at": "2025-10-30T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Lane Departure",
+        "source_id": "2144511",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Lane Departure and Blind Spot features deactivated unintendedly",
+        "source_id": "2144511",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving over 45 MPH",
+        "source_id": "2144511",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The message that the system was deactivated was displayed.",
+        "source_id": "2144511",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports that while driving over 45 MPH, the Lane Departure and Blind Spot features deactivated unintendedly and a system-deactivated message was displayed. No rulebook entry or similar case was returned, so this does not meet the criteria for a targeted load test. A 2018 X3 recall for lane-keeping steering assist exists, but it concerns steering-wheel hand detection, not the reported high-speed deactivation symptom. The narrative does not describe an injury or direct hazard to people, so it is not marked safety-relevant.",
+    "requested_info": [],
+    "summary": "Test the 2018 BMW X3 ADAS lane-departure and blind-spot system for unintended deactivation above 45 MPH; no targeted rulebook entry applies, so use the standard test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "19V684000",
+      "match": true,
+      "open_date": "2019-09-27",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 540d, 2018-2020 530i, 530i xDrive, 540i, 540i xDrive, M550i xDrive, M5, 530e, 530e xDrive, X3 sDrive, X3 xDrive, X3 M40i, X3 M, and 2019-2020 X4 xDrive, X4 M40i, X4 M, X7 xDrive, X7 M50i, 740Li, 740Li xDrive, 750Li, 750Li xDrive, 8 Series Convertible and Coupe 840i, 840i xDrive, M850i xDrive, X5 sDrive, X5 xDrive, X5 M50i, X6 xDrive, X6 M50i, 330i, 330i xDrive, M340i, M340i xDrive, Z4 sDrive, Z4 M40i, 740Le xDrive and 745Le xDrive, 2018-2019 640i xDrive Gran Turismo and Rolls-Royce Phantom, 2019 M850i xDrive Gran Coupe and Rolls-Royce Cullinan and 2020 Toyota Supra vehicles.      The back-up camera and display settings can be adjusted such that the rear view image is no longer visible and the system will retain that setting the next time the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\""
+    },
+    {
+      "id": "18V374000",
+      "match": true,
+      "open_date": "2018-06-06",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2018-2019 BMW X3 xDrive30i, X3 sDrive30i, and X3 M40i vehicles equipped with the \"Active Lane Keeping Assistant\" option.  The steering wheel may be incompatible with the lane keeping assistant function and may not detect if the driver's hands are off the wheel."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-30T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007198,
+      "duration_ms": 10717,
+      "reason": "2018 BMW X3 Lane Departure and Blind Spot deactivated unintentionally while driving over 45 MPH; deactivation message displayed",
+      "started_at": "2025-10-30T07:00:16Z",
+      "step": 2,
+      "tokens": 1722,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-30T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "X3",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-10-30T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-30T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-10-30T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2018 BMW X3.  The contact stated that while driving over 45 MPH, the Lane Departure and Blind Spot features deactivated unintendedly. The message that the system was deactivated was displayed. The local dealer was contacted. The vehicle was not diagnosed or repaired. The manufacturer was contacted and referred the contact to the NHTSA Hotline. The failure mileage was approximately 71,000."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-30T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "BMW",
+        "model": "X3",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "19V684000",
+            "make": "BMW",
+            "model": "X3",
+            "open_date": "2019-09-27",
+            "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 540d, 2018-2020 530i, 530i xDrive, 540i, 540i xDrive, M550i xDrive, M5, 530e, 530e xDrive, X3 sDrive, X3 xDrive, X3 M40i, X3 M, and 2019-2020 X4 xDrive, X4 M40i, X4 M, X7 xDrive, X7 M50i, 740Li, 740Li xDrive, 750Li, 750Li xDrive, 8 Series Convertible and Coupe 840i, 840i xDrive, M850i xDrive, X5 sDrive, X5 xDrive, X5 M50i, X6 xDrive, X6 M50i, 330i, 330i xDrive, M340i, M340i xDrive, Z4 sDrive, Z4 M40i, 740Le xDrive and 745Le xDrive, 2018-2019 640i xDrive Gran Turismo and Rolls-Royce Phantom, 2019 M850i xDrive Gran Coupe and Rolls-Royce Cullinan and 2020 Toyota Supra vehicles.      The back-up camera and display settings can be adjusted such that the rear view image is no longer visible and the system will retain that setting the next time the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\"",
+            "year": 2018
+          },
+          {
+            "component": "LANE DEPARTURE: LANE KEEP: STEERING ASSIST",
+            "group": "adas",
+            "id": "18V374000",
+            "make": "BMW",
+            "model": "X3",
+            "open_date": "2018-06-06",
+            "summary": "BMW of North America, LLC (BMW) is recalling certain 2018-2019 BMW X3 xDrive30i, X3 sDrive30i, and X3 M40i vehicles equipped with the \"Active Lane Keeping Assistant\" option.  The steering wheel may be incompatible with the lane keeping assistant function and may not detect if the driver's hands are off the wheel.",
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-30T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "BMW",
+        "model": "X3",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-30T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00093375,
+      "duration_ms": 9452,
+      "reason": "The narrative reports that while driving over 45 MPH, the Lane Departure and Blind Spot features deactivated unintendedly and a system-deactivated message was displayed. No rulebook entry or similar case was returned, so this does not meet the criteria for a targeted load test. A 2018 X3 recall for lane-keeping steering assist exists, but it concerns steering-wheel hand detection, not the reported high-speed deactivation symptom. The narrative does not describe an injury or direct hazard to people, so it is not marked safety-relevant.",
+      "started_at": "2025-10-30T07:00:24Z",
+      "step": 10,
+      "tokens": 2583,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-10-30T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Lane Departure",
+          "Lane Departure and Blind Spot features deactivated unintendedly",
+          "while driving over 45 MPH",
+          "The message that the system was deactivated was displayed."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-30T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-30T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-30T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-30T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

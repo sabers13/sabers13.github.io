@@ -1,0 +1,484 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE",
+    "group": "adas",
+    "id": "2128121",
+    "make": "HONDA",
+    "mileage": 196000,
+    "model": "ACCORD",
+    "narrative": "The contact owns a 2016 Honda Accord. The contact stated that the messages \"Adaptive Cruise Control Failure\", \"Lane Keep Assist Failure\", and \"Forward Collision Avoidance Failure\" were displayed. Additionally, the contact stated that the infotainment system made an abnormal, loud, startling, and static sound intermittently while driving. The vehicle was not diagnosed or repaired by an independent mechanic or the dealer. The manufacturer was not notified of the failure. The failure mileage was approximately 196,000.",
+    "received_at": "2025-09-08",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2128121",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128121",
+    "decided_at": "2025-09-08T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2128121",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Adaptive Cruise Control Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Keep Assist Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Forward Collision Avoidance Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "abnormal, loud, startling, and static sound intermittently while driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently while driving"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Run a long-run power cycling test on the ADAS/infotainment system because multiple ADAS failure messages and intermittent static occur while driving.",
+    "symptoms": [
+      "Adaptive Cruise Control Failure message displayed",
+      "Lane Keep Assist Failure message displayed",
+      "Forward Collision Avoidance Failure message displayed",
+      "infotainment system made an abnormal, loud, startling, static sound intermittently while driving"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128121",
+    "created_at": "2025-09-08T07:00:56Z",
+    "evidence": [
+      {
+        "quote": "Adaptive Cruise Control Failure",
+        "source_id": "2128121",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Lane Keep Assist Failure",
+        "source_id": "2128121",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Forward Collision Avoidance Failure",
+        "source_id": "2128121",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "abnormal, loud, startling, and static sound intermittently while driving",
+        "source_id": "2128121",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "intermittently while driving",
+        "source_id": "2128121",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The case reports Adaptive Cruise Control Failure, Lane Keep Assist Failure, and Forward Collision Avoidance Failure messages plus an intermittent loud static sound from the infotainment system. The reported condition is intermittent, which matches the rulebook entry for a long-run power-cycling test that reproduces faults appearing after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Run a long-run power cycling test on the ADAS/infotainment system because multiple ADAS failure messages and intermittent static occur while driving.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The case reports Adaptive Cruise Control Failure, Lane Keep Assist Failure, and Forward Collision Avoidance Failure messages plus an intermittent loud static sound from the infotainment system. The reported condition is intermittent, which matches the rulebook entry for a long-run power-cycling test that reproduces faults appearing after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2016 Honda Accord. The contact stated that the rear-view camera image was distorted. There was no warning light illuminated. The dealer and the manufacturer were not notified of the failure. The vehicle was not diagnosed nor repaired. The failure mileage was ap...",
+      "group": "adas",
+      "id": "1875616",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 26.8143,
+      "year": 2016
+    },
+    {
+      "excerpt": "The backup camera in my vehicle randomly but consistently stops working while the vehicle is in motion. The camera drops because the entire infotainment system crashes. The frequency of occurrence is approximately 2-3 times per month, but the problem has occurred for the past two...",
+      "group": "adas",
+      "id": "1910410",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 13.0009,
+      "year": 2016
+    },
+    {
+      "excerpt": "There were emergency lights on dashboard all of a sudden for Adaptive Cruise Control, Automatic Emergency Brakes, Collision Warning and lane departure warning. These functions aren’t functioning all of a sudden and claims to need attention although the car is only 6 years old",
+      "group": "adas",
+      "id": "1935498",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 6.8978,
+      "year": 2016
+    },
+    {
+      "excerpt": "Inoperable backup camera causing Rear Cross Traffic Warning and Parking Collision warning malfunction - due to a camera plastic mounting tab breakage issue. This puts the safety of other cars or people behind the vehicle at risk when backing up. There were no warnings of the fail...",
+      "group": "adas",
+      "id": "1874201",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 6.4092,
+      "year": 2016
+    },
+    {
+      "excerpt": "I WAS DRIVING APPROX 70 MPH ON THE INTERSTATE HWY WHEN I ENGAGED THE CRUISE CONTROL. SHORTLY AFTER THAT THE CAR BEGAN BRAKING. PRESSING THE ACCELERATOR WOULDN'T DISENGAGE THE CRUISE CONTROL. THE CAR CAME TO A COMPLETE STOP IN THE MIDDLE LANE OF THE INTERSTATE. ONLY AFTER TURNING...",
+      "group": "adas",
+      "id": "1745102",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 4.4802,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-08T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00067795,
+      "duration_ms": 7706,
+      "reason": "2016 Honda Accord forward collision avoidance system with Adaptive Cruise Control Failure, Lane Keep Assist Failure, and Forward Collision Avoidance Failure messages plus intermittent loud static from the infotainment system while driving.",
+      "started_at": "2025-09-08T07:00:46Z",
+      "step": 2,
+      "tokens": 1668,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-08T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2016 Honda Accord. The contact stated that the rear-view camera image was distorted. There was no warning light illuminated. The dealer and the manufacturer were not notified of the failure. The vehicle was not diagnosed nor repaired. The failure mileage was ap...",
+            "group": "adas",
+            "id": "1875616",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 26.8143,
+            "year": 2016
+          },
+          {
+            "excerpt": "The backup camera in my vehicle randomly but consistently stops working while the vehicle is in motion. The camera drops because the entire infotainment system crashes. The frequency of occurrence is approximately 2-3 times per month, but the problem has occurred for the past two...",
+            "group": "adas",
+            "id": "1910410",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 13.0009,
+            "year": 2016
+          },
+          {
+            "excerpt": "There were emergency lights on dashboard all of a sudden for Adaptive Cruise Control, Automatic Emergency Brakes, Collision Warning and lane departure warning. These functions aren’t functioning all of a sudden and claims to need attention although the car is only 6 years old",
+            "group": "adas",
+            "id": "1935498",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 6.8978,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-09-08T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-08T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-09-08T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2016 Honda Accord. The contact stated that the messages \"Adaptive Cruise Control Failure\", \"Lane Keep Assist Failure\", and \"Forward Collision Avoidance Failure\" were displayed. Additionally, the contact stated that the infotainment system made an abnormal, loud, startling, and static sound intermittently while driving. The vehicle was not diagnosed or repaired by an independent mechanic or the dealer. The manufacturer was not notified of the failure. The failure mileage was ap"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2016 Honda Accord. The contact stated that the rear-view camera image was distorted. There was no warning light illuminated. The dealer and the manufacturer were not notified of the failure. The vehicle was not diagnosed nor repaired. The failure mileage was ap...",
+            "group": "adas",
+            "id": "1875616",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 26.8143,
+            "year": 2016
+          },
+          {
+            "excerpt": "The backup camera in my vehicle randomly but consistently stops working while the vehicle is in motion. The camera drops because the entire infotainment system crashes. The frequency of occurrence is approximately 2-3 times per month, but the problem has occurred for the past two...",
+            "group": "adas",
+            "id": "1910410",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 13.0009,
+            "year": 2016
+          },
+          {
+            "excerpt": "There were emergency lights on dashboard all of a sudden for Adaptive Cruise Control, Automatic Emergency Brakes, Collision Warning and lane departure warning. These functions aren’t functioning all of a sudden and claims to need attention although the car is only 6 years old",
+            "group": "adas",
+            "id": "1935498",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 6.8978,
+            "year": 2016
+          },
+          {
+            "excerpt": "Inoperable backup camera causing Rear Cross Traffic Warning and Parking Collision warning malfunction - due to a camera plastic mounting tab breakage issue. This puts the safety of other cars or people behind the vehicle at risk when backing up. There were no warnings of the fail...",
+            "group": "adas",
+            "id": "1874201",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 6.4092,
+            "year": 2016
+          },
+          {
+            "excerpt": "I WAS DRIVING APPROX 70 MPH ON THE INTERSTATE HWY WHEN I ENGAGED THE CRUISE CONTROL. SHORTLY AFTER THAT THE CAR BEGAN BRAKING. PRESSING THE ACCELERATOR WOULDN'T DISENGAGE THE CRUISE CONTROL. THE CAR CAME TO A COMPLETE STOP IN THE MIDDLE LANE OF THE INTERSTATE. ONLY AFTER TURNING...",
+            "group": "adas",
+            "id": "1745102",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 4.4802,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-08T07:00:51Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-08T07:00:52Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-08T07:00:53Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00063675,
+      "duration_ms": 5867,
+      "reason": "The case reports Adaptive Cruise Control Failure, Lane Keep Assist Failure, and Forward Collision Avoidance Failure messages plus an intermittent loud static sound from the infotainment system. The reported condition is intermittent, which matches the rulebook entry for a long-run power-cycling test that reproduces faults appearing after repeated wake and sleep cycles.",
+      "started_at": "2025-09-08T07:00:54Z",
+      "step": 10,
+      "tokens": 2193,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-09-08T07:00:55Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Adaptive Cruise Control Failure",
+          "Lane Keep Assist Failure",
+          "Forward Collision Avoidance Failure",
+          "abnormal, loud, startling, and static sound intermittently while driving",
+          "intermittently while driving"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-08T07:00:57Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-08T07:00:59Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-08T07:01:00Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-08T07:01:01Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

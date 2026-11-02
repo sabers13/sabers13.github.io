@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2141016",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EDGE",
+    "narrative": "1) my rear view camera is disoriented when car is in reverse. Sometimes the picture on the screen is upside down or doesnt show anything at all. 2) drivers seat belt does not clip in correctly. I have to push the red button in for the seat belt to clip into place.",
+    "received_at": "2025-10-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2141016",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2141016",
+    "decided_at": "2025-10-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2141016",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my rear view camera is disoriented when car is in reverse"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the picture on the screen is upside down or doesnt show anything at all"
+      },
+      {
+        "kind": "condition",
+        "quote": "Sometimes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "drivers seat belt does not clip in correctly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have to push the red button in for the seat belt to clip into place"
+      },
+      {
+        "kind": "safety",
+        "quote": "drivers seat belt does not clip in correctly"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2014 Ford Edge electrical: rear view camera image disoriented, upside down or blank in reverse, and driver seat belt will not latch without pressing the release button",
+    "symptoms": [
+      "rear view camera image disoriented, upside down or blank when in reverse",
+      "driver seat belt does not clip in correctly and needs the red release button pressed to latch"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2141016",
+    "created_at": "2025-10-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Our backup camera isn't working properly. It sometimes works in reverse and also sometimes comes in while in drive. Most of time it doesn't work. It has not been taken to dealership to be looked at. It's been about a month now. Saw recently about recall on some cameras.",
+      "group": "electrical_general",
+      "id": "1925795",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 4.1515,
+      "year": 2014
+    },
+    {
+      "excerpt": "The backup camera on the car works intermittently switching between blue screens and component not available. This causes a safety risk as I back up. A specific scenario that occured where I had to back out of my garage during Halloween with kids running about the neighborhood. T...",
+      "group": "electrical_general",
+      "id": "1868922",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 3.455,
+      "year": 2014
+    },
+    {
+      "excerpt": "OUR FORD EDGE WILL INTERMITTENTLY LOOSE POWER AND DROPS TO A ROUGH IDLE, ENGINE LIGHT COMES ON. THIS CAN HAPPEN AT HWY SPEEDS OR ACCELERATING FROM A STOP. THE ERROR CODE GIVEN IS P2111 TAC SYSTEM-ACTUATOR STUCK OPEN. I CAN TURN THE SWITCH OFF THEN RESTART IT AND IT MIGHT RUN OKAY...",
+      "group": "electrical_general",
+      "id": "1678030",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 1.6754,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0004627,
+      "duration_ms": 8431,
+      "reason": "2014 Ford Edge electrical: rear view camera image disoriented, upside down or blank in reverse, and driver seat belt will not latch without pressing the release button",
+      "started_at": "2025-10-18T07:00:01Z",
+      "step": 2,
+      "tokens": 1274,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EDGE",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Our backup camera isn't working properly. It sometimes works in reverse and also sometimes comes in while in drive. Most of time it doesn't work. It has not been taken to dealership to be looked at. It's been about a month now. Saw recently about recall on some cameras.",
+            "group": "electrical_general",
+            "id": "1925795",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 4.1515,
+            "year": 2014
+          },
+          {
+            "excerpt": "The backup camera on the car works intermittently switching between blue screens and component not available. This causes a safety risk as I back up. A specific scenario that occured where I had to back out of my garage during Halloween with kids running about the neighborhood. T...",
+            "group": "electrical_general",
+            "id": "1868922",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 3.455,
+            "year": 2014
+          },
+          {
+            "excerpt": "OUR FORD EDGE WILL INTERMITTENTLY LOOSE POWER AND DROPS TO A ROUGH IDLE, ENGINE LIGHT COMES ON. THIS CAN HAPPEN AT HWY SPEEDS OR ACCELERATING FROM A STOP. THE ERROR CODE GIVEN IS P2111 TAC SYSTEM-ACTUATOR STUCK OPEN. I CAN TURN THE SWITCH OFF THEN RESTART IT AND IT MIGHT RUN OKAY...",
+            "group": "electrical_general",
+            "id": "1678030",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 1.6754,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-10-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

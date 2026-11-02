@@ -1,0 +1,294 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2108065",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "While parked and shut off at a gas station in Lakeside, CA, my 2015 Ford F‑150 XLT spontaneously caught fire under the hood. The fire appeared to originate in the fuse box area, specifically where the fuel pump relay is integrated. The incident posed significant risk, occurring near a fuel pump while my child was in the vehicle. A gas station employee assisted with extinguishing the fire. The cause is believed to be an electrical short. There were no modifications or recent repairs.",
+    "received_at": "2025-07-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2108065",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108065",
+    "decided_at": "2025-07-08T07:00:57Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2108065",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "spontaneously caught fire under the hood"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The fire appeared to originate in the fuse box area"
+      },
+      {
+        "kind": "symptom",
+        "quote": "specifically where the fuel pump relay is integrated"
+      },
+      {
+        "kind": "condition",
+        "quote": "While parked and shut off at a gas station in Lakeside, CA"
+      },
+      {
+        "kind": "condition",
+        "quote": "parked and shut off"
+      },
+      {
+        "kind": "condition",
+        "quote": "at a gas station"
+      },
+      {
+        "kind": "safety",
+        "quote": "The incident posed significant risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "my child was in the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "The cause is believed to be an electrical short."
+      },
+      {
+        "kind": "other",
+        "quote": "There were no modifications or recent repairs."
+      }
+    ],
+    "conditions": [
+      "parked and shut off",
+      "gas station",
+      "near fuel pump"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2015 Ford F–150 electrical system: spontaneous under-hood fire originating in the fuse box/fuel pump relay area while parked and shut off at a gas station.",
+    "symptoms": [
+      "spontaneous under-hood fire",
+      "fire originated in the fuse box area",
+      "fuel pump relay area involved",
+      "suspected electrical short"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108065",
+    "created_at": "2025-07-08T07:00:55Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Unknown: On 1/2/2021 at approximately 11:30pm, we were awakened by neighbors to warn us that our home was on fire. Neighbors witnesses an explosion from our truck, that blew up most of the Ford F-150 and cause major damage to my van next to it. The fire department has investigate...",
+      "group": "electrical_general",
+      "id": "1786573",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 10.838,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Ford F-150. The contact stated that while the vehicle was turned off, he observed condensation under the front of the vehicle. The contact stated that radiator fluid was added but was leaking under the vehicle. The vehicle was taken to a dealer where it wa...",
+      "group": "electrical_general",
+      "id": "1978681",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 10.5387,
+      "year": 2015
+    },
+    {
+      "excerpt": "BACK UP CAMERA ON MY 2015 FORD F-150 XLT GOES BLANK WHEN I GO INTO REVERSE AND SCREEN GOES FUZZY.",
+      "group": "electrical_general",
+      "id": "1696593",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 10.2425,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-08T07:00:49Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012382,
+      "duration_ms": 13936,
+      "reason": "2015 Ford F–150 electrical system: spontaneous under-hood fire originating in the fuse box/fuel pump relay area while parked and shut off at a gas station.",
+      "started_at": "2025-07-08T07:00:50Z",
+      "step": 2,
+      "tokens": 2598,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-08T07:00:51Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Unknown: On 1/2/2021 at approximately 11:30pm, we were awakened by neighbors to warn us that our home was on fire. Neighbors witnesses an explosion from our truck, that blew up most of the Ford F-150 and cause major damage to my van next to it. The fire department has investigate...",
+            "group": "electrical_general",
+            "id": "1786573",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 10.838,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Ford F-150. The contact stated that while the vehicle was turned off, he observed condensation under the front of the vehicle. The contact stated that radiator fluid was added but was leaking under the vehicle. The vehicle was taken to a dealer where it wa...",
+            "group": "electrical_general",
+            "id": "1978681",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 10.5387,
+            "year": 2015
+          },
+          {
+            "excerpt": "BACK UP CAMERA ON MY 2015 FORD F-150 XLT GOES BLANK WHEN I GO INTO REVERSE AND SCREEN GOES FUZZY.",
+            "group": "electrical_general",
+            "id": "1696593",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 10.2425,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-08T07:00:52Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-08T07:00:53Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-08T07:00:54Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-08T07:00:56Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-08T07:00:58Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-08T07:00:59Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-08T07:01:00Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

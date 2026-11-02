@@ -1,0 +1,288 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: WARNINGS",
+    "group": "adas",
+    "id": "2096470",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "ARMADA",
+    "narrative": "My 2019 Nissan Armada has been showing a BCI Malfuntion warning light for the past year and a half on and off. Sometimes it puts the truck in limp mode, it won't start, or the brakes engage and the truck will not move while in drive. This has happened well over 30 times in the last year and a half. Typically, turning the truck off and on solves the issue, but there have been instances where  I needed to unhook the battery. I read there was a recall on the 2017-2019 models for this issue. However, when I looked up the VIN on this site, it says my truck has no open recalls. I took it to a mechanic, but they could not find any issues as the warning light had gone off. In the additional details below I have put the latest time this happened which was yesterday. However it has been happening since 2024.",
+    "received_at": "2025-05-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2096470",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096470",
+    "decided_at": "2025-05-31T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2096470",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "BCI Malfuntion warning light"
+      },
+      {
+        "kind": "condition",
+        "quote": "on and off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "limp mode"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it won't start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes engage and the truck will not move while in drive"
+      },
+      {
+        "kind": "condition",
+        "quote": "well over 30 times"
+      },
+      {
+        "kind": "condition",
+        "quote": "turning the truck off and on solves the issue"
+      },
+      {
+        "kind": "safety",
+        "quote": "the brakes engage and the truck will not move while in drive"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2019 Nissan Armada back-over prevention warning: intermittent BCI malfunction warning light with limp mode, no-start, and brake engagement, recurring over 18 months.",
+    "symptoms": [
+      "BCI Malfunction warning light intermittently on",
+      "vehicle enters limp mode",
+      "engine will not start",
+      "brakes engage and vehicle will not move while in drive"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2096470",
+    "created_at": "2025-05-31T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "12/2/2021 SUV accelerated on its own incident happened in my daughters driveway. SUV is available for inspection I have possession as of 1/22/22 picked up from Nissan dealership. I pulled in the her driveway then I backed up so I would be half on the driveway and half on grass in...",
+      "group": "adas",
+      "id": "1789896",
+      "make": "NISSAN",
+      "model": "ARMADA",
+      "score": 10.1994,
+      "year": 2019
+    },
+    {
+      "excerpt": "BCI MALFUNCTION EARRING, SHOWS ON THE DASHBOARD. THIS ISSUE OCCURRED SINCE JANUARY, THE ENTIRE SYSTEM SHUTS OFF, PRE COLLISION, BACK UP WARNING, CRUISE CONTROL, AND SONAR SYSTEM, ALL GOES OFF. MOREOVER, THE CAR WOULD NOT START, HAVE TO PUSH THE BRAKES 3 TO 6 TIME IN ORDER TO TURN...",
+      "group": "adas",
+      "id": "1735678",
+      "make": "NISSAN",
+      "model": "ARMADA",
+      "score": 6.8649,
+      "year": 2019
+    },
+    {
+      "excerpt": "BCI MALFUNCTION EARRING, SHOWS ON THE DASHBOARD. THIS ISSUE OCCURRED SINCE JANUARY, THE ENTIRE SYSTEM SHUTS OFF, PRE COLLISION, BACK UP WARNING, CRUISE CONTROL, AND SONAR SYSTEM, ALL GOES OFF. MOREOVER, THE CAR WOULD NOT START, HAVE TO PUSH THE BRAKES 3 TO 6 TIME IN ORDER TO TURN...",
+      "group": "adas",
+      "id": "1735679",
+      "make": "NISSAN",
+      "model": "ARMADA",
+      "score": 6.8649,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-31T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015667,
+      "duration_ms": 28605,
+      "reason": "2019 Nissan Armada back-over prevention warning: intermittent BCI malfunction warning light with limp mode, no-start, and brake engagement, recurring over 18 months.",
+      "started_at": "2025-05-31T07:00:01Z",
+      "step": 2,
+      "tokens": 3213,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-31T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ARMADA",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "12/2/2021 SUV accelerated on its own incident happened in my daughters driveway. SUV is available for inspection I have possession as of 1/22/22 picked up from Nissan dealership. I pulled in the her driveway then I backed up so I would be half on the driveway and half on grass in...",
+            "group": "adas",
+            "id": "1789896",
+            "make": "NISSAN",
+            "model": "ARMADA",
+            "score": 10.1994,
+            "year": 2019
+          },
+          {
+            "excerpt": "BCI MALFUNCTION EARRING, SHOWS ON THE DASHBOARD. THIS ISSUE OCCURRED SINCE JANUARY, THE ENTIRE SYSTEM SHUTS OFF, PRE COLLISION, BACK UP WARNING, CRUISE CONTROL, AND SONAR SYSTEM, ALL GOES OFF. MOREOVER, THE CAR WOULD NOT START, HAVE TO PUSH THE BRAKES 3 TO 6 TIME IN ORDER TO TURN...",
+            "group": "adas",
+            "id": "1735678",
+            "make": "NISSAN",
+            "model": "ARMADA",
+            "score": 6.8649,
+            "year": 2019
+          },
+          {
+            "excerpt": "BCI MALFUNCTION EARRING, SHOWS ON THE DASHBOARD. THIS ISSUE OCCURRED SINCE JANUARY, THE ENTIRE SYSTEM SHUTS OFF, PRE COLLISION, BACK UP WARNING, CRUISE CONTROL, AND SONAR SYSTEM, ALL GOES OFF. MOREOVER, THE CAR WOULD NOT START, HAVE TO PUSH THE BRAKES 3 TO 6 TIME IN ORDER TO TURN...",
+            "group": "adas",
+            "id": "1735679",
+            "make": "NISSAN",
+            "model": "ARMADA",
+            "score": 6.8649,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-31T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-31T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-31T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-31T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-31T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-31T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-31T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2129762",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "FIT",
+    "narrative": "Blue metallic paint has clear coat peeling and exposed base paint. Paint should last longer than 8 years, this is a manufacturing defect.",
+    "received_at": "2025-09-12",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2129762",
+    "status": "needs_engineer",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2129762",
+    "decided_at": "2025-09-12T07:00:06Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2129762",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "clear coat peeling and exposed base paint"
+      },
+      {
+        "kind": "other",
+        "quote": "manufacturing defect"
+      },
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY/WIPER"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "VISIBILITY/WIPER (body_controls): clear coat peeling and exposed base paint; no conditions stated.",
+    "symptoms": [
+      "clear coat peeling",
+      "exposed base paint"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2129762",
+    "created_at": "2025-09-12T07:00:03Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-12T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011701,
+      "duration_ms": 11962,
+      "reason": "VISIBILITY/WIPER (body_controls): clear coat peeling and exposed base paint; no conditions stated.",
+      "started_at": "2025-09-12T07:00:01Z",
+      "step": 2,
+      "tokens": 2429,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-09-12T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "FIT",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-09-12T07:00:04Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-12T07:00:05Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-09-12T07:00:07Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-12T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-09-12T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

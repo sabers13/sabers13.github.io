@@ -1,0 +1,273 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2125455",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TAHOE",
+    "narrative": "When driving the car just stops losing power then the car immediately shuts down and stops driving. I had to call a tow truck when it’s taken to the dealership the fuel pump power control module is faulty. This is a 2021 Tahoe they had to replace the fuel pump, power control module, and this vehicle should not have to be replaced. Chevrolet/GMC knows that these modules will make the vehicle stop wherever it is driving. I happen to be on a freeway going 70 mph and could have been killed. They have not put a recall out to have these modules replaced in any SUV. This is a danger for any driver on the road. This is a lawsuit waiting to happen for people. You know that they are aware this is happening because they paid for the tow and replaced this part that is not warranty now for free. Yes, great that it was paid for but thankful I did not lose my life as I could’ve been rear ended when my car shut down going that fast in the middle of the freeway I am begging that they please put a recall so no one gets injured or killed.",
+    "received_at": "2025-08-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2125455",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2125455",
+    "decided_at": "2025-08-29T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2125455",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "When driving the car just stops losing power then the car immediately shuts down and stops driving."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the fuel pump power control module is faulty"
+      },
+      {
+        "kind": "condition",
+        "quote": "I happen to be on a freeway going 70 mph"
+      },
+      {
+        "kind": "safety",
+        "quote": "could have been killed"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a danger for any driver on the road."
+      },
+      {
+        "kind": "safety",
+        "quote": "no one gets injured or killed"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2021 Chevrolet Tahoe electrical system: loss of power and shutdown while driving; fuel pump power control module faulty.",
+    "symptoms": [
+      "loss of power while driving",
+      "vehicle shuts down and stops driving",
+      "faulty fuel pump power control module"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2125455",
+    "created_at": "2025-08-29T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We have owned this 2021 Chevrolet Tahoe for a little less than a year. Since acquiring this vehicle, there have been multiple safety recalls and we have had to get the vehicle serviced 3 times due to electrical issues. Now for the major safety issue, was out of town waiting at a...",
+      "group": "electrical_general",
+      "id": "1752529",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 23.9989,
+      "year": 2021
+    },
+    {
+      "excerpt": "The dashboard for the vehicle loses all power and does not regain power/connectivity. I've had this problem \"fixed\" 5 times by the Chevy dealership and the issues continues. They've replaced the entire dash, checked electrical components, changed out the electrical bank, and the...",
+      "group": "electrical_general",
+      "id": "1843552",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 17.344,
+      "year": 2021
+    },
+    {
+      "excerpt": "WHAT FAILED: Main Radio. SAFETY CONCERNS: GM sent an over the air update to car around July 5, 2024 and the update broke the whole radio system to my car. I now have no access to OnStar, bluetooth for phone safety, maps, blinkers on side mirrors, radio etc. Dealer mentioned it is...",
+      "group": "electrical_general",
+      "id": "2007678",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 15.786,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-29T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000925,
+      "duration_ms": 10568,
+      "reason": "2021 Chevrolet Tahoe electrical system: loss of power and shutdown while driving; fuel pump power control module faulty.",
+      "started_at": "2025-08-29T07:00:36Z",
+      "step": 2,
+      "tokens": 2175,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-29T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TAHOE",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have owned this 2021 Chevrolet Tahoe for a little less than a year. Since acquiring this vehicle, there have been multiple safety recalls and we have had to get the vehicle serviced 3 times due to electrical issues. Now for the major safety issue, was out of town waiting at a...",
+            "group": "electrical_general",
+            "id": "1752529",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 23.9989,
+            "year": 2021
+          },
+          {
+            "excerpt": "The dashboard for the vehicle loses all power and does not regain power/connectivity. I've had this problem \"fixed\" 5 times by the Chevy dealership and the issues continues. They've replaced the entire dash, checked electrical components, changed out the electrical bank, and the...",
+            "group": "electrical_general",
+            "id": "1843552",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 17.344,
+            "year": 2021
+          },
+          {
+            "excerpt": "WHAT FAILED: Main Radio. SAFETY CONCERNS: GM sent an over the air update to car around July 5, 2024 and the update broke the whole radio system to my car. I now have no access to OnStar, bluetooth for phone safety, maps, blinkers on side mirrors, radio etc. Dealer mentioned it is...",
+            "group": "electrical_general",
+            "id": "2007678",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 15.786,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-29T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-29T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-29T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-29T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-29T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-29T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-29T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

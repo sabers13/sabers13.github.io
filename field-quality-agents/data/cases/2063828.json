@@ -1,0 +1,531 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2063828",
+    "make": "RAM",
+    "mileage": null,
+    "model": "2500",
+    "narrative": "The ABS brake warning lights are on all the time.  I have no cruise control.  There are times when I can't even shift my vehicle into gear. I will be checking to see if I even have 4wd with this light on. But, haven't tried it since the lights have been on.",
+    "received_at": "2025-02-08",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2063828",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2063828",
+    "decided_at": "2025-02-08T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2063828",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The ABS brake warning lights are on all the time."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have no cruise control."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There are times when I can't even shift my vehicle into gear."
+      },
+      {
+        "kind": "condition",
+        "quote": "There are times when I can't even shift my vehicle into gear."
+      },
+      {
+        "kind": "other",
+        "quote": "I will be checking to see if I even have 4wd with this light on."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the intermittent ABS/cruise-control/shift fault with a long-run power cycling test because repeated wake/sleep cycles match the intermittent rulebook entry.",
+    "symptoms": [
+      "ABS brake warning lights on all the time",
+      "no cruise control",
+      "intermittent inability to shift vehicle into gear"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2063828",
+    "created_at": "2025-02-08T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "The ABS brake warning lights are on all the time.",
+        "source_id": "2063828",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I have no cruise control.",
+        "source_id": "2063828",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "There are times when I can't even shift my vehicle into gear.",
+        "source_id": "2063828",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "There are times when I can't even shift my vehicle into gear.",
+        "source_id": "2063828",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I will be checking to see if I even have 4wd with this light on.",
+        "source_id": "2063828",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports ABS brake warning lights on constantly, no cruise control, and intermittent inability to shift into gear. The rulebook matches the intermittent condition to a long-run power cycling test intended to reproduce faults that appear after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test the intermittent ABS/cruise-control/shift fault with a long-run power cycling test because repeated wake/sleep cycles match the intermittent rulebook entry.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports ABS brake warning lights on constantly, no cruise control, and intermittent inability to shift into gear. The rulebook matches the intermittent condition to a long-run power cycling test intended to reproduce faults that appear after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [
+    {
+      "id": "18V398000",
+      "match": true,
+      "open_date": "2018-06-14",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Dodge Journey and RAM 1500, 2500, and 3500 vehicles.  The backup camera may experience a loss of image display while backing up.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\""
+    },
+    {
+      "id": "18V332000",
+      "match": true,
+      "open_date": "2018-05-17",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "At exactly 75100 miles my 2018 Ram 2500 Tradesman gets a warning light to service my anti-lock braking system. Since I was on a trip I also noticed when the warning comes on it also disengages the cruise control. This has been happening for over 1,000 miles and a couple of months...",
+      "group": "adas",
+      "id": "1953123",
+      "make": "RAM",
+      "model": "2500",
+      "score": 22.6964,
+      "year": 2018
+    },
+    {
+      "excerpt": "Abs light comes on all the time and cruise control goes out and go 50 miles and the abs and brake service lights comes on 67 times",
+      "group": "adas",
+      "id": "1992644",
+      "make": "RAM",
+      "model": "2500",
+      "score": 14.6788,
+      "year": 2018
+    },
+    {
+      "excerpt": "ABS light come on and the service antilock brake system light comes on and NO cruise control, happening all the time so NO ABS systems and in south dakota that is a big problem and no parts for 8 months now comes on when you hit a bump all the time 68 times driving 50 miles",
+      "group": "adas",
+      "id": "2006684",
+      "make": "RAM",
+      "model": "2500",
+      "score": 12.5141,
+      "year": 2018
+    },
+    {
+      "excerpt": "ABS light come on and the service antilock brake system light comes on and NO cruise control, happening all the time so NO ABS systems and in south dakota that is a big problem and no parts for 8 months now comes on when you hit a bump all the time 68 times driving 50 miles",
+      "group": "adas",
+      "id": "2006685",
+      "make": "RAM",
+      "model": "2500",
+      "score": 12.5141,
+      "year": 2018
+    },
+    {
+      "excerpt": "I have had the ABS hydraulic module replaced several times by Firkins Automotive, now with the same Faulty Hydraulic module failing once again. The dealer had told me after the 2nd time this was replaced it was “junk” parts and there was no permanent repair. When this goes bad yo...",
+      "group": "adas",
+      "id": "1884771",
+      "make": "RAM",
+      "model": "2500",
+      "score": 11.9196,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-08T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00086215,
+      "duration_ms": 14031,
+      "reason": "2018 RAM 2500 ADAS/adaptive cruise control: ABS brake warning lights constantly on, no cruise control, and intermittent inability to shift into gear.",
+      "started_at": "2025-02-08T07:00:01Z",
+      "step": 2,
+      "tokens": 1948,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-08T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "At exactly 75100 miles my 2018 Ram 2500 Tradesman gets a warning light to service my anti-lock braking system. Since I was on a trip I also noticed when the warning comes on it also disengages the cruise control. This has been happening for over 1,000 miles and a couple of months...",
+            "group": "adas",
+            "id": "1953123",
+            "make": "RAM",
+            "model": "2500",
+            "score": 22.6964,
+            "year": 2018
+          },
+          {
+            "excerpt": "Abs light comes on all the time and cruise control goes out and go 50 miles and the abs and brake service lights comes on 67 times",
+            "group": "adas",
+            "id": "1992644",
+            "make": "RAM",
+            "model": "2500",
+            "score": 14.6788,
+            "year": 2018
+          },
+          {
+            "excerpt": "ABS light come on and the service antilock brake system light comes on and NO cruise control, happening all the time so NO ABS systems and in south dakota that is a big problem and no parts for 8 months now comes on when you hit a bump all the time 68 times driving 50 miles",
+            "group": "adas",
+            "id": "2006684",
+            "make": "RAM",
+            "model": "2500",
+            "score": 12.5141,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-08T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-08T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-02-08T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The ABS brake warning lights are on all the time.  I have no cruise control.  There are times when I can't even shift my vehicle into gear. I will be checking to see if I even have 4wd with this light on. But, haven't tried it since the lights have been on."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "At exactly 75100 miles my 2018 Ram 2500 Tradesman gets a warning light to service my anti-lock braking system. Since I was on a trip I also noticed when the warning comes on it also disengages the cruise control. This has been happening for over 1,000 miles and a couple of months...",
+            "group": "adas",
+            "id": "1953123",
+            "make": "RAM",
+            "model": "2500",
+            "score": 22.6964,
+            "year": 2018
+          },
+          {
+            "excerpt": "Abs light comes on all the time and cruise control goes out and go 50 miles and the abs and brake service lights comes on 67 times",
+            "group": "adas",
+            "id": "1992644",
+            "make": "RAM",
+            "model": "2500",
+            "score": 14.6788,
+            "year": 2018
+          },
+          {
+            "excerpt": "ABS light come on and the service antilock brake system light comes on and NO cruise control, happening all the time so NO ABS systems and in south dakota that is a big problem and no parts for 8 months now comes on when you hit a bump all the time 68 times driving 50 miles",
+            "group": "adas",
+            "id": "2006684",
+            "make": "RAM",
+            "model": "2500",
+            "score": 12.5141,
+            "year": 2018
+          },
+          {
+            "excerpt": "ABS light come on and the service antilock brake system light comes on and NO cruise control, happening all the time so NO ABS systems and in south dakota that is a big problem and no parts for 8 months now comes on when you hit a bump all the time 68 times driving 50 miles",
+            "group": "adas",
+            "id": "2006685",
+            "make": "RAM",
+            "model": "2500",
+            "score": 12.5141,
+            "year": 2018
+          },
+          {
+            "excerpt": "I have had the ABS hydraulic module replaced several times by Firkins Automotive, now with the same Faulty Hydraulic module failing once again. The dealer had told me after the 2nd time this was replaced it was “junk” parts and there was no permanent repair. When this goes bad yo...",
+            "group": "adas",
+            "id": "1884771",
+            "make": "RAM",
+            "model": "2500",
+            "score": 11.9196,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-08T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "18V398000",
+            "make": "RAM",
+            "model": "2500",
+            "open_date": "2018-06-14",
+            "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Dodge Journey and RAM 1500, 2500, and 3500 vehicles.  The backup camera may experience a loss of image display while backing up.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\"",
+            "year": 2018
+          },
+          {
+            "component": "VEHICLE SPEED CONTROL:CRUISE CONTROL",
+            "group": "adas",
+            "id": "18V332000",
+            "make": "RAM",
+            "model": "2500",
+            "open_date": "2018-05-17",
+            "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating.",
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-08T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-08T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006634,
+      "duration_ms": 8527,
+      "reason": "The narrative reports ABS brake warning lights on constantly, no cruise control, and intermittent inability to shift into gear. The rulebook matches the intermittent condition to a long-run power cycling test intended to reproduce faults that appear after repeated wake and sleep cycles.",
+      "started_at": "2025-02-08T07:00:09Z",
+      "step": 10,
+      "tokens": 2627,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 1 dropped",
+      "started_at": "2025-02-08T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The ABS brake warning lights are on all the time.",
+          "I have no cruise control.",
+          "There are times when I can't even shift my vehicle into gear.",
+          "There are times when I can't even shift my vehicle into gear.",
+          "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+          "I will be checking to see if I even have 4wd with this light on."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 1,
+        "verified": 5
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-02-08T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-08T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-08T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-08T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-08T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

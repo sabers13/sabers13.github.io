@@ -1,0 +1,454 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2066465",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "The ota team from Fisker sent an update to my car without prior notice and bricked my car. I had to have a mobile technician come out to fix it. It costs me $1,600.  I still dont have the update on my car which is an nhtsa recommended fix.",
+    "received_at": "2025-02-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2066465",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2066465",
+    "decided_at": "2025-02-17T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2066465",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "bricked my car"
+      },
+      {
+        "kind": "condition",
+        "quote": "sent an update to my car without prior notice"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I still dont have the update on my car which is an nhtsa recommended fix."
+      },
+      {
+        "kind": "other",
+        "quote": "mobile technician come out to fix it"
+      }
+    ],
+    "conditions": [
+      "unannounced OTA software update"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the electrical system and verify OTA software status because an unannounced OTA update bricked the vehicle and the NHTSA-recommended update remains uninstalled.",
+    "symptoms": [
+      "vehicle bricked after an over-the-air software update",
+      "NHTSA-recommended update still not installed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2066465",
+    "created_at": "2025-02-17T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "bricked my car",
+        "source_id": "2066465",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "sent an update to my car without prior notice",
+        "source_id": "2066465",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I still dont have the update on my car which is an nhtsa recommended fix.",
+        "source_id": "2066465",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "mobile technician come out to fix it",
+        "source_id": "2066465",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports an OTA update sent without notice that bricked the car, a mobile technician repair, and that the NHTSA-recommended update is still missing. No rulebook entry, recall, or investigation supports a targeted load test, so a standard electrical/software diagnostic is appropriate.",
+    "requested_info": [],
+    "summary": "Test the electrical system and verify OTA software status because an unannounced OTA update bricked the vehicle and the NHTSA-recommended update remains uninstalled.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There has been no OTA software updates issued to this date for my vehicle. I'm currently on 2.0 awaiting 2.2 update. Because of this I still have issues with braking, rolling while in park, and random and unexpected shutdowns of the vehicle while driving. Complete car system fail...",
+      "group": "electrical_general",
+      "id": "2052220",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 16.0869,
+      "year": 2023
+    },
+    {
+      "excerpt": "While my 2023 Fisker Ocean One was parked in my garage in the beginning of October, the vehicle received a Over-The-Air Software Update to Fisker OS v2.2, in order to align the car with a NHTSA recall (NHTSA campaign 24V623, Safety Recall Campaign TSB11062408). I was away for a f...",
+      "group": "electrical_general",
+      "id": "2037023",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 12.8423,
+      "year": 2023
+    },
+    {
+      "excerpt": "On July 1, after opening my vehicle with the NFC key, I attempted to start my vehicle in approximately 100-degree weather, only to find that the vehicle's main interior no longer recognized my key, and would not allow me to start my vehicle. inside, it was well over 120 degrees,...",
+      "group": "electrical_general",
+      "id": "2004134",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 11.1688,
+      "year": 2023
+    },
+    {
+      "excerpt": "Since June 15, 2024, my vehicle is not operating. It locked me out; electronic key fob stopped working. Unable to charge my vehicle as charing port door seems to be stuck. Electrical system in this vehicle is faulty and very much sub-standard in quality. I have filed complaints w...",
+      "group": "electrical_general",
+      "id": "2017971",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 10.9764,
+      "year": 2023
+    },
+    {
+      "excerpt": "I'm writing to complain the manufacturer (Fisker) has not sent out software version 2.1 over the air, as it stated it would in NHTSA Campaign Numbers: 24V405 and 24V404 -- dated July 2024.",
+      "group": "electrical_general",
+      "id": "2021221",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 10.5575,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-17T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005601,
+      "duration_ms": 6285,
+      "reason": "Electrical system: vehicle bricked after an unannounced Fisker OTA update; mobile technician repaired it, but the NHTSA-recommended update is still not installed.",
+      "started_at": "2025-02-17T07:00:16Z",
+      "step": 2,
+      "tokens": 1346,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-17T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There has been no OTA software updates issued to this date for my vehicle. I'm currently on 2.0 awaiting 2.2 update. Because of this I still have issues with braking, rolling while in park, and random and unexpected shutdowns of the vehicle while driving. Complete car system fail...",
+            "group": "electrical_general",
+            "id": "2052220",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 16.0869,
+            "year": 2023
+          },
+          {
+            "excerpt": "While my 2023 Fisker Ocean One was parked in my garage in the beginning of October, the vehicle received a Over-The-Air Software Update to Fisker OS v2.2, in order to align the car with a NHTSA recall (NHTSA campaign 24V623, Safety Recall Campaign TSB11062408). I was away for a f...",
+            "group": "electrical_general",
+            "id": "2037023",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 12.8423,
+            "year": 2023
+          },
+          {
+            "excerpt": "On July 1, after opening my vehicle with the NFC key, I attempted to start my vehicle in approximately 100-degree weather, only to find that the vehicle's main interior no longer recognized my key, and would not allow me to start my vehicle. inside, it was well over 120 degrees,...",
+            "group": "electrical_general",
+            "id": "2004134",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 11.1688,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-02-17T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-17T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-02-17T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The ota team from Fisker sent an update to my car without prior notice and bricked my car. I had to have a mobile technician come out to fix it. It costs me $1,600.  I still dont have the update on my car which is an nhtsa recommended fix."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There has been no OTA software updates issued to this date for my vehicle. I'm currently on 2.0 awaiting 2.2 update. Because of this I still have issues with braking, rolling while in park, and random and unexpected shutdowns of the vehicle while driving. Complete car system fail...",
+            "group": "electrical_general",
+            "id": "2052220",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 16.0869,
+            "year": 2023
+          },
+          {
+            "excerpt": "While my 2023 Fisker Ocean One was parked in my garage in the beginning of October, the vehicle received a Over-The-Air Software Update to Fisker OS v2.2, in order to align the car with a NHTSA recall (NHTSA campaign 24V623, Safety Recall Campaign TSB11062408). I was away for a f...",
+            "group": "electrical_general",
+            "id": "2037023",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 12.8423,
+            "year": 2023
+          },
+          {
+            "excerpt": "On July 1, after opening my vehicle with the NFC key, I attempted to start my vehicle in approximately 100-degree weather, only to find that the vehicle's main interior no longer recognized my key, and would not allow me to start my vehicle. inside, it was well over 120 degrees,...",
+            "group": "electrical_general",
+            "id": "2004134",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 11.1688,
+            "year": 2023
+          },
+          {
+            "excerpt": "Since June 15, 2024, my vehicle is not operating. It locked me out; electronic key fob stopped working. Unable to charge my vehicle as charing port door seems to be stuck. Electrical system in this vehicle is faulty and very much sub-standard in quality. I have filed complaints w...",
+            "group": "electrical_general",
+            "id": "2017971",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 10.9764,
+            "year": 2023
+          },
+          {
+            "excerpt": "I'm writing to complain the manufacturer (Fisker) has not sent out software version 2.1 over the air, as it stated it would in NHTSA Campaign Numbers: 24V405 and 24V404 -- dated July 2024.",
+            "group": "electrical_general",
+            "id": "2021221",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 10.5575,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-17T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-17T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-17T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00090885,
+      "duration_ms": 7914,
+      "reason": "The narrative reports an OTA update sent without notice that bricked the car, a mobile technician repair, and that the NHTSA-recommended update is still missing. No rulebook entry, recall, or investigation supports a targeted load test, so a standard electrical/software diagnostic is appropriate.",
+      "started_at": "2025-02-17T07:00:24Z",
+      "step": 10,
+      "tokens": 2570,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-02-17T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "bricked my car",
+          "sent an update to my car without prior notice",
+          "I still dont have the update on my car which is an nhtsa recommended fix.",
+          "mobile technician come out to fix it"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-17T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-17T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-17T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-17T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

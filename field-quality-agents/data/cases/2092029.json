@@ -1,0 +1,268 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2092029",
+    "make": "GMC",
+    "mileage": null,
+    "model": "SIERRA 1500",
+    "narrative": "I was driving home from work one day my truck started. Losing power I could press the gas to make the truck drive it started slowing down",
+    "received_at": "2025-05-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2092029",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2092029",
+    "decided_at": "2025-05-14T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2092029",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Losing power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "started slowing down"
+      },
+      {
+        "kind": "condition",
+        "quote": "I was driving home from work"
+      },
+      {
+        "kind": "safety",
+        "quote": "Losing power"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: while driving home, loss of power and truck slowing down despite accelerator input.",
+    "symptoms": [
+      "loss of power",
+      "slowing down despite pressing the accelerator"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2092029",
+    "created_at": "2025-05-14T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On January 20th 2024 I was cleaning heavy dirt and mud off of my truck, after leaving the car wash and driving about 20 miles, once I parked my tailgate started to open over and over on its own. This happened again on March 4th 2024 after cleaning off a lot of dirt from my vehicl...",
+      "group": "electrical_general",
+      "id": "1974547",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 4.6058,
+      "year": 2022
+    },
+    {
+      "excerpt": "While driving, on its own, the radio volume surged to 100%. All radio controls were unresponsive, and the volume was maxed-out.. Volume bar on the console display was reading 100%. Was unable to turn the radio down or off. Issue did not resolve until I drove home and turned the v...",
+      "group": "electrical_general",
+      "id": "1945231",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 4.1265,
+      "year": 2022
+    },
+    {
+      "excerpt": "Infotainment system volume shot up full blast on its own with no operator control or influence. The volume of music was so high that it was hard to concentrate on driving while trying to reduce the volume and could not. Had to pull over on the side of the road and shut off vehicl...",
+      "group": "electrical_general",
+      "id": "2044961",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 3.0122,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00082945,
+      "duration_ms": 10535,
+      "reason": "Electrical system: while driving home, loss of power and truck slowing down despite accelerator input.",
+      "started_at": "2025-05-14T07:00:01Z",
+      "step": 2,
+      "tokens": 1865,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "SIERRA 1500",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On January 20th 2024 I was cleaning heavy dirt and mud off of my truck, after leaving the car wash and driving about 20 miles, once I parked my tailgate started to open over and over on its own. This happened again on March 4th 2024 after cleaning off a lot of dirt from my vehicl...",
+            "group": "electrical_general",
+            "id": "1974547",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 4.6058,
+            "year": 2022
+          },
+          {
+            "excerpt": "While driving, on its own, the radio volume surged to 100%. All radio controls were unresponsive, and the volume was maxed-out.. Volume bar on the console display was reading 100%. Was unable to turn the radio down or off. Issue did not resolve until I drove home and turned the v...",
+            "group": "electrical_general",
+            "id": "1945231",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 4.1265,
+            "year": 2022
+          },
+          {
+            "excerpt": "Infotainment system volume shot up full blast on its own with no operator control or influence. The volume of music was so high that it was hard to concentrate on driving while trying to reduce the volume and could not. Had to pull over on the side of the road and shut off vehicl...",
+            "group": "electrical_general",
+            "id": "2044961",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 3.0122,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-14T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-14T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-14T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-14T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2068283",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "Unannounced OTA update on 2/22/2025 left my vehicle undrivable and no longer operational by draining 12V battery and failed installation caused partial software update making the car no longer operational.  The vehicle, now, shows it is stuck in neutral and doesn’t even sift any more.  OTA update was supposedly addressing below recall related issues:  24V865000 (Regen Braking OTA-2.2) 24V405000 (Warning Lights OTA-2.1) 24V404000 (MCU/VCU Loss of Power OTA-2.1)  For 24V499000 (Water pump) repair, I had to pay a repair shop to replace the parts directly even it was suppose to be paid by Fisker.  My door handle issue (24V466000 (Door Handles)) still need to be addressed but not sure how and who will be addressing the issue.  I will attach image showing all the warning lights that are on the car after the OTA update attempt.",
+    "received_at": "2025-02-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2068283",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2068283",
+    "decided_at": "2025-02-23T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2068283",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "condition",
+        "quote": "Unannounced OTA update on 2/22/2025"
+      },
+      {
+        "kind": "symptom",
+        "quote": "left my vehicle undrivable and no longer operational"
+      },
+      {
+        "kind": "symptom",
+        "quote": "draining 12V battery"
+      },
+      {
+        "kind": "symptom",
+        "quote": "failed installation caused partial software update"
+      },
+      {
+        "kind": "symptom",
+        "quote": "stuck in neutral"
+      },
+      {
+        "kind": "symptom",
+        "quote": "doesn’t even sift any more"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all the warning lights that are on the car after the OTA update attempt"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V865000 (Regen Braking OTA-2.2)"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V405000 (Warning Lights OTA-2.1)"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V404000 (MCU/VCU Loss of Power OTA-2.1)"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V499000 (Water pump)"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V466000 (Door Handles)"
+      },
+      {
+        "kind": "safety",
+        "quote": "stuck in neutral"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V865000",
+      "24V405000",
+      "24V404000",
+      "24V499000",
+      "24V466000"
+    ],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS/adaptive cruise control; unannounced OTA update caused 12V battery drain and partial software install, leaving vehicle undrivable, stuck in neutral, and showing warning lights.",
+    "symptoms": [
+      "vehicle undrivable",
+      "no longer operational",
+      "12V battery drained",
+      "partial software update",
+      "stuck in neutral",
+      "will not shift",
+      "warning lights illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2068283",
+    "created_at": "2025-02-23T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Fisker Ocean owner, recall notices for Cabin Electric Water Pump and Door Handles. I have no response from Fisker, they don't answer the phone number provided and the website contact them is disabled. The OTA updates have been incomplete, causing fear in the Fisker owners' commun...",
+      "group": "adas",
+      "id": "2017869",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 25.8891,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025575",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 25.4622,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025576",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 25.4622,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0023214,
+      "duration_ms": 23443,
+      "reason": "ADAS/adaptive cruise control; unannounced OTA update caused 12V battery drain and partial software install, leaving vehicle undrivable, stuck in neutral, and showing warning lights.",
+      "started_at": "2025-02-23T07:00:01Z",
+      "step": 2,
+      "tokens": 4409,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Fisker Ocean owner, recall notices for Cabin Electric Water Pump and Door Handles. I have no response from Fisker, they don't answer the phone number provided and the website contact them is disabled. The OTA updates have been incomplete, causing fear in the Fisker owners' commun...",
+            "group": "adas",
+            "id": "2017869",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 25.8891,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025575",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 25.4622,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025576",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 25.4622,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-23T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-23T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-23T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

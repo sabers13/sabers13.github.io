@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2158269",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TRAVERSE",
+    "narrative": "I started the vehicle to move it to a different place in my driveway and after putting it in reverse, it notified me that the ABS was not working. I could not stop the vehicle without pressing the brakes very hard and even then it was still rolling backward slowly. I quickly put the vehicle in park before the car rolled into my house.",
+    "received_at": "2025-12-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158269",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158269",
+    "decided_at": "2025-12-17T07:01:03Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158269",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "after putting it in reverse"
+      },
+      {
+        "kind": "condition",
+        "quote": "in my driveway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it notified me that the ABS was not working"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I could not stop the vehicle without pressing the brakes very hard"
+      },
+      {
+        "kind": "symptom",
+        "quote": "even then it was still rolling backward slowly"
+      },
+      {
+        "kind": "safety",
+        "quote": "I could not stop the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "before the car rolled into my house"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2025 Chevrolet Traverse ADAS/AEB: ABS not working warning after reverse startup; unable to stop without hard braking and slow backward roll in driveway",
+    "symptoms": [
+      "ABS not working warning",
+      "braking requires very hard pedal pressure",
+      "vehicle keeps rolling backward slowly despite braking"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158269",
+    "created_at": "2025-12-17T07:01:01Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-17T07:00:55Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00102145,
+      "duration_ms": 13410,
+      "reason": "2025 Chevrolet Traverse ADAS/AEB: ABS not working warning after reverse startup; unable to stop without hard braking and slow backward roll in driveway",
+      "started_at": "2025-12-17T07:00:56Z",
+      "step": 2,
+      "tokens": 2221,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-17T07:00:57Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-17T07:00:58Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-17T07:00:59Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-17T07:01:00Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-17T07:01:02Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-17T07:01:04Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-17T07:01:05Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-17T07:01:06Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

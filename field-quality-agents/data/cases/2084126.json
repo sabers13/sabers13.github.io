@@ -1,0 +1,260 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2084126",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "EQUINOX EV",
+    "narrative": "Windshield glare creates a visible obstruction, resulting in compromised safety.",
+    "received_at": "2025-04-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2084126",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084126",
+    "decided_at": "2025-04-18T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2084126",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY/WIPER"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Windshield glare creates a visible obstruction"
+      },
+      {
+        "kind": "safety",
+        "quote": "compromised safety"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "VISIBILITY/WIPER: windshield glare creates a visible obstruction, compromising safety",
+    "symptoms": [
+      "windshield glare creates a visible obstruction",
+      "compromised safety"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2084126",
+    "created_at": "2025-04-18T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There is a really bad glare on the front windshield during the day. It makes seeing out the windshield very hard to see cars and pedestrians.",
+      "group": "body_controls",
+      "id": "2048761",
+      "make": "CHEVROLET",
+      "model": "EQUINOX EV",
+      "score": 1.423,
+      "year": 2025
+    },
+    {
+      "excerpt": "The entire dash reflects onto the windshield. Extremely difficult to see through whenever I was driving. I pulled into a grocery store to safely get a photo, which I will attached.",
+      "group": "body_controls",
+      "id": "2038347",
+      "make": "CHEVROLET",
+      "model": "EQUINOX EV",
+      "score": 0.1568,
+      "year": 2025
+    },
+    {
+      "excerpt": "I recently purchased a Chevy Equinox EV and observed that it has a severe dashboard reflection on the windshield. It can be very distracting to the point that you can't clearly see what is in front of you. It requires concentration to focus beyond the wind shield. I notice it mos...",
+      "group": "body_controls",
+      "id": "2039146",
+      "make": "CHEVROLET",
+      "model": "EQUINOX EV",
+      "score": 0.0997,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-18T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00034585,
+      "duration_ms": 5492,
+      "reason": "VISIBILITY/WIPER: windshield glare creates a visible obstruction, compromising safety",
+      "started_at": "2025-04-18T07:00:16Z",
+      "step": 2,
+      "tokens": 1047,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-18T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "EQUINOX EV",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There is a really bad glare on the front windshield during the day. It makes seeing out the windshield very hard to see cars and pedestrians.",
+            "group": "body_controls",
+            "id": "2048761",
+            "make": "CHEVROLET",
+            "model": "EQUINOX EV",
+            "score": 1.423,
+            "year": 2025
+          },
+          {
+            "excerpt": "The entire dash reflects onto the windshield. Extremely difficult to see through whenever I was driving. I pulled into a grocery store to safely get a photo, which I will attached.",
+            "group": "body_controls",
+            "id": "2038347",
+            "make": "CHEVROLET",
+            "model": "EQUINOX EV",
+            "score": 0.1568,
+            "year": 2025
+          },
+          {
+            "excerpt": "I recently purchased a Chevy Equinox EV and observed that it has a severe dashboard reflection on the windshield. It can be very distracting to the point that you can't clearly see what is in front of you. It requires concentration to focus beyond the wind shield. I notice it mos...",
+            "group": "body_controls",
+            "id": "2039146",
+            "make": "CHEVROLET",
+            "model": "EQUINOX EV",
+            "score": 0.0997,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-04-18T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-18T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-18T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-18T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-18T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-18T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-18T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

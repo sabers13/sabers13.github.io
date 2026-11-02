@@ -1,0 +1,228 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2076006",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "EQS SUV 450 4MATIC",
+    "narrative": "I am writing to formally document and express serious concern regarding a lighting issue with my Mercedes-Benz EQS, which presents a significant safety hazard for both me and my family.  Since December 2024, I have been facing a recurring problem with a dark shadow or image that appears while driving, particularly noticeable after dark. This shadow often resembles the shape of a person and unexpectedly enlarges or shifts, creating an alarming visual that demands immediate attention while driving. On numerous occasions, I have instinctively applied the brakes suddenly, believing that someone was standing in front of the vehicle, only to realize it was a visual distortion. This is not only disturbing but also dangerous, especially when driving at higher speeds or in traffic.  Due to this ongoing issue, I have been unable to use the vehicle for commuting to work and have avoided driving it during family outings after dark. It has affected my daily routine, my family’s comfort, and our overall trust in the vehicle's safety.  In the past few months, I have visited multiple authorized Mercedes-Benz dealerships—including San Jose, Stevens Creek, and Fremont—all of which confirmed the presence of the shadow issue. I have also shared the concern with a Mercedes Product Manager, and the email correspondence is attached for reference. Despite their acknowledgment of the issue, all parties have stated that this visual distortion is \"as per design\" and that they are unable to offer a solution. I was further informed that this issue exists across all Mercedes-Benz EQS vehicles, and therefore, nothing can be done.  This is unacceptable. A known design flaw that causes visual confusion and repeated panic braking should not be dismissed. The fact that multiple dealers acknowledge the problem but claim it cannot be fixed raises serious questions about product safety and accountability. Mercedez is not helping at all  This is a clear safety defect and needs to be addressed seriously.",
+    "received_at": "2025-03-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2076006",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2076006",
+    "decided_at": "2025-03-21T07:00:21Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2076006",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a dark shadow or image that appears while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This shadow often resembles the shape of a person and unexpectedly enlarges or shifts"
+      },
+      {
+        "kind": "condition",
+        "quote": "particularly noticeable after dark"
+      },
+      {
+        "kind": "symptom",
+        "quote": "applied the brakes suddenly"
+      },
+      {
+        "kind": "condition",
+        "quote": "especially when driving at higher speeds or in traffic"
+      },
+      {
+        "kind": "condition",
+        "quote": "recurring problem"
+      },
+      {
+        "kind": "safety",
+        "quote": "presents a significant safety hazard"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: person-shaped dark shadow/image appears after dark while driving, shifts or enlarges, and causes panic braking.",
+    "symptoms": [
+      "dark shadow or image appears while driving",
+      "shadow resembles the shape of a person",
+      "shadow unexpectedly enlarges or shifts",
+      "panic braking due to visual distortion"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2076006",
+    "created_at": "2025-03-21T07:00:19Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-21T07:00:13Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00125755,
+      "duration_ms": 15401,
+      "reason": "Exterior lighting: person-shaped dark shadow/image appears after dark while driving, shifts or enlarges, and causes panic braking.",
+      "started_at": "2025-03-21T07:00:14Z",
+      "step": 2,
+      "tokens": 2850,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-21T07:00:15Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "EQS SUV 450 4MATIC",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-21T07:00:16Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-21T07:00:17Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-21T07:00:18Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-21T07:00:20Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-21T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-21T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-21T07:00:24Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "case": {
+    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+    "group": "safety_systems",
+    "id": "2128522",
+    "make": "BMW",
+    "mileage": null,
+    "model": "X5",
+    "narrative": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure.",
+    "received_at": "2025-09-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2128522",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128522",
+    "decided_at": "2025-09-09T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2128522",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRONIC STABILITY CONTROL (ESC)"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V104000"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was unavailable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      }
+    ],
+    "conditions": [
+      "recall repair part unavailable"
+    ],
+    "fault_codes": [
+      "24V104000"
+    ],
+    "group": "safety_systems",
+    "safety_relevant": false,
+    "summary": "Verify the ESC/hydraulic brake recall 24V104000 remedy status for this 2024 BMW X5 because the repair part was unavailable and no failure has been reported.",
+    "symptoms": [
+      "no failure experienced"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128522",
+    "created_at": "2025-09-09T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "ELECTRONIC STABILITY CONTROL (ESC)",
+        "source_id": "2128522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 24V104000",
+        "source_id": "2128522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was unavailable",
+        "source_id": "2128522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2128522",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative states the owner received notice of NHTSA Campaign Number 24V104000 for ESC and hydraulic service brakes, but the recall repair part was unavailable. The owner reported no failure, and no rulebook targeted test matched, so a standard field-quality verification is appropriate.",
+    "requested_info": [],
+    "summary": "Verify the ESC/hydraulic brake recall 24V104000 remedy status for this 2024 BMW X5 because the repair part was unavailable and no failure has been reported.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "26V422000",
+      "match": true,
+      "open_date": "2026-07-01",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly."
+    },
+    {
+      "id": "24V739000",
+      "match": true,
+      "open_date": "2024-10-02",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2024 X1, X5, X6, X7, XM, 530i, i5, 740i, 760i, i7, and 750e vehicles.  Please see the recall report for a complete list of models and model years.  The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly."
+    },
+    {
+      "id": "24V697000",
+      "match": true,
+      "open_date": "2024-09-18",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper S) vehicles.  Please refer to the recall report for the complete list of models.  The welds in the servomotor of the integrated brake control module may break, causing a loss of power brake assist and rear brake function.  In addition, the Antilock Brake System (ABS) and Dynamic Stability Control (DSC) system may not function."
+    },
+    {
+      "id": "24V697000",
+      "match": true,
+      "open_date": "2024-09-18",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper S) vehicles.  Please refer to the recall report for the complete list of models.  The welds in the servomotor of the integrated brake control module may break, causing a loss of power brake assist and rear brake function.  In addition, the Antilock Brake System (ABS) and Dynamic Stability Control (DSC) system may not function."
+    },
+    {
+      "id": "24V104000",
+      "match": true,
+      "open_date": "2024-02-12",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles.  Please see the recall report for a complete list of models and model years.  The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+      "group": "safety_systems",
+      "id": "2034839",
+      "make": "BMW",
+      "model": "X5",
+      "score": 4.1297,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC) however, the part to do the repair was unavailable. The contact stated that the manufacturer exceeded a reasonable...",
+      "group": "safety_systems",
+      "id": "2033293",
+      "make": "BMW",
+      "model": "X5",
+      "score": 4.1089,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+      "group": "safety_systems",
+      "id": "2036971",
+      "make": "BMW",
+      "model": "X5",
+      "score": 4.0745,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (Electronic Stability Control (ESC), Service Brakes, Hydraulic) however, the part to do the repair was unavailable. The contact stated that the manufacturer exceeded a reasonable...",
+      "group": "safety_systems",
+      "id": "2032661",
+      "make": "BMW",
+      "model": "X5",
+      "score": 4.0524,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (Electronic Stability Control (ESC), Service Brakes, Hydraulic); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+      "group": "safety_systems",
+      "id": "2051209",
+      "make": "BMW",
+      "model": "X5",
+      "score": 3.9859,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-09T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00109885,
+      "duration_ms": 15266,
+      "reason": "2024 BMW X5 ESC/brakes recall 24V104000; repair part unavailable, no failure experienced.",
+      "started_at": "2025-09-09T07:00:16Z",
+      "step": 2,
+      "tokens": 2362,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-09T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "X5",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+            "group": "safety_systems",
+            "id": "2034839",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.1297,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC) however, the part to do the repair was unavailable. The contact stated that the manufacturer exceeded a reasonable...",
+            "group": "safety_systems",
+            "id": "2033293",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.1089,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+            "group": "safety_systems",
+            "id": "2036971",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.0745,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-09T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-09T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-09-09T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+            "group": "safety_systems",
+            "id": "2034839",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.1297,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC) however, the part to do the repair was unavailable. The contact stated that the manufacturer exceeded a reasonable...",
+            "group": "safety_systems",
+            "id": "2033293",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.1089,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (ELECTRONIC STABILITY CONTROL (ESC), SERVICE BRAKES, HYDRAULIC); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+            "group": "safety_systems",
+            "id": "2036971",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.0745,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (Electronic Stability Control (ESC), Service Brakes, Hydraulic) however, the part to do the repair was unavailable. The contact stated that the manufacturer exceeded a reasonable...",
+            "group": "safety_systems",
+            "id": "2032661",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.0524,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 BMW X5. The contact received notification of NHTSA Campaign Number: 24V104000 (Electronic Stability Control (ESC), Service Brakes, Hydraulic); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded...",
+            "group": "safety_systems",
+            "id": "2051209",
+            "make": "BMW",
+            "model": "X5",
+            "score": 3.9859,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-09T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "BMW",
+        "model": "X5",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+            "group": "safety_systems",
+            "id": "26V422000",
+            "make": "BMW",
+            "model": "X5",
+            "open_date": "2026-07-01",
+            "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly.",
+            "year": 2024
+          },
+          {
+            "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+            "group": "safety_systems",
+            "id": "24V739000",
+            "make": "BMW",
+            "model": "X5",
+            "open_date": "2024-10-02",
+            "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2024 X1, X5, X6, X7, XM, 530i, i5, 740i, 760i, i7, and 750e vehicles.  Please see the recall report for a complete list of models and model years.  The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly.",
+            "year": 2024
+          },
+          {
+            "component": "ELECTRONIC STABILITY CONTROL (ESC):CONTROL MODULE",
+            "group": "safety_systems",
+            "id": "24V697000",
+            "make": "BMW",
+            "model": "X5",
+            "open_date": "2024-09-18",
+            "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper S) vehicles.  Please refer to the recall report for the complete list of models.  The welds in the servomotor of the integrated brake control module may break, causing a loss of power brake assist and rear brake function.  In addition, the Antilock Brake System (ABS) and Dynamic Stability Control (DSC) system may not function.",
+            "year": 2024
+          },
+          {
+            "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+            "group": "safety_systems",
+            "id": "24V697000",
+            "make": "BMW",
+            "model": "X5",
+            "open_date": "2024-09-18",
+            "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper S) vehicles.  Please refer to the recall report for the complete list of models.  The welds in the servomotor of the integrated brake control module may break, causing a loss of power brake assist and rear brake function.  In addition, the Antilock Brake System (ABS) and Dynamic Stability Control (DSC) system may not function.",
+            "year": 2024
+          },
+          {
+            "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+            "group": "safety_systems",
+            "id": "24V104000",
+            "make": "BMW",
+            "model": "X5",
+            "open_date": "2024-02-12",
+            "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles.  Please see the recall report for a complete list of models and model years.  The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause the Antilock Brake (ABS) and Dynamic Stability Control (DSC) systems to not function properly.",
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-09T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "BMW",
+        "model": "X5",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-09T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00103965,
+      "duration_ms": 8796,
+      "reason": "The narrative states the owner received notice of NHTSA Campaign Number 24V104000 for ESC and hydraulic service brakes, but the recall repair part was unavailable. The owner reported no failure, and no rulebook targeted test matched, so a standard field-quality verification is appropriate.",
+      "started_at": "2025-09-09T07:00:24Z",
+      "step": 10,
+      "tokens": 3619,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-09-09T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRONIC STABILITY CONTROL (ESC)",
+          "NHTSA Campaign Number: 24V104000",
+          "the part to do the recall repair was unavailable",
+          "The contact had not experienced a failure."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-09T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-09T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-09T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-09T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

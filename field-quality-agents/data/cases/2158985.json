@@ -1,0 +1,286 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2158985",
+    "make": "TOYOTA",
+    "mileage": 150000,
+    "model": "CAMRY",
+    "narrative": "The contact owns a 2018 Toyota Camry. The contact stated that while on a construction site at work, the vehicle drove over a piece of rebar which damaged the front end of the vehicle. The contact stated that after the issue the rearview camera failed to operate as needed with a blank or distorted image on the screen. The failure persisted and the traction control, check engine, and other various warning lights illuminated on the instrument panel. The vehicle was taken to the dealer on several occasions and the dealer attempted to repair front sensors. The dealer eventually repaired the correct sensors, and the rearview camera was repaired. Recently, the contact stated while driving 65 MPH in the snow, the RPM revved high while depressing accelerator pedal and the vehicle started coasting. There was no warning light illuminated. The contact stated that the failure persisted, and the vehicle was then taken to an independent mechanic and was diagnosed with a defective CVT transmission. The vehicle was not repaired. The manufacturer was notified of the failure and a case was filed. The contact was then referred to the NHTSA Hotline to report the failure. The failure mileage was 150,000. The VIN was not available.",
+    "received_at": "2025-12-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158985",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158985",
+    "decided_at": "2025-12-19T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158985",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rearview camera failed to operate as needed with a blank or distorted image on the screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "traction control, check engine, and other various warning lights illuminated on the instrument panel"
+      },
+      {
+        "kind": "condition",
+        "quote": "in the snow"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the RPM revved high while depressing accelerator pedal and the vehicle started coasting"
+      },
+      {
+        "kind": "symptom",
+        "quote": "diagnosed with a defective CVT transmission"
+      },
+      {
+        "kind": "safety",
+        "quote": "while driving 65 MPH in the snow, the RPM revved high while depressing accelerator pedal and the vehicle started coasting"
+      },
+      {
+        "kind": "condition",
+        "quote": "The dealer eventually repaired the correct sensors, and the rearview camera was repaired"
+      }
+    ],
+    "conditions": [
+      "cold",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2018 Toyota Camry back-over prevention/ADAS: rearview camera blank/distorted after rebar damage; later high RPM and coasting at 65 MPH in snow, diagnosed defective CVT.",
+    "symptoms": [
+      "rearview camera blank or distorted image",
+      "traction control, check engine, and other warning lights illuminated",
+      "high RPM while depressing accelerator",
+      "vehicle coasting at speed",
+      "defective CVT transmission diagnosed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158985",
+    "created_at": "2025-12-19T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "CAR PUT EMERGENCY BRAKES WITHOUT ANY CAR IN FRONT ME AND MY WIFE WAS SCARED WHY IT BRAKED.IF CAR IS DROVE MORE THAN 65 MPH CAR START TO SHAKE THAT IT WILL FLIP OVER AND EVEN EXPERIENCE MILEAGE DROP IN FIRST WHEN WE USE TO FILL THE TANK UP IT SHOWS 400 MILES NOW WE FILL THE SAME G...",
+      "group": "adas",
+      "id": "1732512",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 17.0268,
+      "year": 2018
+    },
+    {
+      "excerpt": "The vacuum brake pump assembly malfunctioned and I had the vehicle taken to the dealer that did the original recall for the vacuum brake pump assembly and they inspected the vehicle and told me that was the issue along with the nipple inside the pump had broken off and fell down...",
+      "group": "adas",
+      "id": "2011697",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 16.2548,
+      "year": 2018
+    },
+    {
+      "excerpt": "2018 Camry XSE BRAKES GO ON WHILE ON DRIVE PRESSING ON THE BREAK WOULD BE A STRUGGLE WHEN DRIVING PADAL ON THE BRAKE WERE STIFF HARD TO STEP ON EVEN AFTER DEALERSHIP PROVIDED THE SERVICE FOR THE RECALL VEHICLE STILL HAD ISSUES AUTOMATIC EMERGENCY GO ON FOR NO REASON WHILE BACKING...",
+      "group": "adas",
+      "id": "1877141",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 15.9236,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0020155,
+      "duration_ms": 22154,
+      "reason": "2018 Toyota Camry back-over prevention/ADAS: rearview camera blank/distorted after rebar damage; later high RPM and coasting at 65 MPH in snow, diagnosed defective CVT.",
+      "started_at": "2025-12-19T07:00:01Z",
+      "step": 2,
+      "tokens": 3997,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "CAR PUT EMERGENCY BRAKES WITHOUT ANY CAR IN FRONT ME AND MY WIFE WAS SCARED WHY IT BRAKED.IF CAR IS DROVE MORE THAN 65 MPH CAR START TO SHAKE THAT IT WILL FLIP OVER AND EVEN EXPERIENCE MILEAGE DROP IN FIRST WHEN WE USE TO FILL THE TANK UP IT SHOWS 400 MILES NOW WE FILL THE SAME G...",
+            "group": "adas",
+            "id": "1732512",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 17.0268,
+            "year": 2018
+          },
+          {
+            "excerpt": "The vacuum brake pump assembly malfunctioned and I had the vehicle taken to the dealer that did the original recall for the vacuum brake pump assembly and they inspected the vehicle and told me that was the issue along with the nipple inside the pump had broken off and fell down...",
+            "group": "adas",
+            "id": "2011697",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 16.2548,
+            "year": 2018
+          },
+          {
+            "excerpt": "2018 Camry XSE BRAKES GO ON WHILE ON DRIVE PRESSING ON THE BREAK WOULD BE A STRUGGLE WHEN DRIVING PADAL ON THE BRAKE WERE STIFF HARD TO STEP ON EVEN AFTER DEALERSHIP PROVIDED THE SERVICE FOR THE RECALL VEHICLE STILL HAD ISSUES AUTOMATIC EMERGENCY GO ON FOR NO REASON WHILE BACKING...",
+            "group": "adas",
+            "id": "1877141",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 15.9236,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-12-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-19T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-19T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-19T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-19T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

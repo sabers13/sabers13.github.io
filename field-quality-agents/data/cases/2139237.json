@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:CHARGING:MODULE:SOFTWARE",
+    "group": "ev_propulsion",
+    "id": "2139237",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "Vehicle purchased on 4/29/24. First trip to dealer on 5/13/24 at 267 miles. Hybrid Mode Not Available. Oil Refresh issues. 6/9/25 Vehicle Towed to Dealer. Check Engine Light On. Hybrid Mode not available. Replacement of Coolant Electric Heater at 2,834 miles. 6/10/25 back to dealer due to vehicle overheating while driving. Vehicle towed. October 10, 2025, vehicle towed to dealer at approximately 3,950 miles as vehicle stopped on roadway without warning. This happened repeatedly in effort to get vehicle home. Investigation confirms that this is likely due to a software update. Investigation confirms that this is specific to the 2024-2025 Jeep Wrangler 4xe. This is extremely dangerous and we are fortunate there was no collision from another vehicle. Vehicle is set to be inspected Tuesday morning, 10/14/25.",
+    "received_at": "2025-10-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2139237",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2139237",
+    "decided_at": "2025-10-13T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2139237",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Hybrid Mode Not Available"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Oil Refresh issues"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Check Engine Light On"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle overheating while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle stopped on roadway without warning"
+      },
+      {
+        "kind": "condition",
+        "quote": "This happened repeatedly"
+      },
+      {
+        "kind": "condition",
+        "quote": "vehicle overheating while driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "extremely dangerous"
+      },
+      {
+        "kind": "safety",
+        "quote": "we are fortunate there was no collision from another vehicle"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:CHARGING:MODULE:SOFTWARE"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "ev_propulsion",
+    "safety_relevant": true,
+    "summary": "Charging module software in a 2024 Jeep Wrangler 4xe: hybrid mode unavailable, oil refresh issues, check engine light, overheating, and repeated uncommanded stops on the roadway under intermittent/heat conditions.",
+    "symptoms": [
+      "hybrid mode not available",
+      "oil refresh issues",
+      "check engine light on",
+      "vehicle overheating while driving",
+      "vehicle stopped on roadway without warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2139237",
+    "created_at": "2025-10-13T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-13T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00091315,
+      "duration_ms": 9355,
+      "reason": "Charging module software in a 2024 Jeep Wrangler 4xe: hybrid mode unavailable, oil refresh issues, check engine light, overheating, and repeated uncommanded stops on the roadway under intermittent/heat conditions.",
+      "started_at": "2025-10-13T07:00:01Z",
+      "step": 2,
+      "tokens": 2141,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-13T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-13T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-13T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-13T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-13T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-13T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-13T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2097316",
+    "make": "FORD",
+    "mileage": null,
+    "model": "FUSION HYBRID",
+    "narrative": "The contact's granddaughter owned a 2013 Ford Fusion Hybrid. The contact stated that while her granddaughter was driving at an undisclosed speed, the driver looked in the rearview mirror and noticed black smoke coming from the rear seats of the vehicle. The contact stated that the driver's sons were in car seats in the rear seats of the vehicle. The driver immediately pulled over to the side of the road, exited the vehicle, and took her sons out of the vehicle. The contact stated that the entire vehicle then caught on fire. The contact stated that the driver's side of the vehicle was more burned than the rest of the vehicle. The fire was extinguished by the Fire Department, who informed the contact's granddaughter that the fire might have originated from the trunk of the vehicle. It was unknown whether a Police report or a Fire Department report was filed. The contact stated that the vehicle was towed and could be totaled. The driver's mother transported the driver and her sons to the emergency room due to smoke inhalation. It was unknown whether injuries were sustained. The dealer and the manufacturer were not notified of the failure. The failure mileage was unknown.",
+    "received_at": "2025-06-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2097316",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2097316",
+    "decided_at": "2025-06-03T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2097316",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "black smoke coming from the rear seats of the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the entire vehicle then caught on fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "might have originated from the trunk of the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "took her sons out of the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "transported the driver and her sons to the emergency room due to smoke inhalation"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: black smoke from rear seats while driving, vehicle caught fire with possible trunk origin; occupants evacuated and smoke inhalation ER visit.",
+    "symptoms": [
+      "black smoke from rear seats",
+      "vehicle caught on fire",
+      "fire possibly originated from trunk"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2097316",
+    "created_at": "2025-06-03T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-03T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00095545,
+      "duration_ms": 11027,
+      "reason": "Electrical system: black smoke from rear seats while driving, vehicle caught fire with possible trunk origin; occupants evacuated and smoke inhalation ER visit.",
+      "started_at": "2025-06-03T07:00:15Z",
+      "step": 2,
+      "tokens": 2225,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-06-03T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FUSION HYBRID",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-06-03T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-03T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-03T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-03T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-03T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-03T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-03T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

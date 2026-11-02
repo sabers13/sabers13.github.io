@@ -1,0 +1,266 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2081977",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "RAV4",
+    "narrative": "My pregnant wife is parking her car at her work when she accidentally step on the gas pedal instead of the brakes. She panicked and she drove all the way to the wall. Airbags were not activated. 911 was dispatched. Police report made. Only minor injury finger fracture and chest bruise. There was a severe frontal damage to the car. Insurance deemed it totaled due to frame damage. I also complained to Toyota. They hired a software engineer to investigate. Just received official letter from Toyota there weee no defects in their safety system.   The issues are the airbags not being deployed at the time of impact and pre collision auto braking non existent. The impact on the wall according to the people inside the nursing she works felt like an earthquake inside. But our main concern is the auto brake feature did not function.   This accident could have been worse. Good thing seatbelt was not an inch lower from her chest preventing injury to our unborn child. The impact could have been worse if it was made of wood and could have injured other people in the nursing home. The auto brake feature should have worked because there were many obstacles at her front including first the bushes and eventually the wall.   Their response letter is frustrating for us because they are claiming there were no problems in the car. But our concern is their safety system is not reliable compare to other car companies. Kia and Honda safety system is more reactive based from my driving experience. I think there are lapses in their system.",
+    "received_at": "2025-04-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2081977",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2081977",
+    "decided_at": "2025-04-10T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2081977",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Airbags were not activated."
+      },
+      {
+        "kind": "symptom",
+        "quote": "pre collision auto braking non existent"
+      },
+      {
+        "kind": "symptom",
+        "quote": "auto brake feature did not function"
+      },
+      {
+        "kind": "condition",
+        "quote": "parking her car at her work"
+      },
+      {
+        "kind": "condition",
+        "quote": "accidentally step on the gas pedal instead of the brakes"
+      },
+      {
+        "kind": "other",
+        "quote": "drove all the way to the wall"
+      },
+      {
+        "kind": "other",
+        "quote": "severe frontal damage"
+      },
+      {
+        "kind": "safety",
+        "quote": "minor injury finger fracture and chest bruise"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2024 Toyota RAV4 ADAS forward collision avoidance/automatic emergency braking; airbags did not deploy and auto braking did not function when the vehicle hit a wall during parking after accelerator pedal misapplication.",
+    "symptoms": [
+      "airbags did not deploy",
+      "automatic emergency braking did not function"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2081977",
+    "created_at": "2025-04-10T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The car self accerated while I was pulling into a parking spot and hit a cement wall. The brake sign came on and I braked. Damage to the front of vehicle and the collision sensor was demolished.",
+      "group": "adas",
+      "id": "1995868",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 4.7409,
+      "year": 2024
+    },
+    {
+      "excerpt": "I have driven 20 years in USA, where I had observed a debris (dirt/ rock) from road hitting the wind shield and have never had damaged by car wind shield. My new TOYOTA RAV4 xe, wind shield cracked by UN-noticeable debris hitting it. Wind Shield quality has been compromised by TO...",
+      "group": "adas",
+      "id": "1994470",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 4.5758,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-10T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00110125,
+      "duration_ms": 13343,
+      "reason": "2024 Toyota RAV4 ADAS forward collision avoidance/automatic emergency braking; airbags did not deploy and auto braking did not function when the vehicle hit a wall during parking after accelerator pedal misapplication.",
+      "started_at": "2025-04-10T07:00:01Z",
+      "step": 2,
+      "tokens": 2528,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-04-10T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The car self accerated while I was pulling into a parking spot and hit a cement wall. The brake sign came on and I braked. Damage to the front of vehicle and the collision sensor was demolished.",
+            "group": "adas",
+            "id": "1995868",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 4.7409,
+            "year": 2024
+          },
+          {
+            "excerpt": "I have driven 20 years in USA, where I had observed a debris (dirt/ rock) from road hitting the wind shield and have never had damaged by car wind shield. My new TOYOTA RAV4 xe, wind shield cracked by UN-noticeable debris hitting it. Wind Shield quality has been compromised by TO...",
+            "group": "adas",
+            "id": "1994470",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 4.5758,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-10T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-10T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-10T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-10T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-10T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-10T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-10T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

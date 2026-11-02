@@ -1,0 +1,295 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2090381",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ODYSSEY",
+    "narrative": "Turned on the car.  It was parked for 1 day after the last driving event with no issues. Today was 15 degrees hotter than yesterday.  The following errors popped up on the dashboard: Adaptive cruise control problem  Collision mitigation system problem  Lane keeping assist problem  Road departure mitigation system problem  Auto high beam problem   All of the advanced safety features which utilize the front camera and sensors are deactivated.  Car was turned off and restarted multiple times, windshield cleaned, and car cooled down, but the warnings remain each time.  This specific issue has happened 5 times over the past year.  The dealer was never able to replicate the issue as it would go away as soon as the car was restarted.  This time, the warning lights would not go away.",
+    "received_at": "2025-05-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2090381",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2090381",
+    "decided_at": "2025-05-08T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2090381",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Adaptive cruise control problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Collision mitigation system problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane keeping assist problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Road departure mitigation system problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Auto high beam problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "All of the advanced safety features which utilize the front camera and sensors are deactivated."
+      },
+      {
+        "kind": "condition",
+        "quote": "Today was 15 degrees hotter than yesterday."
+      },
+      {
+        "kind": "condition",
+        "quote": "This specific issue has happened 5 times over the past year."
+      },
+      {
+        "kind": "safety",
+        "quote": "All of the advanced safety features which utilize the front camera and sensors are deactivated."
+      },
+      {
+        "kind": "component_group",
+        "quote": "advanced safety features"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2020 Honda Odyssey ADAS/forward collision avoidance: multiple camera-based safety system warnings and deactivation after a hotter day, intermittent over past year, now persistent",
+    "symptoms": [
+      "Adaptive cruise control problem",
+      "Collision mitigation system problem",
+      "Lane keeping assist problem",
+      "Road departure mitigation system problem",
+      "Auto high beam problem",
+      "Advanced safety features using front camera and sensors are deactivated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2090381",
+    "created_at": "2025-05-08T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The following errors suddenly appeared one-at-a-time, causing all the advanced driver assistance capabilities to stop working, including regular cruise control: * ACC - Adaptive Cruise Control Problem * LKAS - Lane Keeping Assist Problem * Collision Mitigation System Problem * Ro...",
+      "group": "adas",
+      "id": "1911621",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 39.1442,
+      "year": 2020
+    },
+    {
+      "excerpt": "Started the vehicle on 7/3. Multiple warning lights show on my dashboard: 1. ACC problem 2. Collision Mitigation Problem 3. LKA Problem 4. Auto High Beam Problem I took it to Purrfect Auto (as I had just had work done). They claim it is a software issue (per Honda) and did a rese...",
+      "group": "adas",
+      "id": "2016053",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 28.4121,
+      "year": 2020
+    },
+    {
+      "excerpt": "Started the vehicle on 7/3. Multiple warning lights show on my dashboard: 1. ACC problem 2. Collision Mitigation Problem 3. LKA Problem 4. Auto High Beam Problem I took it to Purrfect Auto (as I had just had work done). They claim it is a software issue (per Honda) and did a rese...",
+      "group": "adas",
+      "id": "2016054",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 28.4121,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-08T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00098905,
+      "duration_ms": 10715,
+      "reason": "2020 Honda Odyssey ADAS/forward collision avoidance: multiple camera-based safety system warnings and deactivation after a hotter day, intermittent over past year, now persistent",
+      "started_at": "2025-05-08T07:00:36Z",
+      "step": 2,
+      "tokens": 2236,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-08T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The following errors suddenly appeared one-at-a-time, causing all the advanced driver assistance capabilities to stop working, including regular cruise control: * ACC - Adaptive Cruise Control Problem * LKAS - Lane Keeping Assist Problem * Collision Mitigation System Problem * Ro...",
+            "group": "adas",
+            "id": "1911621",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 39.1442,
+            "year": 2020
+          },
+          {
+            "excerpt": "Started the vehicle on 7/3. Multiple warning lights show on my dashboard: 1. ACC problem 2. Collision Mitigation Problem 3. LKA Problem 4. Auto High Beam Problem I took it to Purrfect Auto (as I had just had work done). They claim it is a software issue (per Honda) and did a rese...",
+            "group": "adas",
+            "id": "2016053",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 28.4121,
+            "year": 2020
+          },
+          {
+            "excerpt": "Started the vehicle on 7/3. Multiple warning lights show on my dashboard: 1. ACC problem 2. Collision Mitigation Problem 3. LKA Problem 4. Auto High Beam Problem I took it to Purrfect Auto (as I had just had work done). They claim it is a software issue (per Honda) and did a rese...",
+            "group": "adas",
+            "id": "2016054",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 28.4121,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-08T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-08T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-08T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-08T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-08T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-08T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-08T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

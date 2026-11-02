@@ -1,0 +1,521 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2052726",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "PILOT",
+    "narrative": "While driving at freeway speed the gauge cluster including speedometer, gear selection, and navigation system shut off.  The speedometer area was blank and the navigation screen said \"network connection lost\" No MOST network.  It began to come back on a minute or 2 later. The MOST cable recall work has been done.",
+    "received_at": "2025-01-02",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2052726",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2052726",
+    "decided_at": "2025-01-02T07:00:49Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2052726",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "While driving at freeway speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "gauge cluster including speedometer, gear selection, and navigation system shut off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The speedometer area was blank"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the navigation screen said \"network connection lost\""
+      },
+      {
+        "kind": "symptom",
+        "quote": "No MOST network"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It began to come back on a minute or 2 later"
+      },
+      {
+        "kind": "condition",
+        "quote": "The MOST cable recall work has been done."
+      }
+    ],
+    "conditions": [
+      "while driving at freeway speed",
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run a long-run power cycling test because the intermittent MOST-network and gauge-cluster dropout matches the intermittent rulebook entry.",
+    "symptoms": [
+      "gauge cluster including speedometer, gear selection, and navigation system shut off",
+      "The speedometer area was blank",
+      "the navigation screen said \"network connection lost\"",
+      "No MOST network",
+      "It began to come back on a minute or 2 later"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2052726",
+    "created_at": "2025-01-02T07:00:47Z",
+    "evidence": [
+      {
+        "quote": "While driving at freeway speed",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "gauge cluster including speedometer, gear selection, and navigation system shut off",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The speedometer area was blank",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the navigation screen said \"network connection lost\"",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "No MOST network",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It began to come back on a minute or 2 later",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The MOST cable recall work has been done.",
+        "source_id": "2052726",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The gauge cluster, speedometer, gear selection and navigation shut off at freeway speed and returned after a minute or two with no MOST network. The intermittent condition matches the rulebook's long-run power-cycling test. The completed MOST cable recall work also matches the after-service entry, so connector seating and pin damage should be checked before the run.",
+    "requested_info": [],
+    "summary": "Run a long-run power cycling test because the intermittent MOST-network and gauge-cluster dropout matches the intermittent rulebook entry.",
+    "targeted_test": {
+      "conditions": [
+        "while driving at freeway speed",
+        "intermittent",
+        "after service"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The gauge cluster, speedometer, gear selection and navigation shut off at freeway speed and returned after a minute or two with no MOST network. The intermittent condition matches the rulebook's long-run power-cycling test. The completed MOST cable recall work also matches the after-service entry, so connector seating and pin damage should be checked before the run."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "2021 Honda Pilot Black Edition with 37,007 miles. Navigation screen will display \"Network Communication Lost\" and \"MOST Net Off\" before completely shutting down for 5-10 minutes at a time, only to do the same thing after resetting. This is a known issue for Honda, hence Technical...",
+      "group": "electrical_general",
+      "id": "1873251",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.6909,
+      "year": 2021
+    },
+    {
+      "excerpt": "Infotainment systems makes a crackling sound then the whole system will shut down and screen goes black. Nothing with the system will work including the back up camera.",
+      "group": "electrical_general",
+      "id": "2028268",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.1295,
+      "year": 2021
+    },
+    {
+      "excerpt": "Infotainment screen goes blank all the time. Nothing at all on the screen including back up camera. Now it is causing the other sensors not to work so you don't know if you are close to hitting something. Honda has had this issue now for years.",
+      "group": "electrical_general",
+      "id": "2043834",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 10.4813,
+      "year": 2021
+    },
+    {
+      "excerpt": "Last week the the security alarm went off for no reason. The following day, I arrived to work and parked my car. 45 minutes later, I am notified my headlights were on. I ALWAYS keep my headlights on AUTO so they never should have been on. After I started my car for a minute, ever...",
+      "group": "electrical_general",
+      "id": "1894782",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 9.5771,
+      "year": 2021
+    },
+    {
+      "excerpt": "1) Recall 2020-22 multi-model seat weight sensor safety recall. Called since February 2024 when it was posted. I called the dealership and was told that I will received a postcard by mail. I have been waiting for the postcard and called multiple dealerships multiple times. I have...",
+      "group": "electrical_general",
+      "id": "2045288",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 8.0233,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-02T07:00:36Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00149215,
+      "duration_ms": 23309,
+      "reason": "Electrical system gauge cluster (speedometer, gear selection, navigation) shut off at freeway speed, then returned after a minute or two; MOST network lost after recall work.",
+      "started_at": "2025-01-02T07:00:37Z",
+      "step": 2,
+      "tokens": 2995,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-02T07:00:38Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2021 Honda Pilot Black Edition with 37,007 miles. Navigation screen will display \"Network Communication Lost\" and \"MOST Net Off\" before completely shutting down for 5-10 minutes at a time, only to do the same thing after resetting. This is a known issue for Honda, hence Technical...",
+            "group": "electrical_general",
+            "id": "1873251",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.6909,
+            "year": 2021
+          },
+          {
+            "excerpt": "Infotainment systems makes a crackling sound then the whole system will shut down and screen goes black. Nothing with the system will work including the back up camera.",
+            "group": "electrical_general",
+            "id": "2028268",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.1295,
+            "year": 2021
+          },
+          {
+            "excerpt": "Infotainment screen goes blank all the time. Nothing at all on the screen including back up camera. Now it is causing the other sensors not to work so you don't know if you are close to hitting something. Honda has had this issue now for years.",
+            "group": "electrical_general",
+            "id": "2043834",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 10.4813,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-02T07:00:39Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-01-02T07:00:40Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-01-02T07:00:41Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "While driving at freeway speed the gauge cluster including speedometer, gear selection, and navigation system shut off.  The speedometer area was blank and the navigation screen said \"network connection lost\" No MOST network.  It began to come back on a minute or 2 later. The MOST cable recall work has been done."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2021 Honda Pilot Black Edition with 37,007 miles. Navigation screen will display \"Network Communication Lost\" and \"MOST Net Off\" before completely shutting down for 5-10 minutes at a time, only to do the same thing after resetting. This is a known issue for Honda, hence Technical...",
+            "group": "electrical_general",
+            "id": "1873251",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.6909,
+            "year": 2021
+          },
+          {
+            "excerpt": "Infotainment systems makes a crackling sound then the whole system will shut down and screen goes black. Nothing with the system will work including the back up camera.",
+            "group": "electrical_general",
+            "id": "2028268",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.1295,
+            "year": 2021
+          },
+          {
+            "excerpt": "Infotainment screen goes blank all the time. Nothing at all on the screen including back up camera. Now it is causing the other sensors not to work so you don't know if you are close to hitting something. Honda has had this issue now for years.",
+            "group": "electrical_general",
+            "id": "2043834",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 10.4813,
+            "year": 2021
+          },
+          {
+            "excerpt": "Last week the the security alarm went off for no reason. The following day, I arrived to work and parked my car. 45 minutes later, I am notified my headlights were on. I ALWAYS keep my headlights on AUTO so they never should have been on. After I started my car for a minute, ever...",
+            "group": "electrical_general",
+            "id": "1894782",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 9.5771,
+            "year": 2021
+          },
+          {
+            "excerpt": "1) Recall 2020-22 multi-model seat weight sensor safety recall. Called since February 2024 when it was posted. I called the dealership and was told that I will received a postcard by mail. I have been waiting for the postcard and called multiple dealerships multiple times. I have...",
+            "group": "electrical_general",
+            "id": "2045288",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 8.0233,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-01-02T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-01-02T07:00:43Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-01-02T07:00:44Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "while driving at freeway speed",
+          "intermittent",
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00098245,
+      "duration_ms": 14272,
+      "reason": "The gauge cluster, speedometer, gear selection and navigation shut off at freeway speed and returned after a minute or two with no MOST network. The intermittent condition matches the rulebook's long-run power-cycling test. The completed MOST cable recall work also matches the after-service entry, so connector seating and pin damage should be checked before the run.",
+      "started_at": "2025-01-02T07:00:45Z",
+      "step": 10,
+      "tokens": 2909,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-01-02T07:00:46Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "While driving at freeway speed",
+          "gauge cluster including speedometer, gear selection, and navigation system shut off",
+          "The speedometer area was blank",
+          "the navigation screen said \"network connection lost\"",
+          "No MOST network",
+          "It began to come back on a minute or 2 later",
+          "The MOST cable recall work has been done."
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-02T07:00:48Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-01-02T07:00:50Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-02T07:00:51Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-02T07:00:52Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2054962",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CR-V",
+    "narrative": "On 01/08/2025, Time: 8:10 PM EST – Automatic Emergency Breaks applied though there are no objects, people or vehicles in front of the vehicle.  My wife, [XXX]  kid and I were heading back to home from COSTCO, Mathews NC. Suddenly, the Automatic Emergency Break applied without any warnings on the dashboard. Because of the sudden break, my wife got injured, she hit her knee to the back air vent. I must take a long breath for a min and move the car to the parking lot and check back with my kid and wife. There was a little distance from my car to the other car behind me. So, luckily, we avoided the collision. Otherwise, there would be a major collision. This is the third time we were run to this issue at the same spot. I am keep observing the warning messages earlier while driving on the highway and but stopping all the sudden without any warnings make us very scary. I was still doubting the security measures and investigation process being held at the HONDA. Please consider the fact that, “Human Lives matter and security is a fundamental right.” and resolve the issue at the earliest.  The older AEB (Automatic Emergency Break)incident information as follows: 1st incident was reported on “[XXX] | NHTSA ID NUMBER: 11457060” and 2nd incident was on “[XXX] | NHTSA ID NUMBER: 11575701” INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-01-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2054962",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2054962",
+    "decided_at": "2025-01-10T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2054962",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Automatic Emergency Breaks applied though there are no objects, people or vehicles in front of the vehicle."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Suddenly, the Automatic Emergency Break applied without any warnings on the dashboard."
+      },
+      {
+        "kind": "safety",
+        "quote": "my wife got injured, she hit her knee to the back air vent."
+      },
+      {
+        "kind": "condition",
+        "quote": "This is the third time we were run to this issue at the same spot."
+      },
+      {
+        "kind": "safety",
+        "quote": "we avoided the collision"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving on the highway"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Honda CR-V ADAS forward collision avoidance/AEB false activation with no forward objects and no dashboard warning, causing injury; third occurrence at same spot.",
+    "symptoms": [
+      "Automatic Emergency Braking applies with no object, person, or vehicle ahead",
+      "No dashboard warning before sudden braking",
+      "Sudden braking causes occupant injury",
+      "Repeated false AEB activation at same location"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2054962",
+    "created_at": "2025-01-10T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Earlier, I had raised a complaint on my vehicle where Automatic Emergency Break applied though there were no obstacles or objects in front of my vehicle. On [XXX] around [XXX] at the same spot [XXX], Matthews, NC 28105] where my other incident was reported 2 years ago was repeate...",
+      "group": "adas",
+      "id": "1972884",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 107.285,
+      "year": 2018
+    },
+    {
+      "excerpt": "My vehicle randomly slams on the brakes without the driver touching the brake pedal. My vehicle automatically applies the brakes without any vehicle stopping in front of it or a pedestrian in the vehicle’s path. It happened a couple of times, fortunately, it did not culminate int...",
+      "group": "adas",
+      "id": "1797725",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 64.2766,
+      "year": 2018
+    },
+    {
+      "excerpt": "The Automatic Emergency Break is applying when no obstacles found and all of a sudden it was stopping. Recent incident is when I was returning from Costco, neither object nor vehicle exists on my road, it was small bridge and is clean out of any obstacles, but suddenly the warnin...",
+      "group": "adas",
+      "id": "1801985",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 62.1821,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-10T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00130915,
+      "duration_ms": 20034,
+      "reason": "Honda CR-V ADAS forward collision avoidance/AEB false activation with no forward objects and no dashboard warning, causing injury; third occurrence at same spot.",
+      "started_at": "2025-01-10T07:00:01Z",
+      "step": 2,
+      "tokens": 2912,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-10T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Earlier, I had raised a complaint on my vehicle where Automatic Emergency Break applied though there were no obstacles or objects in front of my vehicle. On [XXX] around [XXX] at the same spot [XXX], Matthews, NC 28105] where my other incident was reported 2 years ago was repeate...",
+            "group": "adas",
+            "id": "1972884",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 107.285,
+            "year": 2018
+          },
+          {
+            "excerpt": "My vehicle randomly slams on the brakes without the driver touching the brake pedal. My vehicle automatically applies the brakes without any vehicle stopping in front of it or a pedestrian in the vehicle’s path. It happened a couple of times, fortunately, it did not culminate int...",
+            "group": "adas",
+            "id": "1797725",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 64.2766,
+            "year": 2018
+          },
+          {
+            "excerpt": "The Automatic Emergency Break is applying when no obstacles found and all of a sudden it was stopping. Recent incident is when I was returning from Costco, neither object nor vehicle exists on my road, it was small bridge and is clean out of any obstacles, but suddenly the warnin...",
+            "group": "adas",
+            "id": "1801985",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 62.1821,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-10T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-10T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-10T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-10T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-10T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-10T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-10T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY:MANAGEMENT SYSTEM/ENERGY CONTROL MODULE (BMS/BECM)",
+    "group": "ev_propulsion",
+    "id": "2107348",
+    "make": "CHEVROLET",
+    "mileage": 98500,
+    "model": "VOLT",
+    "narrative": "The contact owns a 2016 Chevrolet Volt. The contact stated that while operating vehicle the \"Propulsion Error” was displayed, and the message \"Shift to Park\" was displayed while driving. Additionally, the vehicle occasionally failed to immediately start. The vehicle was taken to the local dealer who diagnosed the vehicle and determined that the Battery Energy Control Module (BECM) was faulty and needed to be replaced. The vehicle was not repaired. The manufacturer was notified of the failure and informed the contact that the vehicle was not included in the Manufacturer’s Extended Warranty Coverage related to the failure. The failure mileage was 98,500.",
+    "received_at": "2025-07-07",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2107348",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2107348",
+    "decided_at": "2025-07-07T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2107348",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "\"Shift to Park\" was displayed while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle occasionally failed to immediately start"
+      },
+      {
+        "kind": "component_group",
+        "quote": "Battery Energy Control Module (BECM) was faulty and needed to be replaced"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "ev_propulsion",
+    "safety_relevant": false,
+    "summary": "Test the 2016 Chevrolet Volt BECM-related propulsion/no-start symptoms with the standard diagnostic test because no rulebook entry matched.",
+    "symptoms": [
+      "propulsion error message displayed while driving",
+      "shift to park message displayed while driving",
+      "vehicle occasionally fails to start immediately"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "PE23022",
+      "match": true,
+      "open_date": "2023-11-29",
+      "summary": "On November 29, 2023, the Office of Defects Investigations (ODI) opened PE23022 to investigate allegations of a loss of motive power, including a stall, reduced power state, and/or a no start condition due to the Battery Energy Control Module (BECM) in model year (MY) 2016-2019 Chevrolet Volt passenger car vehicles manufactured by General Motors (GM). The BECM is located within the high voltage electric vehicle (EV) battery pack and monitors the temperature, current, and voltage of the high voltage battery cell groups. GM stated that the root cause was identified as an internal failure leading to a loss of communication within the BECM and does not pose a risk to motor vehicle safety. GM further stated that the failure cannot result in a complete stall, only a reduced power mode, no start condition, or a no charge condition. GM additionally stated that if these conditions occur, the driver will be warned via a Malfunction Indicator Lamp (MIL) and/or a reduced-propulsion message in the Driver Information Center (DIC). Data received and analyzed by ODI from all sources indicates that nearly all related BECM failures caused conditions aligning with GM’s predicted outcomes. Despite the large number of warranty claims, nearly all failures were not safety-related, i.e., not a stall or reduced power mode. ODI isaware of a single minor crash and no injuries or deaths. In March 2024, GM issued Special Coverage N232432680, which was mailed to consumers, addressing BECM failures in certain MY 2016-2018 Chevrolet Volt vehicles. This special coverage provides an extension of the warranty coverage for the BECM from 8 years / 100,000 miles to 15 years / 150,000 miles for all 2016-2018 Chevrolet Volts. Additionally, GM stated that replacement components are sourced from a different supplier and not susceptible to the failure. In view of the Special Coverage issued by GM, the existing warranty coverage already in place, and the low number of safety-related occurrences, ODI is closing this Preliminary Evaluation (PE). The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    },
+    {
+      "id": "PE23022",
+      "match": true,
+      "open_date": "2023-11-29",
+      "summary": "On November 29, 2023, the Office of Defects Investigations (ODI) opened PE23022 to investigate allegations of a loss of motive power, including a stall, reduced power state, and/or a no start condition due to the Battery Energy Control Module (BECM) in model year (MY) 2016-2019 Chevrolet Volt passenger car vehicles manufactured by General Motors (GM). The BECM is located within the high voltage electric vehicle (EV) battery pack and monitors the temperature, current, and voltage of the high voltage battery cell groups. GM stated that the root cause was identified as an internal failure leading to a loss of communication within the BECM and does not pose a risk to motor vehicle safety. GM further stated that the failure cannot result in a complete stall, only a reduced power mode, no start condition, or a no charge condition. GM additionally stated that if these conditions occur, the driver will be warned via a Malfunction Indicator Lamp (MIL) and/or a reduced-propulsion message in the Driver Information Center (DIC). Data received and analyzed by ODI from all sources indicates that nearly all related BECM failures caused conditions aligning with GM’s predicted outcomes. Despite the large number of warranty claims, nearly all failures were not safety-related, i.e., not a stall or reduced power mode. ODI isaware of a single minor crash and no injuries or deaths. In March 2024, GM issued Special Coverage N232432680, which was mailed to consumers, addressing BECM failures in certain MY 2016-2018 Chevrolet Volt vehicles. This special coverage provides an extension of the warranty coverage for the BECM from 8 years / 100,000 miles to 15 years / 150,000 miles for all 2016-2018 Chevrolet Volts. Additionally, GM stated that replacement components are sourced from a different supplier and not susceptible to the failure. In view of the Special Coverage issued by GM, the existing warranty coverage already in place, and the low number of safety-related occurrences, ODI is closing this Preliminary Evaluation (PE). The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    },
+    {
+      "id": "DP22005",
+      "match": true,
+      "open_date": "2023-01-27",
+      "summary": "NHTSA received a petition on or about July 18, 2022, requesting that Federal Motor Vehicle Safety Standard (FMVSS) 141 be applied to all electric and hybrid vehicles operating in the United States. The petition can be reviewed at NHTSA.gov under ODI Number 11486072. FMVSS 141 establishes performance requirements for pedestrian alert sounds for motor vehicles. The standard applies to hybrid and electric vehicles that have a gross vehicle weight rating of 4,536 KG or less or are defined as low-speed vehicles. The standard became fully applicable to all such vehicles manufactured on or after March 1, 2021.On January 27, 2023, NHTSA opened Defect Petition (DP) 22-005 to evaluate the subject matter described in the petition. On June 24, 2023 and as supplemented on June 25, 2023, the petitioner notified NHTSA he was withdrawing his petition. The petitioner indicated that, based on his review of data, there is no justification for asserting potential benefits that could be derived from actions sought by my petition. Based on the petitioner's withdrawal, DP22-005 is closed. Closure of this DP does not represent a determination by NHTSA regarding the subject matter of the petition."
+    }
+  ],
+  "proposal": {
+    "case_id": "2107348",
+    "created_at": "2025-07-07T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "\"Shift to Park\" was displayed while driving",
+        "source_id": "2107348",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle occasionally failed to immediately start",
+        "source_id": "2107348",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Battery Energy Control Module (BECM) was faulty and needed to be replaced",
+        "source_id": "2107348",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The dealer diagnosed the Battery Energy Control Module (BECM) as faulty after propulsion-error and shift-to-park messages while driving plus occasional failure to start immediately. These symptoms align with the BECM communication-failure pattern in investigation PE23022, but the rulebook returned no matching entry, so no targeted test is specified and the standard diagnostic test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the 2016 Chevrolet Volt BECM-related propulsion/no-start symptoms with the standard diagnostic test because no rulebook entry matched.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while the daughter was driving in reverse the warning message \"Reduced Propulsion\" had displayed and suddenly the power steering failed and the vehicle lurched backward and crashed into a utility pole. During the inc...",
+      "group": "ev_propulsion",
+      "id": "2025263",
+      "make": "CHEVROLET",
+      "model": "VOLT",
+      "score": 11.378,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated while driving at an undisclosed speed, the \"Engine Propulsion Reduced\" message was displayed, and the vehicle was driven to an Auto Parts store. The contact called the local dealer and was advised to replace the propulsio...",
+      "group": "ev_propulsion",
+      "id": "2028289",
+      "make": "CHEVROLET",
+      "model": "VOLT",
+      "score": 6.578,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while at a stop light, the vehicle suddenly shut off and would not restart. The vehicle was towed to the local dealer who diagnosed that the high voltage battery was faulty and needed to be replaced. An engineer was...",
+      "group": "ev_propulsion",
+      "id": "1957352",
+      "make": "CHEVROLET",
+      "model": "VOLT",
+      "score": 4.8265,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00038665,
+      "duration_ms": 4698,
+      "reason": "2016 Chevrolet Volt BECM fault: propulsion error and shift-to-park messages while driving, plus occasional no immediate start",
+      "started_at": "2025-07-07T07:00:01Z",
+      "step": 2,
+      "tokens": 1226,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "VOLT",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while the daughter was driving in reverse the warning message \"Reduced Propulsion\" had displayed and suddenly the power steering failed and the vehicle lurched backward and crashed into a utility pole. During the inc...",
+            "group": "ev_propulsion",
+            "id": "2025263",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 11.378,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated while driving at an undisclosed speed, the \"Engine Propulsion Reduced\" message was displayed, and the vehicle was driven to an Auto Parts store. The contact called the local dealer and was advised to replace the propulsio...",
+            "group": "ev_propulsion",
+            "id": "2028289",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 6.578,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while at a stop light, the vehicle suddenly shut off and would not restart. The vehicle was towed to the local dealer who diagnosed that the high voltage battery was faulty and needed to be replaced. An engineer was...",
+            "group": "ev_propulsion",
+            "id": "1957352",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 4.8265,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-07-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-07-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2016 Chevrolet Volt. The contact stated that while operating vehicle the \"Propulsion Error” was displayed, and the message \"Shift to Park\" was displayed while driving. Additionally, the vehicle occasionally failed to immediately start. The vehicle was taken to the local dealer who diagnosed the vehicle and determined that the Battery Energy Control Module (BECM) was faulty and needed to be replaced. The vehicle was not repaired. The manufacturer was notified of the failure and"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while the daughter was driving in reverse the warning message \"Reduced Propulsion\" had displayed and suddenly the power steering failed and the vehicle lurched backward and crashed into a utility pole. During the inc...",
+            "group": "ev_propulsion",
+            "id": "2025263",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 11.378,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated while driving at an undisclosed speed, the \"Engine Propulsion Reduced\" message was displayed, and the vehicle was driven to an Auto Parts store. The contact called the local dealer and was advised to replace the propulsio...",
+            "group": "ev_propulsion",
+            "id": "2028289",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 6.578,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Chevrolet Volt. The contact stated that while at a stop light, the vehicle suddenly shut off and would not restart. The vehicle was towed to the local dealer who diagnosed that the high voltage battery was faulty and needed to be replaced. An engineer was...",
+            "group": "ev_propulsion",
+            "id": "1957352",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "score": 4.8265,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-07T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "ev_propulsion",
+        "make": "CHEVROLET",
+        "model": "VOLT",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-07T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "ev_propulsion",
+        "make": "CHEVROLET",
+        "model": "VOLT",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM",
+            "group": "ev_propulsion",
+            "id": "PE23022",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "open_date": "2023-11-29",
+            "summary": "On November 29, 2023, the Office of Defects Investigations (ODI) opened PE23022 to investigate allegations of a loss of motive power, including a stall, reduced power state, and/or a no start condition due to the Battery Energy Control Module (BECM) in model year (MY) 2016-2019 Chevrolet Volt passenger car vehicles manufactured by General Motors (GM). The BECM is located within the high voltage electric vehicle (EV) battery pack and monitors the temperature, current, and voltage of the high voltage battery cell groups. GM stated that the root cause was identified as an internal failure leading to a loss of communication within the BECM and does not pose a risk to motor vehicle safety. GM further stated that the failure cannot result in a complete stall, only a reduced power mode, no start condition, or a no charge condition. GM additionally stated that if these conditions occur, the driver will be warned via a Malfunction Indicator Lamp (MIL) and/or a reduced-propulsion message in the Driver Information Center (DIC). Data received and analyzed by ODI from all sources indicates that nearly all related BECM failures caused conditions aligning with GM’s predicted outcomes. Despite the large number of warranty claims, nearly all failures were not safety-related, i.e., not a stall or reduced power mode. ODI isaware of a single minor crash and no injuries or deaths. In March 2024, GM issued Special Coverage N232432680, which was mailed to consumers, addressing BECM failures in certain MY 2016-2018 Chevrolet Volt vehicles. This special coverage provides an extension of the warranty coverage for the BECM from 8 years / 100,000 miles to 15 years / 150,000 miles for all 2016-2018 Chevrolet Volts. Additionally, GM stated that replacement components are sourced from a different supplier and not susceptible to the failure. In view of the Special Coverage issued by GM, the existing warranty coverage already in place, and the low number of safety-related occurrences, ODI is closing this Preliminary Evaluation (PE). The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2016
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY:MANAGEMENT SYSTEM/ENERGY CONTROL MODULE (BMS/BECM)",
+            "group": "ev_propulsion",
+            "id": "PE23022",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "open_date": "2023-11-29",
+            "summary": "On November 29, 2023, the Office of Defects Investigations (ODI) opened PE23022 to investigate allegations of a loss of motive power, including a stall, reduced power state, and/or a no start condition due to the Battery Energy Control Module (BECM) in model year (MY) 2016-2019 Chevrolet Volt passenger car vehicles manufactured by General Motors (GM). The BECM is located within the high voltage electric vehicle (EV) battery pack and monitors the temperature, current, and voltage of the high voltage battery cell groups. GM stated that the root cause was identified as an internal failure leading to a loss of communication within the BECM and does not pose a risk to motor vehicle safety. GM further stated that the failure cannot result in a complete stall, only a reduced power mode, no start condition, or a no charge condition. GM additionally stated that if these conditions occur, the driver will be warned via a Malfunction Indicator Lamp (MIL) and/or a reduced-propulsion message in the Driver Information Center (DIC). Data received and analyzed by ODI from all sources indicates that nearly all related BECM failures caused conditions aligning with GM’s predicted outcomes. Despite the large number of warranty claims, nearly all failures were not safety-related, i.e., not a stall or reduced power mode. ODI isaware of a single minor crash and no injuries or deaths. In March 2024, GM issued Special Coverage N232432680, which was mailed to consumers, addressing BECM failures in certain MY 2016-2018 Chevrolet Volt vehicles. This special coverage provides an extension of the warranty coverage for the BECM from 8 years / 100,000 miles to 15 years / 150,000 miles for all 2016-2018 Chevrolet Volts. Additionally, GM stated that replacement components are sourced from a different supplier and not susceptible to the failure. In view of the Special Coverage issued by GM, the existing warranty coverage already in place, and the low number of safety-related occurrences, ODI is closing this Preliminary Evaluation (PE). The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2016
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM",
+            "group": "ev_propulsion",
+            "id": "DP22005",
+            "make": "CHEVROLET",
+            "model": "VOLT",
+            "open_date": "2023-01-27",
+            "summary": "NHTSA received a petition on or about July 18, 2022, requesting that Federal Motor Vehicle Safety Standard (FMVSS) 141 be applied to all electric and hybrid vehicles operating in the United States. The petition can be reviewed at NHTSA.gov under ODI Number 11486072. FMVSS 141 establishes performance requirements for pedestrian alert sounds for motor vehicles. The standard applies to hybrid and electric vehicles that have a gross vehicle weight rating of 4,536 KG or less or are defined as low-speed vehicles. The standard became fully applicable to all such vehicles manufactured on or after March 1, 2021.On January 27, 2023, NHTSA opened Defect Petition (DP) 22-005 to evaluate the subject matter described in the petition. On June 24, 2023 and as supplemented on June 25, 2023, the petitioner notified NHTSA he was withdrawing his petition. The petitioner indicated that, based on his review of data, there is no justification for asserting potential benefits that could be derived from actions sought by my petition. Based on the petitioner's withdrawal, DP22-005 is closed. Closure of this DP does not represent a determination by NHTSA regarding the subject matter of the petition.",
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-07T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00127815,
+      "duration_ms": 10924,
+      "reason": "The dealer diagnosed the Battery Energy Control Module (BECM) as faulty after propulsion-error and shift-to-park messages while driving plus occasional failure to start immediately. These symptoms align with the BECM communication-failure pattern in investigation PE23022, but the rulebook returned no matching entry, so no targeted test is specified and the standard diagnostic test is appropriate.",
+      "started_at": "2025-07-07T07:00:09Z",
+      "step": 10,
+      "tokens": 4171,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-07-07T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "\"Propulsion Error\" was displayed",
+          "\"Shift to Park\" was displayed while driving",
+          "the vehicle occasionally failed to immediately start",
+          "Battery Energy Control Module (BECM) was faulty and needed to be replaced"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-07-07T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-07T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-07T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-07T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-07T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

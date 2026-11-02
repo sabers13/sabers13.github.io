@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2104631",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "E350",
+    "narrative": "On [XXX] I went out and started my car and it said. Power steering was my function so I turned it off and tried it again. And it said the same thing. Power steering malfunction read the owner's menu which I did is said if you can steal it.  Drive it to the nearest dealership. You can't park it Well, it was already parked in my driveway. So on June 13th. I had a toll to Feldmann Import in Bloomington MN I hate to think of what would happen if I was driving. Could it cause an accident? They confirmed that it was a problem with the stirring call at first I thought it was a leak. Turns it off that This is electrical steroid. The electronics on this during column went out. The report said it was no can message was received from the unit in 68.  VS steering control unit. There was no warning that the power Stern was going to go out. I did have a engine light on, but that was due because of my.  Rare radar's being out. That's the best way I can explain it.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-06-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2104631",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2104631",
+    "decided_at": "2025-06-27T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2104631",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Power steering malfunction"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The electronics on this during column went out."
+      },
+      {
+        "kind": "fault_code",
+        "quote": "no can message was received from the unit in 68."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There was no warning that the power Stern was going to go out."
+      },
+      {
+        "kind": "condition",
+        "quote": "started my car"
+      },
+      {
+        "kind": "condition",
+        "quote": "parked in my driveway"
+      },
+      {
+        "kind": "safety",
+        "quote": "Could it cause an accident?"
+      },
+      {
+        "kind": "safety",
+        "quote": "I hate to think of what would happen if I was driving"
+      },
+      {
+        "kind": "other",
+        "quote": "engine light on"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "no can message was received from the unit in 68"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2015 Mercedes-Benz E350 electrical system: power steering malfunction warning, steering column electronics out/no CAN message from steering control unit, no warning before loss; occurred after starting car while parked.",
+    "symptoms": [
+      "power steering malfunction warning",
+      "loss of power steering assist",
+      "steering column electronics failure",
+      "no CAN message from steering control unit",
+      "no warning before power steering loss"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2104631",
+    "created_at": "2025-06-27T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "THE COLLISION PREVENTION ASSIST MODULE WARNING LIGHT CAME ON. COLLISION ASSIST WAS INOPERATIVE. THIS CAN LEAD TO LOSS OF ACCELERATION AND BRAKING. I TOOK THE VEHICLE TO LOCAL DEALERSHIP, MERCEDES BENZ OF ARCADIA, WHO PERFORMED A SOFTWARE UPDATE AND CHARGED $205.OO. THIS IS A SAFE...",
+      "group": "electrical_general",
+      "id": "1640144",
+      "make": "MERCEDES-BENZ",
+      "model": "E350",
+      "score": 4.0922,
+      "year": 2015
+    },
+    {
+      "excerpt": "Electric power steering assist failure. Causing power steering to fail making steering very difficult, raising the chance for a crash.",
+      "group": "electrical_general",
+      "id": "1893392",
+      "make": "MERCEDES-BENZ",
+      "model": "E350",
+      "score": 2.4312,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-27T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00190225,
+      "duration_ms": 21178,
+      "reason": "2015 Mercedes-Benz E350 electrical system: power steering malfunction warning, steering column electronics out/no CAN message from steering control unit, no warning before loss; occurred after starting car while parked.",
+      "started_at": "2025-06-27T07:00:36Z",
+      "step": 2,
+      "tokens": 3824,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-06-27T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "E350",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "THE COLLISION PREVENTION ASSIST MODULE WARNING LIGHT CAME ON. COLLISION ASSIST WAS INOPERATIVE. THIS CAN LEAD TO LOSS OF ACCELERATION AND BRAKING. I TOOK THE VEHICLE TO LOCAL DEALERSHIP, MERCEDES BENZ OF ARCADIA, WHO PERFORMED A SOFTWARE UPDATE AND CHARGED $205.OO. THIS IS A SAFE...",
+            "group": "electrical_general",
+            "id": "1640144",
+            "make": "MERCEDES-BENZ",
+            "model": "E350",
+            "score": 4.0922,
+            "year": 2015
+          },
+          {
+            "excerpt": "Electric power steering assist failure. Causing power steering to fail making steering very difficult, raising the chance for a crash.",
+            "group": "electrical_general",
+            "id": "1893392",
+            "make": "MERCEDES-BENZ",
+            "model": "E350",
+            "score": 2.4312,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-06-27T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-27T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-27T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-27T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-27T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-27T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-27T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

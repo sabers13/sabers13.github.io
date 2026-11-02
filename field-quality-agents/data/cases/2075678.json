@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2075678",
+    "make": "CADILLAC",
+    "mileage": null,
+    "model": "CTS",
+    "narrative": "All of a sudden when I started my car, the lights flickered constantly, the power steering failed, and it blew my starter and fairly new battery. I was so scared; I thought it was going to catch on fire because it smelled burnt. And I was on [XXX] in Hubbard Ohio, and I was trying to get to [XXX]  and safety to which I did. THANK Goodness for AAA. I was told this happened because of a plug in wiring to heat or warm the washer fluid.  It is available for inspection.  My safety was impacted because, I had no power steering, flickering lights and smell of burnt stuff.  My problem was fixed by an independent shop.  My vehicle was not inspected by a GM dealer or my insurance.  Was inspected by an independent shop that it was towed to.  Warnings prior to incident:  I would turn the ignition and nothing. But that would only happen several weeks apart.  I thought maybe the starter was going, but it was odd because it was so many weeks far apart that it would happen.  It might have been a total of 4 times since October of 2024.  During the incident,  power steering warning came on,  charging system came on and the car sounded like it was barely running. Thank you  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-03-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2075678",
+    "status": "decided",
+    "year": 2010
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2075678",
+    "decided_at": "2025-03-20T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2075678",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the lights flickered constantly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the power steering failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it blew my starter and fairly new battery"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it smelled burnt"
+      },
+      {
+        "kind": "safety",
+        "quote": "I thought it was going to catch on fire"
+      },
+      {
+        "kind": "safety",
+        "quote": "I had no power steering, flickering lights and smell of burnt stuff"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I would turn the ignition and nothing"
+      },
+      {
+        "kind": "condition",
+        "quote": "would only happen several weeks apart"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power steering warning came on"
+      },
+      {
+        "kind": "condition",
+        "quote": "charging system came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car sounded like it was barely running"
+      },
+      {
+        "kind": "safety",
+        "quote": "My safety was impacted"
+      },
+      {
+        "kind": "other",
+        "quote": "a plug in wiring to heat or warm the washer fluid"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: constant light flickering with power steering failure, burnt smell, starter/battery damage, charging warning, and intermittent ignition no-start.",
+    "symptoms": [
+      "lights flickered constantly",
+      "power steering failed",
+      "starter and fairly new battery blew",
+      "burnt smell",
+      "ignition sometimes did nothing",
+      "power steering warning came on",
+      "charging system warning came on",
+      "engine sounded like it was barely running"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2075678",
+    "created_at": "2025-03-20T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-20T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00100405,
+      "duration_ms": 12458,
+      "reason": "Exterior lighting: constant light flickering with power steering failure, burnt smell, starter/battery damage, charging warning, and intermittent ignition no-start.",
+      "started_at": "2025-03-20T07:00:31Z",
+      "step": 2,
+      "tokens": 2357,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-20T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CADILLAC",
+        "model": "CTS",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-20T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-20T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-20T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-20T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-20T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-20T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-20T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

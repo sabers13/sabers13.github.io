@@ -1,0 +1,522 @@
+{
+  "case": {
+    "component": "AIR BAGS:SRS MALFUNCTION WARNING LAMP/LIGHT",
+    "group": "restraints",
+    "id": "2155965",
+    "make": "HONDA",
+    "mileage": 129000,
+    "model": "ACCORD",
+    "narrative": "The contact owns a 2000 Honda Accord. The contact stated that immediately after purchasing the vehicle, it was discovered that the SRS warning light was illuminated and remained illuminated while operating the vehicle. The cause of the failure was not yet determined. The manufacturer and local dealer were not contacted regarding the failure. No further information was available. The failure mileage was 129,000.",
+    "received_at": "2025-12-10",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2155965",
+    "status": "decided",
+    "year": 2000
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2155965",
+    "decided_at": "2025-12-10T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2155965",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "SRS warning light was illuminated and remained illuminated while operating the vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "immediately after purchasing the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "The cause of the failure was not yet determined."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "Run a standard SRS diagnostic test on the 2000 Honda Accord because the SRS warning lamp is continuously illuminated with no determined cause.",
+    "symptoms": [
+      "SRS warning light illuminated and remained illuminated while operating the vehicle"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "PE05043",
+      "match": true,
+      "open_date": "2005-08-12",
+      "summary": "THE SUBJECT VEHICLES ARE DESIGNED WITH AN OCCUPANT POSITION DETECTION SYSTEM (OPDS) FOR THE PASSENGER SEAT TO SUPPRESS THE SIDE AIRBAG IN THE EVENT OF AN OUT-OF-POSITION OCCUPANT.ON SOME VEHICLES, THE OPDS UNIT AND SENSOR GRID MAY BE SUSCEPTIBLE TO HIGH MOISTURE CONTENT AND/OR TO SPORADIC ELECTRICAL INTERFERENCE THAT WOULD RESULT IN THE ILLUMINATION OF THE SRS READINESS INDICATOR.IN THIS CONDITION, OPDS SUPPRESSION WILL NOT FUNCTION, BUT THE SIDE AIRBAG WILL STILL DEPLOY IN THE EVENT OF A SIDE CRASH. HONDA ISSUED A TECHNICAL SERVICE BULLETIN IN APRIL 2004 TO ADDRESS THIS PROBLEM. HOWEVER, THE PROBLEM PERSISTS EVEN AFTER THE WARRANTY PERIOD EXPIRES.AS A RESULT, SOME OWNERS MAY NOT BE OBTAINING THE NECESSARY REMEDIAL SERVICE WORK.CONTINUED ILLUMINATION OF THE SRS INDICATOR CAN MASK THE DETECTION OF OTHER AIRBAG COMPONENT FAULTS IF THEY OCCUR. IN MARCH 2006, HONDA ISSUED A SERVICE BULLETIN (06-009) TO EXTEND THE WARRANTY ON SRS ILLUMINATION AND OPDS ISSUES TO 10 YEARS OR 150,000 MILES (WHICHEVER OCCURS FIRST).HONDA WILL SEND NOTIFICATION LETTERS TO OWNERS OF THE SUBJECT VEHICLES AND WILL PROVIDE A NO COST REPLACEMENT OF THE OPDS UNIT AS NEEDED.IN ADDITION, OTHER MY 1999-04 HONDA AND ACURA VEHICLES ARE ALSO COVERED BY THE BULLETIN.THIS ACTION TAKEN BY THE MANUFACTURER IS SUFFICIENT TO RESOLVE THE ISSUE RAISED BY THIS INVESTIGATION.THE CLOSING OF THIS INVESTIGATION DOES NOT CONSTITUTE A FINDING BY NHTSA THAT NO SAFETY-RELATED DEFECT EXISTS.THE AGENCY RESERVES THE RIGHT TO TAKE FURTHER ACTION IF WARRANTED BY THE CIRCUMSTANCES."
+    },
+    {
+      "id": "PE05043",
+      "match": true,
+      "open_date": "2005-08-12",
+      "summary": "THE SUBJECT VEHICLES ARE DESIGNED WITH AN OCCUPANT POSITION DETECTION SYSTEM (OPDS) FOR THE PASSENGER SEAT TO SUPPRESS THE SIDE AIRBAG IN THE EVENT OF AN OUT-OF-POSITION OCCUPANT.ON SOME VEHICLES, THE OPDS UNIT AND SENSOR GRID MAY BE SUSCEPTIBLE TO HIGH MOISTURE CONTENT AND/OR TO SPORADIC ELECTRICAL INTERFERENCE THAT WOULD RESULT IN THE ILLUMINATION OF THE SRS READINESS INDICATOR.IN THIS CONDITION, OPDS SUPPRESSION WILL NOT FUNCTION, BUT THE SIDE AIRBAG WILL STILL DEPLOY IN THE EVENT OF A SIDE CRASH. HONDA ISSUED A TECHNICAL SERVICE BULLETIN IN APRIL 2004 TO ADDRESS THIS PROBLEM. HOWEVER, THE PROBLEM PERSISTS EVEN AFTER THE WARRANTY PERIOD EXPIRES.AS A RESULT, SOME OWNERS MAY NOT BE OBTAINING THE NECESSARY REMEDIAL SERVICE WORK.CONTINUED ILLUMINATION OF THE SRS INDICATOR CAN MASK THE DETECTION OF OTHER AIRBAG COMPONENT FAULTS IF THEY OCCUR. IN MARCH 2006, HONDA ISSUED A SERVICE BULLETIN (06-009) TO EXTEND THE WARRANTY ON SRS ILLUMINATION AND OPDS ISSUES TO 10 YEARS OR 150,000 MILES (WHICHEVER OCCURS FIRST).HONDA WILL SEND NOTIFICATION LETTERS TO OWNERS OF THE SUBJECT VEHICLES AND WILL PROVIDE A NO COST REPLACEMENT OF THE OPDS UNIT AS NEEDED.IN ADDITION, OTHER MY 1999-04 HONDA AND ACURA VEHICLES ARE ALSO COVERED BY THE BULLETIN.THIS ACTION TAKEN BY THE MANUFACTURER IS SUFFICIENT TO RESOLVE THE ISSUE RAISED BY THIS INVESTIGATION.THE CLOSING OF THIS INVESTIGATION DOES NOT CONSTITUTE A FINDING BY NHTSA THAT NO SAFETY-RELATED DEFECT EXISTS.THE AGENCY RESERVES THE RIGHT TO TAKE FURTHER ACTION IF WARRANTED BY THE CIRCUMSTANCES."
+    }
+  ],
+  "proposal": {
+    "case_id": "2155965",
+    "created_at": "2025-12-10T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "SRS warning light was illuminated and remained illuminated while operating the vehicle",
+        "source_id": "2155965",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "immediately after purchasing the vehicle",
+        "source_id": "2155965",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The cause of the failure was not yet determined.",
+        "source_id": "2155965",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports that the SRS warning light was illuminated and remained illuminated while operating the vehicle immediately after purchase, and the cause was not yet determined. No rulebook entry matches the reported conditions, so the standard diagnostic test is appropriate rather than a targeted load test. A related NHTSA investigation for the 2000 Accord describes OPDS moisture/electrical interference that can illuminate the SRS readiness indicator, but no targeted test is named.",
+    "requested_info": [],
+    "summary": "Run a standard SRS diagnostic test on the 2000 Honda Accord because the SRS warning lamp is continuously illuminated with no determined cause.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "20V026000",
+      "match": true,
+      "open_date": "2020-01-17",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 1998 Acura 2.2CL, 1998-1999 Acura 2.3CL, 1998-1999 Acura 3.0CL, 2001 Acura 3.2CL and Acura MDX, 1998-2000 Honda Accord Coupe, Accord Sedan, Civic Sedan, Odyssey and Acura 3.5RL, 1999-2000 Acura 3.2TL, 1996-2000 Civic Coupe, 1997-2000 CR-V, 1997-1998 EV Plus, and 1998-1999 Isuzu Oasis vehicles.    These vehicles were equipped with Non-Azide Driver air bag Inflators (NADI) and do not contain phase stabilized ammonium nitrate (PSAN) propellant.  Due to a manufacturing issue, the NADI inflators may absorb moisture, causing the inflators to rupture or the air bag cushion to underinflate."
+    },
+    {
+      "id": "20V027000",
+      "match": true,
+      "open_date": "2020-01-17",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2001-2002 Acura 3.2CL, 2000-2003 Acura 3.5RL, 2000-2001 Acura 3.2TL, Honda CR-V and Honda Odyssey, 2001-2002 Acura MDX and 2000 Accord Coupe, Accord Sedan, Civic Coupe, and Civic Sedan vehicles.     These vehicles may have received a replacement driver frontal air bag module as part of a vehicle repair.  Due to a manufacturing issue, the replacement NADI inflator may absorb moisture, causing the inflator to rupture or the air bag cushion to underinflate."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "TL* TAKATA RECALL. THE CONTACT OWNS A 2000 HONDA ACCORD. THE CONTACT RECEIVED NOTIFICATION OF NHTSA CAMPAIGN NUMBER: 20V027000 (AIR BAGS) HOWEVER, THE PART TO DO THE RECALL REPAIR WAS NOT AVAILABLE. THE CONTACT STATED THAT THE MANUFACTURER EXCEEDED A REASONABLE AMOUNT OF TIME FOR...",
+      "group": "restraints",
+      "id": "1661434",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 14.406,
+      "year": 2000
+    },
+    {
+      "excerpt": "TL* THE CONTACT OWNED A 2000 HONDA ACCORD. THE CONTACT STATED THAT WHILE DRIVING AT UNKNOWN SPEED, THE REAR PASSENGER SIDE TIRE DEFLATED AND CAUSED THE VEHICLE TO FISHTAIL AND CRASHED ON THE RAIL AT THE SIDE OF THE ROAD. THERE WAS NO WARNING. THE AIR BAGS DEPLOYED AND POPPED AND...",
+      "group": "restraints",
+      "id": "1675904",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 13.907,
+      "year": 2000
+    },
+    {
+      "excerpt": "The seatbelt SRS system light was previously identified as defective by American Honda. When my notification light came on I immediately took vehicle to Honda Dealership for repair. I have been forced to do so multiple time during my vehicle ownership. Currently the SRS light has...",
+      "group": "restraints",
+      "id": "1808330",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 10.656,
+      "year": 2000
+    },
+    {
+      "excerpt": "HONDA DEALER REFUSED TO REPLACE RECALLED AIRBAGS IN MY CAR. DEALER CLAIMS THAT HONDA IS NOT RELEASING THE PART UNTIL NEXT YEAR. I HAVE BEEN WAITING FOR THEM TO FULFILL THE REQUEST TO REPLACE THE AIRBAGS, BUT THEY HAVEN'T RESPONDED.",
+      "group": "restraints",
+      "id": "1681531",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 1.6016,
+      "year": 2000
+    },
+    {
+      "excerpt": "THE HONDA SERVICE PEOPLE WON'T PROVIDE A LOANER VEHICLE UNTIL PARTS ARE ORDERED SO NOW I WILL HAVE TO RENT MY OWN VEHICLE I WANTED TO KNOW IF THEY YOU WILL MAKE THEM REIMBURSE ME, I REALLY DON'T KNOW WHAT YOU GUYS DO I'M JUST FOLLOWING UP LIKE THE LETTER SAYS TO DO THEY WON'T HAV...",
+      "group": "restraints",
+      "id": "1654815",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 1.3633,
+      "year": 2000
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-10T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012868,
+      "duration_ms": 15188,
+      "reason": "SRS warning lamp illuminated and stayed on immediately after purchase; cause undetermined.",
+      "started_at": "2025-12-10T07:00:01Z",
+      "step": 2,
+      "tokens": 2667,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-10T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "TL* TAKATA RECALL. THE CONTACT OWNS A 2000 HONDA ACCORD. THE CONTACT RECEIVED NOTIFICATION OF NHTSA CAMPAIGN NUMBER: 20V027000 (AIR BAGS) HOWEVER, THE PART TO DO THE RECALL REPAIR WAS NOT AVAILABLE. THE CONTACT STATED THAT THE MANUFACTURER EXCEEDED A REASONABLE AMOUNT OF TIME FOR...",
+            "group": "restraints",
+            "id": "1661434",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 14.406,
+            "year": 2000
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNED A 2000 HONDA ACCORD. THE CONTACT STATED THAT WHILE DRIVING AT UNKNOWN SPEED, THE REAR PASSENGER SIDE TIRE DEFLATED AND CAUSED THE VEHICLE TO FISHTAIL AND CRASHED ON THE RAIL AT THE SIDE OF THE ROAD. THERE WAS NO WARNING. THE AIR BAGS DEPLOYED AND POPPED AND...",
+            "group": "restraints",
+            "id": "1675904",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 13.907,
+            "year": 2000
+          },
+          {
+            "excerpt": "The seatbelt SRS system light was previously identified as defective by American Honda. When my notification light came on I immediately took vehicle to Honda Dealership for repair. I have been forced to do so multiple time during my vehicle ownership. Currently the SRS light has...",
+            "group": "restraints",
+            "id": "1808330",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 10.656,
+            "year": 2000
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-12-10T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-10T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-12-10T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2000 Honda Accord. The contact stated that immediately after purchasing the vehicle, it was discovered that the SRS warning light was illuminated and remained illuminated while operating the vehicle. The cause of the failure was not yet determined. The manufacturer and local dealer were not contacted regarding the failure. No further information was available. The failure mileage was 129,000."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "TL* TAKATA RECALL. THE CONTACT OWNS A 2000 HONDA ACCORD. THE CONTACT RECEIVED NOTIFICATION OF NHTSA CAMPAIGN NUMBER: 20V027000 (AIR BAGS) HOWEVER, THE PART TO DO THE RECALL REPAIR WAS NOT AVAILABLE. THE CONTACT STATED THAT THE MANUFACTURER EXCEEDED A REASONABLE AMOUNT OF TIME FOR...",
+            "group": "restraints",
+            "id": "1661434",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 14.406,
+            "year": 2000
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNED A 2000 HONDA ACCORD. THE CONTACT STATED THAT WHILE DRIVING AT UNKNOWN SPEED, THE REAR PASSENGER SIDE TIRE DEFLATED AND CAUSED THE VEHICLE TO FISHTAIL AND CRASHED ON THE RAIL AT THE SIDE OF THE ROAD. THERE WAS NO WARNING. THE AIR BAGS DEPLOYED AND POPPED AND...",
+            "group": "restraints",
+            "id": "1675904",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 13.907,
+            "year": 2000
+          },
+          {
+            "excerpt": "The seatbelt SRS system light was previously identified as defective by American Honda. When my notification light came on I immediately took vehicle to Honda Dealership for repair. I have been forced to do so multiple time during my vehicle ownership. Currently the SRS light has...",
+            "group": "restraints",
+            "id": "1808330",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 10.656,
+            "year": 2000
+          },
+          {
+            "excerpt": "HONDA DEALER REFUSED TO REPLACE RECALLED AIRBAGS IN MY CAR. DEALER CLAIMS THAT HONDA IS NOT RELEASING THE PART UNTIL NEXT YEAR. I HAVE BEEN WAITING FOR THEM TO FULFILL THE REQUEST TO REPLACE THE AIRBAGS, BUT THEY HAVEN'T RESPONDED.",
+            "group": "restraints",
+            "id": "1681531",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 1.6016,
+            "year": 2000
+          },
+          {
+            "excerpt": "THE HONDA SERVICE PEOPLE WON'T PROVIDE A LOANER VEHICLE UNTIL PARTS ARE ORDERED SO NOW I WILL HAVE TO RENT MY OWN VEHICLE I WANTED TO KNOW IF THEY YOU WILL MAKE THEM REIMBURSE ME, I REALLY DON'T KNOW WHAT YOU GUYS DO I'M JUST FOLLOWING UP LIKE THE LETTER SAYS TO DO THEY WON'T HAV...",
+            "group": "restraints",
+            "id": "1654815",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 1.3633,
+            "year": 2000
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-10T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "20V026000",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "open_date": "2020-01-17",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 1998 Acura 2.2CL, 1998-1999 Acura 2.3CL, 1998-1999 Acura 3.0CL, 2001 Acura 3.2CL and Acura MDX, 1998-2000 Honda Accord Coupe, Accord Sedan, Civic Sedan, Odyssey and Acura 3.5RL, 1999-2000 Acura 3.2TL, 1996-2000 Civic Coupe, 1997-2000 CR-V, 1997-1998 EV Plus, and 1998-1999 Isuzu Oasis vehicles.    These vehicles were equipped with Non-Azide Driver air bag Inflators (NADI) and do not contain phase stabilized ammonium nitrate (PSAN) propellant.  Due to a manufacturing issue, the NADI inflators may absorb moisture, causing the inflators to rupture or the air bag cushion to underinflate.",
+            "year": 2000
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "20V027000",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "open_date": "2020-01-17",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2001-2002 Acura 3.2CL, 2000-2003 Acura 3.5RL, 2000-2001 Acura 3.2TL, Honda CR-V and Honda Odyssey, 2001-2002 Acura MDX and 2000 Accord Coupe, Accord Sedan, Civic Coupe, and Civic Sedan vehicles.     These vehicles may have received a replacement driver frontal air bag module as part of a vehicle repair.  Due to a manufacturing issue, the replacement NADI inflator may absorb moisture, causing the inflator to rupture or the air bag cushion to underinflate.",
+            "year": 2000
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-10T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2000
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+            "group": "restraints",
+            "id": "PE05043",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "open_date": "2005-08-12",
+            "summary": "THE SUBJECT VEHICLES ARE DESIGNED WITH AN OCCUPANT POSITION DETECTION SYSTEM (OPDS) FOR THE PASSENGER SEAT TO SUPPRESS THE SIDE AIRBAG IN THE EVENT OF AN OUT-OF-POSITION OCCUPANT.ON SOME VEHICLES, THE OPDS UNIT AND SENSOR GRID MAY BE SUSCEPTIBLE TO HIGH MOISTURE CONTENT AND/OR TO SPORADIC ELECTRICAL INTERFERENCE THAT WOULD RESULT IN THE ILLUMINATION OF THE SRS READINESS INDICATOR.IN THIS CONDITION, OPDS SUPPRESSION WILL NOT FUNCTION, BUT THE SIDE AIRBAG WILL STILL DEPLOY IN THE EVENT OF A SIDE CRASH. HONDA ISSUED A TECHNICAL SERVICE BULLETIN IN APRIL 2004 TO ADDRESS THIS PROBLEM. HOWEVER, THE PROBLEM PERSISTS EVEN AFTER THE WARRANTY PERIOD EXPIRES.AS A RESULT, SOME OWNERS MAY NOT BE OBTAINING THE NECESSARY REMEDIAL SERVICE WORK.CONTINUED ILLUMINATION OF THE SRS INDICATOR CAN MASK THE DETECTION OF OTHER AIRBAG COMPONENT FAULTS IF THEY OCCUR. IN MARCH 2006, HONDA ISSUED A SERVICE BULLETIN (06-009) TO EXTEND THE WARRANTY ON SRS ILLUMINATION AND OPDS ISSUES TO 10 YEARS OR 150,000 MILES (WHICHEVER OCCURS FIRST).HONDA WILL SEND NOTIFICATION LETTERS TO OWNERS OF THE SUBJECT VEHICLES AND WILL PROVIDE A NO COST REPLACEMENT OF THE OPDS UNIT AS NEEDED.IN ADDITION, OTHER MY 1999-04 HONDA AND ACURA VEHICLES ARE ALSO COVERED BY THE BULLETIN.THIS ACTION TAKEN BY THE MANUFACTURER IS SUFFICIENT TO RESOLVE THE ISSUE RAISED BY THIS INVESTIGATION.THE CLOSING OF THIS INVESTIGATION DOES NOT CONSTITUTE A FINDING BY NHTSA THAT NO SAFETY-RELATED DEFECT EXISTS.THE AGENCY RESERVES THE RIGHT TO TAKE FURTHER ACTION IF WARRANTED BY THE CIRCUMSTANCES.",
+            "year": 2000
+          },
+          {
+            "component": "AIR BAGS:SIDE/WINDOW",
+            "group": "restraints",
+            "id": "PE05043",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "open_date": "2005-08-12",
+            "summary": "THE SUBJECT VEHICLES ARE DESIGNED WITH AN OCCUPANT POSITION DETECTION SYSTEM (OPDS) FOR THE PASSENGER SEAT TO SUPPRESS THE SIDE AIRBAG IN THE EVENT OF AN OUT-OF-POSITION OCCUPANT.ON SOME VEHICLES, THE OPDS UNIT AND SENSOR GRID MAY BE SUSCEPTIBLE TO HIGH MOISTURE CONTENT AND/OR TO SPORADIC ELECTRICAL INTERFERENCE THAT WOULD RESULT IN THE ILLUMINATION OF THE SRS READINESS INDICATOR.IN THIS CONDITION, OPDS SUPPRESSION WILL NOT FUNCTION, BUT THE SIDE AIRBAG WILL STILL DEPLOY IN THE EVENT OF A SIDE CRASH. HONDA ISSUED A TECHNICAL SERVICE BULLETIN IN APRIL 2004 TO ADDRESS THIS PROBLEM. HOWEVER, THE PROBLEM PERSISTS EVEN AFTER THE WARRANTY PERIOD EXPIRES.AS A RESULT, SOME OWNERS MAY NOT BE OBTAINING THE NECESSARY REMEDIAL SERVICE WORK.CONTINUED ILLUMINATION OF THE SRS INDICATOR CAN MASK THE DETECTION OF OTHER AIRBAG COMPONENT FAULTS IF THEY OCCUR. IN MARCH 2006, HONDA ISSUED A SERVICE BULLETIN (06-009) TO EXTEND THE WARRANTY ON SRS ILLUMINATION AND OPDS ISSUES TO 10 YEARS OR 150,000 MILES (WHICHEVER OCCURS FIRST).HONDA WILL SEND NOTIFICATION LETTERS TO OWNERS OF THE SUBJECT VEHICLES AND WILL PROVIDE A NO COST REPLACEMENT OF THE OPDS UNIT AS NEEDED.IN ADDITION, OTHER MY 1999-04 HONDA AND ACURA VEHICLES ARE ALSO COVERED BY THE BULLETIN.THIS ACTION TAKEN BY THE MANUFACTURER IS SUFFICIENT TO RESOLVE THE ISSUE RAISED BY THIS INVESTIGATION.THE CLOSING OF THIS INVESTIGATION DOES NOT CONSTITUTE A FINDING BY NHTSA THAT NO SAFETY-RELATED DEFECT EXISTS.THE AGENCY RESERVES THE RIGHT TO TAKE FURTHER ACTION IF WARRANTED BY THE CIRCUMSTANCES.",
+            "year": 2000
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-10T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00114645,
+      "duration_ms": 9442,
+      "reason": "The narrative reports that the SRS warning light was illuminated and remained illuminated while operating the vehicle immediately after purchase, and the cause was not yet determined. No rulebook entry matches the reported conditions, so the standard diagnostic test is appropriate rather than a targeted load test. A related NHTSA investigation for the 2000 Accord describes OPDS moisture/electrical interference that can illuminate the SRS readiness indicator, but no targeted test is named.",
+      "started_at": "2025-12-10T07:00:09Z",
+      "step": 10,
+      "tokens": 4232,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-12-10T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "SRS warning light was illuminated and remained illuminated while operating the vehicle",
+          "AIR BAGS:SRS MALFUNCTION WARNING LAMP/LIGHT",
+          "immediately after purchasing the vehicle",
+          "The cause of the failure was not yet determined."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-12-10T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-10T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-10T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-10T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-10T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

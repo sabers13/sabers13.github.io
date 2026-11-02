@@ -1,0 +1,233 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2061900",
+    "make": "FORD",
+    "mileage": null,
+    "model": "MAVERICK",
+    "narrative": "On 01 February 2025, my 2024 Ford Maverick XLT was involved in a front-end collision where two critical safety systems failed: 1.Airbag System Failure: The airbags did not deploy despite a significant front-end impact. This component is still available for inspection upon request. 2.Forward Collision Sensor Malfunction: The front collision sensor system failed to detect the obstacle and did not engage automatic braking, which contributed to the severity of the crash. This system is also available for inspection.  Safety Risk: Due to these failures, my wife was hit in the chest by the force of the impact, and our dog was thrown inside the vehicle. My wife may have sustained internal injuries or bruising as a result. The failure of both the airbag system and collision avoidance system put our safety at serious risk.  Problem Confirmation: The issue has not yet been confirmed by a dealer or service center because my insurance company (Progressive) is scheduled to inspect the vehicle on Monday. I will update this report if additional findings are confirmed.  Inspection Status: The vehicle has not yet been inspected by the manufacturer (Ford), but I have reported the issue to them for investigation. The vehicle will be inspected by insurance representatives to assess the damage and possible system malfunctions. No police report was filed at the time of the accident.  Warning Signs Prior to Failure: There were no warning lamps or error messages prior to the failure. The vehicle was operating normally until the moment of the collision.",
+    "received_at": "2025-02-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2061900",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2061900",
+    "decided_at": "2025-02-01T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2061900",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The airbags did not deploy despite a significant front-end impact."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The front collision sensor system failed to detect the obstacle and did not engage automatic braking"
+      },
+      {
+        "kind": "condition",
+        "quote": "front-end collision"
+      },
+      {
+        "kind": "safety",
+        "quote": "my wife was hit in the chest by the force of the impact"
+      },
+      {
+        "kind": "safety",
+        "quote": "our dog was thrown inside the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "put our safety at serious risk"
+      },
+      {
+        "kind": "other",
+        "quote": "There were no warning lamps or error messages prior to the failure."
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle was operating normally until the moment of the collision."
+      }
+    ],
+    "conditions": [
+      "front-end collision"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS/restraints: airbags did not deploy and forward collision sensor did not engage automatic braking in a front-end collision; occupant injury reported.",
+    "symptoms": [
+      "airbags did not deploy despite significant front-end impact",
+      "forward collision sensor failed to detect obstacle and did not engage automatic braking",
+      "wife hit in chest by impact force",
+      "dog thrown inside vehicle",
+      "possible internal injuries or bruising"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2061900",
+    "created_at": "2025-02-01T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-01T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00101845,
+      "duration_ms": 15683,
+      "reason": "AIR BAGS/restraints: airbags did not deploy and forward collision sensor did not engage automatic braking in a front-end collision; occupant injury reported.",
+      "started_at": "2025-02-01T07:00:16Z",
+      "step": 2,
+      "tokens": 2384,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-02-01T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MAVERICK",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-01T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-01T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-01T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-01T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-01T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-01T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-01T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

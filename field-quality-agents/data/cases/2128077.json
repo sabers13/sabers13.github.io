@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2128077",
+    "make": "ACURA",
+    "mileage": null,
+    "model": "MDX",
+    "narrative": "LOSS OF POWER STEERING AND BRAKING ASSIST REDUCED. My spouse was driving our 2023 MDX approximately 45mph when she ran over a recessed manhole cover which created a bump. The MDX lossed power steering and brake performance reduced. The vehicle was very difficult to turn at that point. The car began to cycle through errors that would not clear until the car's engine could be stopped and restarted: HILL START ASSIST PROBLEM, TRAILER STABILITY ASSIST PROBLEM, ADAPTIVE CRUISE CONTROL PROBLEM, LANE KEEPING ASSIST PROBLEM, COLLISION MITIGATION BRAKING SYSTEM PROBLEM, ROAD DEPARTURE MITIGATION SYSTEM PROBLEM, LOW SPEED BRAKING SYSTEM PROBLEM, ELECTRICAL POWER STEERING SYSTEM PROBLEM STEERING ASSIST IS NOT AVAILABLE DO NOT DRIVE, AWD SYSTEM PROBLEM FRONT WHEELS MAY ONLY BE POWERED, BRAKE SYSTEM PROBLEM BRAKE PERFORMANCE MAY BE REDUCED. All these errors said SEE YOUR DEALER. We took the vehicle in to our local Acura dealer's service department 2 times over the course of 3 days. Both times diagnostics were ran and the car was deemed without problem. The MDX's alignment was ok as well, so the impact of the road hazard was NOT severe.",
+    "received_at": "2025-09-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2128077",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128077",
+    "decided_at": "2025-09-08T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2128077",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "LOSS OF POWER STEERING AND BRAKING ASSIST REDUCED."
+      },
+      {
+        "kind": "condition",
+        "quote": "ran over a recessed manhole cover which created a bump"
+      },
+      {
+        "kind": "condition",
+        "quote": "approximately 45mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The MDX lossed power steering and brake performance reduced."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle was very difficult to turn at that point."
+      },
+      {
+        "kind": "condition",
+        "quote": "The car began to cycle through errors that would not clear until the car's engine could be stopped and restarted"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ELECTRICAL POWER STEERING SYSTEM PROBLEM STEERING ASSIST IS NOT AVAILABLE DO NOT DRIVE"
+      },
+      {
+        "kind": "symptom",
+        "quote": "BRAKE SYSTEM PROBLEM BRAKE PERFORMANCE MAY BE REDUCED"
+      },
+      {
+        "kind": "safety",
+        "quote": "DO NOT DRIVE"
+      },
+      {
+        "kind": "other",
+        "quote": "Both times diagnostics were ran and the car was deemed without problem."
+      }
+    ],
+    "conditions": [
+      "vibration",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2023 Acura MDX electrical system: loss of power steering and reduced brake assist after a road bump at about 45 mph, with multiple cycling warnings until restart.",
+    "symptoms": [
+      "loss of power steering",
+      "reduced braking assist/brake performance",
+      "vehicle difficult to turn",
+      "multiple warning messages cycling until engine restart"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128077",
+    "created_at": "2025-09-08T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Safety systems failure . Awd lane keeping adaptive cruise automatic emergency brake tailgate can’t open . Est about 8 to 10 failure. And that is 2nd in a week . On march 4 same problem . Dealer said is a cable not plug tight . Got it back on Monday than happen again . Feel not sa...",
+      "group": "electrical_general",
+      "id": "1879503",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 3.1645,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-08T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00109045,
+      "duration_ms": 10653,
+      "reason": "2023 Acura MDX electrical system: loss of power steering and reduced brake assist after a road bump at about 45 mph, with multiple cycling warnings until restart.",
+      "started_at": "2025-09-08T07:00:31Z",
+      "step": 2,
+      "tokens": 2486,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-09-08T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Safety systems failure . Awd lane keeping adaptive cruise automatic emergency brake tailgate can’t open . Est about 8 to 10 failure. And that is 2nd in a week . On march 4 same problem . Dealer said is a cable not plug tight . Got it back on Monday than happen again . Feel not sa...",
+            "group": "electrical_general",
+            "id": "1879503",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 3.1645,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-08T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-08T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-08T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-08T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-08T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-08T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-08T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "group": "power_and_wiring",
+    "id": "2106110",
+    "make": "GMC",
+    "mileage": 11000,
+    "model": "YUKON",
+    "narrative": "The contact owns a 2023 GMC Yukon. The contact stated that on several occasions, the vehicle failed to immediately start. During the failure, the contact received a message that the battery power was low. The contact stated that the vehicle was jumpstarted. The battery was replaced, but the failure persisted. The vehicle was taken to the local dealer on several occasions, but the cause of the failure was not yet determined. The manufacturer was notified of the failure. The failure mileage was 11,000.",
+    "received_at": "2025-07-02",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2106110",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2106110",
+    "decided_at": "2025-07-02T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2106110",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "on several occasions"
+      },
+      {
+        "kind": "symptom",
+        "quote": "failed to immediately start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "battery power was low"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle was jumpstarted"
+      },
+      {
+        "kind": "other",
+        "quote": "battery was replaced"
+      },
+      {
+        "kind": "other",
+        "quote": "failure persisted"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": false,
+    "summary": "Run a targeted intermittent-fault test for the starter/starting complaint because no-start and low-battery messages persist after battery replacement.",
+    "symptoms": [
+      "failed to immediately start",
+      "battery power was low",
+      "vehicle was jumpstarted"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2106110",
+    "created_at": "2025-07-02T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "on several occasions",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failed to immediately start",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "battery power was low",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "vehicle was jumpstarted",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "battery was replaced",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failure persisted",
+        "source_id": "2106110",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports repeated occasions of failure to immediately start with a low battery power message, jumpstarting, and a replaced battery without resolving the failure; this matches the rulebook's intermittent condition and its targeted long-run power cycling test.",
+    "requested_info": [],
+    "summary": "Run a targeted intermittent-fault test for the starter/starting complaint because no-start and low-battery messages persist after battery replacement.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports repeated occasions of failure to immediately start with a low battery power message, jumpstarting, and a replaced battery without resolving the failure; this matches the rulebook's intermittent condition and its targeted long-run power cycling test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010354,
+      "duration_ms": 14134,
+      "reason": "2023 GMC Yukon starter assembly: intermittent failure to immediately start with low battery power message; jumpstarted and battery replaced but failure persisted.",
+      "started_at": "2025-07-02T07:00:01Z",
+      "step": 2,
+      "tokens": 2269,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2023 GMC Yukon. The contact stated that on several occasions, the vehicle failed to immediately start. During the failure, the contact received a message that the battery power was low. The contact stated that the vehicle was jumpstarted. The battery was replaced, but the failure persisted. The vehicle was taken to the local dealer on several occasions, but the cause of the failure was not yet determined. The manufacturer was notified of the failure. The failure mileage was 11"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-02T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-02T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-02T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00072255,
+      "duration_ms": 7643,
+      "reason": "The narrative reports repeated occasions of failure to immediately start with a low battery power message, jumpstarting, and a replaced battery without resolving the failure; this matches the rulebook's intermittent condition and its targeted long-run power cycling test.",
+      "started_at": "2025-07-02T07:00:09Z",
+      "step": 10,
+      "tokens": 1880,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-07-02T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "on several occasions",
+          "failed to immediately start",
+          "battery power was low",
+          "vehicle was jumpstarted",
+          "battery was replaced",
+          "failure persisted"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-02T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-02T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-02T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-02T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

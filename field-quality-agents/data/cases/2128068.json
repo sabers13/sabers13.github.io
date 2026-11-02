@@ -1,0 +1,286 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2128068",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TAHOE",
+    "narrative": "Wipers failed during heavy rain in heavy traffic on 7/3/25. Wipers randomly started working. The wipers failed again during a heavy rain on 8/13/25 again in moderate traffic.  Wipers failed during heavy rain, was unable to see while driving on an Interstate. I was able to navigate to the shoulder of the highway but was very scary being on an interstate highway in heavy traffic. Dealership repair occurred on 8/14/25.  No warnings of any kind prior to the failures.",
+    "received_at": "2025-09-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2128068",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2128068",
+    "decided_at": "2025-09-08T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2128068",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY/WIPER"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Wipers failed during heavy rain in heavy traffic on 7/3/25."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Wipers randomly started working."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The wipers failed again during a heavy rain on 8/13/25 again in moderate traffic."
+      },
+      {
+        "kind": "condition",
+        "quote": "heavy rain"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Wipers failed during heavy rain, was unable to see while driving on an Interstate."
+      },
+      {
+        "kind": "safety",
+        "quote": "was unable to see while driving on an Interstate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warnings of any kind prior to the failures."
+      }
+    ],
+    "conditions": [
+      "moisture",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "2022 Chevrolet Tahoe wipers failed during heavy rain in traffic and on an interstate, then randomly recovered; no prior warnings.",
+    "symptoms": [
+      "wipers failed during heavy rain",
+      "wipers randomly started working",
+      "wipers failed again during heavy rain",
+      "unable to see while driving on an interstate",
+      "no warnings before failures"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2128068",
+    "created_at": "2025-09-08T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Transmission Failure/Windshield Wiper Failure- While traveling approximately 48mph, the vehicle completely locked up. Tires screeched, vehicle came to a grinding halt. Two of my children were in the vehicle (15yrs and 7yrs of age.) This was sudden and without warning! The vehicle...",
+      "group": "body_controls",
+      "id": "1973013",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 11.2109,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Chevrolet Tahoe. The contact stated that the service safety restraint system warning light illuminated, causing the air bag warning light to remain illuminated. The contact stated that the liftgate failed to unlatch and open as needed. The contact was able...",
+      "group": "body_controls",
+      "id": "1864420",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 2.3368,
+      "year": 2022
+    },
+    {
+      "excerpt": "First: wiper motor stopped working, so it would not spray washer fluid to clean front or rear windows. Multiple people have had the same issue, only way to fix was replace Second: rear heat stopped working, dealership said we were the 5th tahoe in the last 2 weeks with the same i...",
+      "group": "body_controls",
+      "id": "2049321",
+      "make": "CHEVROLET",
+      "model": "TAHOE",
+      "score": 1.4255,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-08T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010231,
+      "duration_ms": 10777,
+      "reason": "2022 Chevrolet Tahoe wipers failed during heavy rain in traffic and on an interstate, then randomly recovered; no prior warnings.",
+      "started_at": "2025-09-08T07:00:16Z",
+      "step": 2,
+      "tokens": 2247,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-08T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TAHOE",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Transmission Failure/Windshield Wiper Failure- While traveling approximately 48mph, the vehicle completely locked up. Tires screeched, vehicle came to a grinding halt. Two of my children were in the vehicle (15yrs and 7yrs of age.) This was sudden and without warning! The vehicle...",
+            "group": "body_controls",
+            "id": "1973013",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 11.2109,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Chevrolet Tahoe. The contact stated that the service safety restraint system warning light illuminated, causing the air bag warning light to remain illuminated. The contact stated that the liftgate failed to unlatch and open as needed. The contact was able...",
+            "group": "body_controls",
+            "id": "1864420",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 2.3368,
+            "year": 2022
+          },
+          {
+            "excerpt": "First: wiper motor stopped working, so it would not spray washer fluid to clean front or rear windows. Multiple people have had the same issue, only way to fix was replace Second: rear heat stopped working, dealership said we were the 5th tahoe in the last 2 weeks with the same i...",
+            "group": "body_controls",
+            "id": "2049321",
+            "make": "CHEVROLET",
+            "model": "TAHOE",
+            "score": 1.4255,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-08T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-08T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-08T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-08T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-08T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-08T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-08T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

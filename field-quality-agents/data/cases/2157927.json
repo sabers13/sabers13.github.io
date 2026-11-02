@@ -1,0 +1,303 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2157927",
+    "make": "FORD",
+    "mileage": null,
+    "model": "ESCAPE",
+    "narrative": "he freeway I notified future ford of concord and I was told I would receive a call back but as I recall I didn’t receive a call back. The car started acting as if nothing was wrong about a week or so later then two days ago December 13,2025 first my head lights went out and a message saying there’s a bulb outage or electrical issue appeared and also the hill assist unavailable warning light appeared , following the 911 calling assistance is unavailable as well, and I also noticed my radio is no longer producing sound so I believe the engine ( block , head gasket etc) component also electrical system, sync 3 system has also failed or malfunctioned. During the second occurrence I was driving as I was before which led to The safety of my children, my husband and myself put at risk being it was night time and I could no longer see the road the car acted as if it was turning off and slowing down.. yes there was warning lamps, messages or other symptoms of the problem during the failures, and they first appeared at the exact time of the failures . Also below are photos captured from the ford vehicle app  alerting me about issues for the car",
+    "received_at": "2025-12-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2157927",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157927",
+    "decided_at": "2025-12-16T07:00:57Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2157927",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "electrical system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my head lights went out"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a message saying there’s a bulb outage or electrical issue appeared"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the hill assist unavailable warning light appeared"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the 911 calling assistance is unavailable as well"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my radio is no longer producing sound"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sync 3 system has also failed or malfunctioned"
+      },
+      {
+        "kind": "condition",
+        "quote": "about a week or so later then two days ago December 13,2025"
+      },
+      {
+        "kind": "condition",
+        "quote": "it was night time"
+      },
+      {
+        "kind": "safety",
+        "quote": "The safety of my children, my husband and myself put at risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "I could no longer see the road"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car acted as if it was turning off and slowing down"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: headlights out, multiple warning messages, radio/SYNC 3 failure, and vehicle slowing/turning off while driving at night.",
+    "symptoms": [
+      "headlights went out",
+      "bulb outage or electrical issue message",
+      "hill assist unavailable warning",
+      "911 calling assistance unavailable",
+      "radio no sound",
+      "SYNC 3 system failed or malfunctioned",
+      "vehicle acted as if turning off and slowing down"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157927",
+    "created_at": "2025-12-16T07:00:55Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "1. The transmission \"zooms\" and revs higher as I'm breaking. I'm afraid that the gear will slip and I won't be able to stop - especially if it's icy on the road. 2. When the car is turned off completely, there's a mechanical sound that persists for 10min. It's not the water/cooli...",
+      "group": "electrical_general",
+      "id": "1878270",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 18.1025,
+      "year": 2019
+    },
+    {
+      "excerpt": "Vehicle started to idle oddly on startup. Then a few days later it started to vibrate or cavitate. Check engine light came on. Scheduled for service. Service as of today 05/31/2024, coolant has leaked into engine, engine needs replaced according to service provider. Brought this...",
+      "group": "electrical_general",
+      "id": "1995888",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 12.9401,
+      "year": 2019
+    },
+    {
+      "excerpt": "Vehicle has 32K miles on it and both low beam headlight bulbs failed at the exact same time. My daughter had just left her house and as soon as she got away from street lights she realized this. The odd part is that the in-dash indicators showed everything working normally with N...",
+      "group": "electrical_general",
+      "id": "1856626",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 12.3828,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-16T07:00:49Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012565,
+      "duration_ms": 13403,
+      "reason": "Electrical system: headlights out, multiple warning messages, radio/SYNC 3 failure, and vehicle slowing/turning off while driving at night.",
+      "started_at": "2025-12-16T07:00:50Z",
+      "step": 2,
+      "tokens": 2735,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-16T07:00:51Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "1. The transmission \"zooms\" and revs higher as I'm breaking. I'm afraid that the gear will slip and I won't be able to stop - especially if it's icy on the road. 2. When the car is turned off completely, there's a mechanical sound that persists for 10min. It's not the water/cooli...",
+            "group": "electrical_general",
+            "id": "1878270",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 18.1025,
+            "year": 2019
+          },
+          {
+            "excerpt": "Vehicle started to idle oddly on startup. Then a few days later it started to vibrate or cavitate. Check engine light came on. Scheduled for service. Service as of today 05/31/2024, coolant has leaked into engine, engine needs replaced according to service provider. Brought this...",
+            "group": "electrical_general",
+            "id": "1995888",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 12.9401,
+            "year": 2019
+          },
+          {
+            "excerpt": "Vehicle has 32K miles on it and both low beam headlight bulbs failed at the exact same time. My daughter had just left her house and as soon as she got away from street lights she realized this. The odd part is that the in-dash indicators showed everything working normally with N...",
+            "group": "electrical_general",
+            "id": "1856626",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 12.3828,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-16T07:00:52Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-16T07:00:53Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-16T07:00:54Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-16T07:00:56Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-16T07:00:58Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-16T07:00:59Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-16T07:01:00Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

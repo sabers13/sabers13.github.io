@@ -1,0 +1,231 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2157885",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "COLORADO",
+    "narrative": "I was travelling at approximately 32 miles per hour when I rear ended a vehicle that was in front of me, the vehicle in front of me was stopped. The airbags did not deploy in my vehicle. Damage to the vehicle was substantial enough to declare the vehicle a total loss.",
+    "received_at": "2025-12-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2157885",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157885",
+    "decided_at": "2025-12-16T07:00:42Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2157885",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The airbags did not deploy in my vehicle."
+      },
+      {
+        "kind": "condition",
+        "quote": "I was travelling at approximately 32 miles per hour when I rear ended a vehicle that was in front of me"
+      },
+      {
+        "kind": "safety",
+        "quote": "rear ended a vehicle that was in front of me"
+      },
+      {
+        "kind": "other",
+        "quote": "Damage to the vehicle was substantial enough to declare the vehicle a total loss."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Air bags did not deploy in a 2019 Chevrolet Colorado after a ~32 mph rear-end collision with a stopped vehicle.",
+    "symptoms": [
+      "airbags did not deploy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157885",
+    "created_at": "2025-12-16T07:00:40Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2019 Chevrolet Colorado. The contact stated while driving at various speeds, the rear end of the vehicle was making abnormal roaring sounds and the vehicle was shuddering. Additionally, the contact stated while accelerating from a complete stop, the transmissio...",
+      "group": "restraints",
+      "id": "1803859",
+      "make": "CHEVROLET",
+      "model": "COLORADO",
+      "score": 1.3499,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-16T07:00:34Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005785,
+      "duration_ms": 7104,
+      "reason": "Air bags did not deploy in a 2019 Chevrolet Colorado after a ~32 mph rear-end collision with a stopped vehicle.",
+      "started_at": "2025-12-16T07:00:35Z",
+      "step": 2,
+      "tokens": 1464,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-12-16T07:00:36Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "COLORADO",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2019 Chevrolet Colorado. The contact stated while driving at various speeds, the rear end of the vehicle was making abnormal roaring sounds and the vehicle was shuddering. Additionally, the contact stated while accelerating from a complete stop, the transmissio...",
+            "group": "restraints",
+            "id": "1803859",
+            "make": "CHEVROLET",
+            "model": "COLORADO",
+            "score": 1.3499,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-16T07:00:37Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-16T07:00:38Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-16T07:00:39Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-16T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-16T07:00:43Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-16T07:00:44Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-16T07:00:45Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

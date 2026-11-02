@@ -1,0 +1,542 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2131432",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "KICKS",
+    "narrative": "My Car ocassionally comes with Code P0101 and P0102 when the check Engine light comes on. And when it does come on, The Traction Light and Head Collision warning lights show as well. These affect how the car drives and I have to stop and shut of the engine for a couple of minutes and then restart the engine. Changing the Mass Air flor sensor does not seem to have helped anything and it seems based on internet searches that several people who own similar cars are having the same issue",
+    "received_at": "2025-09-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2131432",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131432",
+    "decided_at": "2025-09-17T07:00:59Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2131432",
+    "clues": [
+      {
+        "kind": "fault_code",
+        "quote": "Code P0101 and P0102"
+      },
+      {
+        "kind": "symptom",
+        "quote": "when the check Engine light comes on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Traction Light and Head Collision warning lights show as well"
+      },
+      {
+        "kind": "symptom",
+        "quote": "These affect how the car drives"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have to stop and shut of the engine for a couple of minutes and then restart the engine"
+      },
+      {
+        "kind": "other",
+        "quote": "Changing the Mass Air flor sensor does not seem to have helped anything"
+      },
+      {
+        "kind": "other",
+        "quote": "several people who own similar cars are having the same issue"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [
+      "P0101",
+      "P0102"
+    ],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Intermittent P0101/P0102 on a 2019 Nissan Kicks that also lights the traction and forward collision warnings and disrupts drivability, so test for a fault that only appears after repeated wake/sleep cycles.",
+    "symptoms": [
+      "occasional P0101 and P0102 codes with the check engine light",
+      "traction warning light illuminates along with the forward collision warning light",
+      "drivability is affected while the lights are on",
+      "engine must be shut off for a few minutes and restarted to recover",
+      "mass air flow sensor replacement did not fix the problem"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131432",
+    "created_at": "2025-09-17T07:00:57Z",
+    "evidence": [
+      {
+        "quote": "Code P0101 and P0102",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "when the check Engine light comes on",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The Traction Light and Head Collision warning lights show as well",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "These affect how the car drives",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I have to stop and shut of the engine for a couple of minutes and then restart the engine",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Changing the Mass Air flor sensor does not seem to have helped anything",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "several people who own similar cars are having the same issue",
+        "source_id": "2131432",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports codes and warning lights that come on only occasionally (\"ocassionally comes with Code P0101 and P0102\"), persist after a mass air flow sensor replacement, and require an ignition-off restart to clear. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear only after repeated wake and sleep cycles; the closely similar Kicks cases (shared warning-light, stall and restart patterns) support an intermittent electrical/module cause rather than a sensor fault.",
+    "requested_info": [],
+    "summary": "Intermittent P0101/P0102 on a 2019 Nissan Kicks that also lights the traction and forward collision warnings and disrupts drivability, so test for a fault that only appears after repeated wake/sleep cycles.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports codes and warning lights that come on only occasionally (\"ocassionally comes with Code P0101 and P0102\"), persist after a mass air flow sensor replacement, and require an ignition-off restart to clear. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear only after repeated wake and sleep cycles; the closely similar Kicks cases (shared warning-light, stall and restart patterns) support an intermittent electrical/module cause rather than a sensor fault."
+    }
+  },
+  "recalls": [
+    {
+      "id": "19V654000",
+      "match": true,
+      "open_date": "2019-09-12",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2018-2019 Nissan Altima, Armada, Frontier, Kicks, Leaf, Maxima, Murano, NV, NV200, Pathfinder, Rogue, Rogue Sport, Sentra, Titan, Titan Diesel, Versa Note and Versa Sedan vehicles, as well as Infiniti Q50, Q60, QX30 and QX80 vehicles.  Additionally included are 2019 Nissan GT-R and Taxi and Infiniti QX50, QX60, Q70, Q70L vehicles.  The back-up camera and display settings can be adjusted such that the rear view image is no longer visible and the system will retain that setting the next time the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "FRONT IMPACT WARNING LIGHT COMES ON AND AFFECTS THE CRUISE CONTROL AND TRIES TO STOP WITHOUT ANYTHING IN FRONT OF CAR. THIS CAR ONLY HAS 4200 MILES AND HAS BEEN IN SHOP 5 FIVES FOR THE SAME THING AND ALL NISSAN DEALERSHIP DOES IS CLEAR CODE, ADJUST SENSORS AND/OR CALIBRATE SENSOR...",
+      "group": "adas",
+      "id": "1714013",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 13.8618,
+      "year": 2019
+    },
+    {
+      "excerpt": "Car has an issue where the automatic emergency braking system (AEB) and the vehicle dynamic control off(VDC) lights simultaneously go on the dashboard. Shortly after the car will stall while idle at red lights. Car will also have trouble going above 2500 rpm when this happens. Ca...",
+      "group": "adas",
+      "id": "1961657",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 12.5774,
+      "year": 2019
+    },
+    {
+      "excerpt": "The front collision warning light came on and the vehicle would not accelerate. I pulled over, stopped, turned off the car for about 5 minutes. I restarted it and and the front collision ⚠ still didn't turn off and would not accelerate. In park the rpms did not move when I presse...",
+      "group": "adas",
+      "id": "1875767",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 9.8139,
+      "year": 2019
+    },
+    {
+      "excerpt": "Car often sputters then shows front collision warning light then stalls. Mass airflow sensor has been changed and problem persists. Radio volume changes on its own. Software is up-to-date.",
+      "group": "adas",
+      "id": "2016193",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 7.7999,
+      "year": 2019
+    },
+    {
+      "excerpt": "The Automatic Emergency Braking (AEB) and Radar System is faulty which makes the vehicle suddenly brakes on it's own. My daughter reported that the alert light began coming on about a week ago. Then the yesterday (9/26/2021) the vehicle suddenly braked on its own while she was dr...",
+      "group": "adas",
+      "id": "1801474",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 7.462,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-17T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015016,
+      "duration_ms": 14997,
+      "reason": "2019 Nissan Kicks forward collision avoidance warnings; intermittent P0101/P0102 with check engine, traction and collision warning lights; drivability affected and engine restart required.",
+      "started_at": "2025-09-17T07:00:46Z",
+      "step": 2,
+      "tokens": 3043,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-17T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "KICKS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "FRONT IMPACT WARNING LIGHT COMES ON AND AFFECTS THE CRUISE CONTROL AND TRIES TO STOP WITHOUT ANYTHING IN FRONT OF CAR. THIS CAR ONLY HAS 4200 MILES AND HAS BEEN IN SHOP 5 FIVES FOR THE SAME THING AND ALL NISSAN DEALERSHIP DOES IS CLEAR CODE, ADJUST SENSORS AND/OR CALIBRATE SENSOR...",
+            "group": "adas",
+            "id": "1714013",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 13.8618,
+            "year": 2019
+          },
+          {
+            "excerpt": "Car has an issue where the automatic emergency braking system (AEB) and the vehicle dynamic control off(VDC) lights simultaneously go on the dashboard. Shortly after the car will stall while idle at red lights. Car will also have trouble going above 2500 rpm when this happens. Ca...",
+            "group": "adas",
+            "id": "1961657",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 12.5774,
+            "year": 2019
+          },
+          {
+            "excerpt": "The front collision warning light came on and the vehicle would not accelerate. I pulled over, stopped, turned off the car for about 5 minutes. I restarted it and and the front collision ⚠ still didn't turn off and would not accelerate. In park the rpms did not move when I presse...",
+            "group": "adas",
+            "id": "1875767",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 9.8139,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-17T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-17T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-09-17T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "My Car ocassionally comes with Code P0101 and P0102 when the check Engine light comes on. And when it does come on, The Traction Light and Head Collision warning lights show as well. These affect how the car drives and I have to stop and shut of the engine for a couple of minutes and then restart the engine. Changing the Mass Air flor sensor does not seem to have helped anything and it seems based on internet searches that several people who own similar cars are having the same issue"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "FRONT IMPACT WARNING LIGHT COMES ON AND AFFECTS THE CRUISE CONTROL AND TRIES TO STOP WITHOUT ANYTHING IN FRONT OF CAR. THIS CAR ONLY HAS 4200 MILES AND HAS BEEN IN SHOP 5 FIVES FOR THE SAME THING AND ALL NISSAN DEALERSHIP DOES IS CLEAR CODE, ADJUST SENSORS AND/OR CALIBRATE SENSOR...",
+            "group": "adas",
+            "id": "1714013",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 13.8618,
+            "year": 2019
+          },
+          {
+            "excerpt": "Car has an issue where the automatic emergency braking system (AEB) and the vehicle dynamic control off(VDC) lights simultaneously go on the dashboard. Shortly after the car will stall while idle at red lights. Car will also have trouble going above 2500 rpm when this happens. Ca...",
+            "group": "adas",
+            "id": "1961657",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 12.5774,
+            "year": 2019
+          },
+          {
+            "excerpt": "The front collision warning light came on and the vehicle would not accelerate. I pulled over, stopped, turned off the car for about 5 minutes. I restarted it and and the front collision ⚠ still didn't turn off and would not accelerate. In park the rpms did not move when I presse...",
+            "group": "adas",
+            "id": "1875767",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 9.8139,
+            "year": 2019
+          },
+          {
+            "excerpt": "Car often sputters then shows front collision warning light then stalls. Mass airflow sensor has been changed and problem persists. Radio volume changes on its own. Software is up-to-date.",
+            "group": "adas",
+            "id": "2016193",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 7.7999,
+            "year": 2019
+          },
+          {
+            "excerpt": "The Automatic Emergency Braking (AEB) and Radar System is faulty which makes the vehicle suddenly brakes on it's own. My daughter reported that the alert light began coming on about a week ago. Then the yesterday (9/26/2021) the vehicle suddenly braked on its own while she was dr...",
+            "group": "adas",
+            "id": "1801474",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 7.462,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-17T07:00:51Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "NISSAN",
+        "model": "KICKS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "19V654000",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "open_date": "2019-09-12",
+            "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2018-2019 Nissan Altima, Armada, Frontier, Kicks, Leaf, Maxima, Murano, NV, NV200, Pathfinder, Rogue, Rogue Sport, Sentra, Titan, Titan Diesel, Versa Note and Versa Sedan vehicles, as well as Infiniti Q50, Q60, QX30 and QX80 vehicles.  Additionally included are 2019 Nissan GT-R and Taxi and Infiniti QX50, QX60, Q70, Q70L vehicles.  The back-up camera and display settings can be adjusted such that the rear view image is no longer visible and the system will retain that setting the next time the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\"",
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-17T07:00:52Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "NISSAN",
+        "model": "KICKS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-17T07:00:53Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007884,
+      "duration_ms": 7089,
+      "reason": "The narrative reports codes and warning lights that come on only occasionally (\"ocassionally comes with Code P0101 and P0102\"), persist after a mass air flow sensor replacement, and require an ignition-off restart to clear. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear only after repeated wake and sleep cycles; the closely similar Kicks cases (shared warning-light, stall and restart patterns) support an intermittent electrical/module cause rather than a sensor fault.",
+      "started_at": "2025-09-17T07:00:54Z",
+      "step": 10,
+      "tokens": 2745,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 1 dropped",
+      "started_at": "2025-09-17T07:00:55Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ocassionally",
+          "Code P0101 and P0102",
+          "when the check Engine light comes on",
+          "The Traction Light and Head Collision warning lights show as well",
+          "These affect how the car drives",
+          "I have to stop and shut of the engine for a couple of minutes and then restart the engine",
+          "Changing the Mass Air flor sensor does not seem to have helped anything",
+          "several people who own similar cars are having the same issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 8,
+        "dropped": 1,
+        "verified": 7
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-09-17T07:00:56Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-17T07:00:58Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-17T07:01:00Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-17T07:01:01Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-17T07:01:02Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2142118",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "4RUNNER",
+    "narrative": "My 4Runner was involved in a collision where the airbags did not deploy, and I was knocked unconscious from hitting the steering wheel. The vehicle now shows an SRS fault code and is subject to an open Takata airbag recall.  Toyota corporate initially stated they would cover towing for the recall repair, then reversed that decision, claiming an airbag fault does not prevent the vehicle from starting. Because of the failed airbag deployment and recall defect, the vehicle is unsafe to drive until the recall is completed.  Toyota’s refusal to provide towing prevents me from safely completing a federally mandated safety recall. I am requesting NHTSA assistance in ensuring Toyota fulfills its obligations under federal recall law.",
+    "received_at": "2025-10-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2142118",
+    "status": "decided",
+    "year": 2010
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2142118",
+    "decided_at": "2025-10-22T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2142118",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "airbags did not deploy"
+      },
+      {
+        "kind": "safety",
+        "quote": "knocked unconscious from hitting the steering wheel"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "shows an SRS fault code"
+      },
+      {
+        "kind": "other",
+        "quote": "open Takata airbag recall"
+      },
+      {
+        "kind": "safety",
+        "quote": "vehicle is unsafe to drive until the recall is completed"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "SRS fault code"
+    ],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS: airbags failed to deploy in a collision, occupant was knocked unconscious, and the vehicle has an SRS fault code and open Takata airbag recall.",
+    "symptoms": [
+      "airbags did not deploy in a collision",
+      "occupant knocked unconscious from hitting the steering wheel",
+      "SRS fault code present",
+      "vehicle unsafe to drive until recall completed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2142118",
+    "created_at": "2025-10-22T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-22T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005725,
+      "duration_ms": 6563,
+      "reason": "AIR BAGS: airbags failed to deploy in a collision, occupant was knocked unconscious, and the vehicle has an SRS fault code and open Takata airbag recall.",
+      "started_at": "2025-10-22T07:00:01Z",
+      "step": 2,
+      "tokens": 1520,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-22T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "4RUNNER",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-10-22T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-22T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-22T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-22T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-22T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-22T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-22T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

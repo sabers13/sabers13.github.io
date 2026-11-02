@@ -1,0 +1,262 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "group": "safety_systems",
+    "id": "2085318",
+    "make": "GMC",
+    "mileage": 125000,
+    "model": "SIERRA 1500",
+    "narrative": "The contact owns a 2020 GMC Sierra 1500. The contact stated while driving 40 MPH, the vehicle failed to properly respond. There were no warning lights illuminated; however, the message ESC was displayed. The contact stated that the brakes, steering, and a message to check the trailer brakes was also displayed. The contact pulled over to the side of the road and the brake pedal was depressed several times however, the brakes failed to respond, and the vehicle was difficult to control. The vehicle was towed by AAA and then towed to a dealer however, the vehicle was not yet diagnosed. The contact stated that the brakes were inoperable, and the control center was destabilized. The vehicle was not yet repaired. The manufacturer was made aware of the failure and referred the contact to the NHTSA Hotline. The failure mileage was approximately 125,000.",
+    "received_at": "2025-04-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2085318",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2085318",
+    "decided_at": "2025-04-23T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2085318",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "INTEGRATED TRAILER BRAKE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "while driving 40 MPH, the vehicle failed to properly respond"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the message ESC was displayed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a message to check the trailer brakes was also displayed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes failed to respond"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle was difficult to control"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes were inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the control center was destabilized"
+      },
+      {
+        "kind": "other",
+        "quote": "the brake pedal was depressed several times"
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle was towed by AAA"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle was difficult to control"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "Integrated trailer brake control: at 40 MPH vehicle failed to respond with ESC and check trailer brake messages; brakes and steering affected, difficult to control, towed.",
+    "symptoms": [
+      "vehicle failed to properly respond while driving 40 MPH",
+      "ESC message displayed",
+      "check trailer brakes message displayed",
+      "brakes failed to respond despite repeated pedal presses",
+      "steering affected",
+      "vehicle difficult to control",
+      "brakes inoperable",
+      "control center destabilized"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2085318",
+    "created_at": "2025-04-23T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "HIGHWAY DRIVING ENGINE LIGHT STARTED FLASHING, RECEIVED CODES ON SERVICE ESC AND SERVICE PARKING BRAKE. TRUCK SEEMED TO LOOSE POWER TRANSMISSION STARTED SHIFTING VERY HARD, CRUSE DISENGAGED,LANE KEEP ASSIST STOPPED WORKING , BRAKES AND STEERING SEEMED TO ACT DIFFERENT . WHEN IGNI...",
+      "group": "safety_systems",
+      "id": "1669076",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 1.5463,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00142735,
+      "duration_ms": 16648,
+      "reason": "Integrated trailer brake control: at 40 MPH vehicle failed to respond with ESC and check trailer brake messages; brakes and steering affected, difficult to control, towed.",
+      "started_at": "2025-04-23T07:00:01Z",
+      "step": 2,
+      "tokens": 2983,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "SIERRA 1500",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "HIGHWAY DRIVING ENGINE LIGHT STARTED FLASHING, RECEIVED CODES ON SERVICE ESC AND SERVICE PARKING BRAKE. TRUCK SEEMED TO LOOSE POWER TRANSMISSION STARTED SHIFTING VERY HARD, CRUSE DISENGAGED,LANE KEEP ASSIST STOPPED WORKING , BRAKES AND STEERING SEEMED TO ACT DIFFERENT . WHEN IGNI...",
+            "group": "safety_systems",
+            "id": "1669076",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 1.5463,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-04-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-23T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-23T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-23T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2067301",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "OUTBACK",
+    "narrative": "For our 2020 Subaru Outback, we are on our 3rd battery at only 49k miles. The car died again today. Thankfully AAA was able to jump it after a friend tried unsuccessfully. We suspect all of this battery drain, failure and replacement has been due to the known Data Communications Module (DCM) issue on recent Subaru’s. I have an appt w the dealer in Santa Monica tomorrow morning to have it diagnosed.",
+    "received_at": "2025-02-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2067301",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2067301",
+    "decided_at": "2025-02-19T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2067301",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "on our 3rd battery at only 49k miles"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car died again today."
+      },
+      {
+        "kind": "symptom",
+        "quote": "battery drain, failure and replacement"
+      },
+      {
+        "kind": "other",
+        "quote": "known Data Communications Module (DCM) issue"
+      }
+    ],
+    "conditions": [
+      "repeated battery drain",
+      "vehicle died after prior battery replacements"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test for excessive parasitic battery drain on a 2020 Subaru Outback with repeated dead batteries and suspected DCM draw.",
+    "symptoms": [
+      "third battery at 49k miles",
+      "battery drain",
+      "battery failure and replacement",
+      "car died",
+      "jump start required"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2067301",
+    "created_at": "2025-02-19T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "on our 3rd battery at only 49k miles",
+        "source_id": "2067301",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The car died again today.",
+        "source_id": "2067301",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "battery drain, failure and replacement",
+        "source_id": "2067301",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "known Data Communications Module (DCM) issue",
+        "source_id": "2067301",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a third battery at 49k miles, repeated battery drain/failure, and the car dying again today. Similar 2020 Outback cases describe battery drain tied to the Data Communication Module remaining active. No rulebook, recall, or investigation entry matches this case, so a standard battery drain/parasitic draw test is appropriate rather than a targeted rulebook test.",
+    "requested_info": [],
+    "summary": "Test for excessive parasitic battery drain on a 2020 Subaru Outback with repeated dead batteries and suspected DCM draw.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2020 Subaru Outback. The contact stated while turning off the vehicle, the Data Communication Module (DCM) remained running, causing the battery to become drained twice. The vehicle was taken to a local dealer but was not yet diagnosed. The manufacturer was mad...",
+      "group": "electrical_general",
+      "id": "2002295",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 26.3809,
+      "year": 2020
+    },
+    {
+      "excerpt": "I PURCHASED A NEW 2020 OUTBACK ONYX XT IN FALL 2019. IT GENERALLY HAD NO ISSUES AND RAN FINE WITH NORMAL DRIVING (EG DRIVING TO WORK AND ERRANDS EVERY DAY OR TWO). FALL OF 2020 (CAR AROUND 10,000 MILES) THE CAR RANDOMLY WAS FULLY DEAD (COULDN'T UNLOCK DOORS OR START THE ENGINE) O...",
+      "group": "electrical_general",
+      "id": "1730676",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 16.0402,
+      "year": 2020
+    },
+    {
+      "excerpt": "Our car would not start. Lots of clicking and lights on the dash. It was parked in the garage and was driven the day before. Car has around 900 miles on it. I ordered a 1.5 amp charger/maintainer online. AAA came the following day, diagnosed it as a low charge on the battery and...",
+      "group": "electrical_general",
+      "id": "1749699",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 15.6119,
+      "year": 2020
+    },
+    {
+      "excerpt": "BATTERY FAILED WITHIN 1 MONTH OF NEW CAR PURCHASE. TECHNICIAN INITIALLY SAID IT WAS DUE TO REAR DOME LIGHT BEING LEFT ON (DID NOT THINK THIS WAS THE CASE). AFTER REPEATEDLY RETURNING TO THE CAR IN THE MORNINGS TO FIND DRAINED BATTERY, HAD TO PURCHASE BACK UP JUMPING DEVICE TO ENS...",
+      "group": "electrical_general",
+      "id": "1702275",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 15.2944,
+      "year": 2020
+    },
+    {
+      "excerpt": "MY 2020 SUBARU OUTBACK WAS PARKED IN MY HOME GARAGE FROM ABOUT NOON ON TUESDAY UNTIL I TRIED TO GO AT ABOUT 4 PM THE NEXT SUNDAY. THE CAR WOULD NOT START AND THERE WAS NO CLEAR REASON WHY. I CALLED FOR ROAD SIDE SERVICE AND MADE ARRANGEMENTS FOR THEM TO COME MONDAY MORNING TO TRY...",
+      "group": "electrical_general",
+      "id": "1662665",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 15.1234,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-19T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012285,
+      "duration_ms": 12941,
+      "reason": "2020 Subaru Outback electrical system: repeated battery drain/failure and third battery at 49k miles; car died again today.",
+      "started_at": "2025-02-19T07:00:21Z",
+      "step": 2,
+      "tokens": 2484,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-19T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "OUTBACK",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Subaru Outback. The contact stated while turning off the vehicle, the Data Communication Module (DCM) remained running, causing the battery to become drained twice. The vehicle was taken to a local dealer but was not yet diagnosed. The manufacturer was mad...",
+            "group": "electrical_general",
+            "id": "2002295",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 26.3809,
+            "year": 2020
+          },
+          {
+            "excerpt": "I PURCHASED A NEW 2020 OUTBACK ONYX XT IN FALL 2019. IT GENERALLY HAD NO ISSUES AND RAN FINE WITH NORMAL DRIVING (EG DRIVING TO WORK AND ERRANDS EVERY DAY OR TWO). FALL OF 2020 (CAR AROUND 10,000 MILES) THE CAR RANDOMLY WAS FULLY DEAD (COULDN'T UNLOCK DOORS OR START THE ENGINE) O...",
+            "group": "electrical_general",
+            "id": "1730676",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 16.0402,
+            "year": 2020
+          },
+          {
+            "excerpt": "Our car would not start. Lots of clicking and lights on the dash. It was parked in the garage and was driven the day before. Car has around 900 miles on it. I ordered a 1.5 amp charger/maintainer online. AAA came the following day, diagnosed it as a low charge on the battery and...",
+            "group": "electrical_general",
+            "id": "1749699",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 15.6119,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-19T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-02-19T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "For our 2020 Subaru Outback, we are on our 3rd battery at only 49k miles. The car died again today. Thankfully AAA was able to jump it after a friend tried unsuccessfully. We suspect all of this battery drain, failure and replacement has been due to the known Data Communications Module (DCM) issue on recent Subaru’s. I have an appt w the dealer in Santa Monica tomorrow morning to have it diagnosed."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Subaru Outback. The contact stated while turning off the vehicle, the Data Communication Module (DCM) remained running, causing the battery to become drained twice. The vehicle was taken to a local dealer but was not yet diagnosed. The manufacturer was mad...",
+            "group": "electrical_general",
+            "id": "2002295",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 26.3809,
+            "year": 2020
+          },
+          {
+            "excerpt": "I PURCHASED A NEW 2020 OUTBACK ONYX XT IN FALL 2019. IT GENERALLY HAD NO ISSUES AND RAN FINE WITH NORMAL DRIVING (EG DRIVING TO WORK AND ERRANDS EVERY DAY OR TWO). FALL OF 2020 (CAR AROUND 10,000 MILES) THE CAR RANDOMLY WAS FULLY DEAD (COULDN'T UNLOCK DOORS OR START THE ENGINE) O...",
+            "group": "electrical_general",
+            "id": "1730676",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 16.0402,
+            "year": 2020
+          },
+          {
+            "excerpt": "Our car would not start. Lots of clicking and lights on the dash. It was parked in the garage and was driven the day before. Car has around 900 miles on it. I ordered a 1.5 amp charger/maintainer online. AAA came the following day, diagnosed it as a low charge on the battery and...",
+            "group": "electrical_general",
+            "id": "1749699",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 15.6119,
+            "year": 2020
+          },
+          {
+            "excerpt": "BATTERY FAILED WITHIN 1 MONTH OF NEW CAR PURCHASE. TECHNICIAN INITIALLY SAID IT WAS DUE TO REAR DOME LIGHT BEING LEFT ON (DID NOT THINK THIS WAS THE CASE). AFTER REPEATEDLY RETURNING TO THE CAR IN THE MORNINGS TO FIND DRAINED BATTERY, HAD TO PURCHASE BACK UP JUMPING DEVICE TO ENS...",
+            "group": "electrical_general",
+            "id": "1702275",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 15.2944,
+            "year": 2020
+          },
+          {
+            "excerpt": "MY 2020 SUBARU OUTBACK WAS PARKED IN MY HOME GARAGE FROM ABOUT NOON ON TUESDAY UNTIL I TRIED TO GO AT ABOUT 4 PM THE NEXT SUNDAY. THE CAR WOULD NOT START AND THERE WAS NO CLEAR REASON WHY. I CALLED FOR ROAD SIDE SERVICE AND MADE ARRANGEMENTS FOR THEM TO COME MONDAY MORNING TO TRY...",
+            "group": "electrical_general",
+            "id": "1662665",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 15.1234,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-19T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "SUBARU",
+        "model": "OUTBACK",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-19T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "SUBARU",
+        "model": "OUTBACK",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-19T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006975,
+      "duration_ms": 6188,
+      "reason": "The narrative reports a third battery at 49k miles, repeated battery drain/failure, and the car dying again today. Similar 2020 Outback cases describe battery drain tied to the Data Communication Module remaining active. No rulebook, recall, or investigation entry matches this case, so a standard battery drain/parasitic draw test is appropriate rather than a targeted rulebook test.",
+      "started_at": "2025-02-19T07:00:28Z",
+      "step": 9,
+      "tokens": 2319,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 1 dropped",
+      "started_at": "2025-02-19T07:00:29Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM",
+          "on our 3rd battery at only 49k miles",
+          "The car died again today.",
+          "battery drain, failure and replacement",
+          "known Data Communications Module (DCM) issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 1,
+        "verified": 4
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-02-19T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-19T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-19T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-19T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-19T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

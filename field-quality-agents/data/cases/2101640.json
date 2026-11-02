@@ -1,0 +1,351 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2101640",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "LIBERTY",
+    "narrative": "1. Air bag light stays on 2. ABS light stays on  3. ESP BAS light stays on  The vehicle has not been inspected and is available for inspection",
+    "received_at": "2025-06-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2101640",
+    "status": "decided",
+    "year": 2009
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2101640",
+    "decided_at": "2025-06-18T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2101640",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Air bag light stays on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ABS light stays on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ESP BAS light stays on"
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle has not been inspected and is available for inspection"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the electrical system with a standard diagnostic inspection because the airbag, ABS, and ESP BAS warning lights stay on and the vehicle is uninspected.",
+    "symptoms": [
+      "air bag warning light stays on",
+      "ABS warning light stays on",
+      "ESP BAS warning light stays on"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "DP14004",
+      "match": true,
+      "open_date": "2014-09-25",
+      "summary": "In a letter dated August 21, 2014, the Center for Auto Safety (CAS) petitioned the National Highway Traffic Safety Administration (NHTSA) to initiate a defect investigation of alleged failures associated with the Totally Integrated Power Module (TIPM) installed in Chrysler SUV?s, trucks, and vans beginning in the 2007 model year. The petitioner alleges that TIPM defects may result in engine stall, airbag non-deployment, failure of fuel pump shutoff resulting in unintended acceleration, fire, and other symptoms. On September 25, 2014, the Office of Defects Investigation (ODI) opened DP14-004 to evaluate the petition for a grant or deny decision. ODI analyzed complaint data provided by CAS as well as complaints submitted to ODI from consumers. In total, there were 296 complaints submitted by the petitioner in the original petition and five supplements, including 271 complaints related to the subject vehicles equipped with TIPM-7. Approximately 3 percent of CAS complaints are related to vehicles equipped with TIPM-6 and ODI?s review of these complaints did not identify any safety defect trends. ODI conducted a detailed review of complaints narratives submitted by CAS and consumers including careful analysis of vehicle repair histories, warranty claims obtained from the manufacturer and any available Customer Assistance Inquiry reports (CAIR). Analysis of the field data indicated that MY2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles exhibited significantly higher complaint rates related to fuel pump relay (FPR) failures than other subject vehicles. In a September 3, 2014 letter to NHTSA, Chrysler submitted a Defect Information Report (DIR) identifying a defect in the FPR within the TIPM-7 which can result in a no start or stall condition in approximately 188,723 model year (MY) 2011 Jeep Grand Cherokee (WK) and Dodge Durango (WD) vehicles manufactured from January 5, 2010 through July 20, 2011 (14V-530).In a February 24, 2015 letter, Chrysler submitted a second DIR expanding the scope of the FPR defect condition to include an additional 338,216 MY 2012 through 2013 Jeep Grand Cherokee vehicles manufactured from September 17, 2010 through August 19, 2013 and MY 2012 through 2013 Dodge Durango vehicles manufactured from January 18, 2011 through August 19, 2013 (15V-115).ODI analysis of the CAS allegations of TIPM defects resulting in stall while driving, airbag non-deployment, unintended acceleration, fire and other faults identified a single defect condition related to 1 of over 60 different circuits in the TIPM assembly. The most common effect of this defect condition, related to the fuel pump relay, was a no-start concern, but it could also result in stall while driving (76 complaints). No valid evidence was presented in support of claims related to airbag non-deployment, unintended acceleration or fire resulting from TIPM faults and these claims were found to be wholly without merit based on review of the field data and design of the relevant systems and components.Except insofar as the petitioner's contentions relate to the defect condition addressed by the Chrysler recalls, the factual bases of the petitioner's contentions that any further investigation is necessary are unsupported. In our view, additional investigation is unlikely to result in a finding that a defect related to motor vehicle safety exists or a NHTSA order for the notification and remedy of a safety-related defect as alleged by the petitioner at the conclusion of the requested investigation. Therefore, in view of the need to allocate and prioritize NHTSA's limited resources to best accomplish the agency's safety mission, the petition is den"
+    }
+  ],
+  "proposal": {
+    "case_id": "2101640",
+    "created_at": "2025-06-18T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Air bag light stays on",
+        "source_id": "2101640",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "ABS light stays on",
+        "source_id": "2101640",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "ESP BAS light stays on",
+        "source_id": "2101640",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle has not been inspected and is available for inspection",
+        "source_id": "2101640",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports three warning lights staying on but gives no inspection findings, fault codes, or conditions that match a rulebook entry. With no targeted rulebook test or recall available, the appropriate next step is a standard electrical diagnostic test to verify the warnings and associated circuits.",
+    "requested_info": [],
+    "summary": "Test the electrical system with a standard diagnostic inspection because the airbag, ABS, and ESP BAS warning lights stay on and the vehicle is uninspected.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-18T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005896,
+      "duration_ms": 7201,
+      "reason": "Electrical system: air bag, ABS, and ESP BAS warning lights stay on; vehicle not inspected.",
+      "started_at": "2025-06-18T07:00:16Z",
+      "step": 2,
+      "tokens": 1466,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-06-18T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2009
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-06-18T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-18T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-06-18T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "1. Air bag light stays on 2. ABS light stays on  3. ESP BAS light stays on  The vehicle has not been inspected and is available for inspection"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-18T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2009
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-18T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2009
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM",
+            "group": "electrical_general",
+            "id": "DP14004",
+            "make": "JEEP",
+            "model": "LIBERTY",
+            "open_date": "2014-09-25",
+            "summary": "In a letter dated August 21, 2014, the Center for Auto Safety (CAS) petitioned the National Highway Traffic Safety Administration (NHTSA) to initiate a defect investigation of alleged failures associated with the Totally Integrated Power Module (TIPM) installed in Chrysler SUV?s, trucks, and vans beginning in the 2007 model year. The petitioner alleges that TIPM defects may result in engine stall, airbag non-deployment, failure of fuel pump shutoff resulting in unintended acceleration, fire, and other symptoms. On September 25, 2014, the Office of Defects Investigation (ODI) opened DP14-004 to evaluate the petition for a grant or deny decision. ODI analyzed complaint data provided by CAS as well as complaints submitted to ODI from consumers. In total, there were 296 complaints submitted by the petitioner in the original petition and five supplements, including 271 complaints related to the subject vehicles equipped with TIPM-7. Approximately 3 percent of CAS complaints are related to vehicles equipped with TIPM-6 and ODI?s review of these complaints did not identify any safety defect trends. ODI conducted a detailed review of complaints narratives submitted by CAS and consumers including careful analysis of vehicle repair histories, warranty claims obtained from the manufacturer and any available Customer Assistance Inquiry reports (CAIR). Analysis of the field data indicated that MY2011-2013 Jeep Grand Cherokee and Dodge Durango vehicles exhibited significantly higher complaint rates related to fuel pump relay (FPR) failures than other subject vehicles. In a September 3, 2014 letter to NHTSA, Chrysler submitted a Defect Information Report (DIR) identifying a defect in the FPR within the TIPM-7 which can result in a no start or stall condition in approximately 188,723 model year (MY) 2011 Jeep Grand Cherokee (WK) and Dodge Durango (WD) vehicles manufactured from January 5, 2010 through July 20, 2011 (14V-530).In a February 24, 2015 letter, Chrysler submitted a second DIR expanding the scope of the FPR defect condition to include an additional 338,216 MY 2012 through 2013 Jeep Grand Cherokee vehicles manufactured from September 17, 2010 through August 19, 2013 and MY 2012 through 2013 Dodge Durango vehicles manufactured from January 18, 2011 through August 19, 2013 (15V-115).ODI analysis of the CAS allegations of TIPM defects resulting in stall while driving, airbag non-deployment, unintended acceleration, fire and other faults identified a single defect condition related to 1 of over 60 different circuits in the TIPM assembly. The most common effect of this defect condition, related to the fuel pump relay, was a no-start concern, but it could also result in stall while driving (76 complaints). No valid evidence was presented in support of claims related to airbag non-deployment, unintended acceleration or fire resulting from TIPM faults and these claims were found to be wholly without merit based on review of the field data and design of the relevant systems and components.Except insofar as the petitioner's contentions relate to the defect condition addressed by the Chrysler recalls, the factual bases of the petitioner's contentions that any further investigation is necessary are unsupported. In our view, additional investigation is unlikely to result in a finding that a defect related to motor vehicle safety exists or a NHTSA order for the notification and remedy of a safety-related defect as alleged by the petitioner at the conclusion of the requested investigation. Therefore, in view of the need to allocate and prioritize NHTSA's limited resources to best accomplish the agency's safety mission, the petition is den",
+            "year": 2009
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-18T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00140955,
+      "duration_ms": 15950,
+      "reason": "The narrative reports three warning lights staying on but gives no inspection findings, fault codes, or conditions that match a rulebook entry. With no targeted rulebook test or recall available, the appropriate next step is a standard electrical diagnostic test to verify the warnings and associated circuits.",
+      "started_at": "2025-06-18T07:00:24Z",
+      "step": 10,
+      "tokens": 3538,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-06-18T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Air bag light stays on",
+          "ABS light stays on",
+          "ESP BAS light stays on",
+          "The vehicle has not been inspected and is available for inspection"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-18T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-18T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-18T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-18T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2062646",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Back and buttocks area suffered electrical burns and pain from Tesla Seat Heaters (in heated seats) twice 1. Happened in 2024 on temperature level 3 2 Although I turned it down it happened again in 2025 on temperature level 2",
+    "received_at": "2025-02-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2062646",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2062646",
+    "decided_at": "2025-02-04T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2062646",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "electrical burns and pain"
+      },
+      {
+        "kind": "condition",
+        "quote": "temperature level 3"
+      },
+      {
+        "kind": "condition",
+        "quote": "temperature level 2"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "safety",
+        "quote": "electrical burns"
+      },
+      {
+        "kind": "other",
+        "quote": "twice"
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Tesla Model 3 seat heaters caused electrical burns and pain in back/buttocks at temperature level 3 in 2024 and level 2 in 2025.",
+    "symptoms": [
+      "electrical burns",
+      "pain"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2062646",
+    "created_at": "2025-02-04T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Left headlight blinker and windshield wiper not working. Happened twice once in 2022 and now. Repaired once in 2022 and when happens is dangerous because can’t signal and can’t use wipers in the rain",
+      "group": "electrical_general",
+      "id": "1886558",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 5.1134,
+      "year": 2020
+    },
+    {
+      "excerpt": "The problem is my car has been in the shop six times for an issue that Tesla claims it is unable to fix. I started smelling a burning smell (smoke coming from my air vents anytime the air is on) and brought it in. The first three times they were unable to find anything the fourth...",
+      "group": "electrical_general",
+      "id": "1872866",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 4.1574,
+      "year": 2020
+    },
+    {
+      "excerpt": "On August 2, 2023 at 0400, the Tesla M3 was charging in the garage using a home charger. Smoke indicative of an electrical fire likely originated from the vehicle and eventually triggered a smoke alarm in the kitchen. The driver was unaware the source of the smoke was the Tesla,...",
+      "group": "electrical_general",
+      "id": "1916582",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 3.1895,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-04T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007489,
+      "duration_ms": 13700,
+      "reason": "Tesla Model 3 seat heaters caused electrical burns and pain in back/buttocks at temperature level 3 in 2024 and level 2 in 2025.",
+      "started_at": "2025-02-04T07:00:16Z",
+      "step": 2,
+      "tokens": 1748,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-04T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Left headlight blinker and windshield wiper not working. Happened twice once in 2022 and now. Repaired once in 2022 and when happens is dangerous because can’t signal and can’t use wipers in the rain",
+            "group": "electrical_general",
+            "id": "1886558",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 5.1134,
+            "year": 2020
+          },
+          {
+            "excerpt": "The problem is my car has been in the shop six times for an issue that Tesla claims it is unable to fix. I started smelling a burning smell (smoke coming from my air vents anytime the air is on) and brought it in. The first three times they were unable to find anything the fourth...",
+            "group": "electrical_general",
+            "id": "1872866",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 4.1574,
+            "year": 2020
+          },
+          {
+            "excerpt": "On August 2, 2023 at 0400, the Tesla M3 was charging in the garage using a home charger. Smoke indicative of an electrical fire likely originated from the vehicle and eventually triggered a smoke alarm in the kitchen. The driver was unaware the source of the smoke was the Tesla,...",
+            "group": "electrical_general",
+            "id": "1916582",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 3.1895,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-04T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-04T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-04T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-04T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-04T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-04T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-04T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

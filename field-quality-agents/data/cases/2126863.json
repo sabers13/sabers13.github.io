@@ -1,0 +1,321 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2126863",
+    "make": "MAZDA",
+    "mileage": null,
+    "model": "CX-5",
+    "narrative": "The adaptive headlight system and motor in 2023 Mazda CX-5 has defect and it makes buzzing noise and vibration. It was recognized by Mazda and its known defect. They should replace the defective headlight system even after the warranty period since this is not normal wear and tear part.",
+    "received_at": "2025-09-04",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2126863",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2126863",
+    "decided_at": "2025-09-04T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2126863",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "adaptive headlight system and motor"
+      },
+      {
+        "kind": "symptom",
+        "quote": "buzzing noise and vibration"
+      },
+      {
+        "kind": "other",
+        "quote": "known defect"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Test the 2023 Mazda CX-5 adaptive headlight system/motor for buzzing noise and vibration to verify the reported defect.",
+    "symptoms": [
+      "buzzing noise",
+      "vibration"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2126863",
+    "created_at": "2025-09-04T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "adaptive headlight system and motor",
+        "source_id": "2126863",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "buzzing noise and vibration",
+        "source_id": "2126863",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "known defect",
+        "source_id": "2126863",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports that the adaptive headlight system and motor make buzzing noise and vibration and describes it as a known defect. No matching rulebook entry, recall, investigation, or similar case was returned, so this is not a targeted rulebook load test; a standard lighting system function check is appropriate.",
+    "requested_info": [],
+    "summary": "Test the 2023 Mazda CX-5 adaptive headlight system/motor for buzzing noise and vibration to verify the reported defect.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-04T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00085225,
+      "duration_ms": 10237,
+      "reason": "EXTERIOR LIGHTING adaptive headlight system/motor in 2023 Mazda CX-5 buzzes and vibrates; reported as known defect, no conditions given.",
+      "started_at": "2025-09-04T07:00:16Z",
+      "step": 2,
+      "tokens": 1924,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-09-04T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MAZDA",
+        "model": "CX-5",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-09-04T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-04T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-09-04T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The adaptive headlight system and motor in 2023 Mazda CX-5 has defect and it makes buzzing noise and vibration. It was recognized by Mazda and its known defect. They should replace the defective headlight system even after the warranty period since this is not normal wear and tear part."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-04T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "MAZDA",
+        "model": "CX-5",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-04T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "MAZDA",
+        "model": "CX-5",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-04T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00041265,
+      "duration_ms": 4534,
+      "reason": "The narrative reports that the adaptive headlight system and motor make buzzing noise and vibration and describes it as a known defect. No matching rulebook entry, recall, investigation, or similar case was returned, so this is not a targeted rulebook load test; a standard lighting system function check is appropriate.",
+      "started_at": "2025-09-04T07:00:24Z",
+      "step": 10,
+      "tokens": 1239,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-09-04T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "adaptive headlight system and motor",
+          "buzzing noise and vibration",
+          "known defect"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-04T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-04T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-04T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-04T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

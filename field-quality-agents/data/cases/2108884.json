@@ -1,0 +1,253 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2108884",
+    "make": "LAND ROVER",
+    "mileage": null,
+    "model": "RANGE ROVER SPORT",
+    "narrative": "My vehicle as well received an electric fault message shortly before loosing all electrical power. When I say all I mean all as if someone removed the battery from the car. The issue that was described to me from the service department was the low voltage (12v) to high voltage (48v) I think dc to dc converter shorted out. They said this was the first device after the battery and contained all the battery saftey circuits. It allowed the LiFo battery to reach zero volts and they didn't replace the battery afterwards. When this happened I lost all power steering, lights, ability to use the roadside assistance.",
+    "received_at": "2025-07-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2108884",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108884",
+    "decided_at": "2025-07-11T07:01:19Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2108884",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My vehicle as well received an electric fault message shortly before loosing all electrical power."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I lost all power steering, lights, ability to use the roadside assistance."
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "other",
+        "quote": "the low voltage (12v) to high voltage (48v) I think dc to dc converter shorted out"
+      },
+      {
+        "kind": "safety",
+        "quote": "I lost all power steering, lights"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Range Rover Sport electrical system: electric fault message then total electrical power loss, with power steering and lights lost; suspected 12V–48V DC-DC converter short.",
+    "symptoms": [
+      "electric fault message",
+      "total loss of electrical power",
+      "loss of power steering",
+      "loss of lights",
+      "inability to use roadside assistance"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108884",
+    "created_at": "2025-07-11T07:01:17Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Sadly, I have to report that I have not had my truck for more than 2 weeks and I had to already bring it to the dealerships for diagnostic evaluation for an Electrical fault detection message. As per the service department the vehicle needs a new Alternator. Hence, needing an alt...",
+      "group": "electrical_general",
+      "id": "1931896",
+      "make": "LAND ROVER",
+      "model": "RANGE ROVER SPORT",
+      "score": 5.1587,
+      "year": 2023
+    },
+    {
+      "excerpt": "The car had a warning light in December “stop safely electrical fault detected” Land Rover dealership told me nothing was wrong, except I don’t drive enough & the battery was low. Eventually, the warning went away. This week, the warning light was back, along with additional warn...",
+      "group": "electrical_general",
+      "id": "1966073",
+      "make": "LAND ROVER",
+      "model": "RANGE ROVER SPORT",
+      "score": 4.7753,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-11T07:01:11Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00063835,
+      "duration_ms": 8352,
+      "reason": "Range Rover Sport electrical system: electric fault message then total electrical power loss, with power steering and lights lost; suspected 12V–48V DC-DC converter short.",
+      "started_at": "2025-07-11T07:01:12Z",
+      "step": 2,
+      "tokens": 1620,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-07-11T07:01:13Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "LAND ROVER",
+        "model": "RANGE ROVER SPORT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Sadly, I have to report that I have not had my truck for more than 2 weeks and I had to already bring it to the dealerships for diagnostic evaluation for an Electrical fault detection message. As per the service department the vehicle needs a new Alternator. Hence, needing an alt...",
+            "group": "electrical_general",
+            "id": "1931896",
+            "make": "LAND ROVER",
+            "model": "RANGE ROVER SPORT",
+            "score": 5.1587,
+            "year": 2023
+          },
+          {
+            "excerpt": "The car had a warning light in December “stop safely electrical fault detected” Land Rover dealership told me nothing was wrong, except I don’t drive enough & the battery was low. Eventually, the warning went away. This week, the warning light was back, along with additional warn...",
+            "group": "electrical_general",
+            "id": "1966073",
+            "make": "LAND ROVER",
+            "model": "RANGE ROVER SPORT",
+            "score": 4.7753,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-11T07:01:14Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-11T07:01:15Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-11T07:01:16Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-11T07:01:18Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-11T07:01:20Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-11T07:01:21Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-11T07:01:22Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

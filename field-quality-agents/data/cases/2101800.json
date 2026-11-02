@@ -1,0 +1,438 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2101800",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "RIDGELINE",
+    "narrative": "In then last 6 months  my Honda Ridgeline fell to restart engine at the stoplight 7 times",
+    "received_at": "2025-06-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2101800",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2101800",
+    "decided_at": "2025-06-18T07:01:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2101800",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "fell to restart engine"
+      },
+      {
+        "kind": "condition",
+        "quote": "at the stoplight"
+      },
+      {
+        "kind": "condition",
+        "quote": "7 times"
+      },
+      {
+        "kind": "condition",
+        "quote": "In then last 6 months"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "at stoplight",
+      "7 times in last 6 months"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the intermittent engine no-restart at stoplights with the rulebook's long-run power cycling test.",
+    "symptoms": [
+      "engine failed to restart at stoplight"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2101800",
+    "created_at": "2025-06-18T07:01:21Z",
+    "evidence": [
+      {
+        "quote": "fell to restart engine",
+        "source_id": "2101800",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "at the stoplight",
+        "source_id": "2101800",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "7 times",
+        "source_id": "2101800",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "In then last 6 months",
+        "source_id": "2101800",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The Ridgeline's engine failed to restart at a stoplight seven times over six months, and the extraction classifies the condition as intermittent. The rulebook maps intermittent faults to a long-run power cycling test.",
+    "requested_info": [],
+    "summary": "Test the intermittent engine no-restart at stoplights with the rulebook's long-run power cycling test.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent",
+        "at stoplight",
+        "7 times in last 6 months"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The Ridgeline's engine failed to restart at a stoplight seven times over six months, and the extraction classifies the condition as intermittent. The rulebook maps intermittent faults to a long-run power cycling test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Condition: truck is stopped, the auto engine idle is on Action: release the brake to press the accelerator Result: the truck fails to restart, shuts off the engine completely, puts itself in Neutral, and all the lights in the dash illuminate I have to place the truck in Park and...",
+      "group": "electrical_general",
+      "id": "1871045",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 8.0573,
+      "year": 2020
+    },
+    {
+      "excerpt": "rear view camera and rear traffic and warning systems stopped working. Honda diagnosed and repaired the wiring harness. NHTSA has opened an investigation PE24004 which appears to identical to the issue we have.",
+      "group": "electrical_general",
+      "id": "1967972",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 2.4505,
+      "year": 2020
+    },
+    {
+      "excerpt": "STOPPING AT A STOP LIGHT ON 10/4 & 09/27 ENGINE SHUT DOWN AND WOULDN'T START. pEOPLE BEHIND ME HONKING THEIR HORNS FOR ME TO GO. ENGINEWOULDN'T START AND HAD GONE FROMDR TO PARK. DASH SAID SOMETHINGLIKE PRESS BRAKE AND START BUTTON.THE WHOLE TIME THE LIGHT WAS GREEN,IR WOULDN'T S...",
+      "group": "electrical_general",
+      "id": "1845656",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 1.7083,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-18T07:01:10Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00125335,
+      "duration_ms": 14209,
+      "reason": "Honda Ridgeline electrical system: engine failed to restart at stoplight 7 times in 6 months.",
+      "started_at": "2025-06-18T07:01:11Z",
+      "step": 2,
+      "tokens": 2567,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-18T07:01:12Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Condition: truck is stopped, the auto engine idle is on Action: release the brake to press the accelerator Result: the truck fails to restart, shuts off the engine completely, puts itself in Neutral, and all the lights in the dash illuminate I have to place the truck in Park and...",
+            "group": "electrical_general",
+            "id": "1871045",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 8.0573,
+            "year": 2020
+          },
+          {
+            "excerpt": "rear view camera and rear traffic and warning systems stopped working. Honda diagnosed and repaired the wiring harness. NHTSA has opened an investigation PE24004 which appears to identical to the issue we have.",
+            "group": "electrical_general",
+            "id": "1967972",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 2.4505,
+            "year": 2020
+          },
+          {
+            "excerpt": "STOPPING AT A STOP LIGHT ON 10/4 & 09/27 ENGINE SHUT DOWN AND WOULDN'T START. pEOPLE BEHIND ME HONKING THEIR HORNS FOR ME TO GO. ENGINEWOULDN'T START AND HAD GONE FROMDR TO PARK. DASH SAID SOMETHINGLIKE PRESS BRAKE AND START BUTTON.THE WHOLE TIME THE LIGHT WAS GREEN,IR WOULDN'T S...",
+            "group": "electrical_general",
+            "id": "1845656",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 1.7083,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-18T07:01:13Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-18T07:01:14Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-06-18T07:01:15Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "In then last 6 months  my Honda Ridgeline fell to restart engine at the stoplight 7 times"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Condition: truck is stopped, the auto engine idle is on Action: release the brake to press the accelerator Result: the truck fails to restart, shuts off the engine completely, puts itself in Neutral, and all the lights in the dash illuminate I have to place the truck in Park and...",
+            "group": "electrical_general",
+            "id": "1871045",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 8.0573,
+            "year": 2020
+          },
+          {
+            "excerpt": "rear view camera and rear traffic and warning systems stopped working. Honda diagnosed and repaired the wiring harness. NHTSA has opened an investigation PE24004 which appears to identical to the issue we have.",
+            "group": "electrical_general",
+            "id": "1967972",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 2.4505,
+            "year": 2020
+          },
+          {
+            "excerpt": "STOPPING AT A STOP LIGHT ON 10/4 & 09/27 ENGINE SHUT DOWN AND WOULDN'T START. pEOPLE BEHIND ME HONKING THEIR HORNS FOR ME TO GO. ENGINEWOULDN'T START AND HAD GONE FROMDR TO PARK. DASH SAID SOMETHINGLIKE PRESS BRAKE AND START BUTTON.THE WHOLE TIME THE LIGHT WAS GREEN,IR WOULDN'T S...",
+            "group": "electrical_general",
+            "id": "1845656",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 1.7083,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-18T07:01:16Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-18T07:01:17Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-18T07:01:18Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007746,
+      "duration_ms": 9944,
+      "reason": "The Ridgeline's engine failed to restart at a stoplight seven times over six months, and the extraction classifies the condition as intermittent. The rulebook maps intermittent faults to a long-run power cycling test.",
+      "started_at": "2025-06-18T07:01:19Z",
+      "step": 10,
+      "tokens": 2149,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-06-18T07:01:20Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "fell to restart engine",
+          "at the stoplight",
+          "7 times",
+          "In then last 6 months"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-18T07:01:22Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-18T07:01:24Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-18T07:01:25Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-18T07:01:26Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

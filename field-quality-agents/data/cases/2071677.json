@@ -1,0 +1,494 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2071677",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "CAMRY",
+    "narrative": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was contacted and confirmed that parts were not yet available. The manufacturer was not made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-03-06",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2071677",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2071677",
+    "decided_at": "2025-03-06T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2071677",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Air Bags"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was unavailable"
+      },
+      {
+        "kind": "condition",
+        "quote": "parts were not yet available"
+      },
+      {
+        "kind": "condition",
+        "quote": "The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair."
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Number: 23V865000 (Air Bags)"
+      }
+    ],
+    "conditions": [
+      "Recall repair parts unavailable",
+      "Manufacturer exceeded a reasonable amount of time for the recall repair"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "No failure reported; verify recall 23V865000 remedy availability for the OCS sensor air bag recall and perform the standard restraints inspection.",
+    "symptoms": [
+      "No failure experienced"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2071677",
+    "created_at": "2025-03-06T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Air Bags",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was unavailable",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "parts were not yet available",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair.",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 23V865000 (Air Bags)",
+        "source_id": "2071677",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The case is a 2021 Toyota Camry with recall 23V865000 for an occupant classification system sensor that may prevent front passenger air bag deployment. The owner reports no failure, but the dealer confirmed recall repair parts were not yet available and the manufacturer exceeded a reasonable repair time. No rulebook entry names a targeted test, so the standard test is appropriate.",
+    "requested_info": [],
+    "summary": "No failure reported; verify recall 23V865000 remedy availability for the OCS sensor air bag recall and perform the standard restraints inspection.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "23V865000",
+      "match": true,
+      "open_date": "2023-12-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short circuit may develop in the Occupant Classification System (OCS) sensor, preventing the front passenger air bag from deploying."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "The contact's wife owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was made aware of the issue and confirmed that parts were not yet availa...",
+      "group": "restraints",
+      "id": "1977188",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 41.1433,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonab...",
+      "group": "restraints",
+      "id": "2005086",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 40.5305,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (AIR BAGS); however, the part to do the recall repair was not yet available. The contact stated that occasionally the sensors activated while driving at various speeds. The...",
+      "group": "restraints",
+      "id": "2037699",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 33.2017,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Toyota Camry. The contact stated that while driving approximately 45 mph, the brakes were activated but, it was T- boned by an unknown van and pushed across three lanes of traffic. There were no warning indicator lights illuminated. The air bags did not de...",
+      "group": "restraints",
+      "id": "1866706",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 9.8209,
+      "year": 2021
+    },
+    {
+      "excerpt": "Toyota announced a recall in December 2023, and has not yet provided a repair for this.",
+      "group": "restraints",
+      "id": "2029410",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 4.1564,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-06T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00108345,
+      "duration_ms": 12547,
+      "reason": "AIR BAGS: no failure experienced; recall repair parts unavailable.",
+      "started_at": "2025-03-06T07:00:16Z",
+      "step": 2,
+      "tokens": 2243,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-06T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact's wife owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was made aware of the issue and confirmed that parts were not yet availa...",
+            "group": "restraints",
+            "id": "1977188",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 41.1433,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonab...",
+            "group": "restraints",
+            "id": "2005086",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 40.5305,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (AIR BAGS); however, the part to do the recall repair was not yet available. The contact stated that occasionally the sensors activated while driving at various speeds. The...",
+            "group": "restraints",
+            "id": "2037699",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 33.2017,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-06T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-03-06T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-03-06T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was contacted and confirmed that parts were not yet available. The manufacturer was not made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact's wife owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was made aware of the issue and confirmed that parts were not yet availa...",
+            "group": "restraints",
+            "id": "1977188",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 41.1433,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a reasonab...",
+            "group": "restraints",
+            "id": "2005086",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 40.5305,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Camry. The contact received notification of NHTSA Campaign Number: 23V865000 (AIR BAGS); however, the part to do the recall repair was not yet available. The contact stated that occasionally the sensors activated while driving at various speeds. The...",
+            "group": "restraints",
+            "id": "2037699",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 33.2017,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Camry. The contact stated that while driving approximately 45 mph, the brakes were activated but, it was T- boned by an unknown van and pushed across three lanes of traffic. There were no warning indicator lights illuminated. The air bags did not de...",
+            "group": "restraints",
+            "id": "1866706",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 9.8209,
+            "year": 2021
+          },
+          {
+            "excerpt": "Toyota announced a recall in December 2023, and has not yet provided a repair for this.",
+            "group": "restraints",
+            "id": "2029410",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 4.1564,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-03-06T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+            "group": "restraints",
+            "id": "23V865000",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "open_date": "2023-12-20",
+            "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short circuit may develop in the Occupant Classification System (OCS) sensor, preventing the front passenger air bag from deploying.",
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-03-06T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-03-06T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008355,
+      "duration_ms": 9036,
+      "reason": "The case is a 2021 Toyota Camry with recall 23V865000 for an occupant classification system sensor that may prevent front passenger air bag deployment. The owner reports no failure, but the dealer confirmed recall repair parts were not yet available and the manufacturer exceeded a reasonable repair time. No rulebook entry names a targeted test, so the standard test is appropriate.",
+      "started_at": "2025-03-06T07:00:24Z",
+      "step": 10,
+      "tokens": 2528,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-03-06T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Air Bags",
+          "The contact had not experienced a failure.",
+          "the part to do the recall repair was unavailable",
+          "parts were not yet available",
+          "The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair.",
+          "NHTSA Campaign Number: 23V865000 (Air Bags)"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-06T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-03-06T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-06T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-06T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

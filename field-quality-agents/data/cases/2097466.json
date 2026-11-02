@@ -1,0 +1,270 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2097466",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "FORESTER",
+    "narrative": "In May 2025, I had the passenger-side mirror on my 2019 Subaru Forester replaced at a licensed Subaru dealership. I was told the replacement part would be factory-original and matched to the vehicle’s VIN, which specifies a dark metallic grey exterior. After the repair was completed, I noticed that the mirror casing was the wrong color — a visibly lighter grey than the rest of the car.  While the mirror is functional and undamaged, the color mismatch may affect how other drivers perceive the vehicle, especially during lane changes or turns. In certain lighting or weather conditions, the inconsistency could potentially cause confusion or misinterpretation of the car’s shape or position. The dealership acknowledged that the wrong part color was used based on my VIN, but refused to replace it without full repayment.  There were no warning lights or error messages associated with the issue. The part is still installed on the vehicle and available for inspection. I am reporting this as a consumer concern regarding improper VIN-matched component replacement, which may pose a minor but notable risk to the awareness and safety of other drivers.",
+    "received_at": "2025-06-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2097466",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2097466",
+    "decided_at": "2025-06-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2097466",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "passenger-side mirror"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the mirror casing was the wrong color"
+      },
+      {
+        "kind": "condition",
+        "quote": "After the repair was completed"
+      },
+      {
+        "kind": "other",
+        "quote": "The dealership acknowledged that the wrong part color was used based on my VIN"
+      },
+      {
+        "kind": "safety",
+        "quote": "may pose a minor but notable risk to the awareness and safety of other drivers"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Passenger-side mirror replacement on a 2019 Subaru Forester: wrong/lighter grey casing after dealership service; functional with no warnings, but reported as a driver-perception concern.",
+    "symptoms": [
+      "mirror casing is the wrong color, visibly lighter grey than the vehicle",
+      "color mismatch may affect how other drivers perceive the vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2097466",
+    "created_at": "2025-06-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "MY WINDSHIELD CRACKED DUE TO COLD WEATHER, WHILE STATIONARY IN MY DRIVEWAY, WITHOUT ANY PREVIOUS CHIPS OR IMPACTS. I CALLED THE DEALERSHIP TO ASK IF A REPLACEMENT WAS COVERED, AND WAS TOLD 'NOT A CHANCE. THAT JUST HAPPENS TO THOSE CARS.' UPON DOING SOME RESEARCH, I'VE FOUND OTHER...",
+      "group": "body_controls",
+      "id": "1707170",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 18.8884,
+      "year": 2019
+    },
+    {
+      "excerpt": "I WENT TO MY STATIONARY VEHICLE IN A.M.AND NOTICED THE WINDSHIELD HAD A LONG CRACK WITH NO APPARENT REASON. NO NICKS OR OTHER DAMAGE NOTED THAT COULD CAUSE THIS TO HAPPEN. I DIDN'T EVEN MAKE THE FIRST PAYMENT ON THE VEHICLE BEFORE THIS OCCURRED. AFTER CALLING NUMEROUS AFTERMARKET...",
+      "group": "body_controls",
+      "id": "1645220",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 17.8069,
+      "year": 2019
+    },
+    {
+      "excerpt": "APPROXIMATELY ONE MONTH AFTER PURCHASING A BRAND NEW SUBARU FORRESTER 2019 TOURING VEHICLE DIRECTLY FROM SUBARU, THE WINDSHIELD SUFFERED A CRACK. ON FEBRUARY 24, 2019, I WAS DRIVING THE VEHICLE ON A HIGHWAY IN CALIFORNIA WHEN A SMALL ROCK HIT THE WINDSHIELD AND CREATED A SMALL DE...",
+      "group": "body_controls",
+      "id": "1654512",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 16.7846,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00098035,
+      "duration_ms": 11524,
+      "reason": "Passenger-side mirror replacement on a 2019 Subaru Forester: wrong/lighter grey casing after dealership service; functional with no warnings, but reported as a driver-perception concern.",
+      "started_at": "2025-06-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2268,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "FORESTER",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "MY WINDSHIELD CRACKED DUE TO COLD WEATHER, WHILE STATIONARY IN MY DRIVEWAY, WITHOUT ANY PREVIOUS CHIPS OR IMPACTS. I CALLED THE DEALERSHIP TO ASK IF A REPLACEMENT WAS COVERED, AND WAS TOLD 'NOT A CHANCE. THAT JUST HAPPENS TO THOSE CARS.' UPON DOING SOME RESEARCH, I'VE FOUND OTHER...",
+            "group": "body_controls",
+            "id": "1707170",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 18.8884,
+            "year": 2019
+          },
+          {
+            "excerpt": "I WENT TO MY STATIONARY VEHICLE IN A.M.AND NOTICED THE WINDSHIELD HAD A LONG CRACK WITH NO APPARENT REASON. NO NICKS OR OTHER DAMAGE NOTED THAT COULD CAUSE THIS TO HAPPEN. I DIDN'T EVEN MAKE THE FIRST PAYMENT ON THE VEHICLE BEFORE THIS OCCURRED. AFTER CALLING NUMEROUS AFTERMARKET...",
+            "group": "body_controls",
+            "id": "1645220",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 17.8069,
+            "year": 2019
+          },
+          {
+            "excerpt": "APPROXIMATELY ONE MONTH AFTER PURCHASING A BRAND NEW SUBARU FORRESTER 2019 TOURING VEHICLE DIRECTLY FROM SUBARU, THE WINDSHIELD SUFFERED A CRACK. ON FEBRUARY 24, 2019, I WAS DRIVING THE VEHICLE ON A HIGHWAY IN CALIFORNIA WHEN A SMALL ROCK HIT THE WINDSHIELD AND CREATED A SMALL DE...",
+            "group": "body_controls",
+            "id": "1654512",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 16.7846,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-06-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2056315",
+    "make": "AUDI",
+    "mileage": 9826,
+    "model": "E-TRON GT",
+    "narrative": "The contact leased a 2023 Audi E-Tron GT. The contact stated that the message that the battery power was reduced to 70 percent was displayed. The contact stated that the battery failed to charge above 70 percent. The reduced performance warning light was illuminated. The contact received notification of NHTSA Campaign Number: 24V726000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The vehicle was not diagnosed or repaired. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The failure mileage was approximately 9,826. Parts distribution disconnect.",
+    "received_at": "2025-01-16",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2056315",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2056315",
+    "decided_at": "2025-01-16T07:00:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2056315",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the message that the battery power was reduced to 70 percent was displayed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the battery failed to charge above 70 percent"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The reduced performance warning light was illuminated."
+      },
+      {
+        "kind": "condition",
+        "quote": "failed to charge above 70 percent"
+      },
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run an electrical load test on the charging/electrical supply path because the E-Tron GT reports battery power reduced to 70% and will not charge above 70%.",
+    "symptoms": [
+      "battery power reduced to 70 percent message displayed",
+      "battery failed to charge above 70 percent",
+      "reduced performance warning light illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2056315",
+    "created_at": "2025-01-16T07:00:10Z",
+    "evidence": [
+      {
+        "quote": "the message that the battery power was reduced to 70 percent was displayed",
+        "source_id": "2056315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the battery failed to charge above 70 percent",
+        "source_id": "2056315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The reduced performance warning light was illuminated.",
+        "source_id": "2056315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failed to charge above 70 percent",
+        "source_id": "2056315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Electrical System",
+        "source_id": "2056315",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a 70% battery power reduction message, failure to charge above 70%, and an illuminated reduced performance warning light. The rulebook matches the reported charging condition to an Electrical load test, so a targeted test is appropriate.",
+    "requested_info": [],
+    "summary": "Run an electrical load test on the charging/electrical supply path because the E-Tron GT reports battery power reduced to 70% and will not charge above 70%.",
+    "targeted_test": {
+      "conditions": [
+        "charging"
+      ],
+      "name": "Electrical load test",
+      "reason": "The narrative reports a 70% battery power reduction message, failure to charge above 70%, and an illuminated reduced performance warning light. The rulebook matches the reported charging condition to an Electrical load test, so a targeted test is appropriate."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Multiple alerts reported by the car's system for electrical malfunction and steering wheel dysfunction. These alerts keep coming at least 3 times a week. Car has been to the dealership, Audi of Raleigh who has inspected the car 3 times and unable to find the problem. It would see...",
+      "group": "electrical_general",
+      "id": "1990665",
+      "make": "AUDI",
+      "model": "E-TRON GT",
+      "score": 0.863,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00138895,
+      "duration_ms": 23135,
+      "reason": "2023 Audi E-Tron GT electrical system — battery power reduced to 70%, will not charge above 70%, reduced performance warning light on.",
+      "started_at": "2025-01-16T07:00:01Z",
+      "step": 2,
+      "tokens": 2883,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-01-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "E-TRON GT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Multiple alerts reported by the car's system for electrical malfunction and steering wheel dysfunction. These alerts keep coming at least 3 times a week. Car has been to the dealership, Audi of Raleigh who has inspected the car 3 times and unable to find the problem. It would see...",
+            "group": "electrical_general",
+            "id": "1990665",
+            "make": "AUDI",
+            "model": "E-TRON GT",
+            "score": 0.863,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-01-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-01-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact leased a 2023 Audi E-Tron GT. The contact stated that the message that the battery power was reduced to 70 percent was displayed. The contact stated that the battery failed to charge above 70 percent. The reduced performance warning light was illuminated. The contact received notification of NHTSA Campaign Number: 24V726000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The vehicle was not diagnosed or repaired. T"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Multiple alerts reported by the car's system for electrical malfunction and steering wheel dysfunction. These alerts keep coming at least 3 times a week. Car has been to the dealership, Audi of Raleigh who has inspected the car 3 times and unable to find the problem. It would see...",
+            "group": "electrical_general",
+            "id": "1990665",
+            "make": "AUDI",
+            "model": "E-TRON GT",
+            "score": 0.863,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-01-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "AUDI",
+        "model": "E-TRON GT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-01-16T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "AUDI",
+        "model": "E-TRON GT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-01-16T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00065775,
+      "duration_ms": 10180,
+      "reason": "The narrative reports a 70% battery power reduction message, failure to charge above 70%, and an illuminated reduced performance warning light. The rulebook matches the reported charging condition to an Electrical load test, so a targeted test is appropriate.",
+      "started_at": "2025-01-16T07:00:08Z",
+      "step": 9,
+      "tokens": 1904,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-01-16T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "the message that the battery power was reduced to 70 percent was displayed",
+          "the battery failed to charge above 70 percent",
+          "The reduced performance warning light was illuminated.",
+          "failed to charge above 70 percent",
+          "Electrical System"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-16T07:00:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-01-16T07:00:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-16T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-16T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

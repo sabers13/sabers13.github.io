@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "group": "adas",
+    "id": "2076034",
+    "make": "POLESTAR",
+    "mileage": null,
+    "model": "POLESTAR 2",
+    "narrative": "The rear camera of my car frequently stops working, leaving me without a clear view behind. Though Polestar have attempted to improve this with OTA software updates, the problem has never truly gone away. The rear camera view is often \"temporarily unavailable\", it is also frequently lagging with frozen frames or video feed that misses frames.   There are many reports of this available online as other owners post to ownership forums and subreddits.",
+    "received_at": "2025-03-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2076034",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2076034",
+    "decided_at": "2025-03-21T07:00:36Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2076034",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The rear camera of my car frequently stops working"
+      },
+      {
+        "kind": "symptom",
+        "quote": "temporarily unavailable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "frequently lagging with frozen frames"
+      },
+      {
+        "kind": "symptom",
+        "quote": "video feed that misses frames"
+      },
+      {
+        "kind": "condition",
+        "quote": "frequently"
+      },
+      {
+        "kind": "other",
+        "quote": "OTA software updates"
+      },
+      {
+        "kind": "safety",
+        "quote": "leaving me without a clear view behind"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Rear camera frequently stops working, becomes temporarily unavailable, and lags, freezes, or misses frames; issue persists after OTA software updates.",
+    "symptoms": [
+      "rear camera stops working",
+      "rear camera view temporarily unavailable",
+      "rear camera lagging",
+      "frozen frames",
+      "video feed misses frames",
+      "no clear view behind"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2076034",
+    "created_at": "2025-03-21T07:00:34Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+      "group": "adas",
+      "id": "2030284",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 8.651,
+      "year": 2022
+    },
+    {
+      "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+      "group": "adas",
+      "id": "2033379",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 6.6726,
+      "year": 2022
+    },
+    {
+      "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+      "group": "adas",
+      "id": "2033380",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 6.6726,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-21T07:00:28Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017212,
+      "duration_ms": 24012,
+      "reason": "Rear camera frequently stops working, becomes temporarily unavailable, and lags, freezes, or misses frames; issue persists after OTA software updates.",
+      "started_at": "2025-03-21T07:00:29Z",
+      "step": 2,
+      "tokens": 3400,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-21T07:00:30Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+            "group": "adas",
+            "id": "2030284",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 8.651,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033379",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.6726,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033380",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.6726,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-21T07:00:31Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-21T07:00:32Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-21T07:00:33Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-21T07:00:35Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-21T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-21T07:00:38Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-21T07:00:39Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

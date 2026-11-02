@@ -1,0 +1,242 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2122002",
+    "make": "KIA",
+    "mileage": null,
+    "model": "OPTIMA",
+    "narrative": "My cars bulbs have been blowing on a regular basis for two years..some of the bulb connections are catching fire and exploding .Ive changed on numerous occasions but doesn’t matter even with new fittings…obviously an electric problem",
+    "received_at": "2025-08-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2122002",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2122002",
+    "decided_at": "2025-08-19T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2122002",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "bulbs have been blowing on a regular basis for two years"
+      },
+      {
+        "kind": "symptom",
+        "quote": "some of the bulb connections are catching fire and exploding"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Ive changed on numerous occasions"
+      },
+      {
+        "kind": "symptom",
+        "quote": "even with new fittings"
+      },
+      {
+        "kind": "other",
+        "quote": "obviously an electric problem"
+      },
+      {
+        "kind": "safety",
+        "quote": "catching fire and exploding"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: bulbs blow regularly and bulb connections catch fire/explode, recurring over two years, suspected electrical fault",
+    "symptoms": [
+      "bulbs blowing regularly",
+      "bulb connections catching fire",
+      "bulb connections exploding",
+      "recurrence despite new fittings"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2122002",
+    "created_at": "2025-08-19T07:00:27Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Headlights randomly turn off while driving. To get them back on you have to switch on and off before they turn back on. Very dangerous for my 17 yr old daughter driving down a highway at night. The lights will also turn on in the middle of the night and if we happen to notice, we...",
+      "group": "lighting",
+      "id": "1887069",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 0.6627,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-19T07:00:21Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00073,
+      "duration_ms": 9184,
+      "reason": "Exterior lighting: bulbs blow regularly and bulb connections catch fire/explode, recurring over two years, suspected electrical fault",
+      "started_at": "2025-08-19T07:00:22Z",
+      "step": 2,
+      "tokens": 1712,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-19T07:00:23Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "OPTIMA",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Headlights randomly turn off while driving. To get them back on you have to switch on and off before they turn back on. Very dangerous for my 17 yr old daughter driving down a highway at night. The lights will also turn on in the middle of the night and if we happen to notice, we...",
+            "group": "lighting",
+            "id": "1887069",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 0.6627,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-08-19T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-19T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-19T07:00:26Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-19T07:00:28Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-19T07:00:30Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-19T07:00:31Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-19T07:00:32Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

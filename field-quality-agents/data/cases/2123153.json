@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2123153",
+    "make": "FORD",
+    "mileage": null,
+    "model": "ESCAPE",
+    "narrative": "Around the 38,000 mile mark on our 2020 Ford Escape we received many different errors (AWD Fault, ABS, AdvanceTrac Service, Hill assist, etc). I found out via NHTSA and other forums that this is a common issue in the vehicle from the AWD module, and although it is AWD related, it is not eligible for the Powertrain warranty per Ford because it is an electrical component. I declined the $1200 repair at the dealership so I could first call Ford Customer Service, at the recommendation of the dealership, though the Service Tech did mention it is a safety concern because the ABS is apparently also controlled by the AWD. After a couple different calls to Ford, they have refused to acknowledge that it is a manufacturer defect, or pay for the repair. With no help from Ford, I have no other option than to file a complaint here. Based on other resources online, the issue seems to stem from improper grounding of the wiring on the AWD module.",
+    "received_at": "2025-08-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123153",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123153",
+    "decided_at": "2025-08-22T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123153",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "many different errors"
+      },
+      {
+        "kind": "symptom",
+        "quote": "AWD Fault, ABS, AdvanceTrac Service, Hill assist, etc"
+      },
+      {
+        "kind": "other",
+        "quote": "improper grounding of the wiring on the AWD module"
+      },
+      {
+        "kind": "safety",
+        "quote": "it is a safety concern because the ABS is apparently also controlled by the AWD"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2020 Ford Escape AWD module grounding issue causes AWD Fault, ABS, AdvanceTrac Service, and Hill assist errors around 38,000 miles; ABS safety concern noted.",
+    "symptoms": [
+      "AWD Fault warning",
+      "ABS warning",
+      "AdvanceTrac Service warning",
+      "Hill assist warning",
+      "multiple different errors"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123153",
+    "created_at": "2025-08-22T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Dashboard light with wrench icon and message AWD Fault Service Required appeared, along with multiple other alerts including Service AdvanceTrac, Pre-Collision Assist Disabled, Hill Start Assist Not Available. Could feel handling of vehicle had changed, no other indications of is...",
+      "group": "electrical_general",
+      "id": "2038085",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 34.7443,
+      "year": 2020
+    },
+    {
+      "excerpt": "The vehicle is a 2020 Ford Escape SE with 53,000 miles. Recently, The message screen began flashing messages AMD OFF, Hill Start OFF, Collision Warning OFF. Based on social media, this appears to be a common problem with the 2020 Escapes. According the Escape owners, dealers firs...",
+      "group": "electrical_general",
+      "id": "2024770",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 26.1535,
+      "year": 2020
+    },
+    {
+      "excerpt": "AWD module needs to be replaced in my 2020 Ford Escape. Seen a bunch of other posts online with people having the same thing. Happened at 32K miles. Have a series of messages every time I start car relating to this issue: Service Advance Trac, AWD Fault Service Required, AWD Off,...",
+      "group": "electrical_general",
+      "id": "1943782",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 25.617,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-22T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00081385,
+      "duration_ms": 11345,
+      "reason": "2020 Ford Escape AWD module grounding issue causes AWD Fault, ABS, AdvanceTrac Service, and Hill assist errors around 38,000 miles; ABS safety concern noted.",
+      "started_at": "2025-08-22T07:00:15Z",
+      "step": 2,
+      "tokens": 1968,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-22T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Dashboard light with wrench icon and message AWD Fault Service Required appeared, along with multiple other alerts including Service AdvanceTrac, Pre-Collision Assist Disabled, Hill Start Assist Not Available. Could feel handling of vehicle had changed, no other indications of is...",
+            "group": "electrical_general",
+            "id": "2038085",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 34.7443,
+            "year": 2020
+          },
+          {
+            "excerpt": "The vehicle is a 2020 Ford Escape SE with 53,000 miles. Recently, The message screen began flashing messages AMD OFF, Hill Start OFF, Collision Warning OFF. Based on social media, this appears to be a common problem with the 2020 Escapes. According the Escape owners, dealers firs...",
+            "group": "electrical_general",
+            "id": "2024770",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 26.1535,
+            "year": 2020
+          },
+          {
+            "excerpt": "AWD module needs to be replaced in my 2020 Ford Escape. Seen a bunch of other posts online with people having the same thing. Happened at 32K miles. Have a series of messages every time I start car relating to this issue: Service Advance Trac, AWD Fault Service Required, AWD Off,...",
+            "group": "electrical_general",
+            "id": "1943782",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 25.617,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-08-22T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-22T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-22T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-22T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-22T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-22T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-22T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

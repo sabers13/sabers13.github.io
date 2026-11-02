@@ -1,0 +1,291 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2066283",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "24V865000 was supposed to be fixed with an OTA update I received a few weeks ago. The OTA update took 2 separate 48 hour periods to finish so I was without my vehicle for over 4 days for this process but thankfully my car is still operable which can't be said for some others that have gone through this process. I was also informed by a service center that not all of the modules were updated and are not communicating effectively with the rest of the modules, opening me up to potential issues down the line.  I'm writing to inform you that the issues this recall was supposed to fix have not been completely fixed and it seems they've opened up different issues from what I've experienced prior to the update.  Issues not fixed that were supposed to be:  1-My vehicle does not always engage the brake hold when stopped causing my to roll forward or back depending on the incline of the road.  2-Warning lights are constantly flashing, especially at night or in inclement weather. I just completed an 800 mile round trip where I had warnings every mile or two that certain adas features were failing. For hours I experienced flashing lights and sounds were binging and bonging so frequently that I had to wear noise cancelling headphones and apply electrical tape to my dash to cover the area where all of the alerts were flashing.  New issues after the software was installed:  1-My estimated and actual range, charge percent, and energy efficiency are drastically lower than they were before the update. I'm told that many of the other cars on this new software are unable to achieve the stated range except in the most optimal conditions.  2-Near constant fan noise above the rear view mirror at times. It comes and goes at random  24V499000 was also fixed recently but I was out of pocket about $400 for the work. My understanding was that recalls are paid for by the manufacturer. In addition to the money, I was also out 3 days time and had to travel over 400 miles to get the work done",
+    "received_at": "2025-02-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2066283",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2066283",
+    "decided_at": "2025-02-17T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2066283",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My vehicle does not always engage the brake hold when stopped causing my to roll forward or back depending on the incline of the road."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Warning lights are constantly flashing, especially at night or in inclement weather."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I just completed an 800 mile round trip where I had warnings every mile or two that certain adas features were failing."
+      },
+      {
+        "kind": "symptom",
+        "quote": "My estimated and actual range, charge percent, and energy efficiency are drastically lower than they were before the update."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Near constant fan noise above the rear view mirror at times. It comes and goes at random"
+      },
+      {
+        "kind": "condition",
+        "quote": "New issues after the software was installed"
+      },
+      {
+        "kind": "safety",
+        "quote": "roll forward or back depending on the incline of the road"
+      },
+      {
+        "kind": "symptom",
+        "quote": "not all of the modules were updated and are not communicating effectively with the rest of the modules"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Fisker Ocean ADAS/automatic emergency braking; brake hold intermittently fails and ADAS warnings flash at night/in inclement weather after OTA software update, plus reduced range and random fan noise.",
+    "symptoms": [
+      "brake hold does not always engage when stopped, allowing roll forward/back on inclines",
+      "warning lights constantly flashing, especially at night or in inclement weather",
+      "ADAS feature failure warnings every mile or two",
+      "reduced estimated/actual range, charge percent, and energy efficiency",
+      "near constant random fan noise above rear view mirror",
+      "modules not updated and not communicating effectively"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2066283",
+    "created_at": "2025-02-17T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The windshield fogs up in our Seattle weather extremely fast. Faster than any car I've been in. It only clears up if we have the defrost on high but only to the windshield. It won't work if we do windshield and feet. This leaves people in the back seat cold because their air cont...",
+      "group": "adas",
+      "id": "1987264",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 46.9497,
+      "year": 2023
+    },
+    {
+      "excerpt": "I have several service tickets open for my Fisker Ocean One that have not been addressed, many going back over 3 months. 1 - the vents on my Ocean are malfunctioning. They were supposed to have been replaced before the car was delivered to me in October 2023, but they were not. 2...",
+      "group": "adas",
+      "id": "2003679",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 42.8028,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025575",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 39.9925,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00207915,
+      "duration_ms": 20253,
+      "reason": "Fisker Ocean ADAS/automatic emergency braking; brake hold intermittently fails and ADAS warnings flash at night/in inclement weather after OTA software update, plus reduced range and random fan noise.",
+      "started_at": "2025-02-17T07:00:01Z",
+      "step": 2,
+      "tokens": 4153,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The windshield fogs up in our Seattle weather extremely fast. Faster than any car I've been in. It only clears up if we have the defrost on high but only to the windshield. It won't work if we do windshield and feet. This leaves people in the back seat cold because their air cont...",
+            "group": "adas",
+            "id": "1987264",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 46.9497,
+            "year": 2023
+          },
+          {
+            "excerpt": "I have several service tickets open for my Fisker Ocean One that have not been addressed, many going back over 3 months. 1 - the vents on my Ocean are malfunctioning. They were supposed to have been replaced before the car was delivered to me in October 2023, but they were not. 2...",
+            "group": "adas",
+            "id": "2003679",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 42.8028,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025575",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 39.9925,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-17T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-17T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-17T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-17T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE",
+    "group": "adas",
+    "id": "2054335",
+    "make": "SUBARU",
+    "mileage": 26000,
+    "model": "FORESTER",
+    "narrative": "The contact owns a 2020 Subaru Forester. The contact stated that while driving at approximately 30 MPH, the brake pedal of the vehicle was applied inadvertently without any vehicles surrounding the vehicle. The contact stated that simultaneously a  \" Pre collision braking system was activated \" message appeared. The vehicle was taken to the residence. The vehicle was towed to a dealer where the failure was not replicated. The manufacturer was notified of the failure. The failure mileage was approximately 26,000.",
+    "received_at": "2025-01-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2054335",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2054335",
+    "decided_at": "2025-01-08T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2054335",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "while driving at approximately 30 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brake pedal of the vehicle was applied inadvertently"
+      },
+      {
+        "kind": "condition",
+        "quote": "without any vehicles surrounding the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Pre collision braking system was activated"
+      },
+      {
+        "kind": "other",
+        "quote": "failure was not replicated"
+      }
+    ],
+    "conditions": [
+      "while driving at approximately 30 MPH",
+      "intermittent (dealer could not replicate)"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2020 Subaru Forester forward collision avoidance: inadvertent brake pedal application at about 30 MPH with pre-collision braking activated message; dealer could not replicate.",
+    "symptoms": [
+      "brake pedal applied inadvertently",
+      "pre-collision braking system activated message appeared"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2054335",
+    "created_at": "2025-01-08T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving, the 2020 Forester, the check engine light, collision light, eyesight function lights all went on at the same time. I brought vehicle to check diagnostics and it is showing Engine Coolant Bypass Valve \"A\" Control Circuit low in Power Train System. Their were no mess...",
+      "group": "adas",
+      "id": "1914606",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 11.9465,
+      "year": 2020
+    },
+    {
+      "excerpt": "The check engine light illuminated and the thermo control valve failed at 3 years old. The defrost and heater stopped working immediately making visibility extremely difficult . The eyesight and automatic braking system were also disabled due to the TCV issue. My Forester mpg dro...",
+      "group": "adas",
+      "id": "1883540",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 11.3443,
+      "year": 2020
+    },
+    {
+      "excerpt": "\"Check Engine\" light along with \"Eye Sight\" appeared suddenly on Nov. 22, 2024. All safety systems along with cruise control became inoperable. Took car to Subaru dealer and it was confirmed to be the catalytic converter. My VIN is covered under extended warranty, but I was never...",
+      "group": "adas",
+      "id": "2045167",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 9.1148,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-08T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00117895,
+      "duration_ms": 22088,
+      "reason": "2020 Subaru Forester forward collision avoidance: inadvertent brake pedal application at about 30 MPH with pre-collision braking activated message; dealer could not replicate.",
+      "started_at": "2025-01-08T07:00:31Z",
+      "step": 2,
+      "tokens": 2500,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-08T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "FORESTER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving, the 2020 Forester, the check engine light, collision light, eyesight function lights all went on at the same time. I brought vehicle to check diagnostics and it is showing Engine Coolant Bypass Valve \"A\" Control Circuit low in Power Train System. Their were no mess...",
+            "group": "adas",
+            "id": "1914606",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 11.9465,
+            "year": 2020
+          },
+          {
+            "excerpt": "The check engine light illuminated and the thermo control valve failed at 3 years old. The defrost and heater stopped working immediately making visibility extremely difficult . The eyesight and automatic braking system were also disabled due to the TCV issue. My Forester mpg dro...",
+            "group": "adas",
+            "id": "1883540",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 11.3443,
+            "year": 2020
+          },
+          {
+            "excerpt": "\"Check Engine\" light along with \"Eye Sight\" appeared suddenly on Nov. 22, 2024. All safety systems along with cruise control became inoperable. Took car to Subaru dealer and it was confirmed to be the catalytic converter. My VIN is covered under extended warranty, but I was never...",
+            "group": "adas",
+            "id": "2045167",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 9.1148,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-01-08T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-08T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-08T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-08T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-08T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-08T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-08T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

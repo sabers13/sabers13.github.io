@@ -1,0 +1,286 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2106342",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "When my plug-in hybrid vehicle’s service engine light came on, an authorized Jeep Dealership diagnosed and fixed the electric coolant heater then also performed a software up to address the recall 95B/NHTSA 24V-720. In less than 2 weeks, my vehicle flagged a hybrid system error code “B273C.” The Jeep dealership immediately impounded my vehicle per the regional Stellantis technical team’s orders. My vehicle has been held at the dealership for over a month with no repairs or timeline for when a repair will be available. It’s unacceptable for a custom built fully paid off vehicle (2023 JGC 4xe Summit) to become such a huge liability and poorly reflects on the Jeep/Stellantis brand. There has been no support from their case management team and no urgency/ timeline provided for when this issue will be resolved. When manufacturing defects result in making a vehicle un-driveable, the manufacturer should prioritize finding a solution and provide customers with a rental of equitable quality to ensure the Jeep brand experience is maintained. Most importantly, for a vehicle that is only 2 years old, it is concerning from a safety perspective that it has had so many issues with the hybrid system for which the manufacturer has no solutions available.",
+    "received_at": "2025-07-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2106342",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2106342",
+    "decided_at": "2025-07-02T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2106342",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "service engine light came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hybrid system error code “B273C.”"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "B273C"
+      },
+      {
+        "kind": "condition",
+        "quote": "In less than 2 weeks, my vehicle flagged a hybrid system error code “B273C.”"
+      },
+      {
+        "kind": "symptom",
+        "quote": "held at the dealership for over a month with no repairs"
+      },
+      {
+        "kind": "symptom",
+        "quote": "un-driveable"
+      },
+      {
+        "kind": "safety",
+        "quote": "concerning from a safety perspective"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [
+      "B273C"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system / plug-in hybrid: service engine light and electric coolant heater repair plus recall software update, then B273C hybrid error and vehicle held un-driveable.",
+    "symptoms": [
+      "service engine light came on",
+      "hybrid system error code B273C",
+      "vehicle un-driveable",
+      "vehicle held at dealership over a month with no repairs"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2106342",
+    "created_at": "2025-07-02T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Since [XXX], my 2023 Jeep Grand Cherokee has experienced multiple ongoing electrical issues. Initially, my car wouldn't start in the morning so I called Chrysler's roadside assistance and had the car jump started, then brought it to the dealership as a precaution to get it checke...",
+      "group": "electrical_general",
+      "id": "2001720",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 21.3666,
+      "year": 2023
+    },
+    {
+      "excerpt": "We have been without service of the Grand Cherokee L vehicle for nearly 6 of the 11 weeks since we leased the vehicle. The four (4) incidents and ‘repair attempts’ to ‘fix’ the randomly/sudden occurring mechanical and electrical problems were inter-related and causal to the mecha...",
+      "group": "electrical_general",
+      "id": "1900527",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 13.0405,
+      "year": 2023
+    },
+    {
+      "excerpt": "The UConnect screen in a 2023 Jeep Grand Cherokee intermittently stops working, freezes, or is non-responsive when touched when the car is started. It has only happened when the car is started, not while driving. This is a problem as I rely on the rear camera view to be certain n...",
+      "group": "electrical_general",
+      "id": "1897734",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 12.1209,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-02T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010813,
+      "duration_ms": 11947,
+      "reason": "Electrical system / plug-in hybrid: service engine light and electric coolant heater repair plus recall software update, then B273C hybrid error and vehicle held un-driveable.",
+      "started_at": "2025-07-02T07:00:21Z",
+      "step": 2,
+      "tokens": 2464,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-02T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since [XXX], my 2023 Jeep Grand Cherokee has experienced multiple ongoing electrical issues. Initially, my car wouldn't start in the morning so I called Chrysler's roadside assistance and had the car jump started, then brought it to the dealership as a precaution to get it checke...",
+            "group": "electrical_general",
+            "id": "2001720",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 21.3666,
+            "year": 2023
+          },
+          {
+            "excerpt": "We have been without service of the Grand Cherokee L vehicle for nearly 6 of the 11 weeks since we leased the vehicle. The four (4) incidents and ‘repair attempts’ to ‘fix’ the randomly/sudden occurring mechanical and electrical problems were inter-related and causal to the mecha...",
+            "group": "electrical_general",
+            "id": "1900527",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 13.0405,
+            "year": 2023
+          },
+          {
+            "excerpt": "The UConnect screen in a 2023 Jeep Grand Cherokee intermittently stops working, freezes, or is non-responsive when touched when the car is started. It has only happened when the car is started, not while driving. This is a problem as I rely on the rear camera view to be certain n...",
+            "group": "electrical_general",
+            "id": "1897734",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 12.1209,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-02T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-02T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-02T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-02T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-02T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-02T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-02T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

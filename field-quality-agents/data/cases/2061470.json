@@ -1,0 +1,245 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2061470",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "EQUINOX EV",
+    "narrative": "My car which is FWD, not AWD, is exhibiting the same behavior that the recall for the AWD Equinox has.  With Adaptive Cruise engaged the car does not slow down or brake when approaching vehicles in front of it.  I have to intervene and apply the brakes to prevent hitting the vehicle in front.  Also, with ACC on the vehicle will accelerate on its own. I have to intervene to slow the vehicle down.  For example, I set the ACC to 68 mph, all of a sudden it starts speeding up. I had to intervene when it hit 73 mph as it approached vehicles in front of me without slowing down.",
+    "received_at": "2025-01-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2061470",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2061470",
+    "decided_at": "2025-01-31T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2061470",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "condition",
+        "quote": "With Adaptive Cruise engaged"
+      },
+      {
+        "kind": "symptom",
+        "quote": "does not slow down or brake when approaching vehicles in front of it"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have to intervene and apply the brakes to prevent hitting the vehicle in front"
+      },
+      {
+        "kind": "symptom",
+        "quote": "with ACC on the vehicle will accelerate on its own"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all of a sudden it starts speeding up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I had to intervene when it hit 73 mph as it approached vehicles in front of me without slowing down"
+      },
+      {
+        "kind": "safety",
+        "quote": "prevent hitting the vehicle in front"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2025 Chevrolet Equinox EV: adaptive cruise control does not brake for vehicles ahead and accelerates on its own with ACC engaged.",
+    "symptoms": [
+      "does not slow down or brake when approaching vehicles ahead",
+      "accelerates on its own with ACC engaged",
+      "set speed rises unexpectedly, e.g. from 68 mph to 73 mph"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2061470",
+    "created_at": "2025-01-31T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ACC works ok at normal highway speeds but when the vehicle in front slows to under about 25mph the ACC doesn't slow down anymore. Then the vehicle alerts with the emergency breaking light and you need to stomp on the breaks to avoid a collision. It has been like this since I boug...",
+      "group": "adas",
+      "id": "2048592",
+      "make": "CHEVROLET",
+      "model": "EQUINOX EV",
+      "score": 1.9419,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-31T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00127465,
+      "duration_ms": 21148,
+      "reason": "2025 Chevrolet Equinox EV: adaptive cruise control does not brake for vehicles ahead and accelerates on its own with ACC engaged.",
+      "started_at": "2025-01-31T07:00:01Z",
+      "step": 2,
+      "tokens": 2691,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-01-31T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "EQUINOX EV",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ACC works ok at normal highway speeds but when the vehicle in front slows to under about 25mph the ACC doesn't slow down anymore. Then the vehicle alerts with the emergency breaking light and you need to stomp on the breaks to avoid a collision. It has been like this since I boug...",
+            "group": "adas",
+            "id": "2048592",
+            "make": "CHEVROLET",
+            "model": "EQUINOX EV",
+            "score": 1.9419,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-31T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-31T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-31T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-31T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-31T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-31T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-31T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

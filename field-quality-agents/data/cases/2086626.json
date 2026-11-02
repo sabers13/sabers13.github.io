@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2086626",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "RAV4",
+    "narrative": "While shopping at the grocery store, I experienced an incident upon leaving the parking lot. After reaching my first red light, I noticed smoke rapidly billowing from under the hood of my vehicle. My husband, who was driving behind me, immediately saw the smoke and instructed me to pull over. Once I stopped, he asked me to pop the hood. Upon opening it, he urgently removed his shirt to try and extinguish the fire. The damage was extensive — a hole burned through the hood, significantly compromising the vehicle’s crash safety rating. Additionally, melted plastic covered the battery area, and the radiator hose was damaged, rendering the vehicle unsafe to drive.",
+    "received_at": "2025-04-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2086626",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2086626",
+    "decided_at": "2025-04-28T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2086626",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke rapidly billowing from under the hood"
+      },
+      {
+        "kind": "symptom",
+        "quote": "to try and extinguish the fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a hole burned through the hood"
+      },
+      {
+        "kind": "symptom",
+        "quote": "melted plastic covered the battery area"
+      },
+      {
+        "kind": "symptom",
+        "quote": "radiator hose was damaged"
+      },
+      {
+        "kind": "safety",
+        "quote": "significantly compromising the vehicle’s crash safety rating"
+      },
+      {
+        "kind": "safety",
+        "quote": "rendering the vehicle unsafe to drive"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: smoke and fire under hood after leaving parking lot, hood burned, battery-area plastic melted, radiator hose damaged, vehicle unsafe.",
+    "symptoms": [
+      "smoke from under hood",
+      "fire under hood",
+      "hood burned through",
+      "melted plastic around battery area",
+      "radiator hose damaged",
+      "vehicle unsafe to drive"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2086626",
+    "created_at": "2025-04-28T07:00:46Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "WHILE DRIVING ON A LOCAL ROAD I STARTED TO LOSE ELECTRICAL POWER. AT FIRST I LOST POWER STEERING AND SHORTLY AFTER THE HEAT STOPPED WORKING AND ALL THE LIGHTS ON THE DASHBOARD LIT UP. WHEN I BROUGHT THE CAR TO BE DIAGNOSED THE FUSE BOX HAD BEEN BURNED AND WIRES MELTED AND THERE W...",
+      "group": "electrical_general",
+      "id": "1732315",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 18.2683,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Toyota Rav4. The contact received notification of NHTSA Campaign Numbers: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the re...",
+      "group": "electrical_general",
+      "id": "2010861",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 0.3318,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+      "group": "electrical_general",
+      "id": "2011555",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 0.3165,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-28T07:00:40Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007882,
+      "duration_ms": 9606,
+      "reason": "Electrical system: smoke and fire under hood after leaving parking lot, hood burned, battery-area plastic melted, radiator hose damaged, vehicle unsafe.",
+      "started_at": "2025-04-28T07:00:41Z",
+      "step": 2,
+      "tokens": 1875,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-28T07:00:42Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WHILE DRIVING ON A LOCAL ROAD I STARTED TO LOSE ELECTRICAL POWER. AT FIRST I LOST POWER STEERING AND SHORTLY AFTER THE HEAT STOPPED WORKING AND ALL THE LIGHTS ON THE DASHBOARD LIT UP. WHEN I BROUGHT THE CAR TO BE DIAGNOSED THE FUSE BOX HAD BEEN BURNED AND WIRES MELTED AND THERE W...",
+            "group": "electrical_general",
+            "id": "1732315",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 18.2683,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Toyota Rav4. The contact received notification of NHTSA Campaign Numbers: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the re...",
+            "group": "electrical_general",
+            "id": "2010861",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 0.3318,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+            "group": "electrical_general",
+            "id": "2011555",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 0.3165,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-04-28T07:00:43Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-28T07:00:44Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-28T07:00:45Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-28T07:00:47Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-28T07:00:49Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-28T07:00:50Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-28T07:00:51Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

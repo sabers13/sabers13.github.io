@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2069039",
+    "make": "JAGUAR",
+    "mileage": null,
+    "model": "I-PACE",
+    "narrative": "Fire danger for years in my 2019 jaguar ipace. Unable to solve. Resolution is finally to buy vehicle back, no action 4 months now waiting for action. In addition to 13 months in the shop. This is not prompt as they claim and it continues to be used on public roads, carrying passengers, parking and chaging in congested areas including next to hospitals due to the inaction. Someone needs to force forward motion before someone gets hurt.",
+    "received_at": "2025-02-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2069039",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2069039",
+    "decided_at": "2025-02-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2069039",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Fire danger for years in my 2019 jaguar ipace"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Unable to solve"
+      },
+      {
+        "kind": "condition",
+        "quote": "chaging in congested areas"
+      },
+      {
+        "kind": "safety",
+        "quote": "before someone gets hurt"
+      },
+      {
+        "kind": "safety",
+        "quote": "used on public roads"
+      },
+      {
+        "kind": "other",
+        "quote": "13 months in the shop"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM, 2019 Jaguar I-PACE: fire danger unresolved for years; vehicle still used on public roads and charging in congested areas.",
+    "symptoms": [
+      "fire danger",
+      "unresolved problem",
+      "vehicle used on public roads despite safety concern"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2069039",
+    "created_at": "2025-02-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My start fire, jlr lowered charging to 72% in August still no fix with battery I heard of recall on 2019 jaguar ipace due to this issue on internet and what I heard on jaguar forum, but haven't received anything from jaguar land rover yet letters for recall were to go out to vehi...",
+      "group": "electrical_general",
+      "id": "1991049",
+      "make": "JAGUAR",
+      "model": "I-PACE",
+      "score": 6.9655,
+      "year": 2019
+    },
+    {
+      "excerpt": "The vehicle is in an unsafe condition for fire risk. It is currently parked and unusable. Jaguar was unable to apply the specified charge limitation when delivered to the Dealership for the interim safety measure. Jaguar is ordered to buyback this vehicle, but has not performed a...",
+      "group": "electrical_general",
+      "id": "2047408",
+      "make": "JAGUAR",
+      "model": "I-PACE",
+      "score": 5.1962,
+      "year": 2019
+    },
+    {
+      "excerpt": "The contact owns a 2019 Jaguar I-Pace. The contact stated that the vehicle failed to fully charge. The contact stated that a traction battery fault detected message was displayed. The contact stated the failure was related to NHTSA Campaign Number: 24V633000 (Electrical System)....",
+      "group": "electrical_general",
+      "id": "2042564",
+      "make": "JAGUAR",
+      "model": "I-PACE",
+      "score": 5.1425,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00066825,
+      "duration_ms": 9675,
+      "reason": "ELECTRICAL SYSTEM, 2019 Jaguar I-PACE: fire danger unresolved for years; vehicle still used on public roads and charging in congested areas.",
+      "started_at": "2025-02-26T07:00:01Z",
+      "step": 2,
+      "tokens": 1551,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JAGUAR",
+        "model": "I-PACE",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My start fire, jlr lowered charging to 72% in August still no fix with battery I heard of recall on 2019 jaguar ipace due to this issue on internet and what I heard on jaguar forum, but haven't received anything from jaguar land rover yet letters for recall were to go out to vehi...",
+            "group": "electrical_general",
+            "id": "1991049",
+            "make": "JAGUAR",
+            "model": "I-PACE",
+            "score": 6.9655,
+            "year": 2019
+          },
+          {
+            "excerpt": "The vehicle is in an unsafe condition for fire risk. It is currently parked and unusable. Jaguar was unable to apply the specified charge limitation when delivered to the Dealership for the interim safety measure. Jaguar is ordered to buyback this vehicle, but has not performed a...",
+            "group": "electrical_general",
+            "id": "2047408",
+            "make": "JAGUAR",
+            "model": "I-PACE",
+            "score": 5.1962,
+            "year": 2019
+          },
+          {
+            "excerpt": "The contact owns a 2019 Jaguar I-Pace. The contact stated that the vehicle failed to fully charge. The contact stated that a traction battery fault detected message was displayed. The contact stated the failure was related to NHTSA Campaign Number: 24V633000 (Electrical System)....",
+            "group": "electrical_general",
+            "id": "2042564",
+            "make": "JAGUAR",
+            "model": "I-PACE",
+            "score": 5.1425,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

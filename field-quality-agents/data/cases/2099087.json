@@ -1,0 +1,344 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:IGNITION:ANTI-THEFT:IMMOBILIZER/PROXIMITY:KEY/SENDER",
+    "group": "power_and_wiring",
+    "id": "2099087",
+    "make": "NISSAN",
+    "mileage": 45000,
+    "model": "ALTIMA",
+    "narrative": "The contact owns a 2020 Nissan Altima. The contact stated while using the key fob to unlock the doors, the rear driver’s and rear passenger’s side doors failed to unlock as needed. The contact also stated that over time, the front driver’s, and passenger’s side doors failed to open while using the key fob. In addition, it was difficult to unlock the front driver’s door manually with the key. The local dealer was notified of the failure and the contact was provided an estimate for the repair. The vehicle was not repaired. The manufacturer was not notified of the failure. The failure mileage was approximately 45,000.",
+    "received_at": "2025-06-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2099087",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2099087",
+    "decided_at": "2025-06-09T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2099087",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "key fob"
+      },
+      {
+        "kind": "symptom",
+        "quote": "using the key fob to unlock the doors"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the rear driver’s and rear passenger’s side doors failed to unlock as needed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "over time, the front driver’s, and passenger’s side doors failed to open while using the key fob"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was difficult to unlock the front driver’s door manually with the key"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": false,
+    "summary": "Test the key fob and door lock system because multiple doors fail to unlock or open with the fob and the front driver’s door is difficult to unlock manually; no rulebook match supports a targeted test.",
+    "symptoms": [
+      "rear driver’s and rear passenger’s side doors fail to unlock with the key fob",
+      "front driver’s and passenger’s side doors fail to open with the key fob over time",
+      "front driver’s door is difficult to unlock manually with the key"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2099087",
+    "created_at": "2025-06-09T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "key fob",
+        "source_id": "2099087",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "using the key fob to unlock the doors",
+        "source_id": "2099087",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the rear driver’s and rear passenger’s side doors failed to unlock as needed",
+        "source_id": "2099087",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "over time, the front driver’s, and passenger’s side doors failed to open while using the key fob",
+        "source_id": "2099087",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "it was difficult to unlock the front driver’s door manually with the key",
+        "source_id": "2099087",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports progressive key-fob unlocking/opening failure across the rear and front doors, plus difficulty unlocking the front driver’s door manually with the key. No conditions, fault codes, recalls, investigations, similar cases, or rulebook matches were provided, so the standard test is proposed rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the key fob and door lock system because multiple doors fail to unlock or open with the fob and the front driver’s door is difficult to unlock manually; no rulebook match supports a targeted test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010081,
+      "duration_ms": 11232,
+      "reason": "Key fob/immobilizer: rear and front doors fail to unlock/open with fob; front driver door difficult to unlock manually; no conditions stated.",
+      "started_at": "2025-06-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2267,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-06-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ALTIMA",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-06-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-06-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2020 Nissan Altima. The contact stated while using the key fob to unlock the doors, the rear driver’s and rear passenger’s side doors failed to unlock as needed. The contact also stated that over time, the front driver’s, and passenger’s side doors failed to open while using the key fob. In addition, it was difficult to unlock the front driver’s door manually with the key. The local dealer was notified of the failure and the contact was provided an estimate for the repair. The"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-09T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "NISSAN",
+        "model": "ALTIMA",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-09T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "NISSAN",
+        "model": "ALTIMA",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-09T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008139,
+      "duration_ms": 8138,
+      "reason": "The narrative reports progressive key-fob unlocking/opening failure across the rear and front doors, plus difficulty unlocking the front driver’s door manually with the key. No conditions, fault codes, recalls, investigations, similar cases, or rulebook matches were provided, so the standard test is proposed rather than a targeted load test.",
+      "started_at": "2025-06-09T07:00:09Z",
+      "step": 10,
+      "tokens": 2087,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-06-09T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "key fob",
+          "using the key fob to unlock the doors",
+          "the rear driver’s and rear passenger’s side doors failed to unlock as needed",
+          "over time, the front driver’s, and passenger’s side doors failed to open while using the key fob",
+          "it was difficult to unlock the front driver’s door manually with the key"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-09T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-09T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-09T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-09T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

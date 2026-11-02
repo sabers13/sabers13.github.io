@@ -1,0 +1,283 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2124426",
+    "make": "KIA",
+    "mileage": null,
+    "model": "OPTIMA",
+    "narrative": "On August 25th around 7:00 PM, the vehicle suddenly caught fire while parked after a short test drive. The car had just been purchased a few days prior and was taken to a mechanic for a precautionary inspection. During the test drive, the mechanic parked the vehicle in a residential driveway. After backing in, smoke was observed coming from the engine bay. When the hood was lifted, the engine area was already on fire. The fire department was called immediately and was able to extinguish the flames before the fire spread to surrounding property. The fire completely destroyed the vehicle.  The vehicle had no warning lights, unusual performance issues, or prior signs of trouble, and it appeared to be in good condition prior to the incident. This fire posed a serious safety hazard and could have resulted in injury or property damage.  Component or system that failed: The engine area, likely associated with the Hydraulic Electronic Control Unit (HECU) fuse/fire risk. The vehicle may or may not be available for inspection, as it is severely burned.  Safety risk: The fire posed a serious hazard to the mechanic, surrounding property, and anyone nearby. Rapid ignition could have caused injury or significant property damage.  Problem confirmation: The fire was observed firsthand by the mechanic. The open recall related to the HECU fuse/fire risk indicates a known defect consistent with the incident.  Inspections: The fire department responded and documented the incident. The vehicle has not yet been inspected by the manufacturer or insurance representatives, but the recall status is verifiable through official records.  Warning signs: There were no warning lamps, messages, or other symptoms prior to the failure.  This incident appears consistent with the conditions described in the open recall for the HECU fuse/fire risk, suggesting a possible link between the recall defect and the fire.",
+    "received_at": "2025-08-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124426",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124426",
+    "decided_at": "2025-08-26T07:01:18Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124426",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the vehicle suddenly caught fire while parked after a short test drive"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke was observed coming from the engine bay"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the engine area was already on fire"
+      },
+      {
+        "kind": "condition",
+        "quote": "after a short test drive"
+      },
+      {
+        "kind": "condition",
+        "quote": "taken to a mechanic for a precautionary inspection"
+      },
+      {
+        "kind": "component_group",
+        "quote": "The engine area, likely associated with the Hydraulic Electronic Control Unit (HECU) fuse/fire risk."
+      },
+      {
+        "kind": "safety",
+        "quote": "This fire posed a serious safety hazard and could have resulted in injury or property damage."
+      },
+      {
+        "kind": "other",
+        "quote": "open recall related to the HECU fuse/fire risk"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system (engine bay/HECU fuse) fire while parked after a short test drive following a mechanic inspection; no warning signs.",
+    "symptoms": [
+      "vehicle caught fire while parked",
+      "smoke from engine bay",
+      "engine area on fire"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124426",
+    "created_at": "2025-08-26T07:01:16Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Vehicle is under recall 23V652 for HECU short circuit issue. Vehicle was running fine, driven to local mechanic for routine oil change and inspection. MIL was on with P0445 indicating a short circuit on Purge control valve. Mechanic replaced Purge control valve which did not rese...",
+      "group": "electrical_general",
+      "id": "1949638",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 22.0841,
+      "year": 2012
+    },
+    {
+      "excerpt": "The contact owned a 2012 Kia Optima. The contact stated while driving 50-60 MPH, the vehicle experienced excessive steering efforts, which required keeping both hands on the steering wheel to prevent the vehicle from drifting out of the lane. The contact stated that the failure r...",
+      "group": "electrical_general",
+      "id": "1999278",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 15.8179,
+      "year": 2012
+    },
+    {
+      "excerpt": "I driving to park,I heard a loud popping noise and i them preceeded to pull out the driveway and al’s 5 minutes in the drive the KIA hybrid warning system came on and then told me to park the ending at the nearest location to park. the car started smoking real lot bad and me and...",
+      "group": "electrical_general",
+      "id": "1754222",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 11.1374,
+      "year": 2012
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-26T07:01:10Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015829,
+      "duration_ms": 16359,
+      "reason": "Electrical system (engine bay/HECU fuse) fire while parked after a short test drive following a mechanic inspection; no warning signs.",
+      "started_at": "2025-08-26T07:01:11Z",
+      "step": 2,
+      "tokens": 3375,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-26T07:01:12Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "OPTIMA",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Vehicle is under recall 23V652 for HECU short circuit issue. Vehicle was running fine, driven to local mechanic for routine oil change and inspection. MIL was on with P0445 indicating a short circuit on Purge control valve. Mechanic replaced Purge control valve which did not rese...",
+            "group": "electrical_general",
+            "id": "1949638",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 22.0841,
+            "year": 2012
+          },
+          {
+            "excerpt": "The contact owned a 2012 Kia Optima. The contact stated while driving 50-60 MPH, the vehicle experienced excessive steering efforts, which required keeping both hands on the steering wheel to prevent the vehicle from drifting out of the lane. The contact stated that the failure r...",
+            "group": "electrical_general",
+            "id": "1999278",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 15.8179,
+            "year": 2012
+          },
+          {
+            "excerpt": "I driving to park,I heard a loud popping noise and i them preceeded to pull out the driveway and al’s 5 minutes in the drive the KIA hybrid warning system came on and then told me to park the ending at the nearest location to park. the car started smoking real lot bad and me and...",
+            "group": "electrical_general",
+            "id": "1754222",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 11.1374,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-26T07:01:13Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-26T07:01:14Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-26T07:01:15Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-26T07:01:17Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-26T07:01:19Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-26T07:01:20Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-26T07:01:21Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

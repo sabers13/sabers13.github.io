@@ -1,0 +1,311 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:SOLENOID",
+    "group": "power_and_wiring",
+    "id": "2131999",
+    "make": "CHEVROLET",
+    "mileage": 52000,
+    "model": "TRAVERSE",
+    "narrative": "The contact owns a 2018 Chevrolet Traverse. The contact stated that while driving at 30 MPH, the battery warning light and power steering assist warning light illuminated. The steering wheel seized, and the vehicle stalled and failed to restart. The vehicle was towed to the dealer, where it was diagnosed with battery failure. The vehicle was repaired. The contact stated that eight days later, after stopping at a gas station, the vehicle failed to restart. The vehicle was towed back to the dealer, where it was diagnosed and determined that the Evaporative Emission Control (EVAP) system purge valve had failed. The canister purge solenoid valve was replaced. The contact stated that two weeks later, the alternator failed and was replaced; however, six months later, the failure reoccurred with the check engine warning light illuminated. The contact stated that on a separate occasion, the check engine warning light illuminated, and the vehicle failed to start. The vehicle was towed to the dealer, where it was diagnosed that there was an Evaporative Emission Control (EVAP) leak. The SOP solenoid and the Evaporative Emission Control (EVAP) canister were replaced. After the vehicle was repaired, the contact stopped by the gas station, and the vehicle failed to restart. The vehicle was towed to the dealer, where it was diagnosed that the purge valve had failed. Most recently, the vehicle hesitated, and the engine was running rough. The vehicle was taken to the dealer, where it was diagnosed that the torque converter had failed. The vehicle was repaired. The contact went to several dealers for the repairs, and each dealer retrieved several electrical codes. The manufacturer was made aware of the failure and several claims were filed. The failure mileage was approximately 52,000.",
+    "received_at": "2025-09-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131999",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131999",
+    "decided_at": "2025-09-19T07:01:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131999",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:SOLENOID"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the battery warning light and power steering assist warning light illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The steering wheel seized"
+      },
+      {
+        "kind": "safety",
+        "quote": "The steering wheel seized"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle stalled and failed to restart"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle stalled and failed to restart"
+      },
+      {
+        "kind": "other",
+        "quote": "while driving at 30 MPH"
+      },
+      {
+        "kind": "other",
+        "quote": "diagnosed with battery failure"
+      },
+      {
+        "kind": "condition",
+        "quote": "eight days later, after stopping at a gas station, the vehicle failed to restart"
+      },
+      {
+        "kind": "other",
+        "quote": "the Evaporative Emission Control (EVAP) system purge valve had failed"
+      },
+      {
+        "kind": "other",
+        "quote": "The canister purge solenoid valve was replaced"
+      },
+      {
+        "kind": "condition",
+        "quote": "two weeks later, the alternator failed and was replaced"
+      },
+      {
+        "kind": "condition",
+        "quote": "six months later, the failure reoccurred with the check engine warning light illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to start"
+      },
+      {
+        "kind": "other",
+        "quote": "Evaporative Emission Control (EVAP) leak"
+      },
+      {
+        "kind": "other",
+        "quote": "The SOP solenoid and the Evaporative Emission Control (EVAP) canister were replaced"
+      },
+      {
+        "kind": "condition",
+        "quote": "After the vehicle was repaired, the contact stopped by the gas station, and the vehicle failed to restart"
+      },
+      {
+        "kind": "other",
+        "quote": "the purge valve had failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle hesitated, and the engine was running rough"
+      },
+      {
+        "kind": "other",
+        "quote": "the torque converter had failed"
+      },
+      {
+        "kind": "other",
+        "quote": "each dealer retrieved several electrical codes"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was approximately 52,000"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "2018 Chevrolet Traverse (component listed as starter assembly solenoid): battery/power-steering warning lights, steering seizure, stall/no-restart, plus repeated EVAP purge solenoid, alternator, EVAP leak, and torque converter failures.",
+    "symptoms": [
+      "battery warning light illuminated",
+      "power steering assist warning light illuminated",
+      "steering wheel seized",
+      "vehicle stalled",
+      "vehicle failed to restart",
+      "vehicle failed to start",
+      "check engine warning light illuminated",
+      "vehicle hesitated",
+      "engine running rough"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131999",
+    "created_at": "2025-09-19T07:01:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2018 Chevrolet Traverse. The contact stated that while at a complete stop and attempting to come out of auto stop, the vehicle would not automatically restart. The contact stated that once the vehicle restarted the vehicle hesitated. The contact stated while th...",
+      "group": "power_and_wiring",
+      "id": "1996836",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 12.4302,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-19T07:01:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00246985,
+      "duration_ms": 29409,
+      "reason": "2018 Chevrolet Traverse (component listed as starter assembly solenoid): battery/power-steering warning lights, steering seizure, stall/no-restart, plus repeated EVAP purge solenoid, alternator, EVAP leak, and torque converter failures.",
+      "started_at": "2025-09-19T07:01:21Z",
+      "step": 2,
+      "tokens": 4857,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-09-19T07:01:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2018 Chevrolet Traverse. The contact stated that while at a complete stop and attempting to come out of auto stop, the vehicle would not automatically restart. The contact stated that once the vehicle restarted the vehicle hesitated. The contact stated while th...",
+            "group": "power_and_wiring",
+            "id": "1996836",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 12.4302,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-09-19T07:01:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-19T07:01:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-19T07:01:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-19T07:01:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-19T07:01:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-19T07:01:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-19T07:01:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

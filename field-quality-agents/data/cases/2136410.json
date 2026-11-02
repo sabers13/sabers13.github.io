@@ -1,0 +1,299 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: WARNING",
+    "group": "adas",
+    "id": "2136410",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CR-V",
+    "narrative": "I am reporting a severe safety defect involving the engine and fuel injector system that began two months ago at ≈108k miles (now 109k miles). I have not yet taken the vehicle in for service due to the estimated high repair cost of $2,900.  It is critical to note that the same underlying problem was subject to a safety recall for the 2017-2018 model years, but the defect was not fixed for my 2019 model year. This indicates a persistent manufacturing or design flaw that warrants an immediate investigation into my model year.  The defect manifests regularly, causing a Cylinder 2 Misfire (P0302) and making the engine run very rough with a sudden and severe loss of power. This creates a direct rear-end crash risk due to the inability to maintain a safe operating speed. More dangerously, when the misfire occurs, the vehicle instantly disables critical driver assistance systems—Adaptive Cruise Control (ACC) and Lane Keep Assist (LKAS)—without any advanced warning.  This malfunction is an unreasonable safety risk:  CRASH HAZARD: The unprompted power loss and concurrent disabling of safety features create an immediate, dangerous situation.  FIRE HAZARD: The persistent misfire strongly suggests a failed or stuck-open fuel injector, which causes fuel dilution of the engine oil. This contamination can lead to engine failure or, critically, a fuel leak onto hot engine components that poses an extreme fire risk.  I urge NHTSA to investigate why this defect persists and to mandate a comprehensive recall to protect the public from this ongoing, life-threatening safety risk. The failed component may be available for inspection upon request.",
+    "received_at": "2025-10-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136410",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136410",
+    "decided_at": "2025-10-04T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2136410",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "engine and fuel injector system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Cylinder 2 Misfire (P0302)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine run very rough"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sudden and severe loss of power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "instantly disables critical driver assistance systems"
+      },
+      {
+        "kind": "condition",
+        "quote": "when the misfire occurs"
+      },
+      {
+        "kind": "condition",
+        "quote": "began two months ago"
+      },
+      {
+        "kind": "condition",
+        "quote": "manifests regularly"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "P0302"
+      },
+      {
+        "kind": "safety",
+        "quote": "direct rear-end crash risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "FIRE HAZARD"
+      },
+      {
+        "kind": "safety",
+        "quote": "extreme fire risk"
+      },
+      {
+        "kind": "other",
+        "quote": "failed or stuck-open fuel injector"
+      },
+      {
+        "kind": "other",
+        "quote": "fuel dilution of the engine oil"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "when the misfire occurs",
+      "began two months ago"
+    ],
+    "fault_codes": [
+      "P0302"
+    ],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Lane departure warning/ADAS case reporting engine/fuel injector misfire P0302 with rough running and severe power loss when the misfire occurs, disabling ACC/LKAS.",
+    "symptoms": [
+      "Cylinder 2 misfire (P0302)",
+      "engine runs very rough",
+      "sudden and severe loss of power",
+      "ACC and LKAS disabled without advanced warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136410",
+    "created_at": "2025-10-04T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I experienced a concerning incident while driving recently, and I would like to bring attention to several issues with my vehicle. Firstly, while turning onto a main street at a speed of 35mph, my vehicle's automatic emergency braking system unexpectedly activated, despite there...",
+      "group": "adas",
+      "id": "1988988",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 43.4699,
+      "year": 2019
+    },
+    {
+      "excerpt": "Warning lights: adaptive cruise control fault. Lane departure fault collision avoidance fault and emissions check engine. Diagnosed fix: fuel injectors malfunctioning. This making the emissions light come on making all the other warning lights to go off. Fixed at a local Honda de...",
+      "group": "adas",
+      "id": "1997114",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 37.6092,
+      "year": 2019
+    },
+    {
+      "excerpt": "1. My car like many other CRV's I have read about online in forums and other sites is experiencing the fuel injection failure of CRV's since 2017 model. The consumer reports article from 2018 stated the 2019 model was to include a \"fix\" for this problem but it has not. My car has...",
+      "group": "adas",
+      "id": "1776159",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 35.7155,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00236275,
+      "duration_ms": 20342,
+      "reason": "Lane departure warning/ADAS case reporting engine/fuel injector misfire P0302 with rough running and severe power loss when the misfire occurs, disabling ACC/LKAS.",
+      "started_at": "2025-10-04T07:00:01Z",
+      "step": 2,
+      "tokens": 4659,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I experienced a concerning incident while driving recently, and I would like to bring attention to several issues with my vehicle. Firstly, while turning onto a main street at a speed of 35mph, my vehicle's automatic emergency braking system unexpectedly activated, despite there...",
+            "group": "adas",
+            "id": "1988988",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 43.4699,
+            "year": 2019
+          },
+          {
+            "excerpt": "Warning lights: adaptive cruise control fault. Lane departure fault collision avoidance fault and emissions check engine. Diagnosed fix: fuel injectors malfunctioning. This making the emissions light come on making all the other warning lights to go off. Fixed at a local Honda de...",
+            "group": "adas",
+            "id": "1997114",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 37.6092,
+            "year": 2019
+          },
+          {
+            "excerpt": "1. My car like many other CRV's I have read about online in forums and other sites is experiencing the fuel injection failure of CRV's since 2017 model. The consumer reports article from 2018 stated the 2019 model was to include a \"fix\" for this problem but it has not. My car has...",
+            "group": "adas",
+            "id": "1776159",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 35.7155,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-04T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-04T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

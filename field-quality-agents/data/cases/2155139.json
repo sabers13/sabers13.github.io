@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2155139",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "The problem is with the Infotainment system. It was replaced once under warranty but is again malfunctioning. The infotainment system controls some critical features of the vehicle. One instance is when trying to calibrate tpms after a low condition, it is impossible to get control of the display as it makes \"Ghost\" selections or is hung up. Resets both hard and soft do not work. Removing the negative battery cable doesn't work. Note that research shows many Accords and other models are effected. It also seems the manufacturer is aware of the situation and doing nothing to correct it. This is a safety issue. If it were just the radio effected, I really would care. But because the cars systems rely on the infotainment systems, its a concern. Symptoms are : Freezing & Crashing: The screen becomes unresponsive or shuts down unexpectedly.  Phantom Touches: The screen registers touches that aren't happening, selecting things randomly on its own.   Audio/Radio Malfunctions: Stations changing or Bluetooth disconnecting.  System Restarts: The unit turns off and on by itself, even after the car is off.",
+    "received_at": "2025-12-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2155139",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2155139",
+    "decided_at": "2025-12-08T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2155139",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Infotainment system"
+      },
+      {
+        "kind": "other",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The problem is with the Infotainment system."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It was replaced once under warranty but is again malfunctioning."
+      },
+      {
+        "kind": "condition",
+        "quote": "replaced once under warranty"
+      },
+      {
+        "kind": "condition",
+        "quote": "again malfunctioning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it is impossible to get control of the display as it makes \"Ghost\" selections or is hung up."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Resets both hard and soft do not work."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Removing the negative battery cable doesn't work."
+      },
+      {
+        "kind": "safety",
+        "quote": "The infotainment system controls some critical features of the vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a safety issue."
+      },
+      {
+        "kind": "safety",
+        "quote": "because the cars systems rely on the infotainment systems, its a concern."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The screen becomes unresponsive or shuts down unexpectedly."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The screen registers touches that aren't happening, selecting things randomly on its own."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Stations changing or Bluetooth disconnecting."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The unit turns off and on by itself, even after the car is off."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": true,
+    "summary": "Infotainment system (filed as exterior lighting) freezes, phantom-touches, restarts, and disrupts audio/Bluetooth; resets fail and TPMS calibration is blocked after a low condition.",
+    "symptoms": [
+      "Infotainment system malfunctioning again after warranty replacement",
+      "Display cannot be controlled during TPMS calibration due to ghost selections or hang",
+      "Hard and soft resets do not work",
+      "Removing the negative battery cable does not work",
+      "Screen becomes unresponsive or shuts down unexpectedly",
+      "Phantom touches select things randomly",
+      "Stations change or Bluetooth disconnects",
+      "Unit turns off and on by itself even after car is off"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2155139",
+    "created_at": "2025-12-08T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Both the left and right headlights are cracked. There is no reason for the headlights to be cracked, which is a safety hazard.",
+      "group": "lighting",
+      "id": "1886909",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 0.5754,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-08T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0027295,
+      "duration_ms": 29189,
+      "reason": "Infotainment system (filed as exterior lighting) freezes, phantom-touches, restarts, and disrupts audio/Bluetooth; resets fail and TPMS calibration is blocked after a low condition.",
+      "started_at": "2025-12-08T07:00:01Z",
+      "step": 2,
+      "tokens": 5184,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-12-08T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Both the left and right headlights are cracked. There is no reason for the headlights to be cracked, which is a safety hazard.",
+            "group": "lighting",
+            "id": "1886909",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 0.5754,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-08T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-08T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-08T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-08T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-08T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-08T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-08T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

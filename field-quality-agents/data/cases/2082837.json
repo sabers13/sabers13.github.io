@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2082837",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 5",
+    "narrative": "Have gotten all recalls fixed associated with the ICCU; car has less than 15000 miles on it and suddenly lost power, “check electrical system” and “power limited” lights flashing. We had no warning prior, and had just arrived back 2 days before from a long road trip. While I’m glad it happened while close to home, we still had to have our vehicle towed to the dealership and it took 3 business days to diagnose the issue (ICCU failure). We were put at risk due to the sudden change of status and inability to access the contents of our car after the power died (including my toddlers car seat).",
+    "received_at": "2025-04-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2082837",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2082837",
+    "decided_at": "2025-04-14T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2082837",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "suddenly lost power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "“check electrical system” and “power limited” lights flashing"
+      },
+      {
+        "kind": "condition",
+        "quote": "Have gotten all recalls fixed associated with the ICCU"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ICCU failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "We were put at risk due to the sudden change of status"
+      },
+      {
+        "kind": "other",
+        "quote": "had just arrived back 2 days before from a long road trip"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system / ICCU sudden power loss with 'check electrical system' and 'power limited' warnings after ICCU recalls, under 15,000 miles and two days after a long road trip.",
+    "symptoms": [
+      "sudden loss of power",
+      "check electrical system warning",
+      "power limited warning",
+      "ICCU failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2082837",
+    "created_at": "2025-04-14T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I received this car new on 9/2/2024. I was driving at the freeway speed of traffic on 9/5/2024 when there was a sudden alarm and warning lights flashing on the dashboard with a message that said “Stop vehicle and check brake system.” At this same time, the brakes stopped function...",
+      "group": "electrical_general",
+      "id": "2037087",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 13.519,
+      "year": 2024
+    },
+    {
+      "excerpt": "Received orange warning “Power limited”. A minute or so later received RED warning “Stop vehicle and check power supply”. Less than a minute later the car stopped and turned off completely, even the HAZARD lights would not flash. Tow truck was unable to tow because the car could...",
+      "group": "electrical_general",
+      "id": "2048319",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 9.0301,
+      "year": 2024
+    },
+    {
+      "excerpt": "My vehicle was 4 weeks old. On Friday 6/28/24, my vehicle displayed the following message on the dashboard, \"Check Brake System\". It disappeared later, and reappeared on the next day. I checked Hyundai's app, Bluelink. There was a alert on Bluelink, \"Attention Needed\". I opened t...",
+      "group": "electrical_general",
+      "id": "2004879",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 7.1681,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00122515,
+      "duration_ms": 17081,
+      "reason": "Electrical system / ICCU sudden power loss with 'check electrical system' and 'power limited' warnings after ICCU recalls, under 15,000 miles and two days after a long road trip.",
+      "started_at": "2025-04-14T07:00:01Z",
+      "step": 2,
+      "tokens": 2610,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I received this car new on 9/2/2024. I was driving at the freeway speed of traffic on 9/5/2024 when there was a sudden alarm and warning lights flashing on the dashboard with a message that said “Stop vehicle and check brake system.” At this same time, the brakes stopped function...",
+            "group": "electrical_general",
+            "id": "2037087",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 13.519,
+            "year": 2024
+          },
+          {
+            "excerpt": "Received orange warning “Power limited”. A minute or so later received RED warning “Stop vehicle and check power supply”. Less than a minute later the car stopped and turned off completely, even the HAZARD lights would not flash. Tow truck was unable to tow because the car could...",
+            "group": "electrical_general",
+            "id": "2048319",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 9.0301,
+            "year": 2024
+          },
+          {
+            "excerpt": "My vehicle was 4 weeks old. On Friday 6/28/24, my vehicle displayed the following message on the dashboard, \"Check Brake System\". It disappeared later, and reappeared on the next day. I checked Hyundai's app, Bluelink. There was a alert on Bluelink, \"Attention Needed\". I opened t...",
+            "group": "electrical_general",
+            "id": "2004879",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 7.1681,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-14T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-14T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-14T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-14T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

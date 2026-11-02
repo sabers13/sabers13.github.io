@@ -1,0 +1,309 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2158431",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL X",
+    "narrative": "Vehicle: 2018 Tesla Model X Recall Reference: Tesla eMMC Recall – NHTSA Campaign Number 21V-035 (Recall 21V035000) Defect Description: In March 2021, Tesla notified me by email of a recall involving failure of the eMMC memory chip in the Media Control Unit (MCU). This defect is known to cause loss of vehicle system functionality and safety-related features. Despite this notification, Tesla has refused to honor the recall and replace the eMMC when I brought my vehicle in for service. Current Vehicle Condition: My vehicle exhibits severe and worsening symptoms consistent with eMMC failure, including: System freezing and frequent unresponsiveness GPS extremely slow or nonfunctional Turn signal indicators intermittently fail Horn fails to operate approximately 95% of the time Vehicle reset/reboot does not work Touchscreen and vehicle controls are very slow or nonresponsive These issues occur regularly and without warning. Safety Risk: This defect creates a significant safety hazard. The failure of turn signals, horn, and system responsiveness increases the risk of accidents. The inability to reset or restore the system while driving further endangers occupants and other road users. Due to these failures, the vehicle is unsafe to operate. Manufacturer Response: Although Tesla issued a recall notice in March 2021, they have declined to perform the recall repair on my vehicle. No effective remedy has been provided, and the vehicle’s condition continues to deteriorate. Request for NHTSA Action: I am requesting that NHTSA investigate Tesla’s failure to honor Recall 21V-035 and require Tesla to provide the mandated repair. This unresolved defect affects safety-critical systems and presents an ongoing risk. When I went there last Dec 4 to get this repaired, they wanted me to upgrade and pay almost $2000. I am willing to pay half of the cost but not the entire amount.",
+    "received_at": "2025-12-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158431",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158431",
+    "decided_at": "2025-12-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158431",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "System freezing and frequent unresponsiveness"
+      },
+      {
+        "kind": "symptom",
+        "quote": "GPS extremely slow or nonfunctional"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Turn signal indicators intermittently fail"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Horn fails to operate approximately 95% of the time"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Vehicle reset/reboot does not work"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Touchscreen and vehicle controls are very slow or nonresponsive"
+      },
+      {
+        "kind": "condition",
+        "quote": "These issues occur regularly and without warning."
+      },
+      {
+        "kind": "fault_code",
+        "quote": "21V-035"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "21V035000"
+      },
+      {
+        "kind": "safety",
+        "quote": "This defect creates a significant safety hazard."
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle is unsafe to operate"
+      },
+      {
+        "kind": "other",
+        "quote": "loss of vehicle system functionality and safety-related features"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [
+      "21V-035",
+      "21V035000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2018 Tesla Model X electrical system eMMC/MCU failure causing freezing, unresponsive controls, turn signal and horn failures, intermittent and without warning.",
+    "symptoms": [
+      "system freezing and frequent unresponsiveness",
+      "GPS extremely slow or nonfunctional",
+      "turn signal indicators intermittently fail",
+      "horn fails to operate approximately 95% of the time",
+      "vehicle reset/reboot does not work",
+      "touchscreen and vehicle controls are very slow or nonresponsive"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158431",
+    "created_at": "2025-12-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I AM FILING A COMPLAINT AGAINST TESLA REGARDING THE MCU INFOTAINMENT ON THE MODEL X. MY VEHICLE IS 2 YEARS OLD AND BEGAN TO SUFFER MCU FAILURE AFTER UPGRADING TO TESLA'S HW3. THE MCU FAILURES HAS RESULTED IN SEVERE LAG, LOW VEHICLE STARTUP. VEHICLE START UP HAS TAKEN ANYWHERE FRO...",
+      "group": "electrical_general",
+      "id": "1680470",
+      "make": "TESLA",
+      "model": "MODEL X",
+      "score": 19.4538,
+      "year": 2018
+    },
+    {
+      "excerpt": "THE CENTRAL DISPLAY UNIT/MEDIA UNIT (MCU) HAD MORE AND MORE FREQUENT REBOOTS, FREEZES, BLANK SCREENS. WHEN IT OCCURS, MY AUTOPILOT WILL STOP FUNCTION, TRAFFIC INFORMATION WILL NOT WORK, RADIO/SPEAKER WILL BE SILENT, NO TURN LIGHT SIGNAL CLICKING IS AUDIBLE. THE MANUFACTURER REFUS...",
+      "group": "electrical_general",
+      "id": "1719668",
+      "make": "TESLA",
+      "model": "MODEL X",
+      "score": 18.0482,
+      "year": 2018
+    },
+    {
+      "excerpt": "I was driving on [XXX] from Carson City to Reno in Washoe Valley while on autopilot, the car suddenly alerted with very loud alarms, showed 1. steering assist reduced, 2. Automatic Emergency Braking is unavailable 3. Traction Control disabled 4. Stability control disabled 5. Park...",
+      "group": "electrical_general",
+      "id": "1978231",
+      "make": "TESLA",
+      "model": "MODEL X",
+      "score": 17.2062,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00170305,
+      "duration_ms": 18279,
+      "reason": "2018 Tesla Model X electrical system eMMC/MCU failure causing freezing, unresponsive controls, turn signal and horn failures, intermittent and without warning.",
+      "started_at": "2025-12-18T07:00:01Z",
+      "step": 2,
+      "tokens": 3588,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL X",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I AM FILING A COMPLAINT AGAINST TESLA REGARDING THE MCU INFOTAINMENT ON THE MODEL X. MY VEHICLE IS 2 YEARS OLD AND BEGAN TO SUFFER MCU FAILURE AFTER UPGRADING TO TESLA'S HW3. THE MCU FAILURES HAS RESULTED IN SEVERE LAG, LOW VEHICLE STARTUP. VEHICLE START UP HAS TAKEN ANYWHERE FRO...",
+            "group": "electrical_general",
+            "id": "1680470",
+            "make": "TESLA",
+            "model": "MODEL X",
+            "score": 19.4538,
+            "year": 2018
+          },
+          {
+            "excerpt": "THE CENTRAL DISPLAY UNIT/MEDIA UNIT (MCU) HAD MORE AND MORE FREQUENT REBOOTS, FREEZES, BLANK SCREENS. WHEN IT OCCURS, MY AUTOPILOT WILL STOP FUNCTION, TRAFFIC INFORMATION WILL NOT WORK, RADIO/SPEAKER WILL BE SILENT, NO TURN LIGHT SIGNAL CLICKING IS AUDIBLE. THE MANUFACTURER REFUS...",
+            "group": "electrical_general",
+            "id": "1719668",
+            "make": "TESLA",
+            "model": "MODEL X",
+            "score": 18.0482,
+            "year": 2018
+          },
+          {
+            "excerpt": "I was driving on [XXX] from Carson City to Reno in Washoe Valley while on autopilot, the car suddenly alerted with very loud alarms, showed 1. steering assist reduced, 2. Automatic Emergency Braking is unavailable 3. Traction Control disabled 4. Stability control disabled 5. Park...",
+            "group": "electrical_general",
+            "id": "1978231",
+            "make": "TESLA",
+            "model": "MODEL X",
+            "score": 17.2062,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

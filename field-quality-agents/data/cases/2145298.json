@@ -1,0 +1,265 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2145298",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL Y",
+    "narrative": "Both rear seat belt buckles (driver-side rear and center) fail to latch securely. The metal tongue inserts fully into the buckle but does not lock with an audible click and releases immediately upon light tension. This prevents the seat belts from restraining passengers in a crash.  - No visible debris, damage, or contamination in either buckle. - Issue occurs consistently on multiple attempts and with different seat belt tongues. - Vehicle is 2021 Model Y Long Range with 83,610 miles. - **Problem first noticed yesterday (November 2, 2025)**. - Tesla Service has refused repair under warranty, stating the vehicle is out of warranty, despite this being a critical safety component governed by FMVSS 209.  This is a **safety defect**, not normal wear. The rear seat belts are **inoperable**, rendering the rear seating positions **unsafe and non-compliant with federal safety standards**. Similar failures are widely reported by other Model Y owners on NHTSA and Tesla forums.  REQUEST: Please investigate this recurring seat belt buckle latching failure in Tesla Model Y vehicles. A recall or safety improvement campaign may be warranted.",
+    "received_at": "2025-11-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2145298",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2145298",
+    "decided_at": "2025-11-03T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2145298",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Both rear seat belt buckles (driver-side rear and center) fail to latch securely."
+      },
+      {
+        "kind": "symptom",
+        "quote": "does not lock with an audible click"
+      },
+      {
+        "kind": "symptom",
+        "quote": "releases immediately upon light tension"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This prevents the seat belts from restraining passengers in a crash."
+      },
+      {
+        "kind": "condition",
+        "quote": "Issue occurs consistently on multiple attempts and with different seat belt tongues."
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a **safety defect**, not normal wear."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Tesla Model Y rear seat belt buckles fail to latch securely, release under light tension, and cannot restrain passengers in a crash.",
+    "symptoms": [
+      "rear seat belt buckles fail to latch securely",
+      "metal tongue inserts fully but does not lock with an audible click",
+      "buckle releases immediately upon light tension",
+      "seat belts cannot restrain passengers in a crash"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2145298",
+    "created_at": "2025-11-03T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "rear seat belts do not latch. the male portion of the seatbelt will be able to go in fully, but there's no click or latch to prevent it from coming back out. this is a huge safety issue, but Tesla has refused to service it. there are no warning lamps or messages.",
+      "group": "restraints",
+      "id": "1898485",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 19.6791,
+      "year": 2021
+    },
+    {
+      "excerpt": "Airbag is OFF for a 123 lb front seat passenger (adult female). This is an intermittent fault -- the passenger airbag status changes during the drive. Possibly half the time the airbag is OFF, when it needs to be ON. Two Tesla Service Center visits were made. The first Tesla Serv...",
+      "group": "restraints",
+      "id": "1827808",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 14.5469,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated that his wife was driving at 5 -10 MPH and traffic ahead was slowing down, the vehicle in front stopped and the driver depressed the brake pedal however the vehicle then unintendedly accelerated. As a result, the contact c...",
+      "group": "restraints",
+      "id": "2031773",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 12.8629,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00101005,
+      "duration_ms": 11304,
+      "reason": "Tesla Model Y rear seat belt buckles fail to latch securely, release under light tension, and cannot restrain passengers in a crash.",
+      "started_at": "2025-11-03T07:00:01Z",
+      "step": 2,
+      "tokens": 2316,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "rear seat belts do not latch. the male portion of the seatbelt will be able to go in fully, but there's no click or latch to prevent it from coming back out. this is a huge safety issue, but Tesla has refused to service it. there are no warning lamps or messages.",
+            "group": "restraints",
+            "id": "1898485",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 19.6791,
+            "year": 2021
+          },
+          {
+            "excerpt": "Airbag is OFF for a 123 lb front seat passenger (adult female). This is an intermittent fault -- the passenger airbag status changes during the drive. Possibly half the time the airbag is OFF, when it needs to be ON. Two Tesla Service Center visits were made. The first Tesla Serv...",
+            "group": "restraints",
+            "id": "1827808",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 14.5469,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated that his wife was driving at 5 -10 MPH and traffic ahead was slowing down, the vehicle in front stopped and the driver depressed the brake pedal however the vehicle then unintendedly accelerated. As a result, the contact c...",
+            "group": "restraints",
+            "id": "2031773",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 12.8629,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-03T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-03T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-03T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-03T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

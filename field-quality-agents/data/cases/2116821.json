@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2116821",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "PILOT",
+    "narrative": "Radar camera went out shutting off all safety features lkas, power steering , collision control, power breaks etc",
+    "received_at": "2025-08-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116821",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116821",
+    "decided_at": "2025-08-03T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116821",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: ASSIST"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Radar camera went out"
+      },
+      {
+        "kind": "safety",
+        "quote": "shutting off all safety features"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power steering"
+      },
+      {
+        "kind": "symptom",
+        "quote": "collision control"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power breaks"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2022 Honda Pilot lane departure assist: radar camera went out, shutting off safety features including LKAS, power steering, collision control and power brakes.",
+    "symptoms": [
+      "radar camera went out",
+      "all safety features shut off",
+      "lane keeping assist system (LKAS) disabled",
+      "power steering disabled",
+      "collision control disabled",
+      "power brakes disabled"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116821",
+    "created_at": "2025-08-03T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The vehicle mistakingly thinks it recognizes an obstacle, and wrongly activates the brakes and forward collision warning. This recently occurred during highway driving with no apparent obstacles multiple times. Also (maybe related) when using adaptive cruise control, rather than...",
+      "group": "adas",
+      "id": "1984973",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 5.661,
+      "year": 2022
+    },
+    {
+      "excerpt": "The car has used Automatic braking 3 times for no reason. No one is front of us. It also used automatic braking and then made the car die? Or lose all power and there was no object in front of us, in the middle of the road. We were almost rear ended and the vehicle would not let...",
+      "group": "adas",
+      "id": "1863714",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 4.1086,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Honda Pilot. The contact received notification of NHTSA Campaign Number: 23V431000 (Back Over Prevention) however, the dealer was unable to set a recall appointment until the end of the month. The contact stated that the manufacturer exceeded a reasonable...",
+      "group": "adas",
+      "id": "1927173",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 1.6628,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-03T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00067045,
+      "duration_ms": 10234,
+      "reason": "2022 Honda Pilot lane departure assist: radar camera went out, shutting off safety features including LKAS, power steering, collision control and power brakes.",
+      "started_at": "2025-08-03T07:00:21Z",
+      "step": 2,
+      "tokens": 1594,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-03T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The vehicle mistakingly thinks it recognizes an obstacle, and wrongly activates the brakes and forward collision warning. This recently occurred during highway driving with no apparent obstacles multiple times. Also (maybe related) when using adaptive cruise control, rather than...",
+            "group": "adas",
+            "id": "1984973",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 5.661,
+            "year": 2022
+          },
+          {
+            "excerpt": "The car has used Automatic braking 3 times for no reason. No one is front of us. It also used automatic braking and then made the car die? Or lose all power and there was no object in front of us, in the middle of the road. We were almost rear ended and the vehicle would not let...",
+            "group": "adas",
+            "id": "1863714",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 4.1086,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Honda Pilot. The contact received notification of NHTSA Campaign Number: 23V431000 (Back Over Prevention) however, the dealer was unable to set a recall appointment until the end of the month. The contact stated that the manufacturer exceeded a reasonable...",
+            "group": "adas",
+            "id": "1927173",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 1.6628,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-08-03T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-03T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-03T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-03T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-03T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-03T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-03T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

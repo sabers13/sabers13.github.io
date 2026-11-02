@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2057804",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150 LIGHTNING BEV",
+    "narrative": "The rear marker light that is on the tailgate of my Lariat has water in it and no longer works.  this reduces the visability of the vehicle.  There is a recal to repair this exact problem issued for my yr vehicle but not my specific vin.",
+    "received_at": "2025-01-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2057804",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2057804",
+    "decided_at": "2025-01-21T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2057804",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "rear marker light that is on the tailgate of my Lariat"
+      },
+      {
+        "kind": "symptom",
+        "quote": "has water in it"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no longer works"
+      },
+      {
+        "kind": "condition",
+        "quote": "water in it"
+      },
+      {
+        "kind": "safety",
+        "quote": "this reduces the visability of the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "There is a recal to repair this exact problem issued for my yr vehicle but not my specific vin."
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: rear tailgate marker light has water ingress and no longer works, reducing vehicle visibility; recall noted for same issue but not this VIN.",
+    "symptoms": [
+      "water in rear tailgate marker light",
+      "rear marker light no longer works",
+      "reduced vehicle visibility"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2057804",
+    "created_at": "2025-01-21T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Ford F-150. The contact received notification of NHTSA Campaign Number: 23V418000 (Exterior Lighting) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the...",
+      "group": "lighting",
+      "id": "1975206",
+      "make": "FORD",
+      "model": "F-150 LIGHTNING BEV",
+      "score": 3.6099,
+      "year": 2022
+    },
+    {
+      "excerpt": "Campaign/NHTSA# 23S30/23V418 Issue Date 2023-06-09 Description On your vehicle, it may be possible that your reversing lamps may not function due to microscopic cracks that can develop in the vehicles rear lightbar. If a microscopic crack is present, condensation can potentially...",
+      "group": "lighting",
+      "id": "1967366",
+      "make": "FORD",
+      "model": "F-150 LIGHTNING BEV",
+      "score": 2.2035,
+      "year": 2022
+    },
+    {
+      "excerpt": "Rear tailgate lights red and white fill up with water and stop working. Cruise control jumps up 10mph when passing signs, very scary!",
+      "group": "lighting",
+      "id": "1877129",
+      "make": "FORD",
+      "model": "F-150 LIGHTNING BEV",
+      "score": 2.0983,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00158095,
+      "duration_ms": 26155,
+      "reason": "Exterior lighting: rear tailgate marker light has water ingress and no longer works, reducing vehicle visibility; recall noted for same issue but not this VIN.",
+      "started_at": "2025-01-21T07:00:01Z",
+      "step": 2,
+      "tokens": 3137,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150 LIGHTNING BEV",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Ford F-150. The contact received notification of NHTSA Campaign Number: 23V418000 (Exterior Lighting) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the...",
+            "group": "lighting",
+            "id": "1975206",
+            "make": "FORD",
+            "model": "F-150 LIGHTNING BEV",
+            "score": 3.6099,
+            "year": 2022
+          },
+          {
+            "excerpt": "Campaign/NHTSA# 23S30/23V418 Issue Date 2023-06-09 Description On your vehicle, it may be possible that your reversing lamps may not function due to microscopic cracks that can develop in the vehicles rear lightbar. If a microscopic crack is present, condensation can potentially...",
+            "group": "lighting",
+            "id": "1967366",
+            "make": "FORD",
+            "model": "F-150 LIGHTNING BEV",
+            "score": 2.2035,
+            "year": 2022
+          },
+          {
+            "excerpt": "Rear tailgate lights red and white fill up with water and stop working. Cruise control jumps up 10mph when passing signs, very scary!",
+            "group": "lighting",
+            "id": "1877129",
+            "make": "FORD",
+            "model": "F-150 LIGHTNING BEV",
+            "score": 2.0983,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-21T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-21T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-21T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-21T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-21T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-21T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-21T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

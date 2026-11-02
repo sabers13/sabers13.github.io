@@ -1,0 +1,241 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2155014",
+    "make": "AUDI",
+    "mileage": null,
+    "model": "A6",
+    "narrative": "While driving at normal speed, the entire digital instrument panel suddenly went black and a red warning triangle appeared. I lost all gauges, including speedometer, fuel level, and warning indicators. This created a serious safety risk because I was in active traffic and had no way to know my speed or see alerts. My VIN shows an open recall for this exact defect (instrument cluster blackout), but the failure has already happened during normal driving. I consider the vehicle unsafe to drive until repaired.",
+    "received_at": "2025-12-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2155014",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2155014",
+    "decided_at": "2025-12-07T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2155014",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving at normal speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the entire digital instrument panel suddenly went black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a red warning triangle appeared"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I lost all gauges, including speedometer, fuel level, and warning indicators"
+      },
+      {
+        "kind": "safety",
+        "quote": "This created a serious safety risk because I was in active traffic and had no way to know my speed or see alerts."
+      },
+      {
+        "kind": "other",
+        "quote": "My VIN shows an open recall for this exact defect (instrument cluster blackout)"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: digital instrument panel blackout and red warning triangle while driving at normal speed, with all gauges lost.",
+    "symptoms": [
+      "entire digital instrument panel suddenly went black",
+      "red warning triangle appeared",
+      "lost all gauges including speedometer, fuel level, and warning indicators"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2155014",
+    "created_at": "2025-12-07T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact's wife owns a 2021 Audi A6. The contact received notification of NHTSA Campaign Number: 22V155000 (Electrical System) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the r...",
+      "group": "electrical_general",
+      "id": "1871235",
+      "make": "AUDI",
+      "model": "A6",
+      "score": 0.9709,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00078475,
+      "duration_ms": 9357,
+      "reason": "Electrical system: digital instrument panel blackout and red warning triangle while driving at normal speed, with all gauges lost.",
+      "started_at": "2025-12-07T07:00:01Z",
+      "step": 2,
+      "tokens": 1840,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-12-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "A6",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact's wife owns a 2021 Audi A6. The contact received notification of NHTSA Campaign Number: 22V155000 (Electrical System) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the r...",
+            "group": "electrical_general",
+            "id": "1871235",
+            "make": "AUDI",
+            "model": "A6",
+            "score": 0.9709,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-07T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-07T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-07T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-07T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

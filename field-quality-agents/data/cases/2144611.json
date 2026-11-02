@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2144611",
+    "make": "HONDA",
+    "mileage": 133000,
+    "model": "ODYSSEY",
+    "narrative": "The contact owns a 2019 Honda Odyssey. The contact stated that while driving at an undisclosed speed, the vehicle suddenly shifted into neutral as indicated by the gear shift indicator light. The contact was able to coast to the shoulder of the roadway, where the failure persisted, and the vehicle was unable to shift into drive. The Adaptive Cruise Control, Lane Keep Assist, Collision Mitigation System, Road Departure System, and Transmission Fault Detected messages were displayed. The vehicle was towed to an independent mechanic, who diagnosed a failure with the Transmission Control Unit. The vehicle was not repaired. After investigating the failure, the contact related the failure to NHTSA Campaign Number: 19V299000 (Power Train, Electrical System), but the VIN was not included. The manufacturer was not notified of the failure. The failure mileage was 133,000.",
+    "received_at": "2025-10-30",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2144611",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2144611",
+    "decided_at": "2025-10-30T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2144611",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle suddenly shifted into neutral"
+      },
+      {
+        "kind": "symptom",
+        "quote": "unable to shift into drive"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Transmission Fault Detected messages were displayed"
+      },
+      {
+        "kind": "other",
+        "quote": "diagnosed a failure with the Transmission Control Unit"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Number: 19V299000"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle suddenly shifted into neutral"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2019 Honda Odyssey electrical system: sudden shift into neutral while driving, unable to shift into drive, Transmission Control Unit failure diagnosed",
+    "symptoms": [
+      "vehicle suddenly shifted into neutral while driving",
+      "unable to shift into drive",
+      "Adaptive Cruise Control, Lane Keep Assist, Collision Mitigation System, Road Departure System, and Transmission Fault Detected messages displayed",
+      "Transmission Control Unit failure diagnosed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2144611",
+    "created_at": "2025-10-30T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2019 Honda Odyssey. The contact stated that the driver's side rear sliding door failed to unlock while using the key fob, the door handle, or the door lock switch. There was no warning light illuminated. The vehicle was not diagnosed or repaired. The dealer and...",
+      "group": "electrical_general",
+      "id": "2001409",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 40.4516,
+      "year": 2019
+    },
+    {
+      "excerpt": "The contact owns a 2019 Honda Odyssey. The contact received notification of NHTSA Campaign Number: 23V858000 (Fuel System, Gasoline) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time...",
+      "group": "electrical_general",
+      "id": "1993405",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 34.8033,
+      "year": 2019
+    },
+    {
+      "excerpt": "Sudden Loss of Acceleration/Unpredictable Acceleration: Pressed accelerator to enter highway from rolling stop going around 10-20mph. ZF 9-Speed transmission hesitated, attempted to downshift & vehicle suddenly lost transmission & possibly went into neutral and/or transmission fa...",
+      "group": "electrical_general",
+      "id": "1971832",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 27.6789,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-30T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012622,
+      "duration_ms": 13930,
+      "reason": "2019 Honda Odyssey electrical system: sudden shift into neutral while driving, unable to shift into drive, Transmission Control Unit failure diagnosed",
+      "started_at": "2025-10-30T07:00:36Z",
+      "step": 2,
+      "tokens": 2695,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-30T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2019 Honda Odyssey. The contact stated that the driver's side rear sliding door failed to unlock while using the key fob, the door handle, or the door lock switch. There was no warning light illuminated. The vehicle was not diagnosed or repaired. The dealer and...",
+            "group": "electrical_general",
+            "id": "2001409",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 40.4516,
+            "year": 2019
+          },
+          {
+            "excerpt": "The contact owns a 2019 Honda Odyssey. The contact received notification of NHTSA Campaign Number: 23V858000 (Fuel System, Gasoline) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time...",
+            "group": "electrical_general",
+            "id": "1993405",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 34.8033,
+            "year": 2019
+          },
+          {
+            "excerpt": "Sudden Loss of Acceleration/Unpredictable Acceleration: Pressed accelerator to enter highway from rolling stop going around 10-20mph. ZF 9-Speed transmission hesitated, attempted to downshift & vehicle suddenly lost transmission & possibly went into neutral and/or transmission fa...",
+            "group": "electrical_general",
+            "id": "1971832",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 27.6789,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-10-30T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-30T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-30T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-30T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-30T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-30T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-30T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

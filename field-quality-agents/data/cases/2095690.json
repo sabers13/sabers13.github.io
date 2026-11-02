@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: REARVIEW SYSTEM BRAKING",
+    "group": "adas",
+    "id": "2095690",
+    "make": "FORD",
+    "mileage": null,
+    "model": "BRONCO",
+    "narrative": "Hello, I previously wrote about this problem under ID#116588898 however i feel as though it did not explain what happened correctly. As I was backing out of my garage, I stopped my vehicle putting it in park. After putting my vehicle in reverse and looking in my mirrors I didn't see anything behind me. (a blind spot) I was on an angle. My radio was on and as I proceeded in reverse, I hit a car that was in my driveway. There was no damage to my vehicle however there is about $3900 damage to the car behind me where the spare tire crushed the trunk lid and rear left qtr. At no time did I hear any warning lights, the radio did not lower, and warning lights and sounds were not doing the job of what they were supposed to do. As I thought about it, I'm not even sure the camera was on. I hope this explains this a little better than ID# 11658898. Sorry for the inconvenience of reporting this twice. If the other can be deleted that would be appreciated.",
+    "received_at": "2025-05-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2095690",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2095690",
+    "decided_at": "2025-05-28T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2095690",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: REARVIEW SYSTEM BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "As I was backing out of my garage"
+      },
+      {
+        "kind": "condition",
+        "quote": "a blind spot"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I hit a car that was in my driveway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "At no time did I hear any warning lights, the radio did not lower, and warning lights and sounds were not doing the job of what they were supposed to do."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I'm not even sure the camera was on."
+      },
+      {
+        "kind": "safety",
+        "quote": "where the spare tire crushed the trunk lid and rear left qtr"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Rearview system braking: backing out of garage at an angle into a blind spot, hit car behind; no warning lights/sounds, radio did not lower, camera possibly off.",
+    "symptoms": [
+      "collision with car behind while reversing",
+      "no warning lights",
+      "no warning sounds",
+      "radio did not lower",
+      "camera possibly not on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2095690",
+    "created_at": "2025-05-28T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Emergency brake failure. I have a very slight slope on my driveway. My car rolled halfway down my driveway. I assumed I did something wrong although I knew I had the car in gear with the E brake on. Two hours later I came back from an errand parked on my driveway was sitting in m...",
+      "group": "adas",
+      "id": "1882720",
+      "make": "FORD",
+      "model": "BRONCO",
+      "score": 15.2445,
+      "year": 2023
+    },
+    {
+      "excerpt": "The rear parking sensors (all of them) stopped working. Whenever the vehicle is placed in reverse a warning message is displayed on the dash. The vehicle was taken to a Ford dealer and it turns out a wire was damaged in the rear wiring loom. This was most likely due to physical d...",
+      "group": "adas",
+      "id": "1973009",
+      "make": "FORD",
+      "model": "BRONCO",
+      "score": 12.8881,
+      "year": 2023
+    },
+    {
+      "excerpt": "The main issue is the airbag light, it is available for inspection. Warning indicator on Ford app states safe to drive without a passenger. Dealer repaired a couple parts got better for a while but continued. Was told they had a wiring harness ordered, but canceled and told to ca...",
+      "group": "adas",
+      "id": "2011656",
+      "make": "FORD",
+      "model": "BRONCO",
+      "score": 10.9678,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-28T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010765,
+      "duration_ms": 12279,
+      "reason": "Rearview system braking: backing out of garage at an angle into a blind spot, hit car behind; no warning lights/sounds, radio did not lower, camera possibly off.",
+      "started_at": "2025-05-28T07:00:36Z",
+      "step": 2,
+      "tokens": 2417,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-28T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Emergency brake failure. I have a very slight slope on my driveway. My car rolled halfway down my driveway. I assumed I did something wrong although I knew I had the car in gear with the E brake on. Two hours later I came back from an errand parked on my driveway was sitting in m...",
+            "group": "adas",
+            "id": "1882720",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 15.2445,
+            "year": 2023
+          },
+          {
+            "excerpt": "The rear parking sensors (all of them) stopped working. Whenever the vehicle is placed in reverse a warning message is displayed on the dash. The vehicle was taken to a Ford dealer and it turns out a wire was damaged in the rear wiring loom. This was most likely due to physical d...",
+            "group": "adas",
+            "id": "1973009",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 12.8881,
+            "year": 2023
+          },
+          {
+            "excerpt": "The main issue is the airbag light, it is available for inspection. Warning indicator on Ford app states safe to drive without a passenger. Dealer repaired a couple parts got better for a while but continued. Was told they had a wiring harness ordered, but canceled and told to ca...",
+            "group": "adas",
+            "id": "2011656",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 10.9678,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-28T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-28T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-28T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-28T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-28T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-28T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-28T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

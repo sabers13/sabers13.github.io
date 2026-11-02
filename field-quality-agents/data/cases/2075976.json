@@ -1,0 +1,239 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2075976",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "RAV4",
+    "narrative": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was made aware of the issue and confirmed that parts were not yet available. The manufacturer was made aware of the issue and confirmed that parts were not yet available. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-03-21",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2075976",
+    "status": "needs_engineer",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2075976",
+    "decided_at": "2025-03-21T07:00:06Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2075976",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 23V865000"
+      },
+      {
+        "kind": "other",
+        "quote": "the part to do the recall repair was not yet available"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "23V865000"
+    ],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "2021 Toyota RAV4 air bag recall 23V865000: remedy parts unavailable, no failure experienced.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2075976",
+    "created_at": "2025-03-21T07:00:03Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "symptom"
+    ],
+    "summary": "Information request: symptom",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+      "group": "restraints",
+      "id": "2043025",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 37.5811,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+      "group": "restraints",
+      "id": "2049717",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 37.5811,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+      "group": "restraints",
+      "id": "2006525",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 37.5423,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010801,
+      "duration_ms": 15683,
+      "reason": "2021 Toyota RAV4 air bag recall 23V865000: remedy parts unavailable, no failure experienced.",
+      "started_at": "2025-03-21T07:00:01Z",
+      "step": 2,
+      "tokens": 2342,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+            "group": "restraints",
+            "id": "2043025",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 37.5811,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+            "group": "restraints",
+            "id": "2049717",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 37.5811,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall...",
+            "group": "restraints",
+            "id": "2006525",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 37.5423,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: symptom",
+      "started_at": "2025-03-21T07:00:04Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-21T07:00:05Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-03-21T07:00:07Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-21T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-03-21T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

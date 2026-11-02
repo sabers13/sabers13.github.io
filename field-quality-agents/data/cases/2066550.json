@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2066550",
+    "make": "GMC",
+    "mileage": null,
+    "model": "SIERRA 1500",
+    "narrative": "While driving at 65 mph on a freeway, the engine failed and cracked a rod with fresh oil and all maintenance done regularly. Truck brakes would not work after engine failure. Truck was fully disabled and I was stranded on freeway @ 90,000 miles. Lights on exterior of the vehicle were dim after engine failed",
+    "received_at": "2025-02-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2066550",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2066550",
+    "decided_at": "2025-02-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2066550",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving at 65 mph on a freeway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the engine failed and cracked a rod"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Truck brakes would not work after engine failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "Truck was fully disabled and I was stranded on freeway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lights on exterior of the vehicle were dim after engine failed"
+      },
+      {
+        "kind": "other",
+        "quote": "90,000 miles"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: exterior lights dim after engine failed and cracked a rod at 65 mph; brakes inoperative and truck disabled.",
+    "symptoms": [
+      "engine failed",
+      "cracked rod",
+      "brakes would not work",
+      "exterior lights dim",
+      "truck fully disabled"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2066550",
+    "created_at": "2025-02-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The truck has 50,000 miles, purchased new. I don't tow or go off road. I take it to the dealer every 5,000 miles. While driving 65-70mph on the interstate (4-lanes), my dash lit up with five messages and the \"Brake, Traction Control and Engine\" lights illuminated. I applied brake...",
+      "group": "electrical_general",
+      "id": "1856316",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 11.2373,
+      "year": 2019
+    },
+    {
+      "excerpt": "I HAD NO ISSUES WITH MY TRUCK UNTIL I WENT AND HAD THE MOST RECENT RECALL DONE FOR THE BRAKES. I SINCE HAVE HAD BRAKE ISSUES TWICE. ONCE, HOURS AFTER HAVING THE RECALL DONE I GOT IN MY TRUCK AND STARTED IT AND ALL THE DASHBOARD LIGHTS WERE ILLUMINATED AND I HAD TO PUSH THE BRAKE...",
+      "group": "electrical_general",
+      "id": "1641082",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 9.4144,
+      "year": 2019
+    },
+    {
+      "excerpt": "PURCHASED NEW, DEC 24, 2019. CURRENT ODOMETER 645MILES. THE VEHICLE WAS PARKED FOR ABOUT 15 MINUTES, WHEN I RETURNED TO MY TRUCK AND TURNED IT ON, MULTIPLE WARNING TONES BEGAN TO SOUND AND THE DASHBOARD WAS ILLUMINATED WITH MULTIPLE WARNING LIGHTS (ABS, TRACTION CONTROL, CHECK EN...",
+      "group": "electrical_general",
+      "id": "1636298",
+      "make": "GMC",
+      "model": "SIERRA 1500",
+      "score": 7.2081,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010593,
+      "duration_ms": 19492,
+      "reason": "Electrical system: exterior lights dim after engine failed and cracked a rod at 65 mph; brakes inoperative and truck disabled.",
+      "started_at": "2025-02-18T07:00:01Z",
+      "step": 2,
+      "tokens": 2181,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "SIERRA 1500",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The truck has 50,000 miles, purchased new. I don't tow or go off road. I take it to the dealer every 5,000 miles. While driving 65-70mph on the interstate (4-lanes), my dash lit up with five messages and the \"Brake, Traction Control and Engine\" lights illuminated. I applied brake...",
+            "group": "electrical_general",
+            "id": "1856316",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 11.2373,
+            "year": 2019
+          },
+          {
+            "excerpt": "I HAD NO ISSUES WITH MY TRUCK UNTIL I WENT AND HAD THE MOST RECENT RECALL DONE FOR THE BRAKES. I SINCE HAVE HAD BRAKE ISSUES TWICE. ONCE, HOURS AFTER HAVING THE RECALL DONE I GOT IN MY TRUCK AND STARTED IT AND ALL THE DASHBOARD LIGHTS WERE ILLUMINATED AND I HAD TO PUSH THE BRAKE...",
+            "group": "electrical_general",
+            "id": "1641082",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 9.4144,
+            "year": 2019
+          },
+          {
+            "excerpt": "PURCHASED NEW, DEC 24, 2019. CURRENT ODOMETER 645MILES. THE VEHICLE WAS PARKED FOR ABOUT 15 MINUTES, WHEN I RETURNED TO MY TRUCK AND TURNED IT ON, MULTIPLE WARNING TONES BEGAN TO SOUND AND THE DASHBOARD WAS ILLUMINATED WITH MULTIPLE WARNING LIGHTS (ABS, TRACTION CONTROL, CHECK EN...",
+            "group": "electrical_general",
+            "id": "1636298",
+            "make": "GMC",
+            "model": "SIERRA 1500",
+            "score": 7.2081,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-02-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

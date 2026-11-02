@@ -1,0 +1,599 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2142362",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ODYSSEY",
+    "narrative": "After we took the car in all of a sudden randomly these warning lights will come on and my D for drive keeps flashing. LKAS, ACC, Collision Avoidance, Auto High Beam Problem And brake system warning. Sometimes some of them sometimes all of them. I read it’s a common problem but there hasn’t been a recall on it.",
+    "received_at": "2025-10-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2142362",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2142362",
+    "decided_at": "2025-10-22T07:00:50Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2142362",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "After we took the car in"
+      },
+      {
+        "kind": "symptom",
+        "quote": "these warning lights will come on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my D for drive keeps flashing"
+      },
+      {
+        "kind": "symptom",
+        "quote": "LKAS, ACC, Collision Avoidance, Auto High Beam Problem And brake system warning"
+      },
+      {
+        "kind": "condition",
+        "quote": "Sometimes some of them sometimes all of them"
+      },
+      {
+        "kind": "safety",
+        "quote": "brake system warning"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Check installation then run a long-run power-cycling test for intermittent ADAS and brake warnings that began after service on this 2019 Odyssey.",
+    "symptoms": [
+      "warning lights come on randomly",
+      "D for drive keeps flashing",
+      "LKAS warning",
+      "ACC warning",
+      "collision avoidance warning",
+      "auto high beam problem",
+      "brake system warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2142362",
+    "created_at": "2025-10-22T07:00:48Z",
+    "evidence": [
+      {
+        "quote": "After we took the car in",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "these warning lights will come on",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "my D for drive keeps flashing",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "LKAS, ACC, Collision Avoidance, Auto High Beam Problem And brake system warning",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Sometimes some of them sometimes all of them",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "brake system warning",
+        "source_id": "2142362",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "The narrative reports random LKAS, ACC, collision avoidance, auto high-beam and brake system warnings plus a flashing D after the car was taken in, with some or all warnings appearing intermittently. The rulebook matches 'after service' (check connector seating, pin damage and part fit first) and 'intermittent' (long-run power cycling reproduces faults after repeated wake/sleep cycles).",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "26V423000",
+      "match": true,
+      "open_date": "2026-07-01",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2020 Odyssey vehicles. Water may enter into the rearview camera, which can cause the rearview camera image to fail to display when the vehicle is in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+    },
+    {
+      "id": "23V431000",
+      "match": true,
+      "open_date": "2023-06-15",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2023 Odyssey, 2019-2022 Pilot, and 2019-2023 Passport vehicles.  Due to a faulty Media Oriented Systems Transport (MOST) communication coaxial cable connector, the rearview camera image may not appear on the display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+    },
+    {
+      "id": "20V438000",
+      "match": true,
+      "open_date": "2020-07-28",
+      "summary": "American Honda Motor Co. (Honda) is recalling certain 2019-2020 Odyssey vehicles.  Water may get into the rearview camera mounting holes and enter the camera lens and cause a distorted image, or no image at all.  Additionally, if the rearview camera view mode is set to top-down view, or switched from that view to another mode in a bright environment, the image may not display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rearview Mirrors.\""
+    },
+    {
+      "id": "20V439000",
+      "match": true,
+      "open_date": "2020-07-28",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2020 Odyssey, 2019-2020 Passport, and 2019-2021 Pilot vehicles.   Incorrect instrument panel control module software can cause the instrument panel to not display critical information, such as engine oil pressure, speedometer, and gear selector position until the next ignition cycle.  Additionally, it can prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Control and Displays\" and 111, \"Rearview Mirrors.\""
+    },
+    {
+      "id": "20V440000",
+      "match": true,
+      "open_date": "2020-07-28",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2019-2021 Pilot, 2019-2020 Odyssey and 2019-2020 Passport vehicles.  Incorrect central network software programming may cause several errors to occur that can delay or prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Getting the following error messages on 2019 Odyssey: - Brake system lights - Lane keeping assist problem (LKAS); - Auto high-beam problem (A) - Road departure mitigation system problem - Collision mitigation system problem - Adaptive cruise control problem (ACC) - Brake system l...",
+      "group": "adas",
+      "id": "1988137",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 20.8186,
+      "year": 2019
+    },
+    {
+      "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+      "group": "adas",
+      "id": "2001261",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 19.5163,
+      "year": 2019
+    },
+    {
+      "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+      "group": "adas",
+      "id": "2001262",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 19.5163,
+      "year": 2019
+    },
+    {
+      "excerpt": "I took my van to the dealer and they told me that the sensor inside of the front mirror is faulty, causing the following lights to continue to cycle if the car is on: Adaptive cruise control problem (ACC); Auto high-beam problem (A); Road departure mitigation system problem; coll...",
+      "group": "adas",
+      "id": "2045525",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 17.2961,
+      "year": 2019
+    },
+    {
+      "excerpt": "On January 18, 2024 I had the following recalls performed on 2019 Honda Odyssey Elite: Auto Idle Stop and the Media Oriented Systems Transport (MOST) communication coaxial cable. Immediately after the recall work was completed, I began receiving an error code \"Collision Mitigatio...",
+      "group": "adas",
+      "id": "1965443",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 16.2824,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-22T07:00:36Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00144955,
+      "duration_ms": 22950,
+      "reason": "2019 Honda Odyssey adaptive cruise control/ADAS: random LKAS, ACC, collision avoidance, auto high beam and brake system warnings plus flashing D after service, intermittent.",
+      "started_at": "2025-10-22T07:00:37Z",
+      "step": 2,
+      "tokens": 2939,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-22T07:00:38Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Getting the following error messages on 2019 Odyssey: - Brake system lights - Lane keeping assist problem (LKAS); - Auto high-beam problem (A) - Road departure mitigation system problem - Collision mitigation system problem - Adaptive cruise control problem (ACC) - Brake system l...",
+            "group": "adas",
+            "id": "1988137",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 20.8186,
+            "year": 2019
+          },
+          {
+            "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+            "group": "adas",
+            "id": "2001261",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.5163,
+            "year": 2019
+          },
+          {
+            "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+            "group": "adas",
+            "id": "2001262",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.5163,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-22T07:00:39Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-22T07:00:40Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-10-22T07:00:41Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "After we took the car in all of a sudden randomly these warning lights will come on and my D for drive keeps flashing. LKAS, ACC, Collision Avoidance, Auto High Beam Problem And brake system warning. Sometimes some of them sometimes all of them. I read it’s a common problem but there hasn’t been a recall on it."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Getting the following error messages on 2019 Odyssey: - Brake system lights - Lane keeping assist problem (LKAS); - Auto high-beam problem (A) - Road departure mitigation system problem - Collision mitigation system problem - Adaptive cruise control problem (ACC) - Brake system l...",
+            "group": "adas",
+            "id": "1988137",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 20.8186,
+            "year": 2019
+          },
+          {
+            "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+            "group": "adas",
+            "id": "2001261",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.5163,
+            "year": 2019
+          },
+          {
+            "excerpt": "The LKAS, ACC, Collision Avoidance, and Auto High Beam has failed on my 2019 Honda Odyssey ex-l. These are all safety features taht no longer work on this vehicle for no apparent reason other than the system failed. It has not been confirmed by a service center, or been inspected...",
+            "group": "adas",
+            "id": "2001262",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.5163,
+            "year": 2019
+          },
+          {
+            "excerpt": "I took my van to the dealer and they told me that the sensor inside of the front mirror is faulty, causing the following lights to continue to cycle if the car is on: Adaptive cruise control problem (ACC); Auto high-beam problem (A); Road departure mitigation system problem; coll...",
+            "group": "adas",
+            "id": "2045525",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 17.2961,
+            "year": 2019
+          },
+          {
+            "excerpt": "On January 18, 2024 I had the following recalls performed on 2019 Honda Odyssey Elite: Auto Idle Stop and the Media Oriented Systems Transport (MOST) communication coaxial cable. Immediately after the recall work was completed, I began receiving an error code \"Collision Mitigatio...",
+            "group": "adas",
+            "id": "1965443",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 16.2824,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-22T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "26V423000",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "open_date": "2026-07-01",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2020 Odyssey vehicles. Water may enter into the rearview camera, which can cause the rearview camera image to fail to display when the vehicle is in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+            "year": 2019
+          },
+          {
+            "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+            "group": "adas",
+            "id": "23V431000",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "open_date": "2023-06-15",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2023 Odyssey, 2019-2022 Pilot, and 2019-2023 Passport vehicles.  Due to a faulty Media Oriented Systems Transport (MOST) communication coaxial cable connector, the rearview camera image may not appear on the display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+            "year": 2019
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "20V438000",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "open_date": "2020-07-28",
+            "summary": "American Honda Motor Co. (Honda) is recalling certain 2019-2020 Odyssey vehicles.  Water may get into the rearview camera mounting holes and enter the camera lens and cause a distorted image, or no image at all.  Additionally, if the rearview camera view mode is set to top-down view, or switched from that view to another mode in a bright environment, the image may not display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rearview Mirrors.\"",
+            "year": 2019
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "20V439000",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "open_date": "2020-07-28",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2020 Odyssey, 2019-2020 Passport, and 2019-2021 Pilot vehicles.   Incorrect instrument panel control module software can cause the instrument panel to not display critical information, such as engine oil pressure, speedometer, and gear selector position until the next ignition cycle.  Additionally, it can prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Control and Displays\" and 111, \"Rearview Mirrors.\"",
+            "year": 2019
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "20V440000",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "open_date": "2020-07-28",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2019-2021 Pilot, 2019-2020 Odyssey and 2019-2020 Passport vehicles.  Incorrect central network software programming may cause several errors to occur that can delay or prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\"",
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-22T07:00:43Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-22T07:00:44Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service",
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0025935,
+      "duration_ms": 24325,
+      "reason": "The narrative reports random LKAS, ACC, collision avoidance, auto high-beam and brake system warnings plus a flashing D after the car was taken in, with some or all warnings appearing intermittently. The rulebook matches 'after service' (check connector seating, pin damage and part fit first) and 'intermittent' (long-run power cycling reproduces faults after repeated wake/sleep cycles).",
+      "started_at": "2025-10-22T07:00:45Z",
+      "step": 10,
+      "tokens": 6175,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 2 dropped",
+      "started_at": "2025-10-22T07:00:46Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+          "After we took the car in",
+          "randomly",
+          "these warning lights will come on",
+          "my D for drive keeps flashing",
+          "LKAS, ACC, Collision Avoidance, Auto High Beam Problem And brake system warning",
+          "Sometimes some of them sometimes all of them",
+          "brake system warning"
+        ]
+      },
+      "tool_output": {
+        "checked": 8,
+        "dropped": 2,
+        "verified": 6
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-10-22T07:00:47Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-22T07:00:49Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-22T07:00:51Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-22T07:00:52Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-22T07:00:53Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

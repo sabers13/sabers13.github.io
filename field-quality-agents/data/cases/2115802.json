@@ -1,0 +1,219 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:CHARGING:CABLE/CORD:ONBOARD",
+    "group": "ev_propulsion",
+    "id": "2115802",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 5",
+    "narrative": "I am the owner of a 2024 Hyundai Ioniq 5 with Vehicle Identification Number    [XXX]   I purchased/leased this vehicle on [XXX] from Stockton Hyundai.  Over the last couple of months my vehicle has experienced an ongoing charging defect: it only charges on Level 1 but fails to charge properly using Level 2 or DC fast chargers, which significantly impairs its use, value, and convenience — a key feature advertised for this vehicle. The issue has not been confirmed by the dealer as they have not been able to figure out why it’s happening and the vehicle has not been inspected by anyone else I also feel like it’s a safety risk because I’m at risk of being stranded.   INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-07-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2115802",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2115802",
+    "decided_at": "2025-07-31T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2115802",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:CHARGING:CABLE/CORD:ONBOARD"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ongoing charging defect"
+      },
+      {
+        "kind": "symptom",
+        "quote": "only charges on Level 1"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fails to charge properly using Level 2 or DC fast chargers"
+      },
+      {
+        "kind": "condition",
+        "quote": "charging defect"
+      },
+      {
+        "kind": "safety",
+        "quote": "I also feel like it’s a safety risk because I’m at risk of being stranded."
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "ev_propulsion",
+    "safety_relevant": true,
+    "summary": "Onboard charging cable/cord: ongoing charging defect over months; only charges on Level 1, fails Level 2/DC fast charging",
+    "symptoms": [
+      "only charges on Level 1",
+      "fails to charge properly using Level 2 chargers",
+      "fails to charge properly using DC fast chargers"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2115802",
+    "created_at": "2025-07-31T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-31T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009121,
+      "duration_ms": 10569,
+      "reason": "Onboard charging cable/cord: ongoing charging defect over months; only charges on Level 1, fails Level 2/DC fast charging",
+      "started_at": "2025-07-31T07:00:01Z",
+      "step": 2,
+      "tokens": 2137,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-31T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-31T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-31T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-31T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-31T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-31T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-31T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-31T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

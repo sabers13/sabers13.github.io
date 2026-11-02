@@ -1,0 +1,304 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2053390",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "OUTBACK",
+    "narrative": "The touchscreen shuts down and makes the safety features shut off. This use to happen a few times per quarter, but now is happening a few times per month. Happens always while driving which causes the adaptive cruise to shut off, causing deceleration, the eyesight shuts off, the controls on the keyboard are not available. It takes a minute or two for the screen to reboot and safety features to re-engage, this causes distraction and possible safety hazard.   Additionally, the speakers randomly will blast so loud it startles and distracts everyone in the car. This seems to happen randomly, can be at start up, or after sound system has been in use. Additionally, the power windows occasionally will not go back up. Thry reverse partway through raising. Then we have to wait a few seconds and try again.   Please make Subaru issue a recall and remedy for-the control screen issue. It is the most dangerous problem we’ve listed here.",
+    "received_at": "2025-01-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2053390",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2053390",
+    "decided_at": "2025-01-05T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2053390",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The touchscreen shuts down and makes the safety features shut off."
+      },
+      {
+        "kind": "condition",
+        "quote": "now is happening a few times per month"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Happens always while driving which causes the adaptive cruise to shut off, causing deceleration"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the eyesight shuts off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the controls on the keyboard are not available"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It takes a minute or two for the screen to reboot and safety features to re-engage"
+      },
+      {
+        "kind": "safety",
+        "quote": "this causes distraction and possible safety hazard"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the speakers randomly will blast so loud it startles and distracts everyone in the car"
+      },
+      {
+        "kind": "condition",
+        "quote": "This seems to happen randomly, can be at start up, or after sound system has been in use."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the power windows occasionally will not go back up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Thry reverse partway through raising."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2022 Subaru Outback electrical system: intermittent touchscreen shutdown disables safety features/adaptive cruise/eyesight while driving; speakers blast loudly; power windows fail to raise.",
+    "symptoms": [
+      "touchscreen shuts down",
+      "safety features shut off",
+      "adaptive cruise shuts off while driving, causing deceleration",
+      "eyesight shuts off",
+      "keyboard controls unavailable",
+      "screen reboot takes a minute or two",
+      "speakers randomly blast very loud, startling and distracting occupants",
+      "power windows occasionally fail to go back up and reverse partway through raising"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2053390",
+    "created_at": "2025-01-05T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Automatic auto off-on began to fail and car didn't start well. I began to disable the automatic auto on off while driving because it began to sound like it would stall out while stopped at a traffic light . Then I forgot to disable the automatic auto off on and car stalled out wh...",
+      "group": "electrical_general",
+      "id": "2032704",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 16.437,
+      "year": 2022
+    },
+    {
+      "excerpt": "Purchased my 2022 Outback Premium March 2022. In less than a year, the Star Link Console was restarting at least once a day. Then it began restarting more frequently. The Subaru Dealership updated the software and the restarts slowed to maybe once every few weeks instead of the 3...",
+      "group": "electrical_general",
+      "id": "1968087",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 15.8655,
+      "year": 2022
+    },
+    {
+      "excerpt": "1. Front Windshield cracks easily instead of chipping. Appears to be under pressure in a strange way and it cracks then starts to delaminate. I had 2 windshields replaced within 30 days. Water also starts to enter the crack and it impacts the wiper blades when in use. 2. Center I...",
+      "group": "electrical_general",
+      "id": "1825352",
+      "make": "SUBARU",
+      "model": "OUTBACK",
+      "score": 14.8088,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-05T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00172375,
+      "duration_ms": 25044,
+      "reason": "2022 Subaru Outback electrical system: intermittent touchscreen shutdown disables safety features/adaptive cruise/eyesight while driving; speakers blast loudly; power windows fail to raise.",
+      "started_at": "2025-01-05T07:00:01Z",
+      "step": 2,
+      "tokens": 3480,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-05T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "OUTBACK",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Automatic auto off-on began to fail and car didn't start well. I began to disable the automatic auto on off while driving because it began to sound like it would stall out while stopped at a traffic light . Then I forgot to disable the automatic auto off on and car stalled out wh...",
+            "group": "electrical_general",
+            "id": "2032704",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 16.437,
+            "year": 2022
+          },
+          {
+            "excerpt": "Purchased my 2022 Outback Premium March 2022. In less than a year, the Star Link Console was restarting at least once a day. Then it began restarting more frequently. The Subaru Dealership updated the software and the restarts slowed to maybe once every few weeks instead of the 3...",
+            "group": "electrical_general",
+            "id": "1968087",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 15.8655,
+            "year": 2022
+          },
+          {
+            "excerpt": "1. Front Windshield cracks easily instead of chipping. Appears to be under pressure in a strange way and it cracks then starts to delaminate. I had 2 windshields replaced within 30 days. Water also starts to enter the crack and it impacts the wiper blades when in use. 2. Center I...",
+            "group": "electrical_general",
+            "id": "1825352",
+            "make": "SUBARU",
+            "model": "OUTBACK",
+            "score": 14.8088,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-05T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-05T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-05T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-05T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-05T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-05T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-05T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

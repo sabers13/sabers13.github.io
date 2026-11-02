@@ -1,0 +1,283 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2129981",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON",
+    "narrative": "For about a year I have had issues with my car not accelerating in stop and go traffic. I push the gas pedal and it moves a little then will not go for about 20 seconds. Sometimes the engine will flutter. I have taken it to Hyundai and was told no diagnostic codes show and they can't find anything wrong despite bringing the reports from my auto shop of these things occuring. My car is going in yet again this week because this issue continues to get worse and I have almost caused several accidents in traffic due to not being able to drive. There is a recall however Hyundai says my car is not in the recall despite the same issues the recall is for. I have all routine service done when needed and have taken care of this vehicle but I feel like Hyundai should step up because this is very dangerous not only for myself but other commuters as well.The Hyundai dealership literally said they just have the sign on their building they don't support these issues",
+    "received_at": "2025-09-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2129981",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2129981",
+    "decided_at": "2025-09-13T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2129981",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "car not accelerating in stop and go traffic"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I push the gas pedal and it moves a little then will not go for about 20 seconds."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Sometimes the engine will flutter."
+      },
+      {
+        "kind": "condition",
+        "quote": "For about a year I have had issues"
+      },
+      {
+        "kind": "other",
+        "quote": "no diagnostic codes show"
+      },
+      {
+        "kind": "safety",
+        "quote": "I have almost caused several accidents in traffic due to not being able to drive."
+      },
+      {
+        "kind": "safety",
+        "quote": "this is very dangerous not only for myself but other commuters as well."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: car does not accelerate in stop-and-go traffic, gas pedal response is delayed about 20 seconds, and engine sometimes flutters; recurring for about a year.",
+    "symptoms": [
+      "car not accelerating in stop and go traffic",
+      "gas pedal moves car a little then it will not go for about 20 seconds",
+      "engine flutter"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2129981",
+    "created_at": "2025-09-13T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "THE CAR DOESNT GO WHEN YOU STEP ON THE GAS, PULLING OUT IN TRAFFIC IS DANGEROUS. THE PROBLEM EXASTURBATED WHEN THE CARS 1ST 15 MINUTES OF RUNNING. AND ANYTIME I GO FROM A COMPLETE STOP FOR LONGER THAN 30 SECONDS, THERE IS LITTLE MOMENTUM, WHETHER I'M TURNING OR GOING FORWARD. I H...",
+      "group": "electrical_general",
+      "id": "1691814",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 32.9065,
+      "year": 2016
+    },
+    {
+      "excerpt": "THE INCIDENT OCCURRED TO ME WHILE I WAS 7 HOURS FROM HOME. I WAS STOPPED AT A STOP SIGN ON A CURVE IN THE ROAD. WHEN CLEAR, I ACCELERATED AND AS I TURNED AND MERGED INTO THE ROAD, THE CAR STARTED MAKING A LOUD KNOCKING NOISE AND LOST POWER AS I WAS GOING UP HILL. RIGHT BEFORE I L...",
+      "group": "electrical_general",
+      "id": "1720493",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 28.2444,
+      "year": 2016
+    },
+    {
+      "excerpt": "The car vibrates, shakes, when stopped; hesitates, shakes, vibrates on accelerating from stopping, in traffic at stoplights. Incident becomes unsafe in traffic, etc. Reported to Dealer (Horne Hyundai, Mesa, AZ, 85120) and took car in for troubleshooting, diagnostics, or repair(s)...",
+      "group": "electrical_general",
+      "id": "1791728",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 28.2129,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-13T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010654,
+      "duration_ms": 12986,
+      "reason": "Electrical system: car does not accelerate in stop-and-go traffic, gas pedal response is delayed about 20 seconds, and engine sometimes flutters; recurring for about a year.",
+      "started_at": "2025-09-13T07:00:01Z",
+      "step": 2,
+      "tokens": 2379,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-13T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "THE CAR DOESNT GO WHEN YOU STEP ON THE GAS, PULLING OUT IN TRAFFIC IS DANGEROUS. THE PROBLEM EXASTURBATED WHEN THE CARS 1ST 15 MINUTES OF RUNNING. AND ANYTIME I GO FROM A COMPLETE STOP FOR LONGER THAN 30 SECONDS, THERE IS LITTLE MOMENTUM, WHETHER I'M TURNING OR GOING FORWARD. I H...",
+            "group": "electrical_general",
+            "id": "1691814",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 32.9065,
+            "year": 2016
+          },
+          {
+            "excerpt": "THE INCIDENT OCCURRED TO ME WHILE I WAS 7 HOURS FROM HOME. I WAS STOPPED AT A STOP SIGN ON A CURVE IN THE ROAD. WHEN CLEAR, I ACCELERATED AND AS I TURNED AND MERGED INTO THE ROAD, THE CAR STARTED MAKING A LOUD KNOCKING NOISE AND LOST POWER AS I WAS GOING UP HILL. RIGHT BEFORE I L...",
+            "group": "electrical_general",
+            "id": "1720493",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 28.2444,
+            "year": 2016
+          },
+          {
+            "excerpt": "The car vibrates, shakes, when stopped; hesitates, shakes, vibrates on accelerating from stopping, in traffic at stoplights. Incident becomes unsafe in traffic, etc. Reported to Dealer (Horne Hyundai, Mesa, AZ, 85120) and took car in for troubleshooting, diagnostics, or repair(s)...",
+            "group": "electrical_general",
+            "id": "1791728",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 28.2129,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-13T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-13T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-13T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-13T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-13T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-13T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-13T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

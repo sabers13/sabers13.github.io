@@ -1,0 +1,344 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2093468",
+    "make": "BMW",
+    "mileage": null,
+    "model": "228I",
+    "narrative": "1/8/2025 Drive Train Malfunction.  Towed to BMW Dealer.  Dealership determined  a faulty GWS system, Program new system, New center console and battery drained needs replaced.  I was told by the dealership this not normal for a vehicle with 22k miles .  BMW North Amaerica told me the repair Manager said the faults were caused by moisture in the cup holder. Shocked as the BMW Repair Manager did not tell me this was the cause, Did not inform me moisture in the cup holder caused major havoc on a safety System. Nothing had been spilled or leaked into my cup holders.",
+    "received_at": "2025-05-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2093468",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2093468",
+    "decided_at": "2025-05-19T07:01:02Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2093468",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Drive Train Malfunction"
+      },
+      {
+        "kind": "symptom",
+        "quote": "faulty GWS system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "battery drained needs replaced"
+      },
+      {
+        "kind": "condition",
+        "quote": "moisture in the cup holder"
+      },
+      {
+        "kind": "safety",
+        "quote": "major havoc on a safety System"
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Test for humidity/condensation because moisture is the matched first suspect for an electrical GWS fault causing drivetrain malfunction and battery drain.",
+    "symptoms": [
+      "drive train malfunction",
+      "faulty GWS system",
+      "battery drained"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2093468",
+    "created_at": "2025-05-19T07:01:00Z",
+    "evidence": [
+      {
+        "quote": "Drive Train Malfunction",
+        "source_id": "2093468",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "faulty GWS system",
+        "source_id": "2093468",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "battery drained needs replaced",
+        "source_id": "2093468",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "moisture in the cup holder",
+        "source_id": "2093468",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "major havoc on a safety System",
+        "source_id": "2093468",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "The narrative reports a faulty GWS system, drivetrain malfunction and battery drain, with the dealership attributing the faults to moisture in the cup holder. The rulebook matches the reported moisture condition to a humidity and condensation test; no recalls, investigations or similar cases were returned.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-19T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006856,
+      "duration_ms": 7527,
+      "reason": "Electrical system GWS fault causing drivetrain malfunction and battery drain, attributed to moisture in the cup holder.",
+      "started_at": "2025-05-19T07:00:51Z",
+      "step": 2,
+      "tokens": 1698,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-05-19T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "228I",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-19T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-05-19T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "1/8/2025 Drive Train Malfunction.  Towed to BMW Dealer.  Dealership determined  a faulty GWS system, Program new system, New center console and battery drained needs replaced.  I was told by the dealership this not normal for a vehicle with 22k miles .  BMW North Amaerica told me the repair Manager said the faults were caused by moisture in the cup holder. Shocked as the BMW Repair Manager did not tell me this was the cause, Did not inform me moisture in the cup holder caused major havoc on a sa"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-19T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "228I",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-19T07:00:56Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "228I",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-19T07:00:57Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "moisture"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "moisture",
+            "matched_conditions": [
+              "moisture"
+            ],
+            "reason": "Water ingress and condensation are the first suspects when moisture, damp or a leak is reported.",
+            "test": "Humidity and condensation test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0013629,
+      "duration_ms": 13833,
+      "reason": "The narrative reports a faulty GWS system, drivetrain malfunction and battery drain, with the dealership attributing the faults to moisture in the cup holder. The rulebook matches the reported moisture condition to a humidity and condensation test; no recalls, investigations or similar cases were returned.",
+      "started_at": "2025-05-19T07:00:58Z",
+      "step": 9,
+      "tokens": 2942,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-05-19T07:00:59Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Drive Train Malfunction",
+          "faulty GWS system",
+          "battery drained needs replaced",
+          "moisture in the cup holder",
+          "major havoc on a safety System"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-19T07:01:01Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-19T07:01:03Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-19T07:01:04Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-19T07:01:05Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

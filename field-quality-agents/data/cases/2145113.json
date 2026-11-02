@@ -1,0 +1,394 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2145113",
+    "make": "FORD",
+    "mileage": null,
+    "model": "FLEX",
+    "narrative": "Media player unavailable alert comes on display. Touch panel tone doesn’t have sound, audio in car has no sound. Sync 3 has been updated. Problem continues as well as the rear camera issue",
+    "received_at": "2025-11-02",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2145113",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2145113",
+    "decided_at": "2025-11-02T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2145113",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Media player unavailable alert comes on display."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Touch panel tone doesn’t have sound"
+      },
+      {
+        "kind": "symptom",
+        "quote": "audio in car has no sound"
+      },
+      {
+        "kind": "condition",
+        "quote": "Sync 3 has been updated."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Problem continues as well as the rear camera issue"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Check SYNC 3 installation and connector seating after the update because media-player unavailable, no audio/touch tone and rear-camera faults persist.",
+    "symptoms": [
+      "media player unavailable alert on display",
+      "touch panel tone has no sound",
+      "audio in car has no sound",
+      "rear camera issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2145113",
+    "created_at": "2025-11-02T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Media player unavailable alert comes on display.",
+        "source_id": "2145113",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Touch panel tone doesn’t have sound",
+        "source_id": "2145113",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "audio in car has no sound",
+        "source_id": "2145113",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Sync 3 has been updated.",
+        "source_id": "2145113",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Problem continues as well as the rear camera issue",
+        "source_id": "2145113",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a media player unavailable alert, no audio or touch-panel tone, and a continuing rear camera issue after Sync 3 was updated. The after-service condition matches the rulebook entry, so connector seating, pin damage and correct part fit should be checked before further testing.",
+    "requested_info": [],
+    "summary": "Check SYNC 3 installation and connector seating after the update because media-player unavailable, no audio/touch tone and rear-camera faults persist.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative reports a media player unavailable alert, no audio or touch-panel tone, and a continuing rear camera issue after Sync 3 was updated. The after-service condition matches the rulebook entry, so connector seating, pin damage and correct part fit should be checked before further testing."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "THE AIR CONDITIONER WILL TURN OFF BY ITSELF OR BLOW HOT AIR OUT OF NO WHERE. SOMETIMES IT WILL BLOW HOT AIR IN THE FRONT AND COLD IN THE REAR AND VICE VERSA. THE RADIO INTERMITTENTLY SHUTS OFF AS WELL. THERE ARE TIMES WHERE MY KEY FAB WILL NOT LOCK OR UNLOCK MY CAR. THE A/C PROBL...",
+      "group": "electrical_general",
+      "id": "1684535",
+      "make": "FORD",
+      "model": "FLEX",
+      "score": 1.3151,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005404,
+      "duration_ms": 6779,
+      "reason": "Electrical system/SYNC 3: media player unavailable alert, no audio or touch-panel tone, rear camera issue; persists after Sync 3 update",
+      "started_at": "2025-11-02T07:00:01Z",
+      "step": 2,
+      "tokens": 1390,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-11-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FLEX",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "THE AIR CONDITIONER WILL TURN OFF BY ITSELF OR BLOW HOT AIR OUT OF NO WHERE. SOMETIMES IT WILL BLOW HOT AIR IN THE FRONT AND COLD IN THE REAR AND VICE VERSA. THE RADIO INTERMITTENTLY SHUTS OFF AS WELL. THERE ARE TIMES WHERE MY KEY FAB WILL NOT LOCK OR UNLOCK MY CAR. THE A/C PROBL...",
+            "group": "electrical_general",
+            "id": "1684535",
+            "make": "FORD",
+            "model": "FLEX",
+            "score": 1.3151,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-11-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Media player unavailable alert comes on display. Touch panel tone doesn’t have sound, audio in car has no sound. Sync 3 has been updated. Problem continues as well as the rear camera issue"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "THE AIR CONDITIONER WILL TURN OFF BY ITSELF OR BLOW HOT AIR OUT OF NO WHERE. SOMETIMES IT WILL BLOW HOT AIR IN THE FRONT AND COLD IN THE REAR AND VICE VERSA. THE RADIO INTERMITTENTLY SHUTS OFF AS WELL. THERE ARE TIMES WHERE MY KEY FAB WILL NOT LOCK OR UNLOCK MY CAR. THE A/C PROBL...",
+            "group": "electrical_general",
+            "id": "1684535",
+            "make": "FORD",
+            "model": "FLEX",
+            "score": 1.3151,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-02T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "FLEX",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-02T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "FLEX",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-02T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0011184,
+      "duration_ms": 15620,
+      "reason": "The narrative reports a media player unavailable alert, no audio or touch-panel tone, and a continuing rear camera issue after Sync 3 was updated. The after-service condition matches the rulebook entry, so connector seating, pin damage and correct part fit should be checked before further testing.",
+      "started_at": "2025-11-02T07:00:09Z",
+      "step": 10,
+      "tokens": 2605,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-11-02T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Media player unavailable alert comes on display.",
+          "Touch panel tone doesn’t have sound",
+          "audio in car has no sound",
+          "Sync 3 has been updated.",
+          "Problem continues as well as the rear camera issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-02T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-02T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-02T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-02T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2137127",
+    "make": "FORD",
+    "mileage": null,
+    "model": "BRONCO SPORT",
+    "narrative": "Powertrain malfunctions have occurred on 12/17/24, 4/11/25 and 10/5/25.  Powertrain malfunction and yes. The car would not accelerate and someone could of ran into me, I could of been killed or badly injured and same for any other occupants in the either vehicle. Yes. Yes. The messages appeared on 12/17/24, 4/11/25 and 10/5/25.",
+    "received_at": "2025-10-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2137127",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2137127",
+    "decided_at": "2025-10-07T07:00:37Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2137127",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Powertrain malfunctions have occurred on 12/17/24, 4/11/25 and 10/5/25."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Powertrain malfunction and yes."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car would not accelerate"
+      },
+      {
+        "kind": "safety",
+        "quote": "someone could of ran into me, I could of been killed or badly injured"
+      },
+      {
+        "kind": "safety",
+        "quote": "same for any other occupants in the either vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "The messages appeared on 12/17/24, 4/11/25 and 10/5/25."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system/powertrain malfunction messages with no acceleration on 12/17/24, 4/11/25 and 10/5/25; driver reports potential collision and injury risk.",
+    "symptoms": [
+      "powertrain malfunction messages",
+      "vehicle would not accelerate"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2137127",
+    "created_at": "2025-10-07T07:00:35Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On [XXX], my 2024 Ford Bronco Sport spontaneously burst into flames while driven by my [XXX] son. Per a local bystander, there was smoke and fire observed around the undercarriage as he drove down the road. Multiple vehicles began honking while stopped at a red light. A driver al...",
+      "group": "electrical_general",
+      "id": "1998721",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 3.5078,
+      "year": 2024
+    },
+    {
+      "excerpt": "Battery / 12V system failure. Vehicle will not start, requires jump start to start vehicle. Battery does not sufficiently re-charge while vehicle is running and requires jump start next time vehicle is needs to be started. This issue has left me stranded on multiple occasions. Th...",
+      "group": "electrical_general",
+      "id": "2044811",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 2.5849,
+      "year": 2024
+    },
+    {
+      "excerpt": "Bought car June 27 and now being July 15 the car is completely dead and battery is dead. Charged the battery up works now. But battery will need to be replaced. Picture attached of battery after charging for 3 hours.",
+      "group": "electrical_general",
+      "id": "2007850",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 1.7095,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-07T07:00:29Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008197,
+      "duration_ms": 8749,
+      "reason": "Electrical system/powertrain malfunction messages with no acceleration on 12/17/24, 4/11/25 and 10/5/25; driver reports potential collision and injury risk.",
+      "started_at": "2025-10-07T07:00:30Z",
+      "step": 2,
+      "tokens": 1899,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-07T07:00:31Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On [XXX], my 2024 Ford Bronco Sport spontaneously burst into flames while driven by my [XXX] son. Per a local bystander, there was smoke and fire observed around the undercarriage as he drove down the road. Multiple vehicles began honking while stopped at a red light. A driver al...",
+            "group": "electrical_general",
+            "id": "1998721",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 3.5078,
+            "year": 2024
+          },
+          {
+            "excerpt": "Battery / 12V system failure. Vehicle will not start, requires jump start to start vehicle. Battery does not sufficiently re-charge while vehicle is running and requires jump start next time vehicle is needs to be started. This issue has left me stranded on multiple occasions. Th...",
+            "group": "electrical_general",
+            "id": "2044811",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 2.5849,
+            "year": 2024
+          },
+          {
+            "excerpt": "Bought car June 27 and now being July 15 the car is completely dead and battery is dead. Charged the battery up works now. But battery will need to be replaced. Picture attached of battery after charging for 3 hours.",
+            "group": "electrical_general",
+            "id": "2007850",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 1.7095,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-10-07T07:00:32Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-07T07:00:33Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-07T07:00:34Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-07T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-07T07:00:38Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-07T07:00:39Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-07T07:00:40Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

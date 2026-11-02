@@ -1,0 +1,367 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2105877",
+    "make": "INDIAN",
+    "mileage": 1300,
+    "model": "FTR1200",
+    "narrative": "The contact owns a 2022 Indian FTR1200 Motorcycle. The contact stated that while riding at various speeds on several occasions, the motorcycle lost automotive power with battery failure and an inoperable ABS. The contact stated that the ECM was sending 16 amps to the battery instead of the standard 14 amps, causing the battery to fail prematurely. The motorcycle was taken to a local dealer and was diagnosed with electrical failures; however, the motorcycle was not repaired. The manufacturer was notified of the failure. The approximate failure mileage was 1,300.",
+    "received_at": "2025-07-01",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2105877",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2105877",
+    "decided_at": "2025-07-01T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2105877",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "while riding at various speeds on several occasions"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lost automotive power with battery failure and an inoperable ABS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causing the battery to fail prematurely"
+      },
+      {
+        "kind": "condition",
+        "quote": "diagnosed with electrical failures"
+      }
+    ],
+    "conditions": [
+      "charging",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run an electrical load test to reproduce the reported 16 A overcharging, battery failure and intermittent power loss on the 2022 Indian FTR1200.",
+    "symptoms": [
+      "loss of automotive power while riding",
+      "battery failure",
+      "ABS inoperable",
+      "overcharging: ECM sending 16 amps instead of 14 amps to the battery",
+      "battery failing prematurely",
+      "diagnosed with electrical failures"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2105877",
+    "created_at": "2025-07-01T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "while riding at various speeds on several occasions",
+        "source_id": "2105877",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "lost automotive power with battery failure and an inoperable ABS",
+        "source_id": "2105877",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "causing the battery to fail prematurely",
+        "source_id": "2105877",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "diagnosed with electrical failures",
+        "source_id": "2105877",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The case reports charging-system symptoms: the ECM is said to send 16 amps to the battery instead of 14 amps, causing premature battery failure, and the motorcycle intermittently loses power while riding with an inoperable ABS. The rulebook matches the 'charging' condition to an Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits. The 'intermittent' condition also matches a long-run power cycling test, but the charging condition supports the targeted Electrical load test.",
+    "requested_info": [],
+    "summary": "Run an electrical load test to reproduce the reported 16 A overcharging, battery failure and intermittent power loss on the 2022 Indian FTR1200.",
+    "targeted_test": {
+      "conditions": [
+        "charging",
+        "intermittent"
+      ],
+      "name": "Electrical load test",
+      "reason": "The case reports charging-system symptoms: the ECM is said to send 16 amps to the battery instead of 14 amps, causing premature battery failure, and the motorcycle intermittently loses power while riding with an inoperable ABS. The rulebook matches the 'charging' condition to an Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits. The 'intermittent' condition also matches a long-run power cycling test, but the charging condition supports the targeted Electrical load test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-01T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00045745,
+      "duration_ms": 7576,
+      "reason": "Electrical system on a 2022 Indian FTR1200: motorcycle loses power with battery failure and inoperable ABS while riding at various speeds; ECM charging at 16 amps instead of 14 amps is blamed for premature battery failure.",
+      "started_at": "2025-07-01T07:00:01Z",
+      "step": 2,
+      "tokens": 1308,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-01T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "INDIAN",
+        "model": "FTR1200",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-01T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-01T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2022 Indian FTR1200 Motorcycle. The contact stated that while riding at various speeds on several occasions, the motorcycle lost automotive power with battery failure and an inoperable ABS. The contact stated that the ECM was sending 16 amps to the battery instead of the standard 14 amps, causing the battery to fail prematurely. The motorcycle was taken to a local dealer and was diagnosed with electrical failures; however, the motorcycle was not repaired. The manufacturer was "
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-01T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "INDIAN",
+        "model": "FTR1200",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-01T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "INDIAN",
+        "model": "FTR1200",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-01T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging",
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00071325,
+      "duration_ms": 7047,
+      "reason": "The case reports charging-system symptoms: the ECM is said to send 16 amps to the battery instead of 14 amps, causing premature battery failure, and the motorcycle intermittently loses power while riding with an inoperable ABS. The rulebook matches the 'charging' condition to an Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits. The 'intermittent' condition also matches a long-run power cycling test, but the charging condition supports the targeted Electrical load test.",
+      "started_at": "2025-07-01T07:00:08Z",
+      "step": 9,
+      "tokens": 1956,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 1 dropped",
+      "started_at": "2025-07-01T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "while riding at various speeds on several occasions",
+          "lost automotive power with battery failure and an inoperable ABS",
+          "The ECM was sending 16 amps to the battery instead of the standard 14 amps",
+          "causing the battery to fail prematurely",
+          "diagnosed with electrical failures"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 1,
+        "verified": 4
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-07-01T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-01T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-01T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-01T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-01T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

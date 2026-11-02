@@ -1,0 +1,299 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2071629",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "My car was scheduled the first week of the updates.  The car would not update.  Afterward, the batter drain was very noticeable.   Now there is no internet service for the car... not from Fisker and while I can verify it connects to my home wifi and mobile phone hotspot, it will not allow data to the car.   I took this to a dealer to have  the water pump replaced, the car updated, the 12v batter replaced, the t-box reset and the door handle inserts replaced.   They were unable to repair the drivers door handle (the LED lights actually generate smoke) and I cannot use the NFC to enter the car.  Additionally, one day while charging the vehicle, all of the door handles retracted when I closed the door and the key was in the car.  Thankfully the rear hatch was not locked because my DOG WAS INSIDE!   This car is dangerous and no one is helping!",
+    "received_at": "2025-03-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2071629",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2071629",
+    "decided_at": "2025-03-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2071629",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car would not update."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the batter drain was very noticeable."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Now there is no internet service for the car"
+      },
+      {
+        "kind": "condition",
+        "quote": "I took this to a dealer"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the LED lights actually generate smoke"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I cannot use the NFC to enter the car"
+      },
+      {
+        "kind": "condition",
+        "quote": "while charging the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all of the door handles retracted when I closed the door and the key was in the car"
+      },
+      {
+        "kind": "safety",
+        "quote": "my DOG WAS INSIDE!"
+      },
+      {
+        "kind": "safety",
+        "quote": "This car is dangerous"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "FISKER OCEAN ELECTRICAL SYSTEM: failed update, battery drain and no data service, plus door-handle smoke/NFC and charging lockout with dog inside",
+    "symptoms": [
+      "software update would not complete",
+      "noticeable battery drain",
+      "no internet/data service for the car",
+      "driver door handle LED generates smoke",
+      "NFC entry not working",
+      "door handles retract while charging with key inside"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2071629",
+    "created_at": "2025-03-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There has been no OTA software updates issued to this date for my vehicle. I'm currently on 2.0 awaiting 2.2 update. Because of this I still have issues with braking, rolling while in park, and random and unexpected shutdowns of the vehicle while driving. Complete car system fail...",
+      "group": "electrical_general",
+      "id": "2052220",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 26.1872,
+      "year": 2023
+    },
+    {
+      "excerpt": "While my 2023 Fisker Ocean One was parked in my garage in the beginning of October, the vehicle received a Over-The-Air Software Update to Fisker OS v2.2, in order to align the car with a NHTSA recall (NHTSA campaign 24V623, Safety Recall Campaign TSB11062408). I was away for a f...",
+      "group": "electrical_general",
+      "id": "2037023",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 23.6653,
+      "year": 2023
+    },
+    {
+      "excerpt": "Two Safety Issues; 1. Driver side front inside door handle malfunctioning so that it cannot be opened from the inside. I have to lock/unlock the car to apparently reset the system so that it will open. This does not happen all the time but has happened twice over the past week. C...",
+      "group": "electrical_general",
+      "id": "1985762",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 23.3607,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010134,
+      "duration_ms": 10797,
+      "reason": "FISKER OCEAN ELECTRICAL SYSTEM: failed update, battery drain and no data service, plus door-handle smoke/NFC and charging lockout with dog inside",
+      "started_at": "2025-03-06T07:00:01Z",
+      "step": 2,
+      "tokens": 2199,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There has been no OTA software updates issued to this date for my vehicle. I'm currently on 2.0 awaiting 2.2 update. Because of this I still have issues with braking, rolling while in park, and random and unexpected shutdowns of the vehicle while driving. Complete car system fail...",
+            "group": "electrical_general",
+            "id": "2052220",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 26.1872,
+            "year": 2023
+          },
+          {
+            "excerpt": "While my 2023 Fisker Ocean One was parked in my garage in the beginning of October, the vehicle received a Over-The-Air Software Update to Fisker OS v2.2, in order to align the car with a NHTSA recall (NHTSA campaign 24V623, Safety Recall Campaign TSB11062408). I was away for a f...",
+            "group": "electrical_general",
+            "id": "2037023",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 23.6653,
+            "year": 2023
+          },
+          {
+            "excerpt": "Two Safety Issues; 1. Driver side front inside door handle malfunctioning so that it cannot be opened from the inside. I have to lock/unlock the car to apparently reset the system so that it will open. This does not happen all the time but has happened twice over the past week. C...",
+            "group": "electrical_general",
+            "id": "1985762",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 23.3607,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

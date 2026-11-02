@@ -1,0 +1,263 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2089936",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "The vehicle rolled and killed the occupant because the roof caved in. The shoulder portion of the seat belt did not hold the occupant (only the lap portion) and the occupant was partially ejected out of the rear of the cab. The vehicle was inspected and purchased by State Farm insurance since the vehicle was totaled. The 2000's Ford F-150s have roofs that are too weak to support the weight of the vehicle, thereby putting the occupants in danger of injury or death. This is well documented. There were no warnings.",
+    "received_at": "2025-05-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089936",
+    "status": "decided",
+    "year": 2004
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089936",
+    "decided_at": "2025-05-07T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089936",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The shoulder portion of the seat belt did not hold the occupant (only the lap portion)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the occupant was partially ejected out of the rear of the cab"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle rolled"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the roof caved in"
+      },
+      {
+        "kind": "safety",
+        "quote": "killed the occupant"
+      },
+      {
+        "kind": "other",
+        "quote": "roofs that are too weak to support the weight of the vehicle"
+      }
+    ],
+    "conditions": [
+      "rollover",
+      "crash"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "SEAT BELTS — shoulder belt did not hold occupant, partial ejection from rear of cab; rollover crash with roof cave-in.",
+    "symptoms": [
+      "shoulder portion of seat belt did not hold occupant",
+      "only lap portion held occupant",
+      "occupant partially ejected out of rear of cab",
+      "roof caved in"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089936",
+    "created_at": "2025-05-07T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2004 Ford F-150. The contact stated that while driving at an undisclosed speed, the air bag warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the failure and advised the...",
+      "group": "restraints",
+      "id": "1965345",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 2.5189,
+      "year": 2004
+    },
+    {
+      "excerpt": "Air bag deployed suddenly while i was in the parked vehicle, it is available for inspection, has not been brought up to dealerships attention, no warning or light up on dash board to indicate problem",
+      "group": "restraints",
+      "id": "1879901",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 0.5273,
+      "year": 2004
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-07T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00095965,
+      "duration_ms": 10773,
+      "reason": "SEAT BELTS — shoulder belt did not hold occupant, partial ejection from rear of cab; rollover crash with roof cave-in.",
+      "started_at": "2025-05-07T07:00:36Z",
+      "step": 2,
+      "tokens": 2136,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-05-07T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2004
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2004 Ford F-150. The contact stated that while driving at an undisclosed speed, the air bag warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the failure and advised the...",
+            "group": "restraints",
+            "id": "1965345",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 2.5189,
+            "year": 2004
+          },
+          {
+            "excerpt": "Air bag deployed suddenly while i was in the parked vehicle, it is available for inspection, has not been brought up to dealerships attention, no warning or light up on dash board to indicate problem",
+            "group": "restraints",
+            "id": "1879901",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 0.5273,
+            "year": 2004
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-07T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-07T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-07T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-07T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-07T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-07T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-07T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

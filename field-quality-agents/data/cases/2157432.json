@@ -1,0 +1,323 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2157432",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CLARITY PLUG-IN HYBRID",
+    "narrative": "The Day Time Running light on the left side of the car just stopped working.  The DRL is not damage.  I checked for impact marks.",
+    "received_at": "2025-12-15",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2157432",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157432",
+    "decided_at": "2025-12-15T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2157432",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The Day Time Running light on the left side of the car just stopped working."
+      },
+      {
+        "kind": "other",
+        "quote": "The DRL is not damage."
+      },
+      {
+        "kind": "other",
+        "quote": "I checked for impact marks."
+      }
+    ],
+    "conditions": [
+      "no visible damage to the DRL",
+      "no impact marks found"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Test the left daytime running light circuit because the DRL stopped working and no damage or impact marks were found.",
+    "symptoms": [
+      "left daytime running light stopped working"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157432",
+    "created_at": "2025-12-15T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "The Day Time Running light on the left side of the car just stopped working.",
+        "source_id": "2157432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The DRL is not damage.",
+        "source_id": "2157432",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I checked for impact marks.",
+        "source_id": "2157432",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the left daytime running light stopped working, with no visible damage or impact marks. No rulebook match, recall, investigation, or similar case supports a targeted load test, so the standard lighting circuit test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the left daytime running light circuit because the DRL stopped working and no damage or impact marks were found.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-15T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0004228,
+      "duration_ms": 6802,
+      "reason": "Exterior lighting: left daytime running light stopped working; no damage or impact marks found.",
+      "started_at": "2025-12-15T07:00:01Z",
+      "step": 2,
+      "tokens": 1191,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-15T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CLARITY PLUG-IN HYBRID",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-12-15T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-15T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-12-15T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The Day Time Running light on the left side of the car just stopped working.  The DRL is not damage.  I checked for impact marks."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-15T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "HONDA",
+        "model": "CLARITY PLUG-IN HYBRID",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-15T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "HONDA",
+        "model": "CLARITY PLUG-IN HYBRID",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-15T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0004416,
+      "duration_ms": 4609,
+      "reason": "The narrative reports the left daytime running light stopped working, with no visible damage or impact marks. No rulebook match, recall, investigation, or similar case supports a targeted load test, so the standard lighting circuit test is appropriate.",
+      "started_at": "2025-12-15T07:00:09Z",
+      "step": 10,
+      "tokens": 1279,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-12-15T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The Day Time Running light on the left side of the car just stopped working.",
+          "The DRL is not damage.",
+          "I checked for impact marks."
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-15T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-15T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-15T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-15T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

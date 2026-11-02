@@ -1,0 +1,232 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2124454",
+    "make": "AUDI",
+    "mileage": null,
+    "model": "Q8",
+    "narrative": "My 2023 Audi Q8 Pre Sense collision braking system has engaged erroneously on numerous occasions under completely normal driving conditions. It’s terrifying and potentially life-threatening liability. My vehicle would consistently flash warning signals on my dash and my screen went completely black. Most recently, while driving at approximately 35 mph, the Pre Sense system activated without warning or cause. The impact was so violent I believed I had been rear-ended. No vehicle was behind me. I’m convinced this vehicle will cause a catastrophic accident. Having done research there are multiple consumers posting their Audi coming to a complete stop on the highway while driving at high speeds. Audi had a class action suit for this very reason and I was never notified. I requested a buyback through Audi Corporate. Unfortunately, I received a denial letter. I dropped my vehicle off to my local Audi dealer on several occasions and was told that unless the problem duplicates itself they cannot repair the issue.",
+    "received_at": "2025-08-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124454",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124454",
+    "decided_at": "2025-08-27T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124454",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "engaged erroneously on numerous occasions under completely normal driving conditions"
+      },
+      {
+        "kind": "condition",
+        "quote": "under completely normal driving conditions"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My vehicle would consistently flash warning signals on my dash"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my screen went completely black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "while driving at approximately 35 mph, the Pre Sense system activated without warning or cause"
+      },
+      {
+        "kind": "safety",
+        "quote": "The impact was so violent I believed I had been rear-ended"
+      },
+      {
+        "kind": "safety",
+        "quote": "this vehicle will cause a catastrophic accident"
+      },
+      {
+        "kind": "other",
+        "quote": "coming to a complete stop on the highway while driving at high speeds"
+      },
+      {
+        "kind": "component_group",
+        "quote": "Pre Sense collision braking system"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Audi Q8 Pre Sense automatic emergency braking falsely engaging under normal driving, with dash warnings and blank screen, including a violent activation at ~35 mph",
+    "symptoms": [
+      "automatic emergency braking activates without cause",
+      "warning signals flash on the dashboard",
+      "infotainment screen goes completely black",
+      "violent braking event mistaken for a rear-end impact"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124454",
+    "created_at": "2025-08-27T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-27T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00054595,
+      "duration_ms": 7326,
+      "reason": "2023 Audi Q8 Pre Sense automatic emergency braking falsely engaging under normal driving, with dash warnings and blank screen, including a violent activation at ~35 mph",
+      "started_at": "2025-08-27T07:00:01Z",
+      "step": 2,
+      "tokens": 1520,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-27T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "Q8",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-27T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-27T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-27T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-27T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-27T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-27T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-27T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

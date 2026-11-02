@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2085214",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD HYBRID",
+    "narrative": "While driving on the highway multiple vehicle dash lights began flashing, including brake system, tire pressure, check engine; and the vehicle suddenly and completely lost the ability to accelerate. The car was clearly still on and in drive, but pressing the gas pedal had no effect. After turning off the car and restarting after a few minutes, the brake system alert persists. Car was towed to dealer out of concern for safety. The attached picture is after the vehicle restarted.",
+    "received_at": "2025-04-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2085214",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2085214",
+    "decided_at": "2025-04-22T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2085214",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple vehicle dash lights began flashing, including brake system, tire pressure, check engine"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle suddenly and completely lost the ability to accelerate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "pressing the gas pedal had no effect"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brake system alert persists"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving on the highway"
+      },
+      {
+        "kind": "safety",
+        "quote": "Car was towed to dealer out of concern for safety"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: multiple dash lights flashed and the vehicle suddenly and completely lost acceleration while driving on the highway; the brake system alert persists after restart.",
+    "symptoms": [
+      "multiple dash lights flashing, including brake system, tire pressure, and check engine",
+      "sudden complete loss of ability to accelerate",
+      "gas pedal had no effect while the car was on and in drive",
+      "brake system alert persists after restart"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2085214",
+    "created_at": "2025-04-22T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Car has 4800 miles. I've owned since new (5 months). No issues prior to this. Stopped a stoplight. The gas engine stopped running, which is typical for a hybrid when not moving. After 15 seconds, every warning/error message started cycling on the driver's dashboard screen, refere...",
+      "group": "electrical_general",
+      "id": "1984745",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 11.5988,
+      "year": 2024
+    },
+    {
+      "excerpt": "I was driving at about 40 mph and the car lost all power and stopped in the middle of the road. Most all of the warning lights were on like low air pressure, reduced brakes and a brake problem light etc. Turned the car off and restarted and drove another 5 miles with the brake pr...",
+      "group": "electrical_general",
+      "id": "2050640",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 11.3421,
+      "year": 2024
+    },
+    {
+      "excerpt": "On June 9, 2024, while I was driving on the highway, my new Accord flashed a series of warning messages on the right side of the driver information interface (instrument panel). The messages that flashed and scrolled through repeatedly are listed below: Electric parking brake sys...",
+      "group": "electrical_general",
+      "id": "2009808",
+      "make": "HONDA",
+      "model": "ACCORD HYBRID",
+      "score": 5.6257,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-22T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00112945,
+      "duration_ms": 14397,
+      "reason": "Electrical system: multiple dash lights flashed and the vehicle suddenly and completely lost acceleration while driving on the highway; the brake system alert persists after restart.",
+      "started_at": "2025-04-22T07:00:01Z",
+      "step": 2,
+      "tokens": 2413,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-22T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD HYBRID",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Car has 4800 miles. I've owned since new (5 months). No issues prior to this. Stopped a stoplight. The gas engine stopped running, which is typical for a hybrid when not moving. After 15 seconds, every warning/error message started cycling on the driver's dashboard screen, refere...",
+            "group": "electrical_general",
+            "id": "1984745",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 11.5988,
+            "year": 2024
+          },
+          {
+            "excerpt": "I was driving at about 40 mph and the car lost all power and stopped in the middle of the road. Most all of the warning lights were on like low air pressure, reduced brakes and a brake problem light etc. Turned the car off and restarted and drove another 5 miles with the brake pr...",
+            "group": "electrical_general",
+            "id": "2050640",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 11.3421,
+            "year": 2024
+          },
+          {
+            "excerpt": "On June 9, 2024, while I was driving on the highway, my new Accord flashed a series of warning messages on the right side of the driver information interface (instrument panel). The messages that flashed and scrolled through repeatedly are listed below: Electric parking brake sys...",
+            "group": "electrical_general",
+            "id": "2009808",
+            "make": "HONDA",
+            "model": "ACCORD HYBRID",
+            "score": 5.6257,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-04-22T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-22T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-22T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-22T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-22T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-22T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-22T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

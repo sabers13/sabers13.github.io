@@ -1,0 +1,260 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2107149",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "I was driving down the road in my 2008 wrangler and all of the sudden every light flashed on my dash board then it felt like I could not shift gears then smoke came pouring out of my air vents. I pulled over and got out realizing it was on fire. Climbed in to save my dog just before the fire got huge. My entire Jeep is gone.",
+    "received_at": "2025-07-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2107149",
+    "status": "decided",
+    "year": 2008
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2107149",
+    "decided_at": "2025-07-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2107149",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "every light flashed on my dash board"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I could not shift gears"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke came pouring out of my air vents"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was on fire"
+      },
+      {
+        "kind": "safety",
+        "quote": "it was on fire"
+      },
+      {
+        "kind": "safety",
+        "quote": "Climbed in to save my dog just before the fire got huge"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2008 Jeep Wrangler electrical system: dash lights flashed, could not shift gears, smoke from air vents, and vehicle fire while driving",
+    "symptoms": [
+      "dashboard lights flashed",
+      "could not shift gears",
+      "smoke from air vents",
+      "vehicle fire"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2107149",
+    "created_at": "2025-07-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "TIPM/ all warning lights came on. Started with radio Turing on, wipers malfunctioning, lights coming on out of no where. Now vehicle will not stay on in addition battery will not stay charged.",
+      "group": "electrical_general",
+      "id": "1804858",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 3.7587,
+      "year": 2008
+    },
+    {
+      "excerpt": "2008 JEEP WRANGLER HAS HAD SEVERAL ISSUES WITH TIPM. WIPERS WILL COME ON, HORN WILL SOUND, WASHER FLUID SPRAYS, AND TRANSMISSION WILL NOT SHIFT (WHEN THE VEHICLE IS IN MOTION AND THIS HAPPENS) INTERMITTENTLY AND WILL SOMETIMES CREATE A NO CRANK/NO START CONDITION AFTER THE MALFUN...",
+      "group": "electrical_general",
+      "id": "1705083",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 2.792,
+      "year": 2008
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00083035,
+      "duration_ms": 11139,
+      "reason": "2008 Jeep Wrangler electrical system: dash lights flashed, could not shift gears, smoke from air vents, and vehicle fire while driving",
+      "started_at": "2025-07-06T07:00:01Z",
+      "step": 2,
+      "tokens": 1901,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-07-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2008
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "TIPM/ all warning lights came on. Started with radio Turing on, wipers malfunctioning, lights coming on out of no where. Now vehicle will not stay on in addition battery will not stay charged.",
+            "group": "electrical_general",
+            "id": "1804858",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 3.7587,
+            "year": 2008
+          },
+          {
+            "excerpt": "2008 JEEP WRANGLER HAS HAD SEVERAL ISSUES WITH TIPM. WIPERS WILL COME ON, HORN WILL SOUND, WASHER FLUID SPRAYS, AND TRANSMISSION WILL NOT SHIFT (WHEN THE VEHICLE IS IN MOTION AND THIS HAPPENS) INTERMITTENTLY AND WILL SOMETIMES CREATE A NO CRANK/NO START CONDITION AFTER THE MALFUN...",
+            "group": "electrical_general",
+            "id": "1705083",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 2.792,
+            "year": 2008
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

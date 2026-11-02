@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2160598",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON HYBRID",
+    "narrative": "Speed control on steering wheel not responding all the time. When car is on cruise control speed instead or decrease control not responding all the time. I was almost going to hit the vehicle on high way i decreased the speed according to front of my car but controller not responding speed didn't decreased I suddenly realized that slammed on break. Nothing was happened i already sent email to hyundai but no respond. I looks defective controller switch.    Now other side of steering volume control switch also becomes loose",
+    "received_at": "2025-12-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2160598",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2160598",
+    "decided_at": "2025-12-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2160598",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Speed control on steering wheel not responding all the time."
+      },
+      {
+        "kind": "symptom",
+        "quote": "When car is on cruise control speed instead or decrease control not responding all the time."
+      },
+      {
+        "kind": "symptom",
+        "quote": "controller not responding speed didn't decreased"
+      },
+      {
+        "kind": "condition",
+        "quote": "not responding all the time"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was almost going to hit the vehicle on high way"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I looks defective controller switch."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Now other side of steering volume control switch also becomes loose"
+      },
+      {
+        "kind": "component_group",
+        "quote": "cruise control"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Adaptive cruise control steering-wheel speed control intermittently unresponsive, with a near collision on the highway and a loose volume control switch.",
+    "symptoms": [
+      "steering-wheel speed control intermittently unresponsive",
+      "cruise control speed increase/decrease intermittently unresponsive",
+      "speed did not decrease when commanded",
+      "steering-wheel volume control switch loose",
+      "suspected defective controller switch"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2160598",
+    "created_at": "2025-12-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Hyundai Tucson. The contact stated that while driving at various speeds with the Collision Avoidance System (CAS) engaged, the vehicle would abruptly stop. Additionally, the vehicle also jerked to the right or to the left. Additionally, the instrument pane...",
+      "group": "adas",
+      "id": "1880447",
+      "make": "HYUNDAI",
+      "model": "TUCSON HYBRID",
+      "score": 5.3461,
+      "year": 2022
+    },
+    {
+      "excerpt": "My vehicle takes over my breaks and completely takes control of my vehicle away from me (the driver). It does this randomly. I had a hit and run in a parking lot due to this issue. I am greatly concerned for my safety.",
+      "group": "adas",
+      "id": "1884441",
+      "make": "HYUNDAI",
+      "model": "TUCSON HYBRID",
+      "score": 3.9319,
+      "year": 2022
+    },
+    {
+      "excerpt": "I got this message on the car screen: check hybrid system!! Last Sunday I was driving when I lost all acceleration and this warning came up and told me to pull over safely",
+      "group": "adas",
+      "id": "1917277",
+      "make": "HYUNDAI",
+      "model": "TUCSON HYBRID",
+      "score": 3.075,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00095575,
+      "duration_ms": 10613,
+      "reason": "Adaptive cruise control steering-wheel speed control intermittently unresponsive, with a near collision on the highway and a loose volume control switch.",
+      "started_at": "2025-12-26T07:00:01Z",
+      "step": 2,
+      "tokens": 2134,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON HYBRID",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Hyundai Tucson. The contact stated that while driving at various speeds with the Collision Avoidance System (CAS) engaged, the vehicle would abruptly stop. Additionally, the vehicle also jerked to the right or to the left. Additionally, the instrument pane...",
+            "group": "adas",
+            "id": "1880447",
+            "make": "HYUNDAI",
+            "model": "TUCSON HYBRID",
+            "score": 5.3461,
+            "year": 2022
+          },
+          {
+            "excerpt": "My vehicle takes over my breaks and completely takes control of my vehicle away from me (the driver). It does this randomly. I had a hit and run in a parking lot due to this issue. I am greatly concerned for my safety.",
+            "group": "adas",
+            "id": "1884441",
+            "make": "HYUNDAI",
+            "model": "TUCSON HYBRID",
+            "score": 3.9319,
+            "year": 2022
+          },
+          {
+            "excerpt": "I got this message on the car screen: check hybrid system!! Last Sunday I was driving when I lost all acceleration and this warning came up and told me to pull over safely",
+            "group": "adas",
+            "id": "1917277",
+            "make": "HYUNDAI",
+            "model": "TUCSON HYBRID",
+            "score": 3.075,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

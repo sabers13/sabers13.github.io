@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2135971",
+    "make": "KIA",
+    "mileage": null,
+    "model": "K5",
+    "narrative": "Kia has a known issue with the HVAC blower motor circuit on this vehicle model.  They have issued a warranty extension related to relocating the blower motor fuse to another circuit in the fuse box, due to potential burning of fuse(s).  After executing this extended warranty fuse-relocation-procedure, our blower motor relay burned and was replaced twice by separate Kia dealers.  Kia is now claiming that our entire wire harness needs to be replaced at our own cost.  It is quite obvious that any wire harness issue is now very dangerous (electrical arcing and melting) and was caused by the original motor circuit issue.  (The two Kia dealers agree with our assessment but are saying that Kia will not repair because original warranty extension was limited to rewiring.)  Safety issues:  Electrical fire hazard (already demonstrated with burning/melting fuse-box before and after extended warranty procedure was executed). No A/C in 95 degree F conditions.",
+    "received_at": "2025-10-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135971",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135971",
+    "decided_at": "2025-10-02T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135971",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "blower motor relay burned"
+      },
+      {
+        "kind": "symptom",
+        "quote": "electrical arcing and melting"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No A/C in 95 degree F conditions"
+      },
+      {
+        "kind": "condition",
+        "quote": "95 degree F conditions"
+      },
+      {
+        "kind": "condition",
+        "quote": "after extended warranty procedure was executed"
+      },
+      {
+        "kind": "safety",
+        "quote": "Electrical fire hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "burning/melting fuse-box"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system/HVAC blower motor circuit: relay burned, fuse-box burning/melting and arcing after warranty fuse relocation, with no A/C in 95 degree F conditions",
+    "symptoms": [
+      "blower motor relay burned and replaced twice",
+      "fuse-box burning/melting",
+      "electrical arcing and melting",
+      "no A/C in 95 degree F conditions"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135971",
+    "created_at": "2025-10-02T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The blower motor goes out intermittently. I replaced the blower motor but found the problem to be much greater. Upon further inspection the fuse for the blower and wiring harness are melting into eachother at the fuse box. This issue is becoming more and more prevalent in model f...",
+      "group": "electrical_general",
+      "id": "2009025",
+      "make": "KIA",
+      "model": "K5",
+      "score": 11.6218,
+      "year": 2021
+    },
+    {
+      "excerpt": "Issue with electrical wiring for HVAC. Air conditioner and heater goes out with no power. You have to pop the hood and press on the fuse box to get it to come back on.",
+      "group": "electrical_general",
+      "id": "2032678",
+      "make": "KIA",
+      "model": "K5",
+      "score": 5.9996,
+      "year": 2021
+    },
+    {
+      "excerpt": "Blower motor stops working, have to take fuse box cover off and move fuse assembly to regain function of blower motor. Replacing fuse only helped for a couple of months.",
+      "group": "electrical_general",
+      "id": "2049898",
+      "make": "KIA",
+      "model": "K5",
+      "score": 5.2435,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-02T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00095995,
+      "duration_ms": 9029,
+      "reason": "Electrical system/HVAC blower motor circuit: relay burned, fuse-box burning/melting and arcing after warranty fuse relocation, with no A/C in 95 degree F conditions",
+      "started_at": "2025-10-02T07:00:31Z",
+      "step": 2,
+      "tokens": 2204,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-02T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "K5",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The blower motor goes out intermittently. I replaced the blower motor but found the problem to be much greater. Upon further inspection the fuse for the blower and wiring harness are melting into eachother at the fuse box. This issue is becoming more and more prevalent in model f...",
+            "group": "electrical_general",
+            "id": "2009025",
+            "make": "KIA",
+            "model": "K5",
+            "score": 11.6218,
+            "year": 2021
+          },
+          {
+            "excerpt": "Issue with electrical wiring for HVAC. Air conditioner and heater goes out with no power. You have to pop the hood and press on the fuse box to get it to come back on.",
+            "group": "electrical_general",
+            "id": "2032678",
+            "make": "KIA",
+            "model": "K5",
+            "score": 5.9996,
+            "year": 2021
+          },
+          {
+            "excerpt": "Blower motor stops working, have to take fuse box cover off and move fuse assembly to regain function of blower motor. Replacing fuse only helped for a couple of months.",
+            "group": "electrical_general",
+            "id": "2049898",
+            "make": "KIA",
+            "model": "K5",
+            "score": 5.2435,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-02T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-02T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-02T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-02T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-02T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-02T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-02T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

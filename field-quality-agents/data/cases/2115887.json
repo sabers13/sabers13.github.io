@@ -1,0 +1,345 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:INFOTAINMENT:SOFTWARE",
+    "group": "infotainment",
+    "id": "2115887",
+    "make": "FORD",
+    "mileage": 12500,
+    "model": "F-450 SD",
+    "narrative": "The contact owns a 2022 Ford F-450 SD. The contact stated that while reversing, the rearview camera image was black and frozen. Additionally, the contact stated that the infotainment system failed to display an image of all the cameras as needed. There was no warning light illuminated. The vehicle was taken to a local dealer, where it was diagnosed with a software malfunction. The contact was advised to wait for the over-the-air software updates to be performed. The vehicle was not repaired. The manufacturer was notified of the failure. The failure mileage was approximately 12,500.",
+    "received_at": "2025-07-31",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2115887",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2115887",
+    "decided_at": "2025-07-31T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2115887",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "rearview camera image was black and frozen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "infotainment system failed to display an image of all the cameras as needed"
+      },
+      {
+        "kind": "condition",
+        "quote": "while reversing"
+      },
+      {
+        "kind": "component_group",
+        "quote": "infotainment system"
+      },
+      {
+        "kind": "other",
+        "quote": "diagnosed with a software malfunction"
+      }
+    ],
+    "conditions": [
+      "while reversing"
+    ],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": false,
+    "summary": "Test the infotainment camera software on a 2022 Ford F-450 SD because reversing produced a black/frozen rearview image and failure to display all camera views.",
+    "symptoms": [
+      "rearview camera image black and frozen while reversing",
+      "infotainment system failed to display all camera images"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2115887",
+    "created_at": "2025-07-31T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "rearview camera image was black and frozen",
+        "source_id": "2115887",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "infotainment system failed to display an image of all the cameras as needed",
+        "source_id": "2115887",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while reversing",
+        "source_id": "2115887",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "infotainment system",
+        "source_id": "2115887",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "diagnosed with a software malfunction",
+        "source_id": "2115887",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports that while reversing, the rearview camera image was black and frozen, and the infotainment system failed to display images from all cameras. A dealer diagnosed a software malfunction and advised waiting for over-the-air updates; no repair was performed. No rulebook entry, recall, investigation, or similar case was returned, so no targeted rulebook test is available and the standard test is proposed.",
+    "requested_info": [],
+    "summary": "Test the infotainment camera software on a 2022 Ford F-450 SD because reversing produced a black/frozen rearview image and failure to display all camera views.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-31T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00063835,
+      "duration_ms": 8576,
+      "reason": "Infotainment software: rearview camera black/frozen and all-camera display failure while reversing.",
+      "started_at": "2025-07-31T07:00:16Z",
+      "step": 2,
+      "tokens": 1623,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-31T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-450 SD",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-31T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-31T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-31T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2022 Ford F-450 SD. The contact stated that while reversing, the rearview camera image was black and frozen. Additionally, the contact stated that the infotainment system failed to display an image of all the cameras as needed. There was no warning light illuminated. The vehicle was taken to a local dealer, where it was diagnosed with a software malfunction. The contact was advised to wait for the over-the-air software updates to be performed. The vehicle was not repaired. The"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-31T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "FORD",
+        "model": "F-450 SD",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-31T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "FORD",
+        "model": "F-450 SD",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-31T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00050295,
+      "duration_ms": 5158,
+      "reason": "The narrative reports that while reversing, the rearview camera image was black and frozen, and the infotainment system failed to display images from all cameras. A dealer diagnosed a software malfunction and advised waiting for over-the-air updates; no repair was performed. No rulebook entry, recall, investigation, or similar case was returned, so no targeted rulebook test is available and the standard test is proposed.",
+      "started_at": "2025-07-31T07:00:24Z",
+      "step": 10,
+      "tokens": 1481,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-07-31T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "rearview camera image was black and frozen",
+          "infotainment system failed to display an image of all the cameras as needed",
+          "while reversing",
+          "infotainment system",
+          "diagnosed with a software malfunction"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-31T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-31T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-31T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-31T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

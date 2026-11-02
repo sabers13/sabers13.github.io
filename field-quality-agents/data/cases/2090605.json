@@ -1,0 +1,441 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2090605",
+    "make": "NISSAN",
+    "mileage": 0,
+    "model": "LEAF",
+    "narrative": "The contact owns a 2019 Nissan Leaf. The contact received notification of NHTSA Campaign Number: 24V700000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-05-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2090605",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2090605",
+    "decided_at": "2025-05-09T07:00:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2090605",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V700000"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was unavailable"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact had not experienced a failure."
+      }
+    ],
+    "conditions": [
+      "recall repair parts unavailable",
+      "no failure experienced"
+    ],
+    "fault_codes": [
+      "24V700000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "No failure is reported; the recall remedy part is unavailable, so a standard electrical system check applies with no targeted rulebook test.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2090605",
+    "created_at": "2025-05-09T07:00:10Z",
+    "evidence": [
+      {
+        "quote": "Electrical System",
+        "source_id": "2090605",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 24V700000",
+        "source_id": "2090605",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was unavailable",
+        "source_id": "2090605",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2090605",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative identifies an electrical-system recall and states that the repair part was unavailable, but also states the contact had not experienced a failure. The rulebook returned no matching entry, so no targeted load test is indicated.",
+    "requested_info": [],
+    "summary": "No failure is reported; the recall remedy part is unavailable, so a standard electrical system check applies with no targeted rulebook test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+      "group": "electrical_general",
+      "id": "2032992",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 13.5692,
+      "year": 2019
+    },
+    {
+      "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+      "group": "electrical_general",
+      "id": "1902945",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 4.5502,
+      "year": 2019
+    },
+    {
+      "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+      "group": "electrical_general",
+      "id": "1795256",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 3.8111,
+      "year": 2019
+    },
+    {
+      "excerpt": "On 7/19/2024 while charging the car at Chargepoint Johns Creek, I heard a \"clunk\" sound as if something had popped off from beneath the body of the Leaf. At the same time, the charging emergency stopped. Smoke started to come out from under the Leaf. There was a smell as if somet...",
+      "group": "electrical_general",
+      "id": "2015834",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 3.1612,
+      "year": 2019
+    },
+    {
+      "excerpt": "LEAF BACKUP SCREEN TURNS PINK WHEN IN REVERSE. UNABLE TO BACKUP SAFELY!!! CALLED AND DROVE LEAF TO DEALER WHO INSPECTED THE LEAF.. DEALER SAID THERE WOULD BE A 'BOX DELIVERED NEXT WEEK' AND THEY WOULD CALL ME. *TR",
+      "group": "electrical_general",
+      "id": "1664081",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 1.306,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011512,
+      "duration_ms": 13636,
+      "reason": "2019 Nissan Leaf electrical system recall 24V700000; recall repair parts unavailable, no failure experienced",
+      "started_at": "2025-05-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2441,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+            "group": "electrical_general",
+            "id": "2032992",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 13.5692,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+            "group": "electrical_general",
+            "id": "1902945",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 4.5502,
+            "year": 2019
+          },
+          {
+            "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+            "group": "electrical_general",
+            "id": "1795256",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 3.8111,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2019 Nissan Leaf. The contact received notification of NHTSA Campaign Number: 24V700000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+            "group": "electrical_general",
+            "id": "2032992",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 13.5692,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+            "group": "electrical_general",
+            "id": "1902945",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 4.5502,
+            "year": 2019
+          },
+          {
+            "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+            "group": "electrical_general",
+            "id": "1795256",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 3.8111,
+            "year": 2019
+          },
+          {
+            "excerpt": "On 7/19/2024 while charging the car at Chargepoint Johns Creek, I heard a \"clunk\" sound as if something had popped off from beneath the body of the Leaf. At the same time, the charging emergency stopped. Smoke started to come out from under the Leaf. There was a smell as if somet...",
+            "group": "electrical_general",
+            "id": "2015834",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 3.1612,
+            "year": 2019
+          },
+          {
+            "excerpt": "LEAF BACKUP SCREEN TURNS PINK WHEN IN REVERSE. UNABLE TO BACKUP SAFELY!!! CALLED AND DROVE LEAF TO DEALER WHO INSPECTED THE LEAF.. DEALER SAID THERE WOULD BE A 'BOX DELIVERED NEXT WEEK' AND THEY WOULD CALL ME. *TR",
+            "group": "electrical_general",
+            "id": "1664081",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 1.306,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-09T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-09T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00087495,
+      "duration_ms": 8820,
+      "reason": "The narrative identifies an electrical-system recall and states that the repair part was unavailable, but also states the contact had not experienced a failure. The rulebook returned no matching entry, so no targeted load test is indicated.",
+      "started_at": "2025-05-09T07:00:08Z",
+      "step": 9,
+      "tokens": 2464,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-05-09T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Electrical System",
+          "NHTSA Campaign Number: 24V700000",
+          "the part to do the recall repair was unavailable",
+          "The contact had not experienced a failure."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-09T07:00:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-09T07:00:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-09T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-09T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

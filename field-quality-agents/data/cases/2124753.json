@@ -1,0 +1,264 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2124753",
+    "make": "KIA",
+    "mileage": null,
+    "model": "FORTE",
+    "narrative": "Summary: Unintended full brake engagement at highway speeds caused by electronic parking brake/Auto Hold button defect. Extreme risk of collision.  Details: On [XXX], my wife was driving our 2023 Kia Forte GT Line when the Auto Hold and electronic parking brake system malfunctioned. The system fully engaged the brakes without warning while traveling at highway speed, scraping the brake rotors and creating an immediate risk of being rear-ended. This occurred multiple times.  The following day ([XXX], the brake pedal would not depress at all, rendering the vehicle undrivable. The dealership (McFarland Kia, North Hampton, NH) diagnosed “a sticky substance” inside the electronic parking brake button, located next to the cupholder. There have never been any liquid spills in this vehicle. The more likely cause is a combination of factory lubrication and normal dust/debris accumulation over time.  If such a small amount of dust or residue can trigger unintended full braking while driving, it is a dangerous design flaw that poses a life-threatening hazard to drivers and passengers.  The vehicle was repaired after I paid $284.99 out-of-pocket, but I am pursuing reimbursement through my Zurich Vehicle Service Contract. I have also requested an independent third-party brake and rotor inspection, as this defect may have caused further damage.  Why this is a safety issue:  Sudden, uncommanded braking at highway speeds can cause high-speed rear-end collisions.  The defect can occur without visible warning and without any driver action.  The defect can be triggered by minimal non-liquid debris, which is unavoidable over the life of a vehicle.  I am requesting NHTSA investigate whether this is an isolated case or part of a larger design defect in the Kia Forte’s electronic parking brake/Auto Hold system. This condition should not be possible in a vehicle that meets federal safety standards.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124753",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124753",
+    "decided_at": "2025-08-27T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124753",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "electronic parking brake/Auto Hold button defect"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Unintended full brake engagement at highway speeds"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system fully engaged the brakes without warning while traveling at highway speed"
+      },
+      {
+        "kind": "condition",
+        "quote": "This occurred multiple times."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brake pedal would not depress at all"
+      },
+      {
+        "kind": "other",
+        "quote": "inside the electronic parking brake button"
+      },
+      {
+        "kind": "safety",
+        "quote": "Extreme risk of collision."
+      },
+      {
+        "kind": "safety",
+        "quote": "Sudden, uncommanded braking at highway speeds can cause high-speed rear-end collisions."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: unintended full brake engagement at highway speeds from electronic parking brake/Auto Hold button defect; later brake pedal would not depress, occurring multiple times.",
+    "symptoms": [
+      "unintended full brake engagement at highway speeds",
+      "brake pedal would not depress"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124753",
+    "created_at": "2025-08-27T07:00:51Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Driving down the road and the car will quit running and will take 20-30 for it to start again and now won’t start at all and it quit running while driving at Hyway speeds 10 times and could have been hit by other vehicles",
+      "group": "electrical_general",
+      "id": "1966579",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 3.3737,
+      "year": 2023
+    },
+    {
+      "excerpt": "My car was broken into and the anti theft system failed to protect my car. The entire steering column is damaged as well as a window.",
+      "group": "electrical_general",
+      "id": "1919034",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 0.782,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-27T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00125965,
+      "duration_ms": 13681,
+      "reason": "Electrical system: unintended full brake engagement at highway speeds from electronic parking brake/Auto Hold button defect; later brake pedal would not depress, occurring multiple times.",
+      "started_at": "2025-08-27T07:00:46Z",
+      "step": 2,
+      "tokens": 2873,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-08-27T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "FORTE",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Driving down the road and the car will quit running and will take 20-30 for it to start again and now won’t start at all and it quit running while driving at Hyway speeds 10 times and could have been hit by other vehicles",
+            "group": "electrical_general",
+            "id": "1966579",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 3.3737,
+            "year": 2023
+          },
+          {
+            "excerpt": "My car was broken into and the anti theft system failed to protect my car. The entire steering column is damaged as well as a window.",
+            "group": "electrical_general",
+            "id": "1919034",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 0.782,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-27T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-27T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-27T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-27T07:00:52Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-27T07:00:54Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-27T07:00:55Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-27T07:00:56Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

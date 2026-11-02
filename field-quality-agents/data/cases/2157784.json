@@ -1,0 +1,353 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:INFOTAINMENT",
+    "group": "infotainment",
+    "id": "2157784",
+    "make": "FORD",
+    "mileage": 28000,
+    "model": "ESCAPE",
+    "narrative": "The contact owns a 2024 Ford Escape. The contact stated that while starting the vehicle, the contact noticed that the infotainment system screen display was blank. There was no warning light illuminated. The vehicle was taken to the dealer, where it was diagnosed, and the dealer determined that the computer processing unit needed to be replaced. The contact stated that the failure had occurred on two different occasions. The manufacturer was notified of the failure, and the contact was walked through the process of resetting the system. No further information was available. The approximate failure mileage was 28,000.",
+    "received_at": "2025-12-16",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2157784",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157784",
+    "decided_at": "2025-12-16T07:00:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2157784",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "infotainment system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "screen display was blank"
+      },
+      {
+        "kind": "condition",
+        "quote": "while starting the vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "occurred on two different occasions"
+      },
+      {
+        "kind": "other",
+        "quote": "the dealer determined that the computer processing unit needed to be replaced"
+      }
+    ],
+    "conditions": [
+      "while starting the vehicle",
+      "intermittent",
+      "recurring on two occasions"
+    ],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": false,
+    "summary": "Run a long-run power cycling test to reproduce the intermittent blank infotainment display that appears on start-up and has recurred twice.",
+    "symptoms": [
+      "infotainment system screen display blank"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157784",
+    "created_at": "2025-12-16T07:00:10Z",
+    "evidence": [
+      {
+        "quote": "infotainment system",
+        "source_id": "2157784",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "screen display was blank",
+        "source_id": "2157784",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while starting the vehicle",
+        "source_id": "2157784",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "occurred on two different occasions",
+        "source_id": "2157784",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the dealer determined that the computer processing unit needed to be replaced",
+        "source_id": "2157784",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports the infotainment screen display going blank while starting the vehicle, with the failure occurring on two different occasions and a dealer diagnosis of the computer processing unit needing replacement. The rulebook matches the intermittent condition to a long-run power cycling test because repeated wake and sleep cycles can reproduce faults that appear only intermittently.",
+    "requested_info": [],
+    "summary": "Run a long-run power cycling test to reproduce the intermittent blank infotainment display that appears on start-up and has recurred twice.",
+    "targeted_test": {
+      "conditions": [
+        "while starting the vehicle",
+        "intermittent",
+        "recurring on two occasions"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports the infotainment screen display going blank while starting the vehicle, with the failure occurring on two different occasions and a dealer diagnosis of the computer processing unit needing replacement. The rulebook matches the intermittent condition to a long-run power cycling test because repeated wake and sleep cycles can reproduce faults that appear only intermittently."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00031765,
+      "duration_ms": 3956,
+      "reason": "Infotainment screen blank on start-up, recurring on two occasions; dealer diagnosed computer processing unit replacement.",
+      "started_at": "2025-12-16T07:00:01Z",
+      "step": 2,
+      "tokens": 1084,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-12-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2024 Ford Escape. The contact stated that while starting the vehicle, the contact noticed that the infotainment system screen display was blank. There was no warning light illuminated. The vehicle was taken to the dealer, where it was diagnosed, and the dealer determined that the computer processing unit needed to be replaced. The contact stated that the failure had occurred on two different occasions. The manufacturer was notified of the failure, and the contact was walked th"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-16T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-16T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "while starting the vehicle",
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00067635,
+      "duration_ms": 6800,
+      "reason": "The narrative reports the infotainment screen display going blank while starting the vehicle, with the failure occurring on two different occasions and a dealer diagnosis of the computer processing unit needing replacement. The rulebook matches the intermittent condition to a long-run power cycling test because repeated wake and sleep cycles can reproduce faults that appear only intermittently.",
+      "started_at": "2025-12-16T07:00:08Z",
+      "step": 9,
+      "tokens": 1779,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-12-16T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "infotainment system",
+          "screen display was blank",
+          "while starting the vehicle",
+          "occurred on two different occasions",
+          "the dealer determined that the computer processing unit needed to be replaced"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-16T07:00:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-16T07:00:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-16T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-16T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

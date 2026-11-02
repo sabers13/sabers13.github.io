@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2115137",
+    "make": "JEEP",
+    "mileage": 225585,
+    "model": "GRAND CHEROKEE",
+    "narrative": "The contact owned a 2014 Jeep Grand Cherokee. The contact stated that while driving 35 MPH, multiple warning lights illuminated. The contact noticed smoke emitting from under the hood. The contact pulled over to the side of the road and immediately exited the vehicle. The contact opened the hood and flames were visible. In addition, the electrical throttle illuminated, and the temperature gauge displayed it was hot. The fire extinguished on its own. The vehicle was towed to the dealer. The vehicle was diagnosed and informed the contact that the wires were damaged by the fire up to the location where the starter was located. However, no cause for the fire was found. The vehicle was towed to another independent mechanic, who diagnosed that the vehicle was sabotaged. The vehicle had unknown electrical work completed on the vehicle. However, the vehicle failed to start. Most recently, it was discovered that there was a mileage discrepancy. The vehicle was a dealer sale. At the time of purchase, the vehicle's mileage was 224,495 and at the time of registration, it was discovered that the mileage on the title was 26,270. The insurance company was not notified. The manufacturer was not made aware of the failure. The failure mileage was approximately 225,585.",
+    "received_at": "2025-07-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2115137",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2115137",
+    "decided_at": "2025-07-29T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2115137",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple warning lights illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke emitting from under the hood"
+      },
+      {
+        "kind": "safety",
+        "quote": "flames were visible"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the electrical throttle illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "temperature gauge displayed it was hot"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the wires were damaged by the fire up to the location where the starter was located"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "mileage discrepancy"
+      },
+      {
+        "kind": "other",
+        "quote": "the mileage on the title was 26,270"
+      },
+      {
+        "kind": "other",
+        "quote": "At the time of purchase, the vehicle's mileage was 224,495"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving 35 MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "unknown electrical work completed on the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "no cause for the fire was found"
+      },
+      {
+        "kind": "other",
+        "quote": "diagnosed that the vehicle was sabotaged"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": true,
+    "summary": "2014 Jeep Grand Cherokee instrumentation (speedometer/odometer): multiple warning lights, under-hood smoke and visible flames while driving at 35 MPH; later no-start and title mileage discrepancy.",
+    "symptoms": [
+      "multiple warning lights illuminated",
+      "smoke from under the hood",
+      "flames visible",
+      "electrical throttle light illuminated",
+      "temperature gauge indicated hot",
+      "wires damaged by fire near starter",
+      "vehicle failed to start",
+      "mileage discrepancy between purchase and title"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2115137",
+    "created_at": "2025-07-29T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2014 Jeep Grand Cherokee. The contact stated while driving at an undisclosed speed on the highway, the instrument cluster became inoperable. The vehicle was taken to the dealer but was informed by the dealer that they could not diagnose the failure due to the i...",
+      "group": "instrumentation",
+      "id": "1750965",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 5.3118,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-29T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00160585,
+      "duration_ms": 17559,
+      "reason": "2014 Jeep Grand Cherokee instrumentation (speedometer/odometer): multiple warning lights, under-hood smoke and visible flames while driving at 35 MPH; later no-start and title mileage discrepancy.",
+      "started_at": "2025-07-29T07:00:21Z",
+      "step": 2,
+      "tokens": 3339,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-07-29T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2014 Jeep Grand Cherokee. The contact stated while driving at an undisclosed speed on the highway, the instrument cluster became inoperable. The vehicle was taken to the dealer but was informed by the dealer that they could not diagnose the failure due to the i...",
+            "group": "instrumentation",
+            "id": "1750965",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 5.3118,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-29T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-29T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-29T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-29T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-29T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-29T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-29T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

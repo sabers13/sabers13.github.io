@@ -1,0 +1,318 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2064233",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ODYSSEY",
+    "narrative": "Multipurpose camera facing front on top of windshield works intermittently.  20% of the time it works fine, usually the first drive of the morning when the car is cool.  80% of the time, within 60 seconds upon startup there are 5 bright orange warning lights that come on all related to a malfunction in the multipurpose camera.  These are: Adaptive Cruise Control Failure, Collision Mitigation System Failure, Lane Keeping Assistance Problem, Road Departure Assistance Problem, Auto-High Beam failure. Most concerning is that the “BRAKE SYSTEM” light stays illuminated orange after these warnings come on.  My car will not pass inspection if it happens to have these intermittent warnings happen that trip.  This started 1 month ago, out of the blue.  From what I read online in Reddit and ODY.com…this multipurpose camera failure happens to many people at the 4-5 year mark.  One person has a video posted about how it’s the camera overheating…it becomes too hot to touch.  If you pour water on the windshield outside it will cool it off enough to work again.  I think this is a malfunction/manufacturing defect in the camera itself.  It should not randomly fail after only 4-5 years.  It’s connected to all these vital safety systems.  The repair cost quoted to me is $2686.88 + tax.  This is SO expensive and I cannot afford to fix this.  I don’t need the camera because I learned to drive without all these features, but I cannot remove this option.  So, I’m stuck with having to pay a huge amount for something that is a manufacturing defect in the camera itself.",
+    "received_at": "2025-02-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2064233",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2064233",
+    "decided_at": "2025-02-10T07:00:21Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2064233",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Multipurpose camera facing front on top of windshield works intermittently."
+      },
+      {
+        "kind": "condition",
+        "quote": "usually the first drive of the morning when the car is cool"
+      },
+      {
+        "kind": "condition",
+        "quote": "within 60 seconds upon startup"
+      },
+      {
+        "kind": "symptom",
+        "quote": "5 bright orange warning lights that come on all related to a malfunction in the multipurpose camera"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Adaptive Cruise Control Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Collision Mitigation System Failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Keeping Assistance Problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Road Departure Assistance Problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Auto-High Beam failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "Most concerning is that the “BRAKE SYSTEM” light stays illuminated orange after these warnings come on."
+      },
+      {
+        "kind": "condition",
+        "quote": "the camera overheating"
+      },
+      {
+        "kind": "condition",
+        "quote": "If you pour water on the windshield outside it will cool it off enough to work again."
+      },
+      {
+        "kind": "other",
+        "quote": "This started 1 month ago, out of the blue."
+      },
+      {
+        "kind": "safety",
+        "quote": "connected to all these vital safety systems"
+      }
+    ],
+    "conditions": [
+      "cold",
+      "heat",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2019 Honda Odyssey forward collision avoidance/adaptive cruise control multipurpose camera works intermittently; five orange warnings within 60 seconds of startup, works on first cool morning drive, possible camera overheating, BRAKE SYSTEM light stays on.",
+    "symptoms": [
+      "multipurpose camera works intermittently",
+      "five bright orange warning lights come on within 60 seconds of startup",
+      "Adaptive Cruise Control Failure warning",
+      "Collision Mitigation System Failure warning",
+      "Lane Keeping Assistance Problem warning",
+      "Road Departure Assistance Problem warning",
+      "Auto-High Beam failure warning",
+      "BRAKE SYSTEM light stays illuminated orange"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2064233",
+    "created_at": "2025-02-10T07:00:19Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Getting the following error messages on 2019 Odyssey: - Brake system lights - Lane keeping assist problem (LKAS); - Auto high-beam problem (A) - Road departure mitigation system problem - Collision mitigation system problem - Adaptive cruise control problem (ACC) - Brake system l...",
+      "group": "adas",
+      "id": "1988137",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 38.6727,
+      "year": 2019
+    },
+    {
+      "excerpt": "Started the car one morning and instantly a bunch of warning messages appear on the dashboard stating; 1) Collision Mitigation System Problem 2) Lane Keeping Assist Problem 3) Road Departure Mitigation System Problem 4) Auto High Beam Problem 5) Auto Emergency Braking Problem. Th...",
+      "group": "adas",
+      "id": "2011031",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 38.4053,
+      "year": 2019
+    },
+    {
+      "excerpt": "Three months into purchasing a brand new 2019 Honda Odyssey EX-L my car would not start. I was told my battery was drained/bad cell, due to the weather being too cold and all the electrical components of my vehicle. We lived in South Georgia and my van is kept in a garage. I was...",
+      "group": "adas",
+      "id": "1844604",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 36.5623,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-10T07:00:13Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0022993,
+      "duration_ms": 35941,
+      "reason": "2019 Honda Odyssey forward collision avoidance/adaptive cruise control multipurpose camera works intermittently; five orange warnings within 60 seconds of startup, works on first cool morning drive, possible camera overheating, BRAKE SYSTEM light stays on.",
+      "started_at": "2025-02-10T07:00:14Z",
+      "step": 2,
+      "tokens": 4575,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-10T07:00:15Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Getting the following error messages on 2019 Odyssey: - Brake system lights - Lane keeping assist problem (LKAS); - Auto high-beam problem (A) - Road departure mitigation system problem - Collision mitigation system problem - Adaptive cruise control problem (ACC) - Brake system l...",
+            "group": "adas",
+            "id": "1988137",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 38.6727,
+            "year": 2019
+          },
+          {
+            "excerpt": "Started the car one morning and instantly a bunch of warning messages appear on the dashboard stating; 1) Collision Mitigation System Problem 2) Lane Keeping Assist Problem 3) Road Departure Mitigation System Problem 4) Auto High Beam Problem 5) Auto Emergency Braking Problem. Th...",
+            "group": "adas",
+            "id": "2011031",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 38.4053,
+            "year": 2019
+          },
+          {
+            "excerpt": "Three months into purchasing a brand new 2019 Honda Odyssey EX-L my car would not start. I was told my battery was drained/bad cell, due to the weather being too cold and all the electrical components of my vehicle. We lived in South Georgia and my van is kept in a garage. I was...",
+            "group": "adas",
+            "id": "1844604",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 36.5623,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-10T07:00:16Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-10T07:00:17Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-10T07:00:18Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-10T07:00:20Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-10T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-10T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-10T07:00:24Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

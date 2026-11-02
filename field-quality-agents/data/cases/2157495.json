@@ -1,0 +1,268 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2157495",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "ROGUE",
+    "narrative": "Started the car and then the engine caught fire. Front of the car is completely charred and fire had to be put out by the fire department. Car is totaled now. This complaint has been raised with Nissan Consumer Affairs.",
+    "received_at": "2025-12-15",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2157495",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157495",
+    "decided_at": "2025-12-15T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2157495",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine caught fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Front of the car is completely charred"
+      },
+      {
+        "kind": "safety",
+        "quote": "fire had to be put out by the fire department"
+      },
+      {
+        "kind": "other",
+        "quote": "Car is totaled now."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: engine caught fire after starting; front of car charred, fire department extinguished it, vehicle totaled.",
+    "symptoms": [
+      "engine caught fire",
+      "front of car completely charred"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157495",
+    "created_at": "2025-12-15T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "DRIVING DOWN OHIO PIKE AFTER A SHORT STOP, CAR FELT LIKE IT WAS DRIVING IN A LOW GEAR OR NOT SHIFTING AND THE MANUAL OPTION WAS NOT ENGAGED. TRAVELING APPROXIMATELY 35-45 MPH FOR ABOUT A MILE OR SO WHEN ALL OF A SUDDEN THE STEERING WHEEL JERKED TO THE LEFT AND CAR DECELERATED INT...",
+      "group": "electrical_general",
+      "id": "1712975",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 4.6674,
+      "year": 2020
+    },
+    {
+      "excerpt": "WHILE MY GIRLFRIEND WAS DRIVING TO WORK ON 2/28 THE MAIN MONITOR DISPLAY WENT COMPLETELY BLANK AND NEVER CAME BACK ON. DISPLAY DID COME BACK ON WHEN SHE STARTED THE CAR TO COME HOME FROM WORK THAT DAY. TODAY 3/5 WHILE DRIVING TO WORK SHE HEARD AN ALERT NOISE AND NOTICED THE AEB W...",
+      "group": "electrical_general",
+      "id": "1652199",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 4.3533,
+      "year": 2020
+    },
+    {
+      "excerpt": "AEB light flashes on and off at random driving times. sent in for inspection no code generated but have videos of each one. Safety feature that is no longer a safety feature, but a hazard to self and others while driving. when ur car stops would be my #1 one indicator especially...",
+      "group": "electrical_general",
+      "id": "1785855",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 0.8142,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-15T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005536,
+      "duration_ms": 7173,
+      "reason": "Electrical system: engine caught fire after starting; front of car charred, fire department extinguished it, vehicle totaled.",
+      "started_at": "2025-12-15T07:00:36Z",
+      "step": 2,
+      "tokens": 1415,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-15T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ROGUE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "DRIVING DOWN OHIO PIKE AFTER A SHORT STOP, CAR FELT LIKE IT WAS DRIVING IN A LOW GEAR OR NOT SHIFTING AND THE MANUAL OPTION WAS NOT ENGAGED. TRAVELING APPROXIMATELY 35-45 MPH FOR ABOUT A MILE OR SO WHEN ALL OF A SUDDEN THE STEERING WHEEL JERKED TO THE LEFT AND CAR DECELERATED INT...",
+            "group": "electrical_general",
+            "id": "1712975",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 4.6674,
+            "year": 2020
+          },
+          {
+            "excerpt": "WHILE MY GIRLFRIEND WAS DRIVING TO WORK ON 2/28 THE MAIN MONITOR DISPLAY WENT COMPLETELY BLANK AND NEVER CAME BACK ON. DISPLAY DID COME BACK ON WHEN SHE STARTED THE CAR TO COME HOME FROM WORK THAT DAY. TODAY 3/5 WHILE DRIVING TO WORK SHE HEARD AN ALERT NOISE AND NOTICED THE AEB W...",
+            "group": "electrical_general",
+            "id": "1652199",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 4.3533,
+            "year": 2020
+          },
+          {
+            "excerpt": "AEB light flashes on and off at random driving times. sent in for inspection no code generated but have videos of each one. Safety feature that is no longer a safety feature, but a hazard to self and others while driving. when ur car stops would be my #1 one indicator especially...",
+            "group": "electrical_general",
+            "id": "1785855",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 0.8142,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-12-15T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-15T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-15T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-15T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-15T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-15T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-15T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+    "group": "safety_systems",
+    "id": "2065662",
+    "make": "RAM",
+    "mileage": 54000,
+    "model": "1500",
+    "narrative": "The contact owns a 2019 Ram 1500. The contact stated while driving 35 MPH, the vehicle hesitated. There was an abnormal clunking sound coming from the vehicle. The parking brake, traction control, and ABS warning lights were illuminated. Additionally, the stability control and AWD were temporarily unavailable. The vehicle was taken to the local dealer, where it was diagnosed that the rear sensor was damaged due to the plate dislodging. The rear plate covers the disk brakes had corroded and the bolt had become loosened. The vehicle was repaired, but the failure recurred. The manufacturer was not contacted. The failure mileage was approximately 54,000.",
+    "received_at": "2025-02-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2065662",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065662",
+    "decided_at": "2025-02-14T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2065662",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRONIC STABILITY CONTROL (ESC)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle hesitated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "abnormal clunking sound coming from the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "parking brake, traction control, and ABS warning lights were illuminated"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving 35 MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was repaired, but the failure recurred."
+      },
+      {
+        "kind": "other",
+        "quote": "the rear sensor was damaged due to the plate dislodging"
+      },
+      {
+        "kind": "other",
+        "quote": "rear plate covers the disk brakes had corroded and the bolt had become loosened"
+      },
+      {
+        "kind": "safety",
+        "quote": "stability control and AWD were temporarily unavailable"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "2019 Ram 1500 ESC: hesitation and clunking at 35 MPH with parking brake, traction control, ABS, stability control, and AWD warnings; rear sensor damaged by a corroded, loosened brake plate.",
+    "symptoms": [
+      "vehicle hesitated while driving",
+      "abnormal clunking sound",
+      "parking brake, traction control, and ABS warning lights illuminated",
+      "stability control and AWD temporarily unavailable",
+      "rear sensor damaged due to plate dislodging"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2065662",
+    "created_at": "2025-02-14T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2019 RAM 1500. The contact received notification of NHTSA Campaign Number: 24V653000(Service Brakes, Hydraulic, Electronic Stability Control); however, the part to do the recall repair was not yet available. The contact stated while driving at various speeds an...",
+      "group": "safety_systems",
+      "id": "2027524",
+      "make": "RAM",
+      "model": "1500",
+      "score": 8.8263,
+      "year": 2019
+    },
+    {
+      "excerpt": "The contact owns a 2019 RAM 1500. The contact stated that while parked, several unknown warning signals were illuminated. The vehicle was not diagnosed or repaired. The VIN was not included in NHTSA Campaign Number: 24V653000 (SERVICE BRAKES, HYDRAULIC, ELECTRONIC STABILITY CONTR...",
+      "group": "safety_systems",
+      "id": "2033000",
+      "make": "RAM",
+      "model": "1500",
+      "score": 5.6585,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-14T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00177315,
+      "duration_ms": 18735,
+      "reason": "2019 Ram 1500 ESC: hesitation and clunking at 35 MPH with parking brake, traction control, ABS, stability control, and AWD warnings; rear sensor damaged by a corroded, loosened brake plate.",
+      "started_at": "2025-02-14T07:00:21Z",
+      "step": 2,
+      "tokens": 3424,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-02-14T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2019 RAM 1500. The contact received notification of NHTSA Campaign Number: 24V653000(Service Brakes, Hydraulic, Electronic Stability Control); however, the part to do the recall repair was not yet available. The contact stated while driving at various speeds an...",
+            "group": "safety_systems",
+            "id": "2027524",
+            "make": "RAM",
+            "model": "1500",
+            "score": 8.8263,
+            "year": 2019
+          },
+          {
+            "excerpt": "The contact owns a 2019 RAM 1500. The contact stated that while parked, several unknown warning signals were illuminated. The vehicle was not diagnosed or repaired. The VIN was not included in NHTSA Campaign Number: 24V653000 (SERVICE BRAKES, HYDRAULIC, ELECTRONIC STABILITY CONTR...",
+            "group": "safety_systems",
+            "id": "2033000",
+            "make": "RAM",
+            "model": "1500",
+            "score": 5.6585,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-02-14T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-14T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-14T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-14T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-14T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-14T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-14T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

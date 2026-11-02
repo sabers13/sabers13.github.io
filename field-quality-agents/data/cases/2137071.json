@@ -1,0 +1,223 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2137071",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "COROLLA",
+    "narrative": "Component/system failed: The SRS Airbag System malfunctioned. After a rear-end collision on October 3, 2025, in Gwinnett County, GA, the airbags did not deploy. The vehicle displayed an alert: “SRS Airbag System – Malfunction detected” at 16:02.  Safety risk: My safety was put at risk because the airbags did not function during a significant impact. This failure could have resulted in severe injury if the collision had been more forceful or from another angle.  Inspection/reproduction: On October 6, 2025, I brought the vehicle to Atlanta Toyota. Instead of documenting the diagnostic trouble code (DTC) and providing a report, the dealer cleared the fault code and recalibrated the system without my authorization, effectively erasing critical evidence of the malfunction. The invoice confirms this.  Inspections by others: The vehicle was inspected only by the Toyota dealer. It has not yet been inspected by the manufacturer, police, or insurance representatives, but I have legal counsel and am preserving the evidence for further independent inspection.  Warning lamps/messages: Yes. The SRS Airbag System Malfunction message appeared immediately after the collision on October 3, 2025. I have photographic evidence of this alert.",
+    "received_at": "2025-10-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2137071",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2137071",
+    "decided_at": "2025-10-07T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2137071",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SRS Airbag System malfunctioned"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the airbags did not deploy"
+      },
+      {
+        "kind": "condition",
+        "quote": "After a rear-end collision on October 3, 2025"
+      },
+      {
+        "kind": "symptom",
+        "quote": "SRS Airbag System – Malfunction detected"
+      },
+      {
+        "kind": "safety",
+        "quote": "My safety was put at risk because the airbags did not function during a significant impact."
+      },
+      {
+        "kind": "condition",
+        "quote": "the dealer cleared the fault code and recalibrated the system without my authorization"
+      },
+      {
+        "kind": "other",
+        "quote": "The SRS Airbag System Malfunction message appeared immediately after the collision on October 3, 2025."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "SRS airbag system malfunction in a 2024 Toyota Corolla; airbags failed to deploy in a rear-end collision and an 'SRS Airbag System – Malfunction detected' alert appeared",
+    "symptoms": [
+      "airbags did not deploy in a rear-end collision",
+      "SRS Airbag System Malfunction detected alert displayed",
+      "fault code cleared and system recalibrated by dealer"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2137071",
+    "created_at": "2025-10-07T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-07T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00026485,
+      "duration_ms": 2637,
+      "reason": "SRS airbag system malfunction in a 2024 Toyota Corolla; airbags failed to deploy in a rear-end collision and an 'SRS Airbag System – Malfunction detected' alert appeared",
+      "started_at": "2025-10-07T07:00:15Z",
+      "step": 2,
+      "tokens": 1101,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-07T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "COROLLA",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-10-07T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-07T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-07T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-07T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-07T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-07T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-07T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

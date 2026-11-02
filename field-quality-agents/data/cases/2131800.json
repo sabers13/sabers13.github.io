@@ -1,0 +1,241 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2131800",
+    "make": "FOREST RIVER",
+    "mileage": null,
+    "model": "FR3",
+    "narrative": "On [XXX], while traveling in our FR3 RV to a funeral in Ohio, we experienced a serious safety failure. As we drove through heavy traffic in Cincinnati, the refrigerator detached from the wall and fell into the cabin, forcing my husband to swerve suddenly and nearly causing an accident. It fell right into the dinette seating where our grandchildren often sit to color or I sit to work. This incident resulted in significant damage to the surrounding interior and could have resulted in death or injury.  The following day, while returning from the funeral, we were contacted by the RV park where our vehicle was parked. Other campers reported seeing flames coming from one of the RV’s AC units. Upon further investigation, we discovered that these AC units were the subject of a recall issued in November 2024. Despite this, we purchased our RV brand new in March 2025, several months after the recall was issued. The dealership failed to rectify the recall before it was sold to us.   These failures present unacceptable safety hazards and have caused us both financial and emotional stress.   INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-09-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131800",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131800",
+    "decided_at": "2025-09-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131800",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "refrigerator detached from the wall and fell into the cabin"
+      },
+      {
+        "kind": "symptom",
+        "quote": "forcing my husband to swerve suddenly and nearly causing an accident"
+      },
+      {
+        "kind": "condition",
+        "quote": "while traveling in our FR3 RV to a funeral in Ohio"
+      },
+      {
+        "kind": "condition",
+        "quote": "heavy traffic in Cincinnati"
+      },
+      {
+        "kind": "symptom",
+        "quote": "flames coming from one of the RV’s AC units"
+      },
+      {
+        "kind": "condition",
+        "quote": "where our vehicle was parked"
+      },
+      {
+        "kind": "other",
+        "quote": "AC units were the subject of a recall issued in November 2024"
+      },
+      {
+        "kind": "other",
+        "quote": "purchased our RV brand new in March 2025"
+      },
+      {
+        "kind": "other",
+        "quote": "The dealership failed to rectify the recall before it was sold to us."
+      },
+      {
+        "kind": "safety",
+        "quote": "serious safety failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "could have resulted in death or injury"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: refrigerator detached and fell into cabin while traveling in heavy traffic, and flames were seen from an AC unit while the RV was parked; recall not rectified before sale.",
+    "symptoms": [
+      "refrigerator detached from wall and fell into cabin",
+      "driver had to swerve suddenly",
+      "flames coming from AC unit"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131800",
+    "created_at": "2025-09-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00115615,
+      "duration_ms": 11693,
+      "reason": "Electrical system: refrigerator detached and fell into cabin while traveling in heavy traffic, and flames were seen from an AC unit while the RV was parked; recall not rectified before sale.",
+      "started_at": "2025-09-18T07:00:01Z",
+      "step": 2,
+      "tokens": 2573,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-09-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FOREST RIVER",
+        "model": "FR3",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-09-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

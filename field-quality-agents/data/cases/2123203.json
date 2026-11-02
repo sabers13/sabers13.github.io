@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:SEAT HEATER:WIRING HARNESS",
+    "group": "body_controls",
+    "id": "2123203",
+    "make": "VOLKSWAGEN",
+    "mileage": 80000,
+    "model": "EOS",
+    "narrative": "The contact owns a 2014 Volkswagen EOS. The contact stated that while operating, a burning odor was present inside the cabin of the vehicle. Later, while operating the vehicle, the front driver's side seat became extremely hot, causing the driver's back and legs to become burned. The contact indicated that the burn injuries would later require medical treatment. The contact indicated that the sweater worn was also charred, and a small burn hole was present in the sweater. The contact discovered a burn hole and exposed heater filament on the back section of the front driver's seat and a burnt section on the seat cushion of the driver's seat. The vehicle was taken to the local dealer, who determined that the seat temperature had reached 163 degrees while the seat heater was activated. The contact was advised that the seat needed to be replaced. The manufacturer was notified of the failure and authorized to have the back section of the seat replaced. The back section of the seat was replaced the bottom section of the seat was not replaced.  The dealer also advised that the front passenger side seat had experienced the same overheating failure. The failure mileage was 80,000.",
+    "received_at": "2025-08-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123203",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123203",
+    "decided_at": "2025-08-22T07:00:37Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123203",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "a burning odor was present inside the cabin of the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the front driver's side seat became extremely hot"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causing the driver's back and legs to become burned"
+      },
+      {
+        "kind": "safety",
+        "quote": "burn injuries would later require medical treatment"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact indicated that the sweater worn was also charred, and a small burn hole was present in the sweater."
+      },
+      {
+        "kind": "symptom",
+        "quote": "burn hole and exposed heater filament on the back section of the front driver's seat"
+      },
+      {
+        "kind": "symptom",
+        "quote": "burnt section on the seat cushion of the driver's seat"
+      },
+      {
+        "kind": "symptom",
+        "quote": "seat temperature had reached 163 degrees while the seat heater was activated"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the seat heater was activated"
+      },
+      {
+        "kind": "condition",
+        "quote": "while operating"
+      },
+      {
+        "kind": "symptom",
+        "quote": "front passenger side seat had experienced the same overheating failure"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:SEAT HEATER:WIRING HARNESS"
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "2014 Volkswagen EOS seat heater wiring harness: burning odor and driver seat overheating to 163 degrees caused back/leg burns and charred sweater; passenger seat also overheated.",
+    "symptoms": [
+      "burning odor inside cabin",
+      "driver seat became extremely hot",
+      "driver's back and legs burned",
+      "burn injuries requiring medical treatment",
+      "sweater charred with burn hole",
+      "burn hole and exposed heater filament on driver seat back",
+      "burnt section on driver seat cushion",
+      "seat heater reached 163 degrees",
+      "front passenger seat overheated similarly"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123203",
+    "created_at": "2025-08-22T07:00:35Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We have the Xenon headlights, which requires us to have headlight washers on our cars due to safety issue for the other drivers on the road so they don’t get blinded, who’s is great if 1) they worked most of the time 2) people did not start pulling the fuse or discontinuing the h...",
+      "group": "body_controls",
+      "id": "1954682",
+      "make": "VOLKSWAGEN",
+      "model": "EOS",
+      "score": 1.6542,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-22T07:00:29Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017596,
+      "duration_ms": 18996,
+      "reason": "2014 Volkswagen EOS seat heater wiring harness: burning odor and driver seat overheating to 163 degrees caused back/leg burns and charred sweater; passenger seat also overheated.",
+      "started_at": "2025-08-22T07:00:30Z",
+      "step": 2,
+      "tokens": 3575,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-22T07:00:31Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "EOS",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have the Xenon headlights, which requires us to have headlight washers on our cars due to safety issue for the other drivers on the road so they don’t get blinded, who’s is great if 1) they worked most of the time 2) people did not start pulling the fuse or discontinuing the h...",
+            "group": "body_controls",
+            "id": "1954682",
+            "make": "VOLKSWAGEN",
+            "model": "EOS",
+            "score": 1.6542,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-08-22T07:00:32Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-22T07:00:33Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-22T07:00:34Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-22T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-22T07:00:38Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-22T07:00:39Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-22T07:00:40Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

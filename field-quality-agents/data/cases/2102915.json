@@ -1,0 +1,231 @@
+{
+  "case": {
+    "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "group": "body_controls",
+    "id": "2102915",
+    "make": "FORD",
+    "mileage": 55000,
+    "model": "EDGE",
+    "narrative": "The contact owns a 2020 Ford Edge. The contact stated while driving 70 MPH, the sunroof exploded and completely fractured into several pieces. The contact stated that the glass fragments fell inside the vehicle. The dealer was contacted and informed the contact that there were no recalls on the VIN related to the failure. The vehicle was not diagnosed or repaired. The manufacturer was not informed of the failure. The failure mileage was approximately 55,000.",
+    "received_at": "2025-06-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2102915",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2102915",
+    "decided_at": "2025-06-23T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2102915",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY:SUN/MOON ROOF ASSEMBLY"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the sunroof exploded and completely fractured into several pieces"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving 70 MPH"
+      },
+      {
+        "kind": "safety",
+        "quote": "the glass fragments fell inside the vehicle"
+      }
+    ],
+    "conditions": [
+      "while driving 70 MPH"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Sun/moon roof assembly exploded and fractured while driving 70 MPH, with glass fragments falling inside the vehicle.",
+    "symptoms": [
+      "sunroof exploded",
+      "sunroof fractured into several pieces",
+      "glass fragments fell inside the vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2102915",
+    "created_at": "2025-06-23T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2020 Ford Edge. The contact stated while driving 60 mph, the sun roof exploded causing glass shards to fall onto the contact. The contact did not sustain any injuries. The contact stated there was no warning light illuminated. The vehicle was towed to a local d...",
+      "group": "body_controls",
+      "id": "1750910",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 6.4968,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-23T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000421,
+      "duration_ms": 5502,
+      "reason": "Sun/moon roof assembly exploded and fractured while driving 70 MPH, with glass fragments falling inside the vehicle.",
+      "started_at": "2025-06-23T07:00:21Z",
+      "step": 2,
+      "tokens": 1236,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-06-23T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EDGE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Ford Edge. The contact stated while driving 60 mph, the sun roof exploded causing glass shards to fall onto the contact. The contact did not sustain any injuries. The contact stated there was no warning light illuminated. The vehicle was towed to a local d...",
+            "group": "body_controls",
+            "id": "1750910",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 6.4968,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-06-23T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-23T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-23T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-23T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-23T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-23T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-23T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

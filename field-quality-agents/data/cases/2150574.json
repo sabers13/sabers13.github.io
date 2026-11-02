@@ -1,0 +1,200 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2150574",
+    "make": "KIA",
+    "mileage": null,
+    "model": "SPORTAGE",
+    "narrative": "The contact owns a 2013 Kia Sportage. The contact stated that while her daughter was driving at 45 MPH, the daughter collided with another vehicle after the vehicle aggressively merged in front of her. The collision was at the front driver and passenger side of the vehicle. The contact added that the collision threw her daughter forward and backward, and the contact's daughter sustained neck, shoulder, and lower back injuries, and surgery on her neck was needed. A police report was filed. The vehicle was taken to the residence and parked. The vehicle was then towed to a body shop. The manufacturer was not notified of the failure. The failure mileage was unknown.",
+    "received_at": "2025-11-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2150574",
+    "status": "needs_engineer",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2150574",
+    "decided_at": "2025-11-20T07:00:06Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2150574",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "collided with another vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving at 45 MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "front driver and passenger side"
+      },
+      {
+        "kind": "safety",
+        "quote": "sustained neck, shoulder, and lower back injuries"
+      },
+      {
+        "kind": "safety",
+        "quote": "surgery on her neck was needed"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was unknown."
+      }
+    ],
+    "conditions": [
+      "collision",
+      "driving at 45 MPH",
+      "front driver and passenger side impact"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS/restraints: 45 MPH front driver/passenger collision; daughter injured (neck, shoulder, lower back; neck surgery); no airbag-specific symptom stated.",
+    "symptoms": [
+      "collision with another vehicle",
+      "occupant injuries: neck, shoulder, and lower back; neck surgery needed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2150574",
+    "created_at": "2025-11-20T07:00:03Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "symptom"
+    ],
+    "summary": "Information request: symptom",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0020647,
+      "duration_ms": 22174,
+      "reason": "AIR BAGS/restraints: 45 MPH front driver/passenger collision; daughter injured (neck, shoulder, lower back; neck surgery); no airbag-specific symptom stated.",
+      "started_at": "2025-11-20T07:00:01Z",
+      "step": 2,
+      "tokens": 3998,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "SPORTAGE",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: symptom",
+      "started_at": "2025-11-20T07:00:04Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-20T07:00:05Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-11-20T07:00:07Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-20T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-11-20T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

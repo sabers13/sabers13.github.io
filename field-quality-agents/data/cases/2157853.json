@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2157853",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "PALISADE",
+    "narrative": "I am filing a formal safety complaint regarding an open safety recall involving the rear seatbelts in my 2023 Hyundai Palisade. One of the rear seatbelts will not latch at all, despite following all manufacturer-recommended troubleshooting steps.  This defect directly impacts child passenger safety. I have two young children who use forward-facing car seats that require a functional vehicle seatbelt. Because the seatbelt does not latch, I am unable to safely install a forward-facing car seat in this position.  Hyundai has issued a recall but states that no remedy or repair will be available until January, leaving my family without a safe seating position for my child for several months. The dealership has provided no interim solution, loaner vehicle, or alternative safety accommodation. The dealership informed us yesterday that they don't anticipate getting the part until February or March.  We are facing long-distance holiday travel, and I am deeply concerned about the risk of injury in the event of a crash due to a known, unrepaired safety defect.  I am requesting NHTSA review this matter and assist in ensuring an appropriate interim remedy or manufacturer-provided solution while the recall repair is pending.",
+    "received_at": "2025-12-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2157853",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2157853",
+    "decided_at": "2025-12-16T07:00:27Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2157853",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "One of the rear seatbelts will not latch at all"
+      },
+      {
+        "kind": "other",
+        "quote": "open safety recall"
+      },
+      {
+        "kind": "safety",
+        "quote": "child passenger safety"
+      },
+      {
+        "kind": "safety",
+        "quote": "risk of injury in the event of a crash"
+      },
+      {
+        "kind": "other",
+        "quote": "no remedy or repair will be available until January"
+      },
+      {
+        "kind": "other",
+        "quote": "don't anticipate getting the part until February or March"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Rear seatbelt will not latch; open safety recall with remedy delayed to Jan-Feb/Mar; child car seat cannot be installed safely.",
+    "symptoms": [
+      "rear seatbelt will not latch"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2157853",
+    "created_at": "2025-12-16T07:00:25Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2023 Hyundai Palisade. The contact stated that while occupying the front passenger's seat and buckling the seat belt, the seat unbuckled independently. The contact stated that the failure had been recurring. The dealer and the manufacturer were not notified of...",
+      "group": "restraints",
+      "id": "1952245",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 4.6407,
+      "year": 2023
+    },
+    {
+      "excerpt": "Seat belt buckle of second row bucket seat on driver’s side is malfunctioning. Buckle clips in as expected, and then disengages on its own without user touching it. Seat belt unclicked with a passenger sitting in it, when driver applied brakes coming to a stop. There are no warni...",
+      "group": "restraints",
+      "id": "1979430",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 4.6236,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-16T07:00:19Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007969,
+      "duration_ms": 9355,
+      "reason": "Rear seatbelt will not latch; open safety recall with remedy delayed to Jan-Feb/Mar; child car seat cannot be installed safely.",
+      "started_at": "2025-12-16T07:00:20Z",
+      "step": 2,
+      "tokens": 1963,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-12-16T07:00:21Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "PALISADE",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2023 Hyundai Palisade. The contact stated that while occupying the front passenger's seat and buckling the seat belt, the seat unbuckled independently. The contact stated that the failure had been recurring. The dealer and the manufacturer were not notified of...",
+            "group": "restraints",
+            "id": "1952245",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 4.6407,
+            "year": 2023
+          },
+          {
+            "excerpt": "Seat belt buckle of second row bucket seat on driver’s side is malfunctioning. Buckle clips in as expected, and then disengages on its own without user touching it. Seat belt unclicked with a passenger sitting in it, when driver applied brakes coming to a stop. There are no warni...",
+            "group": "restraints",
+            "id": "1979430",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 4.6236,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-16T07:00:22Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-16T07:00:23Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-16T07:00:24Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-16T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-16T07:00:28Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-16T07:00:29Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-16T07:00:30Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

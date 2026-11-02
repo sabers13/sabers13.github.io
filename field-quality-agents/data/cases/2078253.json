@@ -1,0 +1,227 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2078253",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "VENUE",
+    "narrative": "Since buying this vehicle on [XXX] my horn has become completely inoperative a total of three times. I live in Georgia and a working horn is required per GA Code § 40-8-70 (2024) \"Every motor vehicle when operated upon a highway shall be equipped with a horn in good working order and capable of emitting sound audible under normal conditions from a distance of not less than 200 feet..\".  This is not a unique problem to only my vehicle. If you go through your records I am sure you find well over a thousand such instances with Hyundai vehicles.   Not having a working horn is not only illegal in Georgia put it increases the risk of getting involved in a motor vehicle accident.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-03-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2078253",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2078253",
+    "decided_at": "2025-03-28T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2078253",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "horn has become completely inoperative a total of three times"
+      },
+      {
+        "kind": "condition",
+        "quote": "Since buying this vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "increases the risk of getting involved in a motor vehicle accident"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM: horn completely inoperative three times since purchase",
+    "symptoms": [
+      "horn completely inoperative"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2078253",
+    "created_at": "2025-03-28T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hi! A couple weeks ago i noticed the horn in my 2024 Hyundai Venue Limited was not working. My husband made an appointment to take it in to the dealership for the soonest available date which was about a couple weeks from that day. About a week later, the dashboard screen where y...",
+      "group": "electrical_general",
+      "id": "2049438",
+      "make": "HYUNDAI",
+      "model": "VENUE",
+      "score": 3.7245,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-28T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00052105,
+      "duration_ms": 6904,
+      "reason": "ELECTRICAL SYSTEM: horn completely inoperative three times since purchase",
+      "started_at": "2025-03-28T07:00:01Z",
+      "step": 2,
+      "tokens": 1462,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-03-28T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "VENUE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hi! A couple weeks ago i noticed the horn in my 2024 Hyundai Venue Limited was not working. My husband made an appointment to take it in to the dealership for the soonest available date which was about a couple weeks from that day. About a week later, the dashboard screen where y...",
+            "group": "electrical_general",
+            "id": "2049438",
+            "make": "HYUNDAI",
+            "model": "VENUE",
+            "score": 3.7245,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-28T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-28T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-28T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-28T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-28T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-28T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-28T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

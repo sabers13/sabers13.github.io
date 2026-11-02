@@ -1,0 +1,334 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2092051",
+    "make": "JEEP",
+    "mileage": 171000,
+    "model": "LIBERTY",
+    "narrative": "Odometer Fraud. The contact purchased a 2012 Jeep Liberty. The contact stated that while attempting to register the vehicle, it was discovered that there was a mileage discrepancy. The vehicle was a private sale. At the time of purchase, the vehicle mileage was 94,000 and at the time of registration, it was discovered that the mileage was 171,000.",
+    "received_at": "2025-05-14",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2092051",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2092051",
+    "decided_at": "2025-05-14T07:00:27Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2092051",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud."
+      },
+      {
+        "kind": "symptom",
+        "quote": "mileage discrepancy"
+      },
+      {
+        "kind": "symptom",
+        "quote": "At the time of purchase, the vehicle mileage was 94,000 and at the time of registration, it was discovered that the mileage was 171,000."
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was a private sale."
+      },
+      {
+        "kind": "condition",
+        "quote": "while attempting to register the vehicle"
+      }
+    ],
+    "conditions": [
+      "private sale",
+      "mileage discrepancy discovered while attempting to register the vehicle"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Test the 2012 Jeep Liberty odometer/instrument cluster for a mileage discrepancy after a private sale showed 94,000 at purchase and 171,000 at registration.",
+    "symptoms": [
+      "odometer fraud",
+      "mileage discrepancy",
+      "94,000 at purchase vs 171,000 at registration"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2092051",
+    "created_at": "2025-05-14T07:00:25Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud.",
+        "source_id": "2092051",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "mileage discrepancy",
+        "source_id": "2092051",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase, the vehicle mileage was 94,000 and at the time of registration, it was discovered that the mileage was 171,000.",
+        "source_id": "2092051",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was a private sale.",
+        "source_id": "2092051",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while attempting to register the vehicle",
+        "source_id": "2092051",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports odometer fraud and a mileage discrepancy discovered while registering the vehicle. It states the vehicle was a private sale and that mileage was 94,000 at purchase versus 171,000 at registration. No recalls, investigations, similar cases, or rulebook matches were returned, so no targeted rulebook test applies; propose the standard field-quality test. The narrative does not show a risk to people.",
+    "requested_info": [],
+    "summary": "Test the 2012 Jeep Liberty odometer/instrument cluster for a mileage discrepancy after a private sale showed 94,000 at purchase and 171,000 at registration.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-14T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00067015,
+      "duration_ms": 10666,
+      "reason": "2012 Jeep Liberty speedometer/odometer: odometer fraud/mileage discrepancy discovered at registration; private sale, 94,000 at purchase vs 171,000 at registration",
+      "started_at": "2025-05-14T07:00:16Z",
+      "step": 2,
+      "tokens": 1643,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-05-14T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-14T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-05-14T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2012 Jeep Liberty. The contact stated that while attempting to register the vehicle, it was discovered that there was a mileage discrepancy. The vehicle was a private sale. At the time of purchase, the vehicle mileage was 94,000 and at the time of registration, it was discovered that the mileage was 171,000."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-14T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-14T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "JEEP",
+        "model": "LIBERTY",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-14T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00081855,
+      "duration_ms": 12466,
+      "reason": "The narrative reports odometer fraud and a mileage discrepancy discovered while registering the vehicle. It states the vehicle was a private sale and that mileage was 94,000 at purchase versus 171,000 at registration. No recalls, investigations, similar cases, or rulebook matches were returned, so no targeted rulebook test applies; propose the standard field-quality test. The narrative does not show a risk to people.",
+      "started_at": "2025-05-14T07:00:23Z",
+      "step": 9,
+      "tokens": 1986,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-05-14T07:00:24Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud.",
+          "mileage discrepancy",
+          "At the time of purchase, the vehicle mileage was 94,000 and at the time of registration, it was discovered that the mileage was 171,000.",
+          "The vehicle was a private sale.",
+          "while attempting to register the vehicle"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-14T07:00:26Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-14T07:00:28Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-14T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-14T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2096356",
+    "make": "DODGE",
+    "mileage": null,
+    "model": "DURANGO",
+    "narrative": "Im again reporting the racetrack tail lights. Im seeing a lot more water intrusion in dodge durangos of many years. We want answers! This needs to be investigated stat! Consumers should not have to pay $1800 for failure on dodges part! They know this is an issue with many years of these durangos. There is already a class action lawsuit against them for this issue. Please investigate this! We want answers....",
+    "received_at": "2025-05-30",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2096356",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096356",
+    "decided_at": "2025-05-30T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2096356",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "racetrack tail lights"
+      },
+      {
+        "kind": "symptom",
+        "quote": "water intrusion"
+      },
+      {
+        "kind": "condition",
+        "quote": "water intrusion"
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Test the Durango racetrack tail lights for moisture ingress and condensation because reported water intrusion is linked to tail light failure and matches the moisture rulebook entry.",
+    "symptoms": [
+      "water intrusion in racetrack tail lights",
+      "tail light failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2096356",
+    "created_at": "2025-05-30T07:00:27Z",
+    "evidence": [
+      {
+        "quote": "racetrack tail lights",
+        "source_id": "2096356",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "water intrusion",
+        "source_id": "2096356",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "water intrusion",
+        "source_id": "2096356",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports water intrusion in the racetrack tail lights and resulting failure on a 2015 Dodge Durango. The extracted condition is moisture, which matches the rulebook entry requiring a humidity and condensation test; similar lighting cases also describe water intrusion causing racetrack tail light malfunction.",
+    "requested_info": [],
+    "summary": "Test the Durango racetrack tail lights for moisture ingress and condensation because reported water intrusion is linked to tail light failure and matches the moisture rulebook entry.",
+    "targeted_test": {
+      "conditions": [
+        "moisture"
+      ],
+      "name": "Humidity and condensation test",
+      "reason": "The narrative reports water intrusion in the racetrack tail lights and resulting failure on a 2015 Dodge Durango. The extracted condition is moisture, which matches the rulebook entry requiring a humidity and condensation test; similar lighting cases also describe water intrusion causing racetrack tail light malfunction."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "REAR TAIL LIGHT (RACETRACK LIGHT) WAS IMPROPERLY SEALED AND ALLOWS WATER RUNOFF TO COLLECT INSIDE BOTTOM PART OF RACETRACK LIGHTING. THIS CAUSES THE RACETRACK LIGHT TO BURNOUT AND EVENTUALLY STOP WORKING ENTIRELY. THIS IS A HAZARD THAT IF NOT FIXED AND TAIL LIGHTS GO OUT WHILE DR...",
+      "group": "lighting",
+      "id": "1663237",
+      "make": "DODGE",
+      "model": "DURANGO",
+      "score": 12.3143,
+      "year": 2015
+    },
+    {
+      "excerpt": "The lift gate light housing assembly develops cracks due to design flaw, allowing housing assembly to fill with water and cause lights to malfunction. The housing assembly is available for inspection upon request. The rear lights of the vehicle are not functioning as intended and...",
+      "group": "lighting",
+      "id": "1783016",
+      "make": "DODGE",
+      "model": "DURANGO",
+      "score": 11.7147,
+      "year": 2015
+    },
+    {
+      "excerpt": "Sections of LED brake light/race track light has stopped working due to water intrusion in rear panel. Back panel is not secured properly, allowing water to enter, corrode the harness and lights to fail. Due to this, the license plate harness & connectors are corroded as well. Re...",
+      "group": "lighting",
+      "id": "2017615",
+      "make": "DODGE",
+      "model": "DURANGO",
+      "score": 9.0494,
+      "year": 2015
+    },
+    {
+      "excerpt": "REAR TAIL LIGHT (RACETRACK LIGHT) PORTION BURNED OUT. IT WAS IMPROPERLY SEALED AND ALLOWED WATER RUNOFF TO COLLECT INSIDE BOTTOM PART. THIS CAUSES THE RACETRACK LIGHT TO BURNOUT. THIS IS A HAZARD THAT IF NOT FIXED AND TAIL LIGHTS GO OUT WHILE DRIVING, COULD CAUSE AN ACCIDENT AND...",
+      "group": "lighting",
+      "id": "1676064",
+      "make": "DODGE",
+      "model": "DURANGO",
+      "score": 7.3506,
+      "year": 2015
+    },
+    {
+      "excerpt": "THE TAILGATE LIGHT GETS FILLED UP WITH WATER CREATING A SHORT AND BURNING OUR LED LIGHTS IN THE TAIL LIGHT. THIS IS A KNOWN ISSUE AND THE DEALERSHIP CHARGES OVER $1000 FOR THE LIGHT AND THE TIME SPEND REPLACING IT. FCU SHOULD PAY FOR THE FAULTY DESIGN AND REPLACE ALL THE TAILGATE...",
+      "group": "lighting",
+      "id": "1638201",
+      "make": "DODGE",
+      "model": "DURANGO",
+      "score": 6.8555,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-30T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00049285,
+      "duration_ms": 6410,
+      "reason": "Exterior lighting racetrack tail lights on a 2015 Dodge Durango: water intrusion and failure reported across many model years.",
+      "started_at": "2025-05-30T07:00:16Z",
+      "step": 2,
+      "tokens": 1349,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-30T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "REAR TAIL LIGHT (RACETRACK LIGHT) WAS IMPROPERLY SEALED AND ALLOWS WATER RUNOFF TO COLLECT INSIDE BOTTOM PART OF RACETRACK LIGHTING. THIS CAUSES THE RACETRACK LIGHT TO BURNOUT AND EVENTUALLY STOP WORKING ENTIRELY. THIS IS A HAZARD THAT IF NOT FIXED AND TAIL LIGHTS GO OUT WHILE DR...",
+            "group": "lighting",
+            "id": "1663237",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 12.3143,
+            "year": 2015
+          },
+          {
+            "excerpt": "The lift gate light housing assembly develops cracks due to design flaw, allowing housing assembly to fill with water and cause lights to malfunction. The housing assembly is available for inspection upon request. The rear lights of the vehicle are not functioning as intended and...",
+            "group": "lighting",
+            "id": "1783016",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 11.7147,
+            "year": 2015
+          },
+          {
+            "excerpt": "Sections of LED brake light/race track light has stopped working due to water intrusion in rear panel. Back panel is not secured properly, allowing water to enter, corrode the harness and lights to fail. Due to this, the license plate harness & connectors are corroded as well. Re...",
+            "group": "lighting",
+            "id": "2017615",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 9.0494,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-30T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-30T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-30T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Im again reporting the racetrack tail lights. Im seeing a lot more water intrusion in dodge durangos of many years. We want answers! This needs to be investigated stat! Consumers should not have to pay $1800 for failure on dodges part! They know this is an issue with many years of these durangos. There is already a class action lawsuit against them for this issue. Please investigate this! We want answers...."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "REAR TAIL LIGHT (RACETRACK LIGHT) WAS IMPROPERLY SEALED AND ALLOWS WATER RUNOFF TO COLLECT INSIDE BOTTOM PART OF RACETRACK LIGHTING. THIS CAUSES THE RACETRACK LIGHT TO BURNOUT AND EVENTUALLY STOP WORKING ENTIRELY. THIS IS A HAZARD THAT IF NOT FIXED AND TAIL LIGHTS GO OUT WHILE DR...",
+            "group": "lighting",
+            "id": "1663237",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 12.3143,
+            "year": 2015
+          },
+          {
+            "excerpt": "The lift gate light housing assembly develops cracks due to design flaw, allowing housing assembly to fill with water and cause lights to malfunction. The housing assembly is available for inspection upon request. The rear lights of the vehicle are not functioning as intended and...",
+            "group": "lighting",
+            "id": "1783016",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 11.7147,
+            "year": 2015
+          },
+          {
+            "excerpt": "Sections of LED brake light/race track light has stopped working due to water intrusion in rear panel. Back panel is not secured properly, allowing water to enter, corrode the harness and lights to fail. Due to this, the license plate harness & connectors are corroded as well. Re...",
+            "group": "lighting",
+            "id": "2017615",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 9.0494,
+            "year": 2015
+          },
+          {
+            "excerpt": "REAR TAIL LIGHT (RACETRACK LIGHT) PORTION BURNED OUT. IT WAS IMPROPERLY SEALED AND ALLOWED WATER RUNOFF TO COLLECT INSIDE BOTTOM PART. THIS CAUSES THE RACETRACK LIGHT TO BURNOUT. THIS IS A HAZARD THAT IF NOT FIXED AND TAIL LIGHTS GO OUT WHILE DRIVING, COULD CAUSE AN ACCIDENT AND...",
+            "group": "lighting",
+            "id": "1676064",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 7.3506,
+            "year": 2015
+          },
+          {
+            "excerpt": "THE TAILGATE LIGHT GETS FILLED UP WITH WATER CREATING A SHORT AND BURNING OUR LED LIGHTS IN THE TAIL LIGHT. THIS IS A KNOWN ISSUE AND THE DEALERSHIP CHARGES OVER $1000 FOR THE LIGHT AND THE TIME SPEND REPLACING IT. FCU SHOULD PAY FOR THE FAULTY DESIGN AND REPLACE ALL THE TAILGATE...",
+            "group": "lighting",
+            "id": "1638201",
+            "make": "DODGE",
+            "model": "DURANGO",
+            "score": 6.8555,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-30T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-30T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "DODGE",
+        "model": "DURANGO",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-30T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "moisture"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "moisture",
+            "matched_conditions": [
+              "moisture"
+            ],
+            "reason": "Water ingress and condensation are the first suspects when moisture, damp or a leak is reported.",
+            "test": "Humidity and condensation test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006483,
+      "duration_ms": 6140,
+      "reason": "The narrative reports water intrusion in the racetrack tail lights and resulting failure on a 2015 Dodge Durango. The extracted condition is moisture, which matches the rulebook entry requiring a humidity and condensation test; similar lighting cases also describe water intrusion causing racetrack tail light malfunction.",
+      "started_at": "2025-05-30T07:00:24Z",
+      "step": 10,
+      "tokens": 2204,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-05-30T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "racetrack tail lights",
+          "water intrusion",
+          "failure",
+          "water intrusion"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-05-30T07:00:26Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-30T07:00:28Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-30T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-30T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-30T07:00:32Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2070532",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON",
+    "narrative": "The engine of my 2024 GMC Yukon Denali failed unexpectedly at 45 MPH, shutting off without warning and shifting into neutral. My wife, three passengers, and two dogs were in the vehicle, which coasted to a stop. After several attempts, it restarted, and the check engine light illuminated. Alpine Buick GMC confirmed catastrophic engine failure, requiring replacement of the engine, radiator, hoses, and other parts. The vehicle remains at the dealership, and the failed components are available for inspection.  This sudden shutdown posed serious safety concerns. My wife lost control over acceleration and power steering, increasing the risk of an accident. Had this occurred on a highway or in traffic, the consequences could have been severe. This raises concerns about the engine’s reliability and potential risks to other drivers.  Alpine Buick GMC confirmed the engine failure and the need for full replacement. I am the sixth customer awaiting this repair, indicating a broader issue. The estimated wait time for an engine is two weeks to three months, creating a significant disruption.  Inspection by Manufacturer, Police, or Insurance The vehicle has been inspected by dealership technicians but not by GMC representatives, police, or insurance adjusters. I am open to further inspections to determine the cause and assess whether a recall or corrective action is necessary.  No warning lights or symptoms appeared before the engine shut down. The check engine light illuminated only after restarting on the third attempt. The absence of prior alerts suggests a flaw in the vehicle’s diagnostic system.  Expedited Engine Replacement – Given the safety risks, I request priority replacement.  Investigation into Failure Cause – GMC should assess whether this is a manufacturing defect.  Review of Similar Cases – If widespread, a recall or service bulletin may be necessary.  Better Communication – Regular updates on repairs and GMC’s actions are needed.  I expect prompt action to resolve",
+    "received_at": "2025-03-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2070532",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2070532",
+    "decided_at": "2025-03-03T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2070532",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "failed unexpectedly at 45 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "shutting off without warning and shifting into neutral"
+      },
+      {
+        "kind": "symptom",
+        "quote": "After several attempts, it restarted, and the check engine light illuminated."
+      },
+      {
+        "kind": "symptom",
+        "quote": "catastrophic engine failure, requiring replacement of the engine, radiator, hoses, and other parts"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning lights or symptoms appeared before the engine shut down."
+      },
+      {
+        "kind": "condition",
+        "quote": "at 45 MPH"
+      },
+      {
+        "kind": "safety",
+        "quote": "posed serious safety concerns"
+      },
+      {
+        "kind": "safety",
+        "quote": "My wife lost control over acceleration and power steering, increasing the risk of an accident."
+      },
+      {
+        "kind": "safety",
+        "quote": "Had this occurred on a highway or in traffic, the consequences could have been severe."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical-system report on 2024 GMC Yukon Denali: engine failed and shut off without warning at 45 MPH, shifted to neutral, restarted after several attempts with check engine light.",
+    "symptoms": [
+      "engine failed unexpectedly at 45 MPH",
+      "shut off without warning",
+      "shifted into neutral",
+      "coasted to a stop",
+      "restarted after several attempts",
+      "check engine light illuminated",
+      "catastrophic engine failure requiring replacement"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2070532",
+    "created_at": "2025-03-03T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00181815,
+      "duration_ms": 20282,
+      "reason": "Electrical-system report on 2024 GMC Yukon Denali: engine failed and shut off without warning at 45 MPH, shifted to neutral, restarted after several attempts with check engine light.",
+      "started_at": "2025-03-03T07:00:01Z",
+      "step": 2,
+      "tokens": 3697,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-03-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-03T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-03T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-03T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-03T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-03T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2052372",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "IMPREZA",
+    "narrative": "While driving a multi lane road with traffic going same direction in front of me, if one or more cars begin to slow for a left or right turn, the auto braking feature begins to slow and will try to stop my car.  Problem is that the car in front of me turning isn't in my lane.  I have a clear lane ahead and suddenly the system brakes. still locked onto the car in front, but doesn't recognize the clear road ahead and I can easily pass it on by.  I've nearly been re ended because the guy behind me wasn't thinking I would suddenly brake for nothing.  It happened with adaptive cruise control, and with that off, the auto braking system, or \"accident avoidance\" system.  I have have more near misses driving this car than with any other car I've had without the system.  This system is dangerous, it doesn't work like it was intended.",
+    "received_at": "2025-01-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2052372",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2052372",
+    "decided_at": "2025-01-01T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2052372",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the auto braking feature begins to slow and will try to stop my car"
+      },
+      {
+        "kind": "condition",
+        "quote": "if one or more cars begin to slow for a left or right turn"
+      },
+      {
+        "kind": "condition",
+        "quote": "the car in front of me turning isn't in my lane"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have a clear lane ahead and suddenly the system brakes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "still locked onto the car in front, but doesn't recognize the clear road ahead"
+      },
+      {
+        "kind": "safety",
+        "quote": "I've nearly been re ended because the guy behind me wasn't thinking I would suddenly brake for nothing"
+      },
+      {
+        "kind": "condition",
+        "quote": "It happened with adaptive cruise control, and with that off, the auto braking system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have have more near misses driving this car than with any other car I've had without the system"
+      },
+      {
+        "kind": "safety",
+        "quote": "This system is dangerous, it doesn't work like it was intended."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2016 Subaru Impreza adaptive cruise control/forward collision avoidance unexpectedly auto-brakes for turning vehicles outside its lane, with ACC on or off, causing near rear-end collisions.",
+    "symptoms": [
+      "unexpected automatic braking",
+      "brakes for a vehicle turning from another lane",
+      "does not recognize clear lane ahead",
+      "remains locked onto the car in front",
+      "near rear-end collision from following traffic",
+      "repeated near misses"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2052372",
+    "created_at": "2025-01-01T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-01T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00278595,
+      "duration_ms": 44301,
+      "reason": "2016 Subaru Impreza adaptive cruise control/forward collision avoidance unexpectedly auto-brakes for turning vehicles outside its lane, with ACC on or off, causing near rear-end collisions.",
+      "started_at": "2025-01-01T07:00:01Z",
+      "step": 2,
+      "tokens": 5154,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-01T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "IMPREZA",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-01T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-01T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-01T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-01T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-01T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-01T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-01T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

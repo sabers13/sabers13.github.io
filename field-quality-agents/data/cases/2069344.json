@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2069344",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "The APIM becomes inoperative at random times for ~8 hours. When this happens the entire dashboard goes black and you can’t tell your speed, turn signals, rpm, engine temp, oil pressure, etc. You are driving with no indicators and have no idea what your speed is or any other critical indication.  APIM stands for Accessory Protocol Interface Module, also known as the Ford SYNC computer. It's a key component of the SYNC system in Ford vehicles. Ford has equipped vehicles with the APIM since its inception, but there have been complaints and recalls related to it.",
+    "received_at": "2025-02-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2069344",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2069344",
+    "decided_at": "2025-02-26T07:00:59Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2069344",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "APIM stands for Accessory Protocol Interface Module"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The APIM becomes inoperative at random times for ~8 hours."
+      },
+      {
+        "kind": "condition",
+        "quote": "at random times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the entire dashboard goes black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "you can’t tell your speed, turn signals, rpm, engine temp, oil pressure"
+      },
+      {
+        "kind": "safety",
+        "quote": "You are driving with no indicators and have no idea what your speed is or any other critical indication."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Ford F-150 APIM (SYNC module) intermittently inoperative for ~8 hours, blanking the dashboard and driver indications while driving.",
+    "symptoms": [
+      "APIM inoperative at random times for about 8 hours",
+      "entire dashboard goes black",
+      "driver cannot see speed, turn signals, rpm, engine temperature, oil pressure or other critical indications"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2069344",
+    "created_at": "2025-02-26T07:00:57Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The transmission ten gear automatic. Won't go into fourth gear at at all keeps jumping when. Trying to go into first second and third then jumps four. Also on highway it will shut off all together or will start speeding up very dangerous. On side streets it's dies out even more u...",
+      "group": "adas",
+      "id": "1990443",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 13.1736,
+      "year": 2019
+    },
+    {
+      "excerpt": "The first item to malfunction was the transmission gear indicator on the dash, that started about a year after I bought the truck and would intermittently work. I had multiple oil changes in the truck at various dealers and brought it up but nothing ever came up from it since it...",
+      "group": "adas",
+      "id": "1982858",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 11.681,
+      "year": 2019
+    },
+    {
+      "excerpt": "Rearview camera system malfunction. Randomly sync screen stays black. Randomly vehicle continues to show rear camera even though vehicle is driving forward. Problem started around April 2023 at 60,000 miles.",
+      "group": "adas",
+      "id": "1923066",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 10.3938,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-26T07:00:51Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00071835,
+      "duration_ms": 10553,
+      "reason": "Ford F-150 APIM (SYNC module) intermittently inoperative for ~8 hours, blanking the dashboard and driver indications while driving.",
+      "started_at": "2025-02-26T07:00:52Z",
+      "step": 2,
+      "tokens": 1657,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-26T07:00:53Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The transmission ten gear automatic. Won't go into fourth gear at at all keeps jumping when. Trying to go into first second and third then jumps four. Also on highway it will shut off all together or will start speeding up very dangerous. On side streets it's dies out even more u...",
+            "group": "adas",
+            "id": "1990443",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 13.1736,
+            "year": 2019
+          },
+          {
+            "excerpt": "The first item to malfunction was the transmission gear indicator on the dash, that started about a year after I bought the truck and would intermittently work. I had multiple oil changes in the truck at various dealers and brought it up but nothing ever came up from it since it...",
+            "group": "adas",
+            "id": "1982858",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 11.681,
+            "year": 2019
+          },
+          {
+            "excerpt": "Rearview camera system malfunction. Randomly sync screen stays black. Randomly vehicle continues to show rear camera even though vehicle is driving forward. Problem started around April 2023 at 60,000 miles.",
+            "group": "adas",
+            "id": "1923066",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 10.3938,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-26T07:00:54Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-26T07:00:55Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-26T07:00:56Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-26T07:00:58Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-26T07:01:00Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-26T07:01:01Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-26T07:01:02Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2142125",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EXPLORER",
+    "narrative": "The contact owns a 2015 Ford Explorer. The contact stated that while attempting to reverse, the rearview camera became inoperable. The contact stated that the rearview camera image appeared blank. The contact received notifications of NHTSA Campaign Numbers: 24V031000 (Structure) and 25V695000 (Back Over Prevention); however, the parts to do the recall repair were not yet available. The local dealer was not contacted. The vehicle was not diagnosed or repaired. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was not made aware of the failure. The failure mileage was not available.",
+    "received_at": "2025-10-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2142125",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2142125",
+    "decided_at": "2025-10-22T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2142125",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "while attempting to reverse"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the rearview camera became inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the rearview camera image appeared blank"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Numbers: 24V031000 (Structure) and 25V695000 (Back Over Prevention)"
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle was not diagnosed or repaired."
+      }
+    ],
+    "conditions": [
+      "while attempting to reverse"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Test rearview camera function under reverse conditions because the image goes blank and inoperable, and an open recall covers this symptom.",
+    "symptoms": [
+      "rearview camera became inoperable",
+      "rearview camera image appeared blank"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2142125",
+    "created_at": "2025-10-22T07:00:27Z",
+    "evidence": [
+      {
+        "quote": "while attempting to reverse",
+        "source_id": "2142125",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the rearview camera became inoperable",
+        "source_id": "2142125",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the rearview camera image appeared blank",
+        "source_id": "2142125",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Numbers: 24V031000 (Structure) and 25V695000 (Back Over Prevention)",
+        "source_id": "2142125",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was not diagnosed or repaired.",
+        "source_id": "2142125",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "The narrative reports that while attempting to reverse, the rearview camera became inoperable and the image appeared blank. This matches recall 25V695000 for blank, intermittent, or distorted rearview camera images when in reverse, but the rulebook returned no targeted test entry, so the standard field-quality test is proposed. The recall parts were not yet available and the vehicle was not diagnosed or repaired.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V695000",
+      "match": true,
+      "open_date": "2025-10-13",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Flex, 2015 Explorer, Lincoln MKT,  Lincoln MKZ, 2015-2016 C-Max, Escape, Taurus, 2016 Fusion, 2018-2019 Taurus, 2019 Lincoln MKT, Fiesta, and 2020 Mustang vehicles.  The rearview camera may display a distorted,  intermittent, or blank image when the vehicle is in reverse."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 Ford Explorer. The contact stated that the camera was blank at times. While reversing, the image was transposed and flipped. There were no warning lights illuminated. There was a message to contact the dealer. The vehicle was taken to the local dealer, who...",
+      "group": "adas",
+      "id": "2040388",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 19.1377,
+      "year": 2015
+    },
+    {
+      "excerpt": "The rear backup camera on our 2015 Ford Explorer began glitching, reversing the image, or going completely blank in autumn of 2022. We took it to a local Ford dealership on November 17, 2022 for service and was told the camera needed to be replaced. We waited days, then weeks for...",
+      "group": "adas",
+      "id": "1916518",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 5.1581,
+      "year": 2015
+    },
+    {
+      "excerpt": "The reverse camera randomly cuts out while I am reversing. I have almost hit cars and can't rely on it to back up safely.",
+      "group": "adas",
+      "id": "1771471",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 3.7462,
+      "year": 2015
+    },
+    {
+      "excerpt": "The backup camera flashes intermittently. Sometimes the backup camera will work, sometimes the Ford Sync screen goes black and a message pops up stating \"Backup camera not available, please contact the Ford dealership\" and sometimes the Ford Sync screen will remain as it looks wh...",
+      "group": "adas",
+      "id": "1869347",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 3.1413,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-22T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0023287,
+      "duration_ms": 26006,
+      "reason": "2015 Ford Explorer Back Over Prevention rearview camera inoperable with blank image while reversing",
+      "started_at": "2025-10-22T07:00:16Z",
+      "step": 2,
+      "tokens": 4438,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-22T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Ford Explorer. The contact stated that the camera was blank at times. While reversing, the image was transposed and flipped. There were no warning lights illuminated. There was a message to contact the dealer. The vehicle was taken to the local dealer, who...",
+            "group": "adas",
+            "id": "2040388",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 19.1377,
+            "year": 2015
+          },
+          {
+            "excerpt": "The rear backup camera on our 2015 Ford Explorer began glitching, reversing the image, or going completely blank in autumn of 2022. We took it to a local Ford dealership on November 17, 2022 for service and was told the camera needed to be replaced. We waited days, then weeks for...",
+            "group": "adas",
+            "id": "1916518",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 5.1581,
+            "year": 2015
+          },
+          {
+            "excerpt": "The reverse camera randomly cuts out while I am reversing. I have almost hit cars and can't rely on it to back up safely.",
+            "group": "adas",
+            "id": "1771471",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 3.7462,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-22T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-22T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 similar case(s) in the knowledge base",
+      "started_at": "2025-10-22T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2015 Ford Explorer. The contact stated that while attempting to reverse, the rearview camera became inoperable. The contact stated that the rearview camera image appeared blank. The contact received notifications of NHTSA Campaign Numbers: 24V031000 (Structure) and 25V695000 (Back Over Prevention); however, the parts to do the recall repair were not yet available. The local dealer was not contacted. The vehicle was not diagnosed or repaired. The contact stated that the manufac"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Ford Explorer. The contact stated that the camera was blank at times. While reversing, the image was transposed and flipped. There were no warning lights illuminated. There was a message to contact the dealer. The vehicle was taken to the local dealer, who...",
+            "group": "adas",
+            "id": "2040388",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 19.1377,
+            "year": 2015
+          },
+          {
+            "excerpt": "The rear backup camera on our 2015 Ford Explorer began glitching, reversing the image, or going completely blank in autumn of 2022. We took it to a local Ford dealership on November 17, 2022 for service and was told the camera needed to be replaced. We waited days, then weeks for...",
+            "group": "adas",
+            "id": "1916518",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 5.1581,
+            "year": 2015
+          },
+          {
+            "excerpt": "The reverse camera randomly cuts out while I am reversing. I have almost hit cars and can't rely on it to back up safely.",
+            "group": "adas",
+            "id": "1771471",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 3.7462,
+            "year": 2015
+          },
+          {
+            "excerpt": "The backup camera flashes intermittently. Sometimes the backup camera will work, sometimes the Ford Sync screen goes black and a message pops up stating \"Backup camera not available, please contact the Ford dealership\" and sometimes the Ford Sync screen will remain as it looks wh...",
+            "group": "adas",
+            "id": "1869347",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 3.1413,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-22T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "25V695000",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "open_date": "2025-10-13",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Flex, 2015 Explorer, Lincoln MKT,  Lincoln MKZ, 2015-2016 C-Max, Escape, Taurus, 2016 Fusion, 2018-2019 Taurus, 2019 Lincoln MKT, Fiesta, and 2020 Mustang vehicles.  The rearview camera may display a distorted,  intermittent, or blank image when the vehicle is in reverse.",
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-22T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-22T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00165525,
+      "duration_ms": 17256,
+      "reason": "The narrative reports that while attempting to reverse, the rearview camera became inoperable and the image appeared blank. This matches recall 25V695000 for blank, intermittent, or distorted rearview camera images when in reverse, but the rulebook returned no targeted test entry, so the standard field-quality test is proposed. The recall parts were not yet available and the vehicle was not diagnosed or repaired.",
+      "started_at": "2025-10-22T07:00:24Z",
+      "step": 10,
+      "tokens": 3877,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 1 dropped",
+      "started_at": "2025-10-22T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "while attempting to reverse",
+          "the rearview camera became inoperable",
+          "the rearview camera image appeared blank",
+          "NHTSA Campaign Numbers: 24V031000 (Structure) and 25V695000 (Back Over Prevention)",
+          "the parts to the recall repair were not yet available",
+          "The vehicle was not diagnosed or repaired."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 1,
+        "verified": 5
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-10-22T07:00:26Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-22T07:00:28Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-22T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-22T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-22T07:00:32Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

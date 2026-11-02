@@ -1,0 +1,521 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2087389",
+    "make": "ACURA",
+    "mileage": 141000,
+    "model": "MDX",
+    "narrative": "The contact owns a 2016 Acura MDX. The contact stated that the driver's side rear taillight bulb had burned out. The contact replaced the bulb, but the failure reoccurred. The contact stated that the driver's side rear taillight failure was intermittent but was a persistent failure. The contact had taken the vehicle to an independent mechanic who diagnosed the failure and determined that there was water inside the taillight assembly which caused the bulb to short circuit. The mechanic informed the contact that the taillight assembly needed to be replaced. The vehicle was not repaired. The contact researched online and related the failure to NHTSA Campaign Number: 25V259000 (Exterior Lighting, Interior Lighting); however, the VIN was not included. The manufacturer was not informed of the failure. The failure mileage was approximately 141,000.",
+    "received_at": "2025-04-30",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2087389",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2087389",
+    "decided_at": "2025-04-30T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2087389",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The contact stated that the driver's side rear taillight bulb had burned out."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the failure reoccurred"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the driver's side rear taillight failure was intermittent but was a persistent failure"
+      },
+      {
+        "kind": "condition",
+        "quote": "there was water inside the taillight assembly which caused the bulb to short circuit"
+      },
+      {
+        "kind": "condition",
+        "quote": "The contact replaced the bulb, but the failure reoccurred."
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was not repaired."
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 25V259000"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was approximately 141,000."
+      }
+    ],
+    "conditions": [
+      "water inside the taillight assembly",
+      "moisture ingress",
+      "after bulb replacement",
+      "intermittent failure",
+      "vehicle not repaired"
+    ],
+    "fault_codes": [
+      "25V259000"
+    ],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Test the driver's side rear taillight for moisture ingress after repeated bulb burnouts and intermittent failure at ~141,000 miles; water inside the assembly is the likely short-circuit cause.",
+    "symptoms": [
+      "driver's side rear taillight bulb burned out",
+      "failure reoccurred after bulb replacement",
+      "intermittent but persistent driver's side rear taillight failure",
+      "bulb short circuit"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2087389",
+    "created_at": "2025-04-30T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "The contact stated that the driver's side rear taillight bulb had burned out.",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the failure reoccurred",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the driver's side rear taillight failure was intermittent but was a persistent failure",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "there was water inside the taillight assembly which caused the bulb to short circuit",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact replaced the bulb, but the failure reoccurred.",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was not repaired.",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 25V259000",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The failure mileage was approximately 141,000.",
+        "source_id": "2087389",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a burned-out driver's side rear taillight, recurrence after bulb replacement, intermittent persistent failure, and a mechanic finding water inside the taillight assembly causing the bulb to short circuit. These match the rulebook moisture condition, so the targeted humidity/condensation test is appropriate; the after-service and intermittent checks are secondary because replacement did not fix the failure.",
+    "requested_info": [],
+    "summary": "Test the driver's side rear taillight for moisture ingress after repeated bulb burnouts and intermittent failure at ~141,000 miles; water inside the assembly is the likely short-circuit cause.",
+    "targeted_test": {
+      "conditions": [
+        "water inside the taillight assembly",
+        "moisture ingress",
+        "after bulb replacement",
+        "intermittent failure",
+        "vehicle not repaired"
+      ],
+      "name": "Humidity and condensation test",
+      "reason": "The narrative reports a burned-out driver's side rear taillight, recurrence after bulb replacement, intermittent persistent failure, and a mechanic finding water inside the taillight assembly causing the bulb to short circuit. These match the rulebook moisture condition, so the targeted humidity/condensation test is appropriate; the after-service and intermittent checks are secondary because replacement did not fix the failure."
+    }
+  },
+  "recalls": [
+    {
+      "id": "25V259000",
+      "match": true,
+      "open_date": "2025-04-17",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2020 Acura MDX vehicles.  Moisture may enter the tailgate lid light assembly and wiring harness, which can cause the interior and exterior lights to fail, including the lid lights, position lights, license plate lights and taillights."
+    },
+    {
+      "id": "25V259000",
+      "match": true,
+      "open_date": "2025-04-17",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2020 Acura MDX vehicles.  Moisture may enter the tailgate lid light assembly and wiring harness, which can cause the interior and exterior lights to fail, including the lid lights, position lights, license plate lights and taillights."
+    },
+    {
+      "id": "19V256000",
+      "match": true,
+      "open_date": "2019-03-28",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2019 Acura MDX and 2017-2019 Acura MDX Sport Hybrid vehicles. Moisture may enter the tailgate lid lights, possibly causing a loss of the tailgate lid lights and the taillights."
+    },
+    {
+      "id": "19V256000",
+      "match": true,
+      "open_date": "2019-03-28",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2019 Acura MDX and 2017-2019 Acura MDX Sport Hybrid vehicles. Moisture may enter the tailgate lid lights, possibly causing a loss of the tailgate lid lights and the taillights."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "My vehicle has been going off on its own when it is off, the lights starts to flicker on the outside and on the dashboard, the seats malfunction on its own so does the steering wheel causing the steering wheel to move up and down adjusting on its own, the car alarm will go off al...",
+      "group": "lighting",
+      "id": "2021856",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 1.0274,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-30T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016861,
+      "duration_ms": 17087,
+      "reason": "2016 Acura MDX exterior lighting: driver's side rear taillight bulb burned out and failure reoccurred intermittently; water inside taillight assembly caused bulb short circuit at ~141,000 miles.",
+      "started_at": "2025-04-30T07:00:01Z",
+      "step": 2,
+      "tokens": 3400,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-30T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My vehicle has been going off on its own when it is off, the lights starts to flicker on the outside and on the dashboard, the seats malfunction on its own so does the steering wheel causing the steering wheel to move up and down adjusting on its own, the car alarm will go off al...",
+            "group": "lighting",
+            "id": "2021856",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 1.0274,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-04-30T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-30T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-04-30T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2016 Acura MDX. The contact stated that the driver's side rear taillight bulb had burned out. The contact replaced the bulb, but the failure reoccurred. The contact stated that the driver's side rear taillight failure was intermittent but was a persistent failure. The contact had taken the vehicle to an independent mechanic who diagnosed the failure and determined that there was water inside the taillight assembly which caused the bulb to short circuit. The mechanic informed t"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My vehicle has been going off on its own when it is off, the lights starts to flicker on the outside and on the dashboard, the seats malfunction on its own so does the steering wheel causing the steering wheel to move up and down adjusting on its own, the car alarm will go off al...",
+            "group": "lighting",
+            "id": "2021856",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 1.0274,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-30T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "EXTERIOR LIGHTING",
+            "group": "lighting",
+            "id": "25V259000",
+            "make": "ACURA",
+            "model": "MDX",
+            "open_date": "2025-04-17",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2020 Acura MDX vehicles.  Moisture may enter the tailgate lid light assembly and wiring harness, which can cause the interior and exterior lights to fail, including the lid lights, position lights, license plate lights and taillights.",
+            "year": 2016
+          },
+          {
+            "component": "INTERIOR LIGHTING",
+            "group": "lighting",
+            "id": "25V259000",
+            "make": "ACURA",
+            "model": "MDX",
+            "open_date": "2025-04-17",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2020 Acura MDX vehicles.  Moisture may enter the tailgate lid light assembly and wiring harness, which can cause the interior and exterior lights to fail, including the lid lights, position lights, license plate lights and taillights.",
+            "year": 2016
+          },
+          {
+            "component": "EXTERIOR LIGHTING",
+            "group": "lighting",
+            "id": "19V256000",
+            "make": "ACURA",
+            "model": "MDX",
+            "open_date": "2019-03-28",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2019 Acura MDX and 2017-2019 Acura MDX Sport Hybrid vehicles. Moisture may enter the tailgate lid lights, possibly causing a loss of the tailgate lid lights and the taillights.",
+            "year": 2016
+          },
+          {
+            "component": "EXTERIOR LIGHTING:TAIL LIGHTS",
+            "group": "lighting",
+            "id": "19V256000",
+            "make": "ACURA",
+            "model": "MDX",
+            "open_date": "2019-03-28",
+            "summary": "Honda (American Honda Motor Co.) is recalling certain 2014-2019 Acura MDX and 2017-2019 Acura MDX Sport Hybrid vehicles. Moisture may enter the tailgate lid lights, possibly causing a loss of the tailgate lid lights and the taillights.",
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-30T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-30T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "moisture",
+          "intermittent",
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "moisture",
+            "matched_conditions": [
+              "moisture"
+            ],
+            "reason": "Water ingress and condensation are the first suspects when moisture, damp or a leak is reported.",
+            "test": "Humidity and condensation test"
+          },
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00140865,
+      "duration_ms": 24153,
+      "reason": "The narrative reports a burned-out driver's side rear taillight, recurrence after bulb replacement, intermittent persistent failure, and a mechanic finding water inside the taillight assembly causing the bulb to short circuit. These match the rulebook moisture condition, so the targeted humidity/condensation test is appropriate; the after-service and intermittent checks are secondary because replacement did not fix the failure.",
+      "started_at": "2025-04-30T07:00:09Z",
+      "step": 10,
+      "tokens": 3715,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "8 verified, 0 dropped",
+      "started_at": "2025-04-30T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The contact stated that the driver's side rear taillight bulb had burned out.",
+          "the failure reoccurred",
+          "the driver's side rear taillight failure was intermittent but was a persistent failure",
+          "there was water inside the taillight assembly which caused the bulb to short circuit",
+          "The contact replaced the bulb, but the failure reoccurred.",
+          "The vehicle was not repaired.",
+          "NHTSA Campaign Number: 25V259000",
+          "The failure mileage was approximately 141,000."
+        ]
+      },
+      "tool_output": {
+        "checked": 8,
+        "dropped": 0,
+        "verified": 8
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-30T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-30T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-30T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-30T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

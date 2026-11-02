@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2096649",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "MALIBU",
+    "narrative": "Passenger side headlamp burned out took off bumper to inspect and the wiring pigtail to the headlight has melted causing it to malfunction so now in order to make it work you have to disconnect the daytime running lights so that the melting stops this is supposedly happened to a lot of Malibu's why there isn't a recall on this fire hazard is beyond me and it is a safety issue cuz you can't use your daytime running lights any longer. This issue has not been reported because upon investigation it's been reported many times and nothing gets done about it you have to pay for it yourself. This will be the last GM product.",
+    "received_at": "2025-06-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2096649",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096649",
+    "decided_at": "2025-06-01T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2096649",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Passenger side headlamp burned out"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the wiring pigtail to the headlight has melted"
+      },
+      {
+        "kind": "condition",
+        "quote": "the melting stops"
+      },
+      {
+        "kind": "safety",
+        "quote": "fire hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "safety issue"
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: passenger-side headlamp burned out and the headlight wiring pigtail melted; daytime running lights are disconnected to stop the melting.",
+    "symptoms": [
+      "passenger side headlamp burned out",
+      "wiring pigtail to the headlight melted",
+      "headlight malfunction",
+      "daytime running lights cannot be used"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2096649",
+    "created_at": "2025-06-01T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "PASSENGER SIDE LOW BEAM HEADLIGHT CONNECTION BETWEEN BULB AND HARNESS KEEPS MELTING CAUSING HEADLIGHT TO NOT TURN ON. HAVE CHANGED OUT WIRING HARNESS MANY, MANY TIMES IN A YEAR.",
+      "group": "lighting",
+      "id": "1637506",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 14.5983,
+      "year": 2012
+    },
+    {
+      "excerpt": "THE LEFT HEADLIGHT DOESN'T GET POWER. THE LOW BEAMS TO BE EXACT. BUT NOW BOTH LOW BEAMS AREN'T GETTING POWER. THE RADIO DOESN'T GET POWER EITHER. I BELIEVE IT'S A FAULTY WIRE HARNESS. PLEASE RECALL THIS VEHICLE. THE LIGHTS GO OUT AT RANDOM TIMES BOTH MOVING AND STATIONARY. IT'S U...",
+      "group": "lighting",
+      "id": "1671113",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 11.5268,
+      "year": 2012
+    },
+    {
+      "excerpt": "I HAVE CHANGED MY PASSENGER HEADLIGHT 3 TIMES AND PIGTAIL ONCE AND IT STILL KEEPS GOING OUT CALLED CHEVY THEY KNOW ITS A COMMON PROBLEM BUT CAN'T DO ANYTHING ABOUT IT UNLESS I PAY NOT FAIR TO THE CONSUMER",
+      "group": "lighting",
+      "id": "1732622",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 11.0302,
+      "year": 2012
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-01T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005395,
+      "duration_ms": 7524,
+      "reason": "Exterior lighting: passenger-side headlamp burned out and the headlight wiring pigtail melted; daytime running lights are disconnected to stop the melting.",
+      "started_at": "2025-06-01T07:00:01Z",
+      "step": 2,
+      "tokens": 1456,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-01T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "MALIBU",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "PASSENGER SIDE LOW BEAM HEADLIGHT CONNECTION BETWEEN BULB AND HARNESS KEEPS MELTING CAUSING HEADLIGHT TO NOT TURN ON. HAVE CHANGED OUT WIRING HARNESS MANY, MANY TIMES IN A YEAR.",
+            "group": "lighting",
+            "id": "1637506",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 14.5983,
+            "year": 2012
+          },
+          {
+            "excerpt": "THE LEFT HEADLIGHT DOESN'T GET POWER. THE LOW BEAMS TO BE EXACT. BUT NOW BOTH LOW BEAMS AREN'T GETTING POWER. THE RADIO DOESN'T GET POWER EITHER. I BELIEVE IT'S A FAULTY WIRE HARNESS. PLEASE RECALL THIS VEHICLE. THE LIGHTS GO OUT AT RANDOM TIMES BOTH MOVING AND STATIONARY. IT'S U...",
+            "group": "lighting",
+            "id": "1671113",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 11.5268,
+            "year": 2012
+          },
+          {
+            "excerpt": "I HAVE CHANGED MY PASSENGER HEADLIGHT 3 TIMES AND PIGTAIL ONCE AND IT STILL KEEPS GOING OUT CALLED CHEVY THEY KNOW ITS A COMMON PROBLEM BUT CAN'T DO ANYTHING ABOUT IT UNLESS I PAY NOT FAIR TO THE CONSUMER",
+            "group": "lighting",
+            "id": "1732622",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 11.0302,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-06-01T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-01T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-01T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-01T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-01T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-01T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-01T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

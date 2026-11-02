@@ -1,0 +1,234 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2130930",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL Y",
+    "narrative": "on July 19, 2025 my 10-year old daughter entered the back seat and shut the door.  When I (her mother) went to get into the drivers door the electricity in the car completely shut down locking my daughter in the vehicle.  There were no visible icons or labels showing where the emergency/manual latch was.   She was hystercial and heating up quickly.  We called Tesla roadside assistance and the agent spent 10-15 minutes explaining how to get out of a Model 3 (we had a model Y).  He then proceeded to tell us that he did not know how to advise her how to get out.  He told us not to break the window and to search it on Google.  when we asked for his name he would not provide it and he displayed hesitation and resistance to connect us with his superior.  We explained that he was dealing with a potentially fatal situation and he displayed ZERO sense of urgency or compassion for the situation.  We were able get her out of the vehicle after researching it online.  But Tesla did not provide any guidance to help.  Our car was at 80% charge and we did not get any low voltage notification or warning that the auxiliary battery was dead or low.   My daughter was dehydrated and is forever traumatized by this situation and could have been seriously harmed.  Tesla does not provide a standard vehicle delivery process when you purchase or lease a vehicle from them.  They do not provide any tutorial or notification on what to do in the case you lose electrical power.  The manual emergency latch is not labelled at all.  You would never know it was there unless you search online.  We sent an email to Tesla notifying them of the situation and they never responded.  We even shared this with the service manager who replaced the battery and he said it is a common occurrence and brushed it off.",
+    "received_at": "2025-09-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2130930",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2130930",
+    "decided_at": "2025-09-16T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2130930",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "12V/24V/48V BATTERY"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the electricity in the car completely shut down locking my daughter in the vehicle."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There were no visible icons or labels showing where the emergency/manual latch was."
+      },
+      {
+        "kind": "symptom",
+        "quote": "She was hystercial and heating up quickly."
+      },
+      {
+        "kind": "condition",
+        "quote": "Our car was at 80% charge"
+      },
+      {
+        "kind": "symptom",
+        "quote": "we did not get any low voltage notification or warning that the auxiliary battery was dead or low."
+      },
+      {
+        "kind": "safety",
+        "quote": "potentially fatal situation"
+      },
+      {
+        "kind": "safety",
+        "quote": "My daughter was dehydrated and is forever traumatized by this situation and could have been seriously harmed."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The manual emergency latch is not labelled at all."
+      },
+      {
+        "kind": "other",
+        "quote": "the service manager who replaced the battery"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "2022 Tesla Model Y battery/electrical shutdown left child locked in rear seat with no low-voltage warning at 80% charge; manual emergency latch unlabeled.",
+    "symptoms": [
+      "complete electrical shutdown",
+      "child locked inside vehicle",
+      "no low-voltage warning for auxiliary battery",
+      "emergency/manual latch not visible or labeled"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2130930",
+    "created_at": "2025-09-16T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-16T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00114745,
+      "duration_ms": 11056,
+      "reason": "2022 Tesla Model Y battery/electrical shutdown left child locked in rear seat with no low-voltage warning at 80% charge; manual emergency latch unlabeled.",
+      "started_at": "2025-09-16T07:00:31Z",
+      "step": 2,
+      "tokens": 2668,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-09-16T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-16T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-16T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-16T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-16T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-16T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-16T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-16T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

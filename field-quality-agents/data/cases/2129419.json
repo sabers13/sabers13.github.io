@@ -1,0 +1,270 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2129419",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EDGE",
+    "narrative": "I bought this car used from Honda Dealership. It had 84,000 mileage on it and since then. The headlights are so dim and I can’t see you have to drive with high beam on every time I go at night I’ve changed almost we like 56 different types light bulb, but still nothing still worst. If I used one for the manufacturer one it’s nothing it’s literally dark outside. I can’t see nothing and another problem is as the ball joint since I bought it I took it from my first oil change when they did the inspection on the car they told me one of my passenger side ball joint was loose but that time I didn’t have money to repair it because it was almost $5000 they said and I was like I don’t have the money. I’m a college student so and recently my car wheel is to the left side more. Something if there’s anything I can do is there anything y’all can do to help cause I don’t want to get in an accident because of that thing.",
+    "received_at": "2025-09-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2129419",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2129419",
+    "decided_at": "2025-09-11T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2129419",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The headlights are so dim"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I can’t see nothing"
+      },
+      {
+        "kind": "condition",
+        "quote": "you have to drive with high beam on every time I go at night"
+      },
+      {
+        "kind": "other",
+        "quote": "I’ve changed almost we like 56 different types light bulb, but still nothing still worst"
+      },
+      {
+        "kind": "symptom",
+        "quote": "one of my passenger side ball joint was loose"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my car wheel is to the left side more"
+      },
+      {
+        "kind": "safety",
+        "quote": "I don’t want to get in an accident because of that thing"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "2017 Ford Edge exterior lighting: dim headlights at night requiring high beams; loose passenger ball joint and wheel shifted left.",
+    "symptoms": [
+      "headlights too dim to see at night",
+      "requires high beam at night",
+      "bulb replacements did not improve headlights",
+      "passenger-side ball joint loose",
+      "wheel shifted to the left"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2129419",
+    "created_at": "2025-09-11T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I can not see a dark road in the night if there is no additional lighting, such as street lights. I have been to the dealership and there is no brighter bulbs approved by Ford; they have repositioned the lights and it does not help. I have missed a right turn several times and un...",
+      "group": "lighting",
+      "id": "1777379",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 13.6704,
+      "year": 2017
+    },
+    {
+      "excerpt": "THE LOW BEAM HEADLIGHTS ARE VERY DIM, AND WHEN IT'S RAINING AT NIGHT, IT IS ALMOST TOO DIM TO DRIVE SAFELY. THE HIGH BEAMS WORK FINE, BUT THE LOW BEAMS ARE TOO DIM TO BE EFFECTIVE.",
+      "group": "lighting",
+      "id": "1708872",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 8.3604,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Ford Edge. The contact stated that the vehicle was parked when he noticed that there was water in the rear tail light assembly. The dealer recommended that the rear tail light assembly be replaced prior to the brake recall repair. The contact stated that h...",
+      "group": "lighting",
+      "id": "1749997",
+      "make": "FORD",
+      "model": "EDGE",
+      "score": 4.9781,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-11T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016906,
+      "duration_ms": 17469,
+      "reason": "2017 Ford Edge exterior lighting: dim headlights at night requiring high beams; loose passenger ball joint and wheel shifted left.",
+      "started_at": "2025-09-11T07:00:01Z",
+      "step": 2,
+      "tokens": 3457,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-11T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EDGE",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I can not see a dark road in the night if there is no additional lighting, such as street lights. I have been to the dealership and there is no brighter bulbs approved by Ford; they have repositioned the lights and it does not help. I have missed a right turn several times and un...",
+            "group": "lighting",
+            "id": "1777379",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 13.6704,
+            "year": 2017
+          },
+          {
+            "excerpt": "THE LOW BEAM HEADLIGHTS ARE VERY DIM, AND WHEN IT'S RAINING AT NIGHT, IT IS ALMOST TOO DIM TO DRIVE SAFELY. THE HIGH BEAMS WORK FINE, BUT THE LOW BEAMS ARE TOO DIM TO BE EFFECTIVE.",
+            "group": "lighting",
+            "id": "1708872",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 8.3604,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Ford Edge. The contact stated that the vehicle was parked when he noticed that there was water in the rear tail light assembly. The dealer recommended that the rear tail light assembly be replaced prior to the brake recall repair. The contact stated that h...",
+            "group": "lighting",
+            "id": "1749997",
+            "make": "FORD",
+            "model": "EDGE",
+            "score": 4.9781,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-11T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-11T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-11T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-11T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-11T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-11T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

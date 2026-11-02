@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2112578",
+    "make": "FORD",
+    "mileage": null,
+    "model": "ESCAPE",
+    "narrative": "Engine burns alot of coolant. Break time is not where it should be for a car with only 38k miles. The engine intake valves in affected vehicles may crack and break, causing the vehicle to lose motive power. Prior to losing motive power, an engine malfunction indicator lamp may illuminate in the cluster and the driver may notice that the vehicle is running rough. A loss of motive power can increase the risk of a crash.",
+    "received_at": "2025-07-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2112578",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2112578",
+    "decided_at": "2025-07-21T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2112578",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Engine burns alot of coolant."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Break time is not where it should be for a car with only 38k miles."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The engine intake valves in affected vehicles may crack and break"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causing the vehicle to lose motive power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "an engine malfunction indicator lamp may illuminate in the cluster"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle is running rough"
+      },
+      {
+        "kind": "safety",
+        "quote": "A loss of motive power can increase the risk of a crash."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS forward collision avoidance warnings; engine burns coolant and runs rough, intake valves may crack/break causing loss of motive power; no conditions specified",
+    "symptoms": [
+      "engine burns a lot of coolant",
+      "break time is not where it should be for a car with only 38k miles",
+      "engine intake valves may crack and break",
+      "vehicle may lose motive power",
+      "engine malfunction indicator lamp may illuminate",
+      "vehicle running rough"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2112578",
+    "created_at": "2025-07-21T07:00:27Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving at night at a speed of approximately 45 mph, the car started grinding and there was a smell of metallic material burning and it was difficult to accelerate. Within seconds the automobile came to a complete stop in the middle of a moderately traveled road in the left...",
+      "group": "adas",
+      "id": "1901667",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 7.448,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 Ford Escape. The contact stated that the hill start assist message was displayed. Additionally, the traction control warning light was illuminated, and the instrument panel was blank. The contact stated that the vehicle temporarily lost motive power howeve...",
+      "group": "adas",
+      "id": "1873900",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 4.8318,
+      "year": 2018
+    },
+    {
+      "excerpt": "2018 Ford escape titanium. I have kept current on all the maintenance on this car. All of a sudden I get a check engine light also it shook and weakened. I drove straight home and left it parked untouched. I called Ford they came and picked it up because I was too scared to drive...",
+      "group": "adas",
+      "id": "1987101",
+      "make": "FORD",
+      "model": "ESCAPE",
+      "score": 3.1794,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-21T07:00:21Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00153835,
+      "duration_ms": 18440,
+      "reason": "ADAS forward collision avoidance warnings; engine burns coolant and runs rough, intake valves may crack/break causing loss of motive power; no conditions specified",
+      "started_at": "2025-07-21T07:00:22Z",
+      "step": 2,
+      "tokens": 3090,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-21T07:00:23Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ESCAPE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving at night at a speed of approximately 45 mph, the car started grinding and there was a smell of metallic material burning and it was difficult to accelerate. Within seconds the automobile came to a complete stop in the middle of a moderately traveled road in the left...",
+            "group": "adas",
+            "id": "1901667",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 7.448,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Ford Escape. The contact stated that the hill start assist message was displayed. Additionally, the traction control warning light was illuminated, and the instrument panel was blank. The contact stated that the vehicle temporarily lost motive power howeve...",
+            "group": "adas",
+            "id": "1873900",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 4.8318,
+            "year": 2018
+          },
+          {
+            "excerpt": "2018 Ford escape titanium. I have kept current on all the maintenance on this car. All of a sudden I get a check engine light also it shook and weakened. I drove straight home and left it parked untouched. I called Ford they came and picked it up because I was too scared to drive...",
+            "group": "adas",
+            "id": "1987101",
+            "make": "FORD",
+            "model": "ESCAPE",
+            "score": 3.1794,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-07-21T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-21T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-21T07:00:26Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-21T07:00:28Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-21T07:00:30Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-21T07:00:31Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-21T07:00:32Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

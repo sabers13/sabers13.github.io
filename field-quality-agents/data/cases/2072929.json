@@ -1,0 +1,543 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2072929",
+    "make": "FORD",
+    "mileage": null,
+    "model": "FUSION",
+    "narrative": "air bag light comes on sometimes not other  car panic alarm goes off at random times  backup camera sometimes work sometimes glitches",
+    "received_at": "2025-03-11",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2072929",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2072929",
+    "decided_at": "2025-03-11T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2072929",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "air bag light comes on sometimes not other"
+      },
+      {
+        "kind": "symptom",
+        "quote": "car panic alarm goes off at random times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "backup camera sometimes work sometimes glitches"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "Test for intermittent restraint/electrical faults with a long-run power cycling test because the air-bag lamp, panic alarm, and backup camera all behave intermittently.",
+    "symptoms": [
+      "air bag light comes on intermittently",
+      "panic alarm goes off at random times",
+      "backup camera sometimes works and sometimes glitches"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "EA21002",
+      "match": true,
+      "open_date": "2021-09-17",
+      "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open."
+    },
+    {
+      "id": "EA21002",
+      "match": true,
+      "open_date": "2021-09-17",
+      "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open."
+    }
+  ],
+  "proposal": {
+    "case_id": "2072929",
+    "created_at": "2025-03-11T07:00:27Z",
+    "evidence": [
+      {
+        "quote": "air bag light comes on sometimes not other",
+        "source_id": "2072929",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "car panic alarm goes off at random times",
+        "source_id": "2072929",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "backup camera sometimes work sometimes glitches",
+        "source_id": "2072929",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The case reports intermittent symptoms: the air-bag light only comes on sometimes, the panic alarm goes off at random times, and the backup camera sometimes works and sometimes glitches. The rulebook matches the 'intermittent' condition and names the long-run power cycling test for faults that appear after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test for intermittent restraint/electrical faults with a long-run power cycling test because the air-bag lamp, panic alarm, and backup camera all behave intermittently.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The case reports intermittent symptoms: the air-bag light only comes on sometimes, the panic alarm goes off at random times, and the backup camera sometimes works and sometimes glitches. The rulebook matches the 'intermittent' condition and names the long-run power cycling test for faults that appear after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [
+    {
+      "id": "16V875000",
+      "match": true,
+      "open_date": "2016-12-05",
+      "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2016 Ford Fusion vehicles manufactured November 2, 2012, to July 31, 2014, and 2013-2015 Lincoln MKZ vehicles manufactured November 14, 2012, to July 31, 2014.  In the event of a crash, heat from the deployment of a seat belt pretensioner may cause a front seat belt anchor cable to fail."
+    },
+    {
+      "id": "16V250000",
+      "match": true,
+      "open_date": "2016-04-27",
+      "summary": "Ford Motor Company (Ford) is recalling certain model year 2016 Ford Fusion vehicles manufactured from March 10, 2016, through March 16, 2016.  The front driver seat track assembly's rear riser may have been improperly welded to the seat track rail, and as a result, the driver may not be adequately restrained in a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 207, \"Seating Systems\" and 210, \"Seat Belt Assembly Anchorages.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "WHEN PUSHING THE START BUTTON, THE CAR STRUGGLES TO START. THE BATTERY WAS CHECKED AND NO PROBLEMS WERE FOUND. SOMETIMES THE CAR DOES NOT DETECT WHEN THE DRIVERS SEATBELT IS NOT ON WHILE DRIVING OR SITTING STILL. THE BEEPING SOUNDS THE CAR TYPICALLY MAKES WHEN BACKING, ALERTING T...",
+      "group": "restraints",
+      "id": "1703060",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 7.1748,
+      "year": 2016
+    },
+    {
+      "excerpt": "FIRST EPISODE: DRIVER'S SEAT BELT LOCKED PREMATURELY WHILE IN MOTION ~35MPH, NO SPECIAL CIRCUMSTANCES, NOT BRAKING RAPIDLY. AT NEXT RED LIGHT, I UNBUCKLED BUT COULD NOT DRAW BELT OUT MORE THAN A FEW INCHES. PULLED INTO A PARKING LOT, OPENED AND CLOSED DOOR A FEW TIMES AND FINALLY...",
+      "group": "restraints",
+      "id": "1660683",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 3.7948,
+      "year": 2016
+    },
+    {
+      "excerpt": "1. AIR BAG SENSOR STAYS ON, AS IF I HAVE A MALFUNCTIONING UNIT THAT WILL BURST AT ANY TIME. NO MATTER WHAT I DO, IT ALWAYS STAYS ON. THERE IS NO WAY TO TURN THE SENSOR OR THE AIRBAGS OFF, SO I CANNOT DISENGAGE THEM AND KEEP THEM FROM EXPLODING UNNECESSARILY. 2. THE TRANSMISSION D...",
+      "group": "restraints",
+      "id": "1652469",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 3.1744,
+      "year": 2016
+    },
+    {
+      "excerpt": "MY CAR SEAT UNDERCARRIAGE IS DISATTACHED. I TOOK MY CAR IN TO A NEARBY FORD DEALERSHIP AND WAS TOLD MY VIN NUMBER WAS NOT ASSOCIATED WITH THE RECALLS. ALTHOUGH MY CAR'S VIN DID NOT HAVE A RECALL, I AM HAVING THE SAME ISSUES AS EVERYONE ELSE THAT HAD A RECALL. I WAS UNABLE TO ADJU...",
+      "group": "restraints",
+      "id": "1717513",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 2.68,
+      "year": 2016
+    },
+    {
+      "excerpt": "The airbag sensor keeps popping on and off in the car… Also, the car is not shifting properly between gears… There is supreme hesitation involved.. there is so much noise coming from the steering column and/or the airbag system.. just out of the blue",
+      "group": "restraints",
+      "id": "1868355",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 1.5478,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-11T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000753,
+      "duration_ms": 8407,
+      "reason": "2016 Ford Fusion AIR BAGS: air bag light intermittent, random panic alarm, backup camera intermittent/glitches",
+      "started_at": "2025-03-11T07:00:16Z",
+      "step": 2,
+      "tokens": 1636,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-11T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WHEN PUSHING THE START BUTTON, THE CAR STRUGGLES TO START. THE BATTERY WAS CHECKED AND NO PROBLEMS WERE FOUND. SOMETIMES THE CAR DOES NOT DETECT WHEN THE DRIVERS SEATBELT IS NOT ON WHILE DRIVING OR SITTING STILL. THE BEEPING SOUNDS THE CAR TYPICALLY MAKES WHEN BACKING, ALERTING T...",
+            "group": "restraints",
+            "id": "1703060",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 7.1748,
+            "year": 2016
+          },
+          {
+            "excerpt": "FIRST EPISODE: DRIVER'S SEAT BELT LOCKED PREMATURELY WHILE IN MOTION ~35MPH, NO SPECIAL CIRCUMSTANCES, NOT BRAKING RAPIDLY. AT NEXT RED LIGHT, I UNBUCKLED BUT COULD NOT DRAW BELT OUT MORE THAN A FEW INCHES. PULLED INTO A PARKING LOT, OPENED AND CLOSED DOOR A FEW TIMES AND FINALLY...",
+            "group": "restraints",
+            "id": "1660683",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 3.7948,
+            "year": 2016
+          },
+          {
+            "excerpt": "1. AIR BAG SENSOR STAYS ON, AS IF I HAVE A MALFUNCTIONING UNIT THAT WILL BURST AT ANY TIME. NO MATTER WHAT I DO, IT ALWAYS STAYS ON. THERE IS NO WAY TO TURN THE SENSOR OR THE AIRBAGS OFF, SO I CANNOT DISENGAGE THEM AND KEEP THEM FROM EXPLODING UNNECESSARILY. 2. THE TRANSMISSION D...",
+            "group": "restraints",
+            "id": "1652469",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 3.1744,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-11T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-03-11T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-03-11T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "air bag light comes on sometimes not other  car panic alarm goes off at random times  backup camera sometimes work sometimes glitches"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WHEN PUSHING THE START BUTTON, THE CAR STRUGGLES TO START. THE BATTERY WAS CHECKED AND NO PROBLEMS WERE FOUND. SOMETIMES THE CAR DOES NOT DETECT WHEN THE DRIVERS SEATBELT IS NOT ON WHILE DRIVING OR SITTING STILL. THE BEEPING SOUNDS THE CAR TYPICALLY MAKES WHEN BACKING, ALERTING T...",
+            "group": "restraints",
+            "id": "1703060",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 7.1748,
+            "year": 2016
+          },
+          {
+            "excerpt": "FIRST EPISODE: DRIVER'S SEAT BELT LOCKED PREMATURELY WHILE IN MOTION ~35MPH, NO SPECIAL CIRCUMSTANCES, NOT BRAKING RAPIDLY. AT NEXT RED LIGHT, I UNBUCKLED BUT COULD NOT DRAW BELT OUT MORE THAN A FEW INCHES. PULLED INTO A PARKING LOT, OPENED AND CLOSED DOOR A FEW TIMES AND FINALLY...",
+            "group": "restraints",
+            "id": "1660683",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 3.7948,
+            "year": 2016
+          },
+          {
+            "excerpt": "1. AIR BAG SENSOR STAYS ON, AS IF I HAVE A MALFUNCTIONING UNIT THAT WILL BURST AT ANY TIME. NO MATTER WHAT I DO, IT ALWAYS STAYS ON. THERE IS NO WAY TO TURN THE SENSOR OR THE AIRBAGS OFF, SO I CANNOT DISENGAGE THEM AND KEEP THEM FROM EXPLODING UNNECESSARILY. 2. THE TRANSMISSION D...",
+            "group": "restraints",
+            "id": "1652469",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 3.1744,
+            "year": 2016
+          },
+          {
+            "excerpt": "MY CAR SEAT UNDERCARRIAGE IS DISATTACHED. I TOOK MY CAR IN TO A NEARBY FORD DEALERSHIP AND WAS TOLD MY VIN NUMBER WAS NOT ASSOCIATED WITH THE RECALLS. ALTHOUGH MY CAR'S VIN DID NOT HAVE A RECALL, I AM HAVING THE SAME ISSUES AS EVERYONE ELSE THAT HAD A RECALL. I WAS UNABLE TO ADJU...",
+            "group": "restraints",
+            "id": "1717513",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 2.68,
+            "year": 2016
+          },
+          {
+            "excerpt": "The airbag sensor keeps popping on and off in the car… Also, the car is not shifting properly between gears… There is supreme hesitation involved.. there is so much noise coming from the steering column and/or the airbag system.. just out of the blue",
+            "group": "restraints",
+            "id": "1868355",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 1.5478,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-03-11T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "SEAT BELTS:FRONT",
+            "group": "restraints",
+            "id": "16V875000",
+            "make": "FORD",
+            "model": "FUSION",
+            "open_date": "2016-12-05",
+            "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2016 Ford Fusion vehicles manufactured November 2, 2012, to July 31, 2014, and 2013-2015 Lincoln MKZ vehicles manufactured November 14, 2012, to July 31, 2014.  In the event of a crash, heat from the deployment of a seat belt pretensioner may cause a front seat belt anchor cable to fail.",
+            "year": 2016
+          },
+          {
+            "component": "SEAT BELTS:FRONT:ANCHORAGE",
+            "group": "restraints",
+            "id": "16V250000",
+            "make": "FORD",
+            "model": "FUSION",
+            "open_date": "2016-04-27",
+            "summary": "Ford Motor Company (Ford) is recalling certain model year 2016 Ford Fusion vehicles manufactured from March 10, 2016, through March 16, 2016.  The front driver seat track assembly's rear riser may have been improperly welded to the seat track rail, and as a result, the driver may not be adequately restrained in a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 207, \"Seating Systems\" and 210, \"Seat Belt Assembly Anchorages.\"",
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 investigation(s) for the same vehicle and group",
+      "started_at": "2025-03-11T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "EA21002",
+            "make": "FORD",
+            "model": "FUSION",
+            "open_date": "2021-09-17",
+            "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open.",
+            "year": 2016
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "EA21002",
+            "make": "FORD",
+            "model": "FUSION",
+            "open_date": "2021-09-17",
+            "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open.",
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-03-11T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0010806,
+      "duration_ms": 9556,
+      "reason": "The case reports intermittent symptoms: the air-bag light only comes on sometimes, the panic alarm goes off at random times, and the backup camera sometimes works and sometimes glitches. The rulebook matches the 'intermittent' condition and names the long-run power cycling test for faults that appear after repeated wake and sleep cycles.",
+      "started_at": "2025-03-11T07:00:24Z",
+      "step": 10,
+      "tokens": 4528,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-03-11T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "air bag light comes on sometimes not other",
+          "car panic alarm goes off at random times",
+          "backup camera sometimes work sometimes glitches",
+          "sometimes"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-03-11T07:00:26Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-11T07:00:28Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-03-11T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-11T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-11T07:00:32Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

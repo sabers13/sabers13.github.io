@@ -1,0 +1,319 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2124763",
+    "make": "TOYOTA",
+    "mileage": 362712,
+    "model": "AVALON",
+    "narrative": "Odometer Fraud. The contact purchased a 2014 Toyota Avalon. The contact stated that the vehicle was driven to AAA Auto Repair facility and the contact was informed that there was a mileage discrepancy. The vehicle was a dealer sale. At the time of purchase the vehicle mileage was 93,326, and after AAA retrieved the Carfax Report, it was discovered that the mileage was 362,712.",
+    "received_at": "2025-08-27",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2124763",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124763",
+    "decided_at": "2025-08-27T07:01:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2124763",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud"
+      },
+      {
+        "kind": "symptom",
+        "quote": "there was a mileage discrepancy"
+      },
+      {
+        "kind": "symptom",
+        "quote": "At the time of purchase the vehicle mileage was 93,326"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the mileage was 362,712"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Verify the reported odometer discrepancy on a 2014 Toyota Avalon (93,326 at purchase vs. 362,712 per Carfax); no rulebook targeted test matched.",
+    "symptoms": [
+      "odometer mileage discrepancy",
+      "suspected odometer fraud"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124763",
+    "created_at": "2025-08-27T07:01:10Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud",
+        "source_id": "2124763",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "there was a mileage discrepancy",
+        "source_id": "2124763",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase the vehicle mileage was 93,326",
+        "source_id": "2124763",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the mileage was 362,712",
+        "source_id": "2124763",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports odometer fraud and a mileage discrepancy found after a dealer sale. No recalls, investigations, similar cases, or rulebook entries were returned, so the standard non-targeted verification is proposed.",
+    "requested_info": [],
+    "summary": "Verify the reported odometer discrepancy on a 2014 Toyota Avalon (93,326 at purchase vs. 362,712 per Carfax); no rulebook targeted test matched.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-27T07:01:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006319,
+      "duration_ms": 8015,
+      "reason": "Instrument panel speedometer/odometer; reported odometer fraud with a mileage discrepancy (93,326 at purchase vs. 362,712 per Carfax); no conditions noted.",
+      "started_at": "2025-08-27T07:01:01Z",
+      "step": 2,
+      "tokens": 1586,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-27T07:01:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "AVALON",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-27T07:01:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-08-27T07:01:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2014 Toyota Avalon. The contact stated that the vehicle was driven to AAA Auto Repair facility and the contact was informed that there was a mileage discrepancy. The vehicle was a dealer sale. At the time of purchase the vehicle mileage was 93,326, and after AAA retrieved the Carfax Report, it was discovered that the mileage was 362,712."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-27T07:01:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "TOYOTA",
+        "model": "AVALON",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-27T07:01:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "TOYOTA",
+        "model": "AVALON",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-27T07:01:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00064875,
+      "duration_ms": 5978,
+      "reason": "The narrative reports odometer fraud and a mileage discrepancy found after a dealer sale. No recalls, investigations, similar cases, or rulebook entries were returned, so the standard non-targeted verification is proposed.",
+      "started_at": "2025-08-27T07:01:08Z",
+      "step": 9,
+      "tokens": 1712,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-08-27T07:01:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud",
+          "there was a mileage discrepancy",
+          "At the time of purchase the vehicle mileage was 93,326",
+          "the mileage was 362,712"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-27T07:01:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-27T07:01:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-27T07:01:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-27T07:01:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

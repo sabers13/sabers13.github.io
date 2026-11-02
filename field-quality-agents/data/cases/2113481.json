@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2113481",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "My atlas forward collision system malfunctioned causing the automatic emergency braking to turn on when there was no one and nothing in front of me. I was then rear ended. Which ultimately totaled my vehicle.  My car said airbag error as well.  I called Volkswagen Perrysburg Ohio, to report the incident, was sent to the managers voicemail 7/16/2025. The manager never called me back.",
+    "received_at": "2025-07-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2113481",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2113481",
+    "decided_at": "2025-07-24T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2113481",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "forward collision system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My atlas forward collision system malfunctioned causing the automatic emergency braking to turn on when there was no one and nothing in front of me"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was then rear ended."
+      },
+      {
+        "kind": "safety",
+        "quote": "Which ultimately totaled my vehicle."
+      },
+      {
+        "kind": "symptom",
+        "quote": "My car said airbag error as well."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2022 Volkswagen Atlas forward collision avoidance warning malfunction: automatic emergency braking activated with no obstacle ahead, vehicle was rear-ended and totaled; airbag error also displayed.",
+    "symptoms": [
+      "forward collision system malfunctioned",
+      "automatic emergency braking activated with no one and nothing in front",
+      "airbag error displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2113481",
+    "created_at": "2025-07-24T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Two separate instances. The first: emergency break engaged for no reason while in driveway at a low speed. It jolted the car back and I had to put car in Park and then drive again. If this happened while anywhere else, it could cause an accident by being rear ended or a tail spin...",
+      "group": "adas",
+      "id": "1808306",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 14.0315,
+      "year": 2022
+    },
+    {
+      "excerpt": "Began getting front end collision alerts and unexpected automatic emergency braking shortly after purchase. Unexpected braking, slowing/stopping of the vehicle is a safety hazard. Returned car to VW dealer in Irvine, CA in Feb 2023 and July 2023. Explained this was safety issue c...",
+      "group": "adas",
+      "id": "1916192",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 12.7478,
+      "year": 2022
+    },
+    {
+      "excerpt": "Emergency braking system was activated on 15 FWY, traveling north just south of Magnolia (33.8652148,-117.5413564) No vehicle or objects were in front of me. I was in the far left lane traveling at freeway speeds for over 2 miles before the emergency braking system was activated....",
+      "group": "adas",
+      "id": "1868321",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 8.1014,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-24T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00068005,
+      "duration_ms": 8594,
+      "reason": "2022 Volkswagen Atlas forward collision avoidance warning malfunction: automatic emergency braking activated with no obstacle ahead, vehicle was rear-ended and totaled; airbag error also displayed.",
+      "started_at": "2025-07-24T07:00:01Z",
+      "step": 2,
+      "tokens": 1661,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-24T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Two separate instances. The first: emergency break engaged for no reason while in driveway at a low speed. It jolted the car back and I had to put car in Park and then drive again. If this happened while anywhere else, it could cause an accident by being rear ended or a tail spin...",
+            "group": "adas",
+            "id": "1808306",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 14.0315,
+            "year": 2022
+          },
+          {
+            "excerpt": "Began getting front end collision alerts and unexpected automatic emergency braking shortly after purchase. Unexpected braking, slowing/stopping of the vehicle is a safety hazard. Returned car to VW dealer in Irvine, CA in Feb 2023 and July 2023. Explained this was safety issue c...",
+            "group": "adas",
+            "id": "1916192",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 12.7478,
+            "year": 2022
+          },
+          {
+            "excerpt": "Emergency braking system was activated on 15 FWY, traveling north just south of Magnolia (33.8652148,-117.5413564) No vehicle or objects were in front of me. I was in the far left lane traveling at freeway speeds for over 2 miles before the emergency braking system was activated....",
+            "group": "adas",
+            "id": "1868321",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 8.1014,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-24T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-24T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-24T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-24T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-24T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-24T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-24T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

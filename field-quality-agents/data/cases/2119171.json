@@ -1,0 +1,340 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2119171",
+    "make": "DODGE",
+    "mileage": null,
+    "model": "JOURNEY",
+    "narrative": "Rear wiper works only in reverse, fuse was replaced and the problem still continues.",
+    "received_at": "2025-08-10",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2119171",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2119171",
+    "decided_at": "2025-08-10T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2119171",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Rear wiper works only in reverse"
+      },
+      {
+        "kind": "condition",
+        "quote": "fuse was replaced"
+      },
+      {
+        "kind": "other",
+        "quote": "problem still continues"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Test the rear wiper circuit with an installation check, since the wiper only works in reverse and persists after fuse replacement.",
+    "symptoms": [
+      "rear wiper works only in reverse",
+      "problem continues after fuse replacement"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2119171",
+    "created_at": "2025-08-10T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Rear wiper works only in reverse",
+        "source_id": "2119171",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "fuse was replaced",
+        "source_id": "2119171",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "problem still continues",
+        "source_id": "2119171",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports the rear wiper works only in reverse and the problem continues after the fuse was replaced. The rulebook matches the after-service condition and calls for an installation check before testing, focusing on connector seating, pin damage and correct part fit.",
+    "requested_info": [],
+    "summary": "Test the rear wiper circuit with an installation check, since the wiper only works in reverse and persists after fuse replacement.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative reports the rear wiper works only in reverse and the problem continues after the fuse was replaced. The rulebook matches the after-service condition and calls for an installation check before testing, focusing on connector seating, pin damage and correct part fit."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-10T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00048115,
+      "duration_ms": 5959,
+      "reason": "VISIBILITY/WIPER: rear wiper works only in reverse; fuse replaced, problem persists.",
+      "started_at": "2025-08-10T07:00:01Z",
+      "step": 2,
+      "tokens": 1274,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-10T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-10T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-10T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-08-10T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Rear wiper works only in reverse, fuse was replaced and the problem still continues."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-10T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-10T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-10T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00045,
+      "duration_ms": 4777,
+      "reason": "The narrative reports the rear wiper works only in reverse and the problem continues after the fuse was replaced. The rulebook matches the after-service condition and calls for an installation check before testing, focusing on connector seating, pin damage and correct part fit.",
+      "started_at": "2025-08-10T07:00:09Z",
+      "step": 10,
+      "tokens": 1317,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-08-10T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Rear wiper works only in reverse",
+          "fuse was replaced",
+          "problem still continues"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-10T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-10T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-10T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-10T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

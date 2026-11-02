@@ -1,0 +1,244 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2135565",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON",
+    "narrative": "Control screen keeps going randomly blank, for different periods of time, putting the driver at risk, because the vehicle information, including speed, lights, wipers, basically everything is displayed in this screen. Sometimes the sentence NO SIGNAL shows up. I had experienced several scary situations, specially in freeways when raining, you have zero driving information. The car has been to the dealership service 4 times, with different tentatives of repair, none of which worked. The last time my car was at the dealership service for 25 days and after 2 days the problem was back, even worse. Sometimes all the lights of the control screen light up, with no reason and keep on even after the car is turned off. This is our only car and we need it, but the car is absolutely unsafe and unreliable. I refuse to leave the car for a 5th time, Hyundai has no idea what the issue is and obviously cannot fix it.   The lane assist is also malfunctioning, sometimes the warning system doesn’t work properly.   Twice the car emergency brakes stopped the car abruptly without a reason to do so (no risk of collision, no car or object in front ). One of those times the car behind me almost hit me, because the stop was abrupt and for no reason. I have many videos and pictures, but apparently I cannot upload the videos in this form.  I have the paperwork, but Hyundai refused to refund for the vehicle. I highly recommend an investigation, Hyundai is getting away with a very serious problem and someone will get hurt as a result of these issues. Thank you for the attention.",
+    "received_at": "2025-10-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135565",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135565",
+    "decided_at": "2025-10-01T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135565",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Control screen keeps going randomly blank"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Sometimes the sentence NO SIGNAL shows up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Sometimes all the lights of the control screen light up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The lane assist is also malfunctioning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Twice the car emergency brakes stopped the car abruptly without a reason to do so"
+      },
+      {
+        "kind": "condition",
+        "quote": "when raining"
+      },
+      {
+        "kind": "condition",
+        "quote": "after 2 days the problem was back"
+      },
+      {
+        "kind": "safety",
+        "quote": "putting the driver at risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "the car is absolutely unsafe and unreliable"
+      },
+      {
+        "kind": "safety",
+        "quote": "someone will get hurt"
+      }
+    ],
+    "conditions": [
+      "moisture",
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: control screen randomly blanks/NO SIGNAL and warning/emergency braking faults, in rain/freeway and after service.",
+    "symptoms": [
+      "control screen randomly goes blank",
+      "NO SIGNAL message appears",
+      "control screen lights stay on after car off",
+      "lane assist malfunction",
+      "warning system not working properly",
+      "emergency brakes stop abruptly without reason"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135565",
+    "created_at": "2025-10-01T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-01T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00088735,
+      "duration_ms": 8703,
+      "reason": "Electrical system: control screen randomly blanks/NO SIGNAL and warning/emergency braking faults, in rain/freeway and after service.",
+      "started_at": "2025-10-01T07:00:01Z",
+      "step": 2,
+      "tokens": 2185,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-01T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-01T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-01T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-01T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-01T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-01T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-01T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-01T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

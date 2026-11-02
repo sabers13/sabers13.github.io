@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2151945",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "infotainment system ghost touches the screen and changes from navigation to radio to xm to screen savor to Bluetooth, very dangerous as navigation is not reliable for turn my turn directions and this is extremely distracting honda says no fix consumer problem. warrent ran out 6/25 and car has 35,000 miles",
+    "received_at": "2025-11-25",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2151945",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2151945",
+    "decided_at": "2025-11-25T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2151945",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "infotainment system ghost touches the screen and changes from navigation to radio to xm to screen savor to Bluetooth"
+      },
+      {
+        "kind": "safety",
+        "quote": "very dangerous as navigation is not reliable for turn my turn directions and this is extremely distracting"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM: infotainment screen ghost-touches and changes modes among navigation, radio, XM, screen saver, and Bluetooth; conditions not stated.",
+    "symptoms": [
+      "infotainment screen ghost touches and changes from navigation to radio to XM to screen saver to Bluetooth",
+      "navigation unreliable for turn-by-turn directions",
+      "extremely distracting"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2151945",
+    "created_at": "2025-11-25T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Was waiting at a red light and when the light turned green I started to accelerate. All of the sudden the car lost power and I had to pull over to the side of the road. The car won't move in drive or go into reverse. I was almost hit do to the fact the car lost power to the power...",
+      "group": "electrical_general",
+      "id": "1836424",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 0.4521,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008368,
+      "duration_ms": 9999,
+      "reason": "ELECTRICAL SYSTEM: infotainment screen ghost-touches and changes modes among navigation, radio, XM, screen saver, and Bluetooth; conditions not stated.",
+      "started_at": "2025-11-25T07:00:01Z",
+      "step": 2,
+      "tokens": 1902,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-11-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Was waiting at a red light and when the light turned green I started to accelerate. All of the sudden the car lost power and I had to pull over to the side of the road. The car won't move in drive or go into reverse. I was almost hit do to the fact the car lost power to the power...",
+            "group": "electrical_general",
+            "id": "1836424",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 0.4521,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-11-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-25T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-25T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-25T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-25T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

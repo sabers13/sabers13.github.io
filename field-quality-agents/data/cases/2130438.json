@@ -1,0 +1,335 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2130438",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "RIDGELINE",
+    "narrative": "While idling at a traffic light,2 systems shut down: Adaptive Cruise Control & Road Departure Mitigation System. Also the BRAKE SYSTEM light came on, but the brakes continued to work.",
+    "received_at": "2025-09-15",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2130438",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2130438",
+    "decided_at": "2025-09-15T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2130438",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "While idling at a traffic light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Adaptive Cruise Control & Road Departure Mitigation System"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the BRAKE SYSTEM light came on"
+      },
+      {
+        "kind": "other",
+        "quote": "the brakes continued to work"
+      }
+    ],
+    "conditions": [
+      "while idling at a traffic light"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the 2024 Honda Ridgeline electrical system after adaptive cruise control and road departure mitigation shut down while idling, with a brake system warning light but working brakes.",
+    "symptoms": [
+      "adaptive cruise control and road departure mitigation systems shut down",
+      "brake system warning light illuminated",
+      "brakes continued to work"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2130438",
+    "created_at": "2025-09-15T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "While idling at a traffic light",
+        "source_id": "2130438",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Adaptive Cruise Control & Road Departure Mitigation System",
+        "source_id": "2130438",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the BRAKE SYSTEM light came on",
+        "source_id": "2130438",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the brakes continued to work",
+        "source_id": "2130438",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports two driver-assistance systems shutting down while idling at a traffic light and the BRAKE SYSTEM light illuminating, while the brakes continued to work. No rulebook entry, recall, investigation, or similar case was returned, so a targeted load test is not supported; propose the standard electrical system test.",
+    "requested_info": [],
+    "summary": "Test the 2024 Honda Ridgeline electrical system after adaptive cruise control and road departure mitigation shut down while idling, with a brake system warning light but working brakes.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-15T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00045895,
+      "duration_ms": 5016,
+      "reason": "2024 Honda Ridgeline electrical system: adaptive cruise control and road departure mitigation shut down while idling at a traffic light, brake system light illuminated but brakes kept working",
+      "started_at": "2025-09-15T07:00:01Z",
+      "step": 2,
+      "tokens": 1255,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-09-15T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-15T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-15T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-09-15T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "While idling at a traffic light,2 systems shut down: Adaptive Cruise Control & Road Departure Mitigation System. Also the BRAKE SYSTEM light came on, but the brakes continued to work."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-15T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-15T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-15T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00057045,
+      "duration_ms": 5717,
+      "reason": "The narrative reports two driver-assistance systems shutting down while idling at a traffic light and the BRAKE SYSTEM light illuminating, while the brakes continued to work. No rulebook entry, recall, investigation, or similar case was returned, so a targeted load test is not supported; propose the standard electrical system test.",
+      "started_at": "2025-09-15T07:00:09Z",
+      "step": 10,
+      "tokens": 1538,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-09-15T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "While idling at a traffic light",
+          "Adaptive Cruise Control & Road Departure Mitigation System",
+          "the BRAKE SYSTEM light came on",
+          "the brakes continued to work"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-15T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-15T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-15T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-15T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

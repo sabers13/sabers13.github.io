@@ -1,0 +1,300 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2152385",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Component/system that failed: Tesla Full Self-Driving (Supervised) software version 14.x (2025.38.x and later). The issue is software-only and remains installed on any vehicle updated to v14.  Description of safety defect: FSD v14 deliberately removes the driver’s ability to set or adjust maximum speed offset using the right scroll wheel (feature present in all prior versions including my current v13.2.9). As a result, the system routinely exceeds posted speed limits by 5–20 mph with no way for the supervised driver to correct it short of fully disengaging FSD. The vehicle ignores speed-limit signs, relies on inaccurate map data, and follows surrounding traffic speed instead of the legal limit, even in school zones, construction zones, residential areas, and adverse weather. This significantly increases risk of collision, injury, and traffic citations.  Reproduced/confirmed: Widely reproduced by thousands of owners on Tesla forums, Reddit, and X immediately after v14 rollout in late 2025. I have chosen to remain on v13.2.9 to avoid this exact defect.   Inspected by manufacturer or others: No in-person inspection required; Tesla has full remote log access. Multiple owners have submitted in-car bug reports.  Warning lamps/messages: None. The speed-offset control is simply grayed out and non-functional by design in v14. Vehicle available for inspection upon request.",
+    "received_at": "2025-11-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2152385",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2152385",
+    "decided_at": "2025-11-27T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2152385",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "component_group",
+        "quote": "Tesla Full Self-Driving (Supervised) software version 14.x (2025.38.x and later)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "removes the driver’s ability to set or adjust maximum speed offset using the right scroll wheel"
+      },
+      {
+        "kind": "symptom",
+        "quote": "system routinely exceeds posted speed limits by 5–20 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ignores speed-limit signs"
+      },
+      {
+        "kind": "condition",
+        "quote": "even in school zones, construction zones, residential areas, and adverse weather"
+      },
+      {
+        "kind": "safety",
+        "quote": "increases risk of collision, injury, and traffic citations"
+      },
+      {
+        "kind": "symptom",
+        "quote": "speed-offset control is simply grayed out and non-functional by design in v14"
+      },
+      {
+        "kind": "other",
+        "quote": "software-only"
+      },
+      {
+        "kind": "other",
+        "quote": "Warning lamps/messages: None."
+      }
+    ],
+    "conditions": [
+      "v14 software",
+      "school zones",
+      "construction zones",
+      "residential areas",
+      "adverse weather"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Tesla Model 3 FSD v14 adaptive cruise/ADAS software removes max speed offset adjustment, so the system routinely exceeds posted limits by 5–20 mph and ignores signs; software-only, no warning lamps.",
+    "symptoms": [
+      "cannot set or adjust maximum speed offset via right scroll wheel",
+      "routinely exceeds posted speed limits by 5–20 mph",
+      "ignores speed-limit signs",
+      "relies on inaccurate map data",
+      "follows surrounding traffic speed instead of legal limit",
+      "driver cannot correct without fully disengaging FSD",
+      "speed-offset control grayed out and non-functional by design",
+      "no warning lamps"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2152385",
+    "created_at": "2025-11-27T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My wife and I recently purchased a new 2024 model 3 Tesla with the Autopilot and Full Self-Driving feature. We chose this vehicle because my wife has a long daily commute and we wanted to make the drive easier for her. We test drove a similar model in early August. When we were t...",
+      "group": "adas",
+      "id": "2023037",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 15.212,
+      "year": 2024
+    },
+    {
+      "excerpt": "There is a a very dangerous software issue with new Tesla models where there is a 1-2 second lag between when cruise control is disengaged and when it actually disengages. Especially, at high speeds this is dangerous because the car can continue maintaining acceleration for sever...",
+      "group": "adas",
+      "id": "2020385",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 6.6106,
+      "year": 2024
+    },
+    {
+      "excerpt": "Car randomly breaks or swerves when using cruise control. When there is nothing ahead of me have called tesla and been told it is called phantom breaking and that it is normal happens multiple times a day, almost causes collisions. Very dangerous.",
+      "group": "adas",
+      "id": "2041622",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 2.5852,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-27T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00199375,
+      "duration_ms": 21236,
+      "reason": "Tesla Model 3 FSD v14 adaptive cruise/ADAS software removes max speed offset adjustment, so the system routinely exceeds posted limits by 5–20 mph and ignores signs; software-only, no warning lamps.",
+      "started_at": "2025-11-27T07:00:36Z",
+      "step": 2,
+      "tokens": 4011,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-27T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My wife and I recently purchased a new 2024 model 3 Tesla with the Autopilot and Full Self-Driving feature. We chose this vehicle because my wife has a long daily commute and we wanted to make the drive easier for her. We test drove a similar model in early August. When we were t...",
+            "group": "adas",
+            "id": "2023037",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 15.212,
+            "year": 2024
+          },
+          {
+            "excerpt": "There is a a very dangerous software issue with new Tesla models where there is a 1-2 second lag between when cruise control is disengaged and when it actually disengages. Especially, at high speeds this is dangerous because the car can continue maintaining acceleration for sever...",
+            "group": "adas",
+            "id": "2020385",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 6.6106,
+            "year": 2024
+          },
+          {
+            "excerpt": "Car randomly breaks or swerves when using cruise control. When there is nothing ahead of me have called tesla and been told it is called phantom breaking and that it is normal happens multiple times a day, almost causes collisions. Very dangerous.",
+            "group": "adas",
+            "id": "2041622",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 2.5852,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-27T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-27T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-27T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-27T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-27T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-27T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-27T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

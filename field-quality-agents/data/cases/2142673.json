@@ -1,0 +1,233 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2142673",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ID.4",
+    "narrative": "I drove our ID4 to pick up a neighbor's son from school.  Using the regenerative braking mode, I came to a stop on a side street, just beyond a school crossing where middle school kids were everywhere, at which time the car lunged forward at a high rate of speed while my foot was still on the brake.  Luckily we ran into a parked service van that slowed our progress while I put the car in the parking mode, which finally stopped the car.  We both experienced the hard impact of hitting the truck and noticed that the air bags did not deploy.  There are skid marks that confirm that the brakes were employed while the car moved independently.  We are grateful we didn't hit anyone.  I will not drive this car again.  There were no indications that anything we amiss prior to this malfunction.  Our insurance adjustor will be coming by in the next day or two to inspect the car. This could have been a tragic event!!!!!",
+    "received_at": "2025-10-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2142673",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2142673",
+    "decided_at": "2025-10-23T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2142673",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "Using the regenerative braking mode"
+      },
+      {
+        "kind": "condition",
+        "quote": "I came to a stop on a side street"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car lunged forward at a high rate of speed while my foot was still on the brake"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes were employed while the car moved independently"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the air bags did not deploy"
+      },
+      {
+        "kind": "safety",
+        "quote": "we ran into a parked service van"
+      },
+      {
+        "kind": "safety",
+        "quote": "We both experienced the hard impact of hitting the truck"
+      },
+      {
+        "kind": "safety",
+        "quote": "This could have been a tragic event!!!!!"
+      }
+    ],
+    "conditions": [
+      "regenerative braking",
+      "at stop",
+      "brake applied"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS automatic emergency braking: after stopping in regenerative braking mode, car lunged forward at high speed with brake applied and hit a parked van; airbags did not deploy.",
+    "symptoms": [
+      "vehicle lunged forward at high speed while brake pedal was applied",
+      "brakes were applied while vehicle moved independently",
+      "airbags did not deploy after impact"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2142673",
+    "created_at": "2025-10-23T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012751,
+      "duration_ms": 12485,
+      "reason": "ADAS automatic emergency braking: after stopping in regenerative braking mode, car lunged forward at high speed with brake applied and hit a parked van; airbags did not deploy.",
+      "started_at": "2025-10-23T07:00:01Z",
+      "step": 2,
+      "tokens": 2742,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ID.4",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-23T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-23T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-23T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

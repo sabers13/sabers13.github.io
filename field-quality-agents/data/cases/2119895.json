@@ -1,0 +1,261 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2119895",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Subject: Urgent Complaint Regarding Power Steering Failure in 2019 Tesla Model 3  Hello NHTSA,  I am writing to file a complaint regarding a very dangerous situation I recently experienced with my 2019 Tesla Model 3. While driving on the freeway at approximately 65 mph, the power steering failed unexpectedly. I struggled significantly to change lanes in order to exit the freeway, and it felt as though my vehicle was going to collide with other cars.  After managing to get off the freeway, I nearly hit the guardrail while attempting to turn onto a side street, creating a hazardous situation. I am deeply concerned about the potential consequences; for instance, what if I had struck a pedestrian, or if the car had collided with another vehicle at high speed? I live on a winding mountain road, where I could have easily driven off a cliff.  Turning the car off and back on temporarily resolved the issue. However, there are numerous complaints regarding steering rack failures with Tesla vehicles. Tesla has quoted me $2,700.00 to fix what appears to be a known manufacturing defect. They are aware of this potentially hazardous situation but are not taking responsibility for the repairs.  This is a serious safety issue, and I urge Tesla to accept responsibility and cover the repair costs before someone is seriously injured or killed—if such an incident has not already occurred.  Please let me know what further actions I can take to facilitate Tesla's resolution of this dangerous problem.  Thank you for your attention to this matter.  Sincerely,",
+    "received_at": "2025-08-12",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2119895",
+    "status": "needs_engineer",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2119895",
+    "decided_at": "2025-08-12T07:00:26Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2119895",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: ASSIST"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power steering failed unexpectedly"
+      },
+      {
+        "kind": "other",
+        "quote": "driving on the freeway at approximately 65 mph"
+      },
+      {
+        "kind": "condition",
+        "quote": "temporarily resolved the issue"
+      },
+      {
+        "kind": "safety",
+        "quote": "very dangerous situation"
+      },
+      {
+        "kind": "safety",
+        "quote": "nearly hit the guardrail"
+      },
+      {
+        "kind": "safety",
+        "quote": "could have easily driven off a cliff"
+      },
+      {
+        "kind": "safety",
+        "quote": "seriously injured or killed"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Power steering failed unexpectedly at ~65 mph on freeway (component field: LANE DEPARTURE: ASSIST); intermittent, restart temporarily resolved.",
+    "symptoms": [
+      "power steering failed unexpectedly",
+      "significant struggle to change lanes",
+      "felt the vehicle was going to collide with other cars",
+      "nearly hit the guardrail while turning onto a side street",
+      "issue temporarily resolved by turning the car off and back on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2119895",
+    "created_at": "2025-08-12T07:00:23Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There are two problems: (1) braking and (2) windshield wiper operation. (1) Braking: When driving on a highway and going by an on-ramp on the right side, without any warning, the vehicle would, al of a sudden, slam violently on the brakes, even though the cars entering the highwa...",
+      "group": "adas",
+      "id": "1791951",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 39.9004,
+      "year": 2020
+    },
+    {
+      "excerpt": "The Tesla lane assist and adaptive cruise control failed while I was driving on the highway (I-295 in DC). I have not paid for the full self driving, so I was using the autopilot every Model 3 uses by default. The car skidded into the barrier on the side of the highway and tore u...",
+      "group": "adas",
+      "id": "1821619",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 38.8546,
+      "year": 2020
+    },
+    {
+      "excerpt": "The Tesla lane assist and adaptive cruise control failed while I was driving on the highway (I-295 in DC). I have not paid for the full self driving, so I was using the autopilot every Model 3 uses by default. The car skidded into the barrier on the side of the highway and tore u...",
+      "group": "adas",
+      "id": "1821620",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 38.8546,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-12T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00193825,
+      "duration_ms": 20945,
+      "reason": "Power steering failed unexpectedly at ~65 mph on freeway (component field: LANE DEPARTURE: ASSIST); intermittent, restart temporarily resolved.",
+      "started_at": "2025-08-12T07:00:21Z",
+      "step": 2,
+      "tokens": 3929,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-12T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There are two problems: (1) braking and (2) windshield wiper operation. (1) Braking: When driving on a highway and going by an on-ramp on the right side, without any warning, the vehicle would, al of a sudden, slam violently on the brakes, even though the cars entering the highwa...",
+            "group": "adas",
+            "id": "1791951",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 39.9004,
+            "year": 2020
+          },
+          {
+            "excerpt": "The Tesla lane assist and adaptive cruise control failed while I was driving on the highway (I-295 in DC). I have not paid for the full self driving, so I was using the autopilot every Model 3 uses by default. The car skidded into the barrier on the side of the highway and tore u...",
+            "group": "adas",
+            "id": "1821619",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 38.8546,
+            "year": 2020
+          },
+          {
+            "excerpt": "The Tesla lane assist and adaptive cruise control failed while I was driving on the highway (I-295 in DC). I have not paid for the full self driving, so I was using the autopilot every Model 3 uses by default. The car skidded into the barrier on the side of the highway and tore u...",
+            "group": "adas",
+            "id": "1821620",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 38.8546,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-08-12T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-12T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-08-12T07:00:27Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-12T07:00:28Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-08-12T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

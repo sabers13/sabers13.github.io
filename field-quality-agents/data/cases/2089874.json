@@ -1,0 +1,455 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2089874",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "Backup Camera has stopped work has a blue screen. Was told by Ford that it was a wiring harness that is having problems this is the 3rd time that i have had to replace it.",
+    "received_at": "2025-05-07",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2089874",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089874",
+    "decided_at": "2025-05-07T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2089874",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Backup Camera has stopped work"
+      },
+      {
+        "kind": "symptom",
+        "quote": "has a blue screen"
+      },
+      {
+        "kind": "condition",
+        "quote": "wiring harness that is having problems"
+      },
+      {
+        "kind": "condition",
+        "quote": "this is the 3rd time that i have had to replace it"
+      }
+    ],
+    "conditions": [
+      "recurring wiring harness problem",
+      "third harness replacement"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the backup-camera circuit for a recurring wiring-harness fault causing a blue screen.",
+    "symptoms": [
+      "backup camera stopped working",
+      "blue screen"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089874",
+    "created_at": "2025-05-07T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Backup Camera has stopped work",
+        "source_id": "2089874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "has a blue screen",
+        "source_id": "2089874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "wiring harness that is having problems",
+        "source_id": "2089874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "this is the 3rd time that i have had to replace it",
+        "source_id": "2089874",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the backup camera stopped working and displays a blue screen; Ford attributed it to a wiring harness problem, and the harness has reportedly been replaced three times. No rulebook, recall, or investigation match was returned, so a standard diagnostic test is proposed rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the backup-camera circuit for a recurring wiring-harness fault causing a blue screen.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "plastic oil pan leaking. had to replace it with a factory improved since many problems have been reported with this truck. Replacement cost was $1,343.87. The electrical problems deals with the radio sometimes it does not work until the next day. Has been that day since day 1 wit...",
+      "group": "electrical_general",
+      "id": "1963886",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 6.9687,
+      "year": 2016
+    },
+    {
+      "excerpt": "A) Phone will no longer connect to vehicle - California is a hands-free state. B) Intermittent screen black-outs so back-up camera not functioning during these times. C) Locks on left rear door will intermittingly not disengage requiring rear-seated passengers to exit out other s...",
+      "group": "electrical_general",
+      "id": "1982575",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 6.5193,
+      "year": 2016
+    },
+    {
+      "excerpt": "RADIO GOES BLANK SCREEN MAY GO 30 MILES BEFORE COMES BACK .WHEN COMES BACK CLOCK IS STILL RIGHT TIME ,PROGRAMMED STATION STILL THERE HAD IT TO FORD DEALERSHIP THEY SAYS SHOWS LOW VOLTAGE THE TRUCK HAS 9.000 MILES JUST TURN 3 YEARS OLD 1/31/20 STILL SUPPOSE TO UNDER WARRANTY HE AS...",
+      "group": "electrical_general",
+      "id": "1644164",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 6.0397,
+      "year": 2016
+    },
+    {
+      "excerpt": "ON 1/16/2020. I USED MY REMOTE STARTER TO START THE 2016 FORD F-150 3 MINUTES LATER I WENT OUT AND SMELLED ELECTRICAL WIRING. I SHUT OFF THE TRUCK TO LOOK AROUND. I THEN STARTED THE TRUCK BACK UP AS SOON AS I DID THAT THE BACK WINDOW BLEW OUT.. CALLED SAFELITE TO REPLACE IT THEM...",
+      "group": "electrical_general",
+      "id": "1642326",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 4.3974,
+      "year": 2016
+    },
+    {
+      "excerpt": "I WAS COMPLETING A 3 HOUR DRIVE OF APPROXIMATELY 120 MILES (I HAD LESS THAN 5 MILES TO GO TILL I ARRIVED AT MY DESTINATION) WHEN MY SENSORS STARTED LIGHTING UP MY MESSAGE BOARD AND DASH SYSTEM. I WAS IN THE LEFT TURN LANE TO ENTER THE ON-RAMP TO US65 SOUTH WHEN THIS HAPPENED SO I...",
+      "group": "electrical_general",
+      "id": "1640812",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 4.3775,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-07T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007279,
+      "duration_ms": 14588,
+      "reason": "Electrical system: backup camera stopped working with a blue screen; Ford attributed it to a recurring wiring harness problem.",
+      "started_at": "2025-05-07T07:00:16Z",
+      "step": 2,
+      "tokens": 1701,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-07T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "plastic oil pan leaking. had to replace it with a factory improved since many problems have been reported with this truck. Replacement cost was $1,343.87. The electrical problems deals with the radio sometimes it does not work until the next day. Has been that day since day 1 wit...",
+            "group": "electrical_general",
+            "id": "1963886",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.9687,
+            "year": 2016
+          },
+          {
+            "excerpt": "A) Phone will no longer connect to vehicle - California is a hands-free state. B) Intermittent screen black-outs so back-up camera not functioning during these times. C) Locks on left rear door will intermittingly not disengage requiring rear-seated passengers to exit out other s...",
+            "group": "electrical_general",
+            "id": "1982575",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.5193,
+            "year": 2016
+          },
+          {
+            "excerpt": "RADIO GOES BLANK SCREEN MAY GO 30 MILES BEFORE COMES BACK .WHEN COMES BACK CLOCK IS STILL RIGHT TIME ,PROGRAMMED STATION STILL THERE HAD IT TO FORD DEALERSHIP THEY SAYS SHOWS LOW VOLTAGE THE TRUCK HAS 9.000 MILES JUST TURN 3 YEARS OLD 1/31/20 STILL SUPPOSE TO UNDER WARRANTY HE AS...",
+            "group": "electrical_general",
+            "id": "1644164",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.0397,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-05-07T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-07T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-07T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Backup Camera has stopped work has a blue screen. Was told by Ford that it was a wiring harness that is having problems this is the 3rd time that i have had to replace it."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "plastic oil pan leaking. had to replace it with a factory improved since many problems have been reported with this truck. Replacement cost was $1,343.87. The electrical problems deals with the radio sometimes it does not work until the next day. Has been that day since day 1 wit...",
+            "group": "electrical_general",
+            "id": "1963886",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.9687,
+            "year": 2016
+          },
+          {
+            "excerpt": "A) Phone will no longer connect to vehicle - California is a hands-free state. B) Intermittent screen black-outs so back-up camera not functioning during these times. C) Locks on left rear door will intermittingly not disengage requiring rear-seated passengers to exit out other s...",
+            "group": "electrical_general",
+            "id": "1982575",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.5193,
+            "year": 2016
+          },
+          {
+            "excerpt": "RADIO GOES BLANK SCREEN MAY GO 30 MILES BEFORE COMES BACK .WHEN COMES BACK CLOCK IS STILL RIGHT TIME ,PROGRAMMED STATION STILL THERE HAD IT TO FORD DEALERSHIP THEY SAYS SHOWS LOW VOLTAGE THE TRUCK HAS 9.000 MILES JUST TURN 3 YEARS OLD 1/31/20 STILL SUPPOSE TO UNDER WARRANTY HE AS...",
+            "group": "electrical_general",
+            "id": "1644164",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 6.0397,
+            "year": 2016
+          },
+          {
+            "excerpt": "ON 1/16/2020. I USED MY REMOTE STARTER TO START THE 2016 FORD F-150 3 MINUTES LATER I WENT OUT AND SMELLED ELECTRICAL WIRING. I SHUT OFF THE TRUCK TO LOOK AROUND. I THEN STARTED THE TRUCK BACK UP AS SOON AS I DID THAT THE BACK WINDOW BLEW OUT.. CALLED SAFELITE TO REPLACE IT THEM...",
+            "group": "electrical_general",
+            "id": "1642326",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 4.3974,
+            "year": 2016
+          },
+          {
+            "excerpt": "I WAS COMPLETING A 3 HOUR DRIVE OF APPROXIMATELY 120 MILES (I HAD LESS THAN 5 MILES TO GO TILL I ARRIVED AT MY DESTINATION) WHEN MY SENSORS STARTED LIGHTING UP MY MESSAGE BOARD AND DASH SYSTEM. I WAS IN THE LEFT TURN LANE TO ENTER THE ON-RAMP TO US65 SOUTH WHEN THIS HAPPENED SO I...",
+            "group": "electrical_general",
+            "id": "1640812",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 4.3775,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-07T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-07T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-07T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006675,
+      "duration_ms": 6941,
+      "reason": "The narrative reports the backup camera stopped working and displays a blue screen; Ford attributed it to a wiring harness problem, and the harness has reportedly been replaced three times. No rulebook, recall, or investigation match was returned, so a standard diagnostic test is proposed rather than a targeted load test.",
+      "started_at": "2025-05-07T07:00:24Z",
+      "step": 10,
+      "tokens": 2188,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-05-07T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Backup Camera has stopped work",
+          "has a blue screen",
+          "wiring harness that is having problems",
+          "this is the 3rd time that i have had to replace it"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-07T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-07T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-07T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-07T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

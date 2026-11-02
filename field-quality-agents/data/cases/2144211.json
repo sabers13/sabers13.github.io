@@ -1,0 +1,401 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING:TURN SIGNAL:BULBS",
+    "group": "lighting",
+    "id": "2144211",
+    "make": "GMC",
+    "mileage": 196448,
+    "model": "ACADIA",
+    "narrative": "The contact owns a 2015 GMC Acadia. The contact stated that the center taillight was inoperable. The halo light was working as designed and then ceased operating. The headlights also became inoperable. The vehicle was taken to an independent mechanic, who replaced the bulbs and the headlight assembly. The rear signal light was blinking fast, and the light became inoperable. The message that the hood was ajar was displayed. The local dealer was not contacted. The vehicle was not diagnosed or repaired. The manufacturer was contacted and confirmed that there were no recalls on the VIN related to the failure. The failure mileage was approximately 196,448.",
+    "received_at": "2025-10-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2144211",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2144211",
+    "decided_at": "2025-10-29T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2144211",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the center taillight was inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The halo light was working as designed and then ceased operating"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The headlights also became inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The rear signal light was blinking fast, and the light became inoperable"
+      },
+      {
+        "kind": "other",
+        "quote": "The message that the hood was ajar was displayed"
+      },
+      {
+        "kind": "condition",
+        "quote": "who replaced the bulbs and the headlight assembly"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was not diagnosed or repaired"
+      }
+    ],
+    "conditions": [
+      "after bulb and headlight assembly replacement",
+      "no recalls on the VIN related to the failure"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Test the exterior lighting circuits on this 2015 GMC Acadia after multiple lamps became inoperable despite bulb and headlight assembly replacement; no rulebook match, so use the standard diagnostic test.",
+    "symptoms": [
+      "center taillight inoperable",
+      "halo light ceased operating",
+      "headlights inoperable",
+      "rear signal light blinked fast then became inoperable",
+      "hood ajar message displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2144211",
+    "created_at": "2025-10-29T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "the center taillight was inoperable",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The halo light was working as designed and then ceased operating",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The headlights also became inoperable",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The rear signal light was blinking fast, and the light became inoperable",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The message that the hood was ajar was displayed",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "who replaced the bulbs and the headlight assembly",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was not diagnosed or repaired",
+        "source_id": "2144211",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the center taillight, halo light, headlights, and rear signal light becoming inoperable, with the rear signal blinking fast before failing. Bulbs and the headlight assembly were replaced, but the vehicle was not diagnosed or repaired, and the manufacturer confirmed no related recalls. With no rulebook match and no investigation or recall result, a standard exterior lighting diagnostic test is appropriate rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the exterior lighting circuits on this 2015 GMC Acadia after multiple lamps became inoperable despite bulb and headlight assembly replacement; no rulebook match, so use the standard diagnostic test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "2015, GMC, Acadia SLT. Rear brake calipers had to be replaced out of my pocket after rear brake calipers froze and locked the brakes in the middle of traffic. This almost caused a major accident in which lives may have been lost or severe injury sustained. The rear brake calipers...",
+      "group": "lighting",
+      "id": "1777286",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 3.028,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00083575,
+      "duration_ms": 9634,
+      "reason": "2015 GMC Acadia exterior lighting/turn signal bulbs: center taillight, halo light, headlights and rear signal inoperable; fast blink and hood-ajar message.",
+      "started_at": "2025-10-29T07:00:01Z",
+      "step": 2,
+      "tokens": 1961,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-10-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "ACADIA",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2015, GMC, Acadia SLT. Rear brake calipers had to be replaced out of my pocket after rear brake calipers froze and locked the brakes in the middle of traffic. This almost caused a major accident in which lives may have been lost or severe injury sustained. The rear brake calipers...",
+            "group": "lighting",
+            "id": "1777286",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 3.028,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-10-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-10-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2015 GMC Acadia. The contact stated that the center taillight was inoperable. The halo light was working as designed and then ceased operating. The headlights also became inoperable. The vehicle was taken to an independent mechanic, who replaced the bulbs and the headlight assembly. The rear signal light was blinking fast, and the light became inoperable. The message that the hood was ajar was displayed. The local dealer was not contacted. The vehicle was not diagnosed or repa"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2015, GMC, Acadia SLT. Rear brake calipers had to be replaced out of my pocket after rear brake calipers froze and locked the brakes in the middle of traffic. This almost caused a major accident in which lives may have been lost or severe injury sustained. The rear brake calipers...",
+            "group": "lighting",
+            "id": "1777286",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 3.028,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-29T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "GMC",
+        "model": "ACADIA",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-29T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "GMC",
+        "model": "ACADIA",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-29T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.000987,
+      "duration_ms": 9855,
+      "reason": "The narrative reports the center taillight, halo light, headlights, and rear signal light becoming inoperable, with the rear signal blinking fast before failing. Bulbs and the headlight assembly were replaced, but the vehicle was not diagnosed or repaired, and the manufacturer confirmed no related recalls. With no rulebook match and no investigation or recall result, a standard exterior lighting diagnostic test is appropriate rather than a targeted load test.",
+      "started_at": "2025-10-29T07:00:09Z",
+      "step": 10,
+      "tokens": 2440,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-10-29T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "the center taillight was inoperable",
+          "The halo light was working as designed and then ceased operating",
+          "The headlights also became inoperable",
+          "The rear signal light was blinking fast, and the light became inoperable",
+          "The message that the hood was ajar was displayed",
+          "who replaced the bulbs and the headlight assembly",
+          "The vehicle was not diagnosed or repaired"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-29T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-29T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-29T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-29T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

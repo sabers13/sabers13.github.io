@@ -1,0 +1,299 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2094776",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 5",
+    "narrative": "My car’s ICCU (Integrated Charging Control Unit) failed, causing the 12-volt battery to stop charging and die, leading to a loss of power to the vehicle, resulting in the vehicle being completely immobile.   I was driving on a busy road when all of a sudden the car started to slow down dangerously which almost caused the cars behind me to crash into me. The car's screen said it was entering limp mode. Then the vehicle completely stopped. I was stranded far away from home. I had to call a tow truck to tow the car to the dealer.  The problem was confirmed by the dealer. The dealer confirmed the ICCU and 12-v battery failed. The dealer took 3months to repair the car.",
+    "received_at": "2025-05-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2094776",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2094776",
+    "decided_at": "2025-05-24T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2094776",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ICCU (Integrated Charging Control Unit) failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "12-volt battery to stop charging and die"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loss of power to the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle being completely immobile"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving on a busy road"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car started to slow down dangerously"
+      },
+      {
+        "kind": "safety",
+        "quote": "which almost caused the cars behind me to crash into me"
+      },
+      {
+        "kind": "symptom",
+        "quote": "entering limp mode"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Then the vehicle completely stopped"
+      },
+      {
+        "kind": "condition",
+        "quote": "12-volt battery to stop charging"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Hyundai Ioniq 5 ICCU failure caused 12-volt battery not charging, loss of power, limp mode and immobility while driving on a busy road.",
+    "symptoms": [
+      "ICCU failure",
+      "12-volt battery not charging",
+      "loss of power",
+      "vehicle immobile",
+      "dangerous slowdown",
+      "limp mode",
+      "vehicle stopped"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2094776",
+    "created_at": "2025-05-24T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving on a 45 mph speed limit road, there was a \"pop\" noise and then alarms on the dash display that power was limited and stop the car. The car's speed was severely limited to about 10 mph for a few seconds while I pulled the car over, and then the car died. Everything w...",
+      "group": "electrical_general",
+      "id": "2051340",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 18.3133,
+      "year": 2023
+    },
+    {
+      "excerpt": "[XXX] - Took Hyundai IONIQ 5 to All Star Hyundai Pittsburg for servicing and recall issue. [XXX]: Saw an error reading CHECK ELECTRIC VEHICLE SYSTEM! on the IONIQ 5, after which a BlueLink rep was connected and stated I needed to take the car to a dealership ASAP. No appt availab...",
+      "group": "electrical_general",
+      "id": "1994985",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 18.0231,
+      "year": 2023
+    },
+    {
+      "excerpt": "I was driving 45 miles per hour on a 2 lane highway, when the car suddenly started beeping, lurched, and dropped to 25 miles per hour (low power mode). After pulling over at a gas station, I was able to run the car in this low power mode for a short time, and then the 12V battery...",
+      "group": "electrical_general",
+      "id": "1975782",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 17.956,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-24T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0014155,
+      "duration_ms": 16673,
+      "reason": "Hyundai Ioniq 5 ICCU failure caused 12-volt battery not charging, loss of power, limp mode and immobility while driving on a busy road.",
+      "started_at": "2025-05-24T07:00:01Z",
+      "step": 2,
+      "tokens": 2934,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-24T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving on a 45 mph speed limit road, there was a \"pop\" noise and then alarms on the dash display that power was limited and stop the car. The car's speed was severely limited to about 10 mph for a few seconds while I pulled the car over, and then the car died. Everything w...",
+            "group": "electrical_general",
+            "id": "2051340",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 18.3133,
+            "year": 2023
+          },
+          {
+            "excerpt": "[XXX] - Took Hyundai IONIQ 5 to All Star Hyundai Pittsburg for servicing and recall issue. [XXX]: Saw an error reading CHECK ELECTRIC VEHICLE SYSTEM! on the IONIQ 5, after which a BlueLink rep was connected and stated I needed to take the car to a dealership ASAP. No appt availab...",
+            "group": "electrical_general",
+            "id": "1994985",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 18.0231,
+            "year": 2023
+          },
+          {
+            "excerpt": "I was driving 45 miles per hour on a 2 lane highway, when the car suddenly started beeping, lurched, and dropped to 25 miles per hour (low power mode). After pulling over at a gas station, I was able to run the car in this low power mode for a short time, and then the 12V battery...",
+            "group": "electrical_general",
+            "id": "1975782",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 17.956,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-24T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-24T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-24T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-24T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-24T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-24T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-24T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

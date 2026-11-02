@@ -1,0 +1,684 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2096020",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "PASSAT",
+    "narrative": "The contact owns a 2013 Volkswagen Passat. The contact received notification of NHTSA Campaign Number: 24V834000 (AIR BAGS); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue, and informed the contact that the part was currently on back order. The contact had not experienced a failure. Parts distribution disconnect.",
+    "received_at": "2025-05-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2096020",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096020",
+    "decided_at": "2025-05-29T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2096020",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V834000 (AIR BAGS)"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was unavailable"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part was currently on back order"
+      },
+      {
+        "kind": "condition",
+        "quote": "the manufacturer had exceeded a reasonable amount of time for the recall repair"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "other",
+        "quote": "Parts distribution disconnect."
+      }
+    ],
+    "conditions": [
+      "recall repair part unavailable",
+      "part currently on back order",
+      "manufacturer exceeded reasonable amount of time for recall repair"
+    ],
+    "fault_codes": [
+      "24V834000"
+    ],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "Recall 24V834000 air bag inflator remedy is unavailable due to a back-ordered part; no failure is reported, so verify recall status and use the standard restraint test.",
+    "symptoms": []
+  },
+  "investigations": [
+    {
+      "id": "EA18003",
+      "match": true,
+      "open_date": "2018-04-18",
+      "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922"
+    },
+    {
+      "id": "EA18003",
+      "match": true,
+      "open_date": "2018-04-18",
+      "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922"
+    },
+    {
+      "id": "EA18003",
+      "match": true,
+      "open_date": "2018-04-18",
+      "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922"
+    },
+    {
+      "id": "RQ17009",
+      "match": true,
+      "open_date": "2017-11-13",
+      "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.This Recall Query has been upgraded to an Engineering Analysis (EA18-003) to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 107626"
+    },
+    {
+      "id": "RQ17009",
+      "match": true,
+      "open_date": "2017-11-13",
+      "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.This Recall Query has been upgraded to an Engineering Analysis (EA18-003) to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 107626"
+    },
+    {
+      "id": "PE15010",
+      "match": true,
+      "open_date": "2015-03-24",
+      "summary": "The Office of Defects Investigation (ODI) opened an investigation based on consumer allegations of steering wheel clock spring/steering column control module (SCCM) failures in model year (MY) 2012 Volkswagen Passat and CC models.The SCCM is a module within the steering column that incorporates a spiral conductor (a ribbon cable) to electrically connect the steering wheel to the vehicle's electrical system while allowing for the turning of the steering wheel.Complainants alleged that that the clock spring failed while driving and without warning.When the SCCM fails electrically, an air bag warning light is illuminated on the dash of the vehicle.If a vehicle with a failed SCCM were to be involved in a crash of sufficient severity to require deployment, the driver air bag may not deploy properly, or deploy at all.As the result of an Information Request response from Volkswagen, ODI determined that the same SCCM was used in several vehicle models and MYs including: 2010-2013 CC, 2010-2013 Eos, 2011-2013 Golf, 2012-2013 Jetta and Jetta SportWagen, 2010 and 2012-2014 Passat and 2011-2014 Tiguan.ODI identified a total of 29 NHTSA complaints across all affected vehicles potentially indicating a failed SCCM.Drivers often indicated that an audible noise was heard from the steering column when the unit failed. Some drivers also mentioned that there was a noticeable but minor resistance to turning of the steering wheel after the failure with noises coming from the steering column.The average failure mileage is approximately 30,500 miles and failures often occur outside of the factory warranty.There were no reported crashes or injuries identified in either the NHTSA or Volkswagen data as a result of SCCM failures.On July 30th, 2015 Volkswagen notified ODI that it would conduct a safety recall (15V-483) to remedy the SCCMs in 415,825 MY2010-2014 vehicles.According to Volkswagen, the SCCM can become contaminated with human hair or similar fibers entering the unit between the steering wheel and steering column.Over time this can cause the electrical cable to tear and lose connection between the steering wheel and vehicle.Volkswagen will install a cover that attaches over the SCCM to help prevent contaminants from entering the unit.A new SCCM designed to reduce outside contamination intrusion was previously introduced into new vehicle production during the 2014 model year; accordingly vehicles equipped with the new design SCCM are not included in the recall.The recall action initiated by the manufacturer addresses the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues under the following identification (ODI) numbers: 10760644, 10758777, 10748922, 110734168, 10731545, 10721424, 10717651, 10715305, 10713742, 10713139, 10712295, 10711945, 10704830, 10704221, 10702926, 10702212, 10701406, 10691906, 10683944, 10682136, 10672715, 10670517, 10669312, 10628549, 10607240, 10575783, 10561143, 10552113, 10397670."
+    },
+    {
+      "id": "PE15010",
+      "match": true,
+      "open_date": "2015-03-24",
+      "summary": "The Office of Defects Investigation (ODI) opened an investigation based on consumer allegations of steering wheel clock spring/steering column control module (SCCM) failures in model year (MY) 2012 Volkswagen Passat and CC models.The SCCM is a module within the steering column that incorporates a spiral conductor (a ribbon cable) to electrically connect the steering wheel to the vehicle's electrical system while allowing for the turning of the steering wheel.Complainants alleged that that the clock spring failed while driving and without warning.When the SCCM fails electrically, an air bag warning light is illuminated on the dash of the vehicle.If a vehicle with a failed SCCM were to be involved in a crash of sufficient severity to require deployment, the driver air bag may not deploy properly, or deploy at all.As the result of an Information Request response from Volkswagen, ODI determined that the same SCCM was used in several vehicle models and MYs including: 2010-2013 CC, 2010-2013 Eos, 2011-2013 Golf, 2012-2013 Jetta and Jetta SportWagen, 2010 and 2012-2014 Passat and 2011-2014 Tiguan.ODI identified a total of 29 NHTSA complaints across all affected vehicles potentially indicating a failed SCCM.Drivers often indicated that an audible noise was heard from the steering column when the unit failed. Some drivers also mentioned that there was a noticeable but minor resistance to turning of the steering wheel after the failure with noises coming from the steering column.The average failure mileage is approximately 30,500 miles and failures often occur outside of the factory warranty.There were no reported crashes or injuries identified in either the NHTSA or Volkswagen data as a result of SCCM failures.On July 30th, 2015 Volkswagen notified ODI that it would conduct a safety recall (15V-483) to remedy the SCCMs in 415,825 MY2010-2014 vehicles.According to Volkswagen, the SCCM can become contaminated with human hair or similar fibers entering the unit between the steering wheel and steering column.Over time this can cause the electrical cable to tear and lose connection between the steering wheel and vehicle.Volkswagen will install a cover that attaches over the SCCM to help prevent contaminants from entering the unit.A new SCCM designed to reduce outside contamination intrusion was previously introduced into new vehicle production during the 2014 model year; accordingly vehicles equipped with the new design SCCM are not included in the recall.The recall action initiated by the manufacturer addresses the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues under the following identification (ODI) numbers: 10760644, 10758777, 10748922, 110734168, 10731545, 10721424, 10717651, 10715305, 10713742, 10713139, 10712295, 10711945, 10704830, 10704221, 10702926, 10702212, 10701406, 10691906, 10683944, 10682136, 10672715, 10670517, 10669312, 10628549, 10607240, 10575783, 10561143, 10552113, 10397670."
+    }
+  ],
+  "proposal": {
+    "case_id": "2096020",
+    "created_at": "2025-05-29T07:00:41Z",
+    "evidence": [
+      {
+        "quote": "AIR BAGS",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 24V834000 (AIR BAGS)",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was unavailable",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part was currently on back order",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the manufacturer had exceeded a reasonable amount of time for the recall repair",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Parts distribution disconnect.",
+        "source_id": "2096020",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative says the owner received notice of NHTSA Campaign Number 24V834000 for air bags, but the recall repair part was unavailable and on back order. The owner had not experienced a failure. No rulebook entry matches these facts, so a targeted load test is not indicated and the standard test is proposed.",
+    "requested_info": [],
+    "summary": "Recall 24V834000 air bag inflator remedy is unavailable due to a back-ordered part; no failure is reported, so verify recall status and use the standard restraint test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "24V834000",
+      "match": true,
+      "open_date": "2024-10-30",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2017-2019 Beetle, Beetle Convertible, 2012-2014 Passat, 2017 Passat Wagon, and 2006-2007 Passat Sedan vehicles.  The driver's side frontal air bag inflator may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, high temperatures, and high temperature cycling."
+    },
+    {
+      "id": "19V862000",
+      "match": true,
+      "open_date": "2019-12-04",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2012-2015 Passat, 2011-2014 Golf A6, and 2011-2013 Audi A3 diesel vehicles, thought to have been previously repaired under one of the Takata air bag recalls.  The driver's side air bag inflator may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, high temperatures, and high temperature cycling."
+    },
+    {
+      "id": "18V148000",
+      "match": true,
+      "open_date": "2018-03-06",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2009-2014 Volkswagen CC, 2010-2014 Golf, 2010-2014 Eos, 2007-2010 Passat Sedan and Wagon, and 2012-2014 Passat vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode."
+    },
+    {
+      "id": "16V078000",
+      "match": true,
+      "open_date": "2016-02-10",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain model year 2010-2014 Golf, 2007-2010 Passat sedans and wagon, 2012-2014 Passat sedan and Eos, 2009-2014 CC, 2009-2012 Audi Q5, 2010-2012 S5 Cabriolet and 2010-2012 Audi A5 Cabriolet vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to rupture."
+    },
+    {
+      "id": "15V483000",
+      "match": true,
+      "open_date": "2015-08-04",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain model year 2010-2014 Volkswagen CC, and Passat, 2010-2013 Eos, 2011-2014 Golf, GTI, Jetta, and Tiguan, and 2012-2014 Jetta Sportwagen vehicles.  In the affected vehicles, debris may contaminate the air bag clock spring, a spiral wound, flat cable that keeps the air bag powered while the steering wheel is being turned.  This contamination may tear the cable and result in a loss of electrical connection to the driver's frontal air bag."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "The clock spring was diagnosed to be faulty in February '22 and a new part was ordered and not in yet. This has made the airbag, wipers and horn stop working. This is a failure that affects thousands of VWs and they have no idea when the new parts will be available. This auto is...",
+      "group": "restraints",
+      "id": "1831268",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 7.412,
+      "year": 2013
+    },
+    {
+      "excerpt": "My clock spring broke in December, I am 50 on the list at our dealer. We called another dealer and was told it is a National back order and there are thousands on back order.. I called VW customer care and there does not seem to be any sense of urgency to rectify this. They are b...",
+      "group": "restraints",
+      "id": "1820777",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 5.8066,
+      "year": 2013
+    },
+    {
+      "excerpt": "I was turning into my driveway when I heard a strange clicking noise coming form the steering wheel column. As soon as I heard the clicking sound the airbag indicator light started flashing on my dashboard and the buttons on my steering wheel stopped working. Did some research on...",
+      "group": "restraints",
+      "id": "1948124",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 5.4443,
+      "year": 2013
+    },
+    {
+      "excerpt": "AIR BAG AND ALL STEERING WHEEL CONTROLS FAILED. HAD SIMILAR ISSUE AND HAD CLOCK SPRING REPLACE 12/26/2016 AND APPEARS TO HAVE FAILED AGAIN 4 YEARS LATER.",
+      "group": "restraints",
+      "id": "1714671",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 4.7184,
+      "year": 2013
+    },
+    {
+      "excerpt": "On 12/24/21, while driving the Passat and turning, a loud bang could be heard in the steering column and the airbag light illuminated. All steering wheel controls, such as the radio, screen toggles, volume and other associated controls ceased working. Drove straight to our truste...",
+      "group": "restraints",
+      "id": "1809582",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 4.6384,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-29T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011563,
+      "duration_ms": 14819,
+      "reason": "AIR BAGS recall repair unavailable due to back-ordered part; no failure experienced.",
+      "started_at": "2025-05-29T07:00:31Z",
+      "step": 2,
+      "tokens": 2457,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-29T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "PASSAT",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The clock spring was diagnosed to be faulty in February '22 and a new part was ordered and not in yet. This has made the airbag, wipers and horn stop working. This is a failure that affects thousands of VWs and they have no idea when the new parts will be available. This auto is...",
+            "group": "restraints",
+            "id": "1831268",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 7.412,
+            "year": 2013
+          },
+          {
+            "excerpt": "My clock spring broke in December, I am 50 on the list at our dealer. We called another dealer and was told it is a National back order and there are thousands on back order.. I called VW customer care and there does not seem to be any sense of urgency to rectify this. They are b...",
+            "group": "restraints",
+            "id": "1820777",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 5.8066,
+            "year": 2013
+          },
+          {
+            "excerpt": "I was turning into my driveway when I heard a strange clicking noise coming form the steering wheel column. As soon as I heard the clicking sound the airbag indicator light started flashing on my dashboard and the buttons on my steering wheel stopped working. Did some research on...",
+            "group": "restraints",
+            "id": "1948124",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 5.4443,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-29T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-29T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-29T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2013 Volkswagen Passat. The contact received notification of NHTSA Campaign Number: 24V834000 (AIR BAGS); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue, and informed the contact that the part was currently on back order. The contact had not experienced a failure. Parts distribution disconnect."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The clock spring was diagnosed to be faulty in February '22 and a new part was ordered and not in yet. This has made the airbag, wipers and horn stop working. This is a failure that affects thousands of VWs and they have no idea when the new parts will be available. This auto is...",
+            "group": "restraints",
+            "id": "1831268",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 7.412,
+            "year": 2013
+          },
+          {
+            "excerpt": "My clock spring broke in December, I am 50 on the list at our dealer. We called another dealer and was told it is a National back order and there are thousands on back order.. I called VW customer care and there does not seem to be any sense of urgency to rectify this. They are b...",
+            "group": "restraints",
+            "id": "1820777",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 5.8066,
+            "year": 2013
+          },
+          {
+            "excerpt": "I was turning into my driveway when I heard a strange clicking noise coming form the steering wheel column. As soon as I heard the clicking sound the airbag indicator light started flashing on my dashboard and the buttons on my steering wheel stopped working. Did some research on...",
+            "group": "restraints",
+            "id": "1948124",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 5.4443,
+            "year": 2013
+          },
+          {
+            "excerpt": "AIR BAG AND ALL STEERING WHEEL CONTROLS FAILED. HAD SIMILAR ISSUE AND HAD CLOCK SPRING REPLACE 12/26/2016 AND APPEARS TO HAVE FAILED AGAIN 4 YEARS LATER.",
+            "group": "restraints",
+            "id": "1714671",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 4.7184,
+            "year": 2013
+          },
+          {
+            "excerpt": "On 12/24/21, while driving the Passat and turning, a loud bang could be heard in the steering column and the airbag light illuminated. All steering wheel controls, such as the radio, screen toggles, volume and other associated controls ceased working. Drove straight to our truste...",
+            "group": "restraints",
+            "id": "1809582",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 4.6384,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-29T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "VOLKSWAGEN",
+        "model": "PASSAT",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "24V834000",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2024-10-30",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2017-2019 Beetle, Beetle Convertible, 2012-2014 Passat, 2017 Passat Wagon, and 2006-2007 Passat Sedan vehicles.  The driver's side frontal air bag inflator may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, high temperatures, and high temperature cycling.",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "19V862000",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2019-12-04",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2012-2015 Passat, 2011-2014 Golf A6, and 2011-2013 Audi A3 diesel vehicles, thought to have been previously repaired under one of the Takata air bag recalls.  The driver's side air bag inflator may explode due to propellant degradation occurring after long-term exposure to high absolute humidity, high temperatures, and high temperature cycling.",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "18V148000",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2018-03-06",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2009-2014 Volkswagen CC, 2010-2014 Golf, 2010-2014 Eos, 2007-2010 Passat Sedan and Wagon, and 2012-2014 Passat vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode.",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "16V078000",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2016-02-10",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain model year 2010-2014 Golf, 2007-2010 Passat sedans and wagon, 2012-2014 Passat sedan and Eos, 2009-2014 CC, 2009-2012 Audi Q5, 2010-2012 S5 Cabriolet and 2010-2012 Audi A5 Cabriolet vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to rupture.",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "15V483000",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2015-08-04",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain model year 2010-2014 Volkswagen CC, and Passat, 2010-2013 Eos, 2011-2014 Golf, GTI, Jetta, and Tiguan, and 2012-2014 Jetta Sportwagen vehicles.  In the affected vehicles, debris may contaminate the air bag clock spring, a spiral wound, flat cable that keeps the air bag powered while the steering wheel is being turned.  This contamination may tear the cable and result in a loss of electrical connection to the driver's frontal air bag.",
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-29T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "VOLKSWAGEN",
+        "model": "PASSAT",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS",
+            "group": "restraints",
+            "id": "EA18003",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2018-04-18",
+            "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "EA18003",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2018-04-18",
+            "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER CLOCKSPRING/SPIRAL CASSETTE",
+            "group": "restraints",
+            "id": "EA18003",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2018-04-18",
+            "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.An Engineering Analysis has been opened to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a thorough review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 10762670, 10760644, 10758777, 10749901, 10748922",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "RQ17009",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2017-11-13",
+            "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.This Recall Query has been upgraded to an Engineering Analysis (EA18-003) to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 107626",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER CLOCKSPRING/SPIRAL CASSETTE",
+            "group": "restraints",
+            "id": "RQ17009",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2017-11-13",
+            "summary": "In August 2015, Volkswagen Group of America, Inc. (Volkswagen) launched Safety Recall 15V-483 to address the loss of the protection provided by the front driver air bag in several models due to the failure of the clockspring.Debris entry into the steering wheel hub can result in contamination and ultimately failure of the clockspring in 2010-2014 Model Year (MY) CC, Passat, Eos, Golf, GTI, Tiguan, Jetta and Jetta Sportwagen models.Contamination of the clockspring can cause the ribbon cable to tear resulting in loss of the electrical connection to the front driver air bag and any steering wheel mounted controls.The loss of the electrical connection to the front driver air bag will result in illumination of the air bag warning light and will prevent operation of the front driver air bag in a crash of sufficient severity requiring a commanded deployment.In November 2017, the Office of Defects Investigation (ODI) opened a Recall Query (RQ17-009) after the agency received 90 complaints alleging failure of the clockspring in the subject models.Several of the complaints allege failure of the clockspring after receiving the recall remedy.The majority of the complaints allege the same failure mode without being included in the original recall, 15V-483.In its March 2018 response to ODI's Information Request under the Recall Query, Volkswagen provided approximately 700 consumer complaints and field reports on the recalled vehicles.These reports allege clockspring failure similar to the NHTSA reports described above.To date, NHTSA has received approximately 154 allegations of clockspring failure since the recall has launched.The total of 852 reports shown in the table above eliminates 6 duplicative reports received by ODI and the manufacturer.This Recall Query has been upgraded to an Engineering Analysis (EA18-003) to further evaluate the scope and effectiveness of the remedy associated with 15V-483 and perform a review of the design changes implemented by Volkswagen and its suppliers to address this issue.The ODI complaints cited above can be viewed at www.NHTSA.gov under the following ODI identification numbers: 11080741, 11079877, 11079805, 11079124, 11076709, 11076645, 11076297, 11076249, 11076133, 11075756, 11075726, 11075358, 11075259, 11075055, 11074920, 11074565, 11073090, 11072745, 11072457, 11072089, 11071933, 11071880, 11071630, 11071592, 11067396, 11067061, 11066738, 11066601, 11066511, 11065909, 11065871, 11065262, 11064701, 11064564, 11064544, 11064531, 11063961, 11063501, 11063095, 11062772, 11062464, 11062353, 11062344, 11061463, 11061310, 11061311, 11060735, 11058154, 11057519, 11057477, 11057341, 11056793, 11056243, 11056063, 11055639, 11054279, 11052812, 11052678, 11052384, 11052228, 11051336, 11051155, 11051074, 11048803, 11047037, 11044226, 11043653, 11039142, 11033893, 11033330, 11032548, 11025475, 11025356, 11024647, 11023423, 11020570, 11020312, 11019415, 11019067, 11015441, 11015431, 11014595, 11014016, 11013709, 11013415, 11012596, 11011753, 11006668, 11006521, 11006307, 11006181, 11005301, 11003865, 11001780, 11001783, 11001334, 10994184, 10993360, 10993524, 10992490, 10985926, 10983678, 10981220, 10980831, 10980941, 10980549, 10979418, 10971152, 10967344, 10967155, 10959968, 10958624, 10957279, 10956488, 10949129, 10947562, 10945122, 10936498, 10936543, 10933950, 10927311, 10925421, 10924034, 10915612, 10915569, 10911171, 10902066, 10898733, 10896537, 10896510, 10895526, 10893938, 10891686, 10864967, 10863742, 10861984, 10851242, 10822505, 10821562, 10818403, 10795068, 10794402, 10788738, 10787804, 10782544, 10780725, 10780145, 10779145, 10776477, 10775448, 10763492, 10763423, 10763289, 107626",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS",
+            "group": "restraints",
+            "id": "PE15010",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2015-03-24",
+            "summary": "The Office of Defects Investigation (ODI) opened an investigation based on consumer allegations of steering wheel clock spring/steering column control module (SCCM) failures in model year (MY) 2012 Volkswagen Passat and CC models.The SCCM is a module within the steering column that incorporates a spiral conductor (a ribbon cable) to electrically connect the steering wheel to the vehicle's electrical system while allowing for the turning of the steering wheel.Complainants alleged that that the clock spring failed while driving and without warning.When the SCCM fails electrically, an air bag warning light is illuminated on the dash of the vehicle.If a vehicle with a failed SCCM were to be involved in a crash of sufficient severity to require deployment, the driver air bag may not deploy properly, or deploy at all.As the result of an Information Request response from Volkswagen, ODI determined that the same SCCM was used in several vehicle models and MYs including: 2010-2013 CC, 2010-2013 Eos, 2011-2013 Golf, 2012-2013 Jetta and Jetta SportWagen, 2010 and 2012-2014 Passat and 2011-2014 Tiguan.ODI identified a total of 29 NHTSA complaints across all affected vehicles potentially indicating a failed SCCM.Drivers often indicated that an audible noise was heard from the steering column when the unit failed. Some drivers also mentioned that there was a noticeable but minor resistance to turning of the steering wheel after the failure with noises coming from the steering column.The average failure mileage is approximately 30,500 miles and failures often occur outside of the factory warranty.There were no reported crashes or injuries identified in either the NHTSA or Volkswagen data as a result of SCCM failures.On July 30th, 2015 Volkswagen notified ODI that it would conduct a safety recall (15V-483) to remedy the SCCMs in 415,825 MY2010-2014 vehicles.According to Volkswagen, the SCCM can become contaminated with human hair or similar fibers entering the unit between the steering wheel and steering column.Over time this can cause the electrical cable to tear and lose connection between the steering wheel and vehicle.Volkswagen will install a cover that attaches over the SCCM to help prevent contaminants from entering the unit.A new SCCM designed to reduce outside contamination intrusion was previously introduced into new vehicle production during the 2014 model year; accordingly vehicles equipped with the new design SCCM are not included in the recall.The recall action initiated by the manufacturer addresses the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues under the following identification (ODI) numbers: 10760644, 10758777, 10748922, 110734168, 10731545, 10721424, 10717651, 10715305, 10713742, 10713139, 10712295, 10711945, 10704830, 10704221, 10702926, 10702212, 10701406, 10691906, 10683944, 10682136, 10672715, 10670517, 10669312, 10628549, 10607240, 10575783, 10561143, 10552113, 10397670.",
+            "year": 2013
+          },
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "PE15010",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "open_date": "2015-03-24",
+            "summary": "The Office of Defects Investigation (ODI) opened an investigation based on consumer allegations of steering wheel clock spring/steering column control module (SCCM) failures in model year (MY) 2012 Volkswagen Passat and CC models.The SCCM is a module within the steering column that incorporates a spiral conductor (a ribbon cable) to electrically connect the steering wheel to the vehicle's electrical system while allowing for the turning of the steering wheel.Complainants alleged that that the clock spring failed while driving and without warning.When the SCCM fails electrically, an air bag warning light is illuminated on the dash of the vehicle.If a vehicle with a failed SCCM were to be involved in a crash of sufficient severity to require deployment, the driver air bag may not deploy properly, or deploy at all.As the result of an Information Request response from Volkswagen, ODI determined that the same SCCM was used in several vehicle models and MYs including: 2010-2013 CC, 2010-2013 Eos, 2011-2013 Golf, 2012-2013 Jetta and Jetta SportWagen, 2010 and 2012-2014 Passat and 2011-2014 Tiguan.ODI identified a total of 29 NHTSA complaints across all affected vehicles potentially indicating a failed SCCM.Drivers often indicated that an audible noise was heard from the steering column when the unit failed. Some drivers also mentioned that there was a noticeable but minor resistance to turning of the steering wheel after the failure with noises coming from the steering column.The average failure mileage is approximately 30,500 miles and failures often occur outside of the factory warranty.There were no reported crashes or injuries identified in either the NHTSA or Volkswagen data as a result of SCCM failures.On July 30th, 2015 Volkswagen notified ODI that it would conduct a safety recall (15V-483) to remedy the SCCMs in 415,825 MY2010-2014 vehicles.According to Volkswagen, the SCCM can become contaminated with human hair or similar fibers entering the unit between the steering wheel and steering column.Over time this can cause the electrical cable to tear and lose connection between the steering wheel and vehicle.Volkswagen will install a cover that attaches over the SCCM to help prevent contaminants from entering the unit.A new SCCM designed to reduce outside contamination intrusion was previously introduced into new vehicle production during the 2014 model year; accordingly vehicles equipped with the new design SCCM are not included in the recall.The recall action initiated by the manufacturer addresses the safety risks identified by the investigation.Accordingly, the investigation is closed.The ODI reports cited above can be reviewed at http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues under the following identification (ODI) numbers: 10760644, 10758777, 10748922, 110734168, 10731545, 10721424, 10717651, 10715305, 10713742, 10713139, 10712295, 10711945, 10704830, 10704221, 10702926, 10702212, 10701406, 10691906, 10683944, 10682136, 10672715, 10670517, 10669312, 10628549, 10607240, 10575783, 10561143, 10552113, 10397670.",
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-29T07:00:38Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0022959,
+      "duration_ms": 10225,
+      "reason": "The narrative says the owner received notice of NHTSA Campaign Number 24V834000 for air bags, but the recall repair part was unavailable and on back order. The owner had not experienced a failure. No rulebook entry matches these facts, so a targeted load test is not indicated and the standard test is proposed.",
+      "started_at": "2025-05-29T07:00:39Z",
+      "step": 10,
+      "tokens": 11535,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-05-29T07:00:40Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "AIR BAGS",
+          "NHTSA Campaign Number: 24V834000 (AIR BAGS)",
+          "the part to do the recall repair was unavailable",
+          "the part was currently on back order",
+          "the manufacturer had exceeded a reasonable amount of time for the recall repair",
+          "The contact had not experienced a failure.",
+          "Parts distribution disconnect."
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-29T07:00:42Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-29T07:00:44Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-29T07:00:45Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-29T07:00:46Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

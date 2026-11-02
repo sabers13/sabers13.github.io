@@ -1,0 +1,364 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2158575",
+    "make": "LAND ROVER",
+    "mileage": 110000,
+    "model": "RANGE ROVER",
+    "narrative": "Odometer Fraud. The contact purchased a 2017 Land Rover Range Rover. The contact stated that by viewing the paperwork signed at the dealer, upon receiving the vehicle, a mileage discrepancy was discovered after the purchase. The vehicle was a dealer sale. At the time of purchase, the vehicle mileage was 110,000. It was later discovered that the vehicle’s title mileage was 93,083, and based on the Carfax report, 93,083 and the current mileage on the vehicle was 98,800.",
+    "received_at": "2025-12-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2158575",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158575",
+    "decided_at": "2025-12-18T07:00:42Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2158575",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a mileage discrepancy was discovered after the purchase"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was a dealer sale."
+      },
+      {
+        "kind": "condition",
+        "quote": "At the time of purchase, the vehicle mileage was 110,000."
+      },
+      {
+        "kind": "other",
+        "quote": "title mileage was 93,083"
+      },
+      {
+        "kind": "other",
+        "quote": "current mileage on the vehicle was 98,800"
+      }
+    ],
+    "conditions": [
+      "dealer sale",
+      "purchase mileage 110,000",
+      "title mileage 93,083",
+      "Carfax/current mileage 98,800"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Verify odometer/instrument-cluster integrity and mileage history because a dealer-purchased Range Rover shows lower title/Carfax mileage than purchase/current readings.",
+    "symptoms": [
+      "odometer fraud",
+      "mileage discrepancy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158575",
+    "created_at": "2025-12-18T07:00:40Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "a mileage discrepancy was discovered after the purchase",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was a dealer sale.",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "At the time of purchase, the vehicle mileage was 110,000.",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "title mileage was 93,083",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "current mileage on the vehicle was 98,800",
+        "source_id": "2158575",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports odometer fraud: the purchase mileage was 110,000, the title mileage was 93,083, and the Carfax/current mileage was 98,800. The only recall in the results (17V679000) concerns an intermittently blank instrument cluster, not a mileage discrepancy, and the rulebook has no matching entry. No targeted load test applies, so a standard odometer/instrument-cluster verification is appropriate.",
+    "requested_info": [],
+    "summary": "Verify odometer/instrument-cluster integrity and mileage history because a dealer-purchased Range Rover shows lower title/Carfax mileage than purchase/current readings.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "17V679000",
+      "match": true,
+      "open_date": "2017-10-26",
+      "summary": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2017 Land Rover Range Rover and Range Rover Sport vehicles.  The instrument cluster (IC) may intermittently go blank."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-18T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009043,
+      "duration_ms": 11979,
+      "reason": "Speedometer/odometer (instrumentation): odometer fraud with mileage discrepancy found after dealer purchase; title/Carfax mileage lower than purchase/current mileage.",
+      "started_at": "2025-12-18T07:00:31Z",
+      "step": 2,
+      "tokens": 2061,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-18T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "LAND ROVER",
+        "model": "RANGE ROVER",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-18T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-12-18T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2017 Land Rover Range Rover. The contact stated that by viewing the paperwork signed at the dealer, upon receiving the vehicle, a mileage discrepancy was discovered after the purchase. The vehicle was a dealer sale. At the time of purchase, the vehicle mileage was 110,000. It was later discovered that the vehicle’s title mileage was 93,083, and based on the Carfax report, 93,083 and the current mileage on the vehicle was 98,800."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-18T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "LAND ROVER",
+        "model": "RANGE ROVER",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+            "group": "instrumentation",
+            "id": "17V679000",
+            "make": "LAND ROVER",
+            "model": "RANGE ROVER",
+            "open_date": "2017-10-26",
+            "summary": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2017 Land Rover Range Rover and Range Rover Sport vehicles.  The instrument cluster (IC) may intermittently go blank.",
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-18T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "LAND ROVER",
+        "model": "RANGE ROVER",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-18T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0009,
+      "duration_ms": 8731,
+      "reason": "The narrative reports odometer fraud: the purchase mileage was 110,000, the title mileage was 93,083, and the Carfax/current mileage was 98,800. The only recall in the results (17V679000) concerns an intermittently blank instrument cluster, not a mileage discrepancy, and the rulebook has no matching entry. No targeted load test applies, so a standard odometer/instrument-cluster verification is appropriate.",
+      "started_at": "2025-12-18T07:00:38Z",
+      "step": 9,
+      "tokens": 2217,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-12-18T07:00:39Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud",
+          "a mileage discrepancy was discovered after the purchase",
+          "The vehicle was a dealer sale.",
+          "At the time of purchase, the vehicle mileage was 110,000.",
+          "title mileage was 93,083",
+          "current mileage on the vehicle was 98,800"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-18T07:00:41Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-18T07:00:43Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-18T07:00:44Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-18T07:00:45Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

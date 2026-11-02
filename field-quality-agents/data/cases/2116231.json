@@ -1,0 +1,223 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2116231",
+    "make": "RAM",
+    "mileage": null,
+    "model": "PROMASTER",
+    "narrative": "Seat belt ripped while putting seatbelt on. Nothing in the way of system. Local parts department advised 35 belts nationally are requested weekly. We shouldn’t have to pay $500 for their safety issue.",
+    "received_at": "2025-08-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116231",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116231",
+    "decided_at": "2025-08-01T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116231",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Seat belt ripped while putting seatbelt on."
+      },
+      {
+        "kind": "condition",
+        "quote": "Nothing in the way of system."
+      },
+      {
+        "kind": "safety",
+        "quote": "safety issue"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Seat belts: seat belt ripped while putting seatbelt on; no obstruction reported.",
+    "symptoms": [
+      "seat belt ripped while putting seatbelt on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116231",
+    "created_at": "2025-08-01T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "1. Service Airbag Warning Light - illuminates on the dash every 15-20 minutes while driving 2. Forward Collision Warning icon illuminates on the dash every time the vehicle is driven, regardless of the number of times it is turned off via the settings feature on the UConnect disp...",
+      "group": "restraints",
+      "id": "1854850",
+      "make": "RAM",
+      "model": "PROMASTER",
+      "score": 1.0788,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-01T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010432,
+      "duration_ms": 11681,
+      "reason": "Seat belts: seat belt ripped while putting seatbelt on; no obstruction reported.",
+      "started_at": "2025-08-01T07:00:16Z",
+      "step": 2,
+      "tokens": 2228,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-01T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "PROMASTER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "1. Service Airbag Warning Light - illuminates on the dash every 15-20 minutes while driving 2. Forward Collision Warning icon illuminates on the dash every time the vehicle is driven, regardless of the number of times it is turned off via the settings feature on the UConnect disp...",
+            "group": "restraints",
+            "id": "1854850",
+            "make": "RAM",
+            "model": "PROMASTER",
+            "score": 1.0788,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-01T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-01T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-01T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-01T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-01T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-01T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-01T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "group": "adas",
+    "id": "2108934",
+    "make": "POLESTAR",
+    "mileage": null,
+    "model": "POLESTAR 2",
+    "narrative": "The vehicle’s rear view camera continues to be unstable, even after the recent NHTSA-mandated software recall was installed. This recall DID NOT fix the issue. Ultimately, the vehicle’s computer hardware is underpowered and cannot run the latest software versions sufficiently, and that is the root of the flickering and crashing that occurs. Besides the rear view camera cutting out and saying “temporarily unavailable” the car’s automatic emergency braking system often mistakenly slams on the brakes, and because it’s controlled through the rear camera interface, you cannot safely disable it when these erroneous braking events occur as the screen becomes unresponsive or slow to respond.",
+    "received_at": "2025-07-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2108934",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108934",
+    "decided_at": "2025-07-11T07:01:34Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2108934",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "rear view camera"
+      },
+      {
+        "kind": "symptom",
+        "quote": "continues to be unstable"
+      },
+      {
+        "kind": "condition",
+        "quote": "after the recent NHTSA-mandated software recall was installed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "flickering and crashing"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rear view camera cutting out"
+      },
+      {
+        "kind": "symptom",
+        "quote": "temporarily unavailable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "automatic emergency braking system often mistakenly slams on the brakes"
+      },
+      {
+        "kind": "safety",
+        "quote": "mistakenly slams on the brakes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "screen becomes unresponsive or slow to respond"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Rear view camera instability with flickering/crashing and 'temporarily unavailable' after software recall; erroneous AEB braking and unresponsive screen.",
+    "symptoms": [
+      "rear view camera unstable",
+      "camera flickering and crashing",
+      "rear view camera cuts out and shows temporarily unavailable",
+      "automatic emergency braking mistakenly applies brakes",
+      "screen unresponsive or slow to respond"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108934",
+    "created_at": "2025-07-11T07:01:32Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When engaging reverse, the rear view camera feed either cuts out intermittently or never turns on. Without it there is also no way to have a visual indication of incoming rear cross traffic while reversing. This issue happens daily and makes it very dangerous to reverse due to th...",
+      "group": "adas",
+      "id": "1996494",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 10.2231,
+      "year": 2021
+    },
+    {
+      "excerpt": "When engaging reverse, the rear view camera feed either cuts out intermittently or never turns on. Without it there is also no way to have a visual indication of incoming rear cross traffic while reversing. This issue happens daily and makes it very dangerous to reverse due to th...",
+      "group": "adas",
+      "id": "1996495",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 10.2231,
+      "year": 2021
+    },
+    {
+      "excerpt": "Cameras do not work on the vehicle. A message displays that they are unavailable. A recall was issued, an update was sent to the car, and now the issue is worse. Car was sent to dealership for full reset and repair and issue is still occuring. I am seeking guidance as the recall...",
+      "group": "adas",
+      "id": "2037709",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 6.0359,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-11T07:01:26Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00141895,
+      "duration_ms": 16988,
+      "reason": "Rear view camera instability with flickering/crashing and 'temporarily unavailable' after software recall; erroneous AEB braking and unresponsive screen.",
+      "started_at": "2025-07-11T07:01:27Z",
+      "step": 2,
+      "tokens": 2939,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-11T07:01:28Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When engaging reverse, the rear view camera feed either cuts out intermittently or never turns on. Without it there is also no way to have a visual indication of incoming rear cross traffic while reversing. This issue happens daily and makes it very dangerous to reverse due to th...",
+            "group": "adas",
+            "id": "1996494",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 10.2231,
+            "year": 2021
+          },
+          {
+            "excerpt": "When engaging reverse, the rear view camera feed either cuts out intermittently or never turns on. Without it there is also no way to have a visual indication of incoming rear cross traffic while reversing. This issue happens daily and makes it very dangerous to reverse due to th...",
+            "group": "adas",
+            "id": "1996495",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 10.2231,
+            "year": 2021
+          },
+          {
+            "excerpt": "Cameras do not work on the vehicle. A message displays that they are unavailable. A recall was issued, an update was sent to the car, and now the issue is worse. Car was sent to dealership for full reset and repair and issue is still occuring. I am seeking guidance as the recall...",
+            "group": "adas",
+            "id": "2037709",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.0359,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-11T07:01:29Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-11T07:01:30Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-11T07:01:31Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-11T07:01:33Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-11T07:01:35Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-11T07:01:36Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-11T07:01:37Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

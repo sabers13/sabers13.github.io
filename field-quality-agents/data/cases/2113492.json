@@ -1,0 +1,250 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2113492",
+    "make": "HONDA",
+    "mileage": 200,
+    "model": "PROLOGUE",
+    "narrative": "The contact owns a 2025 Honda Prologue. The contact stated that the battery was charged to 50 percent. The contact went to the charging station, but the vehicle failed to charge after two hours. The contact drove to another charging station and received a charge now message to slow down, and the vehicle shut down. Additionally, the accelerator pedal was depressed, but the vehicle went into neutral. While driving 60-65 MPH, the vehicle went to 70 percent charge. There was an abnormal clicking sound coming from the axle and CV joint. While using the turn signal, the turn signal responded on the opposite side as intended and turned on the windshield wipers. The contact was unable to locate the hazard lights. The contact called OnStar, who contacted Honda for a jumpstart. Another tow company was contacted, who was unable to tow the vehicle due to the vehicle not shifting into neutral. The contact stated that another driver notified her that the headlights were off. The tow truck driver was able to locate the hazard lights and override the powertrain system. The vehicle was taken to the local dealer but was not diagnosed or repaired. The manufacturer was not contacted. The failure mileage was approximately 200.",
+    "received_at": "2025-07-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2113492",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2113492",
+    "decided_at": "2025-07-24T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2113492",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY"
+      },
+      {
+        "kind": "condition",
+        "quote": "The contact went to the charging station"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to charge after two hours"
+      },
+      {
+        "kind": "symptom",
+        "quote": "received a charge now message to slow down"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle shut down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the accelerator pedal was depressed, but the vehicle went into neutral"
+      },
+      {
+        "kind": "symptom",
+        "quote": "While driving 60-65 MPH, the vehicle went to 70 percent charge."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There was an abnormal clicking sound coming from the axle and CV joint."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the turn signal responded on the opposite side as intended and turned on the windshield wipers"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact was unable to locate the hazard lights."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the headlights were off"
+      },
+      {
+        "kind": "other",
+        "quote": "the vehicle not shifting into neutral"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "2025 Honda Prologue battery/charging: failed to charge after two hours, shutdown and neutral engagement, axle/CV clicking, turn signal/wiper and hazard/headlight faults while charging.",
+    "symptoms": [
+      "vehicle failed to charge after two hours",
+      "charge now message to slow down",
+      "vehicle shut down",
+      "accelerator pedal depressed but vehicle went into neutral",
+      "charge level went to 70 percent while driving 60-65 MPH",
+      "abnormal clicking sound from axle and CV joint",
+      "turn signal responded on opposite side and turned on windshield wipers",
+      "unable to locate hazard lights",
+      "headlights off",
+      "vehicle not shifting into neutral prevented towing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2113492",
+    "created_at": "2025-07-24T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-24T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0018814,
+      "duration_ms": 19719,
+      "reason": "2025 Honda Prologue battery/charging: failed to charge after two hours, shutdown and neutral engagement, axle/CV clicking, turn signal/wiper and hazard/headlight faults while charging.",
+      "started_at": "2025-07-24T07:00:16Z",
+      "step": 2,
+      "tokens": 3787,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-24T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PROLOGUE",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-24T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-24T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-24T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-24T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-24T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-24T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-24T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

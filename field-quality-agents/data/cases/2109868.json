@@ -1,0 +1,268 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2109868",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "CR-V",
+    "narrative": "Experienced a sudden unintended acceleration while parking the vehicle. Right front tire climbed up on a parking barrier (shortened telephone pole) and damaged the right front bumper. No warning or trouble lights were on at that time, however, after restarting vehicle and heading home approximately half a mile down the road, all the warning and trouble lights came on, the steering wheel started shaking and the car wasn’t drivable. We have no idea if there is concealed damage underneath the vehicle. We called Honda roadside assistance and they came and took the vehicle to the closest Honda dealership. At this time, we’re waiting to hear from them.",
+    "received_at": "2025-07-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2109868",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2109868",
+    "decided_at": "2025-07-14T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2109868",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Experienced a sudden unintended acceleration while parking the vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "sudden unintended acceleration"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Right front tire climbed up on a parking barrier (shortened telephone pole) and damaged the right front bumper."
+      },
+      {
+        "kind": "symptom",
+        "quote": "all the warning and trouble lights came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the steering wheel started shaking"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car wasn’t drivable"
+      },
+      {
+        "kind": "condition",
+        "quote": "steering wheel started shaking"
+      }
+    ],
+    "conditions": [
+      "vibration"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system on a 2025 Honda CR-V: sudden unintended acceleration while parking with bumper damage, then after restart all warning lights came on, steering wheel shook, and the vehicle was not drivable.",
+    "symptoms": [
+      "sudden unintended acceleration while parking",
+      "right front tire climbed a parking barrier",
+      "right front bumper damaged",
+      "all warning and trouble lights came on after restart",
+      "steering wheel started shaking",
+      "vehicle was not drivable"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2109868",
+    "created_at": "2025-07-14T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Driving this vehicle during rain or snow is very unsafe for visibility reasons. 1. Th wiper blade does not fully clean the windshield. There is a very large corner on the bottom left over the driver dashboard that is left unwiped preventing the driver from seeing the yellow line...",
+      "group": "electrical_general",
+      "id": "2051401",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 5.0656,
+      "year": 2025
+    },
+    {
+      "excerpt": "[XXX] was Incident 1 the car was brought to Ocean Honda. I was driving with my kids going approx 60mph when the car went limp and breaks failed. They kept the car 2 days, I was told nothing major was wrong with the car and the codes were cleared. [XXX] was 2nd incident. I was dri...",
+      "group": "electrical_general",
+      "id": "2037153",
+      "make": "HONDA",
+      "model": "CR-V",
+      "score": 4.8839,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-14T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0014029,
+      "duration_ms": 16192,
+      "reason": "Electrical system on a 2025 Honda CR-V: sudden unintended acceleration while parking with bumper damage, then after restart all warning lights came on, steering wheel shook, and the vehicle was not drivable.",
+      "started_at": "2025-07-14T07:00:16Z",
+      "step": 2,
+      "tokens": 2895,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-07-14T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Driving this vehicle during rain or snow is very unsafe for visibility reasons. 1. Th wiper blade does not fully clean the windshield. There is a very large corner on the bottom left over the driver dashboard that is left unwiped preventing the driver from seeing the yellow line...",
+            "group": "electrical_general",
+            "id": "2051401",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 5.0656,
+            "year": 2025
+          },
+          {
+            "excerpt": "[XXX] was Incident 1 the car was brought to Ocean Honda. I was driving with my kids going approx 60mph when the car went limp and breaks failed. They kept the car 2 days, I was told nothing major was wrong with the car and the codes were cleared. [XXX] was 2nd incident. I was dri...",
+            "group": "electrical_general",
+            "id": "2037153",
+            "make": "HONDA",
+            "model": "CR-V",
+            "score": 4.8839,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-14T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-14T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-14T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-14T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-14T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-14T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-14T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

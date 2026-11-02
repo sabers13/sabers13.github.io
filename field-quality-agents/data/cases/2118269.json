@@ -1,0 +1,484 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2118269",
+    "make": "RAM",
+    "mileage": null,
+    "model": "2500",
+    "narrative": "KEEPS FLASHING ABS.  IT SOUNDS A BING NOISE THE WHOLE TIME I DRIVE IT.  SINCE I DRIVE OVER 2 HOURS A DAY IT IS REALLY FRUSTRATING AND 5 HOURS ON THE WEEKEND.  ALSO, THE RADIO CUTS OUT ALL THE TIME WHEN THE ABS IN FLASHING THE AIR CONDITIONING OR HEAT GOES FULL BLAST WHEN THE ABS IN FLASHING AND BINGING.  HOW CAN YOU NOT HAVE A FIX FOR THIS YET! I PAID A LOT OF MONEY FOR THIS TRUCK AND IT IS THE BIGGEST [XXX] RIGHT NOW!!!  I REALLY WANT AN ANSWER ASAP!!! BEFORE I HIRE AN ATTORNEY TO SUE CHRYSLER/DODGE. [XXX] CUSTOMER [XXX]INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-07",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2118269",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2118269",
+    "decided_at": "2025-08-07T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2118269",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "KEEPS FLASHING ABS."
+      },
+      {
+        "kind": "symptom",
+        "quote": "IT SOUNDS A BING NOISE THE WHOLE TIME I DRIVE IT."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE RADIO CUTS OUT ALL THE TIME WHEN THE ABS IN FLASHING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE AIR CONDITIONING OR HEAT GOES FULL BLAST WHEN THE ABS IN FLASHING AND BINGING."
+      },
+      {
+        "kind": "condition",
+        "quote": "ALL THE TIME"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the recurring ABS/HVAC/radio electrical fault with a long-run power cycling test because the rulebook matches the intermittent condition.",
+    "symptoms": [
+      "ABS flashing",
+      "bing noise while driving",
+      "radio cuts out during ABS flashing",
+      "HVAC goes full blast during ABS flashing and binging"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2118269",
+    "created_at": "2025-08-07T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "KEEPS FLASHING ABS.",
+        "source_id": "2118269",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "IT SOUNDS A BING NOISE THE WHOLE TIME I DRIVE IT.",
+        "source_id": "2118269",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "THE RADIO CUTS OUT ALL THE TIME WHEN THE ABS IN FLASHING",
+        "source_id": "2118269",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "THE AIR CONDITIONING OR HEAT GOES FULL BLAST WHEN THE ABS IN FLASHING AND BINGING.",
+        "source_id": "2118269",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "ALL THE TIME",
+        "source_id": "2118269",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports recurring ABS flashing and bing noise while driving, with radio and HVAC misbehavior tied to the ABS event. The rulebook matches the extracted intermittent condition to the long-run power cycling test, which can reproduce faults that appear only after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test the recurring ABS/HVAC/radio electrical fault with a long-run power cycling test because the rulebook matches the intermittent condition.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports recurring ABS flashing and bing noise while driving, with radio and HVAC misbehavior tied to the ABS event. The rulebook matches the extracted intermittent condition to the long-run power cycling test, which can reproduce faults that appear only after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Intermittent ABS / traction control light and dinging! 49000 miles. Just like every other person complaining about the same exact issue on 2018s. I’m a disabled vet with a family of four on a single income. I can’t afford a 1200 abs module that lasts only 1-2 years. Clearly this...",
+      "group": "electrical_general",
+      "id": "1956095",
+      "make": "RAM",
+      "model": "2500",
+      "score": 54.2167,
+      "year": 2018
+    },
+    {
+      "excerpt": "My truck has the same issue as many thousands of other RAM owners. The forums are full of people with the same issue. It clearly is a faulty part/design or similar. My \"check ABS/ Traction Control- Brake light\" turns on and off intermediately all the time. It is an issue many hav...",
+      "group": "electrical_general",
+      "id": "1934444",
+      "make": "RAM",
+      "model": "2500",
+      "score": 45.913,
+      "year": 2018
+    },
+    {
+      "excerpt": "Intermittent Electronic Brake System and ABS Failure messages. Been dealing with this issue for over a year now. Dealership told me I had to wait almost a year before there would be a fix and that’s if I’m lucky. The ABS pump motor and the software are both faulty and Ram is awar...",
+      "group": "electrical_general",
+      "id": "2035725",
+      "make": "RAM",
+      "model": "2500",
+      "score": 20.9762,
+      "year": 2018
+    },
+    {
+      "excerpt": "HCU / ABS module issues. Truck while driving has no cruise control my lights stay illuminated all the time, truck only has 57,000 miles and already repaired all 4 abs wheel speed censors, spent countless hours visibly checking all wires and fuses make sure no defects there. This...",
+      "group": "electrical_general",
+      "id": "1898087",
+      "make": "RAM",
+      "model": "2500",
+      "score": 17.992,
+      "year": 2018
+    },
+    {
+      "excerpt": "On my way to work one day the check engine light,ABS light and traction control light came on and I thought something under the hood had came loose thought nothing about it and went into work when I came back out and got into the truck the lights where gone no big deal just sorta...",
+      "group": "electrical_general",
+      "id": "1894675",
+      "make": "RAM",
+      "model": "2500",
+      "score": 16.5787,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-07T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00084955,
+      "duration_ms": 9447,
+      "reason": "Electrical system: ABS keeps flashing with a bing noise while driving; radio cuts out and HVAC goes full blast during ABS flashing/binging.",
+      "started_at": "2025-08-07T07:00:21Z",
+      "step": 2,
+      "tokens": 2032,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-07T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Intermittent ABS / traction control light and dinging! 49000 miles. Just like every other person complaining about the same exact issue on 2018s. I’m a disabled vet with a family of four on a single income. I can’t afford a 1200 abs module that lasts only 1-2 years. Clearly this...",
+            "group": "electrical_general",
+            "id": "1956095",
+            "make": "RAM",
+            "model": "2500",
+            "score": 54.2167,
+            "year": 2018
+          },
+          {
+            "excerpt": "My truck has the same issue as many thousands of other RAM owners. The forums are full of people with the same issue. It clearly is a faulty part/design or similar. My \"check ABS/ Traction Control- Brake light\" turns on and off intermediately all the time. It is an issue many hav...",
+            "group": "electrical_general",
+            "id": "1934444",
+            "make": "RAM",
+            "model": "2500",
+            "score": 45.913,
+            "year": 2018
+          },
+          {
+            "excerpt": "Intermittent Electronic Brake System and ABS Failure messages. Been dealing with this issue for over a year now. Dealership told me I had to wait almost a year before there would be a fix and that’s if I’m lucky. The ABS pump motor and the software are both faulty and Ram is awar...",
+            "group": "electrical_general",
+            "id": "2035725",
+            "make": "RAM",
+            "model": "2500",
+            "score": 20.9762,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-07T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-07T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-08-07T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "KEEPS FLASHING ABS.  IT SOUNDS A BING NOISE THE WHOLE TIME I DRIVE IT.  SINCE I DRIVE OVER 2 HOURS A DAY IT IS REALLY FRUSTRATING AND 5 HOURS ON THE WEEKEND.  ALSO, THE RADIO CUTS OUT ALL THE TIME WHEN THE ABS IN FLASHING THE AIR CONDITIONING OR HEAT GOES FULL BLAST WHEN THE ABS IN FLASHING AND BINGING.  HOW CAN YOU NOT HAVE A FIX FOR THIS YET! I PAID A LOT OF MONEY FOR THIS TRUCK AND IT IS THE BIGGEST [XXX] RIGHT NOW!!!  I REALLY WANT AN ANSWER ASAP!!! BEFORE I HIRE AN ATTORNEY TO SUE CHRYSLER/"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Intermittent ABS / traction control light and dinging! 49000 miles. Just like every other person complaining about the same exact issue on 2018s. I’m a disabled vet with a family of four on a single income. I can’t afford a 1200 abs module that lasts only 1-2 years. Clearly this...",
+            "group": "electrical_general",
+            "id": "1956095",
+            "make": "RAM",
+            "model": "2500",
+            "score": 54.2167,
+            "year": 2018
+          },
+          {
+            "excerpt": "My truck has the same issue as many thousands of other RAM owners. The forums are full of people with the same issue. It clearly is a faulty part/design or similar. My \"check ABS/ Traction Control- Brake light\" turns on and off intermediately all the time. It is an issue many hav...",
+            "group": "electrical_general",
+            "id": "1934444",
+            "make": "RAM",
+            "model": "2500",
+            "score": 45.913,
+            "year": 2018
+          },
+          {
+            "excerpt": "Intermittent Electronic Brake System and ABS Failure messages. Been dealing with this issue for over a year now. Dealership told me I had to wait almost a year before there would be a fix and that’s if I’m lucky. The ABS pump motor and the software are both faulty and Ram is awar...",
+            "group": "electrical_general",
+            "id": "2035725",
+            "make": "RAM",
+            "model": "2500",
+            "score": 20.9762,
+            "year": 2018
+          },
+          {
+            "excerpt": "HCU / ABS module issues. Truck while driving has no cruise control my lights stay illuminated all the time, truck only has 57,000 miles and already repaired all 4 abs wheel speed censors, spent countless hours visibly checking all wires and fuses make sure no defects there. This...",
+            "group": "electrical_general",
+            "id": "1898087",
+            "make": "RAM",
+            "model": "2500",
+            "score": 17.992,
+            "year": 2018
+          },
+          {
+            "excerpt": "On my way to work one day the check engine light,ABS light and traction control light came on and I thought something under the hood had came loose thought nothing about it and went into work when I came back out and got into the truck the lights where gone no big deal just sorta...",
+            "group": "electrical_general",
+            "id": "1894675",
+            "make": "RAM",
+            "model": "2500",
+            "score": 16.5787,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-07T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-07T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "RAM",
+        "model": "2500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-07T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0011616,
+      "duration_ms": 10054,
+      "reason": "The narrative reports recurring ABS flashing and bing noise while driving, with radio and HVAC misbehavior tied to the ABS event. The rulebook matches the extracted intermittent condition to the long-run power cycling test, which can reproduce faults that appear only after repeated wake and sleep cycles.",
+      "started_at": "2025-08-07T07:00:29Z",
+      "step": 10,
+      "tokens": 3172,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-08-07T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "KEEPS FLASHING ABS.",
+          "IT SOUNDS A BING NOISE THE WHOLE TIME I DRIVE IT.",
+          "THE RADIO CUTS OUT ALL THE TIME WHEN THE ABS IN FLASHING",
+          "THE AIR CONDITIONING OR HEAT GOES FULL BLAST WHEN THE ABS IN FLASHING AND BINGING.",
+          "ALL THE TIME"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-07T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-07T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-07T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-07T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

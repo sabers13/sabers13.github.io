@@ -1,0 +1,227 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2120593",
+    "make": "INFINITI",
+    "mileage": null,
+    "model": "QX50",
+    "narrative": "While driving on the highway and having no visible vehicle in front of me; my car automatically slams on the breaks and the Emergency Braking system light comes up on the dashboard briefly and then disappears.  This has occurred multiple times while driving on highway speeds. It is concerning because there has been no evident or visible vehicles in front of my vehicle when my car abruptly slams on the brakes. To me this is a safety concern. I had mentioned this concern to the service advisor at Infiniti, but he said it would cost approximately $200 just to diagnose it. My vehicle is currently at a Infiniti dealership. They found a lot of metal debris inside the oil pan.",
+    "received_at": "2025-08-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2120593",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2120593",
+    "decided_at": "2025-08-14T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2120593",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving on the highway"
+      },
+      {
+        "kind": "condition",
+        "quote": "having no visible vehicle in front of me"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my car automatically slams on the breaks"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Emergency Braking system light comes up on the dashboard briefly and then disappears"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has occurred multiple times while driving on highway speeds."
+      },
+      {
+        "kind": "safety",
+        "quote": "To me this is a safety concern."
+      },
+      {
+        "kind": "other",
+        "quote": "They found a lot of metal debris inside the oil pan."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2021 Infiniti QX50 electrical system: automatic emergency braking unexpectedly applies at highway speeds with no visible vehicle ahead, warning light appears briefly and repeats; metal debris found in oil pan.",
+    "symptoms": [
+      "automatic emergency braking activates unexpectedly at highway speed",
+      "emergency braking system warning light illuminates briefly",
+      "no visible vehicle ahead when braking occurs"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2120593",
+    "created_at": "2025-08-14T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00103375,
+      "duration_ms": 11138,
+      "reason": "2021 Infiniti QX50 electrical system: automatic emergency braking unexpectedly applies at highway speeds with no visible vehicle ahead, warning light appears briefly and repeats; metal debris found in oil pan.",
+      "started_at": "2025-08-14T07:00:01Z",
+      "step": 2,
+      "tokens": 2285,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "INFINITI",
+        "model": "QX50",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-14T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-14T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-14T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-14T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

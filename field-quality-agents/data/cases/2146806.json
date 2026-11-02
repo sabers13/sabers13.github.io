@@ -1,0 +1,376 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:INFOTAINMENT",
+    "group": "infotainment",
+    "id": "2146806",
+    "make": "CADILLAC",
+    "mileage": 122000,
+    "model": "XTS",
+    "narrative": "The contact owns a 2014 Cadillac XTS.  The contact stated while parked and occupied in the vehicle, attempting to start the vehicle infotainment system displays a black screen and glitched. An independent mechanic was contacted. The vehicle was not taken to a dealer or an independent mechanic for diagnoses.  The vehicle was  not repaired.  The contact mention the failure has occurred on two different occasions. The manufacture was notified of the failure and they informed him that he will have to pay out of pocket for the cost of the repair. The approximate failure mileage was 122,000.",
+    "received_at": "2025-11-07",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2146806",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2146806",
+    "decided_at": "2025-11-07T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2146806",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "infotainment system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "infotainment system displays a black screen and glitched"
+      },
+      {
+        "kind": "condition",
+        "quote": "while parked and occupied"
+      },
+      {
+        "kind": "condition",
+        "quote": "attempting to start the vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "failure has occurred on two different occasions"
+      },
+      {
+        "kind": "other",
+        "quote": "failure mileage was 122,000"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "while parked and occupied",
+      "attempting to start the vehicle"
+    ],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": false,
+    "summary": "Run a long-run power cycling test on the infotainment system to reproduce the intermittent black screen and glitch seen at start-up.",
+    "symptoms": [
+      "infotainment system displays a black screen and glitched"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2146806",
+    "created_at": "2025-11-07T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "infotainment system",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "infotainment system displays a black screen and glitched",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while parked and occupied",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "attempting to start the vehicle",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failure has occurred on two different occasions",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failure mileage was 122,000",
+        "source_id": "2146806",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports that when starting the vehicle while parked, the infotainment system displays a black screen and glitched, and the failure has occurred on two different occasions. This intermittent behaviour matches the rulebook entry for intermittent faults, whose reason states that repeated wake and sleep cycles reproduce faults that appear only intermittently, and it names the Long-run power cycling test.",
+    "requested_info": [],
+    "summary": "Run a long-run power cycling test on the infotainment system to reproduce the intermittent black screen and glitch seen at start-up.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent",
+        "while parked and occupied",
+        "attempting to start the vehicle"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports that when starting the vehicle while parked, the infotainment system displays a black screen and glitched, and the failure has occurred on two different occasions. This intermittent behaviour matches the rulebook entry for intermittent faults, whose reason states that repeated wake and sleep cycles reproduce faults that appear only intermittently, and it names the Long-run power cycling test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00068935,
+      "duration_ms": 7829,
+      "reason": "Infotainment system shows a black screen and glitches when attempting to start while parked; intermittent on two occasions.",
+      "started_at": "2025-11-07T07:00:01Z",
+      "step": 2,
+      "tokens": 1705,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CADILLAC",
+        "model": "XTS",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-11-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-11-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2014 Cadillac XTS.  The contact stated while parked and occupied in the vehicle, attempting to start the vehicle infotainment system displays a black screen and glitched. An independent mechanic was contacted. The vehicle was not taken to a dealer or an independent mechanic for diagnoses.  The vehicle was  not repaired.  The contact mention the failure has occurred on two different occasions. The manufacture was notified of the failure and they informed him that he will have t"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-07T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "CADILLAC",
+        "model": "XTS",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-07T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "infotainment",
+        "make": "CADILLAC",
+        "model": "XTS",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-07T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00040575,
+      "duration_ms": 3632,
+      "reason": "The narrative reports that when starting the vehicle while parked, the infotainment system displays a black screen and glitched, and the failure has occurred on two different occasions. This intermittent behaviour matches the rulebook entry for intermittent faults, whose reason states that repeated wake and sleep cycles reproduce faults that appear only intermittently, and it names the Long-run power cycling test.",
+      "started_at": "2025-11-07T07:00:09Z",
+      "step": 10,
+      "tokens": 1349,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-11-07T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "infotainment system",
+          "infotainment system displays a black screen and glitched",
+          "while parked and occupied",
+          "attempting to start the vehicle",
+          "failure has occurred on two different occasions",
+          "failure mileage was 122,000"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-07T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-07T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-07T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-07T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

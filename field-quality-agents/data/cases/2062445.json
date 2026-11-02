@@ -1,0 +1,524 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2062445",
+    "make": "FORD",
+    "mileage": 43000,
+    "model": "BRONCO SPORT",
+    "narrative": "The contact owns a 2021 Ford Bronco Sport. The contact stated while stopped at a traffic light, the vehicle lost electrical power and stalled. The contact stated that several unknown warning lights illuminated before the screen went black. The vehicle was towed to the dealer, where it was diagnosed and determined that the battery had failed. The contact was informed that the battery did not support the function of the vehicle and needed to be replaced. The battery was replaced. The contact stated that on another occasion, while driving at undisclosed speeds, the heating system failed. The contact stated that the passenger’s side vents were not blowing hot air. The vehicle was taken to the dealer, where it was diagnosed that the water pump and gaskets had failed and needed to be replaced. The vehicle was repaired. The failure mileage was approximately 43,000.",
+    "received_at": "2025-02-03",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2062445",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2062445",
+    "decided_at": "2025-02-03T07:00:42Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2062445",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the vehicle lost electrical power and stalled"
+      },
+      {
+        "kind": "condition",
+        "quote": "while stopped at a traffic light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "several unknown warning lights illuminated before the screen went black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the battery had failed"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at undisclosed speeds"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the heating system failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the passenger’s side vents were not blowing hot air"
+      },
+      {
+        "kind": "other",
+        "quote": "the water pump and gaskets had failed"
+      }
+    ],
+    "conditions": [
+      "while stopped at a traffic light",
+      "while driving at undisclosed speeds"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": false,
+    "summary": "Test the 12V battery because the Bronco Sport lost electrical power and stalled with warning lights and a black screen, and the battery was diagnosed as failed.",
+    "symptoms": [
+      "lost electrical power and stalled",
+      "warning lights illuminated then screen went black",
+      "battery failed",
+      "heating system failed",
+      "passenger side vents not blowing hot air",
+      "water pump and gaskets failed"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "RQ24014",
+      "match": true,
+      "open_date": "2024-11-15",
+      "summary": "On January 31, 2024, The Office of Defects Investigation (ODI) opened a Preliminary Evaluation (PE24002) to investigate loss of motive power allegations in model year (MY) 2021 Ford Bronco Sport vehicles. Consumers reported a loss of engine power accompanied by complete electrical system failure either while driving or after stopping at a traffic light or stop sign. The vehicles generally could not be restarted, and the incidents were commonly diagnosed by dealerships to a failed 12-Volt (12V) battery. On April 12, 2024, Ford issued safety recall 24V-267 covering 456,565 MY 2021-2024 Ford Bronco Sport and MY 2022-2023 Ford Maverick vehicles. The recall addressed loss of motive power resulting from sudden degradation of the 12V battery during the drive cycle. The recall remedy consisted of software updates to the body control module and the powertrain control module. The updated software aimed to provide warning to consumers when the battery is failing and inhibit certain vehicle functions which can lead to loss of motive power incidents. Additionally, Ford removed the existing 12V Enhanced Flooded Battery (EFB) as both a service component for the subject vehicles and original equipment for newly built Bronco Sport vehicles (during MY 2024 production), replacing it with a more robust absorbed glass mat (AGM) battery. The same AGM battery had been incorporated into Ford Maverick production in late 2022. Following recall 24V-267, ODI received loss of motive power complaints in vehicles that had previously received Ford’s software-based remedy. Consumers reported that they did not receive warnings related to the 12V battery or the vehicle’s electrical system before the loss of power. On November 15, 2024, ODI opened Recall Query (RQ24014) to assess the effectiveness of the 24V-267 recall remedy. On January 19, 2025, Ford issued recall 25V-019 covering 272,817 MY 2021-2023 Bronco Sport and MY 2022-2023 Ford Maverick vehicles. The new recall addressed the same hazard as 24V-267 but required replacement of the existing 12V battery with an AGM battery as the remedy. Ford reported that following the opening of RQ24014, it evaluated several field-returned 12V batteries, and determined that EFBs produced by battery supplier Camel potentially contained internal manufacturing defects causing loss of motive power. Ford further concluded that the software updates provided in the 24V-267 recall remedy were unable to detect battery failures quickly enough to avoid loss of motive power. Vehicles previously within the scope of recall 24V-267, but outside of the scope of recall 25V-019, are equipped with EFBs produced by a different battery supplier (Clarios). When recall 25V-019 was issued, Ford had not identified any Clarios EFBs exhibiting the same failure mode as the Camel EFBs. In light of Ford’s recall action, ODI is closing this Recall Query. The agency will continue to monitor loss of motive power complaints in Bronco Sport vehicles equipped with Clarios EFBs and reserves the right to take additional action if warranted by future circumstances. To review the reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    },
+    {
+      "id": "PE24002",
+      "match": true,
+      "open_date": "2024-01-31",
+      "summary": "On January 31, 2024, the Office of Defects Investigation (ODI) opened PE24002 to investigate allegations of loss of motive power in model year (MY) 2021 Ford Bronco Sport vehicles. At that time, ODI had received 31 Vehicle Owner Questionnaires (VOQs), with consumers commonly reporting a loss of engine power accompanied by complete electrical system failure which occurred either while driving, or after coming to a stop. The investigation revealed that MY 2021-2024 Ford Bronco Sport and certain MY 2022-2023 Ford Maverick vehicles are equipped with a 12V enhanced flooded battery (EFB), which may experience an abrupt failure during a drive cycle. The failure is the result of an internal corrosion issue, which is influenced by long exposure to high under-hood temperatures. If the sudden loss of 12V battery voltage is not detected by the vehicle’s battery management sensor, the vehicle can experience a loss of power event without providing any warning to the driver. Following a loss of power due to battery failure, the vehicle may be without all 12V accessories including hazard lights and typically will not be able to be restarted. In its March 2024 response to ODI’s information request, Ford provided 367 customer complaints (including field reports, lawsuits, and legal claims) and 1005 warranty claims relating to the alleged defect. When combining ODI and manufacturer failure report data, there are 1,368 unique VINs represented across MY 2021-2023 Ford Bronco Sport vehicles. One of the VOQs submitted to NHTSA reported a minor rear-end collision resulting from a loss of power event. Included within Ford’s complaints were a reported single-vehicle collision and a vehicle fire which occurred following a loss of power event at a traffic light (fire cause and origin was not determined). Additionally, across ODI and manufacturer data, there were 12 allegations of either acid leaking from the 12V battery or smoke emitting from the battery area within the engine compartment. On April 12, 2024, Ford submitted recall 24V267 for MY 2021-2024 Ford Bronco Sport and certain MY 2022-2023 Ford Maverick vehicles (total population 456,565). The recall remedy provides updated calibrations to the body control module and powertrain control module. Ford indicated that the update will result in improved detection of 12V battery state of charge during drive cycles and will provide notification to the driver if the battery significantly degrades while driving. Additionally, Ford has replaced the EFB with an absorbed glass mat (AGM) battery as both a service component for the subject vehicles and as original equipment for Bronco Sport vehicles with production dates beginning in mid-March 2024. The warranty claim rate for peer vehicles equipped with an AGM battery is substantially lower than that for the subject vehicle population. In view of the recall action being taken by Ford, ODI is closing this Preliminary Evaluation. The agency reserves the right to take additional action if warranted by future circumstances. To review the reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    }
+  ],
+  "proposal": {
+    "case_id": "2062445",
+    "created_at": "2025-02-03T07:00:40Z",
+    "evidence": [
+      {
+        "quote": "the vehicle lost electrical power and stalled",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while stopped at a traffic light",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "several unknown warning lights illuminated before the screen went black",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the battery had failed",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving at undisclosed speeds",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the heating system failed",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the passenger’s side vents were not blowing hot air",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the water pump and gaskets had failed",
+        "source_id": "2062445",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports loss of electrical power and stalling at a traffic light, warning lights before the screen went black, and a dealer diagnosis that the battery had failed. This matches the known 12V battery concern for the 2021 Ford Bronco Sport described in investigations PE24002 and RQ24014 and recall 25V019000. No rulebook entry matched, so a standard battery test is proposed rather than a targeted load test. The later heating complaint was traced to the water pump and gaskets, not the battery.",
+    "requested_info": [],
+    "summary": "Test the 12V battery because the Bronco Sport lost electrical power and stalled with warning lights and a black screen, and the battery was diagnosed as failed.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V019000",
+      "match": true,
+      "open_date": "2025-01-17",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco Sport and 2022-2023 Maverick vehicles.  The 12-volt battery may experience degradation and suddenly fail."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while driving at undisclosed speeds and while in reverse, the instrument panel occasionally flickered. The battery failure warning light illuminated intermittently. In addition, the contact stated that while attem...",
+      "group": "power_and_wiring",
+      "id": "2047772",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 16.7758,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while her daughter was starting the vehicle, there was a loud sound before the vehicle lost power. The vehicle was taken to the dealer where it was diagnosed and determined that the battery needed to be replaced....",
+      "group": "power_and_wiring",
+      "id": "2045200",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 14.0087,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while the vehicle was idling at a stop light with the automatic Start/Stop feature activated, the driver depressed the accelerator pedal and the vehicle instantly shut off. The vehicle was not able to be restarted...",
+      "group": "power_and_wiring",
+      "id": "2025183",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 7.7172,
+      "year": 2021
+    },
+    {
+      "excerpt": "My car made a loud pop noise when I go to turn it over. Then it was just dead others tried to jump it, but it wasn’t getting enough juice. Along with this all the warning signals start flashing through on the dash before basically dying. There had been warning at all early I had...",
+      "group": "power_and_wiring",
+      "id": "2031856",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 3.7476,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-03T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00104125,
+      "duration_ms": 18270,
+      "reason": "Battery/electrical: lost electrical power and stalled at a traffic light with warning lights and black screen; battery failed; later heating failure traced to water pump and gaskets.",
+      "started_at": "2025-02-03T07:00:31Z",
+      "step": 2,
+      "tokens": 2335,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-03T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while driving at undisclosed speeds and while in reverse, the instrument panel occasionally flickered. The battery failure warning light illuminated intermittently. In addition, the contact stated that while attem...",
+            "group": "power_and_wiring",
+            "id": "2047772",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 16.7758,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while her daughter was starting the vehicle, there was a loud sound before the vehicle lost power. The vehicle was taken to the dealer where it was diagnosed and determined that the battery needed to be replaced....",
+            "group": "power_and_wiring",
+            "id": "2045200",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 14.0087,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while the vehicle was idling at a stop light with the automatic Start/Stop feature activated, the driver depressed the accelerator pedal and the vehicle instantly shut off. The vehicle was not able to be restarted...",
+            "group": "power_and_wiring",
+            "id": "2025183",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 7.7172,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-03T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 similar case(s) in the knowledge base",
+      "started_at": "2025-02-03T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2021 Ford Bronco Sport. The contact stated while stopped at a traffic light, the vehicle lost electrical power and stalled. The contact stated that several unknown warning lights illuminated before the screen went black. The vehicle was towed to the dealer, where it was diagnosed and determined that the battery had failed. The contact was informed that the battery did not support the function of the vehicle and needed to be replaced. The battery was replaced. The contact state"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while driving at undisclosed speeds and while in reverse, the instrument panel occasionally flickered. The battery failure warning light illuminated intermittently. In addition, the contact stated that while attem...",
+            "group": "power_and_wiring",
+            "id": "2047772",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 16.7758,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while her daughter was starting the vehicle, there was a loud sound before the vehicle lost power. The vehicle was taken to the dealer where it was diagnosed and determined that the battery needed to be replaced....",
+            "group": "power_and_wiring",
+            "id": "2045200",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 14.0087,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Ford Bronco Sport. The contact stated that while the vehicle was idling at a stop light with the automatic Start/Stop feature activated, the driver depressed the accelerator pedal and the vehicle instantly shut off. The vehicle was not able to be restarted...",
+            "group": "power_and_wiring",
+            "id": "2025183",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 7.7172,
+            "year": 2021
+          },
+          {
+            "excerpt": "My car made a loud pop noise when I go to turn it over. Then it was just dead others tried to jump it, but it wasn’t getting enough juice. Along with this all the warning signals start flashing through on the dash before basically dying. There had been warning at all early I had...",
+            "group": "power_and_wiring",
+            "id": "2031856",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 3.7476,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-03T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+            "group": "power_and_wiring",
+            "id": "25V019000",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "open_date": "2025-01-17",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco Sport and 2022-2023 Maverick vehicles.  The 12-volt battery may experience degradation and suddenly fail.",
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-03T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+            "group": "power_and_wiring",
+            "id": "RQ24014",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "open_date": "2024-11-15",
+            "summary": "On January 31, 2024, The Office of Defects Investigation (ODI) opened a Preliminary Evaluation (PE24002) to investigate loss of motive power allegations in model year (MY) 2021 Ford Bronco Sport vehicles. Consumers reported a loss of engine power accompanied by complete electrical system failure either while driving or after stopping at a traffic light or stop sign. The vehicles generally could not be restarted, and the incidents were commonly diagnosed by dealerships to a failed 12-Volt (12V) battery. On April 12, 2024, Ford issued safety recall 24V-267 covering 456,565 MY 2021-2024 Ford Bronco Sport and MY 2022-2023 Ford Maverick vehicles. The recall addressed loss of motive power resulting from sudden degradation of the 12V battery during the drive cycle. The recall remedy consisted of software updates to the body control module and the powertrain control module. The updated software aimed to provide warning to consumers when the battery is failing and inhibit certain vehicle functions which can lead to loss of motive power incidents. Additionally, Ford removed the existing 12V Enhanced Flooded Battery (EFB) as both a service component for the subject vehicles and original equipment for newly built Bronco Sport vehicles (during MY 2024 production), replacing it with a more robust absorbed glass mat (AGM) battery. The same AGM battery had been incorporated into Ford Maverick production in late 2022. Following recall 24V-267, ODI received loss of motive power complaints in vehicles that had previously received Ford’s software-based remedy. Consumers reported that they did not receive warnings related to the 12V battery or the vehicle’s electrical system before the loss of power. On November 15, 2024, ODI opened Recall Query (RQ24014) to assess the effectiveness of the 24V-267 recall remedy. On January 19, 2025, Ford issued recall 25V-019 covering 272,817 MY 2021-2023 Bronco Sport and MY 2022-2023 Ford Maverick vehicles. The new recall addressed the same hazard as 24V-267 but required replacement of the existing 12V battery with an AGM battery as the remedy. Ford reported that following the opening of RQ24014, it evaluated several field-returned 12V batteries, and determined that EFBs produced by battery supplier Camel potentially contained internal manufacturing defects causing loss of motive power. Ford further concluded that the software updates provided in the 24V-267 recall remedy were unable to detect battery failures quickly enough to avoid loss of motive power. Vehicles previously within the scope of recall 24V-267, but outside of the scope of recall 25V-019, are equipped with EFBs produced by a different battery supplier (Clarios). When recall 25V-019 was issued, Ford had not identified any Clarios EFBs exhibiting the same failure mode as the Camel EFBs. In light of Ford’s recall action, ODI is closing this Recall Query. The agency will continue to monitor loss of motive power complaints in Bronco Sport vehicles equipped with Clarios EFBs and reserves the right to take additional action if warranted by future circumstances. To review the reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2021
+          },
+          {
+            "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+            "group": "power_and_wiring",
+            "id": "PE24002",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "open_date": "2024-01-31",
+            "summary": "On January 31, 2024, the Office of Defects Investigation (ODI) opened PE24002 to investigate allegations of loss of motive power in model year (MY) 2021 Ford Bronco Sport vehicles. At that time, ODI had received 31 Vehicle Owner Questionnaires (VOQs), with consumers commonly reporting a loss of engine power accompanied by complete electrical system failure which occurred either while driving, or after coming to a stop. The investigation revealed that MY 2021-2024 Ford Bronco Sport and certain MY 2022-2023 Ford Maverick vehicles are equipped with a 12V enhanced flooded battery (EFB), which may experience an abrupt failure during a drive cycle. The failure is the result of an internal corrosion issue, which is influenced by long exposure to high under-hood temperatures. If the sudden loss of 12V battery voltage is not detected by the vehicle’s battery management sensor, the vehicle can experience a loss of power event without providing any warning to the driver. Following a loss of power due to battery failure, the vehicle may be without all 12V accessories including hazard lights and typically will not be able to be restarted. In its March 2024 response to ODI’s information request, Ford provided 367 customer complaints (including field reports, lawsuits, and legal claims) and 1005 warranty claims relating to the alleged defect. When combining ODI and manufacturer failure report data, there are 1,368 unique VINs represented across MY 2021-2023 Ford Bronco Sport vehicles. One of the VOQs submitted to NHTSA reported a minor rear-end collision resulting from a loss of power event. Included within Ford’s complaints were a reported single-vehicle collision and a vehicle fire which occurred following a loss of power event at a traffic light (fire cause and origin was not determined). Additionally, across ODI and manufacturer data, there were 12 allegations of either acid leaking from the 12V battery or smoke emitting from the battery area within the engine compartment. On April 12, 2024, Ford submitted recall 24V267 for MY 2021-2024 Ford Bronco Sport and certain MY 2022-2023 Ford Maverick vehicles (total population 456,565). The recall remedy provides updated calibrations to the body control module and powertrain control module. Ford indicated that the update will result in improved detection of 12V battery state of charge during drive cycles and will provide notification to the driver if the battery significantly degrades while driving. Additionally, Ford has replaced the EFB with an absorbed glass mat (AGM) battery as both a service component for the subject vehicles and as original equipment for Bronco Sport vehicles with production dates beginning in mid-March 2024. The warranty claim rate for peer vehicles equipped with an AGM battery is substantially lower than that for the subject vehicle population. In view of the recall action being taken by Ford, ODI is closing this Preliminary Evaluation. The agency reserves the right to take additional action if warranted by future circumstances. To review the reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-03T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00124285,
+      "duration_ms": 16668,
+      "reason": "The narrative reports loss of electrical power and stalling at a traffic light, warning lights before the screen went black, and a dealer diagnosis that the battery had failed. This matches the known 12V battery concern for the 2021 Ford Bronco Sport described in investigations PE24002 and RQ24014 and recall 25V019000. No rulebook entry matched, so a standard battery test is proposed rather than a targeted load test. The later heating complaint was traced to the water pump and gaskets, not the battery.",
+      "started_at": "2025-02-03T07:00:38Z",
+      "step": 9,
+      "tokens": 4486,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "8 verified, 0 dropped",
+      "started_at": "2025-02-03T07:00:39Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "the vehicle lost electrical power and stalled",
+          "while stopped at a traffic light",
+          "several unknown warning lights illuminated before the screen went black",
+          "the battery had failed",
+          "while driving at undisclosed speeds",
+          "the heating system failed",
+          "the passenger’s side vents were not blowing hot air",
+          "the water pump and gaskets had failed"
+        ]
+      },
+      "tool_output": {
+        "checked": 8,
+        "dropped": 0,
+        "verified": 8
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-03T07:00:41Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-03T07:00:43Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-03T07:00:44Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-03T07:00:45Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

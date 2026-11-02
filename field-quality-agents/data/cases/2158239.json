@@ -1,0 +1,486 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2158239",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "IONIQ 5",
+    "narrative": "The car stopped both Level 1 and 2 charging. But Level 3 charging worked. When it stopped in the middle of Level 2 charging, it tripped my circuit and bricked my Juicebix Level 2 charger.  Hyundai replaced the ICCU.",
+    "received_at": "2025-12-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2158239",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158239",
+    "decided_at": "2025-12-17T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2158239",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The car stopped both Level 1 and 2 charging."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Level 3 charging worked."
+      },
+      {
+        "kind": "condition",
+        "quote": "When it stopped in the middle of Level 2 charging"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it tripped my circuit and bricked my Juicebix Level 2 charger"
+      },
+      {
+        "kind": "other",
+        "quote": "Hyundai replaced the ICCU."
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run the Electrical load test because Level 1 and Level 2 charging stopped while Level 3 worked, pointing to the high-current AC charging path.",
+    "symptoms": [
+      "Level 1 charging stopped",
+      "Level 2 charging stopped",
+      "Level 3 charging still worked",
+      "Level 2 charging stopped midway",
+      "circuit tripped during Level 2 charging",
+      "Level 2 charger bricked"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158239",
+    "created_at": "2025-12-17T07:00:46Z",
+    "evidence": [
+      {
+        "quote": "The car stopped both Level 1 and 2 charging.",
+        "source_id": "2158239",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Level 3 charging worked.",
+        "source_id": "2158239",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "When it stopped in the middle of Level 2 charging",
+        "source_id": "2158239",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "it tripped my circuit and bricked my Juicebix Level 2 charger",
+        "source_id": "2158239",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Hyundai replaced the ICCU.",
+        "source_id": "2158239",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports failure of Level 1 and Level 2 charging, a mid-Level 2 stop that tripped the circuit and bricked the Level 2 charger, and subsequent ICCU replacement. The rulebook matches the charging condition to the Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits.",
+    "requested_info": [],
+    "summary": "Run the Electrical load test because Level 1 and Level 2 charging stopped while Level 3 worked, pointing to the high-current AC charging path.",
+    "targeted_test": {
+      "conditions": [
+        "charging"
+      ],
+      "name": "Electrical load test",
+      "reason": "The narrative reports failure of Level 1 and Level 2 charging, a mid-Level 2 stop that tripped the circuit and bricked the Level 2 charger, and subsequent ICCU replacement. The rulebook matches the charging condition to the Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We have owned an Ionic 5 for a year. For 8 months the level 2 charging system worked fine. We have two 40 amp level 2 chargers at two different locations which both charge the car at between 9.0 and 9.2 kW, well below the Ionic 5’s advertised capacity of 10.6 kW. After 8 months t...",
+      "group": "electrical_general",
+      "id": "1922773",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 14.5046,
+      "year": 2022
+    },
+    {
+      "excerpt": "Charging with level 2 / 240 vac charger stops frequently after 5 months of ownership. Car will not complete charge. Seeing on message boards that this is common problem with this model.",
+      "group": "electrical_general",
+      "id": "1878741",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 10.16,
+      "year": 2022
+    },
+    {
+      "excerpt": "When charging the vehicle using a level 2 charger, the charging system will often trip for unknown reasons. This can happen after 1 hour or after many hours of charging. If using specific chargers, the charging will restart after a 10 second delay and oftentimes the car will cont...",
+      "group": "electrical_general",
+      "id": "1874895",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 9.5918,
+      "year": 2022
+    },
+    {
+      "excerpt": "The charge port in the car overhears when on a Level 2 (240v) charger running above 30 amps. This is happening to most 2022 Ioniq 5 cars, not just mine. Hyundai is aware and they just made it harder to charge over 30 amps. This is incredibly dangerous! They need to recall the ass...",
+      "group": "electrical_general",
+      "id": "1909397",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 8.2713,
+      "year": 2022
+    },
+    {
+      "excerpt": "Driving the car about at 45mph then I heard a pop sound from the rear of the car. Car displayed warning \"Check Electrical Vehicle System.\" I pull over, shut it off, then restarted it. The \"check Electrical Vehicle System\" light stills on then an emergency message displayed 'Stop...",
+      "group": "electrical_general",
+      "id": "1903649",
+      "make": "HYUNDAI",
+      "model": "IONIQ 5",
+      "score": 7.3899,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-17T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00110545,
+      "duration_ms": 11291,
+      "reason": "Electrical system/ICCU: stopped Level 1 and Level 2 charging while Level 3 worked; a mid-Level 2 stop tripped the circuit and bricked the Level 2 charger; ICCU replaced.",
+      "started_at": "2025-12-17T07:00:36Z",
+      "step": 2,
+      "tokens": 2343,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-17T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have owned an Ionic 5 for a year. For 8 months the level 2 charging system worked fine. We have two 40 amp level 2 chargers at two different locations which both charge the car at between 9.0 and 9.2 kW, well below the Ionic 5’s advertised capacity of 10.6 kW. After 8 months t...",
+            "group": "electrical_general",
+            "id": "1922773",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 14.5046,
+            "year": 2022
+          },
+          {
+            "excerpt": "Charging with level 2 / 240 vac charger stops frequently after 5 months of ownership. Car will not complete charge. Seeing on message boards that this is common problem with this model.",
+            "group": "electrical_general",
+            "id": "1878741",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 10.16,
+            "year": 2022
+          },
+          {
+            "excerpt": "When charging the vehicle using a level 2 charger, the charging system will often trip for unknown reasons. This can happen after 1 hour or after many hours of charging. If using specific chargers, the charging will restart after a 10 second delay and oftentimes the car will cont...",
+            "group": "electrical_general",
+            "id": "1874895",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 9.5918,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-17T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-17T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-12-17T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The car stopped both Level 1 and 2 charging. But Level 3 charging worked. When it stopped in the middle of Level 2 charging, it tripped my circuit and bricked my Juicebix Level 2 charger.  Hyundai replaced the ICCU."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have owned an Ionic 5 for a year. For 8 months the level 2 charging system worked fine. We have two 40 amp level 2 chargers at two different locations which both charge the car at between 9.0 and 9.2 kW, well below the Ionic 5’s advertised capacity of 10.6 kW. After 8 months t...",
+            "group": "electrical_general",
+            "id": "1922773",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 14.5046,
+            "year": 2022
+          },
+          {
+            "excerpt": "Charging with level 2 / 240 vac charger stops frequently after 5 months of ownership. Car will not complete charge. Seeing on message boards that this is common problem with this model.",
+            "group": "electrical_general",
+            "id": "1878741",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 10.16,
+            "year": 2022
+          },
+          {
+            "excerpt": "When charging the vehicle using a level 2 charger, the charging system will often trip for unknown reasons. This can happen after 1 hour or after many hours of charging. If using specific chargers, the charging will restart after a 10 second delay and oftentimes the car will cont...",
+            "group": "electrical_general",
+            "id": "1874895",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 9.5918,
+            "year": 2022
+          },
+          {
+            "excerpt": "The charge port in the car overhears when on a Level 2 (240v) charger running above 30 amps. This is happening to most 2022 Ioniq 5 cars, not just mine. Hyundai is aware and they just made it harder to charge over 30 amps. This is incredibly dangerous! They need to recall the ass...",
+            "group": "electrical_general",
+            "id": "1909397",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 8.2713,
+            "year": 2022
+          },
+          {
+            "excerpt": "Driving the car about at 45mph then I heard a pop sound from the rear of the car. Car displayed warning \"Check Electrical Vehicle System.\" I pull over, shut it off, then restarted it. The \"check Electrical Vehicle System\" light stills on then an emergency message displayed 'Stop...",
+            "group": "electrical_general",
+            "id": "1903649",
+            "make": "HYUNDAI",
+            "model": "IONIQ 5",
+            "score": 7.3899,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-17T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-17T07:00:42Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HYUNDAI",
+        "model": "IONIQ 5",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-17T07:00:43Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007284,
+      "duration_ms": 6202,
+      "reason": "The narrative reports failure of Level 1 and Level 2 charging, a mid-Level 2 stop that tripped the circuit and bricked the Level 2 charger, and subsequent ICCU replacement. The rulebook matches the charging condition to the Electrical load test because charging and high-current loads stress the supply path, connectors and protection circuits.",
+      "started_at": "2025-12-17T07:00:44Z",
+      "step": 10,
+      "tokens": 2339,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-12-17T07:00:45Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The car stopped both Level 1 and 2 charging.",
+          "Level 3 charging worked.",
+          "When it stopped in the middle of Level 2 charging",
+          "it tripped my circuit and bricked my Juicebix Level 2 charger",
+          "Hyundai replaced the ICCU."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-17T07:00:47Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-17T07:00:49Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-17T07:00:50Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-17T07:00:51Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

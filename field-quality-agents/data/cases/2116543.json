@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2116543",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "ABS (Automated Breaking System) is impacted and turns on lights on my dashboard failing the following while driving (Forward Collision Warning, Tire Pressure Light, Lane Departure Warning,  Anti-skid system)  It is avaliable for testing on request.  Car does not stop as it is supposed to in urgent breaking due to ABS failure and puts driver and others on risk. My spouse already got in an accident due to this.  Yes, after months of system failure on and off, I finally got my car inspected at a independent service center. Honda dealership costs more and are not ready to even look at it without paying, even though this seems to me a problem discussed online in many forums/sites.  I called and emailed manufacturer and was turned down by requesting me to go to the Honda dealership repair which charge way more only to inspect only one issue. No other than the independent service center.   Yes, there were dashboard lights of the above mentioned lights and I discussed this with Honda service team during my oil change and I was said this is driver assistance and not a safety issue. The root cause diagnosed by independent service center was ABS system.",
+    "received_at": "2025-08-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116543",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116543",
+    "decided_at": "2025-08-02T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116543",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "ABS (Automated Breaking System) is impacted and turns on lights on my dashboard failing the following while driving (Forward Collision Warning, Tire Pressure Light, Lane Departure Warning,  Anti-skid system)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Car does not stop as it is supposed to in urgent breaking due to ABS failure"
+      },
+      {
+        "kind": "condition",
+        "quote": "after months of system failure on and off"
+      },
+      {
+        "kind": "safety",
+        "quote": "puts driver and others on risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "My spouse already got in an accident due to this."
+      },
+      {
+        "kind": "component_group",
+        "quote": "The root cause diagnosed by independent service center was ABS system."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2013 Honda Accord ADAS/ABS failure causing multiple dashboard warnings and reduced emergency braking, intermittent over months, with a reported crash",
+    "symptoms": [
+      "multiple dashboard warning lights on while driving (forward collision warning, tire pressure, lane departure, anti-skid)",
+      "car does not stop as it should during urgent braking",
+      "ABS system failure diagnosed as root cause"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116543",
+    "created_at": "2025-08-02T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The ABS Modulator has failed. It is available for inspection for $120 at the dealer which does not go towards the repair. I went to an independent shop and was told that they can't figure out the problem because of the complex computer system in Hondas. I then had it inspected at...",
+      "group": "adas",
+      "id": "1835808",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 23.8821,
+      "year": 2013
+    },
+    {
+      "excerpt": "I receive a message that states FCW System Failure, which turns on multiple indicators on my dash board; TPMS, ABS, traction control, steering icon, etc. It disables my front collision warning as well as my lane departure warning, so I am not alerted anymore. The issue happens ev...",
+      "group": "adas",
+      "id": "1794971",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 23.372,
+      "year": 2013
+    },
+    {
+      "excerpt": "While driving around 65 mph on the freeway, the car suddenly became hard to steer. The electronic power steering seemed to fail, and multiple warning lights simultaneously appeared on the dashboard (Vehicle Stability Assist, Tire Pressure, Power Steering, Engine). I was in the mi...",
+      "group": "adas",
+      "id": "1809452",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 21.266,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00035515,
+      "duration_ms": 5071,
+      "reason": "2013 Honda Accord ADAS/ABS failure causing multiple dashboard warnings and reduced emergency braking, intermittent over months, with a reported crash",
+      "started_at": "2025-08-02T07:00:01Z",
+      "step": 2,
+      "tokens": 1232,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The ABS Modulator has failed. It is available for inspection for $120 at the dealer which does not go towards the repair. I went to an independent shop and was told that they can't figure out the problem because of the complex computer system in Hondas. I then had it inspected at...",
+            "group": "adas",
+            "id": "1835808",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 23.8821,
+            "year": 2013
+          },
+          {
+            "excerpt": "I receive a message that states FCW System Failure, which turns on multiple indicators on my dash board; TPMS, ABS, traction control, steering icon, etc. It disables my front collision warning as well as my lane departure warning, so I am not alerted anymore. The issue happens ev...",
+            "group": "adas",
+            "id": "1794971",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 23.372,
+            "year": 2013
+          },
+          {
+            "excerpt": "While driving around 65 mph on the freeway, the car suddenly became hard to steer. The electronic power steering seemed to fail, and multiple warning lights simultaneously appeared on the dashboard (Vehicle Stability Assist, Tire Pressure, Power Steering, Engine). I was in the mi...",
+            "group": "adas",
+            "id": "1809452",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 21.266,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-02T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-02T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-02T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-02T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

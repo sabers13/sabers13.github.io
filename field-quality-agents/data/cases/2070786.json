@@ -1,0 +1,241 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2070786",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "AMG SL63",
+    "narrative": "MBUX system would not turn on. Warnings of Blind Spot in operatable, Parktronic not operatable. Was not able to access any features through MBUX. Climate Control, Operation of Covertable Top, Maps, all options run through MBUX. It was a safety issue because the battery light comes on, after being on charge, and without access to MBUX, you do not know if the car will stall on the freeway, or at a stop light. Safety issues also around front lift without cameras access. The vehicle was inspected at the Mercedes Benz Dealer and they fixed it, but after a day, the battery still isn't charging after numerous attempts and recalls on 12v rewiring. Since I have bough the vehicle, many warning lights have always come on, been ficed and then come back on.",
+    "received_at": "2025-03-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2070786",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2070786",
+    "decided_at": "2025-03-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2070786",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "MBUX system would not turn on."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Warnings of Blind Spot in operatable, Parktronic not operatable."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Was not able to access any features through MBUX."
+      },
+      {
+        "kind": "condition",
+        "quote": "after being on charge"
+      },
+      {
+        "kind": "condition",
+        "quote": "after a day"
+      },
+      {
+        "kind": "condition",
+        "quote": "battery still isn't charging"
+      },
+      {
+        "kind": "condition",
+        "quote": "come back on"
+      },
+      {
+        "kind": "safety",
+        "quote": "It was a safety issue because the battery light comes on, after being on charge, and without access to MBUX, you do not know if the car will stall on the freeway, or at a stop light."
+      },
+      {
+        "kind": "other",
+        "quote": "recalls on 12v rewiring"
+      }
+    ],
+    "conditions": [
+      "charging",
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: MBUX would not turn on with blind spot/Parktronic warnings and battery not charging after charge/service.",
+    "symptoms": [
+      "MBUX system would not turn on",
+      "Blind Spot warning inoperable",
+      "Parktronic not operatable",
+      "unable to access features through MBUX",
+      "battery light comes on after charging",
+      "battery not charging",
+      "recurring warning lights"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2070786",
+    "created_at": "2025-03-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011757,
+      "duration_ms": 10813,
+      "reason": "Electrical system: MBUX would not turn on with blind spot/Parktronic warnings and battery not charging after charge/service.",
+      "started_at": "2025-03-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2456,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "AMG SL63",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2130745",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL Y",
+    "narrative": "[XXX] , my [XXX]  son, was strapped in his car seat, wide-eyed and confused, as we sat trapped in our Tesla for thirty agonizing minutes. The battery had died without warning, leaving us locked inside our own garage. No power, no way to open the doors. I tried to keep [XXX]  calm, singing his favorite songs, but my heart raced as I called for help. A tow truck finally arrived and jumped the car—not enough juice to start the engine, but just enough to unlock the doors. Freedom at last. Tesla’s response? No roadside service; they insisted the car be towed to their service center. Easier said than done—the tow truck couldn’t maneuver it out of the garage. Frustration mounted as I realized I’d have to miss work. Days later, I drove to the service center, where they replaced the battery. But the ordeal wasn’t over. The trim was damaged during the chaos, and now every drive is accompanied by relentless wind noise, a constant reminder of that day. [XXX]  still talks about being “stuck in the car,” and I can’t help but feel let down by a system that left us stranded.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-09-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2130745",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2130745",
+    "decided_at": "2025-09-16T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2130745",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The battery had died without warning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No power, no way to open the doors."
+      },
+      {
+        "kind": "safety",
+        "quote": "trapped in our Tesla for thirty agonizing minutes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "not enough juice to start the engine, but just enough to unlock the doors"
+      },
+      {
+        "kind": "other",
+        "quote": "they replaced the battery"
+      },
+      {
+        "kind": "other",
+        "quote": "The trim was damaged during the chaos"
+      },
+      {
+        "kind": "symptom",
+        "quote": "relentless wind noise"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "2021 Tesla Model Y battery died without warning, locking driver and child in garage; battery replaced, trim damaged and wind noise followed.",
+    "symptoms": [
+      "battery died without warning",
+      "locked inside vehicle with no power to open doors",
+      "jump start provided enough power only to unlock doors",
+      "battery replaced",
+      "trim damaged",
+      "wind noise"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2130745",
+    "created_at": "2025-09-16T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving on ice and snow covered roads the regenerative braking feature comes in so strongly that it makes driving dangerous as the car loses traction and control every time the foot is removed from the accelerator. The regenerative braking automatically applies once the foo...",
+      "group": "power_and_wiring",
+      "id": "1788258",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 6.3945,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated while driving 20–45 MPH on a six-lane highway, the contact attempted a hard acceleration, and there was an abnormal banging sound heard. The battery was disconnected. The pyrotechnic fuse went into failure mode. There were...",
+      "group": "power_and_wiring",
+      "id": "1993241",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 5.1472,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated after placing the children in the vehicle, he was unable to enter the vehicle. The contact stated that the vehicle lost electric power while attempting to open the door with the key fob and with the phone App however, the...",
+      "group": "power_and_wiring",
+      "id": "2002795",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 3.9451,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-16T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013288,
+      "duration_ms": 14242,
+      "reason": "2021 Tesla Model Y battery died without warning, locking driver and child in garage; battery replaced, trim damaged and wind noise followed.",
+      "started_at": "2025-09-16T07:00:16Z",
+      "step": 2,
+      "tokens": 2911,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-16T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving on ice and snow covered roads the regenerative braking feature comes in so strongly that it makes driving dangerous as the car loses traction and control every time the foot is removed from the accelerator. The regenerative braking automatically applies once the foo...",
+            "group": "power_and_wiring",
+            "id": "1788258",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 6.3945,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated while driving 20–45 MPH on a six-lane highway, the contact attempted a hard acceleration, and there was an abnormal banging sound heard. The battery was disconnected. The pyrotechnic fuse went into failure mode. There were...",
+            "group": "power_and_wiring",
+            "id": "1993241",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 5.1472,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated after placing the children in the vehicle, he was unable to enter the vehicle. The contact stated that the vehicle lost electric power while attempting to open the door with the key fob and with the phone App however, the...",
+            "group": "power_and_wiring",
+            "id": "2002795",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 3.9451,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-09-16T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-16T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-16T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-16T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-16T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-16T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-16T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

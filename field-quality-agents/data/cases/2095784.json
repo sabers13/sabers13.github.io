@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+    "group": "safety_systems",
+    "id": "2095784",
+    "make": "RAM",
+    "mileage": 65140,
+    "model": "1500",
+    "narrative": "The contact owns a 2022 Ram 1500. The contact stated that while driving at approximately 15-20 MPH coming to a stop light, the contact attempted to apply the brake pedal however the brakes failed to engage and the vehicle did not stop. The vehicle went through a stoplight, and another vehicle crashed into the driver's side of the vehicle. The air bags did not deploy. The vehicle was towed. The contact received injuries to the right arm, right thumb, and back. The driver in the other vehicle sustained injuries as well. Medical attention was needed. A police report was filed. The vehicle was taken to a local body shop, which diagnosed that the frame needed to be repaired due to the extensive amount of damage. The vehicle was not diagnosed for the experienced failure. The vehicle was not repaired. The contact received notification of NHTSA Campaign Number: 24V653000 (Service Brakes, Hydraulics, Electronic Stability Control (ESC)) the next day. The manufacturer was not informed of the failure. The failure mileage was 65,140.",
+    "received_at": "2025-05-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2095784",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2095784",
+    "decided_at": "2025-05-29T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2095784",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRONIC STABILITY CONTROL (ESC)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes failed to engage and the vehicle did not stop"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at approximately 15-20 MPH coming to a stop light"
+      },
+      {
+        "kind": "safety",
+        "quote": "another vehicle crashed into the driver's side of the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "The contact received injuries to the right arm, right thumb, and back."
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V653000"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V653000"
+    ],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "2022 Ram 1500 ESC/brake failure at 15-20 mph approaching a stop light: brake pedal applied but brakes did not engage; vehicle went through stoplight and was struck, causing injuries.",
+    "symptoms": [
+      "brake pedal applied but brakes failed to engage",
+      "vehicle did not stop",
+      "air bags did not deploy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2095784",
+    "created_at": "2025-05-29T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Ram 1500. The contact stated while driving at various speeds and depressing the brake pedal, the brake pedal gradually travelled down while vibrating, and the vehicle failed to respond as needed. The contact stated that upon depressing the brake pedal hard...",
+      "group": "safety_systems",
+      "id": "2047114",
+      "make": "RAM",
+      "model": "1500",
+      "score": 14.1973,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Ram 1500. The contact stated while driving approximately 35 MPH, the contact slammed on the brake pedal and the vehicle stalled. The vehicle was restarted, and the check engine warning light illuminated. The vehicle was not diagnosed or repaired. The conta...",
+      "group": "safety_systems",
+      "id": "2034277",
+      "make": "RAM",
+      "model": "1500",
+      "score": 12.7816,
+      "year": 2022
+    },
+    {
+      "excerpt": "The contact owns a 2022 Ram 1500. The contact received notification of NHTSA Campaign Number: 24V653000 (Service Brakes Hydraulic, Electronic Stability Control - (ESC) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had ex...",
+      "group": "safety_systems",
+      "id": "2041849",
+      "make": "RAM",
+      "model": "1500",
+      "score": 3.829,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00115255,
+      "duration_ms": 13812,
+      "reason": "2022 Ram 1500 ESC/brake failure at 15-20 mph approaching a stop light: brake pedal applied but brakes did not engage; vehicle went through stoplight and was struck, causing injuries.",
+      "started_at": "2025-05-29T07:00:01Z",
+      "step": 2,
+      "tokens": 2546,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Ram 1500. The contact stated while driving at various speeds and depressing the brake pedal, the brake pedal gradually travelled down while vibrating, and the vehicle failed to respond as needed. The contact stated that upon depressing the brake pedal hard...",
+            "group": "safety_systems",
+            "id": "2047114",
+            "make": "RAM",
+            "model": "1500",
+            "score": 14.1973,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Ram 1500. The contact stated while driving approximately 35 MPH, the contact slammed on the brake pedal and the vehicle stalled. The vehicle was restarted, and the check engine warning light illuminated. The vehicle was not diagnosed or repaired. The conta...",
+            "group": "safety_systems",
+            "id": "2034277",
+            "make": "RAM",
+            "model": "1500",
+            "score": 12.7816,
+            "year": 2022
+          },
+          {
+            "excerpt": "The contact owns a 2022 Ram 1500. The contact received notification of NHTSA Campaign Number: 24V653000 (Service Brakes Hydraulic, Electronic Stability Control - (ESC) however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had ex...",
+            "group": "safety_systems",
+            "id": "2041849",
+            "make": "RAM",
+            "model": "1500",
+            "score": 3.829,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-05-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-29T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-29T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-29T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-29T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

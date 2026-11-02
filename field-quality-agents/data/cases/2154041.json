@@ -1,0 +1,236 @@
+{
+  "case": {
+    "component": "SERVICE BRAKES, ELECTRIC",
+    "group": "safety_systems",
+    "id": "2154041",
+    "make": "BRINKLEY RV",
+    "mileage": 4000,
+    "model": "MODEL Z",
+    "narrative": "The contact owns a 2025 Brinkley RV Model Z. The contact stated that while the RV was parked in the driveway, the contact heard popping sounds coming from the RV. The contact then noticed there were sparks coming from under the RV before it caught fire. The contact put out the fire with a hose. The contact stated that the fire started on the driver's side rear wheel. The fire department arrived at the residence to inspect for hot spots. A fire department report was filed, and the cause of the fire was determined to be electrical. The contact stated that three days before the failure, the RV was used for camping, and the \"Trailer Brake Failure\" message displayed while driving; however, upon inspection, no failure was found. The RV was not diagnosed or repaired by an independent mechanic or dealer. The insurance company did not deem the RV totaled, but instead determined that it was an electrical fire with no origin. The manufacturer was made aware of the failure. The failure mileage was approximately 4,000.",
+    "received_at": "2025-12-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154041",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154041",
+    "decided_at": "2025-12-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154041",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SERVICE BRAKES, ELECTRIC"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the RV was parked in the driveway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "heard popping sounds coming from the RV"
+      },
+      {
+        "kind": "symptom",
+        "quote": "there were sparks coming from under the RV before it caught fire"
+      },
+      {
+        "kind": "safety",
+        "quote": "caught fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fire started on the driver's side rear wheel"
+      },
+      {
+        "kind": "other",
+        "quote": "cause of the fire was determined to be electrical"
+      },
+      {
+        "kind": "condition",
+        "quote": "three days before the failure, the RV was used for camping"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "\"Trailer Brake Failure\" message displayed while driving"
+      },
+      {
+        "kind": "other",
+        "quote": "electrical fire with no origin"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "Trailer Brake Failure"
+    ],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "SERVICE BRAKES, ELECTRIC: popping sounds, sparks, and fire at the driver's side rear wheel while parked; prior \"Trailer Brake Failure\" message while driving.",
+    "symptoms": [
+      "popping sounds",
+      "sparks",
+      "fire",
+      "Trailer Brake Failure message"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154041",
+    "created_at": "2025-12-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015316,
+      "duration_ms": 16593,
+      "reason": "SERVICE BRAKES, ELECTRIC: popping sounds, sparks, and fire at the driver's side rear wheel while parked; prior \"Trailer Brake Failure\" message while driving.",
+      "started_at": "2025-12-04T07:00:01Z",
+      "step": 2,
+      "tokens": 3174,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BRINKLEY RV",
+        "model": "MODEL Z",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-12-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

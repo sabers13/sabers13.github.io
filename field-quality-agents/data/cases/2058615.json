@@ -1,0 +1,264 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2058615",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "I was crossing a road to get to the median and my Jeep stopped moving in the middle of a 4 lane highway, separated by a median that I never made it to due to it stopping moving during acceleration. It made noise when I pressed on the gas pedal but didn’t go anywhere. I was hit by a car that couldn’t avoid me, and my daughter and I were injured in the crash. My daughter had a fracture in her right leg & facial bruising. I had a laceration requiring stitches and facial bruising, lost consciousness at the scene and am severely concussed. Progressive deemed my Jeep a total loss.",
+    "received_at": "2025-01-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2058615",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2058615",
+    "decided_at": "2025-01-23T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2058615",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my Jeep stopped moving in the middle of a 4 lane highway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It made noise when I pressed on the gas pedal but didn’t go anywhere."
+      },
+      {
+        "kind": "safety",
+        "quote": "I was hit by a car that couldn’t avoid me, and my daughter and I were injured in the crash."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: Jeep stopped moving during acceleration with noise when pressing the gas pedal; crash with injuries.",
+    "symptoms": [
+      "stopped moving during acceleration",
+      "made noise when pressing the gas pedal but did not move"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2058615",
+    "created_at": "2025-01-23T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ARRIVED HOME 10:15PM DRY ROADS AND WEATHER. BACKING JEEP INTO DRIVEWAY AND WENT TO FULL THROTTLE BACK TO HIT THE GARAGE STRUCTURE AND DOOR. SHIFTED TWO DRIVE TO MOVE OUT INTO THE DRIVEWAY AND WENT TO FULL THROTTLE FORWARD, ACROSS THE STREET, THROUGH THE SWALE INTO A VACANT LOT AN...",
+      "group": "electrical_general",
+      "id": "1644000",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 10.1175,
+      "year": 2015
+    },
+    {
+      "excerpt": "SERVICE SHIFTER LIGHT CAME ON WHILE DRIVING, HAD IT TOWED TO THE DEALERSHIP, 5 DAYS LATER THEY SAID NOTHING IS WRONG WITH IT SO I TOOK IT HOME. A WEEK LATER, SERVICE SHIFTER LIGHT CAME BACK ON WHILE I WAS DRIVING ON A SIDE STREET, ALL THE LIGHTS ON THE DASH CAME ON, UNABLE TO CON...",
+      "group": "electrical_general",
+      "id": "1731950",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 10.109,
+      "year": 2015
+    },
+    {
+      "excerpt": "I have had several incidents where the car was not responding properly such as fob key unlocking car, even with brand new battery, I’d have to unlock car manually but alarm would go off for 10min+ then randomly stop and car would allow me turn it on. Sunroof wouldn’t work properl...",
+      "group": "electrical_general",
+      "id": "1924552",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 8.1959,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006493,
+      "duration_ms": 11502,
+      "reason": "Electrical system: Jeep stopped moving during acceleration with noise when pressing the gas pedal; crash with injuries.",
+      "started_at": "2025-01-23T07:00:01Z",
+      "step": 2,
+      "tokens": 1642,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ARRIVED HOME 10:15PM DRY ROADS AND WEATHER. BACKING JEEP INTO DRIVEWAY AND WENT TO FULL THROTTLE BACK TO HIT THE GARAGE STRUCTURE AND DOOR. SHIFTED TWO DRIVE TO MOVE OUT INTO THE DRIVEWAY AND WENT TO FULL THROTTLE FORWARD, ACROSS THE STREET, THROUGH THE SWALE INTO A VACANT LOT AN...",
+            "group": "electrical_general",
+            "id": "1644000",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 10.1175,
+            "year": 2015
+          },
+          {
+            "excerpt": "SERVICE SHIFTER LIGHT CAME ON WHILE DRIVING, HAD IT TOWED TO THE DEALERSHIP, 5 DAYS LATER THEY SAID NOTHING IS WRONG WITH IT SO I TOOK IT HOME. A WEEK LATER, SERVICE SHIFTER LIGHT CAME BACK ON WHILE I WAS DRIVING ON A SIDE STREET, ALL THE LIGHTS ON THE DASH CAME ON, UNABLE TO CON...",
+            "group": "electrical_general",
+            "id": "1731950",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 10.109,
+            "year": 2015
+          },
+          {
+            "excerpt": "I have had several incidents where the car was not responding properly such as fob key unlocking car, even with brand new battery, I’d have to unlock car manually but alarm would go off for 10min+ then randomly stop and car would allow me turn it on. Sunroof wouldn’t work properl...",
+            "group": "electrical_general",
+            "id": "1924552",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 8.1959,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-01-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-23T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-23T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-23T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

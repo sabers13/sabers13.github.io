@@ -1,0 +1,301 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2074599",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WAGONEER",
+    "narrative": "on 2 occasions, the car has shut down at a stop and killed the engine. Car had to be placed in park and restarted. Most recently, the car suddenly shut off while moving. The control panel flashed low battery and shut down systems. It disabled the power steering and shut down all power including the engine, thankfully this didn't cause an accident, but would have been a very dangerous situation if traveling at higher speed . Car couldn't be restarted, when trying to it would shift itself from drive to park and die again. After about 30 minutes, the car started when jumped. All gauges read correctly and didn't indicate any low battery issues.   When in for service approximately 2 weeks ago, dying at a stop was discussed with the dealer and they said they weren't aware of any issues and would need to keep the car for potentially weeks to diagnose the issue. That issue was is far less severe than dying while moving. Attempting to get in for service ASAP.  Looks like there is already an open investigation into the issue.",
+    "received_at": "2025-03-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2074599",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2074599",
+    "decided_at": "2025-03-17T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2074599",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car has shut down at a stop and killed the engine"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car suddenly shut off while moving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The control panel flashed low battery and shut down systems"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It disabled the power steering and shut down all power including the engine"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Car couldn't be restarted"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it would shift itself from drive to park and die again"
+      },
+      {
+        "kind": "symptom",
+        "quote": "After about 30 minutes, the car started when jumped"
+      },
+      {
+        "kind": "condition",
+        "quote": "on 2 occasions"
+      },
+      {
+        "kind": "condition",
+        "quote": "when jumped"
+      },
+      {
+        "kind": "safety",
+        "quote": "thankfully this didn't cause an accident, but would have been a very dangerous situation if traveling at higher speed"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: engine shuts down at a stop and while moving, low-battery/system shutdown, no restart until jump start.",
+    "symptoms": [
+      "engine shuts down at a stop",
+      "engine shuts off while moving",
+      "control panel flashes low battery and systems shut down",
+      "power steering disabled",
+      "vehicle cannot be restarted",
+      "restart attempt shifts from drive to park and dies",
+      "starts after about 30 minutes when jumped",
+      "gauges read correctly without low-battery indication"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2074599",
+    "created_at": "2025-03-17T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "This has happened on my vehicle twice, the first time I was stopping at a stop sign and the car gave a message about putting car in park and restarting, it put itself into park before I saw the message and so when I went to accelerate it just revved the engine. I had to push the...",
+      "group": "electrical_general",
+      "id": "2022577",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 20.8993,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was driving on the highway when suddenly, my car started acting up. The lights on the dashboard started flashing one by one, from the check engine light to the battery light, and then everything went black. The infotainment system also went out, and I couldn’t control the car a...",
+      "group": "electrical_general",
+      "id": "2043344",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 19.4749,
+      "year": 2022
+    },
+    {
+      "excerpt": "This is the second time this issue has happened. 1st time it happened about 1 year ago and jeep replaced some parts in relation to the ECM and etorque system. The issue happened today once again. Our jeep wagoner will just stall out our sputter in a manor to almost stall. Today i...",
+      "group": "electrical_general",
+      "id": "2036465",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 18.9549,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00160255,
+      "duration_ms": 28556,
+      "reason": "Electrical system: engine shuts down at a stop and while moving, low-battery/system shutdown, no restart until jump start.",
+      "started_at": "2025-03-17T07:00:01Z",
+      "step": 2,
+      "tokens": 3290,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WAGONEER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "This has happened on my vehicle twice, the first time I was stopping at a stop sign and the car gave a message about putting car in park and restarting, it put itself into park before I saw the message and so when I went to accelerate it just revved the engine. I had to push the...",
+            "group": "electrical_general",
+            "id": "2022577",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 20.8993,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was driving on the highway when suddenly, my car started acting up. The lights on the dashboard started flashing one by one, from the check engine light to the battery light, and then everything went black. The infotainment system also went out, and I couldn’t control the car a...",
+            "group": "electrical_general",
+            "id": "2043344",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 19.4749,
+            "year": 2022
+          },
+          {
+            "excerpt": "This is the second time this issue has happened. 1st time it happened about 1 year ago and jeep replaced some parts in relation to the ECM and etorque system. The issue happened today once again. Our jeep wagoner will just stall out our sputter in a manor to almost stall. Today i...",
+            "group": "electrical_general",
+            "id": "2036465",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 18.9549,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-17T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-17T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-17T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-17T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

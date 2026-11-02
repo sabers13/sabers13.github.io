@@ -1,0 +1,253 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2091244",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "CHEROKEE",
+    "narrative": "Electronic parking brake (EPB) module.  Yes confirmed by a independent service center. Warning Park Brake indicator. This is the second time happening. First time was Sept 2024 was fixed. Taking it in tomorrow for confirmation, if same issue mechanic stated the part is on National Backorder!!!!   Unable to release out of Park Brake which in turn, unable to drive car. Safety issue when driving, stops abruptly, can't disengage safety brake.",
+    "received_at": "2025-05-12",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2091244",
+    "status": "needs_engineer",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2091244",
+    "decided_at": "2025-05-12T07:00:21Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2091244",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Electronic parking brake (EPB) module."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Warning Park Brake indicator."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Unable to release out of Park Brake which in turn, unable to drive car."
+      },
+      {
+        "kind": "safety",
+        "quote": "Safety issue when driving, stops abruptly, can't disengage safety brake."
+      },
+      {
+        "kind": "condition",
+        "quote": "First time was Sept 2024 was fixed."
+      },
+      {
+        "kind": "other",
+        "quote": "This is the second time happening."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "EPB module warning with Park Brake indicator; park brake will not release so car cannot be driven; driving safety issue with abrupt stop and brake not disengaging; recurrence after prior repair.",
+    "symptoms": [
+      "Park Brake indicator warning",
+      "unable to release park brake",
+      "unable to drive car",
+      "stops abruptly when driving",
+      "cannot disengage safety brake"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2091244",
+    "created_at": "2025-05-12T07:00:18Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I parked my car and went into the store came back out tried to start my car and the message Service Transmission Restart in Park With Vehicle at Zero Speed appeared on the dashboard and my car wouldn’t start",
+      "group": "adas",
+      "id": "1962145",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 6.2168,
+      "year": 2017
+    },
+    {
+      "excerpt": "Abs and parking brake keeps initiating while driving my vehicle. Concerned about an accident. I have already had the shifter sensor replaced and still doing the same thing",
+      "group": "adas",
+      "id": "1849960",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 5.8786,
+      "year": 2017
+    },
+    {
+      "excerpt": "the electronic emergency brake engaged on its own. The car would not move and there was nothing I could do to get it out of park.",
+      "group": "adas",
+      "id": "1790142",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 5.2651,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-12T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00107845,
+      "duration_ms": 19727,
+      "reason": "EPB module warning with Park Brake indicator; park brake will not release so car cannot be driven; driving safety issue with abrupt stop and brake not disengaging; recurrence after prior repair.",
+      "started_at": "2025-05-12T07:00:16Z",
+      "step": 2,
+      "tokens": 2334,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-12T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "CHEROKEE",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I parked my car and went into the store came back out tried to start my car and the message Service Transmission Restart in Park With Vehicle at Zero Speed appeared on the dashboard and my car wouldn’t start",
+            "group": "adas",
+            "id": "1962145",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 6.2168,
+            "year": 2017
+          },
+          {
+            "excerpt": "Abs and parking brake keeps initiating while driving my vehicle. Concerned about an accident. I have already had the shifter sensor replaced and still doing the same thing",
+            "group": "adas",
+            "id": "1849960",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 5.8786,
+            "year": 2017
+          },
+          {
+            "excerpt": "the electronic emergency brake engaged on its own. The car would not move and there was nothing I could do to get it out of park.",
+            "group": "adas",
+            "id": "1790142",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 5.2651,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-05-12T07:00:19Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-12T07:00:20Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-05-12T07:00:22Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-12T07:00:23Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-05-12T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

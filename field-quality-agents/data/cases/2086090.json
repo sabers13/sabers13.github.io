@@ -1,0 +1,443 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2086090",
+    "make": "BMW",
+    "mileage": null,
+    "model": "528I",
+    "narrative": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (ENGINE AND ENGINE COOLING, ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that while her husband was driving at various speeds, the vehicle jerked, and there was coolant leaking from the vehicle. There was no warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was not made aware of the issue.  The failure mileage was unknown. VIN tool confirms parts not available.",
+    "received_at": "2025-04-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2086090",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2086090",
+    "decided_at": "2025-04-25T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2086090",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving at various speeds"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle jerked"
+      },
+      {
+        "kind": "symptom",
+        "quote": "coolant leaking from the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "no warning light illuminated"
+      },
+      {
+        "kind": "other",
+        "quote": "the part to do the recall repair was unavailable"
+      }
+    ],
+    "conditions": [
+      "driving at various speeds"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the electrical system with the standard diagnostic procedure because the 2015 BMW 528I jerked and leaked coolant at various speeds with no warning light and no rulebook match.",
+    "symptoms": [
+      "the vehicle jerked",
+      "coolant leaking from the vehicle",
+      "no warning light illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2086090",
+    "created_at": "2025-04-25T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "ELECTRICAL SYSTEM",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "driving at various speeds",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle jerked",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "coolant leaking from the vehicle",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "no warning light illuminated",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was unavailable",
+        "source_id": "2086090",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a vehicle jerk and coolant leak while driving at various speeds, with no warning light illuminated and an unavailable recall repair part. No rulebook entry, recall, or investigation supports a targeted load test, so the standard test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the electrical system with the standard diagnostic procedure because the 2015 BMW 528I jerked and leaked coolant at various speeds with no warning light and no rulebook match.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 BMW 528i. The contact that while driving at an undisclosed speed, she noticed that an unusual amount of smoke would leak from under the hood. No warning lights illuminated. The vehicle was taken to a local independent dealer where it was diagnosed that the...",
+      "group": "electrical_general",
+      "id": "2050715",
+      "make": "BMW",
+      "model": "528I",
+      "score": 14.8618,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (Engine and Engine Cooling, Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+      "group": "electrical_general",
+      "id": "2045460",
+      "make": "BMW",
+      "model": "528I",
+      "score": 7.7388,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (ENGINE AND ENGINE COOLING, ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+      "group": "electrical_general",
+      "id": "2043264",
+      "make": "BMW",
+      "model": "528I",
+      "score": 7.3463,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-25T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00080755,
+      "duration_ms": 9826,
+      "reason": "2015 BMW 528I electrical system: vehicle jerked and coolant leaked while driving at various speeds; no warning light illuminated.",
+      "started_at": "2025-04-25T07:00:21Z",
+      "step": 2,
+      "tokens": 1911,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-25T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "528I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 BMW 528i. The contact that while driving at an undisclosed speed, she noticed that an unusual amount of smoke would leak from under the hood. No warning lights illuminated. The vehicle was taken to a local independent dealer where it was diagnosed that the...",
+            "group": "electrical_general",
+            "id": "2050715",
+            "make": "BMW",
+            "model": "528I",
+            "score": 14.8618,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (Engine and Engine Cooling, Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+            "group": "electrical_general",
+            "id": "2045460",
+            "make": "BMW",
+            "model": "528I",
+            "score": 7.7388,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (ENGINE AND ENGINE COOLING, ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+            "group": "electrical_general",
+            "id": "2043264",
+            "make": "BMW",
+            "model": "528I",
+            "score": 7.3463,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-25T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-25T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-04-25T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (ENGINE AND ENGINE COOLING, ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that while her husband was driving at various speeds, the vehicle jerked, and there was coolant leaking from the vehicle. There was no warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The contact stated that the "
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 BMW 528i. The contact that while driving at an undisclosed speed, she noticed that an unusual amount of smoke would leak from under the hood. No warning lights illuminated. The vehicle was taken to a local independent dealer where it was diagnosed that the...",
+            "group": "electrical_general",
+            "id": "2050715",
+            "make": "BMW",
+            "model": "528I",
+            "score": 14.8618,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (Engine and Engine Cooling, Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+            "group": "electrical_general",
+            "id": "2045460",
+            "make": "BMW",
+            "model": "528I",
+            "score": 7.7388,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 BMW 528I. The contact received notification of NHTSA Campaign Number: 24V608000 (ENGINE AND ENGINE COOLING, ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable am...",
+            "group": "electrical_general",
+            "id": "2043264",
+            "make": "BMW",
+            "model": "528I",
+            "score": 7.3463,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-25T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "528I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-25T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "528I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-25T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "driving at various speeds"
+        ]
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.000738,
+      "duration_ms": 9993,
+      "reason": "The narrative reports a vehicle jerk and coolant leak while driving at various speeds, with no warning light illuminated and an unavailable recall repair part. No rulebook entry, recall, or investigation supports a targeted load test, so the standard test is appropriate.",
+      "started_at": "2025-04-25T07:00:29Z",
+      "step": 10,
+      "tokens": 2142,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-04-25T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM",
+          "driving at various speeds",
+          "the vehicle jerked",
+          "coolant leaking from the vehicle",
+          "no warning light illuminated",
+          "the part to do the recall repair was unavailable"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-25T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-25T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-25T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-25T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

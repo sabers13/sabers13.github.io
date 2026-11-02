@@ -1,0 +1,244 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2156377",
+    "make": "AUDI",
+    "mileage": null,
+    "model": "Q4 E-TRON",
+    "narrative": "I purchased the Audi Q4 Etron new.  The issue that I'm bring up is 'self-acceleration'  I had the intial incident 10/2025  where the car self accelerated (Audi Case open) but can't reproduce which almost pin a kid between my vehicle and another vehicle.  I was able to react quickly to prevent a death.  Second time 'self-acceleration\" was on 3/27/25.  My son pulling into garage with my sitting next to him, the car self accelerated after coming to complete stop, jumped a pakring block and crashed into my garage wall.  Dealer had the car for 2-3 weeks and still couldn't replicate.  Third incident was 10/30/25 while at a complete stop in traffic leaving a parking lot, the car was at complete stop and 'self-acclerated' into the vehicle in front. This incident caused my vehcile to be total-loss by insurance.  Audi case was also open and they said no fault and told me it's an insurrance matter.  I believe there are many cases like mine and they are aware.  There are lots of discussion on the defective 'self-accelreation' on Audi Q4 Etron.  take a look at this link \"https://www.reddit.com/r/etron/comments/16ta6qe/beware_of_the_q4_etron_sudden_acceleration/\"",
+    "received_at": "2025-12-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2156377",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2156377",
+    "decided_at": "2025-12-11T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2156377",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "self-acceleration"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car self accelerated"
+      },
+      {
+        "kind": "condition",
+        "quote": "can't reproduce"
+      },
+      {
+        "kind": "safety",
+        "quote": "almost pin a kid between my vehicle and another vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "prevent a death"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car self accelerated after coming to complete stop"
+      },
+      {
+        "kind": "symptom",
+        "quote": "jumped a pakring block and crashed into my garage wall"
+      },
+      {
+        "kind": "condition",
+        "quote": "still couldn't replicate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "self-acclerated"
+      },
+      {
+        "kind": "other",
+        "quote": "total-loss by insurance"
+      },
+      {
+        "kind": "condition",
+        "quote": "at a complete stop in traffic leaving a parking lot"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Audi Q4 e-tron AEB/forward-collision system: repeated self-acceleration from a stop, including crashes into a garage wall and the vehicle in front; dealer could not reproduce.",
+    "symptoms": [
+      "self-acceleration",
+      "unintended acceleration after coming to a complete stop",
+      "vehicle jumped a parking block and hit a garage wall",
+      "vehicle accelerated into the vehicle in front"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2156377",
+    "created_at": "2025-12-11T07:00:27Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-11T07:00:21Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00203095,
+      "duration_ms": 20783,
+      "reason": "2023 Audi Q4 e-tron AEB/forward-collision system: repeated self-acceleration from a stop, including crashes into a garage wall and the vehicle in front; dealer could not reproduce.",
+      "started_at": "2025-12-11T07:00:22Z",
+      "step": 2,
+      "tokens": 4082,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-11T07:00:23Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "AUDI",
+        "model": "Q4 E-TRON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-11T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-11T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-11T07:00:26Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-11T07:00:28Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-11T07:00:30Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-11T07:00:31Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-11T07:00:32Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

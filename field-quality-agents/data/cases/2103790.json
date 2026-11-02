@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: REARVIEW SYSTEM BRAKING",
+    "group": "adas",
+    "id": "2103790",
+    "make": "MAZDA",
+    "mileage": null,
+    "model": "CX-50",
+    "narrative": "THE BLIND SPOT MONITORING STOPS AFTER A FEW MINUTES ON THE HIGHWAY. DEALER SAID NO TROUBLE FOUN D. WHEN IN TRAFFIC IT STOPS WORKING, BACKING UP NO NOTIFICATION CROSS TRAFFIC, CARGO DOOR STUCK OPEN. ADTER 10 MINUTES SHUTTING OFF CAR. RESTARTING, TRYING INSIDE BUTTON, DOOR BUTTON AND THE REMOTE. THEY ALL FAILED TO CLOSE DOOR. HAD TO MANUALLY CLOSE CARGO HATCH. IT WORKED THE NEXT MORNING. THE BLIND SPOT, CROSS TRAFFIC DOESNT WORK! IT WORKS FOR A FEW MINUTES AFTER STARTING CAR BUT UNDER TRAFFIC CONDTIONS IT FAILS TO NOTIFY ON BOTH SIDES OF THE VEHICLE. IT FAILED FIRST ON PASSENGER SIDE. NOW BOTH SIDES FAIL IN HEAVY TRAFFIC CONDITIONS.  I HAVE VIDEOS TO PROVE THE FAILURES.",
+    "received_at": "2025-06-25",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2103790",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2103790",
+    "decided_at": "2025-06-25T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2103790",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "THE BLIND SPOT MONITORING STOPS AFTER A FEW MINUTES ON THE HIGHWAY."
+      },
+      {
+        "kind": "condition",
+        "quote": "WHEN IN TRAFFIC IT STOPS WORKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "BACKING UP NO NOTIFICATION CROSS TRAFFIC"
+      },
+      {
+        "kind": "symptom",
+        "quote": "CARGO DOOR STUCK OPEN."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THEY ALL FAILED TO CLOSE DOOR."
+      },
+      {
+        "kind": "condition",
+        "quote": "IT WORKED THE NEXT MORNING."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE BLIND SPOT, CROSS TRAFFIC DOESNT WORK!"
+      },
+      {
+        "kind": "symptom",
+        "quote": "IT WORKS FOR A FEW MINUTES AFTER STARTING CAR BUT UNDER TRAFFIC CONDTIONS IT FAILS TO NOTIFY ON BOTH SIDES OF THE VEHICLE."
+      },
+      {
+        "kind": "symptom",
+        "quote": "IT FAILED FIRST ON PASSENGER SIDE. NOW BOTH SIDES FAIL IN HEAVY TRAFFIC CONDITIONS."
+      },
+      {
+        "kind": "safety",
+        "quote": "IT FAILS TO NOTIFY ON BOTH SIDES OF THE VEHICLE."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2024 Mazda CX-50 ADAS: blind spot and rear cross-traffic alerts stop after minutes, especially in traffic/backing; cargo door power close intermittently fails.",
+    "symptoms": [
+      "blind spot monitoring stops after a few minutes",
+      "rear cross-traffic alert does not notify when backing",
+      "cargo door stuck open and power close buttons/remote fail",
+      "works again after restart or next morning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2103790",
+    "created_at": "2025-06-25T07:00:46Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2024 Mazda CX-50. The contact stated that while reversing at approximately 2 MPH into a parking slot, the rear back up sensor warning was illuminated. The contact stated that the sensor was designed to alert the driver whenever the vehicle was too close to an o...",
+      "group": "adas",
+      "id": "2047066",
+      "make": "MAZDA",
+      "model": "CX-50",
+      "score": 3.3791,
+      "year": 2024
+    },
+    {
+      "excerpt": "Automatic transmission failure, engine malfunction, safety driver function. My car will not accelerate, or move out of 1,2,3 gear.",
+      "group": "adas",
+      "id": "2005439",
+      "make": "MAZDA",
+      "model": "CX-50",
+      "score": 1.0273,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-25T07:00:40Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00167935,
+      "duration_ms": 19074,
+      "reason": "2024 Mazda CX-50 ADAS: blind spot and rear cross-traffic alerts stop after minutes, especially in traffic/backing; cargo door power close intermittently fails.",
+      "started_at": "2025-06-25T07:00:41Z",
+      "step": 2,
+      "tokens": 3430,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-06-25T07:00:42Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MAZDA",
+        "model": "CX-50",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2024 Mazda CX-50. The contact stated that while reversing at approximately 2 MPH into a parking slot, the rear back up sensor warning was illuminated. The contact stated that the sensor was designed to alert the driver whenever the vehicle was too close to an o...",
+            "group": "adas",
+            "id": "2047066",
+            "make": "MAZDA",
+            "model": "CX-50",
+            "score": 3.3791,
+            "year": 2024
+          },
+          {
+            "excerpt": "Automatic transmission failure, engine malfunction, safety driver function. My car will not accelerate, or move out of 1,2,3 gear.",
+            "group": "adas",
+            "id": "2005439",
+            "make": "MAZDA",
+            "model": "CX-50",
+            "score": 1.0273,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-25T07:00:43Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-25T07:00:44Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-25T07:00:45Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-25T07:00:47Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-25T07:00:49Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-25T07:00:50Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-25T07:00:51Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

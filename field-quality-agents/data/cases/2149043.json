@@ -1,0 +1,217 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2149043",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "GLC 300",
+    "narrative": "I was involved in a severe front-end collision where my vehicle struck another vehicle with significant force. Despite the major impact, the front airbags did NOT deploy. The entire front end of the vehicle was crushed, including destruction of the radiator, damage to engine components, internal structural collapse, and leaking fluids. Based on the severity and direct frontal nature of the crash, airbags should have deployed but did not. As a result of the impact, I sustained a neck and upper shoulder injury and required medical evaluation.  There were no warning lights or messages prior to the crash indicating any malfunction in the airbag or SRS system. The vehicle is available for inspection by NHTSA, the manufacturer, insurance, or an authorized Mercedes-Benz service center. This appears to be a possible failure of the airbag/SRS system during a qualifying collision.",
+    "received_at": "2025-11-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2149043",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2149043",
+    "decided_at": "2025-11-16T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2149043",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "front airbags did NOT deploy"
+      },
+      {
+        "kind": "condition",
+        "quote": "severe front-end collision"
+      },
+      {
+        "kind": "condition",
+        "quote": "direct frontal nature of the crash"
+      },
+      {
+        "kind": "safety",
+        "quote": "I sustained a neck and upper shoulder injury and required medical evaluation."
+      },
+      {
+        "kind": "other",
+        "quote": "There were no warning lights or messages prior to the crash indicating any malfunction in the airbag or SRS system."
+      }
+    ],
+    "conditions": [
+      "collision"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS: front airbags did not deploy in a severe direct frontal collision; occupant sustained neck/upper shoulder injury; no prior SRS warning.",
+    "symptoms": [
+      "front airbags did not deploy despite a severe front-end collision"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2149043",
+    "created_at": "2025-11-16T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013453,
+      "duration_ms": 17070,
+      "reason": "AIR BAGS: front airbags did not deploy in a severe direct frontal collision; occupant sustained neck/upper shoulder injury; no prior SRS warning.",
+      "started_at": "2025-11-16T07:00:01Z",
+      "step": 2,
+      "tokens": 2829,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "GLC 300",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-16T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-16T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-16T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-16T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

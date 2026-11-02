@@ -1,0 +1,1071 @@
+[
+  {
+    "eight_d": {
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2065213",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2066283",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "PE24013",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-02-17T18:00:01Z",
+      "d1_team": [
+        "Quality engineer (placeholder)",
+        "Supplier process owner (placeholder)",
+        "Fleet data analyst (placeholder)"
+      ],
+      "d2_problem": "36 adas reports for FISKER OCEAN 2023 in the week of 2025-02-17 exceed the Poisson threshold of 17. Linked cases: 2065213, 2066283.",
+      "d3_containment": "Hold adas stock for FISKER OCEAN 2023 pending inspection and re-read the linked cases: 2065213, 2066283. Linked investigations: PE24013.",
+      "d4_root_cause_hypotheses": [
+        "A batch or supplier-process drift in the adas group explains the cluster; inspect the lot history for 2065213, 2066283.",
+        "A connector, seal or mounting fault appears under the reported conditions; run the targeted test on 2065213, 2066283.",
+        "Some reports may be duplicates or mis-coded; the linked cases were read before opening this issue: 2065213, 2066283."
+      ],
+      "id": "8D-I-20250217-001",
+      "issue_id": "I-20250217-001",
+      "status": "draft",
+      "updated_at": null
+    },
+    "group": "adas",
+    "id": "I-20250217-001",
+    "linked_case_count": 2,
+    "linked_case_ids": [
+      "2065213",
+      "2066283"
+    ],
+    "linked_investigation_ids": [
+      "PE24013"
+    ],
+    "linked_recall_ids": [],
+    "make": "FISKER",
+    "memo": {
+      "body": "Issue I-20250217-001: FISKER OCEAN 2023 adas reports reached 36 in the week of 2025-02-17, against a threshold of 17 (spike ratio 2.1176). Linked cases: 2065213, 2066283.\n\nContainment: hold the affected stock and inspect it before release. The linked recalls and investigations are read with the cases: 2065213, 2066283. Linked investigations: PE24013.\n\nDecision requested: approve the containment and the 8D draft 8D-I-20250217-001 for 2065213, 2066283. No case is closed, scrapped or charged by this desk.",
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2065213",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2066283",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "PE24013",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-02-17T18:00:01Z",
+      "id": "M-I-20250217-001",
+      "issue_id": "I-20250217-001",
+      "title": "Decision memo: contain the adas cluster for FISKER OCEAN 2023"
+    },
+    "model": "OCEAN",
+    "observed": 36,
+    "opened_at": "2025-02-17",
+    "spike_ratio": 2.1176,
+    "status": "open",
+    "threshold": 17.0,
+    "title": "adas reports cluster for FISKER OCEAN 2023",
+    "weekly_counts": [
+      {
+        "count": 10,
+        "week_start": "2024-08-19"
+      },
+      {
+        "count": 5,
+        "week_start": "2024-08-26"
+      },
+      {
+        "count": 6,
+        "week_start": "2024-09-02"
+      },
+      {
+        "count": 1,
+        "week_start": "2024-09-09"
+      },
+      {
+        "count": 4,
+        "week_start": "2024-09-16"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-09-23"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-09-30"
+      },
+      {
+        "count": 2,
+        "week_start": "2024-10-07"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-10-14"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-10-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-10-28"
+      },
+      {
+        "count": 1,
+        "week_start": "2024-11-04"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-11-11"
+      },
+      {
+        "count": 6,
+        "week_start": "2024-11-18"
+      },
+      {
+        "count": 4,
+        "week_start": "2024-11-25"
+      },
+      {
+        "count": 3,
+        "week_start": "2024-12-02"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-12-09"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-12-16"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-12-23"
+      },
+      {
+        "count": 0,
+        "week_start": "2024-12-30"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-06"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-13"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-01-20"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-27"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-03"
+      },
+      {
+        "count": 134,
+        "week_start": "2025-02-10"
+      },
+      {
+        "count": 36,
+        "week_start": "2025-02-17"
+      }
+    ],
+    "year": 2023
+  },
+  {
+    "eight_d": {
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2102878",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2108865",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2108934",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V615000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V280000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "24V477000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "RQ25004",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-07-11T18:00:02Z",
+      "d1_team": [
+        "Quality engineer (placeholder)",
+        "Supplier process owner (placeholder)",
+        "Fleet data analyst (placeholder)"
+      ],
+      "d2_problem": "26 adas reports for POLESTAR POLESTAR 2 2021 in the week of 2025-07-07 exceed the Poisson threshold of 8. Linked cases: 2102878, 2108865, 2108934.",
+      "d3_containment": "Hold adas stock for POLESTAR POLESTAR 2 2021 pending inspection and re-read the linked cases: 2102878, 2108865, 2108934. Linked recalls: 25V615000, 25V280000, 24V477000. Linked investigations: RQ25004.",
+      "d4_root_cause_hypotheses": [
+        "A batch or supplier-process drift in the adas group explains the cluster; inspect the lot history for 2102878, 2108865, 2108934.",
+        "A connector, seal or mounting fault appears under the reported conditions; run the targeted test on 2102878, 2108865, 2108934.",
+        "Some reports may be duplicates or mis-coded; the linked cases were read before opening this issue: 2102878, 2108865, 2108934."
+      ],
+      "id": "8D-I-20250711-002",
+      "issue_id": "I-20250711-002",
+      "status": "draft",
+      "updated_at": null
+    },
+    "group": "adas",
+    "id": "I-20250711-002",
+    "linked_case_count": 3,
+    "linked_case_ids": [
+      "2102878",
+      "2108865",
+      "2108934"
+    ],
+    "linked_investigation_ids": [
+      "RQ25004"
+    ],
+    "linked_recall_ids": [
+      "24V477000",
+      "25V280000",
+      "25V615000"
+    ],
+    "make": "POLESTAR",
+    "memo": {
+      "body": "Issue I-20250711-002: POLESTAR POLESTAR 2 2021 adas reports reached 26 in the week of 2025-07-07, against a threshold of 8 (spike ratio 3.25). Linked cases: 2102878, 2108865, 2108934.\n\nContainment: hold the affected stock and inspect it before release. The linked recalls and investigations are read with the cases: 2102878, 2108865, 2108934. Linked recalls: 25V615000, 25V280000, 24V477000. Linked investigations: RQ25004.\n\nDecision requested: approve the containment and the 8D draft 8D-I-20250711-002 for 2102878, 2108865, 2108934. No case is closed, scrapped or charged by this desk.",
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2102878",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2108865",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2108934",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V615000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V280000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "24V477000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "RQ25004",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-07-11T18:00:02Z",
+      "id": "M-I-20250711-002",
+      "issue_id": "I-20250711-002",
+      "title": "Decision memo: contain the adas cluster for POLESTAR POLESTAR 2 2021"
+    },
+    "model": "POLESTAR 2",
+    "observed": 26,
+    "opened_at": "2025-07-11",
+    "spike_ratio": 3.25,
+    "status": "open",
+    "threshold": 8.0,
+    "title": "adas reports cluster for POLESTAR POLESTAR 2 2021",
+    "weekly_counts": [
+      {
+        "count": 0,
+        "week_start": "2025-01-06"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-13"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-20"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-27"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-03"
+      },
+      {
+        "count": 3,
+        "week_start": "2025-02-10"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-17"
+      },
+      {
+        "count": 2,
+        "week_start": "2025-02-24"
+      },
+      {
+        "count": 5,
+        "week_start": "2025-03-03"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-10"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-17"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-24"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-31"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-07"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-04-14"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-21"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-04-28"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-05"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-12"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-05-19"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-26"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-02"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-06-09"
+      },
+      {
+        "count": 2,
+        "week_start": "2025-06-16"
+      },
+      {
+        "count": 19,
+        "week_start": "2025-06-23"
+      },
+      {
+        "count": 11,
+        "week_start": "2025-06-30"
+      },
+      {
+        "count": 26,
+        "week_start": "2025-07-07"
+      }
+    ],
+    "year": 2021
+  },
+  {
+    "eight_d": {
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2103775",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2109648",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V615000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V280000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "24V477000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "RQ25004",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-07-13T18:00:03Z",
+      "d1_team": [
+        "Quality engineer (placeholder)",
+        "Supplier process owner (placeholder)",
+        "Fleet data analyst (placeholder)"
+      ],
+      "d2_problem": "43 adas reports for POLESTAR POLESTAR 2 2022 in the week of 2025-07-07 exceed the Poisson threshold of 12. Linked cases: 2103775, 2109648.",
+      "d3_containment": "Hold adas stock for POLESTAR POLESTAR 2 2022 pending inspection and re-read the linked cases: 2103775, 2109648. Linked recalls: 25V615000, 25V280000, 24V477000. Linked investigations: RQ25004.",
+      "d4_root_cause_hypotheses": [
+        "A batch or supplier-process drift in the adas group explains the cluster; inspect the lot history for 2103775, 2109648.",
+        "A connector, seal or mounting fault appears under the reported conditions; run the targeted test on 2103775, 2109648.",
+        "Some reports may be duplicates or mis-coded; the linked cases were read before opening this issue: 2103775, 2109648."
+      ],
+      "id": "8D-I-20250713-003",
+      "issue_id": "I-20250713-003",
+      "status": "draft",
+      "updated_at": null
+    },
+    "group": "adas",
+    "id": "I-20250713-003",
+    "linked_case_count": 2,
+    "linked_case_ids": [
+      "2103775",
+      "2109648"
+    ],
+    "linked_investigation_ids": [
+      "RQ25004"
+    ],
+    "linked_recall_ids": [
+      "24V477000",
+      "25V280000",
+      "25V615000"
+    ],
+    "make": "POLESTAR",
+    "memo": {
+      "body": "Issue I-20250713-003: POLESTAR POLESTAR 2 2022 adas reports reached 43 in the week of 2025-07-07, against a threshold of 12 (spike ratio 3.5833). Linked cases: 2103775, 2109648.\n\nContainment: hold the affected stock and inspect it before release. The linked recalls and investigations are read with the cases: 2103775, 2109648. Linked recalls: 25V615000, 25V280000, 24V477000. Linked investigations: RQ25004.\n\nDecision requested: approve the containment and the 8D draft 8D-I-20250713-003 for 2103775, 2109648. No case is closed, scrapped or charged by this desk.",
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2103775",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2109648",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V615000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "25V280000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "24V477000",
+          "source_type": "recall",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "RQ25004",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-07-13T18:00:03Z",
+      "id": "M-I-20250713-003",
+      "issue_id": "I-20250713-003",
+      "title": "Decision memo: contain the adas cluster for POLESTAR POLESTAR 2 2022"
+    },
+    "model": "POLESTAR 2",
+    "observed": 43,
+    "opened_at": "2025-07-13",
+    "spike_ratio": 3.5833,
+    "status": "open",
+    "threshold": 12.0,
+    "title": "adas reports cluster for POLESTAR POLESTAR 2 2022",
+    "weekly_counts": [
+      {
+        "count": 0,
+        "week_start": "2025-01-06"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-13"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-01-20"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-01-27"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-03"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-10"
+      },
+      {
+        "count": 4,
+        "week_start": "2025-02-17"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-02-24"
+      },
+      {
+        "count": 10,
+        "week_start": "2025-03-03"
+      },
+      {
+        "count": 3,
+        "week_start": "2025-03-10"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-03-17"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-24"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-03-31"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-07"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-14"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-28"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-05"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-12"
+      },
+      {
+        "count": 2,
+        "week_start": "2025-05-19"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-05-26"
+      },
+      {
+        "count": 2,
+        "week_start": "2025-06-02"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-09"
+      },
+      {
+        "count": 8,
+        "week_start": "2025-06-16"
+      },
+      {
+        "count": 50,
+        "week_start": "2025-06-23"
+      },
+      {
+        "count": 15,
+        "week_start": "2025-06-30"
+      },
+      {
+        "count": 43,
+        "week_start": "2025-07-07"
+      }
+    ],
+    "year": 2022
+  },
+  {
+    "eight_d": {
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2130745",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2131063",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "PE25010",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-09-16T18:00:04Z",
+      "d1_team": [
+        "Quality engineer (placeholder)",
+        "Supplier process owner (placeholder)",
+        "Fleet data analyst (placeholder)"
+      ],
+      "d2_problem": "6 power_and_wiring reports for TESLA MODEL Y 2021 in the week of 2025-09-15 exceed the Poisson threshold of 5. Linked cases: 2130745, 2131063.",
+      "d3_containment": "Hold power_and_wiring stock for TESLA MODEL Y 2021 pending inspection and re-read the linked cases: 2130745, 2131063. Linked investigations: PE25010.",
+      "d4_root_cause_hypotheses": [
+        "A batch or supplier-process drift in the power_and_wiring group explains the cluster; inspect the lot history for 2130745, 2131063.",
+        "A connector, seal or mounting fault appears under the reported conditions; run the targeted test on 2130745, 2131063.",
+        "Some reports may be duplicates or mis-coded; the linked cases were read before opening this issue: 2130745, 2131063."
+      ],
+      "id": "8D-I-20250916-004",
+      "issue_id": "I-20250916-004",
+      "status": "draft",
+      "updated_at": null
+    },
+    "group": "power_and_wiring",
+    "id": "I-20250916-004",
+    "linked_case_count": 2,
+    "linked_case_ids": [
+      "2130745",
+      "2131063"
+    ],
+    "linked_investigation_ids": [
+      "PE25010"
+    ],
+    "linked_recall_ids": [],
+    "make": "TESLA",
+    "memo": {
+      "body": "Issue I-20250916-004: TESLA MODEL Y 2021 power_and_wiring reports reached 6 in the week of 2025-09-15, against a threshold of 5 (spike ratio 1.2). Linked cases: 2130745, 2131063.\n\nContainment: hold the affected stock and inspect it before release. The linked recalls and investigations are read with the cases: 2130745, 2131063. Linked investigations: PE25010.\n\nDecision requested: approve the containment and the 8D draft 8D-I-20250916-004 for 2130745, 2131063. No case is closed, scrapped or charged by this desk.",
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2130745",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2131063",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "PE25010",
+          "source_type": "investigation",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-09-16T18:00:04Z",
+      "id": "M-I-20250916-004",
+      "issue_id": "I-20250916-004",
+      "title": "Decision memo: contain the power_and_wiring cluster for TESLA MODEL Y 2021"
+    },
+    "model": "MODEL Y",
+    "observed": 6,
+    "opened_at": "2025-09-16",
+    "spike_ratio": 1.2,
+    "status": "open",
+    "threshold": 5.0,
+    "title": "power_and_wiring reports cluster for TESLA MODEL Y 2021",
+    "weekly_counts": [
+      {
+        "count": 0,
+        "week_start": "2025-03-17"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-24"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-03-31"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-07"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-14"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-28"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-05"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-12"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-19"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-26"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-02"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-09"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-16"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-23"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-30"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-07-07"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-14"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-28"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-04"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-11"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-18"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-25"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-01"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-08"
+      },
+      {
+        "count": 6,
+        "week_start": "2025-09-15"
+      }
+    ],
+    "year": 2021
+  },
+  {
+    "eight_d": {
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2142383",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2142673",
+          "source_type": "case",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-10-23T18:00:05Z",
+      "d1_team": [
+        "Quality engineer (placeholder)",
+        "Supplier process owner (placeholder)",
+        "Fleet data analyst (placeholder)"
+      ],
+      "d2_problem": "6 adas reports for VOLKSWAGEN ID.4 2025 in the week of 2025-10-20 exceed the Poisson threshold of 5. Linked cases: 2142383, 2142673.",
+      "d3_containment": "Hold adas stock for VOLKSWAGEN ID.4 2025 pending inspection and re-read the linked cases: 2142383, 2142673.",
+      "d4_root_cause_hypotheses": [
+        "A batch or supplier-process drift in the adas group explains the cluster; inspect the lot history for 2142383, 2142673.",
+        "A connector, seal or mounting fault appears under the reported conditions; run the targeted test on 2142383, 2142673.",
+        "Some reports may be duplicates or mis-coded; the linked cases were read before opening this issue: 2142383, 2142673."
+      ],
+      "id": "8D-I-20251023-005",
+      "issue_id": "I-20251023-005",
+      "status": "draft",
+      "updated_at": null
+    },
+    "group": "adas",
+    "id": "I-20251023-005",
+    "linked_case_count": 2,
+    "linked_case_ids": [
+      "2142383",
+      "2142673"
+    ],
+    "linked_investigation_ids": [],
+    "linked_recall_ids": [],
+    "make": "VOLKSWAGEN",
+    "memo": {
+      "body": "Issue I-20251023-005: VOLKSWAGEN ID.4 2025 adas reports reached 6 in the week of 2025-10-20, against a threshold of 5 (spike ratio 1.2). Linked cases: 2142383, 2142673.\n\nContainment: hold the affected stock and inspect it before release. The linked recalls and investigations are read with the cases: 2142383, 2142673.\n\nDecision requested: approve the containment and the 8D draft 8D-I-20251023-005 for 2142383, 2142673. No case is closed, scrapped or charged by this desk.",
+      "citations": [
+        {
+          "quote": null,
+          "source_id": "2142383",
+          "source_type": "case",
+          "verified": true
+        },
+        {
+          "quote": null,
+          "source_id": "2142673",
+          "source_type": "case",
+          "verified": true
+        }
+      ],
+      "created_at": "2025-10-23T18:00:05Z",
+      "id": "M-I-20251023-005",
+      "issue_id": "I-20251023-005",
+      "title": "Decision memo: contain the adas cluster for VOLKSWAGEN ID.4 2025"
+    },
+    "model": "ID.4",
+    "observed": 6,
+    "opened_at": "2025-10-23",
+    "spike_ratio": 1.2,
+    "status": "open",
+    "threshold": 5.0,
+    "title": "adas reports cluster for VOLKSWAGEN ID.4 2025",
+    "weekly_counts": [
+      {
+        "count": 0,
+        "week_start": "2025-04-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-04-28"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-05"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-12"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-19"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-05-26"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-02"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-09"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-16"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-23"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-06-30"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-07"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-14"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-07-21"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-07-28"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-08-04"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-11"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-08-18"
+      },
+      {
+        "count": 2,
+        "week_start": "2025-08-25"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-01"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-08"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-15"
+      },
+      {
+        "count": 1,
+        "week_start": "2025-09-22"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-09-29"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-10-06"
+      },
+      {
+        "count": 0,
+        "week_start": "2025-10-13"
+      },
+      {
+        "count": 6,
+        "week_start": "2025-10-20"
+      }
+    ],
+    "year": 2025
+  }
+]

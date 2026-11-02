@@ -1,0 +1,430 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2111954",
+    "make": "DODGE",
+    "mileage": null,
+    "model": "CHALLENGER",
+    "narrative": "On March 25, 2025, the windshield in the vehicle spontaneously cracked, while parked and unattended, beginning from about midway down on the driver side A-pillar.  This seems to be a known and repeated issue with windshields on the Dodge Challenger.  Inspected by the dealership who stated that they had seen the issue before and agreed that it was obviously not struck with anything.  Dodge (Stellantis) denied warranty claim.",
+    "received_at": "2025-07-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2111954",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2111954",
+    "decided_at": "2025-07-19T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2111954",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "windshield in the vehicle spontaneously cracked"
+      },
+      {
+        "kind": "condition",
+        "quote": "while parked and unattended"
+      },
+      {
+        "kind": "other",
+        "quote": "beginning from about midway down on the driver side A-pillar"
+      },
+      {
+        "kind": "other",
+        "quote": "This seems to be a known and repeated issue with windshields on the Dodge Challenger."
+      },
+      {
+        "kind": "other",
+        "quote": "agreed that it was obviously not struck with anything"
+      }
+    ],
+    "conditions": [
+      "vehicle was parked and unattended",
+      "dealer inspection found no evidence of impact"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Test/inspect the windshield crack origin and determine whether it is a spontaneous stress crack from the driver-side A-pillar area rather than impact damage.",
+    "symptoms": [
+      "windshield spontaneously cracked while parked",
+      "crack began midway down the driver-side A-pillar"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2111954",
+    "created_at": "2025-07-19T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "windshield in the vehicle spontaneously cracked",
+        "source_id": "2111954",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while parked and unattended",
+        "source_id": "2111954",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "beginning from about midway down on the driver side A-pillar",
+        "source_id": "2111954",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "This seems to be a known and repeated issue with windshields on the Dodge Challenger.",
+        "source_id": "2111954",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "agreed that it was obviously not struck with anything",
+        "source_id": "2111954",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a 2023 Dodge Challenger windshield that spontaneously cracked while parked and unattended, starting midway down the driver-side A-pillar. The dealer reportedly inspected it, had seen the issue before, and agreed it was not struck. Similar cases in the tool results also describe Dodge Challenger windshield cracks beginning at the A-pillar. No rulebook entry, recall, or investigation matches, so the standard inspection is appropriate rather than a targeted rulebook test.",
+    "requested_info": [],
+    "summary": "Test/inspect the windshield crack origin and determine whether it is a spontaneous stress crack from the driver-side A-pillar area rather than impact damage.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Within two days of owning the car the windshield cracked. I was backing out of garage and heard a sound, a crack appeared on the passenger side of windshield midway up. It extended horizontally approx 12\" toward the center of windshield. Have heard multiple other customers have h...",
+      "group": "body_controls",
+      "id": "2027865",
+      "make": "DODGE",
+      "model": "CHALLENGER",
+      "score": 3.8828,
+      "year": 2023
+    },
+    {
+      "excerpt": "Windshield cracked for no reason no scratches chips or damage but cracked from the A piller on the driver side.",
+      "group": "body_controls",
+      "id": "2044804",
+      "make": "DODGE",
+      "model": "CHALLENGER",
+      "score": 2.3878,
+      "year": 2023
+    },
+    {
+      "excerpt": "It's not only related to my particular car. I moved to the US two years ago and was surprised how INSAINLY DANGEROUS driver side mirrors all of the American cars have. There is always a HUGE blind spot. People keep saying that if I adjust my mirrors properly there will be no prob...",
+      "group": "body_controls",
+      "id": "1961038",
+      "make": "DODGE",
+      "model": "CHALLENGER",
+      "score": 0.6242,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008365,
+      "duration_ms": 10600,
+      "reason": "2023 Dodge Challenger windshield spontaneously cracked while parked and unattended from driver-side A-pillar; dealer inspected and warranty denied.",
+      "started_at": "2025-07-19T07:00:01Z",
+      "step": 2,
+      "tokens": 1924,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "DODGE",
+        "model": "CHALLENGER",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Within two days of owning the car the windshield cracked. I was backing out of garage and heard a sound, a crack appeared on the passenger side of windshield midway up. It extended horizontally approx 12\" toward the center of windshield. Have heard multiple other customers have h...",
+            "group": "body_controls",
+            "id": "2027865",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 3.8828,
+            "year": 2023
+          },
+          {
+            "excerpt": "Windshield cracked for no reason no scratches chips or damage but cracked from the A piller on the driver side.",
+            "group": "body_controls",
+            "id": "2044804",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 2.3878,
+            "year": 2023
+          },
+          {
+            "excerpt": "It's not only related to my particular car. I moved to the US two years ago and was surprised how INSAINLY DANGEROUS driver side mirrors all of the American cars have. There is always a HUGE blind spot. People keep saying that if I adjust my mirrors properly there will be no prob...",
+            "group": "body_controls",
+            "id": "1961038",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 0.6242,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-07-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-07-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "On March 25, 2025, the windshield in the vehicle spontaneously cracked, while parked and unattended, beginning from about midway down on the driver side A-pillar.  This seems to be a known and repeated issue with windshields on the Dodge Challenger.  Inspected by the dealership who stated that they had seen the issue before and agreed that it was obviously not struck with anything.  Dodge (Stellantis) denied warranty claim."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Within two days of owning the car the windshield cracked. I was backing out of garage and heard a sound, a crack appeared on the passenger side of windshield midway up. It extended horizontally approx 12\" toward the center of windshield. Have heard multiple other customers have h...",
+            "group": "body_controls",
+            "id": "2027865",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 3.8828,
+            "year": 2023
+          },
+          {
+            "excerpt": "Windshield cracked for no reason no scratches chips or damage but cracked from the A piller on the driver side.",
+            "group": "body_controls",
+            "id": "2044804",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 2.3878,
+            "year": 2023
+          },
+          {
+            "excerpt": "It's not only related to my particular car. I moved to the US two years ago and was surprised how INSAINLY DANGEROUS driver side mirrors all of the American cars have. There is always a HUGE blind spot. People keep saying that if I adjust my mirrors properly there will be no prob...",
+            "group": "body_controls",
+            "id": "1961038",
+            "make": "DODGE",
+            "model": "CHALLENGER",
+            "score": 0.6242,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-19T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "DODGE",
+        "model": "CHALLENGER",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-19T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "DODGE",
+        "model": "CHALLENGER",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-19T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007587,
+      "duration_ms": 7491,
+      "reason": "The narrative reports a 2023 Dodge Challenger windshield that spontaneously cracked while parked and unattended, starting midway down the driver-side A-pillar. The dealer reportedly inspected it, had seen the issue before, and agreed it was not struck. Similar cases in the tool results also describe Dodge Challenger windshield cracks beginning at the A-pillar. No rulebook entry, recall, or investigation matches, so the standard inspection is appropriate rather than a targeted rulebook test.",
+      "started_at": "2025-07-19T07:00:09Z",
+      "step": 10,
+      "tokens": 2103,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-07-19T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "windshield in the vehicle spontaneously cracked",
+          "while parked and unattended",
+          "beginning from about midway down on the driver side A-pillar",
+          "This seems to be a known and repeated issue with windshields on the Dodge Challenger.",
+          "agreed that it was obviously not struck with anything"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-19T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-19T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-19T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-19T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

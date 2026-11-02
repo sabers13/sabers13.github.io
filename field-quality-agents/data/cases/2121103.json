@@ -1,0 +1,232 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2121103",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ODYSSEY",
+    "narrative": "I am reporting a recurring issue with my 2025 Honda Odyssey, which exhibits difficulty starting the engine. Approximately two months after purchasing the vehicle in Dec 2024, the original battery failed and was replaced under warranty. However, the vehicle continues to experience problems when attempting to start. When I press the start button, the engine hesitates, cranks slowly, or feels as though it nearly fails to start. This issue occurs intermittently, regardless of weather conditions or the duration the vehicle has been parked. No warning lights or error messages have appeared on the dashboard The problem has occurred multiple times, most recently on Friday August 15th 2025, and creates a safety concern, as the vehicle’s unreliable starting could leave me stranded in potentially hazardous situations, such as remote locations or adverse weather. I have not yet had the vehicle inspected by a dealer for this specific issue, but I plan to schedule a service appointment to diagnose the problem. The prior battery replacement suggests potential issues with the electrical system, starter, or related components, possibly linked to the auto start/stop system currently under NHTSA investigation for 2018–2025 Honda Odyssey models. Additionally when driving down the road especially at low speeds the engine hesitates as if it’s not getting enough gasoline. Lastly the AppleCarplay screen and all other associated screens randomly go out. I have been to the dealership 3 times for repairs and they give me the run around saying they don’t notice anything so Honda won’t pay for anything and send me on my way.",
+    "received_at": "2025-08-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2121103",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2121103",
+    "decided_at": "2025-08-16T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2121103",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "difficulty starting the engine"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine hesitates, cranks slowly, or feels as though it nearly fails to start"
+      },
+      {
+        "kind": "condition",
+        "quote": "occurs intermittently"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the engine hesitates as if it’s not getting enough gasoline"
+      },
+      {
+        "kind": "symptom",
+        "quote": "AppleCarplay screen and all other associated screens randomly go out"
+      },
+      {
+        "kind": "safety",
+        "quote": "creates a safety concern, as the vehicle’s unreliable starting could leave me stranded in potentially hazardous situations"
+      },
+      {
+        "kind": "other",
+        "quote": "original battery failed and was replaced under warranty"
+      },
+      {
+        "kind": "other",
+        "quote": "No warning lights or error messages have appeared on the dashboard"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2025 Honda Odyssey electrical system: intermittent difficult/slow engine starting, low-speed hesitation, and random screen outages; no warning lights.",
+    "symptoms": [
+      "difficulty starting the engine",
+      "engine hesitates, cranks slowly, or nearly fails to start",
+      "engine hesitates at low speeds as if not getting enough gasoline",
+      "AppleCarPlay and associated screens randomly go out"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2121103",
+    "created_at": "2025-08-16T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-16T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013831,
+      "duration_ms": 14093,
+      "reason": "2025 Honda Odyssey electrical system: intermittent difficult/slow engine starting, low-speed hesitation, and random screen outages; no warning lights.",
+      "started_at": "2025-08-16T07:00:01Z",
+      "step": 2,
+      "tokens": 3006,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-16T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-16T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-16T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-16T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-16T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-16T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-16T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-16T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2089665",
+    "make": "GMC",
+    "mileage": null,
+    "model": "ACADIA",
+    "narrative": "When I park my car it beeps and says my car is not in park.  Many other models of the 2019 GMC Acadia, along with other GM vehicles, may be affected by a \"shift to park\" recall. This recall addresses a defect where the vehicle may display a \"shift to park\" warning message even when the vehicle is actually in park, potentially preventing the ignition from being turned off and the key from being removed.  This is exactly what my car is doing but they say my VIN is not included in the free fix.  I brought my vehicle after it died to a GMC dealership and they said it will cost 1,000 to fix.  My safety is at risk because I drive to different locations as a therapist and I often drive home at night in remote locations.",
+    "received_at": "2025-05-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089665",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089665",
+    "decided_at": "2025-05-06T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089665",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "beeps and says my car is not in park"
+      },
+      {
+        "kind": "symptom",
+        "quote": "\"shift to park\" warning message even when the vehicle is actually in park"
+      },
+      {
+        "kind": "symptom",
+        "quote": "after it died"
+      },
+      {
+        "kind": "condition",
+        "quote": "When I park my car"
+      },
+      {
+        "kind": "safety",
+        "quote": "My safety is at risk"
+      },
+      {
+        "kind": "other",
+        "quote": "my VIN is not included in the free fix"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: shift-to-park warning says vehicle is not in park when parked; vehicle died; VIN not included in recall fix.",
+    "symptoms": [
+      "warning beeps and says vehicle is not in park when parked",
+      "vehicle died"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089665",
+    "created_at": "2025-05-06T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The electrical and gear shift failed, causing a problem that GMC calls “shift to park.” Even when the car is placed in park, the car does not recognize that it was placed in park and cannot be turned off, preventing the driver from leaving the running car. This is a known problem...",
+      "group": "electrical_general",
+      "id": "1896051",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 21.8746,
+      "year": 2019
+    },
+    {
+      "excerpt": "My vehicle just hit 39K miles, it has all of a sudden started giving me a Shift Into Park warning. The sensor is not registering that its in park and will not let you turn car off. There is a recall on the 2017-2018 vehicles for this issue and but many report an issue with the 20...",
+      "group": "electrical_general",
+      "id": "1983045",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 19.012,
+      "year": 2019
+    },
+    {
+      "excerpt": "When I put my car in park and try to turn it off, the dash shows an error message \"SHIFT TO PARK\". The car will either not turn off the ignition or allow me to leave the vehicle or lock/unlock the doors. It alarms incessently--even when trying to move the shifter around. Takes se...",
+      "group": "electrical_general",
+      "id": "1991376",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 16.1681,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-06T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015214,
+      "duration_ms": 16136,
+      "reason": "Electrical system: shift-to-park warning says vehicle is not in park when parked; vehicle died; VIN not included in recall fix.",
+      "started_at": "2025-05-06T07:00:16Z",
+      "step": 2,
+      "tokens": 3118,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-06T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "ACADIA",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The electrical and gear shift failed, causing a problem that GMC calls “shift to park.” Even when the car is placed in park, the car does not recognize that it was placed in park and cannot be turned off, preventing the driver from leaving the running car. This is a known problem...",
+            "group": "electrical_general",
+            "id": "1896051",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 21.8746,
+            "year": 2019
+          },
+          {
+            "excerpt": "My vehicle just hit 39K miles, it has all of a sudden started giving me a Shift Into Park warning. The sensor is not registering that its in park and will not let you turn car off. There is a recall on the 2017-2018 vehicles for this issue and but many report an issue with the 20...",
+            "group": "electrical_general",
+            "id": "1983045",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 19.012,
+            "year": 2019
+          },
+          {
+            "excerpt": "When I put my car in park and try to turn it off, the dash shows an error message \"SHIFT TO PARK\". The car will either not turn off the ignition or allow me to leave the vehicle or lock/unlock the doors. It alarms incessently--even when trying to move the shifter around. Takes se...",
+            "group": "electrical_general",
+            "id": "1991376",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 16.1681,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-06T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-06T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-06T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-06T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-06T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-06T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-06T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

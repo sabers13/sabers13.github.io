@@ -1,0 +1,219 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2152856",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "ROGUE",
+    "narrative": "On November 17, my 2025 Nissan Rogue caught fire after my hour commute to work. During my commute, there were no warning signs on the dash for the entire duration. Got to the office, parked the vehicle, and within a few minutes a coworker called me to let me know the car was up in flames. The fire quickly intensified and got hot enough to melt the hood, and made its way into the interior after it shattered the windshield.  The fire started in the engine compartment, near the battery. The insurance company has a fire investigator attempting to determine the cause of the fire. The car had approximately 12,000 miles.",
+    "received_at": "2025-11-30",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2152856",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2152856",
+    "decided_at": "2025-11-30T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2152856",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "caught fire after my hour commute to work"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no warning signs on the dash"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fire started in the engine compartment, near the battery"
+      },
+      {
+        "kind": "safety",
+        "quote": "car was up in flames"
+      },
+      {
+        "kind": "safety",
+        "quote": "got hot enough to melt the hood"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2025 Nissan Rogue electrical system fire after commute while parked; no dash warnings; engine compartment near battery.",
+    "symptoms": [
+      "vehicle caught fire",
+      "no warning signs on the dash",
+      "fire started in the engine compartment near the battery",
+      "fire intensified and melted the hood",
+      "windshield shattered"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2152856",
+    "created_at": "2025-11-30T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-30T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000901,
+      "duration_ms": 10771,
+      "reason": "2025 Nissan Rogue electrical system fire after commute while parked; no dash warnings; engine compartment near battery.",
+      "started_at": "2025-11-30T07:00:01Z",
+      "step": 2,
+      "tokens": 2060,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-30T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ROGUE",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-11-30T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-30T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-30T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-30T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-30T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-30T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-30T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

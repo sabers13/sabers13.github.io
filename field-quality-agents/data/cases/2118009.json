@@ -1,0 +1,280 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2118009",
+    "make": "KIA",
+    "mileage": null,
+    "model": "TELLURIDE",
+    "narrative": "Driving and trying to brake and brake pushed to floor and still not stop.I pulled over and called AAA.While waiting for AAA to arrive low brake fluid light came on.AAA driver arrived and stated bolts protecting driver side rear tire were gone and caliper on that side were left hanging.Towed to Kia Dealer and stated bolts were clearly removed.Last visit to Kia dealer was 30 days ago only for oil change not brake work.Dealer repaired caliper bolts and pistons for over 2000.Dealer had no idea why bolts came off by themselves and why it happened. There was no warning or lights going off until after brakes failed.Luckily when it happened i was only on back roads so could slow down eventually without incident but if I had been on highway not know how I would have come to a stop before crashing.Can anyone tell me why this happened and how to prevent it from ever happening to me or anyone else owning a Kia Telluride",
+    "received_at": "2025-08-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2118009",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2118009",
+    "decided_at": "2025-08-06T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2118009",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brake pushed to floor and still not stop"
+      },
+      {
+        "kind": "symptom",
+        "quote": "low brake fluid light came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "bolts protecting driver side rear tire were gone and caliper on that side were left hanging"
+      },
+      {
+        "kind": "symptom",
+        "quote": "There was no warning or lights going off until after brakes failed."
+      },
+      {
+        "kind": "condition",
+        "quote": "Last visit to Kia dealer was 30 days ago only for oil change not brake work."
+      },
+      {
+        "kind": "safety",
+        "quote": "if I had been on highway not know how I would have come to a stop before crashing"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2021 Kia Telluride ADAS/automatic emergency braking: brake pedal to floor with no stop, low brake fluid light, missing driver-side rear caliper bolts; recent dealer oil-change visit.",
+    "symptoms": [
+      "brake pedal pushed to floor and vehicle would not stop",
+      "low brake fluid warning light came on",
+      "driver-side rear caliper bolts missing and caliper left hanging",
+      "no warning lights before brake failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2118009",
+    "created_at": "2025-08-06T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The Blind Spot Warning light doesn't work all the time. I have read through the Kia owners manual and couldn't find an explanation for the malfunction. I have tested in local and highway driving both low and high speed during good days and nights. Warning only comes up sometimes,...",
+      "group": "adas",
+      "id": "1753159",
+      "make": "KIA",
+      "model": "TELLURIDE",
+      "score": 15.5039,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Kia Telluride. The contact stated that while engaging the Forward Collision Avoidance system per the manufacturer’s instructions, the Forward Collision Avoidance system failed to engage. The contact stated that the Forward Collision Avoidance system was in...",
+      "group": "adas",
+      "id": "1892164",
+      "make": "KIA",
+      "model": "TELLURIDE",
+      "score": 13.3161,
+      "year": 2021
+    },
+    {
+      "excerpt": "This vehicle was purchased back in July 2023. On multiple occasions since then, the Automatic Emergency Braking system has activated and slammed on the brakes when not needed. There have been no other cars, animals or other hazards to cause it to do so. Very dangerous that this k...",
+      "group": "adas",
+      "id": "1992417",
+      "make": "KIA",
+      "model": "TELLURIDE",
+      "score": 11.736,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-06T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012445,
+      "duration_ms": 14278,
+      "reason": "2021 Kia Telluride ADAS/automatic emergency braking: brake pedal to floor with no stop, low brake fluid light, missing driver-side rear caliper bolts; recent dealer oil-change visit.",
+      "started_at": "2025-08-06T07:00:36Z",
+      "step": 2,
+      "tokens": 2688,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-06T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "TELLURIDE",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The Blind Spot Warning light doesn't work all the time. I have read through the Kia owners manual and couldn't find an explanation for the malfunction. I have tested in local and highway driving both low and high speed during good days and nights. Warning only comes up sometimes,...",
+            "group": "adas",
+            "id": "1753159",
+            "make": "KIA",
+            "model": "TELLURIDE",
+            "score": 15.5039,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Kia Telluride. The contact stated that while engaging the Forward Collision Avoidance system per the manufacturer’s instructions, the Forward Collision Avoidance system failed to engage. The contact stated that the Forward Collision Avoidance system was in...",
+            "group": "adas",
+            "id": "1892164",
+            "make": "KIA",
+            "model": "TELLURIDE",
+            "score": 13.3161,
+            "year": 2021
+          },
+          {
+            "excerpt": "This vehicle was purchased back in July 2023. On multiple occasions since then, the Automatic Emergency Braking system has activated and slammed on the brakes when not needed. There have been no other cars, animals or other hazards to cause it to do so. Very dangerous that this k...",
+            "group": "adas",
+            "id": "1992417",
+            "make": "KIA",
+            "model": "TELLURIDE",
+            "score": 11.736,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-06T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-06T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-06T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-06T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-06T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-06T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-06T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

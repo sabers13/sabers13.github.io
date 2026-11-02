@@ -1,0 +1,223 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2146854",
+    "make": "KIA",
+    "mileage": null,
+    "model": "SORENTO HYBRID",
+    "narrative": "Safety Concern – 2025 Kia Sorento Prestige Hybrid (VIN [XXX] ) Around October 13, 2025, my leased 2025 Kia Sorento Prestige Hybrid experienced a sudden and severe loss of power while I was driving on the highway. The vehicle was towed to the dealership, where the High Power Control Unit (HPCU), part number 36601-3DPG3, was replaced. No clear explanation of the root cause was provided. Less than a month later, on November 6, the same failure occurred again—this time in heavy highway traffic—creating a serious safety risk and increasing the chance of a collision. The vehicle is primarily driven by my wife, who regularly uses highways to transport our son. The recurring and unpredictable nature of this issue has made us feel unsafe and anxious. We are deeply concerned that another failure could lead to a serious accident or fatality. We respectfully request that the National Highway Traffic Safety Administration (NHTSA) investigate this matter as a potential safety defect. Without a clear understanding of the cause, we are documenting these incidents to encourage action. It is critical that Kia resolves this issue to protect families and maintain trust in its brand. Thank you  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-11-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2146854",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2146854",
+    "decided_at": "2025-11-07T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2146854",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "sudden and severe loss of power while I was driving on the highway"
+      },
+      {
+        "kind": "component_group",
+        "quote": "High Power Control Unit (HPCU), part number 36601-3DPG3"
+      },
+      {
+        "kind": "condition",
+        "quote": "the same failure occurred again"
+      },
+      {
+        "kind": "condition",
+        "quote": "in heavy highway traffic"
+      },
+      {
+        "kind": "safety",
+        "quote": "creating a serious safety risk and increasing the chance of a collision"
+      },
+      {
+        "kind": "symptom",
+        "quote": "recurring and unpredictable nature"
+      },
+      {
+        "kind": "safety",
+        "quote": "another failure could lead to a serious accident or fatality"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system HPCU caused sudden severe loss of power while driving on highway, then recurred in heavy traffic after HPCU replacement.",
+    "symptoms": [
+      "sudden and severe loss of power while driving",
+      "same failure recurred"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2146854",
+    "created_at": "2025-11-07T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-07T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008404,
+      "duration_ms": 9972,
+      "reason": "Electrical system HPCU caused sudden severe loss of power while driving on highway, then recurred in heavy traffic after HPCU replacement.",
+      "started_at": "2025-11-07T07:00:21Z",
+      "step": 2,
+      "tokens": 2082,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-07T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "SORENTO HYBRID",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-11-07T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-07T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-07T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-07T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-07T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-07T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-07T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

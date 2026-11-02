@@ -1,0 +1,469 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2056747",
+    "make": "TOYOTA",
+    "mileage": 68000,
+    "model": "RAV4",
+    "narrative": "The contact owns a 2015 Toyota Rav4. The contact stated that while the vehicle was parked at an independent mechanic for a routine service appointment, the contact was advised that corrosion was present on the battery hold down clamps.  In addition, the contact was informed that, due to the corrosion, the battery test indicated a faulty battery. The vehicle was not repaired. The dealer was made aware of the failure. The contact was informed that the parts were not available. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the failure but provided no assistance. The failure mileage was 68,000. VIN tool confirms parts not available.",
+    "received_at": "2025-01-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2056747",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2056747",
+    "decided_at": "2025-01-17T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2056747",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "corrosion was present on the battery hold down clamps"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the battery test indicated a faulty battery"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 23V734000 (Electrical System)"
+      },
+      {
+        "kind": "condition",
+        "quote": "parked at an independent mechanic for a routine service appointment"
+      },
+      {
+        "kind": "condition",
+        "quote": "failure mileage was 68,000"
+      }
+    ],
+    "conditions": [
+      "vehicle parked at independent mechanic for routine service",
+      "failure mileage 68,000",
+      "recall 23V734000 remedy parts unavailable"
+    ],
+    "fault_codes": [
+      "23V734000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the battery and hold-down clamps under load to confirm the corrosion-related battery failure; no rulebook targeted test applies.",
+    "symptoms": [
+      "corrosion on battery hold down clamps",
+      "faulty battery"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2056747",
+    "created_at": "2025-01-17T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "corrosion was present on the battery hold down clamps",
+        "source_id": "2056747",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the battery test indicated a faulty battery",
+        "source_id": "2056747",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 23V734000 (Electrical System)",
+        "source_id": "2056747",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "parked at an independent mechanic for a routine service appointment",
+        "source_id": "2056747",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failure mileage was 68,000",
+        "source_id": "2056747",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative states that corrosion was found on the battery hold down clamps and that a battery test indicated a faulty battery. The vehicle was at an independent mechanic for routine service at 68,000 miles, and recall 23V734000 is mentioned with parts unavailable. No rulebook match or investigation result was returned, so a standard battery/electrical inspection and load test is appropriate rather than a targeted rulebook test.",
+    "requested_info": [],
+    "summary": "Test the battery and hold-down clamps under load to confirm the corrosion-related battery failure; no rulebook targeted test applies.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the reca...",
+      "group": "electrical_general",
+      "id": "1951221",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 29.2953,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not available. The con...",
+      "group": "electrical_general",
+      "id": "2023794",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 28.779,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not yet available. The...",
+      "group": "electrical_general",
+      "id": "2030467",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 28.6536,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+      "group": "electrical_general",
+      "id": "2034672",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 27.3231,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Toyota RAV4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+      "group": "electrical_general",
+      "id": "2050428",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 27.3231,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00166485,
+      "duration_ms": 24730,
+      "reason": "Electrical system: corrosion on battery hold down clamps causing faulty battery; parked at independent mechanic for routine service; recall 23V734000 parts unavailable.",
+      "started_at": "2025-01-17T07:00:01Z",
+      "step": 2,
+      "tokens": 3272,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the reca...",
+            "group": "electrical_general",
+            "id": "1951221",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 29.2953,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not available. The con...",
+            "group": "electrical_general",
+            "id": "2023794",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 28.779,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not yet available. The...",
+            "group": "electrical_general",
+            "id": "2030467",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 28.6536,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-01-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-01-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-01-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2015 Toyota Rav4. The contact stated that while the vehicle was parked at an independent mechanic for a routine service appointment, the contact was advised that corrosion was present on the battery hold down clamps.  In addition, the contact was informed that, due to the corrosion, the battery test indicated a faulty battery. The vehicle was not repaired. The dealer was made aware of the failure. The contact was informed that the parts were not available. The contact received"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the reca...",
+            "group": "electrical_general",
+            "id": "1951221",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 29.2953,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not available. The con...",
+            "group": "electrical_general",
+            "id": "2023794",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 28.779,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The local dealer was contacted, and it was confirmed that the part was not yet available. The...",
+            "group": "electrical_general",
+            "id": "2030467",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 28.6536,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+            "group": "electrical_general",
+            "id": "2034672",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 27.3231,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Toyota RAV4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+            "group": "electrical_general",
+            "id": "2050428",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 27.3231,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-01-17T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-01-17T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-01-17T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007524,
+      "duration_ms": 9881,
+      "reason": "The narrative states that corrosion was found on the battery hold down clamps and that a battery test indicated a faulty battery. The vehicle was at an independent mechanic for routine service at 68,000 miles, and recall 23V734000 is mentioned with parts unavailable. No rulebook match or investigation result was returned, so a standard battery/electrical inspection and load test is appropriate rather than a targeted rulebook test.",
+      "started_at": "2025-01-17T07:00:09Z",
+      "step": 10,
+      "tokens": 2385,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-01-17T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "corrosion was present on the battery hold down clamps",
+          "the battery test indicated a faulty battery",
+          "NHTSA Campaign Number: 23V734000 (Electrical System)",
+          "parked at an independent mechanic for a routine service appointment",
+          "failure mileage was 68,000"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-17T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-01-17T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-17T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-17T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: AUTOMATIC SYSTEM BRAKING",
+    "group": "adas",
+    "id": "2116020",
+    "make": "CADILLAC",
+    "mileage": 8600,
+    "model": "LYRIQ",
+    "narrative": "The contact owns a 2023 Cadillac Lyriq. The contact stated that while reversing and proceeding to make a U-turn, he crashed into a steel guardrail. The automatic braking system did not engage. There was no audible or visual alert or warning provided by the system. There was no injury, police report, airbag deployment, or fire. The vehicle was taken to the local dealer. After twelve days, the vehicle was not diagnosed or repaired. The manufacturer was contacted, who confirmed the vehicle had functioned as designed. The failure mileage was 8,600.",
+    "received_at": "2025-07-31",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116020",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116020",
+    "decided_at": "2025-07-31T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116020",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: AUTOMATIC SYSTEM BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "while reversing and proceeding to make a U-turn"
+      },
+      {
+        "kind": "safety",
+        "quote": "he crashed into a steel guardrail"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The automatic braking system did not engage."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There was no audible or visual alert or warning provided by the system."
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was 8,600."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Automatic system braking did not engage and gave no audible or visual alert while reversing/U-turn, resulting in a guardrail crash.",
+    "symptoms": [
+      "automatic braking system did not engage",
+      "no audible or visual alert or warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116020",
+    "created_at": "2025-07-31T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I have had two incidents with the automatic braking system occur in a short period of time. The Lyriq is not a car that I drive very often so when the incidents occurred in the last 2 of the 3 times of driving the car it makes me scared to drive the car again. The first incident...",
+      "group": "adas",
+      "id": "2022236",
+      "make": "CADILLAC",
+      "model": "LYRIQ",
+      "score": 9.4496,
+      "year": 2024
+    },
+    {
+      "excerpt": "I have had two incidents with the automatic braking system occur in a short period of time. The Lyriq is not a car that I drive very often so when the incidents occurred in the last 2 of the 3 times of driving the car it makes me scared to drive the car again. The first incident...",
+      "group": "adas",
+      "id": "2022237",
+      "make": "CADILLAC",
+      "model": "LYRIQ",
+      "score": 9.4496,
+      "year": 2024
+    },
+    {
+      "excerpt": "Ref: NHTSA ID# 24V589/ GM Recall N242453471 Record shows that the above recall was completed on August 27, 2024. Yesterday while I was reversing my 2024 LYRIQ out of my garage I experienced multiple false automatic braking. Braking was so frequent that, I thought, driving that ca...",
+      "group": "adas",
+      "id": "2034083",
+      "make": "CADILLAC",
+      "model": "LYRIQ",
+      "score": 7.3978,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-31T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017965,
+      "duration_ms": 23556,
+      "reason": "Automatic system braking did not engage and gave no audible or visual alert while reversing/U-turn, resulting in a guardrail crash.",
+      "started_at": "2025-07-31T07:00:36Z",
+      "step": 2,
+      "tokens": 3545,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-31T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CADILLAC",
+        "model": "LYRIQ",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have had two incidents with the automatic braking system occur in a short period of time. The Lyriq is not a car that I drive very often so when the incidents occurred in the last 2 of the 3 times of driving the car it makes me scared to drive the car again. The first incident...",
+            "group": "adas",
+            "id": "2022236",
+            "make": "CADILLAC",
+            "model": "LYRIQ",
+            "score": 9.4496,
+            "year": 2024
+          },
+          {
+            "excerpt": "I have had two incidents with the automatic braking system occur in a short period of time. The Lyriq is not a car that I drive very often so when the incidents occurred in the last 2 of the 3 times of driving the car it makes me scared to drive the car again. The first incident...",
+            "group": "adas",
+            "id": "2022237",
+            "make": "CADILLAC",
+            "model": "LYRIQ",
+            "score": 9.4496,
+            "year": 2024
+          },
+          {
+            "excerpt": "Ref: NHTSA ID# 24V589/ GM Recall N242453471 Record shows that the above recall was completed on August 27, 2024. Yesterday while I was reversing my 2024 LYRIQ out of my garage I experienced multiple false automatic braking. Braking was so frequent that, I thought, driving that ca...",
+            "group": "adas",
+            "id": "2034083",
+            "make": "CADILLAC",
+            "model": "LYRIQ",
+            "score": 7.3978,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-31T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-31T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-31T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-31T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-31T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-31T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-31T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

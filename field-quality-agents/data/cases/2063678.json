@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2063678",
+    "make": "CHRYSLER",
+    "mileage": null,
+    "model": "300",
+    "narrative": "This vehicle was involved in a tragic car accident. The passengers both suffered deep laceration to the skull and other vital parts of the body. There was a recall notice that was sent to the owner 4 months after the fatal accident had occurred. Based on police inspection of the vehicle, they’ve determined there was mechanical failure to the vehicle which can be seen through a police bodycam at the police impound lot. The front passenger suffered a 6 inch deep cut to the skull according to the medical examiner’s report. The child in the rear also suffered a deep laceration to the ankle and foot despite being restrained in a child seat. Driver suffered a graze cut to the side of his head and survived the tragic accident after recovering from a coma he stated that the brakes did not function properly when depressed moments prior to the accident. Data recorder from the vehicle shows the driver was depressing the brake pedal the entirety of the time up to the moment of impact. This vehicle was t-boned by an suv, and this accident should have been survivable, however the passenger seat looks to be torn out of its brackets according to the pictures from the accident scene. I am requesting this vehicle be investigated as there are many vehicles similar to this one that could have dangerous defects which were outlined in the safety recall notice that was mailed to the owner. The safety recall did mention to stop driving this vehicle immediately, however this notice did not arrive in a timely manner to where anyone could have taken action immediately. I am requesting that this vehicle be inspected for not only the safety of the community it’s but for identifying why two people lost their lives due to a manufacture failure that could have been prevented if notification was sent in a timely manner. Thank you and I look forward to following up with someone regarding this immediate and dangerous concern. I have the original letters and when they were mailed to the owner.",
+    "received_at": "2025-02-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2063678",
+    "status": "decided",
+    "year": 2007
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2063678",
+    "decided_at": "2025-02-07T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2063678",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "condition",
+        "quote": "tragic car accident"
+      },
+      {
+        "kind": "symptom",
+        "quote": "deep laceration to the skull and other vital parts of the body"
+      },
+      {
+        "kind": "symptom",
+        "quote": "mechanical failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brakes did not function properly when depressed moments prior to the accident"
+      },
+      {
+        "kind": "symptom",
+        "quote": "driver was depressing the brake pedal the entirety of the time up to the moment of impact"
+      },
+      {
+        "kind": "condition",
+        "quote": "t-boned by an suv"
+      },
+      {
+        "kind": "symptom",
+        "quote": "passenger seat looks to be torn out of its brackets"
+      },
+      {
+        "kind": "other",
+        "quote": "recall notice that was sent to the owner 4 months after the fatal accident had occurred"
+      },
+      {
+        "kind": "safety",
+        "quote": "two people lost their lives"
+      },
+      {
+        "kind": "symptom",
+        "quote": "deep laceration to the ankle and foot despite being restrained in a child seat"
+      }
+    ],
+    "conditions": [
+      "crash",
+      "t-bone impact",
+      "braking"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "SEAT BELTS: front passenger seat torn from brackets and brake malfunction in a t-bone crash; fatal/laceration injuries and late recall notice.",
+    "symptoms": [
+      "front passenger seat torn out of its brackets",
+      "brakes did not function properly despite brake pedal being depressed",
+      "occupants suffered deep lacerations despite restraints and child seat",
+      "mechanical failure found by police inspection",
+      "fatal injuries"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2063678",
+    "created_at": "2025-02-07T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2007 Chrysler 300. The contact stated while driving at an undisclosed speed and completing a turn, the contact observed that her grandson’s car seat had turned over on its side, prompting her to pull over to the shoulder of the roadway. The contact secured the...",
+      "group": "restraints",
+      "id": "2025530",
+      "make": "CHRYSLER",
+      "model": "300",
+      "score": 8.4248,
+      "year": 2007
+    },
+    {
+      "excerpt": "Seatbelts have failed, malfunctioned on separate occasions throughout the years. Inspection of my vehicle is welcome for study on the seatbelts. On arrival to destinations, seatbelt or seatbelts will lock, and unable to release from the the button-press mechanism. Myself or passe...",
+      "group": "restraints",
+      "id": "1865140",
+      "make": "CHRYSLER",
+      "model": "300",
+      "score": 7.0034,
+      "year": 2007
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00143665,
+      "duration_ms": 23004,
+      "reason": "SEAT BELTS: front passenger seat torn from brackets and brake malfunction in a t-bone crash; fatal/laceration injuries and late recall notice.",
+      "started_at": "2025-02-07T07:00:01Z",
+      "step": 2,
+      "tokens": 3141,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-02-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "300",
+        "year": 2007
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2007 Chrysler 300. The contact stated while driving at an undisclosed speed and completing a turn, the contact observed that her grandson’s car seat had turned over on its side, prompting her to pull over to the shoulder of the roadway. The contact secured the...",
+            "group": "restraints",
+            "id": "2025530",
+            "make": "CHRYSLER",
+            "model": "300",
+            "score": 8.4248,
+            "year": 2007
+          },
+          {
+            "excerpt": "Seatbelts have failed, malfunctioned on separate occasions throughout the years. Inspection of my vehicle is welcome for study on the seatbelts. On arrival to destinations, seatbelt or seatbelts will lock, and unable to release from the the button-press mechanism. Myself or passe...",
+            "group": "restraints",
+            "id": "1865140",
+            "make": "CHRYSLER",
+            "model": "300",
+            "score": 7.0034,
+            "year": 2007
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-07T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-07T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-07T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-07T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

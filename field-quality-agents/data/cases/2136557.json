@@ -1,0 +1,268 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2136557",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "I was driving on the freeway in the right lane and the lane assist forced my steering wheel to turn right causing me to collide into a concrete guard rail. Previous to that my car had been having electrical malfunctioning issues with the screen and radio.",
+    "received_at": "2025-10-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136557",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136557",
+    "decided_at": "2025-10-05T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2136557",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lane assist forced my steering wheel to turn right causing me to collide into a concrete guard rail"
+      },
+      {
+        "kind": "symptom",
+        "quote": "electrical malfunctioning issues with the screen and radio"
+      },
+      {
+        "kind": "safety",
+        "quote": "collide into a concrete guard rail"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving on the freeway in the right lane"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: lane assist forced the steering wheel right, causing a guard-rail collision; prior screen and radio electrical malfunctions while driving on the freeway in the right lane.",
+    "symptoms": [
+      "lane assist forced the steering wheel to turn right, causing a collision with a concrete guard rail",
+      "electrical malfunctioning issues with the screen and radio"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136557",
+    "created_at": "2025-10-05T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I was driving about 75 mph when my car alerted me that the engine had stopped and I needed to pull over immediately. The wheels continued to turn and the car was stuck in neutral. I pulled over and tried to push the SOS button which did not connect. I then tried to restart my car...",
+      "group": "electrical_general",
+      "id": "2030913",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 4.6724,
+      "year": 2024
+    },
+    {
+      "excerpt": "I have a 2024 Volkswagon Atlas and right now my screen is completely not working. Everything is functional through the screen for controls as well. I can't even control the thermostat. This has become a safety issue as my windows are icy in the morning and I cant turn the defrost...",
+      "group": "electrical_general",
+      "id": "2049589",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 3.65,
+      "year": 2024
+    },
+    {
+      "excerpt": "Infotainment display graphics issue; most controls (including disabling seat heaters) are through this screen and camera is displayed on it. Unable to see display clearly and therefore interact with controls or view backup camera to look for obstacles. Search online for \"2024 atl...",
+      "group": "electrical_general",
+      "id": "2043382",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 1.1032,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-05T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011209,
+      "duration_ms": 11136,
+      "reason": "Electrical system: lane assist forced the steering wheel right, causing a guard-rail collision; prior screen and radio electrical malfunctions while driving on the freeway in the right lane.",
+      "started_at": "2025-10-05T07:00:21Z",
+      "step": 2,
+      "tokens": 2365,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-05T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I was driving about 75 mph when my car alerted me that the engine had stopped and I needed to pull over immediately. The wheels continued to turn and the car was stuck in neutral. I pulled over and tried to push the SOS button which did not connect. I then tried to restart my car...",
+            "group": "electrical_general",
+            "id": "2030913",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 4.6724,
+            "year": 2024
+          },
+          {
+            "excerpt": "I have a 2024 Volkswagon Atlas and right now my screen is completely not working. Everything is functional through the screen for controls as well. I can't even control the thermostat. This has become a safety issue as my windows are icy in the morning and I cant turn the defrost...",
+            "group": "electrical_general",
+            "id": "2049589",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 3.65,
+            "year": 2024
+          },
+          {
+            "excerpt": "Infotainment display graphics issue; most controls (including disabling seat heaters) are through this screen and camera is displayed on it. Unable to see display clearly and therefore interact with controls or view backup camera to look for obstacles. Search online for \"2024 atl...",
+            "group": "electrical_general",
+            "id": "2043382",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 1.1032,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-10-05T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-05T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-05T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-05T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-05T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-05T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-05T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

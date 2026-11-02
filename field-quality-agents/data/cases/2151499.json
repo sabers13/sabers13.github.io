@@ -1,0 +1,212 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2151499",
+    "make": "HONDA",
+    "mileage": 28000,
+    "model": "CR-V",
+    "narrative": "The contact owns a 2026 Honda CR-V. The contact stated that the infotainment system screen occasionally turned black or would freeze, which prevented the driver from having access to systems or safety features that could only be engaged through the infotainment system. Additionally, the contact stated that the rearview camera image was black due to the failure. The contact stated that while driving approximately 60-65 MPH, the contact heard a male voice coming from the infotainment system. The contact realized that a voicemail message that a customer had left to the contact several weeks prior was playing. The contact stated that the failures occurred intermittently but had become more persistent. The vehicle was taken to the dealer, where it was diagnosed and determined that a software update for the infotainment system was needed. The vehicle was not repaired. The manufacturer was made aware of the failure, and a case was filed. The failure mileage was approximately 28,000.",
+    "received_at": "2025-11-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2151499",
+    "status": "decided",
+    "year": 2026
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2151499",
+    "decided_at": "2025-11-24T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2151499",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION"
+      },
+      {
+        "kind": "symptom",
+        "quote": "infotainment system screen occasionally turned black or would freeze"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rearview camera image was black due to the failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "heard a male voice coming from the infotainment system"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving approximately 60-65 MPH"
+      },
+      {
+        "kind": "safety",
+        "quote": "prevented the driver from having access to systems or safety features that could only be engaged through the infotainment system"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Back over prevention (ADAS): infotainment screen black/freeze, rearview camera black, stray voicemail audio; intermittent, at 60-65 MPH.",
+    "symptoms": [
+      "infotainment screen turns black or freezes",
+      "rearview camera image is black",
+      "unexpected voicemail audio plays through infotainment",
+      "access to systems or safety features via infotainment is blocked",
+      "failures are intermittent and becoming more persistent"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2151499",
+    "created_at": "2025-11-24T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-24T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015919,
+      "duration_ms": 17341,
+      "reason": "Back over prevention (ADAS): infotainment screen black/freeze, rearview camera black, stray voicemail audio; intermittent, at 60-65 MPH.",
+      "started_at": "2025-11-24T07:00:16Z",
+      "step": 2,
+      "tokens": 3258,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-24T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "CR-V",
+        "year": 2026
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-24T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-24T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-24T07:00:21Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-24T07:00:23Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-24T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-24T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

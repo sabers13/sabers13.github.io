@@ -1,0 +1,448 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2059274",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "MALIBU",
+    "narrative": "Rear differential keeps going out and transmission keeps failing every 10k miles, apple car play doesn’t work and lags out. So hand free doesn’t work",
+    "received_at": "2025-01-24",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2059274",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2059274",
+    "decided_at": "2025-01-24T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2059274",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Rear differential keeps going out"
+      },
+      {
+        "kind": "symptom",
+        "quote": "transmission keeps failing every 10k miles"
+      },
+      {
+        "kind": "symptom",
+        "quote": "apple car play doesn’t work and lags out"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hand free doesn’t work"
+      },
+      {
+        "kind": "condition",
+        "quote": "lags out"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run a targeted long-run power cycling test because the CarPlay and hands-free faults are intermittent, while also noting reported recurring differential and transmission failures.",
+    "symptoms": [
+      "rear differential keeps going out",
+      "transmission keeps failing every 10k miles",
+      "apple car play doesn’t work and lags out",
+      "hand free doesn’t work"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2059274",
+    "created_at": "2025-01-24T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Rear differential keeps going out",
+        "source_id": "2059274",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "transmission keeps failing every 10k miles",
+        "source_id": "2059274",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "apple car play doesn’t work and lags out",
+        "source_id": "2059274",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "hand free doesn’t work",
+        "source_id": "2059274",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "lags out",
+        "source_id": "2059274",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports that Apple CarPlay does not work and lags out, and hands-free does not work, matching the intermittent condition. The rulebook maps intermittent faults to the Long-run power cycling test. Recurring rear differential and transmission failures are also reported, but no fault codes, recalls, or investigations are present.",
+    "requested_info": [],
+    "summary": "Run a targeted long-run power cycling test because the CarPlay and hands-free faults are intermittent, while also noting reported recurring differential and transmission failures.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports that Apple CarPlay does not work and lags out, and hands-free does not work, matching the intermittent condition. The rulebook maps intermittent faults to the Long-run power cycling test. Recurring rear differential and transmission failures are also reported, but no fault codes, recalls, or investigations are present."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Malibu will be in park, engine off, but when exiting the vehicle a message will appear \"SHIFT TO PARK\", although the vehicle is in park. The electrical will not shut off, which is a hazard, as the vehicle's battery remains on. I am forced to turn the car on, shift to a different...",
+      "group": "electrical_general",
+      "id": "1912908",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 2.6468,
+      "year": 2021
+    },
+    {
+      "excerpt": "The computer was not recognizing my car being in the correct gear shift. It did this for a few days until finally, I couldn't drive it. The car would not recognize any part of the gear being in the correct position. The car would not move forward or reverse, resulting in a tow. T...",
+      "group": "electrical_general",
+      "id": "1999876",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 1.6568,
+      "year": 2021
+    },
+    {
+      "excerpt": "When I turn off the car it displays a 'shift to park' message and the car tries to roll if I take my foot off of the brake. My [XXX] was beside the car and was almost run over. This is a problem that the car rolls away. I have to restart the car continuously and toggle the gear s...",
+      "group": "electrical_general",
+      "id": "2037856",
+      "make": "CHEVROLET",
+      "model": "MALIBU",
+      "score": 0.6685,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-24T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012664,
+      "duration_ms": 20854,
+      "reason": "Electrical system: recurring rear differential and transmission failures every 10k miles; Apple CarPlay lags/fails and hands-free is inoperative.",
+      "started_at": "2025-01-24T07:00:01Z",
+      "step": 2,
+      "tokens": 2600,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-24T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "MALIBU",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Malibu will be in park, engine off, but when exiting the vehicle a message will appear \"SHIFT TO PARK\", although the vehicle is in park. The electrical will not shut off, which is a hazard, as the vehicle's battery remains on. I am forced to turn the car on, shift to a different...",
+            "group": "electrical_general",
+            "id": "1912908",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 2.6468,
+            "year": 2021
+          },
+          {
+            "excerpt": "The computer was not recognizing my car being in the correct gear shift. It did this for a few days until finally, I couldn't drive it. The car would not recognize any part of the gear being in the correct position. The car would not move forward or reverse, resulting in a tow. T...",
+            "group": "electrical_general",
+            "id": "1999876",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 1.6568,
+            "year": 2021
+          },
+          {
+            "excerpt": "When I turn off the car it displays a 'shift to park' message and the car tries to roll if I take my foot off of the brake. My [XXX] was beside the car and was almost run over. This is a problem that the car rolls away. I have to restart the car continuously and toggle the gear s...",
+            "group": "electrical_general",
+            "id": "2037856",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 0.6685,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-01-24T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-01-24T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-01-24T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Rear differential keeps going out and transmission keeps failing every 10k miles, apple car play doesn’t work and lags out. So hand free doesn’t work"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Malibu will be in park, engine off, but when exiting the vehicle a message will appear \"SHIFT TO PARK\", although the vehicle is in park. The electrical will not shut off, which is a hazard, as the vehicle's battery remains on. I am forced to turn the car on, shift to a different...",
+            "group": "electrical_general",
+            "id": "1912908",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 2.6468,
+            "year": 2021
+          },
+          {
+            "excerpt": "The computer was not recognizing my car being in the correct gear shift. It did this for a few days until finally, I couldn't drive it. The car would not recognize any part of the gear being in the correct position. The car would not move forward or reverse, resulting in a tow. T...",
+            "group": "electrical_general",
+            "id": "1999876",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 1.6568,
+            "year": 2021
+          },
+          {
+            "excerpt": "When I turn off the car it displays a 'shift to park' message and the car tries to roll if I take my foot off of the brake. My [XXX] was beside the car and was almost run over. This is a problem that the car rolls away. I have to restart the car continuously and toggle the gear s...",
+            "group": "electrical_general",
+            "id": "2037856",
+            "make": "CHEVROLET",
+            "model": "MALIBU",
+            "score": 0.6685,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-01-24T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHEVROLET",
+        "model": "MALIBU",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-01-24T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHEVROLET",
+        "model": "MALIBU",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-01-24T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007467,
+      "duration_ms": 11984,
+      "reason": "The narrative reports that Apple CarPlay does not work and lags out, and hands-free does not work, matching the intermittent condition. The rulebook maps intermittent faults to the Long-run power cycling test. Recurring rear differential and transmission failures are also reported, but no fault codes, recalls, or investigations are present.",
+      "started_at": "2025-01-24T07:00:09Z",
+      "step": 10,
+      "tokens": 2170,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-01-24T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Rear differential keeps going out",
+          "transmission keeps failing every 10k miles",
+          "apple car play doesn’t work and lags out",
+          "hand free doesn’t work",
+          "lags out"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-24T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-01-24T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-24T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-24T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

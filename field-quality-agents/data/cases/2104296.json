@@ -1,0 +1,245 @@
+{
+  "case": {
+    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+    "group": "safety_systems",
+    "id": "2104296",
+    "make": "GMC",
+    "mileage": 37000,
+    "model": "TERRAIN",
+    "narrative": "The contact owns a 2020 GMC Terrain. The contact stated that the vehicle was taken to a dealer for an oil change. The contact stated that approximately 5 weeks after returning the oil change, while driving at approximately 65 MPH, the vehicle and steering wheel started shaking abnormally and the vehicle lost motive power. The contact stated that the traction control, check engine, and stabili-trak control warning lights were illuminated. The vehicle was taken to a dealer where it was diagnosed that there was no oil in the engine and the spark plugs and ignition coils needed to be replaced. The vehicle was repaired; however, the failure reoccurred three weeks later. The manufacturer was not notified of the failure. The failure mileage was approximately 37,000.",
+    "received_at": "2025-06-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2104296",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2104296",
+    "decided_at": "2025-06-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2104296",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "vehicle and steering wheel started shaking abnormally"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle lost motive power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "traction control, check engine, and stabili-trak control warning lights were illuminated"
+      },
+      {
+        "kind": "condition",
+        "quote": "taken to a dealer for an oil change"
+      },
+      {
+        "kind": "condition",
+        "quote": "approximately 5 weeks after returning the oil change"
+      },
+      {
+        "kind": "condition",
+        "quote": "failure reoccurred three weeks later"
+      },
+      {
+        "kind": "safety",
+        "quote": "while driving at approximately 65 MPH, the vehicle and steering wheel started shaking abnormally and the vehicle lost motive power"
+      }
+    ],
+    "conditions": [
+      "vibration",
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "ESC on 2020 GMC Terrain: shaking and loss of motive power at 65 MPH with traction control, check engine, and stability warning lights after an oil change.",
+    "symptoms": [
+      "vehicle and steering wheel shaking abnormally",
+      "loss of motive power",
+      "traction control, check engine, and stability control warning lights illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2104296",
+    "created_at": "2025-06-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "EVERY WEEK IT'S SOMETHING DIFFERENT. IN MOTION... NO CRUZE CONTROL. NO AUDIO. DON'T DRIVE OVER 50MPH BRAKE PROBLEM. PARKING BRAKE ENGAGES RANDOMLY AND WITHOUT USER ENGAGEMENT. NO AWD. NO STABILITY TRACTION. THIS HAPPENS SO FREQUENTLY THE DASH INDICATORS HAVE BEEN REDUCED TO 'IDIO...",
+      "group": "safety_systems",
+      "id": "1680376",
+      "make": "GMC",
+      "model": "TERRAIN",
+      "score": 2.1217,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006499,
+      "duration_ms": 7839,
+      "reason": "ESC on 2020 GMC Terrain: shaking and loss of motive power at 65 MPH with traction control, check engine, and stability warning lights after an oil change.",
+      "started_at": "2025-06-26T07:00:01Z",
+      "step": 2,
+      "tokens": 1661,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-06-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "TERRAIN",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "EVERY WEEK IT'S SOMETHING DIFFERENT. IN MOTION... NO CRUZE CONTROL. NO AUDIO. DON'T DRIVE OVER 50MPH BRAKE PROBLEM. PARKING BRAKE ENGAGES RANDOMLY AND WITHOUT USER ENGAGEMENT. NO AWD. NO STABILITY TRACTION. THIS HAPPENS SO FREQUENTLY THE DASH INDICATORS HAVE BEEN REDUCED TO 'IDIO...",
+            "group": "safety_systems",
+            "id": "1680376",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 2.1217,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-06-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

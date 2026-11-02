@@ -1,0 +1,233 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "group": "instrumentation",
+    "id": "2052898",
+    "make": "PETERBILT",
+    "mileage": null,
+    "model": "567",
+    "narrative": "The Crane operator reported that the trucks dashboard was frozen, the truck would not restart. No warning light displayed at this time and the truck was stationary. The truck was towed. Peterbilt provided mobile service and the issue was thought to be resolved. Dash froze again while the truck was traveling, warning lights and sound went off this time. No Accident occurred but having the dashboard fail when in motions was a very unsafe situation and additionally if the trucks dash system was to freeze up when the crane is deployed that would also be an unsafe situation. The truck is currently at a Peterbilt Service provider, but the issue has not been resolved after 5 weeks.",
+    "received_at": "2025-01-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2052898",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2052898",
+    "decided_at": "2025-01-03T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2052898",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the trucks dashboard was frozen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the truck would not restart"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning light displayed at this time and the truck was stationary."
+      },
+      {
+        "kind": "condition",
+        "quote": "Dash froze again while the truck was traveling"
+      },
+      {
+        "kind": "symptom",
+        "quote": "warning lights and sound went off this time"
+      },
+      {
+        "kind": "safety",
+        "quote": "No Accident occurred but having the dashboard fail when in motions was a very unsafe situation"
+      },
+      {
+        "kind": "safety",
+        "quote": "if the trucks dash system was to freeze up when the crane is deployed that would also be an unsafe situation"
+      },
+      {
+        "kind": "condition",
+        "quote": "The truck is currently at a Peterbilt Service provider, but the issue has not been resolved after 5 weeks."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": true,
+    "summary": "Instrument cluster/panel: dashboard froze and truck would not restart, recurred while traveling with warning lights/sound; flagged unsafe and unresolved after service.",
+    "symptoms": [
+      "dashboard frozen",
+      "truck would not restart",
+      "no warning light displayed at first",
+      "warning lights and sound went off"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2052898",
+    "created_at": "2025-01-03T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010801,
+      "duration_ms": 17401,
+      "reason": "Instrument cluster/panel: dashboard froze and truck would not restart, recurred while traveling with warning lights/sound; flagged unsafe and unresolved after service.",
+      "started_at": "2025-01-03T07:00:01Z",
+      "step": 2,
+      "tokens": 2363,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "PETERBILT",
+        "model": "567",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-03T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-03T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-03T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-03T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-03T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

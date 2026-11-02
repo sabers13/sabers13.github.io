@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2131411",
+    "make": "VOLKSWAGEN",
+    "mileage": 82770,
+    "model": "PASSAT",
+    "narrative": "The contact owns a 2013 Volkswagen Passat. The contact stated that while driving at an undisclosed speed, the air bag warning light was unexpectedly illuminated. The contact received notification of NHTSA Campaign Number: 24V834000 (Air Bags); however, the part to do the recall repair was not yet available. The dealer was contacted and confirmed that parts were not yet available. The vehicle was not diagnosed or repaired. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was not made aware of the failure. The approximate failure mileage was 82,770.",
+    "received_at": "2025-09-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131411",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131411",
+    "decided_at": "2025-09-17T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131411",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the air bag warning light was unexpectedly illuminated"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V834000"
+      },
+      {
+        "kind": "safety",
+        "quote": "air bag warning light"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V834000"
+    ],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2013 Volkswagen Passat air bag warning light illuminated while driving; recall 24V834000 parts unavailable",
+    "symptoms": [
+      "air bag warning light unexpectedly illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131411",
+    "created_at": "2025-09-17T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On 12/24/21, while driving the Passat and turning, a loud bang could be heard in the steering column and the airbag light illuminated. All steering wheel controls, such as the radio, screen toggles, volume and other associated controls ceased working. Drove straight to our truste...",
+      "group": "restraints",
+      "id": "1809582",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 13.9744,
+      "year": 2013
+    },
+    {
+      "excerpt": "The clock spring was diagnosed to be faulty in February '22 and a new part was ordered and not in yet. This has made the airbag, wipers and horn stop working. This is a failure that affects thousands of VWs and they have no idea when the new parts will be available. This auto is...",
+      "group": "restraints",
+      "id": "1831268",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 12.5903,
+      "year": 2013
+    },
+    {
+      "excerpt": "My vehicle was involved in a crash where Vehicle 1 (V1) ran a red light and my vehicle struck V1 along the rear passenger side door, causing my vehicle to spin 180 degrees. The front end of my vehicle was torn off and no airbags deployed, causing injury to the driver of my vehicl...",
+      "group": "restraints",
+      "id": "1842025",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 9.1093,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-17T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017821,
+      "duration_ms": 18202,
+      "reason": "2013 Volkswagen Passat air bag warning light illuminated while driving; recall 24V834000 parts unavailable",
+      "started_at": "2025-09-17T07:00:31Z",
+      "step": 2,
+      "tokens": 3524,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-17T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "PASSAT",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On 12/24/21, while driving the Passat and turning, a loud bang could be heard in the steering column and the airbag light illuminated. All steering wheel controls, such as the radio, screen toggles, volume and other associated controls ceased working. Drove straight to our truste...",
+            "group": "restraints",
+            "id": "1809582",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 13.9744,
+            "year": 2013
+          },
+          {
+            "excerpt": "The clock spring was diagnosed to be faulty in February '22 and a new part was ordered and not in yet. This has made the airbag, wipers and horn stop working. This is a failure that affects thousands of VWs and they have no idea when the new parts will be available. This auto is...",
+            "group": "restraints",
+            "id": "1831268",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 12.5903,
+            "year": 2013
+          },
+          {
+            "excerpt": "My vehicle was involved in a crash where Vehicle 1 (V1) ran a red light and my vehicle struck V1 along the rear passenger side door, causing my vehicle to spin 180 degrees. The front end of my vehicle was torn off and no airbags deployed, causing injury to the driver of my vehicl...",
+            "group": "restraints",
+            "id": "1842025",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 9.1093,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-09-17T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-17T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-17T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-17T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-17T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-17T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-17T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

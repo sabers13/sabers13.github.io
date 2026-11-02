@@ -1,0 +1,269 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2063835",
+    "make": "KIA",
+    "mileage": null,
+    "model": "FORTE",
+    "narrative": "-Airbags did not deploy. -The car is available for inspection. -The driver was put at significant risk after the vehicle accidentally slid on ice while navigating a sharp curve, causing it to veer off the road and crash into trees. The impact resulted in the car being totaled from the front bumper to the back. Despite the severity of the crash, the airbags failed to deploy, making the driver's seatbelt the only factor that ultimately saved his life. -Insurance agent still needs to look at the car. Police office was present, along with tow driver. -No warnings",
+    "received_at": "2025-02-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2063835",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2063835",
+    "decided_at": "2025-02-08T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2063835",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Airbags did not deploy"
+      },
+      {
+        "kind": "condition",
+        "quote": "slid on ice"
+      },
+      {
+        "kind": "safety",
+        "quote": "The driver was put at significant risk"
+      },
+      {
+        "kind": "other",
+        "quote": "No warnings"
+      }
+    ],
+    "conditions": [
+      "cold"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS did not deploy after the vehicle slid on ice and crashed into trees.",
+    "symptoms": [
+      "airbags did not deploy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2063835",
+    "created_at": "2025-02-08T07:00:27Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hello, my name is [XXX] , i just had a 2017 kia forte car accident on [XXX]. I was hit by the driver's side in my door and in the door behind me. the airbag are supposed to be released upon impact. The would have to open because i was going over 25 miles per hour the airbags supp...",
+      "group": "restraints",
+      "id": "1971735",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 5.8366,
+      "year": 2017
+    },
+    {
+      "excerpt": "Once coming home, my airbag from steering wheel deployed. I did not get into an accident, just as i closed my door it went off. I worried about my safety especially because i have a baby. Any airbag could’ve gone off for no reason. I don’t feel safe in my car. After taking it to...",
+      "group": "restraints",
+      "id": "2026482",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 4.3036,
+      "year": 2017
+    },
+    {
+      "excerpt": "ON 3/9/2021 I WAS INVOLVED IN A HIT AND RUN ACCIDENT AND MY KIA WAS HIT ON THE PASSENGER SIDE. IT WAS HIT SO HARD THAT THE IT LEFT A HOLE IN THE DOOR AND MY TODDLER WAS SITTING IN HIS CAR SEAT. WHEN THE FORE DEPT ARRIVED THEY NOTICED THAT THE AIRBAGS DID NOT DEPLOY AND DISCONNECT...",
+      "group": "restraints",
+      "id": "1733177",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 2.9452,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-08T07:00:21Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00067135,
+      "duration_ms": 12371,
+      "reason": "AIR BAGS did not deploy after the vehicle slid on ice and crashed into trees.",
+      "started_at": "2025-02-08T07:00:22Z",
+      "step": 2,
+      "tokens": 1663,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-08T07:00:23Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "FORTE",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello, my name is [XXX] , i just had a 2017 kia forte car accident on [XXX]. I was hit by the driver's side in my door and in the door behind me. the airbag are supposed to be released upon impact. The would have to open because i was going over 25 miles per hour the airbags supp...",
+            "group": "restraints",
+            "id": "1971735",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 5.8366,
+            "year": 2017
+          },
+          {
+            "excerpt": "Once coming home, my airbag from steering wheel deployed. I did not get into an accident, just as i closed my door it went off. I worried about my safety especially because i have a baby. Any airbag could’ve gone off for no reason. I don’t feel safe in my car. After taking it to...",
+            "group": "restraints",
+            "id": "2026482",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 4.3036,
+            "year": 2017
+          },
+          {
+            "excerpt": "ON 3/9/2021 I WAS INVOLVED IN A HIT AND RUN ACCIDENT AND MY KIA WAS HIT ON THE PASSENGER SIDE. IT WAS HIT SO HARD THAT THE IT LEFT A HOLE IN THE DOOR AND MY TODDLER WAS SITTING IN HIS CAR SEAT. WHEN THE FORE DEPT ARRIVED THEY NOTICED THAT THE AIRBAGS DID NOT DEPLOY AND DISCONNECT...",
+            "group": "restraints",
+            "id": "1733177",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 2.9452,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-08T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-08T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-08T07:00:26Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-08T07:00:28Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-08T07:00:30Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-08T07:00:31Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-08T07:00:32Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

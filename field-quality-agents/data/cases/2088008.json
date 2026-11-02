@@ -1,0 +1,419 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2088008",
+    "make": "ALFA ROMEO",
+    "mileage": null,
+    "model": "GIULIA",
+    "narrative": "The forward looking sensors fail. This causes Adaptive Cruise Control with Full Stop and Forward Collision warning lamps to blaze orange. Cruise Control immediately fails and Forward Collision also fails. Although your system above would not allow me to select this Lane Departure Warnings stops working as well. Only the Dealer has inspected the vehicle at this point. The warning lamps do not appear prior to failure these systems fail immediately when warning lamps appear. In addition to the Dealer Repair Notes uploaded here. The dealer has attempted to repair my vehicle 3 times. I have images of the warning lamps that include the miles at each instance.",
+    "received_at": "2025-05-01",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2088008",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2088008",
+    "decided_at": "2025-05-01T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2088008",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The forward looking sensors fail"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Adaptive Cruise Control with Full Stop and Forward Collision warning lamps to blaze orange"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Cruise Control immediately fails and Forward Collision also fails"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Departure Warnings stops working as well"
+      },
+      {
+        "kind": "condition",
+        "quote": "systems fail immediately when warning lamps appear"
+      },
+      {
+        "kind": "condition",
+        "quote": "The warning lamps do not appear prior to failure"
+      },
+      {
+        "kind": "other",
+        "quote": "The dealer has attempted to repair my vehicle 3 times"
+      }
+    ],
+    "conditions": [
+      "systems fail immediately when warning lamps appear",
+      "The warning lamps do not appear prior to failure"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the ADAS forward-looking sensor system because ACC, forward collision and lane departure functions fail together with orange warning lamps after repeated dealer repair attempts.",
+    "symptoms": [
+      "forward looking sensors fail",
+      "Adaptive Cruise Control and Forward Collision warning lamps turn orange",
+      "Cruise Control fails",
+      "Forward Collision fails",
+      "Lane Departure Warnings stop working"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2088008",
+    "created_at": "2025-05-01T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "The forward looking sensors fail",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Adaptive Cruise Control with Full Stop and Forward Collision warning lamps to blaze orange",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Cruise Control immediately fails and Forward Collision also fails",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Lane Departure Warnings stops working as well",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "systems fail immediately when warning lamps appear",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The warning lamps do not appear prior to failure",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The dealer has attempted to repair my vehicle 3 times",
+        "source_id": "2088008",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports that the forward-looking sensors fail, Adaptive Cruise Control with Full Stop and Forward Collision warning lamps turn orange, Cruise Control and Forward Collision fail, and Lane Departure Warnings stop working. The dealer has attempted repair three times. No rulebook entry matches these conditions, so the standard diagnostic test is proposed; the rearview camera recall is unrelated to the reported forward-looking sensor failures.",
+    "requested_info": [],
+    "summary": "Test the ADAS forward-looking sensor system because ACC, forward collision and lane departure functions fail together with orange warning lamps after repeated dealer repair attempts.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V667000",
+      "match": true,
+      "open_date": "2025-10-07",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2025 Alfa Romeo Giulia and Alfa Romeo Stelvio vehicles. The printed circuit board and software for the rearview camera may contain defects that cause the rearview camera image not to display properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Front end collision system regularly turns itself off. Car has been in 4 times told there is no resolution.",
+      "group": "adas",
+      "id": "2014403",
+      "make": "ALFA ROMEO",
+      "model": "GIULIA",
+      "score": 0.863,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-01T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00106975,
+      "duration_ms": 12369,
+      "reason": "2024 Alfa Romeo Giulia ADAS: forward-looking sensors fail, ACC and forward collision warning lamps turn orange, cruise and forward collision fail, and lane departure stops working; dealer repair attempted three times.",
+      "started_at": "2025-05-01T07:00:01Z",
+      "step": 2,
+      "tokens": 2342,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-05-01T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ALFA ROMEO",
+        "model": "GIULIA",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Front end collision system regularly turns itself off. Car has been in 4 times told there is no resolution.",
+            "group": "adas",
+            "id": "2014403",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "score": 0.863,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-01T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-01T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-05-01T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The forward looking sensors fail. This causes Adaptive Cruise Control with Full Stop and Forward Collision warning lamps to blaze orange. Cruise Control immediately fails and Forward Collision also fails. Although your system above would not allow me to select this Lane Departure Warnings stops working as well. Only the Dealer has inspected the vehicle at this point. The warning lamps do not appear prior to failure these systems fail immediately when warning lamps appear. In addition to the Deal"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Front end collision system regularly turns itself off. Car has been in 4 times told there is no resolution.",
+            "group": "adas",
+            "id": "2014403",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "score": 0.863,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-01T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "ALFA ROMEO",
+        "model": "GIULIA",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+            "group": "adas",
+            "id": "25V667000",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "open_date": "2025-10-07",
+            "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2025 Alfa Romeo Giulia and Alfa Romeo Stelvio vehicles. The printed circuit board and software for the rearview camera may contain defects that cause the rearview camera image not to display properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\"",
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-01T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "ALFA ROMEO",
+        "model": "GIULIA",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-01T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0010509,
+      "duration_ms": 9969,
+      "reason": "The narrative reports that the forward-looking sensors fail, Adaptive Cruise Control with Full Stop and Forward Collision warning lamps turn orange, Cruise Control and Forward Collision fail, and Lane Departure Warnings stop working. The dealer has attempted repair three times. No rulebook entry matches these conditions, so the standard diagnostic test is proposed; the rearview camera recall is unrelated to the reported forward-looking sensor failures.",
+      "started_at": "2025-05-01T07:00:09Z",
+      "step": 10,
+      "tokens": 2659,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-05-01T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The forward looking sensors fail",
+          "Adaptive Cruise Control with Full Stop and Forward Collision warning lamps to blaze orange",
+          "Cruise Control immediately fails and Forward Collision also fails",
+          "Lane Departure Warnings stops working as well",
+          "systems fail immediately when warning lamps appear",
+          "The warning lamps do not appear prior to failure",
+          "The dealer has attempted to repair my vehicle 3 times"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-01T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-01T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-01T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-01T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

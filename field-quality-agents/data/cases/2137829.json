@@ -1,0 +1,324 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2137829",
+    "make": "FORD",
+    "mileage": 303000,
+    "model": "F-250",
+    "narrative": "Odometer Fraud. The contact owns a 2005 Ford F-250. The contact purchased the vehicle from a private seller on social media. The contact stated that the sellers advertisement indicated the odometer mileage was 96,000. The contact later purchased a new vehicle and decided to sell the existing vehicle. The existing vehicle was posted on social media for sale. A potential buyer noticed the vehicle and obtained a Carfax report. The potential buyer then sent a copy of the Carfax report to the contact. The Carfax report indicated that the odometer was reported at 303,000 in 2023. The contact then contacted the seller and informed the seller of the discrepancy. The contact was informed that the odometer had been swapped prior to the sale. The contact stated that seller then deleted the advertisement from social media and rejected all further communications with the contact.",
+    "received_at": "2025-10-09",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2137829",
+    "status": "decided",
+    "year": 2005
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2137829",
+    "decided_at": "2025-10-09T07:00:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2137829",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the sellers advertisement indicated the odometer mileage was 96,000"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the odometer was reported at 303,000 in 2023"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the odometer had been swapped prior to the sale"
+      }
+    ],
+    "conditions": [
+      "odometer mileage discrepancy",
+      "seller-reported odometer swap"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Test the instrument cluster/odometer for verification because the vehicle was advertised at 96,000 miles while Carfax reported 303,000 in 2023 and the seller said the odometer was swapped.",
+    "symptoms": [
+      "odometer fraud",
+      "mileage discrepancy",
+      "advertised 96,000 miles but Carfax showed 303,000 in 2023",
+      "seller stated odometer was swapped prior to sale"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2137829",
+    "created_at": "2025-10-09T07:00:10Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud.",
+        "source_id": "2137829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the sellers advertisement indicated the odometer mileage was 96,000",
+        "source_id": "2137829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the odometer was reported at 303,000 in 2023",
+        "source_id": "2137829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the odometer had been swapped prior to the sale",
+        "source_id": "2137829",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a mileage discrepancy and an admitted odometer swap before sale. No recall, investigation, similar case, or rulebook entry matched, so the standard odometer/instrument-cluster verification test is proposed rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the instrument cluster/odometer for verification because the vehicle was advertised at 96,000 miles while Carfax reported 303,000 in 2023 and the seller said the odometer was swapped.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00093355,
+      "duration_ms": 10027,
+      "reason": "Instrument panel speedometer/odometer on a 2005 Ford F-250; reported odometer fraud with advertised 96,000 miles versus Carfax 303,000 in 2023 and seller stating the odometer was swapped before sale.",
+      "started_at": "2025-10-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2157,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-250",
+        "year": 2005
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-10-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact owns a 2005 Ford F-250. The contact purchased the vehicle from a private seller on social media. The contact stated that the sellers advertisement indicated the odometer mileage was 96,000. The contact later purchased a new vehicle and decided to sell the existing vehicle. The existing vehicle was posted on social media for sale. A potential buyer noticed the vehicle and obtained a Carfax report. The potential buyer then sent a copy of the Carfax report to the contact"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "F-250",
+        "year": 2005
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-09T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "F-250",
+        "year": 2005
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-09T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00076035,
+      "duration_ms": 8301,
+      "reason": "The narrative reports a mileage discrepancy and an admitted odometer swap before sale. No recall, investigation, similar case, or rulebook entry matched, so the standard odometer/instrument-cluster verification test is proposed rather than a targeted load test.",
+      "started_at": "2025-10-09T07:00:08Z",
+      "step": 9,
+      "tokens": 2006,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-10-09T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud.",
+          "the sellers advertisement indicated the odometer mileage was 96,000",
+          "the odometer was reported at 303,000 in 2023",
+          "the odometer had been swapped prior to the sale"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-09T07:00:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-09T07:00:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-09T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-09T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

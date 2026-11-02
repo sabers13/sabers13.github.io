@@ -1,0 +1,467 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2106671",
+    "make": "TOYOTA",
+    "mileage": 108000,
+    "model": "RAV4",
+    "narrative": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM). The contact stated that while the vehicle was parked, the vehicle failed to start. The contact removed and replaced the battery terminal and the vehicle started. The contact took the vehicle to the local dealer for the recall repair. The local dealer refused to repair the vehicle; however, the contact was informed that there was a bulge on the side of the battery. The contact was informed to take the vehicle back to the dealer where the vehicle was purchased for assistance. The vehicle was not repaired. The manufacturer was not notified of the failure. The failure mileage was approximately 108,000.",
+    "received_at": "2025-07-03",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2106671",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2106671",
+    "decided_at": "2025-07-03T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2106671",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to start"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the vehicle was parked"
+      },
+      {
+        "kind": "symptom",
+        "quote": "there was a bulge on the side of the battery"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 23V734000"
+      }
+    ],
+    "conditions": [
+      "while the vehicle was parked"
+    ],
+    "fault_codes": [
+      "23V734000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run standard electrical no-start diagnostics and inspect battery condition; no rulebook targeted test matches this case.",
+    "symptoms": [
+      "vehicle failed to start while parked",
+      "battery has a bulge on its side"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2106671",
+    "created_at": "2025-07-03T07:00:51Z",
+    "evidence": [
+      {
+        "quote": "ELECTRICAL SYSTEM",
+        "source_id": "2106671",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle failed to start",
+        "source_id": "2106671",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while the vehicle was parked",
+        "source_id": "2106671",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "there was a bulge on the side of the battery",
+        "source_id": "2106671",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 23V734000",
+        "source_id": "2106671",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a parked no-start resolved after battery terminal replacement, plus a dealer-noted battery side bulge and recall 23V734000. The rulebook, recall and investigation results are empty, so there is no named targeted test; a standard electrical diagnostic is appropriate.",
+    "requested_info": [],
+    "summary": "Run standard electrical no-start diagnostics and inspect battery condition; no rulebook targeted test matches this case.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2017 Toyota RAV4. The contact stated that occasionally the vehicle would not immediately start-up, or would take multiple attempts before starting. The vehicle was towed to the local dealer, but the cause of the failure was not yet determined. The manufacturer...",
+      "group": "electrical_general",
+      "id": "1787498",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 23.5764,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+      "group": "electrical_general",
+      "id": "2010829",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 22.6143,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a re...",
+      "group": "electrical_general",
+      "id": "2036417",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 22.6143,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the rec...",
+      "group": "electrical_general",
+      "id": "2025549",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 20.5968,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the rec...",
+      "group": "electrical_general",
+      "id": "2037798",
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "score": 20.5968,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-03T07:00:40Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00094735,
+      "duration_ms": 12019,
+      "reason": "2017 Toyota RAV4 electrical system: while parked the vehicle failed to start; battery terminal replaced and vehicle started; dealer noted a bulge on the side of the battery; recall 23V734000.",
+      "started_at": "2025-07-03T07:00:41Z",
+      "step": 2,
+      "tokens": 2150,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-03T07:00:42Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2017 Toyota RAV4. The contact stated that occasionally the vehicle would not immediately start-up, or would take multiple attempts before starting. The vehicle was towed to the local dealer, but the cause of the failure was not yet determined. The manufacturer...",
+            "group": "electrical_general",
+            "id": "1787498",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 23.5764,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+            "group": "electrical_general",
+            "id": "2010829",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 22.6143,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a re...",
+            "group": "electrical_general",
+            "id": "2036417",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 22.6143,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-03T07:00:43Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-03T07:00:44Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-07-03T07:00:45Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM). The contact stated that while the vehicle was parked, the vehicle failed to start. The contact removed and replaced the battery terminal and the vehicle started. The contact took the vehicle to the local dealer for the recall repair. The local dealer refused to repair the vehicle; however, the contact was informed that there was a bulge on the side of the battery. The c"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2017 Toyota RAV4. The contact stated that occasionally the vehicle would not immediately start-up, or would take multiple attempts before starting. The vehicle was towed to the local dealer, but the cause of the failure was not yet determined. The manufacturer...",
+            "group": "electrical_general",
+            "id": "1787498",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 23.5764,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System) however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a...",
+            "group": "electrical_general",
+            "id": "2010829",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 22.6143,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact stated that the manufacturer had exceeded a re...",
+            "group": "electrical_general",
+            "id": "2036417",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 22.6143,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the rec...",
+            "group": "electrical_general",
+            "id": "2025549",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 20.5968,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Toyota Rav4. The contact received notification of NHTSA Campaign Number: 23V734000 (ELECTRICAL SYSTEM); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the rec...",
+            "group": "electrical_general",
+            "id": "2037798",
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "score": 20.5968,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-03T07:00:46Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-03T07:00:47Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "TOYOTA",
+        "model": "RAV4",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-03T07:00:48Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00083235,
+      "duration_ms": 8305,
+      "reason": "The narrative reports a parked no-start resolved after battery terminal replacement, plus a dealer-noted battery side bulge and recall 23V734000. The rulebook, recall and investigation results are empty, so there is no named targeted test; a standard electrical diagnostic is appropriate.",
+      "started_at": "2025-07-03T07:00:49Z",
+      "step": 10,
+      "tokens": 2489,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-07-03T07:00:50Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM",
+          "the vehicle failed to start",
+          "while the vehicle was parked",
+          "there was a bulge on the side of the battery",
+          "NHTSA Campaign Number: 23V734000"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-03T07:00:52Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-03T07:00:54Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-03T07:00:55Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-03T07:00:56Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

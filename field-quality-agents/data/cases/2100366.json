@@ -1,0 +1,280 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2100366",
+    "make": "ACURA",
+    "mileage": null,
+    "model": "MDX",
+    "narrative": "5 waning lights on : Adaptive Cruise Control ,  Lane Departure Warning , Lane Keeping Assistance , front light, and the emergency braking . Service crew at Acura Dealer told me that the front multipurpose camera has internal error. It is very dangerous since all these functions must be fixed before I can drive it on road.",
+    "received_at": "2025-06-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2100366",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2100366",
+    "decided_at": "2025-06-13T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2100366",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Adaptive Cruise Control"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Departure Warning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Lane Keeping Assistance"
+      },
+      {
+        "kind": "symptom",
+        "quote": "front light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "emergency braking"
+      },
+      {
+        "kind": "other",
+        "quote": "front multipurpose camera has internal error"
+      },
+      {
+        "kind": "safety",
+        "quote": "very dangerous"
+      },
+      {
+        "kind": "safety",
+        "quote": "must be fixed before I can drive it on road"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2018 Acura MDX forward collision avoidance/adaptive cruise control: five warning lights on (ACC, lane departure, lane keeping, front light, emergency braking); dealer reports front multipurpose camera internal error.",
+    "symptoms": [
+      "five warning lights on: Adaptive Cruise Control, Lane Departure Warning, Lane Keeping Assistance, front light, and emergency braking",
+      "front multipurpose camera has internal error"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2100366",
+    "created_at": "2025-06-13T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We experienced multiple/many warning lights all at the same time. Systems not working. Repeated every time. The Acura dealer diagnosed the problem to the DTC U3000-49 Multipurpose Camera internal electronic failure. Replaced the unit and they performed a couple of calibrations. T...",
+      "group": "adas",
+      "id": "2031903",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 11.1448,
+      "year": 2018
+    },
+    {
+      "excerpt": "1.) I have had repeated, on-going issues with the fuel propulsion system since the day I bought the car. When I step on the accelerator it randomly (lately more constant than random) does not respond, then it will shoot me out into traffic. For example when I am entering the high...",
+      "group": "adas",
+      "id": "2021656",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 7.2889,
+      "year": 2018
+    },
+    {
+      "excerpt": "My vehicle has similar behaviors to the most recent investigation that is happening with the investigation of the Honda Accord and CRV noted in this article: https://static.nhtsa.gov/odi/inv/2022/INOA-PE22003-5540.PDF. On a handful of times while driving on the freeway, my car ha...",
+      "group": "adas",
+      "id": "1797912",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 4.5865,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-13T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010018,
+      "duration_ms": 11950,
+      "reason": "2018 Acura MDX forward collision avoidance/adaptive cruise control: five warning lights on (ACC, lane departure, lane keeping, front light, emergency braking); dealer reports front multipurpose camera internal error.",
+      "started_at": "2025-06-13T07:00:01Z",
+      "step": 2,
+      "tokens": 2183,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-13T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We experienced multiple/many warning lights all at the same time. Systems not working. Repeated every time. The Acura dealer diagnosed the problem to the DTC U3000-49 Multipurpose Camera internal electronic failure. Replaced the unit and they performed a couple of calibrations. T...",
+            "group": "adas",
+            "id": "2031903",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 11.1448,
+            "year": 2018
+          },
+          {
+            "excerpt": "1.) I have had repeated, on-going issues with the fuel propulsion system since the day I bought the car. When I step on the accelerator it randomly (lately more constant than random) does not respond, then it will shoot me out into traffic. For example when I am entering the high...",
+            "group": "adas",
+            "id": "2021656",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 7.2889,
+            "year": 2018
+          },
+          {
+            "excerpt": "My vehicle has similar behaviors to the most recent investigation that is happening with the investigation of the Honda Accord and CRV noted in this article: https://static.nhtsa.gov/odi/inv/2022/INOA-PE22003-5540.PDF. On a handful of times while driving on the freeway, my car ha...",
+            "group": "adas",
+            "id": "1797912",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 4.5865,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-06-13T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-13T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-13T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-13T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-13T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-13T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-13T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2063357",
+    "make": "HONDA",
+    "mileage": 26000,
+    "model": "PILOT",
+    "narrative": "The contact owns a 2018 Honda Pilot. The contact stated that while driving at 10 MPH during traffic, the vehicle hesitated, jerked, and suddenly accelerated. Multiple unknown warning lights illuminated. As a result, the vehicle rear-ended a U-Haul trailer that was in front, then crashed into a wall and from the impact into the trailer where it came to a stop.  None of the air bags deployed. The contact suffered injuries to the head when she impacted the steering wheel, the right leg near the hip, and the right arm. The contact was taken to the hospital by an ambulance. A police report was filed. The vehicle was towed to an independent mechanic but was diagnosed or repaired. The contact stated that the sensors on the vehicle malfunctioned weeks before the crash. The vehicle was taken to the dealer where unknown repairs were completed. The manufacturer was made aware of the failure. The insurance company was contacted and pending results. The failure mileage was 26,000.",
+    "received_at": "2025-02-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2063357",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2063357",
+    "decided_at": "2025-02-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2063357",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at 10 MPH during traffic"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hesitated, jerked, and suddenly accelerated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Multiple unknown warning lights illuminated."
+      },
+      {
+        "kind": "symptom",
+        "quote": "None of the air bags deployed."
+      },
+      {
+        "kind": "safety",
+        "quote": "rear-ended a U-Haul trailer"
+      },
+      {
+        "kind": "safety",
+        "quote": "crashed into a wall"
+      },
+      {
+        "kind": "safety",
+        "quote": "suffered injuries to the head"
+      },
+      {
+        "kind": "safety",
+        "quote": "taken to the hospital by an ambulance"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the sensors on the vehicle malfunctioned weeks before the crash"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was 26,000."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2018 Honda Pilot restraints/air bags: hesitation, jerk, sudden acceleration, warning lights and no air bag deployment during 10 MPH traffic; crash with injuries.",
+    "symptoms": [
+      "hesitation",
+      "jerking",
+      "sudden acceleration",
+      "unknown warning lights illuminated",
+      "air bags did not deploy",
+      "sensors malfunctioned weeks before crash"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2063357",
+    "created_at": "2025-02-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "MY FIANC WAS DRIVING TO MY DOCTOR TO FOLLOW UP SURGERY, TWO BLOCKS FROM 2 BLOCKS FROM THE HOUSE WE APPROACHED TO TRAFFIC LIGHT WAS ON RED AND SHE WAS APPLYING THE BRAKES WHEN WE WERE JUST ABOUT AT LIGHT SUDDENLY THE CAR ACCELERATED GIRLFRIEND HAD HER FOOT ON THE BRAKE BUT THE CAR...",
+      "group": "restraints",
+      "id": "1716613",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 3.3037,
+      "year": 2018
+    },
+    {
+      "excerpt": "SECOND SEATBELT FAILURE. I previously reported second row passenger seatbelt that was found completely detached from anchor, at point where belt was looped and sewn. This was replaced by dealer. The second row middle belt locked in extended position at that time, and I requested...",
+      "group": "restraints",
+      "id": "1755562",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 3.2468,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013105,
+      "duration_ms": 22667,
+      "reason": "2018 Honda Pilot restraints/air bags: hesitation, jerk, sudden acceleration, warning lights and no air bag deployment during 10 MPH traffic; crash with injuries.",
+      "started_at": "2025-02-06T07:00:01Z",
+      "step": 2,
+      "tokens": 2795,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-02-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "MY FIANC WAS DRIVING TO MY DOCTOR TO FOLLOW UP SURGERY, TWO BLOCKS FROM 2 BLOCKS FROM THE HOUSE WE APPROACHED TO TRAFFIC LIGHT WAS ON RED AND SHE WAS APPLYING THE BRAKES WHEN WE WERE JUST ABOUT AT LIGHT SUDDENLY THE CAR ACCELERATED GIRLFRIEND HAD HER FOOT ON THE BRAKE BUT THE CAR...",
+            "group": "restraints",
+            "id": "1716613",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 3.3037,
+            "year": 2018
+          },
+          {
+            "excerpt": "SECOND SEATBELT FAILURE. I previously reported second row passenger seatbelt that was found completely detached from anchor, at point where belt was looped and sewn. This was replaced by dealer. The second row middle belt locked in extended position at that time, and I requested...",
+            "group": "restraints",
+            "id": "1755562",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 3.2468,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-02-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

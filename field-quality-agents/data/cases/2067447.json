@@ -1,0 +1,245 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2067447",
+    "make": "BMW",
+    "mileage": null,
+    "model": "335I",
+    "narrative": "Wiring harness in the engine compartment caught fire about 2 weeks after changing a water pump, battery kept being draining even after battery replacement.  Locking of the trunk trunk forced usage of a BMW authorized jump start battery charger/start etc.  No access to Battery when the battery is discharged.",
+    "received_at": "2025-02-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2067447",
+    "status": "decided",
+    "year": 2011
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2067447",
+    "decided_at": "2025-02-20T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2067447",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Wiring harness in the engine compartment"
+      },
+      {
+        "kind": "symptom",
+        "quote": "caught fire"
+      },
+      {
+        "kind": "condition",
+        "quote": "about 2 weeks after changing a water pump"
+      },
+      {
+        "kind": "symptom",
+        "quote": "battery kept being draining even after battery replacement"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Locking of the trunk trunk forced usage of a BMW authorized jump start battery charger/start etc."
+      },
+      {
+        "kind": "symptom",
+        "quote": "No access to Battery when the battery is discharged."
+      },
+      {
+        "kind": "safety",
+        "quote": "caught fire"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: engine-compartment wiring harness caught fire about two weeks after water pump replacement; battery drains after replacement and jump-start/charger use is needed.",
+    "symptoms": [
+      "engine compartment wiring harness caught fire",
+      "battery keeps draining even after battery replacement",
+      "trunk locking forced use of jump start/charger",
+      "no access to battery when discharged"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2067447",
+    "created_at": "2025-02-20T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I have electrical error codes and I cant seem to find what it is not sure if its wiring.",
+      "group": "electrical_general",
+      "id": "1894932",
+      "make": "BMW",
+      "model": "335I",
+      "score": 1.0446,
+      "year": 2011
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007872,
+      "duration_ms": 7790,
+      "reason": "Electrical system: engine-compartment wiring harness caught fire about two weeks after water pump replacement; battery drains after replacement and jump-start/charger use is needed.",
+      "started_at": "2025-02-20T07:00:01Z",
+      "step": 2,
+      "tokens": 1720,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-02-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "335I",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have electrical error codes and I cant seem to find what it is not sure if its wiring.",
+            "group": "electrical_general",
+            "id": "1894932",
+            "make": "BMW",
+            "model": "335I",
+            "score": 1.0446,
+            "year": 2011
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-20T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-20T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-20T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-20T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-20T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-20T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-20T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

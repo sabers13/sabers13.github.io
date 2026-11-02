@@ -1,0 +1,230 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2145566",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON",
+    "narrative": "The wireless charging pad in the vehicle below the climate control system. Yes, it is.  The charging component malfunctioned and overheated the back of my phone when it was set in the console while driving. I had no intention of charging my phone, but instead place my phone down while driving. When I picked up my phone at a stop light, I laid it in my inner thigh when the light changed. The burning was so intense and unexpected I swerved into oncoming traffic and lost control, momentarily of the vehicle.  I have recreated the incident in a controlled environment myself and the issue is still active. I am happy to have the issue confirmed independently.  I gave notice to the dealership after it happened with no concern or further investigation.  No, the vehicle has not.  No, no warning at all. In fact this is my 3rd GMC Yukon since 2016 and all 3 have had the wireless charging pad, I have had the same phone as my last one. I never had an issue or experienced anything like this.",
+    "received_at": "2025-11-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2145566",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2145566",
+    "decided_at": "2025-11-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2145566",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "wireless charging pad"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The charging component malfunctioned and overheated the back of my phone"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "at a stop light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The burning was so intense and unexpected"
+      },
+      {
+        "kind": "safety",
+        "quote": "I swerved into oncoming traffic and lost control, momentarily of the vehicle."
+      },
+      {
+        "kind": "other",
+        "quote": "the issue is still active"
+      }
+    ],
+    "conditions": [
+      "charging",
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Wireless charging pad in electrical system overheated phone, causing intense burning and momentary loss of control while driving.",
+    "symptoms": [
+      "wireless charging pad malfunctioned",
+      "phone back overheated",
+      "intense unexpected burning",
+      "momentary loss of control",
+      "swerved into oncoming traffic"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2145566",
+    "created_at": "2025-11-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00121765,
+      "duration_ms": 13198,
+      "reason": "Wireless charging pad in electrical system overheated phone, causing intense burning and momentary loss of control while driving.",
+      "started_at": "2025-11-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2650,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

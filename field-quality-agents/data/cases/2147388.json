@@ -1,0 +1,384 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2147388",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "CAMARO",
+    "narrative": "Airbag service light came on, which required us to bring to the dealership. Quote to access and replace airbag module came to roughly $1350.",
+    "received_at": "2025-11-10",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2147388",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2147388",
+    "decided_at": "2025-11-10T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2147388",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Airbag service light came on"
+      },
+      {
+        "kind": "other",
+        "quote": "replace airbag module"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "Run a standard airbag-system diagnostic test to identify why the service light is on; no rulebook targeted test matches this case.",
+    "symptoms": [
+      "airbag service light came on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2147388",
+    "created_at": "2025-11-10T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Airbag service light came on",
+        "source_id": "2147388",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "replace airbag module",
+        "source_id": "2147388",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports only that the airbag service light came on and that a dealership quoted access/replacement of the airbag module. No conditions, fault codes, investigations, or rulebook matches are present. A recall exists for the 2017 Camaro airbag cover emblem, but it concerns emblem separation during deployment, not the reported service-light/module issue.",
+    "requested_info": [],
+    "summary": "Run a standard airbag-system diagnostic test to identify why the service light is on; no rulebook targeted test matches this case.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "21V211000",
+      "match": true,
+      "open_date": "2021-03-25",
+      "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "My air bag light keeps popping up and tells me to service the air bags system and now it does it when nobody is on the seat too, the dealer told me they found the problem and charged me 500 and some dollars and i returned the car the same day they said it was fixed cause it was d...",
+      "group": "restraints",
+      "id": "1825294",
+      "make": "CHEVROLET",
+      "model": "CAMARO",
+      "score": 0.8718,
+      "year": 2017
+    },
+    {
+      "excerpt": "-The Air bag light on the dashboard it's coming up, stays on, the passenger seat reader light stays on even if there is no nobody seating and when a person seats on passenger seat the passenger air bag sensor light says is off. -Yes I'm available for inspection upon request. -The...",
+      "group": "restraints",
+      "id": "1884240",
+      "make": "CHEVROLET",
+      "model": "CAMARO",
+      "score": 0.3091,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-10T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0005062,
+      "duration_ms": 6898,
+      "reason": "AIR BAGS: airbag service light came on; no conditions stated",
+      "started_at": "2025-11-10T07:00:16Z",
+      "step": 2,
+      "tokens": 1324,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-11-10T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "CAMARO",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My air bag light keeps popping up and tells me to service the air bags system and now it does it when nobody is on the seat too, the dealer told me they found the problem and charged me 500 and some dollars and i returned the car the same day they said it was fixed cause it was d...",
+            "group": "restraints",
+            "id": "1825294",
+            "make": "CHEVROLET",
+            "model": "CAMARO",
+            "score": 0.8718,
+            "year": 2017
+          },
+          {
+            "excerpt": "-The Air bag light on the dashboard it's coming up, stays on, the passenger seat reader light stays on even if there is no nobody seating and when a person seats on passenger seat the passenger air bag sensor light says is off. -Yes I'm available for inspection upon request. -The...",
+            "group": "restraints",
+            "id": "1884240",
+            "make": "CHEVROLET",
+            "model": "CAMARO",
+            "score": 0.3091,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-10T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-10T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) in the knowledge base",
+      "started_at": "2025-11-10T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Airbag service light came on, which required us to bring to the dealership. Quote to access and replace airbag module came to roughly $1350."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My air bag light keeps popping up and tells me to service the air bags system and now it does it when nobody is on the seat too, the dealer told me they found the problem and charged me 500 and some dollars and i returned the car the same day they said it was fixed cause it was d...",
+            "group": "restraints",
+            "id": "1825294",
+            "make": "CHEVROLET",
+            "model": "CAMARO",
+            "score": 0.8718,
+            "year": 2017
+          },
+          {
+            "excerpt": "-The Air bag light on the dashboard it's coming up, stays on, the passenger seat reader light stays on even if there is no nobody seating and when a person seats on passenger seat the passenger air bag sensor light says is off. -Yes I'm available for inspection upon request. -The...",
+            "group": "restraints",
+            "id": "1884240",
+            "make": "CHEVROLET",
+            "model": "CAMARO",
+            "score": 0.3091,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-10T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "CHEVROLET",
+        "model": "CAMARO",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "21V211000",
+            "make": "CHEVROLET",
+            "model": "CAMARO",
+            "open_date": "2021-03-25",
+            "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag.",
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-10T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "CHEVROLET",
+        "model": "CAMARO",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-10T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00059535,
+      "duration_ms": 6741,
+      "reason": "The narrative reports only that the airbag service light came on and that a dealership quoted access/replacement of the airbag module. No conditions, fault codes, investigations, or rulebook matches are present. A recall exists for the 2017 Camaro airbag cover emblem, but it concerns emblem separation during deployment, not the reported service-light/module issue.",
+      "started_at": "2025-11-10T07:00:24Z",
+      "step": 10,
+      "tokens": 1764,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 verified, 0 dropped",
+      "started_at": "2025-11-10T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Airbag service light came on",
+          "replace airbag module"
+        ]
+      },
+      "tool_output": {
+        "checked": 2,
+        "dropped": 0,
+        "verified": 2
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-10T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-10T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-10T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-10T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

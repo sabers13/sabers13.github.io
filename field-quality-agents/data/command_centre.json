@@ -1,0 +1,1470 @@
+{
+  "comparison": {
+    "examples": [
+      {
+        "after": "The issue agent opened I-20250711-002 on 2025-07-11, 66 days before NHTSA published recall 25V615000 (2025-09-15).",
+        "before": "The linear pipeline has no fleet-level issue step.",
+        "case_id": "2102878",
+        "note": "The earliest issue that preceded a matching recall or investigation."
+      },
+      {
+        "after": "Targeted load test requested after 16 trace steps.",
+        "before": "Standard test; the linear simulation always passes it.",
+        "case_id": "2156317",
+        "note": "The longest agent trace that ended in a targeted test."
+      },
+      {
+        "after": "The agent verified a quotation and proposed an evidence-backed test.",
+        "before": "Closed as no trouble found.",
+        "case_id": "2052717",
+        "note": "Where the linear pipeline missed what the agent found."
+      },
+      {
+        "after": "The agent also found no verified evidence.",
+        "before": "Closed as no trouble found with the keyword rules.",
+        "case_id": "2052447",
+        "note": "Reverse: where the linear pipeline was right too."
+      }
+    ],
+    "headline": [
+      {
+        "after": 1.0,
+        "before": 1.0,
+        "id": "human_touches_per_case",
+        "label": "Human touches per case",
+        "unit": "per case"
+      },
+      {
+        "after": 0.4198,
+        "before": 0.0,
+        "id": "targeted_test_share",
+        "label": "Targeted test share",
+        "unit": "share"
+      },
+      {
+        "after": 1.3317,
+        "before": 0.0,
+        "id": "cost_per_1000_cases_usd",
+        "label": "Cost per 1,000 cases",
+        "unit": "USD"
+      }
+    ]
+  },
+  "final_live": {
+    "budget_hits": 0,
+    "final": {
+      "after": {
+        "budget_hits": 0,
+        "cases": 150,
+        "citation_validity_rate": {
+          "ci_high": 1.0,
+          "ci_low": 0.966256,
+          "n": 110,
+          "value": 1.0
+        },
+        "cost_per_1000_cases_usd": 1.23234,
+        "decided_without_edits_share": 1.0,
+        "evaluation_labels_in_model_input": false,
+        "group_coverage": {
+          "ci_high": 1.0,
+          "ci_low": 0.97503,
+          "n": 150,
+          "value": 1.0
+        },
+        "group_macro_f1": {
+          "ci_high": 0.08,
+          "ci_low": 0.0,
+          "n": 150,
+          "value": 0.033333
+        },
+        "human_touches_per_case": 1.0,
+        "issue_base_rate": null,
+        "issue_median_lead_days": null,
+        "issue_precision": null,
+        "latency_p50_ms": 12720.0,
+        "latency_p95_ms": 27139.79999999999,
+        "quote_grounding_rate": {
+          "ci_high": 0.906139,
+          "ci_low": 0.868927,
+          "n": 1098,
+          "value": 0.888889
+        },
+        "quotes_dropped": 122,
+        "recall_link_match_rate": {
+          "ci_high": 0.0,
+          "ci_low": 0.0,
+          "n": 0,
+          "value": 0.0
+        },
+        "safety_precision": {
+          "ci_high": 0.20245,
+          "ci_low": 0.082364,
+          "n": 122,
+          "value": 0.131148
+        },
+        "safety_recall": {
+          "ci_high": 1.0,
+          "ci_low": 0.806392,
+          "n": 16,
+          "value": 1.0
+        },
+        "steps_per_case": 4.8133333333333335,
+        "targeted_test_share": {
+          "ci_high": 0.592145,
+          "ci_low": 0.221576,
+          "n": 23,
+          "value": 0.391304
+        },
+        "targeted_test_with_quote_share": {
+          "ci_high": 0.733349,
+          "ci_low": 0.188779,
+          "n": 9,
+          "value": 0.444444
+        }
+      },
+      "before": {
+        "budget_hits": 0,
+        "cases": 150,
+        "citation_validity_rate": null,
+        "cost_per_1000_cases_usd": 0.0,
+        "decided_without_edits_share": null,
+        "evaluation_labels_in_model_input": false,
+        "group_coverage": {
+          "ci_high": 1.0,
+          "ci_low": 0.97503,
+          "n": 150,
+          "value": 1.0
+        },
+        "group_macro_f1": {
+          "ci_high": 0.796837,
+          "ci_low": 0.654311,
+          "n": 150,
+          "value": 0.732953
+        },
+        "human_touches_per_case": 1.0,
+        "issue_base_rate": null,
+        "issue_median_lead_days": null,
+        "issue_precision": null,
+        "latency_p50_ms": 0.0,
+        "latency_p95_ms": 0.0,
+        "quote_grounding_rate": null,
+        "quotes_dropped": null,
+        "recall_link_match_rate": null,
+        "safety_precision": {
+          "ci_high": 0.332567,
+          "ci_low": 0.13849,
+          "n": 68,
+          "value": 0.220588
+        },
+        "safety_recall": {
+          "ci_high": 0.988881,
+          "ci_low": 0.716713,
+          "n": 16,
+          "value": 0.9375
+        },
+        "steps_per_case": 4.0,
+        "targeted_test_share": {
+          "ci_high": 0.044751,
+          "ci_low": 0.0,
+          "n": 82,
+          "value": 0.0
+        },
+        "targeted_test_with_quote_share": {
+          "ci_high": 0.0,
+          "ci_low": 0.0,
+          "n": 0,
+          "value": 0.0
+        }
+      },
+      "cases": 150
+    },
+    "q9": {
+      "after": {
+        "budget_hits": 0,
+        "cases": 600,
+        "citation_validity_rate": {
+          "ci_high": 1.0,
+          "ci_low": 0.994808,
+          "n": 736,
+          "value": 1.0
+        },
+        "cost_per_1000_cases_usd": 1.3316631666666667,
+        "decided_without_edits_share": 1.0,
+        "evaluation_labels_in_model_input": true,
+        "group_coverage": null,
+        "group_macro_f1": null,
+        "human_touches_per_case": 1.0,
+        "issue_base_rate": 0.2,
+        "issue_median_lead_days": 65.0,
+        "issue_precision": {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 5,
+          "value": 0.4
+        },
+        "latency_p50_ms": 14754.5,
+        "latency_p95_ms": 29454.94999999998,
+        "quote_grounding_rate": {
+          "ci_high": 0.91486,
+          "ci_low": 0.897161,
+          "n": 4166,
+          "value": 0.906385
+        },
+        "quotes_dropped": 27,
+        "recall_link_match_rate": {
+          "ci_high": 0.563503,
+          "ci_low": 0.030053,
+          "n": 6,
+          "value": 0.166667
+        },
+        "safety_precision": null,
+        "safety_recall": null,
+        "steps_per_case": 4.26,
+        "targeted_test_share": {
+          "ci_high": 0.505464,
+          "ci_low": 0.338798,
+          "n": 131,
+          "value": 0.419847
+        },
+        "targeted_test_with_quote_share": {
+          "ci_high": 0.686266,
+          "ci_low": 0.432698,
+          "n": 55,
+          "value": 0.563636
+        }
+      },
+      "before": {
+        "budget_hits": 0,
+        "cases": 600,
+        "citation_validity_rate": null,
+        "cost_per_1000_cases_usd": 0.0,
+        "decided_without_edits_share": null,
+        "evaluation_labels_in_model_input": false,
+        "group_coverage": {
+          "ci_high": 1.0,
+          "ci_low": 0.993638,
+          "n": 600,
+          "value": 1.0
+        },
+        "group_macro_f1": {
+          "ci_high": 0.769053,
+          "ci_low": 0.686986,
+          "n": 600,
+          "value": 0.733967
+        },
+        "human_touches_per_case": 1.0,
+        "issue_base_rate": null,
+        "issue_median_lead_days": null,
+        "issue_precision": null,
+        "latency_p50_ms": 0.0,
+        "latency_p95_ms": 0.0,
+        "quote_grounding_rate": null,
+        "quotes_dropped": null,
+        "recall_link_match_rate": null,
+        "safety_precision": {
+          "ci_high": 0.504832,
+          "ci_low": 0.392804,
+          "n": 299,
+          "value": 0.448161
+        },
+        "safety_recall": {
+          "ci_high": 0.904989,
+          "ci_low": 0.795705,
+          "n": 156,
+          "value": 0.858974
+        },
+        "steps_per_case": 4.0,
+        "targeted_test_share": {
+          "ci_high": 0.012601,
+          "ci_low": 0.0,
+          "n": 301,
+          "value": 0.0
+        },
+        "targeted_test_with_quote_share": {
+          "ci_high": 0.0,
+          "ci_low": 0.0,
+          "n": 0,
+          "value": 0.0
+        }
+      },
+      "cases": 600
+    },
+    "q9_run_id": "replay",
+    "run_id": "final-live",
+    "set_name": "final_live",
+    "spend_usd": 0.184851,
+    "steps": 722,
+    "window_end": "2026-10-25",
+    "window_start": "2026-09-28"
+  },
+  "kpis": [
+    {
+      "context": "received in the last 365 days",
+      "delta": 600.0,
+      "id": "cases_in",
+      "label": "Cases in",
+      "series": [
+        18.0,
+        7.0,
+        10.0,
+        16.0,
+        6.0,
+        22.0,
+        2.0,
+        4.0
+      ],
+      "tone": "neutral",
+      "unit": "cases",
+      "value": 600
+    },
+    {
+      "context": "share of decisions approved as proposed",
+      "delta": null,
+      "id": "prepared_without_edits",
+      "label": "Prepared without human edits",
+      "series": null,
+      "tone": "good",
+      "unit": "%",
+      "value": 100.0
+    },
+    {
+      "context": "approve, override and ask actions per case",
+      "delta": null,
+      "id": "human_touches",
+      "label": "Human touches per case",
+      "series": null,
+      "tone": "neutral",
+      "unit": "per case",
+      "value": 1.0
+    },
+    {
+      "context": "median from receipt to the human decision",
+      "delta": null,
+      "id": "time_to_decision",
+      "label": "Time to decision",
+      "series": null,
+      "tone": "neutral",
+      "unit": "days",
+      "value": 0.0
+    },
+    {
+      "context": "fleet issues still open",
+      "delta": null,
+      "id": "open_issues",
+      "label": "Open issues",
+      "series": null,
+      "tone": "watch",
+      "unit": "open",
+      "value": 5
+    },
+    {
+      "context": "model spend over the recorded run",
+      "delta": null,
+      "id": "cost_per_case",
+      "label": "Cost per case",
+      "series": null,
+      "tone": "neutral",
+      "unit": "USD",
+      "value": 0.0013
+    },
+    {
+      "context": "approved standard tests with no verified quote",
+      "delta": null,
+      "id": "ntf_without_evidence",
+      "label": "Standard test without evidence",
+      "series": null,
+      "tone": "good",
+      "unit": "%",
+      "value": 0.0
+    }
+  ],
+  "live_feed": [
+    {
+      "at": "2026-01-04T23:59:00Z",
+      "data": {
+        "run_id": "replay",
+        "status": "complete"
+      },
+      "id": "7941",
+      "kind": "run"
+    },
+    {
+      "at": "2025-12-30T07:00:44Z",
+      "data": {
+        "case_id": "2161636",
+        "status": "decided"
+      },
+      "id": "7940",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "finish:decided",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a human approved a concrete proposal",
+          "started_at": "2025-12-30T07:00:41Z",
+          "step": 10,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7939",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "route:finish",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "work complete for this case (prompt p1)",
+          "started_at": "2025-12-30T07:00:40Z",
+          "step": 9,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7938",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "decision:approve",
+          "agent": "human",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+          "started_at": "2025-12-30T07:00:39Z",
+          "step": 8,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7937",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "route:human_gate",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a proposal needs a human decision (prompt p1)",
+          "started_at": "2025-12-30T07:00:37Z",
+          "step": 7,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7936",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "draft_safety_proposal",
+          "agent": "safety",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+          "started_at": "2025-12-30T07:00:35Z",
+          "step": 6,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7935",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "route:safety",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+          "started_at": "2025-12-30T07:00:34Z",
+          "step": 5,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7934",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "note_missing_info",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "the report omits mileage, date; analysis can proceed",
+          "started_at": "2025-12-30T07:00:33Z",
+          "step": 4,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7933",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "check_duplicates",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "0 similar case(s) within the same vehicle",
+          "started_at": "2025-12-30T07:00:32Z",
+          "step": 3,
+          "tokens": 0,
+          "tool": "similar_cases",
+          "tool_input": {
+            "k": 3,
+            "make": "TOYOTA",
+            "model": "HIGHLANDER",
+            "year": 2023
+          },
+          "tool_output": {
+            "result": []
+          }
+        }
+      },
+      "id": "7932",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "extract",
+          "agent": "intake",
+          "cost_usd": 0.000922,
+          "duration_ms": 10423,
+          "reason": "AIR BAGS: airbags did not deploy in a 44 mph highway collision.",
+          "started_at": "2025-12-30T07:00:31Z",
+          "step": 2,
+          "tokens": 2029,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7931",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:43Z",
+      "data": {
+        "case_id": "2161636",
+        "step": {
+          "action": "route:intake",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "no extraction yet: normalise the report first (prompt p1)",
+          "started_at": "2025-12-30T07:00:30Z",
+          "step": 1,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7930",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:42Z",
+      "data": {
+        "case_id": "2161636",
+        "status": "decided"
+      },
+      "id": "7929",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-30T07:00:29Z",
+      "data": {
+        "case_id": "2161630",
+        "status": "decided"
+      },
+      "id": "7928",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "finish:decided",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a human approved a concrete proposal",
+          "started_at": "2025-12-30T07:00:26Z",
+          "step": 10,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7927",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "route:finish",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "work complete for this case (prompt p1)",
+          "started_at": "2025-12-30T07:00:25Z",
+          "step": 9,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7926",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "decision:approve",
+          "agent": "human",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+          "started_at": "2025-12-30T07:00:24Z",
+          "step": 8,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7925",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "route:human_gate",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a proposal needs a human decision (prompt p1)",
+          "started_at": "2025-12-30T07:00:22Z",
+          "step": 7,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7924",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "draft_safety_proposal",
+          "agent": "safety",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+          "started_at": "2025-12-30T07:00:20Z",
+          "step": 6,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7923",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "route:safety",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+          "started_at": "2025-12-30T07:00:19Z",
+          "step": 5,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7922",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "note_missing_info",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "the report omits date; analysis can proceed",
+          "started_at": "2025-12-30T07:00:18Z",
+          "step": 4,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7921",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "check_duplicates",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "0 similar case(s) within the same vehicle",
+          "started_at": "2025-12-30T07:00:17Z",
+          "step": 3,
+          "tokens": 0,
+          "tool": "similar_cases",
+          "tool_input": {
+            "k": 3,
+            "make": "BMW",
+            "model": "330I",
+            "year": 2019
+          },
+          "tool_output": {
+            "result": []
+          }
+        }
+      },
+      "id": "7920",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "extract",
+          "agent": "intake",
+          "cost_usd": 0.0014686,
+          "duration_ms": 16298,
+          "reason": "2019 BMW 330i infotainment/hands-free/emergency call: emergency call failed to activate after a 60 MPH crash; air bag exploded and driver sustained a concussion.",
+          "started_at": "2025-12-30T07:00:16Z",
+          "step": 2,
+          "tokens": 3099,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7919",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:28Z",
+      "data": {
+        "case_id": "2161630",
+        "step": {
+          "action": "route:intake",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "no extraction yet: normalise the report first (prompt p1)",
+          "started_at": "2025-12-30T07:00:15Z",
+          "step": 1,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7918",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:27Z",
+      "data": {
+        "case_id": "2161630",
+        "status": "decided"
+      },
+      "id": "7917",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-30T07:00:14Z",
+      "data": {
+        "case_id": "2161586",
+        "status": "decided"
+      },
+      "id": "7916",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "finish:decided",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a human approved a concrete proposal",
+          "started_at": "2025-12-30T07:00:11Z",
+          "step": 10,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7915",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "route:finish",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "work complete for this case (prompt p1)",
+          "started_at": "2025-12-30T07:00:10Z",
+          "step": 9,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7914",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "decision:approve",
+          "agent": "human",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+          "started_at": "2025-12-30T07:00:09Z",
+          "step": 8,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7913",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "route:human_gate",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a proposal needs a human decision (prompt p1)",
+          "started_at": "2025-12-30T07:00:07Z",
+          "step": 7,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7912",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "draft_safety_proposal",
+          "agent": "safety",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+          "started_at": "2025-12-30T07:00:05Z",
+          "step": 6,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7911",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "route:safety",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+          "started_at": "2025-12-30T07:00:04Z",
+          "step": 5,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7910",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "note_missing_info",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "the report omits mileage, date; analysis can proceed",
+          "started_at": "2025-12-30T07:00:03Z",
+          "step": 4,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7909",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "check_duplicates",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "0 similar case(s) within the same vehicle",
+          "started_at": "2025-12-30T07:00:02Z",
+          "step": 3,
+          "tokens": 0,
+          "tool": "similar_cases",
+          "tool_input": {
+            "k": 3,
+            "make": "MERCEDES-BENZ",
+            "model": "CLA 250",
+            "year": 2023
+          },
+          "tool_output": {
+            "result": []
+          }
+        }
+      },
+      "id": "7908",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "extract",
+          "agent": "intake",
+          "cost_usd": 0.00096265,
+          "duration_ms": 10775,
+          "reason": "Airbags did not deploy in a head-on crash on snow during a storm; occupant struck windshield and dash.",
+          "started_at": "2025-12-30T07:00:01Z",
+          "step": 2,
+          "tokens": 2111,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7907",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:13Z",
+      "data": {
+        "case_id": "2161586",
+        "step": {
+          "action": "route:intake",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "no extraction yet: normalise the report first (prompt p1)",
+          "started_at": "2025-12-30T07:00:00Z",
+          "step": 1,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7906",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-30T07:00:12Z",
+      "data": {
+        "case_id": "2161586",
+        "status": "decided"
+      },
+      "id": "7905",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-29T07:00:19Z",
+      "data": {
+        "case_id": "2161154",
+        "status": "decided"
+      },
+      "id": "7904",
+      "kind": "case_status"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "finish:decided",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a human approved a concrete proposal",
+          "started_at": "2025-12-29T07:00:16Z",
+          "step": 15,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7903",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "route:finish",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "work complete for this case (prompt p1)",
+          "started_at": "2025-12-29T07:00:15Z",
+          "step": 14,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7902",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "decision:approve",
+          "agent": "human",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "Quotes verified and no hard rule is broken.",
+          "started_at": "2025-12-29T07:00:14Z",
+          "step": 13,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7901",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "route:human_gate",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "a proposal needs a human decision (prompt p1)",
+          "started_at": "2025-12-29T07:00:12Z",
+          "step": 12,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7900",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "verify_quotes",
+          "agent": "analysis",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "6 verified, 0 dropped",
+          "started_at": "2025-12-29T07:00:10Z",
+          "step": 11,
+          "tokens": 0,
+          "tool": "verify_quotes",
+          "tool_input": {
+            "quotes": [
+              "recurring battery/charging system detection warning",
+              "The warning continues to reappear after the vehicle is returned to me",
+              "has not been resolved despite multiple service visits",
+              "cannot replicate the issue",
+              "My vehicle has been in the shop approximately 5 times for this same issue",
+              "ongoing electrical issue"
+            ]
+          },
+          "tool_output": {
+            "checked": 6,
+            "dropped": 0,
+            "verified": 6
+          }
+        }
+      },
+      "id": "7899",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "propose",
+          "agent": "analysis",
+          "cost_usd": 0.0008265,
+          "duration_ms": 12167,
+          "reason": "The owner reports a recurring battery/charging system detection warning that reappears after the vehicle is returned from service, has survived roughly five shop visits, and is often not reproducible by the dealer. The rulebook matches the recorded conditions 'charging', 'intermittent' and 'after service': charging and high-current loads stress the supply path, connectors and protection circuits (Electrical load test), repeated wake/sleep cycles reproduce faults that only appear intermittently (Long-run power cycling test), and faults appearing after service are first checked for connector seating, pin damage and correct part fit (Installation check before test). Because a charging-related supply fault is the reported symptom, an electrical load test is the targeted test, preceded by the installation check for the after-service recurrence. No recalls or investigations were returned for this vehicle.",
+          "started_at": "2025-12-29T07:00:09Z",
+          "step": 10,
+          "tokens": 2636,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7898",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "read_rulebook",
+          "agent": "analysis",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "3 targeted-test rule(s) matched the reported conditions",
+          "started_at": "2025-12-29T07:00:08Z",
+          "step": 9,
+          "tokens": 0,
+          "tool": "rulebook",
+          "tool_input": {
+            "conditions": [
+              "after service",
+              "intermittent",
+              "charging"
+            ]
+          },
+          "tool_output": {
+            "result": [
+              {
+                "id": "intermittent",
+                "matched_conditions": [
+                  "intermittent"
+                ],
+                "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+                "test": "Long-run power cycling test"
+              },
+              {
+                "id": "after_service",
+                "matched_conditions": [
+                  "after service"
+                ],
+                "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+                "test": "Installation check before test"
+              },
+              {
+                "id": "charging",
+                "matched_conditions": [
+                  "charging"
+                ],
+                "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+                "test": "Electrical load test"
+              }
+            ]
+          }
+        }
+      },
+      "id": "7897",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "lookup_investigations",
+          "agent": "analysis",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "0 investigation(s) for the same vehicle and group",
+          "started_at": "2025-12-29T07:00:07Z",
+          "step": 8,
+          "tokens": 0,
+          "tool": "investigations_for",
+          "tool_input": {
+            "group": "adas",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "year": 2024
+          },
+          "tool_output": {
+            "result": []
+          }
+        }
+      },
+      "id": "7896",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "lookup_recalls",
+          "agent": "analysis",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "0 recall(s) for the same vehicle and group",
+          "started_at": "2025-12-29T07:00:06Z",
+          "step": 7,
+          "tokens": 0,
+          "tool": "recalls_for",
+          "tool_input": {
+            "group": "adas",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "year": 2024
+          },
+          "tool_output": {
+            "result": []
+          }
+        }
+      },
+      "id": "7895",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "search_similar_cases",
+          "agent": "analysis",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "5 similar case(s) in the knowledge base",
+          "started_at": "2025-12-29T07:00:05Z",
+          "step": 6,
+          "tokens": 0,
+          "tool": "similar_cases",
+          "tool_input": {
+            "k": 5,
+            "text": "I am experiencing a recurring battery/charging system detection warning with my vehicle that has not been resolved despite multiple service visits. The warning continues to reappear after the vehicle is returned to me, indicating the issue has not been properly diagnosed or repaired.  My vehicle has been in the shop approximately 5 times for this same issue. Each time, I am told the problem is resolved or that they cannot replicate the issue, yet the warning returns shortly afterward. To date, n"
+          },
+          "tool_output": {
+            "result": [
+              {
+                "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+                "group": "adas",
+                "id": "2032767",
+                "make": "CHEVROLET",
+                "model": "TRAVERSE",
+                "score": 11.4545,
+                "year": 2024
+              },
+              {
+                "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+                "group": "adas",
+                "id": "2032769",
+                "make": "CHEVROLET",
+                "model": "TRAVERSE",
+                "score": 11.4545,
+                "year": 2024
+              },
+              {
+                "excerpt": "1. When reversing, the emergency braking is very sensitive. On 6/20, it was pouring rain and every time I tried to back out the car kept slamming on the brakes thinking there was an object in the way. it also happened when we were leaving an appointment that same day. It wasn’t p...",
+                "group": "adas",
+                "id": "2001280",
+                "make": "CHEVROLET",
+                "model": "TRAVERSE",
+                "score": 9.1076,
+                "year": 2024
+              },
+              {
+                "excerpt": "The contact owns a 2024 Chevrolet Traverse. The contact stated while driving approximately 15 MPH, the brake pedal was depressed, and the vehicle jolted forward with two unknown warning lights illuminated. The contact stated that the Forward Collision Avoidance and 4WD Unavailabl...",
+                "group": "adas",
+                "id": "2042282",
+                "make": "CHEVROLET",
+                "model": "TRAVERSE",
+                "score": 7.306,
+                "year": 2024
+              },
+              {
+                "excerpt": "Transmission issue: Dealer was not able to replicate issue due to it only happening periodically. When putting into drive mode and going to accelerate it feels as if the transmission is slipping and give a big jerk. Also will sometime make a loud noise like tranmission is \"droppi...",
+                "group": "adas",
+                "id": "2008192",
+                "make": "CHEVROLET",
+                "model": "TRAVERSE",
+                "score": 7.2431,
+                "year": 2024
+              }
+            ]
+          }
+        }
+      },
+      "id": "7894",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "route:analysis",
+          "agent": "supervisor",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+          "started_at": "2025-12-29T07:00:04Z",
+          "step": 5,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7893",
+      "kind": "trace"
+    },
+    {
+      "at": "2025-12-29T07:00:18Z",
+      "data": {
+        "case_id": "2161154",
+        "step": {
+          "action": "note_missing_info",
+          "agent": "intake",
+          "cost_usd": 0.0,
+          "duration_ms": 0,
+          "reason": "the report omits mileage, date; analysis can proceed",
+          "started_at": "2025-12-29T07:00:03Z",
+          "step": 4,
+          "tokens": 0,
+          "tool": null,
+          "tool_input": null,
+          "tool_output": null
+        }
+      },
+      "id": "7892",
+      "kind": "trace"
+    }
+  ],
+  "window": "365d"
+}

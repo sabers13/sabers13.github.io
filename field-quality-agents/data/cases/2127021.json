@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2127021",
+    "make": "BMW",
+    "mileage": null,
+    "model": "X7",
+    "narrative": "Traveling on I70 on 9/3 at 70 mph around 2pm the car stopped abuptly and displayed Emergency Stoppage and made an SOS call to BMW. After a few minutes the car was retarted and we proceeded to our destination. No injuries or damage since there was no one behind us. Dealer told us not to drive the car and it iwas towed to BMW Service.",
+    "received_at": "2025-09-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2127021",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2127021",
+    "decided_at": "2025-09-04T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2127021",
+    "clues": [
+      {
+        "kind": "safety",
+        "quote": "at 70 mph around 2pm the car stopped abuptly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "car stopped abuptly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "displayed Emergency Stoppage"
+      },
+      {
+        "kind": "symptom",
+        "quote": "made an SOS call to BMW"
+      },
+      {
+        "kind": "condition",
+        "quote": "Traveling on I70 on 9/3 at 70 mph around 2pm"
+      },
+      {
+        "kind": "other",
+        "quote": "No injuries or damage since there was no one behind us."
+      },
+      {
+        "kind": "other",
+        "quote": "Dealer told us not to drive the car and it iwas towed to BMW Service."
+      },
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2024 BMW X7 ADAS forward collision avoidance/automatic emergency braking: abrupt stop at 70 mph on I-70 with Emergency Stoppage and SOS call; restarted, no injuries, dealer advised tow.",
+    "symptoms": [
+      "car stopped abruptly at speed",
+      "Emergency Stoppage message displayed",
+      "SOS call to BMW made"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2127021",
+    "created_at": "2025-09-04T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I purchased a 2024 BMW X7 xDrive40i VIN: xxxxx on May 1, 2023. I am pleased with the vehicle except for a serious flaw that in addition to compromising convenience creates a potential safety hazard. The problem resides in the Driving Assistant Professional Package which deviates...",
+      "group": "adas",
+      "id": "1894709",
+      "make": "BMW",
+      "model": "X7",
+      "score": 4.2494,
+      "year": 2024
+    },
+    {
+      "excerpt": "The main center screen that has all the cameras and settings stopped working. It was just a blank screen. Car would start and drive with with just a black screen.",
+      "group": "adas",
+      "id": "1918058",
+      "make": "BMW",
+      "model": "X7",
+      "score": 3.6146,
+      "year": 2024
+    },
+    {
+      "excerpt": "Collision warning failed. Automatic emergency braking failed. Unknown if brakes were delayed or had issue stopping. I rear ended the car the in front of me, going from a stop while attempting to make a right hand turn. There were no system warnings or emergency braking applied al...",
+      "group": "adas",
+      "id": "1992627",
+      "make": "BMW",
+      "model": "X7",
+      "score": 3.4464,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-04T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015436,
+      "duration_ms": 25029,
+      "reason": "2024 BMW X7 ADAS forward collision avoidance/automatic emergency braking: abrupt stop at 70 mph on I-70 with Emergency Stoppage and SOS call; restarted, no injuries, dealer advised tow.",
+      "started_at": "2025-09-04T07:00:36Z",
+      "step": 2,
+      "tokens": 3101,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-04T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "X7",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I purchased a 2024 BMW X7 xDrive40i VIN: xxxxx on May 1, 2023. I am pleased with the vehicle except for a serious flaw that in addition to compromising convenience creates a potential safety hazard. The problem resides in the Driving Assistant Professional Package which deviates...",
+            "group": "adas",
+            "id": "1894709",
+            "make": "BMW",
+            "model": "X7",
+            "score": 4.2494,
+            "year": 2024
+          },
+          {
+            "excerpt": "The main center screen that has all the cameras and settings stopped working. It was just a blank screen. Car would start and drive with with just a black screen.",
+            "group": "adas",
+            "id": "1918058",
+            "make": "BMW",
+            "model": "X7",
+            "score": 3.6146,
+            "year": 2024
+          },
+          {
+            "excerpt": "Collision warning failed. Automatic emergency braking failed. Unknown if brakes were delayed or had issue stopping. I rear ended the car the in front of me, going from a stop while attempting to make a right hand turn. There were no system warnings or emergency braking applied al...",
+            "group": "adas",
+            "id": "1992627",
+            "make": "BMW",
+            "model": "X7",
+            "score": 3.4464,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-04T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-04T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-04T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-04T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-04T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-04T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-04T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2065801",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON",
+    "narrative": "My car automatically braked in the middle of an intersection and caused my vehicle to be rear-ended. This was the third time automatic braking engaged when it should not have been. In the most recent incident on [XXX] I was injured and had to have medical attention. I googled automatic braking and there were many reports of automatic braking being deployed when it should not have been.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-02-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2065801",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065801",
+    "decided_at": "2025-02-14T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2065801",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My car automatically braked in the middle of an intersection"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This was the third time automatic braking engaged when it should not have been."
+      },
+      {
+        "kind": "safety",
+        "quote": "caused my vehicle to be rear-ended"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was injured and had to have medical attention"
+      },
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "condition",
+        "quote": "in the middle of an intersection"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance / automatic emergency braking on a 2024 Hyundai Tucson braked unexpectedly in an intersection, causing a rear-end collision and injury; third such occurrence.",
+    "symptoms": [
+      "automatic braking engages when it should not",
+      "vehicle brakes by itself in the middle of an intersection",
+      "unintended automatic emergency braking, recurring three times"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2065801",
+    "created_at": "2025-02-14T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We bought Tucson 2024 Sel from Stafford Hyundai [XXX]. We were happy new vehicle owner and yourself. Sales told us it will be good for at least few years without any problem after four months and 22 days the vehicle started not running call Chantilly service they connected me wit...",
+      "group": "adas",
+      "id": "1991043",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 13.5346,
+      "year": 2024
+    },
+    {
+      "excerpt": "We bought Tucson 2024 Sel from Stafford Hyundai [XXX]. We were happy new vehicle owner and yourself. Sales told us it will be good for at least few years without any problem after four months and 22 days the vehicle started not running call Chantilly service they connected me wit...",
+      "group": "adas",
+      "id": "1991044",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 13.5346,
+      "year": 2024
+    },
+    {
+      "excerpt": "While driving in light traffic, speed at 45 mph, my Tucson alerted me with a beep, steering wheel vibrated and a red alert on the dash was present for about 3 seconds then the speed automatically slows down to 15 mph all on its own while my foot is still on the accelerator. This...",
+      "group": "adas",
+      "id": "2035027",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 7.8281,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-14T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00026895,
+      "duration_ms": 2494,
+      "reason": "Forward collision avoidance / automatic emergency braking on a 2024 Hyundai Tucson braked unexpectedly in an intersection, causing a rear-end collision and injury; third such occurrence.",
+      "started_at": "2025-02-14T07:00:51Z",
+      "step": 2,
+      "tokens": 902,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-14T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We bought Tucson 2024 Sel from Stafford Hyundai [XXX]. We were happy new vehicle owner and yourself. Sales told us it will be good for at least few years without any problem after four months and 22 days the vehicle started not running call Chantilly service they connected me wit...",
+            "group": "adas",
+            "id": "1991043",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 13.5346,
+            "year": 2024
+          },
+          {
+            "excerpt": "We bought Tucson 2024 Sel from Stafford Hyundai [XXX]. We were happy new vehicle owner and yourself. Sales told us it will be good for at least few years without any problem after four months and 22 days the vehicle started not running call Chantilly service they connected me wit...",
+            "group": "adas",
+            "id": "1991044",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 13.5346,
+            "year": 2024
+          },
+          {
+            "excerpt": "While driving in light traffic, speed at 45 mph, my Tucson alerted me with a beep, steering wheel vibrated and a red alert on the dash was present for about 3 seconds then the speed automatically slows down to 15 mph all on its own while my foot is still on the accelerator. This...",
+            "group": "adas",
+            "id": "2035027",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 7.8281,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-14T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-14T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-14T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-14T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-14T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-14T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-14T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

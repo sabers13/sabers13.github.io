@@ -1,0 +1,380 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2092259",
+    "make": "FORD",
+    "mileage": 32000,
+    "model": "BRONCO",
+    "narrative": "The contact owns a 2021 Ford Bronco. The contact stated that while driving at an undisclosed speed, the blind spot alert fault message was displayed. The vehicle was taken to the dealer, where it was diagnosed that the wiring module had failed and needed to be replaced. The vehicle was not repaired. The manufacturer was made aware of the failure and referred the contact to the NHTSA Hotline for assistance. The approximate failure mileage was 32,000.",
+    "received_at": "2025-05-15",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2092259",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2092259",
+    "decided_at": "2025-05-15T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2092259",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "blind spot alert fault message was displayed"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "other",
+        "quote": "the wiring module had failed and needed to be replaced"
+      }
+    ],
+    "conditions": [
+      "while driving at an undisclosed speed"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the 2021 Ford Bronco electrical system for the blind spot alert fault caused by a failed wiring module.",
+    "symptoms": [
+      "blind spot alert fault message displayed",
+      "wiring module failed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2092259",
+    "created_at": "2025-05-15T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "blind spot alert fault message was displayed",
+        "source_id": "2092259",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving at an undisclosed speed",
+        "source_id": "2092259",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the wiring module had failed and needed to be replaced",
+        "source_id": "2092259",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a blind spot alert fault message displayed while driving, and the dealer diagnosed that the wiring module had failed and needed replacement. No rulebook entry, recall, or investigation is available, so this is not a targeted rulebook load test.",
+    "requested_info": [],
+    "summary": "Test the 2021 Ford Bronco electrical system for the blind spot alert fault caused by a failed wiring module.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "2021 FORD BRONCO MILES: 34,247 BOTH REAR CALIPERS ON THE INSIDE \"LOCKED\" AND CAUSED IRREGULAR PAD WEARING ON THE INSIDE. I AM CONCERNED THE ROOT CAUSE MAY BE A CALIPER ISSUE OR ELECTRONIC BRAKE ISSUE NOT RELEASING THE BRAKE COMPONENTS. REAR OUTSIDE BRAKE PADS AT 80% REAR INSIDE B...",
+      "group": "electrical_general",
+      "id": "2043799",
+      "make": "FORD",
+      "model": "BRONCO",
+      "score": 3.768,
+      "year": 2021
+    },
+    {
+      "excerpt": "On 2 separate occasions over the past 3 days the vehicle has lost total operability. All functions, lights, locks, etc cease and are unable to simply restart the vehicle. The first occurrence was on a busy highway in poor weather conditions causing a near accident/collision. It a...",
+      "group": "electrical_general",
+      "id": "1836579",
+      "make": "FORD",
+      "model": "BRONCO",
+      "score": 1.11,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-15T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0019825,
+      "duration_ms": 24260,
+      "reason": "2021 Ford Bronco electrical system: blind spot alert fault message while driving; dealer diagnosed failed wiring module.",
+      "started_at": "2025-05-15T07:00:01Z",
+      "step": 2,
+      "tokens": 3834,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-05-15T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2021 FORD BRONCO MILES: 34,247 BOTH REAR CALIPERS ON THE INSIDE \"LOCKED\" AND CAUSED IRREGULAR PAD WEARING ON THE INSIDE. I AM CONCERNED THE ROOT CAUSE MAY BE A CALIPER ISSUE OR ELECTRONIC BRAKE ISSUE NOT RELEASING THE BRAKE COMPONENTS. REAR OUTSIDE BRAKE PADS AT 80% REAR INSIDE B...",
+            "group": "electrical_general",
+            "id": "2043799",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 3.768,
+            "year": 2021
+          },
+          {
+            "excerpt": "On 2 separate occasions over the past 3 days the vehicle has lost total operability. All functions, lights, locks, etc cease and are unable to simply restart the vehicle. The first occurrence was on a busy highway in poor weather conditions causing a near accident/collision. It a...",
+            "group": "electrical_general",
+            "id": "1836579",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 1.11,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-05-15T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-15T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) in the knowledge base",
+      "started_at": "2025-05-15T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2021 Ford Bronco. The contact stated that while driving at an undisclosed speed, the blind spot alert fault message was displayed. The vehicle was taken to the dealer, where it was diagnosed that the wiring module had failed and needed to be replaced. The vehicle was not repaired. The manufacturer was made aware of the failure and referred the contact to the NHTSA Hotline for assistance. The approximate failure mileage was 32,000."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2021 FORD BRONCO MILES: 34,247 BOTH REAR CALIPERS ON THE INSIDE \"LOCKED\" AND CAUSED IRREGULAR PAD WEARING ON THE INSIDE. I AM CONCERNED THE ROOT CAUSE MAY BE A CALIPER ISSUE OR ELECTRONIC BRAKE ISSUE NOT RELEASING THE BRAKE COMPONENTS. REAR OUTSIDE BRAKE PADS AT 80% REAR INSIDE B...",
+            "group": "electrical_general",
+            "id": "2043799",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 3.768,
+            "year": 2021
+          },
+          {
+            "excerpt": "On 2 separate occasions over the past 3 days the vehicle has lost total operability. All functions, lights, locks, etc cease and are unable to simply restart the vehicle. The first occurrence was on a busy highway in poor weather conditions causing a near accident/collision. It a...",
+            "group": "electrical_general",
+            "id": "1836579",
+            "make": "FORD",
+            "model": "BRONCO",
+            "score": 1.11,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-15T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "BRONCO",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-15T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "BRONCO",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-15T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00063615,
+      "duration_ms": 6052,
+      "reason": "The narrative reports a blind spot alert fault message displayed while driving, and the dealer diagnosed that the wiring module had failed and needed replacement. No rulebook entry, recall, or investigation is available, so this is not a targeted rulebook load test.",
+      "started_at": "2025-05-15T07:00:09Z",
+      "step": 10,
+      "tokens": 1853,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-05-15T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "blind spot alert fault message was displayed",
+          "while driving at an undisclosed speed",
+          "the wiring module had failed and needed to be replaced"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-15T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-15T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-15T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-15T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

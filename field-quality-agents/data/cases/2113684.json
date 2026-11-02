@@ -1,0 +1,216 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2113684",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ID.4",
+    "narrative": "3 times in the last 4 weeks, I have had a situation where I get into the car to drive it and the Infotainment screen is black and not functional.  The only way to reset it is to get out, lock the car, and come back 15 minutes later and it resolves itself.  During the time the Infotainment screen is not functioning, the car is still drivable, but if you put it into reverse the backup camera is not shown on the infotainment screen, nor are any other of the assistive/safety features involved with parking or safely backing up the vehicle.  I've taken the car into VW Service and it came back \"unable to reproduce\" and \"no trouble found\", and they provided no assistance in how to quickly restore functionality of the infotainment screen, including use of the safety NHSTA-mandated backup camera.  This is a safety hazard, as the car is still drivable and it's likely people who have this problem will still drive the car even though mandated safety features like the backup camera are inoperative.",
+    "received_at": "2025-07-24",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2113684",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2113684",
+    "decided_at": "2025-07-24T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2113684",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Infotainment screen is black and not functional"
+      },
+      {
+        "kind": "condition",
+        "quote": "3 times in the last 4 weeks"
+      },
+      {
+        "kind": "symptom",
+        "quote": "if you put it into reverse the backup camera is not shown on the infotainment screen"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a safety hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "mandated safety features like the backup camera are inoperative"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Infotainment screen intermittently black (3 times in 4 weeks), disabling backup camera and parking safety features while vehicle remains drivable.",
+    "symptoms": [
+      "infotainment screen black and not functional",
+      "backup camera not shown in reverse",
+      "assistive/safety parking features unavailable",
+      "requires locking car and waiting 15 minutes to reset"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2113684",
+    "created_at": "2025-07-24T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-24T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013546,
+      "duration_ms": 15655,
+      "reason": "Infotainment screen intermittently black (3 times in 4 weeks), disabling backup camera and parking safety features while vehicle remains drivable.",
+      "started_at": "2025-07-24T07:00:31Z",
+      "step": 2,
+      "tokens": 2888,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-24T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ID.4",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-24T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-24T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-24T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-24T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-24T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-24T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-24T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2096190",
+    "make": "MERCEDES-BENZ",
+    "mileage": null,
+    "model": "C300",
+    "narrative": "While driving my 2016 Mercedes-Benz C300 on Route 12 in Utica, NY around 8:10 PM on May 29, 2025, the panoramic sunroof spontaneously exploded while in the tilted vent position. It sounded like a gunshot and sent glass raining into the cabin, causing multiple cuts to my hand, ear, arm, and lower back while I was driving. The shock nearly caused me to lose control of the vehicle. Conditions were clear and dry, around 60°F, and I was driving about 50–55 mph.  I have reported the incident to Mercedes-Benz USA (Case #14443457). This is a serious safety hazard, and I am concerned about residual glass in the vehicle’s ventilation system and potential future injuries. I am also concerned about paint and interior damage from the explosion.",
+    "received_at": "2025-05-30",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2096190",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096190",
+    "decided_at": "2025-05-30T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2096190",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "panoramic sunroof"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the panoramic sunroof spontaneously exploded while in the tilted vent position"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sent glass raining into the cabin, causing multiple cuts to my hand, ear, arm, and lower back"
+      },
+      {
+        "kind": "safety",
+        "quote": "The shock nearly caused me to lose control of the vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a serious safety hazard"
+      },
+      {
+        "kind": "condition",
+        "quote": "Conditions were clear and dry"
+      },
+      {
+        "kind": "other",
+        "quote": "I was driving about 50–55 mph"
+      },
+      {
+        "kind": "other",
+        "quote": "around 8:10 PM on May 29, 2025"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Panoramic sunroof exploded in tilted vent position while driving, spraying glass into cabin and causing cuts and near loss of control; clear/dry ~60°F at 50–55 mph.",
+    "symptoms": [
+      "panoramic sunroof spontaneously exploded while in tilted vent position",
+      "glass rained into cabin",
+      "multiple cuts to hand, ear, arm, and lower back",
+      "nearly lost control of vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2096190",
+    "created_at": "2025-05-30T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2016 Mercedes-Benz C300. The contact stated while driving 60 MPH, the sunroof glass detached. There was a roaring sound detected. There were no warning lights illuminated. The contact related the failure to NHTSA Campaign Number: 16V087000 (Visibility). The veh...",
+      "group": "body_controls",
+      "id": "2024330",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 6.7043,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Mercedes-Benz C300. The contact stated that the sunroof failed to open. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the failure and advised the contact to file a complaint with the NHTS...",
+      "group": "body_controls",
+      "id": "1870497",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 3.609,
+      "year": 2016
+    },
+    {
+      "excerpt": "ON OCTOBER 15, 2019 AND ON JULY 1, 2020 THE GLASS PANEL WHICH IS LOCATED IN FRONT OF THE PANORAMIC SUNROOF BLEW OFF THE CAR WHILE DRIVING ON THE HIGHWAY. THIS PIECE OF GLASS DOES NOT MOVE AND BECAME A DANGEROUS PROJECTILE ENDANGERING OTHER VEHICLES. I WOULD GUESS THE GLUE IS NOT...",
+      "group": "body_controls",
+      "id": "1674495",
+      "make": "MERCEDES-BENZ",
+      "model": "C300",
+      "score": 2.4097,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-30T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00185995,
+      "duration_ms": 21355,
+      "reason": "Panoramic sunroof exploded in tilted vent position while driving, spraying glass into cabin and causing cuts and near loss of control; clear/dry ~60°F at 50–55 mph.",
+      "started_at": "2025-05-30T07:00:01Z",
+      "step": 2,
+      "tokens": 3695,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-30T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES-BENZ",
+        "model": "C300",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2016 Mercedes-Benz C300. The contact stated while driving 60 MPH, the sunroof glass detached. There was a roaring sound detected. There were no warning lights illuminated. The contact related the failure to NHTSA Campaign Number: 16V087000 (Visibility). The veh...",
+            "group": "body_controls",
+            "id": "2024330",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 6.7043,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Mercedes-Benz C300. The contact stated that the sunroof failed to open. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the failure and advised the contact to file a complaint with the NHTS...",
+            "group": "body_controls",
+            "id": "1870497",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 3.609,
+            "year": 2016
+          },
+          {
+            "excerpt": "ON OCTOBER 15, 2019 AND ON JULY 1, 2020 THE GLASS PANEL WHICH IS LOCATED IN FRONT OF THE PANORAMIC SUNROOF BLEW OFF THE CAR WHILE DRIVING ON THE HIGHWAY. THIS PIECE OF GLASS DOES NOT MOVE AND BECAME A DANGEROUS PROJECTILE ENDANGERING OTHER VEHICLES. I WOULD GUESS THE GLUE IS NOT...",
+            "group": "body_controls",
+            "id": "1674495",
+            "make": "MERCEDES-BENZ",
+            "model": "C300",
+            "score": 2.4097,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-30T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-30T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-30T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-30T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-30T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-30T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-30T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

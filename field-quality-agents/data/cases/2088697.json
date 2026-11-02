@@ -1,0 +1,296 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: WARNING",
+    "group": "adas",
+    "id": "2088697",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "Recall campaign # 24V865000 (Roll away OTA- 2.0) OTA updated on 7/1/2024 after the the updated the V12 battery was dead and our car was bricked for 6 months and it cost us $1,400 to unbrick and part replacement and our Fisker technician told us our car has drive unit software discrepancies therefore it can't take any software update until it fix  On 2/26/2025 American Lease Company pushing over OTA update (recall #24V865000 - Regen Braking OTA 2.2) and again our car is bricked, to unbricked it cost us another $800 and have to replace V12 battery for $300. As of today 5/3/2025 our car is still on OTA 2.1, therefore the recall OTA 2.2 will not get update until we get the drive motor software issue fix.",
+    "received_at": "2025-05-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2088697",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2088697",
+    "decided_at": "2025-05-03T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2088697",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: WARNING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "our car was bricked for 6 months"
+      },
+      {
+        "kind": "symptom",
+        "quote": "V12 battery was dead"
+      },
+      {
+        "kind": "symptom",
+        "quote": "drive unit software discrepancies"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it can't take any software update until it fix"
+      },
+      {
+        "kind": "symptom",
+        "quote": "again our car is bricked"
+      },
+      {
+        "kind": "symptom",
+        "quote": "our car is still on OTA 2.1"
+      },
+      {
+        "kind": "symptom",
+        "quote": "recall OTA 2.2 will not get update until we get the drive motor software issue fix"
+      },
+      {
+        "kind": "condition",
+        "quote": "OTA updated on 7/1/2024"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V865000"
+      },
+      {
+        "kind": "safety",
+        "quote": "Roll away OTA- 2.0"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V865000"
+    ],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Fisker Ocean ADAS lane departure warning; vehicle bricked and V12 battery dead after OTA updates, with drive unit software discrepancies blocking recall OTA 2.2.",
+    "symptoms": [
+      "vehicle bricked",
+      "V12 battery dead",
+      "drive unit software discrepancies prevent software updates",
+      "vehicle still on OTA 2.1 so recall OTA 2.2 cannot be installed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2088697",
+    "created_at": "2025-05-03T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025575",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 26.1428,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025576",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 26.1428,
+      "year": 2023
+    },
+    {
+      "excerpt": "We have experienced a consistent issue on a local street by our elementary child's school. We have contacted Fisker no fewer than 5-6 times since December 2023 about this issue. Fisker has consistently stated that an upcoming over the air (OTA) software update would fix this issu...",
+      "group": "adas",
+      "id": "1990522",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 25.3384,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0023821,
+      "duration_ms": 34051,
+      "reason": "Fisker Ocean ADAS lane departure warning; vehicle bricked and V12 battery dead after OTA updates, with drive unit software discrepancies blocking recall OTA 2.2.",
+      "started_at": "2025-05-03T07:00:01Z",
+      "step": 2,
+      "tokens": 4581,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025575",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 26.1428,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025576",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 26.1428,
+            "year": 2023
+          },
+          {
+            "excerpt": "We have experienced a consistent issue on a local street by our elementary child's school. We have contacted Fisker no fewer than 5-6 times since December 2023 about this issue. Fisker has consistently stated that an upcoming over the air (OTA) software update would fix this issu...",
+            "group": "adas",
+            "id": "1990522",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 25.3384,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-03T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-03T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-03T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-03T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-03T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

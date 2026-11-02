@@ -1,0 +1,276 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2136162",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Driving a 2018 Tesla Model 3, driver seat shows message \"Front left safety restraint system issue. Service is required\". This occurs when the driver is in the seat with the seat belt fastened and the vehicle is in motion. This issue refers to the possible seat belt, seats and/or air bags failure. This is a threat for drivers as these are the front line of defence in case of any collisions or accidents. This issue has been reported by multiple Tesla car drivers and their posts are available on online forums. Message appears on the Tesla screen driven. Tesla does not cover this out of warranty. My appeal to NHSTA is this is hazardous to drivers and cars should be recalled and repairs should be covered.",
+    "received_at": "2025-10-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136162",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136162",
+    "decided_at": "2025-10-03T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2136162",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Front left safety restraint system issue. Service is required"
+      },
+      {
+        "kind": "symptom",
+        "quote": "possible seat belt, seats and/or air bags failure"
+      },
+      {
+        "kind": "condition",
+        "quote": "when the driver is in the seat with the seat belt fastened and the vehicle is in motion"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a threat for drivers as these are the front line of defence in case of any collisions or accidents."
+      },
+      {
+        "kind": "safety",
+        "quote": "hazardous to drivers"
+      }
+    ],
+    "conditions": [
+      "in motion",
+      "seat occupied",
+      "seat belt fastened"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS: front-left safety restraint system issue warning with driver seated and belt fastened while moving; possible seat belt, seat or air bag failure.",
+    "symptoms": [
+      "Front left safety restraint system issue. Service is required warning",
+      "possible seat belt, seats and/or air bags failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136162",
+    "created_at": "2025-10-03T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I received a random RCM_a056 safety alert message on my 2018 Tesla Model 3. The Tesla Service Center requires the following repairs: 1) replace front passenger airbag and update vehicle configuration and 2) retrofit SBR in OCS equipped front passenger seat. My vehicle has over 11...",
+      "group": "restraints",
+      "id": "1908699",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 21.3628,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 Tesla Model 3. The contact stated while driving at an undisclosed speed, a message displayed reading \"Left from passenger safety restraint system fault\". The vehicle was not taken to the dealer or an independent mechanic. The vehicle was not repaired. Afte...",
+      "group": "restraints",
+      "id": "1983943",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 19.9992,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 Tesla Model 3. The contact stated while driving at an undisclosed speed, a message was displayed alerting the driver to a passenger safety restraint fault. After restarting the vehicle, the vehicle returned to normal functionality, but the failure became a...",
+      "group": "restraints",
+      "id": "1939487",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 19.5991,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-03T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00136315,
+      "duration_ms": 13374,
+      "reason": "AIR BAGS: front-left safety restraint system issue warning with driver seated and belt fastened while moving; possible seat belt, seat or air bag failure.",
+      "started_at": "2025-10-03T07:00:21Z",
+      "step": 2,
+      "tokens": 2837,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-03T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I received a random RCM_a056 safety alert message on my 2018 Tesla Model 3. The Tesla Service Center requires the following repairs: 1) replace front passenger airbag and update vehicle configuration and 2) retrofit SBR in OCS equipped front passenger seat. My vehicle has over 11...",
+            "group": "restraints",
+            "id": "1908699",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 21.3628,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Tesla Model 3. The contact stated while driving at an undisclosed speed, a message displayed reading \"Left from passenger safety restraint system fault\". The vehicle was not taken to the dealer or an independent mechanic. The vehicle was not repaired. Afte...",
+            "group": "restraints",
+            "id": "1983943",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 19.9992,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Tesla Model 3. The contact stated while driving at an undisclosed speed, a message was displayed alerting the driver to a passenger safety restraint fault. After restarting the vehicle, the vehicle returned to normal functionality, but the failure became a...",
+            "group": "restraints",
+            "id": "1939487",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 19.5991,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-03T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-03T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-03T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-03T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-03T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-03T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-03T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

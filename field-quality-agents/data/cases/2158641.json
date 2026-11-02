@@ -1,0 +1,277 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2158641",
+    "make": "BMW",
+    "mileage": null,
+    "model": "X5",
+    "narrative": "The componet that failed is the cars electric system in the rear. Battery gets so hot its melted a 2nd orange box on top of the battery. Burned a hole right through. Attempted to start the vehicle, now it's throwing big sparks in the rear battery compartment. ABS warnings, brake warnings, it leaks.  It will not start again! We have no transportation. Noone seems to be very concerned about the matter. Atleast 7 open, very dangerous recalls on this vehicle.  How come someone has to die from the companies failure to fix what they know is wrong? This vehicle is paid for, owned by a Middle/lower  class hard working single mom. I've seen to many cases of people who aren't financially threatening get delt a ball full of crap. All walks of life pay really good money for bmws cars. How about bmw returns the favor and keeps their word. My car is a death trap according to bmw. What do we do if the company won't cooperate",
+    "received_at": "2025-12-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158641",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158641",
+    "decided_at": "2025-12-18T07:00:57Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158641",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "The componet that failed is the cars electric system in the rear."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Battery gets so hot its melted a 2nd orange box on top of the battery."
+      },
+      {
+        "kind": "condition",
+        "quote": "Battery gets so hot"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Burned a hole right through."
+      },
+      {
+        "kind": "symptom",
+        "quote": "now it's throwing big sparks in the rear battery compartment."
+      },
+      {
+        "kind": "safety",
+        "quote": "now it's throwing big sparks in the rear battery compartment."
+      },
+      {
+        "kind": "symptom",
+        "quote": "ABS warnings, brake warnings, it leaks."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It will not start again!"
+      },
+      {
+        "kind": "safety",
+        "quote": "Atleast 7 open, very dangerous recalls on this vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "My car is a death trap according to bmw."
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Rear electrical system/battery overheating, melted orange box, burned hole, sparks at rear battery, ABS/brake warnings, leak, no start.",
+    "symptoms": [
+      "battery overheating and melting an orange box on top of the battery",
+      "burned hole through the battery area",
+      "sparks in the rear battery compartment during start attempt",
+      "ABS warning",
+      "brake warning",
+      "leak",
+      "will not start"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158641",
+    "created_at": "2025-12-18T07:00:55Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I have been trying to have my car repaired last year. I have expressed to BMW USA that none of their certified dealers want to touch a diesel and/or work on one that another dealership had done poor work on. They have asked me to continue reaching out to this dealership even thou...",
+      "group": "electrical_general",
+      "id": "1907958",
+      "make": "BMW",
+      "model": "X5",
+      "score": 5.8056,
+      "year": 2013
+    },
+    {
+      "excerpt": "THE CARE WAS OFF OVERNIGHT IN THE GARAGE UNLOCKED. IN THE AM, IN THE GARAGE, THERE WAS A SMELL OF BURNT ELECTRONICS. NOTICED SOMETHING ON THE BEHIND THE DRIVER'S DOOR HANDLE AND THE SAME THING DRIPPED DOWN THE DOOR AND SOME ON THE FLOOR. LOOKING CLOSER AT IT, IT APPEARS THAT SOME...",
+      "group": "electrical_general",
+      "id": "1654463",
+      "make": "BMW",
+      "model": "X5",
+      "score": 4.3041,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-18T07:00:49Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001,
+      "duration_ms": 11082,
+      "reason": "Rear electrical system/battery overheating, melted orange box, burned hole, sparks at rear battery, ABS/brake warnings, leak, no start.",
+      "started_at": "2025-12-18T07:00:50Z",
+      "step": 2,
+      "tokens": 2282,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-12-18T07:00:51Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "X5",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have been trying to have my car repaired last year. I have expressed to BMW USA that none of their certified dealers want to touch a diesel and/or work on one that another dealership had done poor work on. They have asked me to continue reaching out to this dealership even thou...",
+            "group": "electrical_general",
+            "id": "1907958",
+            "make": "BMW",
+            "model": "X5",
+            "score": 5.8056,
+            "year": 2013
+          },
+          {
+            "excerpt": "THE CARE WAS OFF OVERNIGHT IN THE GARAGE UNLOCKED. IN THE AM, IN THE GARAGE, THERE WAS A SMELL OF BURNT ELECTRONICS. NOTICED SOMETHING ON THE BEHIND THE DRIVER'S DOOR HANDLE AND THE SAME THING DRIPPED DOWN THE DOOR AND SOME ON THE FLOOR. LOOKING CLOSER AT IT, IT APPEARS THAT SOME...",
+            "group": "electrical_general",
+            "id": "1654463",
+            "make": "BMW",
+            "model": "X5",
+            "score": 4.3041,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-18T07:00:52Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-18T07:00:53Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-18T07:00:54Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-18T07:00:56Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-18T07:00:58Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-18T07:00:59Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-18T07:01:00Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

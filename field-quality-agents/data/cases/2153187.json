@@ -1,0 +1,220 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2153187",
+    "make": "WINNEBAGO",
+    "mileage": null,
+    "model": "EKKO",
+    "narrative": "The 2024 Winnebago Ekko Ford Transit base includes standard a second alternator in the engine bay manufactured by Balmer and installed by Winnebago to charge the house batteries, in this case two 320amp batteries manufactured by Lithionics.   A service recall was completed by Winnebago Authorized Dealer in 6/2025 to reduce the charge capacity based on prior failures and fires in the alternator.  Our vehicle has 26,000 miles and have had no indication of failure.  After an 80 mile drive, we smelled burning electrics and smoke came from under the hood.  I applied a fire extinguisher from underneath on the alternator to stop the burning and disconnected the alternator from the electrical system.  I am aware of this happening to many additional owners via a group forum.  Ultimately, it appears Winnebago has change suppliers of this alternator, but those with the original are subject to this risk.  Also, many have replaced on their own or outside of the dealer network due to the lengthy time to replace so they need to have a mechanism to reimburse for those expenses.  Thank you.",
+    "received_at": "2025-12-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2153187",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2153187",
+    "decided_at": "2025-12-01T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2153187",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "smelled burning electrics"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke came from under the hood"
+      },
+      {
+        "kind": "condition",
+        "quote": "A service recall was completed by Winnebago Authorized Dealer in 6/2025"
+      },
+      {
+        "kind": "condition",
+        "quote": "charge the house batteries"
+      },
+      {
+        "kind": "safety",
+        "quote": "I applied a fire extinguisher from underneath on the alternator to stop the burning"
+      },
+      {
+        "kind": "component_group",
+        "quote": "house batteries"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "Electrical system battery/alternator: burning electrics smell and smoke from under hood after an 80-mile drive following a charge-capacity service recall.",
+    "symptoms": [
+      "burning electrics smell",
+      "smoke from under the hood",
+      "burning at the alternator"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2153187",
+    "created_at": "2025-12-01T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-01T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011875,
+      "duration_ms": 14738,
+      "reason": "Electrical system battery/alternator: burning electrics smell and smoke from under hood after an 80-mile drive following a charge-capacity service recall.",
+      "started_at": "2025-12-01T07:00:31Z",
+      "step": 2,
+      "tokens": 2626,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-01T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "WINNEBAGO",
+        "model": "EKKO",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-12-01T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-01T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-01T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-01T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-01T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-01T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-01T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

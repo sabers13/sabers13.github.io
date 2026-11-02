@@ -1,0 +1,273 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2065808",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "FIT",
+    "narrative": "-The multi-purpose camera sensor system on my 2020 Honda Fit EX Hatchback has malfunctioned, disabling critical safety features such as Adaptive Cruise Control (ACC), Lane Keep Assist System (LKAS), and Collision Braking Warning System (CBWS).  -The failure of these systems creates significant safety risks. Without ACC, the vehicle cannot maintain a safe distance from other vehicles. The LKAS no longer provides steering assistance to help stay in the lane, and the CBWS cannot detect or warn of potential collisions. These malfunctions increase the likelihood of accidents, especially during highway driving or in heavy traffic.  -The issue has been reproduced and confirmed by Tony Honda in HI during an inspection on [XXX].  -My 2020 Honda Fit EX Hatchback has been inspected by an authorized dealer/service center, which diagnosed a failure in the multipurpose camera. This failure has disabled critical safety features, creating a potential safety risk. The vehicle has less than 21,000 miles and has been well maintained. However, the manufacturer has not offered a resolution, and the vehicle has not been inspected by police, insurance representatives, or other parties. Despite the low mileage and the importance of this system, I was informed that I must pay the full repair cost of $3,000 and other companies I visited stated that it can only be fixed by Honda. I believe this issue could indicate a defect and request an investigation into whether other Honda Fit owners are experiencing the same problem.  -Before the failure, warning messages appeared on the dashboard, including alerts for ACC, LKAS, and CBWS system malfunctions. These warnings initially appeared for a week or so and became more frequent over time.  I believe this issue may be a design or manufacturing defect affecting other vehicles of the same make and model. I urge the NHTSA to investigate this matter to determine if it represents a broader safety concern. INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-02-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2065808",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065808",
+    "decided_at": "2025-02-14T07:01:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2065808",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The multi-purpose camera sensor system on my 2020 Honda Fit EX Hatchback has malfunctioned, disabling critical safety features such as Adaptive Cruise Control (ACC), Lane Keep Assist System (LKAS), and Collision Braking Warning System (CBWS)."
+      },
+      {
+        "kind": "symptom",
+        "quote": "warning messages appeared on the dashboard, including alerts for ACC, LKAS, and CBWS system malfunctions."
+      },
+      {
+        "kind": "condition",
+        "quote": "These warnings initially appeared for a week or so and became more frequent over time."
+      },
+      {
+        "kind": "safety",
+        "quote": "The failure of these systems creates significant safety risks."
+      },
+      {
+        "kind": "component_group",
+        "quote": "multipurpose camera"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2020 Honda Fit EX multipurpose camera failure disabling ACC, LKAS, and CBWS, with intermittent dashboard warnings becoming more frequent.",
+    "symptoms": [
+      "multipurpose camera malfunction",
+      "adaptive cruise control disabled",
+      "lane keep assist disabled",
+      "collision braking warning system disabled",
+      "dashboard warning messages for ACC, LKAS, and CBWS malfunctions"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2065808",
+    "created_at": "2025-02-14T07:01:11Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Multi-purpose camera failure caused collision warning, lane departure warning and lane keeping assist to fail.",
+      "group": "adas",
+      "id": "2029045",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 9.3081,
+      "year": 2020
+    },
+    {
+      "excerpt": "Multiple warning light up on dash and loud beeping upon start up. No way to remove warnings which distract. Multiple safety features disabled 95% of time and the randomly work fine 5% of the time. Not related to any obvious damage or incident. Got in car one day to find several w...",
+      "group": "adas",
+      "id": "1997741",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 8.4279,
+      "year": 2020
+    },
+    {
+      "excerpt": "Automatic emergency brake bleeps warning and brakes get locked while driving. This happens all the the without any objects nearby or vehicles close enough to initiate the emergency brake. Emergency brake engages and locks itself in normal driving conditions. This has happened mul...",
+      "group": "adas",
+      "id": "1942805",
+      "make": "HONDA",
+      "model": "FIT",
+      "score": 4.2638,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-14T07:01:05Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011748,
+      "duration_ms": 17647,
+      "reason": "2020 Honda Fit EX multipurpose camera failure disabling ACC, LKAS, and CBWS, with intermittent dashboard warnings becoming more frequent.",
+      "started_at": "2025-02-14T07:01:06Z",
+      "step": 2,
+      "tokens": 2642,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-14T07:01:07Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "FIT",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Multi-purpose camera failure caused collision warning, lane departure warning and lane keeping assist to fail.",
+            "group": "adas",
+            "id": "2029045",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 9.3081,
+            "year": 2020
+          },
+          {
+            "excerpt": "Multiple warning light up on dash and loud beeping upon start up. No way to remove warnings which distract. Multiple safety features disabled 95% of time and the randomly work fine 5% of the time. Not related to any obvious damage or incident. Got in car one day to find several w...",
+            "group": "adas",
+            "id": "1997741",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 8.4279,
+            "year": 2020
+          },
+          {
+            "excerpt": "Automatic emergency brake bleeps warning and brakes get locked while driving. This happens all the the without any objects nearby or vehicles close enough to initiate the emergency brake. Emergency brake engages and locks itself in normal driving conditions. This has happened mul...",
+            "group": "adas",
+            "id": "1942805",
+            "make": "HONDA",
+            "model": "FIT",
+            "score": 4.2638,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-02-14T07:01:08Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-14T07:01:09Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-14T07:01:10Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-14T07:01:12Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-14T07:01:14Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-14T07:01:15Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-14T07:01:16Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

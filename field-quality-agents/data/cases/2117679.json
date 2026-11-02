@@ -1,0 +1,465 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2117679",
+    "make": "CHRYSLER",
+    "mileage": null,
+    "model": "PACIFICA",
+    "narrative": "Quirk Chrysler Dodge Jeep RAM Of Dorchester refused to perform Recall 73B/24V-536 on my restricted-title Pacifica (reconstructed), citing Chrysler policy. That policy doesn’t exist in the recall bulletin. I need the BPCM software update and any necessary battery replacement under the recall.",
+    "received_at": "2025-08-06",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2117679",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2117679",
+    "decided_at": "2025-08-06T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2117679",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "refused to perform Recall 73B/24V-536"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "73B/24V-536"
+      },
+      {
+        "kind": "condition",
+        "quote": "restricted-title Pacifica (reconstructed)"
+      },
+      {
+        "kind": "other",
+        "quote": "I need the BPCM software update and any necessary battery replacement under the recall."
+      },
+      {
+        "kind": "other",
+        "quote": "That policy doesn’t exist in the recall bulletin."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "73B/24V-536"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Verify recall 73B/24V-536 remedy eligibility and BPCM/battery status; no rulebook targeted test and no operational failure reported.",
+    "symptoms": [
+      "dealer refused recall 73B/24V-536 remedy",
+      "BPCM software update and battery replacement requested under recall"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2117679",
+    "created_at": "2025-08-06T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "refused to perform Recall 73B/24V-536",
+        "source_id": "2117679",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "73B/24V-536",
+        "source_id": "2117679",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "restricted-title Pacifica (reconstructed)",
+        "source_id": "2117679",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I need the BPCM software update and any necessary battery replacement under the recall.",
+        "source_id": "2117679",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "That policy doesn’t exist in the recall bulletin.",
+        "source_id": "2117679",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a dealer refusing recall 73B/24V-536 on a reconstructed Pacifica and requests the BPCM software update and any necessary battery replacement. No operating conditions, rulebook match, recall record, or investigation is present; this is a recall-remedy access issue rather than a reproducible field failure, so a standard inspection is appropriate rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Verify recall 73B/24V-536 remedy eligibility and BPCM/battery status; no rulebook targeted test and no operational failure reported.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We purchased the vehicle new from an out-of-state dealership (Ewald Chrysler Jeep Dodge LLC in Franklin, WI) in November 2019. Since that purchase, we have suffered four (4) failure events in which the vehicle completely loses power while driving, having experienced the first fai...",
+      "group": "electrical_general",
+      "id": "1755838",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 13.1169,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 Chrysler Pacifica. The contact stated that the passenger’s side sliding door button failed to open and close the door whether on the inside or outside of the vehicle. The driver’s side door overhead button was able to open and close the door. The failure h...",
+      "group": "electrical_general",
+      "id": "1803802",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 9.4105,
+      "year": 2018
+    },
+    {
+      "excerpt": "HAD A WHEEL ALIGNMENT IT STILL PULLING TO THE SIDE .I DO THINK IT THE CONTROL ARM LOWER ARM,TRAIN AXLE ASSEMBLY AXLE SHAFT. RADIO DOESN'T WORK CORRECT OR WITH BLUETOOTH. IF I GET A CALL IT WON'T GO BACK TO PLAYING THE RADIO OR BLUETOOTH. NEED TO TURN OFF CAR FOR AWHILE AND START...",
+      "group": "electrical_general",
+      "id": "1732908",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 9.2959,
+      "year": 2018
+    },
+    {
+      "excerpt": "Dear Sir or Madam, There was a recall on our vehicle for the Battery Cables. It was supposed to fix the Stop/Start on our car. Prior to getting the Recall done, our car didn't restart at a stop light/sign causing us to put it back in park and restart the car. We went to have the...",
+      "group": "electrical_general",
+      "id": "1846218",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 8.9602,
+      "year": 2018
+    },
+    {
+      "excerpt": "MY 2018 CHRYSLER PACIFICA CONTINUES TO STALL WHILE THE CAR IS IN MOTION ON THE STREET. THE LAST TWO OCCURRENCES HAPPENED WHEN THE CAR WAS MOVING AT 25MPH OR HIGHER WITH MY FOOT ON THE GAS PEDAL. THIS PROBLEM OCCURRED PRIOR TO THE FCA V53 RECALL BEING ISSUED, AND HAS PERSISTED EVE...",
+      "group": "electrical_general",
+      "id": "1706192",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 5.7148,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015859,
+      "duration_ms": 19047,
+      "reason": "Electrical system/BPCM recall 73B/24V-536 remedy refused by dealer on reconstructed Pacifica; no operating conditions reported.",
+      "started_at": "2025-08-06T07:00:01Z",
+      "step": 2,
+      "tokens": 3152,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We purchased the vehicle new from an out-of-state dealership (Ewald Chrysler Jeep Dodge LLC in Franklin, WI) in November 2019. Since that purchase, we have suffered four (4) failure events in which the vehicle completely loses power while driving, having experienced the first fai...",
+            "group": "electrical_general",
+            "id": "1755838",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 13.1169,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Chrysler Pacifica. The contact stated that the passenger’s side sliding door button failed to open and close the door whether on the inside or outside of the vehicle. The driver’s side door overhead button was able to open and close the door. The failure h...",
+            "group": "electrical_general",
+            "id": "1803802",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 9.4105,
+            "year": 2018
+          },
+          {
+            "excerpt": "HAD A WHEEL ALIGNMENT IT STILL PULLING TO THE SIDE .I DO THINK IT THE CONTROL ARM LOWER ARM,TRAIN AXLE ASSEMBLY AXLE SHAFT. RADIO DOESN'T WORK CORRECT OR WITH BLUETOOTH. IF I GET A CALL IT WON'T GO BACK TO PLAYING THE RADIO OR BLUETOOTH. NEED TO TURN OFF CAR FOR AWHILE AND START...",
+            "group": "electrical_general",
+            "id": "1732908",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 9.2959,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-08-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Quirk Chrysler Dodge Jeep RAM Of Dorchester refused to perform Recall 73B/24V-536 on my restricted-title Pacifica (reconstructed), citing Chrysler policy. That policy doesn’t exist in the recall bulletin. I need the BPCM software update and any necessary battery replacement under the recall."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We purchased the vehicle new from an out-of-state dealership (Ewald Chrysler Jeep Dodge LLC in Franklin, WI) in November 2019. Since that purchase, we have suffered four (4) failure events in which the vehicle completely loses power while driving, having experienced the first fai...",
+            "group": "electrical_general",
+            "id": "1755838",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 13.1169,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Chrysler Pacifica. The contact stated that the passenger’s side sliding door button failed to open and close the door whether on the inside or outside of the vehicle. The driver’s side door overhead button was able to open and close the door. The failure h...",
+            "group": "electrical_general",
+            "id": "1803802",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 9.4105,
+            "year": 2018
+          },
+          {
+            "excerpt": "HAD A WHEEL ALIGNMENT IT STILL PULLING TO THE SIDE .I DO THINK IT THE CONTROL ARM LOWER ARM,TRAIN AXLE ASSEMBLY AXLE SHAFT. RADIO DOESN'T WORK CORRECT OR WITH BLUETOOTH. IF I GET A CALL IT WON'T GO BACK TO PLAYING THE RADIO OR BLUETOOTH. NEED TO TURN OFF CAR FOR AWHILE AND START...",
+            "group": "electrical_general",
+            "id": "1732908",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 9.2959,
+            "year": 2018
+          },
+          {
+            "excerpt": "Dear Sir or Madam, There was a recall on our vehicle for the Battery Cables. It was supposed to fix the Stop/Start on our car. Prior to getting the Recall done, our car didn't restart at a stop light/sign causing us to put it back in park and restart the car. We went to have the...",
+            "group": "electrical_general",
+            "id": "1846218",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 8.9602,
+            "year": 2018
+          },
+          {
+            "excerpt": "MY 2018 CHRYSLER PACIFICA CONTINUES TO STALL WHILE THE CAR IS IN MOTION ON THE STREET. THE LAST TWO OCCURRENCES HAPPENED WHEN THE CAR WAS MOVING AT 25MPH OR HIGHER WITH MY FOOT ON THE GAS PEDAL. THIS PROBLEM OCCURRED PRIOR TO THE FCA V53 RECALL BEING ISSUED, AND HAS PERSISTED EVE...",
+            "group": "electrical_general",
+            "id": "1706192",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 5.7148,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-06T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-06T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-06T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0009174,
+      "duration_ms": 8497,
+      "reason": "The narrative reports a dealer refusing recall 73B/24V-536 on a reconstructed Pacifica and requests the BPCM software update and any necessary battery replacement. No operating conditions, rulebook match, recall record, or investigation is present; this is a recall-remedy access issue rather than a reproducible field failure, so a standard inspection is appropriate rather than a targeted load test.",
+      "started_at": "2025-08-06T07:00:09Z",
+      "step": 10,
+      "tokens": 2648,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-08-06T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "refused to perform Recall 73B/24V-536",
+          "73B/24V-536",
+          "restricted-title Pacifica (reconstructed)",
+          "I need the BPCM software update and any necessary battery replacement under the recall.",
+          "That policy doesn’t exist in the recall bulletin."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-06T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-06T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-06T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-06T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

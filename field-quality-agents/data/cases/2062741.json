@@ -1,0 +1,265 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2062741",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Car radio goes so loud it damaged my ear nerves. This results in pain especially when exposed to loud sounds",
+    "received_at": "2025-02-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2062741",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2062741",
+    "decided_at": "2025-02-04T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2062741",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Car radio goes so loud"
+      },
+      {
+        "kind": "safety",
+        "quote": "damaged my ear nerves"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This results in pain especially when exposed to loud sounds"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system radio volume goes too loud, causing ear nerve damage and pain from loud sounds",
+    "symptoms": [
+      "radio volume goes too loud",
+      "ear nerves damaged",
+      "pain from loud sounds"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2062741",
+    "created_at": "2025-02-04T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2020 Tesla Model 3. The contact stated while driving approximately 20 MPH, there was a loud sound coming from the vehicle. There was a warning message to take control of the vehicle displayed. The vehicle was not diagnosed or repaired. The manufacturer was not...",
+      "group": "electrical_general",
+      "id": "1814515",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 2.1936,
+      "year": 2020
+    },
+    {
+      "excerpt": "The problem is my car has been in the shop six times for an issue that Tesla claims it is unable to fix. I started smelling a burning smell (smoke coming from my air vents anytime the air is on) and brought it in. The first three times they were unable to find anything the fourth...",
+      "group": "electrical_general",
+      "id": "1872866",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 1.8768,
+      "year": 2020
+    },
+    {
+      "excerpt": "I AM STILL WAITING FOR TESLA TO MAKE THIS REPAIR. I HAVE CONTACTED A SERVICE CENTER SEVERAL TIMES AND TRIED TO MAKE AN APPOINTMENT ONCE. TESLA CANCELLED THE APPOINTMENT AND KEEPS TELLING ME THEY HAVE NOT RECEIVED THE PARTS TO MAKE THE REPAIR. IT HAS BEEN OVER A YEAR AND A HALF SI...",
+      "group": "electrical_general",
+      "id": "1978910",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 1.5451,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-04T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00036775,
+      "duration_ms": 7979,
+      "reason": "Electrical system radio volume goes too loud, causing ear nerve damage and pain from loud sounds",
+      "started_at": "2025-02-04T07:00:51Z",
+      "step": 2,
+      "tokens": 1088,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-04T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Tesla Model 3. The contact stated while driving approximately 20 MPH, there was a loud sound coming from the vehicle. There was a warning message to take control of the vehicle displayed. The vehicle was not diagnosed or repaired. The manufacturer was not...",
+            "group": "electrical_general",
+            "id": "1814515",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 2.1936,
+            "year": 2020
+          },
+          {
+            "excerpt": "The problem is my car has been in the shop six times for an issue that Tesla claims it is unable to fix. I started smelling a burning smell (smoke coming from my air vents anytime the air is on) and brought it in. The first three times they were unable to find anything the fourth...",
+            "group": "electrical_general",
+            "id": "1872866",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 1.8768,
+            "year": 2020
+          },
+          {
+            "excerpt": "I AM STILL WAITING FOR TESLA TO MAKE THIS REPAIR. I HAVE CONTACTED A SERVICE CENTER SEVERAL TIMES AND TRIED TO MAKE AN APPOINTMENT ONCE. TESLA CANCELLED THE APPOINTMENT AND KEEPS TELLING ME THEY HAVE NOT RECEIVED THE PARTS TO MAKE THE REPAIR. IT HAS BEEN OVER A YEAR AND A HALF SI...",
+            "group": "electrical_general",
+            "id": "1978910",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 1.5451,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-02-04T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-04T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-04T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-04T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-04T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-04T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-04T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

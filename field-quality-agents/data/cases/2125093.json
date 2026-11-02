@@ -1,0 +1,258 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: WARNING",
+    "group": "adas",
+    "id": "2125093",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON HYBRID",
+    "narrative": "The Hyundai Tucson's \"Consider taking a break\" advisory is triggered by the Driver Attention Warning (DAW) system.  This warning happens so frequently that it is more than an annoyance, but a safety issue, because the driver must continually take their eyes off the road to examine what the vehicle is complaining about, and therefore could conceivably be the cause of a crash.  Dealer is aware of issue.  See attached technical service bulletin.  The problem is easily reproducible.",
+    "received_at": "2025-08-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2125093",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2125093",
+    "decided_at": "2025-08-28T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2125093",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: WARNING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Consider taking a break"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This warning happens so frequently"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the driver must continually take their eyes off the road to examine what the vehicle is complaining about"
+      },
+      {
+        "kind": "condition",
+        "quote": "easily reproducible"
+      },
+      {
+        "kind": "safety",
+        "quote": "safety issue"
+      },
+      {
+        "kind": "safety",
+        "quote": "could conceivably be the cause of a crash"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS lane departure warning: Driver Attention Warning 'Consider taking a break' advisory triggers frequently, requiring driver attention and posing a possible crash risk; easily reproducible.",
+    "symptoms": [
+      "Driver Attention Warning 'Consider taking a break' advisory triggers frequently",
+      "driver must take eyes off the road to examine the warning"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2125093",
+    "created_at": "2025-08-28T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The 2025 Hyundai Tucson's Adaptive Cruise Control (ACC) system does not operate properly due to either a design flaw or a flawed implementation of the design. Hyundai's integration of Forward Attention Warning (FAW) with the ACC prohibits the driver from using ACC while wearing s...",
+      "group": "adas",
+      "id": "2044780",
+      "make": "HYUNDAI",
+      "model": "TUCSON HYBRID",
+      "score": 8.8486,
+      "year": 2025
+    },
+    {
+      "excerpt": "VEHICLE HAS 457 MILES. DRIVING IN STEADY DRIZZLE AND ROAD PUDDLES. WARNING NOTICE TRIANGLE SYMBOL SHOWN IN DRIVER INFO SCREEN WITH 3 ERRORS. PULLED OVER AND CHECKED NOTICES. SCREEN SHOWS 3 SAFETY SYSTEMS DISABLED - RADAR BLOCKED. REAR CROSS TRAFFIC ALERT, BLIND SPOT MONITORING, E...",
+      "group": "adas",
+      "id": "2042969",
+      "make": "HYUNDAI",
+      "model": "TUCSON HYBRID",
+      "score": 2.4791,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-28T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00093535,
+      "duration_ms": 10606,
+      "reason": "ADAS lane departure warning: Driver Attention Warning 'Consider taking a break' advisory triggers frequently, requiring driver attention and posing a possible crash risk; easily reproducible.",
+      "started_at": "2025-08-28T07:00:16Z",
+      "step": 2,
+      "tokens": 2094,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-08-28T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON HYBRID",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The 2025 Hyundai Tucson's Adaptive Cruise Control (ACC) system does not operate properly due to either a design flaw or a flawed implementation of the design. Hyundai's integration of Forward Attention Warning (FAW) with the ACC prohibits the driver from using ACC while wearing s...",
+            "group": "adas",
+            "id": "2044780",
+            "make": "HYUNDAI",
+            "model": "TUCSON HYBRID",
+            "score": 8.8486,
+            "year": 2025
+          },
+          {
+            "excerpt": "VEHICLE HAS 457 MILES. DRIVING IN STEADY DRIZZLE AND ROAD PUDDLES. WARNING NOTICE TRIANGLE SYMBOL SHOWN IN DRIVER INFO SCREEN WITH 3 ERRORS. PULLED OVER AND CHECKED NOTICES. SCREEN SHOWS 3 SAFETY SYSTEMS DISABLED - RADAR BLOCKED. REAR CROSS TRAFFIC ALERT, BLIND SPOT MONITORING, E...",
+            "group": "adas",
+            "id": "2042969",
+            "make": "HYUNDAI",
+            "model": "TUCSON HYBRID",
+            "score": 2.4791,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-08-28T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-28T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-28T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-28T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-28T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-28T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-28T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

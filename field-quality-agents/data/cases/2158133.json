@@ -1,0 +1,456 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2158133",
+    "make": "JEEP",
+    "mileage": 74000,
+    "model": "WRANGLER",
+    "narrative": "The contact owns a 2020 Jeep Wrangler. The contact stated that while driving 70 MPH, the contact noticed that the instrument panel was glitching and flickering before displaying a blank screen. A dealer was contacted. The vehicle was not taken to the dealer or an independent mechanic. The vehicle was not repaired. The manufacturer was not notified of the failure. The contact related the failure to NHTSA Campaign Number: 24V652000 (ELECTRICAL SYSTEM); however, the VIN was not included in the recall. The approximate failure mileage was 74,000.",
+    "received_at": "2025-12-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2158133",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158133",
+    "decided_at": "2025-12-17T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2158133",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "instrument panel was glitching and flickering before displaying a blank screen"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving 70 MPH"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V652000"
+      }
+    ],
+    "conditions": [
+      "driving at 70 MPH"
+    ],
+    "fault_codes": [
+      "24V652000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the instrument cluster for intermittent flicker and blank-screen failure under driving/load conditions because similar 2020 Wrangler cases show cluster failures, but no rulebook entry or recall match was returned.",
+    "symptoms": [
+      "instrument panel glitching and flickering",
+      "instrument panel blank screen"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158133",
+    "created_at": "2025-12-17T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "ELECTRICAL SYSTEM",
+        "source_id": "2158133",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "instrument panel was glitching and flickering before displaying a blank screen",
+        "source_id": "2158133",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving 70 MPH",
+        "source_id": "2158133",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 24V652000",
+        "source_id": "2158133",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the instrument panel glitching and flickering before going blank while driving 70 MPH. Similar cases describe 2020 Jeep Wrangler instrument panel/cluster blanking failures. No rulebook matches or recalls were returned, so a standard electrical function test is appropriate rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the instrument cluster for intermittent flicker and blank-screen failure under driving/load conditions because similar 2020 Wrangler cases show cluster failures, but no rulebook entry or recall match was returned.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2020 Jeep Wrangler. The contact stated that while driving at an undisclosed speed, the vehicle abruptly stopped and failed to move. The contact stated the engine was running, but the vehicle failed to respond. The contact stated that her ten-year-old daughter w...",
+      "group": "electrical_general",
+      "id": "1951478",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 29.7913,
+      "year": 2020
+    },
+    {
+      "excerpt": "My Jeep wrangler required the instrument panel to be replaced due to failure. The entire console lighting went dark while I was driving. I had not information on my speed and it made me take my eyes off the road when I tried to figure out what happened I did not have an accident...",
+      "group": "electrical_general",
+      "id": "2038849",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 19.3907,
+      "year": 2020
+    },
+    {
+      "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+      "group": "electrical_general",
+      "id": "2031660",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 15.8343,
+      "year": 2020
+    },
+    {
+      "excerpt": "There is a current recall out for the dash panel failures. I have issues with my dash panel that would be described as a failure that I believe should fall under the recall for this issue, my make and model matches however my specific VIN # does not. I'm hoping to get that change...",
+      "group": "electrical_general",
+      "id": "2031258",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 14.5807,
+      "year": 2020
+    },
+    {
+      "excerpt": "I took my vehicle to a Jeep dealer because the instrument panel on my dashboard went completely dark. The technician advised that I would need a new Instrument ClusterPanel, part #68442288AE. He also advised that there is a safety recall on this part however my VIN did not fall i...",
+      "group": "electrical_general",
+      "id": "2032187",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 12.9759,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-17T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0023758,
+      "duration_ms": 26779,
+      "reason": "2020 Jeep Wrangler electrical system; instrument panel glitching and flickering then blank while driving 70 mph.",
+      "started_at": "2025-12-17T07:00:16Z",
+      "step": 2,
+      "tokens": 4509,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-17T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Jeep Wrangler. The contact stated that while driving at an undisclosed speed, the vehicle abruptly stopped and failed to move. The contact stated the engine was running, but the vehicle failed to respond. The contact stated that her ten-year-old daughter w...",
+            "group": "electrical_general",
+            "id": "1951478",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 29.7913,
+            "year": 2020
+          },
+          {
+            "excerpt": "My Jeep wrangler required the instrument panel to be replaced due to failure. The entire console lighting went dark while I was driving. I had not information on my speed and it made me take my eyes off the road when I tried to figure out what happened I did not have an accident...",
+            "group": "electrical_general",
+            "id": "2038849",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 19.3907,
+            "year": 2020
+          },
+          {
+            "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+            "group": "electrical_general",
+            "id": "2031660",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 15.8343,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-12-17T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-17T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-12-17T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2020 Jeep Wrangler. The contact stated that while driving 70 MPH, the contact noticed that the instrument panel was glitching and flickering before displaying a blank screen. A dealer was contacted. The vehicle was not taken to the dealer or an independent mechanic. The vehicle was not repaired. The manufacturer was not notified of the failure. The contact related the failure to NHTSA Campaign Number: 24V652000 (ELECTRICAL SYSTEM); however, the VIN was not included in the reca"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2020 Jeep Wrangler. The contact stated that while driving at an undisclosed speed, the vehicle abruptly stopped and failed to move. The contact stated the engine was running, but the vehicle failed to respond. The contact stated that her ten-year-old daughter w...",
+            "group": "electrical_general",
+            "id": "1951478",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 29.7913,
+            "year": 2020
+          },
+          {
+            "excerpt": "My Jeep wrangler required the instrument panel to be replaced due to failure. The entire console lighting went dark while I was driving. I had not information on my speed and it made me take my eyes off the road when I tried to figure out what happened I did not have an accident...",
+            "group": "electrical_general",
+            "id": "2038849",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 19.3907,
+            "year": 2020
+          },
+          {
+            "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+            "group": "electrical_general",
+            "id": "2031660",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 15.8343,
+            "year": 2020
+          },
+          {
+            "excerpt": "There is a current recall out for the dash panel failures. I have issues with my dash panel that would be described as a failure that I believe should fall under the recall for this issue, my make and model matches however my specific VIN # does not. I'm hoping to get that change...",
+            "group": "electrical_general",
+            "id": "2031258",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 14.5807,
+            "year": 2020
+          },
+          {
+            "excerpt": "I took my vehicle to a Jeep dealer because the instrument panel on my dashboard went completely dark. The technician advised that I would need a new Instrument ClusterPanel, part #68442288AE. He also advised that there is a safety recall on this part however my VIN did not fall i...",
+            "group": "electrical_general",
+            "id": "2032187",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 12.9759,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-17T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-17T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-17T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007296,
+      "duration_ms": 6867,
+      "reason": "The narrative reports the instrument panel glitching and flickering before going blank while driving 70 MPH. Similar cases describe 2020 Jeep Wrangler instrument panel/cluster blanking failures. No rulebook matches or recalls were returned, so a standard electrical function test is appropriate rather than a targeted load test.",
+      "started_at": "2025-12-17T07:00:24Z",
+      "step": 10,
+      "tokens": 2260,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-12-17T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM",
+          "instrument panel was glitching and flickering before displaying a blank screen",
+          "while driving 70 MPH",
+          "NHTSA Campaign Number: 24V652000"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-17T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-17T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-17T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-17T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

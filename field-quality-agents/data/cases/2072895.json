@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2072895",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EXPLORER",
+    "narrative": "POLICE VEHICLE WAS CLEARING INTERSECTIO WHEN A UPS TRUCK COLLIDED WITH IT'S RIGHT SIDE FORWARD. THE COLLISION CAUSED THE SIDE AIRBAG TO DEPLOY. THE OFFICER'S VEST, SWEATER, UNDERSHIRT, T-SHIRT AND THE OFFICER'S RIGHT SIDE SUFFERED THERMAL BURNS FROM THE EXHAUST PORT. THE OFFICER SUFFERED 3RD DEGREE BURNS AND HAD TO HAVE SURGERY AND SKIN GRAFT.",
+    "received_at": "2025-03-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2072895",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2072895",
+    "decided_at": "2025-03-11T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2072895",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE COLLISION CAUSED THE SIDE AIRBAG TO DEPLOY."
+      },
+      {
+        "kind": "condition",
+        "quote": "SUFFERED THERMAL BURNS FROM THE EXHAUST PORT."
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE OFFICER SUFFERED 3RD DEGREE BURNS AND HAD TO HAVE SURGERY AND SKIN GRAFT."
+      },
+      {
+        "kind": "safety",
+        "quote": "THE OFFICER SUFFERED 3RD DEGREE BURNS"
+      },
+      {
+        "kind": "other",
+        "quote": "A UPS TRUCK COLLIDED WITH IT'S RIGHT SIDE FORWARD."
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Air bag side airbag deployment in a side collision; officer sustained thermal burns from the exhaust port and third-degree burns requiring surgery and skin graft.",
+    "symptoms": [
+      "side airbag deployed",
+      "thermal burns from exhaust port",
+      "third-degree burns requiring surgery and skin graft"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2072895",
+    "created_at": "2025-03-11T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Ford Explorer. The contact stated that while driving approximately 30 mph when another vehicle suddenly pulled in front of their vehicle causing them to hit the driver's side of their vehicle. The contact's vehicle had damage to the front bumper and passen...",
+      "group": "restraints",
+      "id": "1897180",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 3.158,
+      "year": 2022
+    },
+    {
+      "excerpt": "During a 2000 mile road trip, the front passenger seatbelt was nearly cut through at the point where the seatbelt exits the tensioner above the passenger's right shoulder. The location of the cut along the length of the webbing aligns with the position of the webbing when the sea...",
+      "group": "restraints",
+      "id": "1861394",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 1.2337,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-11T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001056,
+      "duration_ms": 18392,
+      "reason": "Air bag side airbag deployment in a side collision; officer sustained thermal burns from the exhaust port and third-degree burns requiring surgery and skin graft.",
+      "started_at": "2025-03-11T07:00:01Z",
+      "step": 2,
+      "tokens": 2213,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-03-11T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Ford Explorer. The contact stated that while driving approximately 30 mph when another vehicle suddenly pulled in front of their vehicle causing them to hit the driver's side of their vehicle. The contact's vehicle had damage to the front bumper and passen...",
+            "group": "restraints",
+            "id": "1897180",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 3.158,
+            "year": 2022
+          },
+          {
+            "excerpt": "During a 2000 mile road trip, the front passenger seatbelt was nearly cut through at the point where the seatbelt exits the tensioner above the passenger's right shoulder. The location of the cut along the length of the webbing aligns with the position of the webbing when the sea...",
+            "group": "restraints",
+            "id": "1861394",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 1.2337,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-11T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-11T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-11T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-11T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-11T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-11T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-11T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2130995",
+    "make": "FORD",
+    "mileage": null,
+    "model": "FUSION",
+    "narrative": "Was driving down parkway when came up on my exit it was hard to make the turn to even go up. The exit ramp the power steering light and the advanced track light and brake system. Light all came on flashing across the message screen one after another. Thank god I was able to get vehicle pulled over to shoulder and had it towed home. Also needs airbags replaced due to recall! I have contacted two local Ford dealers trying to get an appointment. Also messaged one through their website. On the phone calls I was placed on hold until the phone to shut off. Tried to call back and they just said please hold and put me right back on hold and I’ve never received a message back.",
+    "received_at": "2025-09-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2130995",
+    "status": "decided",
+    "year": 2010
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2130995",
+    "decided_at": "2025-09-16T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2130995",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "Was driving down parkway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was hard to make the turn to even go up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power steering light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "advanced track light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brake system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Light all came on flashing across the message screen one after another"
+      },
+      {
+        "kind": "safety",
+        "quote": "Thank god I was able to get vehicle pulled over to shoulder"
+      },
+      {
+        "kind": "component_group",
+        "quote": "airbags replaced due to recall"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS/restraints: while driving, steering was hard to turn and power steering, AdvancTrac and brake system lights flashed; airbag recall replacement also needed.",
+    "symptoms": [
+      "hard to make the turn",
+      "power steering light on",
+      "advanced track light on",
+      "brake system light on",
+      "warning lights flashing across message screen",
+      "airbags need replacement due to recall"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2130995",
+    "created_at": "2025-09-16T07:00:51Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The passenger airbag has not been replaced but I have a work order from my local dealership claiming they completed the recall. And my power steering/advance trac and automatic breaking system are not working. My power steering locked up on me driving 70 mph going down the highwa...",
+      "group": "restraints",
+      "id": "1885743",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 17.4184,
+      "year": 2010
+    },
+    {
+      "excerpt": "I have contacted the Ford dealership in my area over a year ago and still have not been serviced on the air bag recall. Also, the power steering system is faulty. I am getting no assistance in repairing from the location the vehicle was purchased from. Power steering message appe...",
+      "group": "restraints",
+      "id": "1872324",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 17.2235,
+      "year": 2010
+    },
+    {
+      "excerpt": "DEALER THAT SOLD ME THIS VEHICLE NEVER INFORMED ME ABOUT ANY RECALLS AND THAN ONE DAY MY SON WAS CHECKING THE OIL WHILE STATIONARY AND OFF WE THOUGHT IT WAS WEIRD THAT THERE WAS A LOOSE CABLE, HE CONNECTS IT AND THAN HE PROCEEDED TO TURN ON THE CAR TO OUR ASTONISHMENT THE AIRBAG...",
+      "group": "restraints",
+      "id": "1731257",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 13.6073,
+      "year": 2010
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-16T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009079,
+      "duration_ms": 10435,
+      "reason": "AIR BAGS/restraints: while driving, steering was hard to turn and power steering, AdvancTrac and brake system lights flashed; airbag recall replacement also needed.",
+      "started_at": "2025-09-16T07:00:46Z",
+      "step": 2,
+      "tokens": 2079,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-16T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The passenger airbag has not been replaced but I have a work order from my local dealership claiming they completed the recall. And my power steering/advance trac and automatic breaking system are not working. My power steering locked up on me driving 70 mph going down the highwa...",
+            "group": "restraints",
+            "id": "1885743",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 17.4184,
+            "year": 2010
+          },
+          {
+            "excerpt": "I have contacted the Ford dealership in my area over a year ago and still have not been serviced on the air bag recall. Also, the power steering system is faulty. I am getting no assistance in repairing from the location the vehicle was purchased from. Power steering message appe...",
+            "group": "restraints",
+            "id": "1872324",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 17.2235,
+            "year": 2010
+          },
+          {
+            "excerpt": "DEALER THAT SOLD ME THIS VEHICLE NEVER INFORMED ME ABOUT ANY RECALLS AND THAN ONE DAY MY SON WAS CHECKING THE OIL WHILE STATIONARY AND OFF WE THOUGHT IT WAS WEIRD THAT THERE WAS A LOOSE CABLE, HE CONNECTS IT AND THAN HE PROCEEDED TO TURN ON THE CAR TO OUR ASTONISHMENT THE AIRBAG...",
+            "group": "restraints",
+            "id": "1731257",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 13.6073,
+            "year": 2010
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-09-16T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-16T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-16T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-16T07:00:52Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-16T07:00:54Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-16T07:00:55Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-16T07:00:56Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

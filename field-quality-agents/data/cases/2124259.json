@@ -1,0 +1,302 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2124259",
+    "make": "BMW",
+    "mileage": null,
+    "model": "I4",
+    "narrative": "The vehicle randomly caught fire after sitting idle for approximately 8 hours.  Going to a conference in Aria Las Vegas and drove over 260 Miles.  There was no issues, no indicator warning lights or strange noises during the drive.  Arrived at Aira approximately 4:00PM.  Parked vehicle on the third floor of the Aira Self-Parking and did not touch the car after parking the car.  I received a call at approximately 12:00AM that night from Aria Security.  From Aria Security, stated that vehicle has caught fire.  Fire was put out by Clark County Fire department, fire report received.  A whiteness who called Aria Security, stated he heard loud popping, like small explosions, from driver side front tire before the fire started.  Clark County Fire Department stated fire originated on driver side front of engine area.   Battery not involved.   Car is total loss.  BMW NA performed a visual exam only.  BMW NA stated that due to damage and connectors being present, could not find cause of fire and unwilling to perform a more detailed inspection.  Cause of Fire and involved components are unknown at this time.",
+    "received_at": "2025-08-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124259",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124259",
+    "decided_at": "2025-08-26T07:01:03Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124259",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle randomly caught fire after sitting idle for approximately 8 hours."
+      },
+      {
+        "kind": "condition",
+        "quote": "after sitting idle for approximately 8 hours"
+      },
+      {
+        "kind": "condition",
+        "quote": "drove over 260 Miles"
+      },
+      {
+        "kind": "condition",
+        "quote": "There was no issues, no indicator warning lights or strange noises during the drive."
+      },
+      {
+        "kind": "condition",
+        "quote": "Parked vehicle on the third floor of the Aira Self-Parking and did not touch the car after parking the car."
+      },
+      {
+        "kind": "safety",
+        "quote": "stated that vehicle has caught fire."
+      },
+      {
+        "kind": "symptom",
+        "quote": "stated he heard loud popping, like small explosions, from driver side front tire before the fire started."
+      },
+      {
+        "kind": "symptom",
+        "quote": "fire originated on driver side front of engine area."
+      },
+      {
+        "kind": "other",
+        "quote": "Battery not involved."
+      },
+      {
+        "kind": "other",
+        "quote": "Car is total loss."
+      },
+      {
+        "kind": "other",
+        "quote": "Cause of Fire and involved components are unknown at this time."
+      }
+    ],
+    "conditions": [
+      "after sitting idle for approximately 8 hours",
+      "after a 260-mile drive",
+      "parked",
+      "no warning lights or strange noises during drive"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: random vehicle fire after sitting idle ~8 hours following a 260-mile drive; popping heard from driver-side front tire, fire originated at driver-side front engine area, battery not involved.",
+    "symptoms": [
+      "vehicle randomly caught fire after sitting idle",
+      "loud popping like small explosions from driver side front tire before fire",
+      "fire originated on driver side front of engine area"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124259",
+    "created_at": "2025-08-26T07:01:01Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On 6/8/23 I tried to start my car and received the following error: \"Drivetrain malfunction: Driving not possible. Call Roadside Assistance\" and the car turned off. I tried 3 more times to start the car and received the same message. I could not drive my car, and had it immediate...",
+      "group": "electrical_general",
+      "id": "1904369",
+      "make": "BMW",
+      "model": "I4",
+      "score": 12.5721,
+      "year": 2023
+    },
+    {
+      "excerpt": "The contact owns a 2023 BMW I4. The contact stated while reversing, the drive train malfunction warning light illuminated. The contact proceeded with his commute however, the steering warning light illuminated, and the vehicle shifted into park independently. There were several m...",
+      "group": "electrical_general",
+      "id": "1928928",
+      "make": "BMW",
+      "model": "I4",
+      "score": 5.6129,
+      "year": 2023
+    },
+    {
+      "excerpt": "Vehicle is an EV (platform G26) and charger flap door was locked and would not open. Problem is similar to problem reported on NHTSA for BMW vehicles for \"fuel filler door will not open\", SIB 51 27 20. Safety issue is vehicle can not be charged and creates risk for driver and pas...",
+      "group": "electrical_general",
+      "id": "1915242",
+      "make": "BMW",
+      "model": "I4",
+      "score": 4.5418,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-26T07:00:55Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0031573,
+      "duration_ms": 31080,
+      "reason": "Electrical system: random vehicle fire after sitting idle ~8 hours following a 260-mile drive; popping heard from driver-side front tire, fire originated at driver-side front engine area, battery not involved.",
+      "started_at": "2025-08-26T07:00:56Z",
+      "step": 2,
+      "tokens": 5900,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-26T07:00:57Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "I4",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On 6/8/23 I tried to start my car and received the following error: \"Drivetrain malfunction: Driving not possible. Call Roadside Assistance\" and the car turned off. I tried 3 more times to start the car and received the same message. I could not drive my car, and had it immediate...",
+            "group": "electrical_general",
+            "id": "1904369",
+            "make": "BMW",
+            "model": "I4",
+            "score": 12.5721,
+            "year": 2023
+          },
+          {
+            "excerpt": "The contact owns a 2023 BMW I4. The contact stated while reversing, the drive train malfunction warning light illuminated. The contact proceeded with his commute however, the steering warning light illuminated, and the vehicle shifted into park independently. There were several m...",
+            "group": "electrical_general",
+            "id": "1928928",
+            "make": "BMW",
+            "model": "I4",
+            "score": 5.6129,
+            "year": 2023
+          },
+          {
+            "excerpt": "Vehicle is an EV (platform G26) and charger flap door was locked and would not open. Problem is similar to problem reported on NHTSA for BMW vehicles for \"fuel filler door will not open\", SIB 51 27 20. Safety issue is vehicle can not be charged and creates risk for driver and pas...",
+            "group": "electrical_general",
+            "id": "1915242",
+            "make": "BMW",
+            "model": "I4",
+            "score": 4.5418,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-26T07:00:58Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-26T07:00:59Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-26T07:01:00Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-26T07:01:02Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-26T07:01:04Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-26T07:01:05Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-26T07:01:06Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

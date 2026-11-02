@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2154122",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "My 2023 Ram 1500 TRX has recurring safety-related failures of the infotainment system affecting the Uconnect 5 (12” screen). These issues are widespread in 2021–2024 Ram TRX and Ram 1500 models and began or worsened after forced over-the-air updates.  The primary defect is black-screen failures while driving and loud screeching noises coming from the radio. When the screen goes black or freezes, the truck loses all functions controlled through the display, including HVAC/defrost, backup camera, vehicle settings, seat controls, and performance gauges. This creates an immediate safety hazard: I cannot adjust climate/defrost, cannot see the required rear-view camera when shifting to reverse, and cannot access key vehicle information. The loud screeching noise causes you to immediately pull the vehicle over to turn off the truck or manually reset the radio.  Owners across multiple years consistently report: • Black screens, freezes, and reboots • Loss of HVAC control and dual-zone functions • Backup camera not displaying • Vehicle/Apps tabs failing to open • Uconnect error messages • Smaller, harder-to-read gauges after updates • Wireless CarPlay/Android Auto failures • No option to decline or roll back OTA updates  These failures distract the driver, remove access to federally required equipment (rear camera), and eliminate visibility and climate controls that directly affect safe operation. The system becomes unpredictable and unstable despite the vehicle being in motion.  My vehicle experiences the same issues, including: black screen while driving and loud screeching noise, loss of HVAC, camera not available, and system rebooting.  Because this affects essential safety-related controls and visibility, I believe this is a safety defect in Ram/Stellantis Uconnect 5 systems. I request NHTSA open a defect investigation and require Ram to correct these failures. Ram has known of these issues reported to RamCares for months and have yet to correct it.",
+    "received_at": "2025-12-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154122",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154122",
+    "decided_at": "2025-12-04T07:00:42Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154122",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "the infotainment system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "black-screen failures while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loud screeching noises coming from the radio"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system becomes unpredictable and unstable despite the vehicle being in motion."
+      },
+      {
+        "kind": "condition",
+        "quote": "began or worsened after forced over-the-air updates"
+      },
+      {
+        "kind": "safety",
+        "quote": "This creates an immediate safety hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "cannot see the required rear-view camera when shifting to reverse"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2023 Ram 1500 TRX Uconnect 5 12\" infotainment: black-screen failures and loud radio screeching while driving, beginning or worsening after forced OTA updates, taking out HVAC/defrost, rear-view camera and vehicle settings",
+    "symptoms": [
+      "screen goes black or freezes while driving",
+      "loud screeching noise from the radio",
+      "loss of functions controlled through the display: HVAC/defrost, backup camera, vehicle settings, seat controls, performance gauges",
+      "system reboots and behaves unpredictably",
+      "backup camera not displaying",
+      "Uconnect error messages and tabs failing to open"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154122",
+    "created_at": "2025-12-04T07:00:40Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Four times the truck has powered down while driving - all were when slowing to turn. No prior warning lights or out-of-spec conditions - battery level reading normal prior to shutdown. Truck shut down the engine automatically. Restarting the truck prompted the battery light but n...",
+      "group": "electrical_general",
+      "id": "2009775",
+      "make": "RAM",
+      "model": "1500",
+      "score": 19.4029,
+      "year": 2023
+    },
+    {
+      "excerpt": "Truck stalled suddenly, indicating a flashing message of electrical error of stability assistant. Truck restarted with a yellow engine light on, but would not allow dial to shift into drive. Automatic correct transmission would pull it back into park. Turned engine on and off sev...",
+      "group": "electrical_general",
+      "id": "1992429",
+      "make": "RAM",
+      "model": "1500",
+      "score": 17.0032,
+      "year": 2023
+    },
+    {
+      "excerpt": "When I was driving on a very busy road, the emergency/ parking brake immediately turned on while the truck was returning back in motion, which made the car come to a complete stop. I had to manually turn off the parking brake, even though I was not the one to turn it on in the fi...",
+      "group": "electrical_general",
+      "id": "2037877",
+      "make": "RAM",
+      "model": "1500",
+      "score": 16.792,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-04T07:00:34Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00070075,
+      "duration_ms": 6715,
+      "reason": "2023 Ram 1500 TRX Uconnect 5 12\" infotainment: black-screen failures and loud radio screeching while driving, beginning or worsening after forced OTA updates, taking out HVAC/defrost, rear-view camera and vehicle settings",
+      "started_at": "2025-12-04T07:00:35Z",
+      "step": 2,
+      "tokens": 1943,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-04T07:00:36Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Four times the truck has powered down while driving - all were when slowing to turn. No prior warning lights or out-of-spec conditions - battery level reading normal prior to shutdown. Truck shut down the engine automatically. Restarting the truck prompted the battery light but n...",
+            "group": "electrical_general",
+            "id": "2009775",
+            "make": "RAM",
+            "model": "1500",
+            "score": 19.4029,
+            "year": 2023
+          },
+          {
+            "excerpt": "Truck stalled suddenly, indicating a flashing message of electrical error of stability assistant. Truck restarted with a yellow engine light on, but would not allow dial to shift into drive. Automatic correct transmission would pull it back into park. Turned engine on and off sev...",
+            "group": "electrical_general",
+            "id": "1992429",
+            "make": "RAM",
+            "model": "1500",
+            "score": 17.0032,
+            "year": 2023
+          },
+          {
+            "excerpt": "When I was driving on a very busy road, the emergency/ parking brake immediately turned on while the truck was returning back in motion, which made the car come to a complete stop. I had to manually turn off the parking brake, even though I was not the one to turn it on in the fi...",
+            "group": "electrical_general",
+            "id": "2037877",
+            "make": "RAM",
+            "model": "1500",
+            "score": 16.792,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-04T07:00:37Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-04T07:00:38Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-04T07:00:39Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-04T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-04T07:00:43Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-04T07:00:44Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-04T07:00:45Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

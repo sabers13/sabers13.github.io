@@ -1,0 +1,469 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2095539",
+    "make": "CHRYSLER",
+    "mileage": null,
+    "model": "200",
+    "narrative": "Unknown the passenger airbag malfunction detection light is on with no known reason displayed",
+    "received_at": "2025-05-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2095539",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2095539",
+    "decided_at": "2025-05-28T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2095539",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "passenger airbag malfunction detection light is on"
+      },
+      {
+        "kind": "component_group",
+        "quote": "passenger airbag"
+      },
+      {
+        "kind": "other",
+        "quote": "with no known reason displayed"
+      },
+      {
+        "kind": "safety",
+        "quote": "passenger airbag malfunction detection light is on"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Test the passenger airbag malfunction detection circuit because the warning light is on with no stated cause; no rulebook match so use standard diagnostics.",
+    "symptoms": [
+      "passenger airbag malfunction detection light is on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2095539",
+    "created_at": "2025-05-28T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "passenger airbag malfunction detection light is on",
+        "source_id": "2095539",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "passenger airbag",
+        "source_id": "2095539",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "with no known reason displayed",
+        "source_id": "2095539",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "passenger airbag malfunction detection light is on",
+        "source_id": "2095539",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "The narrative only reports the passenger airbag malfunction detection light on with no known reason, with no stated conditions or fault codes. No rulebook entry matches, so the proposal is the standard restraint-system diagnostic test. A 2015 Chrysler 200 recall (16V114000) covers occupant classification module/seat cushion foam calibration, and similar cases describe the same passenger airbag warning light.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "16V114000",
+      "match": true,
+      "open_date": "2016-02-26",
+      "summary": "Chrysler (FCA US LLC) is recalling certain model year 2015 Chrysler 200 vehicles manufactured April 7, 2014, to August 3, 2015.  During service work, the affected vehicles may have had either the Occupant Classification Module (OCM) or the Seat Cushion Foam (SCF) of the front passenger seat replaced instead of the both pieces together, which make up a complete calibrated set."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Occupant Classification Module (OCM) or the Seat Cushion Foam (SCF) of the front passenger seat replaced instead of the both pieces together, which make up a complete calibrated set. The part was recalled I have the same type of car but my VIN is not showing up on the list. My ai...",
+      "group": "restraints",
+      "id": "1779415",
+      "make": "CHRYSLER",
+      "model": "200",
+      "score": 5.0309,
+      "year": 2015
+    },
+    {
+      "excerpt": "AT TIMES, BUT IT'S HAPPENED AT LEAST 12 IN THE PAST 10 MONTHS, THERE IS AWAY THAT A PERSON CAN SIT IN THE PASSENGER SIDE SEAT OR SOMETIMES BY ADJUSTING IT THAT WILL MAKE THE AIRBAG LIGHT COME ON. ALL I HAVE TO DO IS REACH UNDERNEATH THE SEAT AND JIGGLE THE WIRES A LITTLE AND IT G...",
+      "group": "restraints",
+      "id": "1701725",
+      "make": "CHRYSLER",
+      "model": "200",
+      "score": 3.3176,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Chrysler 200. The contact stated that while operating the vehicle, the front passenger’s side air bag warning light would remain illuminated and would turn off and on without a passenger being in the seat. The vehicle was taken to the local dealer who repl...",
+      "group": "restraints",
+      "id": "1768220",
+      "make": "CHRYSLER",
+      "model": "200",
+      "score": 2.3987,
+      "year": 2015
+    },
+    {
+      "excerpt": "Ok this model has 8 recalls and I've only received one. My airbag indicator has been on for awhile now. See they have had recall for seat change. Which is my indicator picks up when i move my seat a certain way. My car drives be itsself in the acceleration. The intake is throwed....",
+      "group": "restraints",
+      "id": "1809249",
+      "make": "CHRYSLER",
+      "model": "200",
+      "score": 2.3032,
+      "year": 2015
+    },
+    {
+      "excerpt": "IN THE PAST 3 YEARS THE ACTIVE GRILLE SHUTTER HAD TO BE FIXED 3 TIMES. THE CHECK ENGINE LIGHT WOULD ALWAYS COME UP FOR THIS ISSUE AFTER IT WAS STATIONARY OR PARKED OVER NIGHT AND THEN THE LIGHT WOULD COME UP WHEN IT WAS TIME TO DRIVE AGAIN. FINALLY THE DEALERSHIP FIXED THE THE PR...",
+      "group": "restraints",
+      "id": "1739444",
+      "make": "CHRYSLER",
+      "model": "200",
+      "score": 2.2731,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-28T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00048385,
+      "duration_ms": 7155,
+      "reason": "Passenger airbag malfunction detection light is on with no known reason or conditions stated",
+      "started_at": "2025-05-28T07:00:16Z",
+      "step": 2,
+      "tokens": 1274,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-28T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "200",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Occupant Classification Module (OCM) or the Seat Cushion Foam (SCF) of the front passenger seat replaced instead of the both pieces together, which make up a complete calibrated set. The part was recalled I have the same type of car but my VIN is not showing up on the list. My ai...",
+            "group": "restraints",
+            "id": "1779415",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 5.0309,
+            "year": 2015
+          },
+          {
+            "excerpt": "AT TIMES, BUT IT'S HAPPENED AT LEAST 12 IN THE PAST 10 MONTHS, THERE IS AWAY THAT A PERSON CAN SIT IN THE PASSENGER SIDE SEAT OR SOMETIMES BY ADJUSTING IT THAT WILL MAKE THE AIRBAG LIGHT COME ON. ALL I HAVE TO DO IS REACH UNDERNEATH THE SEAT AND JIGGLE THE WIRES A LITTLE AND IT G...",
+            "group": "restraints",
+            "id": "1701725",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 3.3176,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Chrysler 200. The contact stated that while operating the vehicle, the front passenger’s side air bag warning light would remain illuminated and would turn off and on without a passenger being in the seat. The vehicle was taken to the local dealer who repl...",
+            "group": "restraints",
+            "id": "1768220",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 2.3987,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-28T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-28T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-28T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Unknown the passenger airbag malfunction detection light is on with no known reason displayed"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Occupant Classification Module (OCM) or the Seat Cushion Foam (SCF) of the front passenger seat replaced instead of the both pieces together, which make up a complete calibrated set. The part was recalled I have the same type of car but my VIN is not showing up on the list. My ai...",
+            "group": "restraints",
+            "id": "1779415",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 5.0309,
+            "year": 2015
+          },
+          {
+            "excerpt": "AT TIMES, BUT IT'S HAPPENED AT LEAST 12 IN THE PAST 10 MONTHS, THERE IS AWAY THAT A PERSON CAN SIT IN THE PASSENGER SIDE SEAT OR SOMETIMES BY ADJUSTING IT THAT WILL MAKE THE AIRBAG LIGHT COME ON. ALL I HAVE TO DO IS REACH UNDERNEATH THE SEAT AND JIGGLE THE WIRES A LITTLE AND IT G...",
+            "group": "restraints",
+            "id": "1701725",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 3.3176,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Chrysler 200. The contact stated that while operating the vehicle, the front passenger’s side air bag warning light would remain illuminated and would turn off and on without a passenger being in the seat. The vehicle was taken to the local dealer who repl...",
+            "group": "restraints",
+            "id": "1768220",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 2.3987,
+            "year": 2015
+          },
+          {
+            "excerpt": "Ok this model has 8 recalls and I've only received one. My airbag indicator has been on for awhile now. See they have had recall for seat change. Which is my indicator picks up when i move my seat a certain way. My car drives be itsself in the acceleration. The intake is throwed....",
+            "group": "restraints",
+            "id": "1809249",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 2.3032,
+            "year": 2015
+          },
+          {
+            "excerpt": "IN THE PAST 3 YEARS THE ACTIVE GRILLE SHUTTER HAD TO BE FIXED 3 TIMES. THE CHECK ENGINE LIGHT WOULD ALWAYS COME UP FOR THIS ISSUE AFTER IT WAS STATIONARY OR PARKED OVER NIGHT AND THEN THE LIGHT WOULD COME UP WHEN IT WAS TIME TO DRIVE AGAIN. FINALLY THE DEALERSHIP FIXED THE THE PR...",
+            "group": "restraints",
+            "id": "1739444",
+            "make": "CHRYSLER",
+            "model": "200",
+            "score": 2.2731,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-28T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "CHRYSLER",
+        "model": "200",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+            "group": "restraints",
+            "id": "16V114000",
+            "make": "CHRYSLER",
+            "model": "200",
+            "open_date": "2016-02-26",
+            "summary": "Chrysler (FCA US LLC) is recalling certain model year 2015 Chrysler 200 vehicles manufactured April 7, 2014, to August 3, 2015.  During service work, the affected vehicles may have had either the Occupant Classification Module (OCM) or the Seat Cushion Foam (SCF) of the front passenger seat replaced instead of the both pieces together, which make up a complete calibrated set.",
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-28T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "CHRYSLER",
+        "model": "200",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-28T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0016347,
+      "duration_ms": 19508,
+      "reason": "The narrative only reports the passenger airbag malfunction detection light on with no known reason, with no stated conditions or fault codes. No rulebook entry matches, so the proposal is the standard restraint-system diagnostic test. A 2015 Chrysler 200 recall (16V114000) covers occupant classification module/seat cushion foam calibration, and similar cases describe the same passenger airbag warning light.",
+      "started_at": "2025-05-28T07:00:24Z",
+      "step": 10,
+      "tokens": 3836,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-05-28T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "passenger airbag malfunction detection light is on",
+          "passenger airbag",
+          "with no known reason displayed",
+          "passenger airbag malfunction detection light is on"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-28T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-28T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-28T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-28T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

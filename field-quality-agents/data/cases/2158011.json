@@ -1,0 +1,270 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2158011",
+    "make": "KIA",
+    "mileage": null,
+    "model": "OPTIMA",
+    "narrative": "My 2013 Kia Optima caught fire while my [XXX]  son and his friends were driving it. The car burnt up. Some truck drivers flagged my son down to let him know the car was on fire. They could have been killed if it wasn’t for the truck drivers warning him that the car was on fire while driving down the highway.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-12-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158011",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158011",
+    "decided_at": "2025-12-17T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158011",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "caught fire while my [XXX]  son and his friends were driving it"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car burnt up."
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving down the highway"
+      },
+      {
+        "kind": "safety",
+        "quote": "They could have been killed"
+      }
+    ],
+    "conditions": [
+      "while driving"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2013 Kia Optima electrical system caught fire while driving on the highway; the car burnt up.",
+    "symptoms": [
+      "caught fire while driving",
+      "car burnt up"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158011",
+    "created_at": "2025-12-17T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "MY 2013 KIA OPTIMA HAS A SAFETY HAZARD RECALL AND I WANT TO KNOW WHY IS KIA DRAGGING ITS FEET ON A POSSIBLE FIRE HAZARD ON A HECU FUSE.....SEEMS LIKE A SIMPLE FIX... BUT I AM [XXX] OLD AND CANNOT DRIVE MY CAR AND MUST PARK IT OUTSIDE IN THIS COLD WEATHER.....PLEASE NTSB LOOK INTO...",
+      "group": "electrical_general",
+      "id": "1954069",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 49.2872,
+      "year": 2013
+    },
+    {
+      "excerpt": "\"Hybrid System Warning Safely stop and Do not Drive\" has appeared multiple times. First time, brake fluid was flushed and car appeared to operate normally afterwards. 3 months later, now, happened twice within two weeks. Apparently, a very common issue. The car shuts down and I a...",
+      "group": "electrical_general",
+      "id": "1770437",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 14.667,
+      "year": 2013
+    },
+    {
+      "excerpt": "NINE RECALLS FROM KIA AND VERY DANGEROUS. RIGHT WHEN I THINK KIA CANT GET ANY MORE DANGEROUS WITH 2013 KIA OPTIMA AND BEING UNLUCKY ENOUGH TO OWN THE WHITE PEARL MODEL WITH PAINT THAT IS DOWN TO THE METAL, LAST RECALL AIRBAGS, SEATBELTS ECT. THIS LETTER TAKES THE CAKE. OUR RECORD...",
+      "group": "electrical_general",
+      "id": "1943962",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 10.2015,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00092575,
+      "duration_ms": 10843,
+      "reason": "2013 Kia Optima electrical system caught fire while driving on the highway; the car burnt up.",
+      "started_at": "2025-12-17T07:00:01Z",
+      "step": 2,
+      "tokens": 2081,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "OPTIMA",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "MY 2013 KIA OPTIMA HAS A SAFETY HAZARD RECALL AND I WANT TO KNOW WHY IS KIA DRAGGING ITS FEET ON A POSSIBLE FIRE HAZARD ON A HECU FUSE.....SEEMS LIKE A SIMPLE FIX... BUT I AM [XXX] OLD AND CANNOT DRIVE MY CAR AND MUST PARK IT OUTSIDE IN THIS COLD WEATHER.....PLEASE NTSB LOOK INTO...",
+            "group": "electrical_general",
+            "id": "1954069",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 49.2872,
+            "year": 2013
+          },
+          {
+            "excerpt": "\"Hybrid System Warning Safely stop and Do not Drive\" has appeared multiple times. First time, brake fluid was flushed and car appeared to operate normally afterwards. 3 months later, now, happened twice within two weeks. Apparently, a very common issue. The car shuts down and I a...",
+            "group": "electrical_general",
+            "id": "1770437",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 14.667,
+            "year": 2013
+          },
+          {
+            "excerpt": "NINE RECALLS FROM KIA AND VERY DANGEROUS. RIGHT WHEN I THINK KIA CANT GET ANY MORE DANGEROUS WITH 2013 KIA OPTIMA AND BEING UNLUCKY ENOUGH TO OWN THE WHITE PEARL MODEL WITH PAINT THAT IS DOWN TO THE METAL, LAST RECALL AIRBAGS, SEATBELTS ECT. THIS LETTER TAKES THE CAKE. OUR RECORD...",
+            "group": "electrical_general",
+            "id": "1943962",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 10.2015,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-17T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-17T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-17T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-17T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

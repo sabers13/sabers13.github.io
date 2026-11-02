@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2059070",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "The truck repeatedly while turning a corner. Will stall and engage the barking brake.  The engine will not always start up immediately following the stall.  If the engine does start, you can disengage the parking brake and continue on. However, the battery light will come on as well as an engine light.  If you do not pull over and completely shut the vehicle down. While, the battery light is on. Then eventually, what will happen Is it will drain the battery And the truck will just stall and not run at all.  The vehicle has been in to the dealership. Multiple times they are unable to recreate the issue.  I have brought the vehicle in muliple times.  With out and With all of the lights on and we have proven that once you shut down the truck down and restart it, all codes will delete themselves from the memory.  The scariest episode, where the truck stalled, was where I was turning left off a major highway and the vehicle stalled across 2 lanes of traffic and would not start.  I know that this is an ongoing issue west. D type of engine that I have, and it happens to these truck years  2019-2022.   If you call FCA Canada, they will say they're not aware. However, I've been dealing with this problem since I purchased the truck. The first stall happened two weeks after I bought it.  There is also a section on the Dodge forum. For this exact issue and multiple complaints in the better business bureau for this issue.",
+    "received_at": "2025-01-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2059070",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2059070",
+    "decided_at": "2025-01-23T07:01:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2059070",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "repeatedly while turning a corner"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Will stall and engage the barking brake."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The engine will not always start up immediately following the stall."
+      },
+      {
+        "kind": "symptom",
+        "quote": "However, the battery light will come on as well as an engine light."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Then eventually, what will happen Is it will drain the battery And the truck will just stall and not run at all."
+      },
+      {
+        "kind": "safety",
+        "quote": "The scariest episode, where the truck stalled, was where I was turning left off a major highway and the vehicle stalled across 2 lanes of traffic and would not start."
+      },
+      {
+        "kind": "other",
+        "quote": "all codes will delete themselves from the memory"
+      },
+      {
+        "kind": "other",
+        "quote": "Multiple times they are unable to recreate the issue."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: intermittent stall while turning, parking brake engagement, battery/engine lights, battery drain and no restart; one stall across traffic.",
+    "symptoms": [
+      "stall while turning a corner",
+      "parking brake engages during stall",
+      "engine does not always restart immediately after stall",
+      "battery warning light and engine light illuminate",
+      "battery drains and truck stalls and does not run",
+      "diagnostic codes clear after shutdown and restart"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2059070",
+    "created_at": "2025-01-23T07:01:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "This vehicle has stalled three times in separate occurrences in the last 12 months after stopping at an intersection for a stop sign. When attempting to continue on, the vehicle stalls and engages the emergency brake. All three occurrences have left me broadside in an intersectio...",
+      "group": "electrical_general",
+      "id": "1977652",
+      "make": "RAM",
+      "model": "1500",
+      "score": 33.0067,
+      "year": 2022
+    },
+    {
+      "excerpt": "The truck currently has 5804 miles. It has been to the dealership 4 times already for electrical-related issues, and once for a recall on the ECM. Total of 4 CILs by first 1000 miles. Then 1 additional light 8 days ago. Has been at service department since. The first major proble...",
+      "group": "electrical_general",
+      "id": "1828386",
+      "make": "RAM",
+      "model": "1500",
+      "score": 30.685,
+      "year": 2022
+    },
+    {
+      "excerpt": "Hello. While driving on the highway at 65MPH and decelerating down to 35MPH ,about to take a single-lane, curved, and elevated exit, the vehicle dashboard emitted a ping and engine turned off. The dashboard showed a message indicating to press the brake and push the ON/OFF button...",
+      "group": "electrical_general",
+      "id": "2036197",
+      "make": "RAM",
+      "model": "1500",
+      "score": 29.3327,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-23T07:01:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00091495,
+      "duration_ms": 16841,
+      "reason": "Electrical system: intermittent stall while turning, parking brake engagement, battery/engine lights, battery drain and no restart; one stall across traffic.",
+      "started_at": "2025-01-23T07:01:01Z",
+      "step": 2,
+      "tokens": 2216,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-23T07:01:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "This vehicle has stalled three times in separate occurrences in the last 12 months after stopping at an intersection for a stop sign. When attempting to continue on, the vehicle stalls and engages the emergency brake. All three occurrences have left me broadside in an intersectio...",
+            "group": "electrical_general",
+            "id": "1977652",
+            "make": "RAM",
+            "model": "1500",
+            "score": 33.0067,
+            "year": 2022
+          },
+          {
+            "excerpt": "The truck currently has 5804 miles. It has been to the dealership 4 times already for electrical-related issues, and once for a recall on the ECM. Total of 4 CILs by first 1000 miles. Then 1 additional light 8 days ago. Has been at service department since. The first major proble...",
+            "group": "electrical_general",
+            "id": "1828386",
+            "make": "RAM",
+            "model": "1500",
+            "score": 30.685,
+            "year": 2022
+          },
+          {
+            "excerpt": "Hello. While driving on the highway at 65MPH and decelerating down to 35MPH ,about to take a single-lane, curved, and elevated exit, the vehicle dashboard emitted a ping and engine turned off. The dashboard showed a message indicating to press the brake and push the ON/OFF button...",
+            "group": "electrical_general",
+            "id": "2036197",
+            "make": "RAM",
+            "model": "1500",
+            "score": 29.3327,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-23T07:01:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-23T07:01:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-23T07:01:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-23T07:01:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-23T07:01:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-23T07:01:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-23T07:01:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

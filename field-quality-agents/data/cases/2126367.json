@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2126367",
+    "make": "FORD",
+    "mileage": null,
+    "model": "MUSTANG MACH E",
+    "narrative": "The front camera has failed.  The automatic emergency breaking, the adaptive cruise control, and normal cruise control do not work, at all.  The camera began to fail within the first year of ownership but it would start to work shortly after.  After about 1.5 years of ownership, there was a permanent sign of malfunction on the screen, making the above features inoperable.",
+    "received_at": "2025-09-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2126367",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2126367",
+    "decided_at": "2025-09-02T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2126367",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The front camera has failed."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The automatic emergency breaking, the adaptive cruise control, and normal cruise control do not work, at all."
+      },
+      {
+        "kind": "condition",
+        "quote": "it would start to work shortly after"
+      },
+      {
+        "kind": "symptom",
+        "quote": "there was a permanent sign of malfunction on the screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "making the above features inoperable"
+      },
+      {
+        "kind": "safety",
+        "quote": "The automatic emergency breaking, the adaptive cruise control, and normal cruise control do not work, at all."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2022 Ford Mustang Mach-E ADAS front camera failure causing AEB, adaptive cruise control, and normal cruise control inoperable; initially intermittent, then permanent malfunction warning.",
+    "symptoms": [
+      "front camera failure",
+      "automatic emergency braking inoperable",
+      "adaptive cruise control inoperable",
+      "normal cruise control inoperable",
+      "intermittent camera operation initially",
+      "permanent malfunction warning on screen"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2126367",
+    "created_at": "2025-09-02T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Multiple safety features rendered INOPERABLE AND USELESS including front collision warning, automatic emergency braking, adaptive cruise control, lane keeping system because FORD uses an inferior product to connect the vehicle's cameras and sensors. Each of the systems listed \"fr...",
+      "group": "adas",
+      "id": "2015579",
+      "make": "FORD",
+      "model": "MUSTANG MACH E",
+      "score": 14.4007,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was pulling into my garage, steering with my left hand, making a slow, tight left turn from the drive way into the perpendicular garage. As the steering wheel turned, I believe my left palm hit the cruise control button and activated the adaptive cruise control. The vehicle sud...",
+      "group": "adas",
+      "id": "1830282",
+      "make": "FORD",
+      "model": "MUSTANG MACH E",
+      "score": 7.7775,
+      "year": 2022
+    },
+    {
+      "excerpt": "Power steering went out including 10+ error / fault codes displaying on the dash on the vehicle after planned having vehicle towed but was back to normal after a restart. Exiting the parking lot at a low speed power steering failed again resulting in a low speed crash. After havi...",
+      "group": "adas",
+      "id": "1847978",
+      "make": "FORD",
+      "model": "MUSTANG MACH E",
+      "score": 7.0379,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-02T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0015403,
+      "duration_ms": 24944,
+      "reason": "2022 Ford Mustang Mach-E ADAS front camera failure causing AEB, adaptive cruise control, and normal cruise control inoperable; initially intermittent, then permanent malfunction warning.",
+      "started_at": "2025-09-02T07:00:31Z",
+      "step": 2,
+      "tokens": 3094,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-02T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MUSTANG MACH E",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Multiple safety features rendered INOPERABLE AND USELESS including front collision warning, automatic emergency braking, adaptive cruise control, lane keeping system because FORD uses an inferior product to connect the vehicle's cameras and sensors. Each of the systems listed \"fr...",
+            "group": "adas",
+            "id": "2015579",
+            "make": "FORD",
+            "model": "MUSTANG MACH E",
+            "score": 14.4007,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was pulling into my garage, steering with my left hand, making a slow, tight left turn from the drive way into the perpendicular garage. As the steering wheel turned, I believe my left palm hit the cruise control button and activated the adaptive cruise control. The vehicle sud...",
+            "group": "adas",
+            "id": "1830282",
+            "make": "FORD",
+            "model": "MUSTANG MACH E",
+            "score": 7.7775,
+            "year": 2022
+          },
+          {
+            "excerpt": "Power steering went out including 10+ error / fault codes displaying on the dash on the vehicle after planned having vehicle towed but was back to normal after a restart. Exiting the parking lot at a low speed power steering failed again resulting in a low speed crash. After havi...",
+            "group": "adas",
+            "id": "1847978",
+            "make": "FORD",
+            "model": "MUSTANG MACH E",
+            "score": 7.0379,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-02T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-02T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-02T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-02T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-02T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-02T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-02T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

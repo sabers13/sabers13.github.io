@@ -1,0 +1,287 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2127907",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ID.4",
+    "narrative": "This issue relates to NHTSA Recall 24V344 / VW Recall 919A as the repair for this recall has already been applied to my vehicle. Despite that, while driving, my vehicle experienced a complete electronics shutdown, including loss of the instrument cluster, center display, and rearview camera. This occurred after the recall 919A software update was applied. As such, I believe the safety of my self and others was put at risk.   I brought my vehicle to the dealer for diagnosis and they identified fault code U111000 with symptom 7223 but informed me that this was classified “non-customer-relevant” and therefore should be ignored. I believe the repair that Volkswagen has provided for Recall 24V344 is ineffective and the conditions that instigated this recall still exist.",
+    "received_at": "2025-09-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2127907",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2127907",
+    "decided_at": "2025-09-08T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2127907",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "complete electronics shutdown"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loss of the instrument cluster, center display, and rearview camera"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "after the recall 919A software update was applied"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "fault code U111000 with symptom 7223"
+      },
+      {
+        "kind": "safety",
+        "quote": "safety of my self and others was put at risk"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Recall 24V344 / VW Recall 919A"
+      }
+    ],
+    "conditions": [
+      "while driving",
+      "after service"
+    ],
+    "fault_codes": [
+      "U111000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: complete electronics shutdown with loss of instrument cluster, center display, and rearview camera while driving after Recall 919A software update.",
+    "symptoms": [
+      "complete electronics shutdown",
+      "loss of instrument cluster",
+      "loss of center display",
+      "loss of rearview camera"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2127907",
+    "created_at": "2025-09-08T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2023 Volkswagen ID.4. The contact stated that while driving at various speeds, the instrument panel display was not working as intended. The contact received notification of NHTSA Campaign Number: 24V344000 (Back Over Prevention, Equipment, Electrical System);...",
+      "group": "electrical_general",
+      "id": "2007042",
+      "make": "VOLKSWAGEN",
+      "model": "ID.4",
+      "score": 20.0123,
+      "year": 2023
+    },
+    {
+      "excerpt": "There has been no update regarding the open recalls on the ID4 from Volkswagen. The 919A/24V344 recall is over 5 months old with no update from Volkswagen and the 57J9/24V651 recall for the door handles has no update from Volkswagen at all.",
+      "group": "electrical_general",
+      "id": "2036365",
+      "make": "VOLKSWAGEN",
+      "model": "ID.4",
+      "score": 19.2251,
+      "year": 2023
+    },
+    {
+      "excerpt": "Second day after purchasing the new car, WHILE DRIVING the front passenger door just swung open. I thought it was not closed properly, but it kept happening again! I took it to the dealer and was informed that they are seeing multiple cars with the same issue. It is a huge safety...",
+      "group": "electrical_general",
+      "id": "1877358",
+      "make": "VOLKSWAGEN",
+      "model": "ID.4",
+      "score": 14.7232,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-08T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000745,
+      "duration_ms": 7967,
+      "reason": "Electrical system: complete electronics shutdown with loss of instrument cluster, center display, and rearview camera while driving after Recall 919A software update.",
+      "started_at": "2025-09-08T07:00:01Z",
+      "step": 2,
+      "tokens": 1827,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-08T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ID.4",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2023 Volkswagen ID.4. The contact stated that while driving at various speeds, the instrument panel display was not working as intended. The contact received notification of NHTSA Campaign Number: 24V344000 (Back Over Prevention, Equipment, Electrical System);...",
+            "group": "electrical_general",
+            "id": "2007042",
+            "make": "VOLKSWAGEN",
+            "model": "ID.4",
+            "score": 20.0123,
+            "year": 2023
+          },
+          {
+            "excerpt": "There has been no update regarding the open recalls on the ID4 from Volkswagen. The 919A/24V344 recall is over 5 months old with no update from Volkswagen and the 57J9/24V651 recall for the door handles has no update from Volkswagen at all.",
+            "group": "electrical_general",
+            "id": "2036365",
+            "make": "VOLKSWAGEN",
+            "model": "ID.4",
+            "score": 19.2251,
+            "year": 2023
+          },
+          {
+            "excerpt": "Second day after purchasing the new car, WHILE DRIVING the front passenger door just swung open. I thought it was not closed properly, but it kept happening again! I took it to the dealer and was informed that they are seeing multiple cars with the same issue. It is a huge safety...",
+            "group": "electrical_general",
+            "id": "1877358",
+            "make": "VOLKSWAGEN",
+            "model": "ID.4",
+            "score": 14.7232,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-08T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-08T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-08T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-08T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-08T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-08T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-08T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

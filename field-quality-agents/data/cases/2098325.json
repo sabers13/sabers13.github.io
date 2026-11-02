@@ -1,0 +1,378 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:SPEEDOMETER/ODOMETER",
+    "group": "instrumentation",
+    "id": "2098325",
+    "make": "FORD",
+    "mileage": 125055,
+    "model": "TRANSIT",
+    "narrative": "Odometer Fraud. The contact purchased a 2023 Ford Transit. The contact stated that while attempting to register the vehicle, it was discovered that there was a mileage discrepancy. The vehicle was a dealer sale. At the time of purchase, the vehicle mileage was 20,813 and at the time of registration, it was discovered that the mileage was 125,055.",
+    "received_at": "2025-06-06",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2098325",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2098325",
+    "decided_at": "2025-06-06T07:00:27Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2098325",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Odometer Fraud."
+      },
+      {
+        "kind": "symptom",
+        "quote": "there was a mileage discrepancy"
+      },
+      {
+        "kind": "condition",
+        "quote": "while attempting to register the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle was a dealer sale."
+      },
+      {
+        "kind": "other",
+        "quote": "the vehicle mileage was 20,813"
+      },
+      {
+        "kind": "other",
+        "quote": "the mileage was 125,055"
+      }
+    ],
+    "conditions": [
+      "mileage discrepancy discovered at registration",
+      "dealer sale"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Verify odometer/instrument-cluster mileage integrity on a 2023 Ford Transit because the reported 20,813 at purchase versus 125,055 at registration indicates a mileage discrepancy; no rulebook targeted test matches, so use the standard test.",
+    "symptoms": [
+      "odometer fraud allegation",
+      "mileage discrepancy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2098325",
+    "created_at": "2025-06-06T07:00:25Z",
+    "evidence": [
+      {
+        "quote": "Odometer Fraud.",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "there was a mileage discrepancy",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while attempting to register the vehicle",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was a dealer sale.",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle mileage was 20,813",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the mileage was 125,055",
+        "source_id": "2098325",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative alleges odometer fraud and states a mileage discrepancy: the vehicle showed 20,813 at dealer purchase but 125,055 at registration. The recalls include 2023 Transit instrument-cluster issues, but the rulebook has no matching entry and no targeted load test is named. Therefore the standard diagnostic/verification test is appropriate.",
+    "requested_info": [],
+    "summary": "Verify odometer/instrument-cluster mileage integrity on a 2023 Ford Transit because the reported 20,813 at purchase versus 125,055 at registration indicates a mileage discrepancy; no rulebook targeted test matches, so use the standard test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V339000",
+      "match": true,
+      "open_date": "2025-05-23",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles previously repaired incorrectly under recall number 22V415. The Instrument Panel Cluster may not properly illuminate warning lights or gauges. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 101, \"Control and Displays.\""
+    },
+    {
+      "id": "22V791000",
+      "match": true,
+      "open_date": "2022-10-20",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles.  The heating, ventilation, and air-conditioning (HVAC) system's controls, including those for defog and defrost, may become inoperative."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-06T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008833,
+      "duration_ms": 14505,
+      "reason": "Instrument panel speedometer/odometer on a 2023 Ford Transit; mileage discrepancy with 20,813 at purchase vs 125,055 at registration, dealer sale.",
+      "started_at": "2025-06-06T07:00:16Z",
+      "step": 2,
+      "tokens": 1999,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-06-06T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-06T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-06-06T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Odometer Fraud. The contact purchased a 2023 Ford Transit. The contact stated that while attempting to register the vehicle, it was discovered that there was a mileage discrepancy. The vehicle was a dealer sale. At the time of purchase, the vehicle mileage was 20,813 and at the time of registration, it was discovered that the mileage was 125,055."
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-06T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+            "group": "instrumentation",
+            "id": "25V339000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2025-05-23",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles previously repaired incorrectly under recall number 22V415. The Instrument Panel Cluster may not properly illuminate warning lights or gauges. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 101, \"Control and Displays.\"",
+            "year": 2023
+          },
+          {
+            "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+            "group": "instrumentation",
+            "id": "22V791000",
+            "make": "FORD",
+            "model": "TRANSIT",
+            "open_date": "2022-10-20",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Transit vehicles.  The heating, ventilation, and air-conditioning (HVAC) system's controls, including those for defog and defrost, may become inoperative.",
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-06T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "TRANSIT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-06T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.000927,
+      "duration_ms": 8832,
+      "reason": "The narrative alleges odometer fraud and states a mileage discrepancy: the vehicle showed 20,813 at dealer purchase but 125,055 at registration. The recalls include 2023 Transit instrument-cluster issues, but the rulebook has no matching entry and no targeted load test is named. Therefore the standard diagnostic/verification test is appropriate.",
+      "started_at": "2025-06-06T07:00:23Z",
+      "step": 9,
+      "tokens": 2370,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-06-06T07:00:24Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Odometer Fraud.",
+          "there was a mileage discrepancy",
+          "while attempting to register the vehicle",
+          "The vehicle was a dealer sale.",
+          "the vehicle mileage was 20,813",
+          "the mileage was 125,055"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-06T07:00:26Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-06T07:00:28Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-06T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-06T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

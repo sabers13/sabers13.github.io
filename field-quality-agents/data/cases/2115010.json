@@ -1,0 +1,353 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2115010",
+    "make": "FORD",
+    "mileage": null,
+    "model": "RANGER",
+    "narrative": "ive had 2 seperate issues with my 2024 for ranger one is a steering assist fault the other is a electric fault on the speedometer jumping up and down while its in park and causing an issue",
+    "received_at": "2025-07-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2115010",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2115010",
+    "decided_at": "2025-07-29T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2115010",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "steering assist fault"
+      },
+      {
+        "kind": "symptom",
+        "quote": "electric fault on the speedometer jumping up and down while its in park"
+      },
+      {
+        "kind": "condition",
+        "quote": "while its in park"
+      },
+      {
+        "kind": "other",
+        "quote": "causing an issue"
+      }
+    ],
+    "conditions": [
+      "while its in park"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the 2024 Ford Ranger's electrical system for a steering assist fault and a speedometer that jumps while in park, since no rulebook entry supports a targeted load test.",
+    "symptoms": [
+      "steering assist fault",
+      "electric fault on the speedometer jumping up and down while its in park",
+      "causing an issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2115010",
+    "created_at": "2025-07-29T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "steering assist fault",
+        "source_id": "2115010",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "electric fault on the speedometer jumping up and down while its in park",
+        "source_id": "2115010",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while its in park",
+        "source_id": "2115010",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "causing an issue",
+        "source_id": "2115010",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports two separate electrical complaints: a steering assist fault and a speedometer electric fault where the speedometer jumps up and down while the vehicle is in park. The rulebook returned no matching entries, recalls and investigations returned no supporting documents, and similar cases returned no results, so the standard non-targeted electrical diagnostic test is appropriate rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the 2024 Ford Ranger's electrical system for a steering assist fault and a speedometer that jumps while in park, since no rulebook entry supports a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "26V238000",
+      "match": true,
+      "open_date": "2026-04-14",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Ranger vehicles. The sun visor or headliner wiring harnesses may be improperly positioned or have excessive tape thickness, which can result in damaged wires."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008689,
+      "duration_ms": 11278,
+      "reason": "Ford Ranger electrical system: steering assist fault and speedometer electric fault with jumping while in park.",
+      "started_at": "2025-07-29T07:00:01Z",
+      "step": 2,
+      "tokens": 1939,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "RANGER",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-07-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-07-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "ive had 2 seperate issues with my 2024 for ranger one is a steering assist fault the other is a electric fault on the speedometer jumping up and down while its in park and causing an issue"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-29T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "RANGER",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM",
+            "group": "electrical_general",
+            "id": "26V238000",
+            "make": "FORD",
+            "model": "RANGER",
+            "open_date": "2026-04-14",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Ranger vehicles. The sun visor or headliner wiring harnesses may be improperly positioned or have excessive tape thickness, which can result in damaged wires.",
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-29T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "RANGER",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-29T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00045975,
+      "duration_ms": 7837,
+      "reason": "The narrative reports two separate electrical complaints: a steering assist fault and a speedometer electric fault where the speedometer jumps up and down while the vehicle is in park. The rulebook returned no matching entries, recalls and investigations returned no supporting documents, and similar cases returned no results, so the standard non-targeted electrical diagnostic test is appropriate rather than a targeted load test.",
+      "started_at": "2025-07-29T07:00:09Z",
+      "step": 10,
+      "tokens": 1421,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-07-29T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "steering assist fault",
+          "electric fault on the speedometer jumping up and down while its in park",
+          "while its in park",
+          "causing an issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-29T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-29T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-29T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-29T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

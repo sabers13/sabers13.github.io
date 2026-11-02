@@ -1,0 +1,272 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2149102",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "PILOT",
+    "narrative": "Vehicle is setting multiple faults for ADAS system. LKAS, ACC, collision mitigation system, auto high beam lights inoperable. Forward facing camera in the top of the windshield has failed.",
+    "received_at": "2025-11-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2149102",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2149102",
+    "decided_at": "2025-11-16T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2149102",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ADAS system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple faults for ADAS system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "LKAS, ACC, collision mitigation system, auto high beam lights inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Forward facing camera in the top of the windshield has failed"
+      },
+      {
+        "kind": "safety",
+        "quote": "LKAS, ACC, collision mitigation system, auto high beam lights inoperable"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance/AEB: multiple ADAS faults with LKAS, ACC, collision mitigation and auto high beam inoperable; forward-facing windshield camera failed.",
+    "symptoms": [
+      "multiple ADAS faults",
+      "LKAS inoperable",
+      "ACC inoperable",
+      "collision mitigation system inoperable",
+      "auto high beam lights inoperable",
+      "forward-facing windshield camera failed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2149102",
+    "created_at": "2025-11-16T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My car started stating that 6 systems were having problems. The adaptive cruise control system, automatic high beam system, blind spot information system, road departure mitigation system, collision mitigation system, and lane keep assist system. I took the car to the Honda deale...",
+      "group": "adas",
+      "id": "2024326",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 15.4156,
+      "year": 2021
+    },
+    {
+      "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+      "group": "adas",
+      "id": "1920912",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.4263,
+      "year": 2021
+    },
+    {
+      "excerpt": "Normal driving of vehicle when suddenly several warning lights began to appear and show up every time when driving (LKAS, ACC, Mitigation, etc) despite these features working. Honda dealership claims it is due to a faulty front camera. Safety at risk because if these systems do f...",
+      "group": "adas",
+      "id": "2030200",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 11.3998,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-16T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00152395,
+      "duration_ms": 17517,
+      "reason": "Forward collision avoidance/AEB: multiple ADAS faults with LKAS, ACC, collision mitigation and auto high beam inoperable; forward-facing windshield camera failed.",
+      "started_at": "2025-11-16T07:00:31Z",
+      "step": 2,
+      "tokens": 3036,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-16T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My car started stating that 6 systems were having problems. The adaptive cruise control system, automatic high beam system, blind spot information system, road departure mitigation system, collision mitigation system, and lane keep assist system. I took the car to the Honda deale...",
+            "group": "adas",
+            "id": "2024326",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 15.4156,
+            "year": 2021
+          },
+          {
+            "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+            "group": "adas",
+            "id": "1920912",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.4263,
+            "year": 2021
+          },
+          {
+            "excerpt": "Normal driving of vehicle when suddenly several warning lights began to appear and show up every time when driving (LKAS, ACC, Mitigation, etc) despite these features working. Honda dealership claims it is due to a faulty front camera. Safety at risk because if these systems do f...",
+            "group": "adas",
+            "id": "2030200",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 11.3998,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-16T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-16T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-16T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-16T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-16T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-16T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-16T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

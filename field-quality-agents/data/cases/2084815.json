@@ -1,0 +1,460 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2084815",
+    "make": "INFINITI",
+    "mileage": 107892,
+    "model": "QX30",
+    "narrative": "The contact owns a 2017 Infiniti QX30. The contact stated that while driving at an undisclosed speed, the air bag warning light illuminated. The vehicle was taken to the dealer, where it was diagnosed and determined that the clock spring module had failed and needed to be replaced. The vehicle was not repaired. The manufacturer was not made aware of the failure. The failure mileage was approximately 107,892.",
+    "received_at": "2025-04-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2084815",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084815",
+    "decided_at": "2025-04-21T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2084815",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "air bag warning light illuminated"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "component_group",
+        "quote": "clock spring module"
+      },
+      {
+        "kind": "other",
+        "quote": "clock spring module had failed"
+      },
+      {
+        "kind": "other",
+        "quote": "failure mileage was approximately 107,892"
+      }
+    ],
+    "conditions": [
+      "while driving at an undisclosed speed"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2017 Infiniti QX30 air bag warning lamp illuminated while driving after dealer found a failed clock spring; verify the restraint system with a standard diagnostic because no rulebook targeted test matches.",
+    "symptoms": [
+      "air bag warning light illuminated"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "EA21002",
+      "match": true,
+      "open_date": "2021-09-17",
+      "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open."
+    },
+    {
+      "id": "EA21002",
+      "match": true,
+      "open_date": "2021-09-17",
+      "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open."
+    }
+  ],
+  "proposal": {
+    "case_id": "2084815",
+    "created_at": "2025-04-21T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "air bag warning light illuminated",
+        "source_id": "2084815",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving at an undisclosed speed",
+        "source_id": "2084815",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "clock spring module",
+        "source_id": "2084815",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "clock spring module had failed",
+        "source_id": "2084815",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "failure mileage was approximately 107,892",
+        "source_id": "2084815",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "The narrative reports the air bag warning light illuminating while driving and a dealer diagnosis that the clock spring module had failed. Recalls for this make/model include a clockspring-related driver air bag deployment concern (17V691000), but the rulebook returned no targeted test, so a standard restraint-system diagnostic/load check is proposed. Safety relevance is flagged because a failed clock spring can affect air bag system operation.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "17V691000",
+      "match": true,
+      "open_date": "2017-11-01",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling 2017-2018 Infiniti QX30 vehicles.  The driver's air bag may unexpectedly deploy due to insufficient grounding of the steering components if an electrostatic discharge occurs and the air bag clockspring is broken."
+    },
+    {
+      "id": "17V143000",
+      "match": true,
+      "open_date": "2017-03-06",
+      "summary": "Nissan North America Inc. (Nissan) is recalling certain 2017 Infiniti QX30 vehicles.  The affected vehicles have a driver-side curtain air bag inflator initiator that may fail to ignite during a crash, preventing the air bag from deploying."
+    },
+    {
+      "id": "16V939000",
+      "match": true,
+      "open_date": "2016-12-28",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2017 Infiniti QX30 vehicles manufactured August 11, 2016, to September 27, 2016.  The affected vehicles have a passenger air bag inflator initiator that may fail to ignite during a crash, preventing the air bag from deploying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Hello. My vin number is not showing unresolved recalls, but I believe it is based on my experience. I was parking my car, which involved turning my steering wheel all the way to the right, and heard a crunching, clicking sound. I did some teoubleshooting, and believe it is the cl...",
+      "group": "restraints",
+      "id": "2023802",
+      "make": "INFINITI",
+      "model": "QX30",
+      "score": 2.322,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-21T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0025552,
+      "duration_ms": 36598,
+      "reason": "2017 Infiniti QX30 air bag warning light illuminated while driving; dealer diagnosed failed clock spring module.",
+      "started_at": "2025-04-21T07:00:21Z",
+      "step": 2,
+      "tokens": 4781,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-04-21T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "INFINITI",
+        "model": "QX30",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello. My vin number is not showing unresolved recalls, but I believe it is based on my experience. I was parking my car, which involved turning my steering wheel all the way to the right, and heard a crunching, clicking sound. I did some teoubleshooting, and believe it is the cl...",
+            "group": "restraints",
+            "id": "2023802",
+            "make": "INFINITI",
+            "model": "QX30",
+            "score": 2.322,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-04-21T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-21T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-04-21T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2017 Infiniti QX30. The contact stated that while driving at an undisclosed speed, the air bag warning light illuminated. The vehicle was taken to the dealer, where it was diagnosed and determined that the clock spring module had failed and needed to be replaced. The vehicle was not repaired. The manufacturer was not made aware of the failure. The failure mileage was approximately 107,892."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello. My vin number is not showing unresolved recalls, but I believe it is based on my experience. I was parking my car, which involved turning my steering wheel all the way to the right, and heard a crunching, clicking sound. I did some teoubleshooting, and believe it is the cl...",
+            "group": "restraints",
+            "id": "2023802",
+            "make": "INFINITI",
+            "model": "QX30",
+            "score": 2.322,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-21T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "INFINITI",
+        "model": "QX30",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL",
+            "group": "restraints",
+            "id": "17V691000",
+            "make": "INFINITI",
+            "model": "QX30",
+            "open_date": "2017-11-01",
+            "summary": "Nissan North America, Inc. (Nissan) is recalling 2017-2018 Infiniti QX30 vehicles.  The driver's air bag may unexpectedly deploy due to insufficient grounding of the steering components if an electrostatic discharge occurs and the air bag clockspring is broken.",
+            "year": 2017
+          },
+          {
+            "component": "AIR BAGS:SIDE/WINDOW",
+            "group": "restraints",
+            "id": "17V143000",
+            "make": "INFINITI",
+            "model": "QX30",
+            "open_date": "2017-03-06",
+            "summary": "Nissan North America Inc. (Nissan) is recalling certain 2017 Infiniti QX30 vehicles.  The affected vehicles have a driver-side curtain air bag inflator initiator that may fail to ignite during a crash, preventing the air bag from deploying.",
+            "year": 2017
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "16V939000",
+            "make": "INFINITI",
+            "model": "QX30",
+            "open_date": "2016-12-28",
+            "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2017 Infiniti QX30 vehicles manufactured August 11, 2016, to September 27, 2016.  The affected vehicles have a passenger air bag inflator initiator that may fail to ignite during a crash, preventing the air bag from deploying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\"",
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-21T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "INFINITI",
+        "model": "QX30",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "EA21002",
+            "make": "INFINITI",
+            "model": "QX30",
+            "open_date": "2021-09-17",
+            "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open.",
+            "year": 2017
+          },
+          {
+            "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+            "group": "restraints",
+            "id": "EA21002",
+            "make": "INFINITI",
+            "model": "QX30",
+            "open_date": "2021-09-17",
+            "summary": "From 2000 through 2017, Takata produced millions of air bag inflators using two types of phase-stabilized ammonium nitrate (\"PSAN\") propellant -- propellant 2004 and propellant 2004L. After prolonged exposure to high temperature cycles and humidity, inflators using propellant 2004 can degrade, causing the propellant to burn too quickly when ignited. The rapid burning can cause the inflator to rupture during deployment, potentially causing serious or even fatal injury to vehicle occupants. See 2016 Blomquist Report at www.nhtsa.gov/sites/nhtsa.gov/files/documents/expert_report-hrblomquist.pdf.Consequently, all frontal inflators using propellant 2004 that do not contain a \"desiccant\" (a substance that traps and holds moisture) in US vehicles are under recall. These \"non-desiccated\" inflators either have been or are required to be replaced.In some cases, the remedy part for these recalled inflators was, or will be, an inflator using either propellant 2004 or 2004L that does contain a desiccant. None of these \"desiccated\" remedy parts (which were installed in older model year vehicles) are currently under recall for a degradation concern. Certain subsets of desiccated PSAN inflators using propellant 2004 for use as original equipment, however, have been recalled for a degradation concern. All Takata inflators produced with propellant 2004L contain desiccant, and none of these desiccated inflators using propellant 2004L are under recall for a degradation concern. There have been no reported field ruptures in any non-recalled desiccated PSAN inflators.It is understood that desiccants fully saturate at some threshold, at which point any additional moisture will not be captured. This means the degradation process observed in non-desiccated inflators using propellant 2004 may also occur in non-recalled desiccated inflators using propellant 2004, assuming additional moisture enters the inflator and high temperature cycling occurs. Based on available information, desiccant saturation can occur within the first five years in the worst environments, and the time required for full saturation is affected by multiple factors. While no present safety risk has been identified, further work is needed to evaluate the future risk of non-recalled desiccated inflators using propellant 2004.Three entities -- Takata (now known as TK Global), the Independent Testing Coalition, and Exponent -- have been studying the long-term behavior of Takata desiccated PSAN inflators using propellant 2004L (as well as 2004) in the presence of moisture and temperature cycling. The research efforts, which include development of predictive modeling techniques and field sample analysis, are ongoing. To date, none of the researchers have identified field evidence showing that propellant 2004L is undergoing a degradation process that leads to aggressive deployment and potential rupture. However, the time in service of such inflators remains short compared to that of the inflators using propellant 2004. Further study is needed to assess the long-term safety of desiccated inflators using propellant 2004L.The Office of Defects Investigation is opening this investigation to examine whether a safety defect related to propellant degradation exists in non-recalled desiccated PSAN frontal inflators manufactured by Takata. This investigation will require extensive information on Takata production processes and surveys of inflators in the field. Lists of recall actions that may have used desiccated PSAN inflators as remedy parts, as well as the makes and models originally manufactured with them, is available with the downloadable version of this document (see nhtsa.gov/recalls?nhtsaId=EA21002 -- note this information is subject to change/revision as the investigation proceeds). This investigation does not supersede EA15-001, which remains open.",
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-21T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "while driving"
+        ]
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00137745,
+      "duration_ms": 21140,
+      "reason": "The narrative reports the air bag warning light illuminating while driving and a dealer diagnosis that the clock spring module had failed. Recalls for this make/model include a clockspring-related driver air bag deployment concern (17V691000), but the rulebook returned no targeted test, so a standard restraint-system diagnostic/load check is proposed. Safety relevance is flagged because a failed clock spring can affect air bag system operation.",
+      "started_at": "2025-04-21T07:00:29Z",
+      "step": 10,
+      "tokens": 4629,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-04-21T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "air bag warning light illuminated",
+          "while driving at an undisclosed speed",
+          "clock spring module",
+          "clock spring module had failed",
+          "failure mileage was approximately 107,892"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-21T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-21T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-21T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-21T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2136472",
+    "make": "ACURA",
+    "mileage": null,
+    "model": "RDX",
+    "narrative": "Low beam headlights do not reflect. I can barely see when driving at night due to the low beams. I replaced the bulbs with a high grade brand and restored the lenses to the housing unit and they are very clear. The Reflector or Housing is degraded so the bulbs do not shine bright enough. This is a serious safety issue. I almost hit a deer that I couldn’t see in my neighborhood. We have great street lighting and it was 7:50pm so not very dark.",
+    "received_at": "2025-10-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136472",
+    "status": "needs_engineer",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136472",
+    "decided_at": "2025-10-04T07:00:20Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2136472",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Low beam headlights"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Low beam headlights do not reflect."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I can barely see when driving at night due to the low beams."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Reflector or Housing is degraded so the bulbs do not shine bright enough."
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a serious safety issue."
+      },
+      {
+        "kind": "safety",
+        "quote": "I almost hit a deer that I couldn’t see in my neighborhood."
+      },
+      {
+        "kind": "condition",
+        "quote": "We have great street lighting and it was 7:50pm so not very dark."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "Low beam headlights do not reflect or shine bright enough due to degraded reflector/housing, causing poor night visibility and a near deer collision.",
+    "symptoms": [
+      "low beam headlights do not reflect",
+      "barely see when driving at night",
+      "bulbs do not shine bright enough",
+      "degraded reflector or housing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136472",
+    "created_at": "2025-10-04T07:00:17Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The headlights are so dim that I have to drive with the high beams on at all times or I can’t see. I even had an Acura dealer try to clean them and it didn’t help. It’s crazy that this is a known issue (according to the Acura dealership) and this hasn’t been recalled. I’m basical...",
+      "group": "body_controls",
+      "id": "1941275",
+      "make": "ACURA",
+      "model": "RDX",
+      "score": 6.6714,
+      "year": 2014
+    },
+    {
+      "excerpt": "my car has 85K miles on it. the headlights are so dim that they might as well not even be on. I have replaced the bulbs, no help. There's no oxidation on the outer lens of the headlight assembly. There's some kind of defect in the inner reflector or lens of the headlight assembly...",
+      "group": "body_controls",
+      "id": "1860296",
+      "make": "ACURA",
+      "model": "RDX",
+      "score": 3.3947,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-04T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00077215,
+      "duration_ms": 12316,
+      "reason": "Low beam headlights do not reflect or shine bright enough due to degraded reflector/housing, causing poor night visibility and a near deer collision.",
+      "started_at": "2025-10-04T07:00:15Z",
+      "step": 2,
+      "tokens": 1822,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-10-04T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "RDX",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The headlights are so dim that I have to drive with the high beams on at all times or I can’t see. I even had an Acura dealer try to clean them and it didn’t help. It’s crazy that this is a known issue (according to the Acura dealership) and this hasn’t been recalled. I’m basical...",
+            "group": "body_controls",
+            "id": "1941275",
+            "make": "ACURA",
+            "model": "RDX",
+            "score": 6.6714,
+            "year": 2014
+          },
+          {
+            "excerpt": "my car has 85K miles on it. the headlights are so dim that they might as well not even be on. I have replaced the bulbs, no help. There's no oxidation on the outer lens of the headlight assembly. There's some kind of defect in the inner reflector or lens of the headlight assembly...",
+            "group": "body_controls",
+            "id": "1860296",
+            "make": "ACURA",
+            "model": "RDX",
+            "score": 3.3947,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-10-04T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-04T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-10-04T07:00:21Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-04T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-10-04T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

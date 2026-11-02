@@ -1,0 +1,493 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: BLIND SPOT DETECTION",
+    "group": "adas",
+    "id": "2084354",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "IMPALA",
+    "narrative": "I received an alert to service the sideview sensors. Also, the sideview alert keeps flashing in the side mirrors even when there's no vehicle present.",
+    "received_at": "2025-04-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2084354",
+    "status": "decided",
+    "year": 2014
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2084354",
+    "decided_at": "2025-04-19T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2084354",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "I received an alert to service the sideview sensors."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the sideview alert keeps flashing in the side mirrors even when there's no vehicle present."
+      },
+      {
+        "kind": "condition",
+        "quote": "even when there's no vehicle present."
+      }
+    ],
+    "conditions": [
+      "false sideview alert with no vehicle present"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the blind spot side-detection system for false mirror alerts and a service-sensor warning, since no targeted rulebook entry applies.",
+    "symptoms": [
+      "service sideview sensors alert",
+      "sideview alert flashing in side mirrors when no vehicle is present"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "PE14010",
+      "match": true,
+      "open_date": "2014-04-15",
+      "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c"
+    },
+    {
+      "id": "PE14010",
+      "match": true,
+      "open_date": "2014-04-15",
+      "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c"
+    },
+    {
+      "id": "PE14010",
+      "match": true,
+      "open_date": "2014-04-15",
+      "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c"
+    }
+  ],
+  "proposal": {
+    "case_id": "2084354",
+    "created_at": "2025-04-19T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "I received an alert to service the sideview sensors.",
+        "source_id": "2084354",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the sideview alert keeps flashing in the side mirrors even when there's no vehicle present.",
+        "source_id": "2084354",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "even when there's no vehicle present.",
+        "source_id": "2084354",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a service alert for the sideview sensors and continuous sideview mirror warnings with no vehicle present, matching false blind-spot detection activation. Similar 2014 Chevrolet Impala cases describe side mirror blind spot warning lights blinking constantly or with no oncoming vehicle. No rulebook match or relevant recall is present; the listed investigations concern forward collision avoidance and electric park brake braking, not blind spot side detection. No safety risk to people is reported, so a standard diagnostic test is proposed.",
+    "requested_info": [],
+    "summary": "Test the blind spot side-detection system for false mirror alerts and a service-sensor warning, since no targeted rulebook entry applies.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2014 Chevrolet Impala. The contact stated that while operating the vehicle, the side mirror blind spot detection system malfunctioned, and the warning light blinked constantly and blinked while no oncoming vehicle was present. The contact stated that the failur...",
+      "group": "adas",
+      "id": "1876485",
+      "make": "CHEVROLET",
+      "model": "IMPALA",
+      "score": 9.355,
+      "year": 2014
+    },
+    {
+      "excerpt": "I have a 2014 Chevrolet Impala 2014 Ltz with 75000 miles on it. About a week ago I got a notification saying \"service side detection\" I lost my side detection on the side mirrors. Now my lane departure camera stop working and now my part assist for the rear camera has also stoppe...",
+      "group": "adas",
+      "id": "1892990",
+      "make": "CHEVROLET",
+      "model": "IMPALA",
+      "score": 8.3071,
+      "year": 2014
+    },
+    {
+      "excerpt": "VEHICLE : 2014 CHEVROLET IMPALA VIN: [XXX] ON 04/08/2022 THE SIDE DETECTION FAILED WARNINGS APPEARED ON DASH WARNING SYSTEM. GENERAL MOTORS INITIATED THE WARRANTY REPAIR NOTICED ( [XXX] ). I FILED A COMPLAINT WITH GM ON 04/11/2022 ( [XXX] ). ON 04/14/2022, I WAS INFORMED BY GM ON...",
+      "group": "adas",
+      "id": "1807611",
+      "make": "CHEVROLET",
+      "model": "IMPALA",
+      "score": 4.773,
+      "year": 2014
+    },
+    {
+      "excerpt": "WHEN I PURCHASED MY CAR IN 2020 I NOTICED THAT MY BLIND SPOT WARNING LIGHT IN THE PASSENGERS MIRROR WAS TURNING ON AND OFF. I INFORMED THE DEALER THAT I PURCHASED THE VEHICLE FROM AND THEY SAID THAT THEY WOULD REPAIR IT. THEY HAD MENTIONED THAT THERE WAS A DEFECT IN THE BLIND SPO...",
+      "group": "adas",
+      "id": "1743233",
+      "make": "CHEVROLET",
+      "model": "IMPALA",
+      "score": 4.6478,
+      "year": 2014
+    },
+    {
+      "excerpt": "Side detection system failures. Repaired side detection systems 2 times ( 2017/2018 and again in 2020) both times GM reimbursed for repairs under technical bulletin. Repairs were supposed to be using “redesigned” parts to prevent issue from reoccurring. Side detection system requ...",
+      "group": "adas",
+      "id": "1877813",
+      "make": "CHEVROLET",
+      "model": "IMPALA",
+      "score": 3.7138,
+      "year": 2014
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-19T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0003988,
+      "duration_ms": 7587,
+      "reason": "Blind spot detection sideview sensors; service alert and false sideview alerts flashing in mirrors with no vehicle present",
+      "started_at": "2025-04-19T07:00:16Z",
+      "step": 2,
+      "tokens": 1151,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-19T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "IMPALA",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2014 Chevrolet Impala. The contact stated that while operating the vehicle, the side mirror blind spot detection system malfunctioned, and the warning light blinked constantly and blinked while no oncoming vehicle was present. The contact stated that the failur...",
+            "group": "adas",
+            "id": "1876485",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 9.355,
+            "year": 2014
+          },
+          {
+            "excerpt": "I have a 2014 Chevrolet Impala 2014 Ltz with 75000 miles on it. About a week ago I got a notification saying \"service side detection\" I lost my side detection on the side mirrors. Now my lane departure camera stop working and now my part assist for the rear camera has also stoppe...",
+            "group": "adas",
+            "id": "1892990",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 8.3071,
+            "year": 2014
+          },
+          {
+            "excerpt": "VEHICLE : 2014 CHEVROLET IMPALA VIN: [XXX] ON 04/08/2022 THE SIDE DETECTION FAILED WARNINGS APPEARED ON DASH WARNING SYSTEM. GENERAL MOTORS INITIATED THE WARRANTY REPAIR NOTICED ( [XXX] ). I FILED A COMPLAINT WITH GM ON 04/11/2022 ( [XXX] ). ON 04/14/2022, I WAS INFORMED BY GM ON...",
+            "group": "adas",
+            "id": "1807611",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 4.773,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-04-19T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-19T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-04-19T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "I received an alert to service the sideview sensors. Also, the sideview alert keeps flashing in the side mirrors even when there's no vehicle present."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2014 Chevrolet Impala. The contact stated that while operating the vehicle, the side mirror blind spot detection system malfunctioned, and the warning light blinked constantly and blinked while no oncoming vehicle was present. The contact stated that the failur...",
+            "group": "adas",
+            "id": "1876485",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 9.355,
+            "year": 2014
+          },
+          {
+            "excerpt": "I have a 2014 Chevrolet Impala 2014 Ltz with 75000 miles on it. About a week ago I got a notification saying \"service side detection\" I lost my side detection on the side mirrors. Now my lane departure camera stop working and now my part assist for the rear camera has also stoppe...",
+            "group": "adas",
+            "id": "1892990",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 8.3071,
+            "year": 2014
+          },
+          {
+            "excerpt": "VEHICLE : 2014 CHEVROLET IMPALA VIN: [XXX] ON 04/08/2022 THE SIDE DETECTION FAILED WARNINGS APPEARED ON DASH WARNING SYSTEM. GENERAL MOTORS INITIATED THE WARRANTY REPAIR NOTICED ( [XXX] ). I FILED A COMPLAINT WITH GM ON 04/11/2022 ( [XXX] ). ON 04/14/2022, I WAS INFORMED BY GM ON...",
+            "group": "adas",
+            "id": "1807611",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 4.773,
+            "year": 2014
+          },
+          {
+            "excerpt": "WHEN I PURCHASED MY CAR IN 2020 I NOTICED THAT MY BLIND SPOT WARNING LIGHT IN THE PASSENGERS MIRROR WAS TURNING ON AND OFF. I INFORMED THE DEALER THAT I PURCHASED THE VEHICLE FROM AND THEY SAID THAT THEY WOULD REPAIR IT. THEY HAD MENTIONED THAT THERE WAS A DEFECT IN THE BLIND SPO...",
+            "group": "adas",
+            "id": "1743233",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 4.6478,
+            "year": 2014
+          },
+          {
+            "excerpt": "Side detection system failures. Repaired side detection systems 2 times ( 2017/2018 and again in 2020) both times GM reimbursed for repairs under technical bulletin. Repairs were supposed to be using “redesigned” parts to prevent issue from reoccurring. Side detection system requ...",
+            "group": "adas",
+            "id": "1877813",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "score": 3.7138,
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-19T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "CHEVROLET",
+        "model": "IMPALA",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-19T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "CHEVROLET",
+        "model": "IMPALA",
+        "year": 2014
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "FORWARD COLLISION AVOIDANCE",
+            "group": "adas",
+            "id": "PE14010",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "open_date": "2014-04-15",
+            "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c",
+            "year": 2014
+          },
+          {
+            "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+            "group": "adas",
+            "id": "PE14010",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "open_date": "2014-04-15",
+            "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c",
+            "year": 2014
+          },
+          {
+            "component": "FORWARD COLLISION AVOIDANCE: CRASH IMMINENT BRAKING",
+            "group": "adas",
+            "id": "PE14010",
+            "make": "CHEVROLET",
+            "model": "IMPALA",
+            "open_date": "2014-04-15",
+            "summary": "On April 15, 2014, the Office of Defects Investigations (ODI) opened Preliminary Evaluation PE14-010 based on two complaints alleging incidents of sudden/severe uncommanded braking resulting in rear impact collisions in model year (MY) 2014 Chevrolet Impala vehicles.ODI analyzed all complaints related to allegations of unwanted brake activations while driving that were provided by GM or submitted to ODI from consumers and has not identified any additional incidents involving sudden, extended (greater than 1 second) autonomous braking.The two crash complaints that were the basis of PE14-010 involved rental vehicles equipped with an Electric Park Brake (EPB) system.Neither vehicle was equipped with Full Speed Range Adaptive Cruise Control (FSRACC) or Forward Collision Alert (FCA) systems. According to GM, brake lights will be illuminated if the service brakes are applied or the EPB system is activated while the vehicle is moving (dynamic EPB brake apply).In a dynamic EPB brake apply, the Electric Brake Control Module (EBCM) initiates a controlled deceleration while activating a chime and a telltale light.If the service brake is applied at any time during dynamic EPB brake apply, the system provides a substantially greater deceleration.Witness statements and analysis of crash data from the two incidents are consistent with inadvertent dynamic EPB brake applications.Both reports alleged beeping noise immediately before the accidents and one pre-crash data report shows a moderate initial vehicle deceleration followed by in increase in deceleration to approximately 0.6g just prior to the vehicle stopping and being struck from the rear.During this investigation, General Motors LLC (GM) inspected the two crash incident vehicles and examined each of the EPB switches to assess potential mechanical and electrical fault conditions.The testing and part examination did not find any evidence of mechanical or electrical failure of the EPB switches and GM did not identify any faults in the subject components or systems that could have caused or contributed to autonomous brake applications in the incident vehicles.According to GM, the evidence indicates the events were caused by inadvertent driver actuation of the EPB switch. Additionally, during this investigation, GM identified a defect condition in the EPB software in approximately 132,921 model year (MY) 2014 through 2015 Chevrolet Impala and MY 2013 through 2015 Cadillac XTS vehicles (Recall No. 14V-541) that could result in failure of the EPB to release after vehicle start-up.In this condition, the electronic parking brake piston actuation arm may not fully retract when the driver disengages the EPB, which may cause the brake pads to stay partially engaged with the rotor.According to GM, the parking brake indicator may not illuminate when the EPB is engaged and the driver may experience poor vehicle acceleration, undesired deceleration during idle coast-down, excessive brake heat, and premature wear to some brake components. If the vehicle is operated for an extended period of time in this condition, there is a potential for the rear brakes to generate significant heat, smoke, and sparks.GM and its supplier, Mando Pyeongtaek, upgraded the EPB software to address brake drag conditions and issued a recall bulletin on September 4, 2014 instructing dealers to reprogram the electronic parking brake control module on all affected vehicles. This preliminary evaluation is closed.The closing of this investigation does not constitute a finding that a safety-related defect does not exist.For additional information regarding this investigation, see Attachment A to this c",
+            "year": 2014
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-19T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0010413,
+      "duration_ms": 6629,
+      "reason": "The narrative reports a service alert for the sideview sensors and continuous sideview mirror warnings with no vehicle present, matching false blind-spot detection activation. Similar 2014 Chevrolet Impala cases describe side mirror blind spot warning lights blinking constantly or with no oncoming vehicle. No rulebook match or relevant recall is present; the listed investigations concern forward collision avoidance and electric park brake braking, not blind spot side detection. No safety risk to people is reported, so a standard diagnostic test is proposed.",
+      "started_at": "2025-04-19T07:00:24Z",
+      "step": 10,
+      "tokens": 4548,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-04-19T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "I received an alert to service the sideview sensors.",
+          "the sideview alert keeps flashing in the side mirrors even when there's no vehicle present.",
+          "even when there's no vehicle present."
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-19T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-19T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-19T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-19T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

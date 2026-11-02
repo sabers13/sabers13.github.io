@@ -1,0 +1,260 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2136651",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "TUCSON",
+    "narrative": "I was driving on a highway in the largest city in the world and  while vehicle merging into my vehicle, Hyundai Tucson automatically and abruptly engaged emergency forward collision. There was absolutely not necessary. All loose items in vehicle went flying inside of my car. My body went forward as well as my passengers. Luckily I was not rear ended in an accident. This is the third incident of the vehicle automatically engaging safety features which actually does the opposite and is a hazard,  since I bought the car in Feb 2025. There is no way to permanently disable these features. A driver not being in control of their car is a huge liability on the road. This vehicle must be recalled to disable this feature. Perhaps in a rural area somewhere in the world with no other cars around , this wouldn’t be an issue. Large cities with vehicular and pedestrian traffic it is a danger.",
+    "received_at": "2025-10-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136651",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136651",
+    "decided_at": "2025-10-05T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2136651",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: WARNINGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Hyundai Tucson automatically and abruptly engaged emergency forward collision"
+      },
+      {
+        "kind": "symptom",
+        "quote": "There was absolutely not necessary."
+      },
+      {
+        "kind": "condition",
+        "quote": "I was driving on a highway"
+      },
+      {
+        "kind": "condition",
+        "quote": "while vehicle merging into my vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This is the third incident of the vehicle automatically engaging safety features"
+      },
+      {
+        "kind": "safety",
+        "quote": "is a hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "A driver not being in control of their car is a huge liability on the road."
+      },
+      {
+        "kind": "symptom",
+        "quote": "My body went forward as well as my passengers."
+      },
+      {
+        "kind": "symptom",
+        "quote": "All loose items in vehicle went flying inside of my car."
+      },
+      {
+        "kind": "safety",
+        "quote": "Luckily I was not rear ended in an accident."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2025 Hyundai Tucson forward collision avoidance: emergency forward collision engaged abruptly and unnecessarily during highway driving with a merging vehicle; third such incident.",
+    "symptoms": [
+      "automatic emergency forward collision engagement without need",
+      "repeated unintended activation of safety features",
+      "driver not in control of vehicle",
+      "occupants moved forward and loose items thrown inside vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136651",
+    "created_at": "2025-10-05T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I could not find an exact category check above, but this does sort of relate to cruise control. The Driver Attention Warning cannot be disabled even though there is an option to disable it. Turning it off has no affect. This is a warning that basically tells you to keep your eyes...",
+      "group": "adas",
+      "id": "2046155",
+      "make": "HYUNDAI",
+      "model": "TUCSON",
+      "score": 1.9419,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-05T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00146905,
+      "duration_ms": 14361,
+      "reason": "2025 Hyundai Tucson forward collision avoidance: emergency forward collision engaged abruptly and unnecessarily during highway driving with a merging vehicle; third such incident.",
+      "started_at": "2025-10-05T07:00:36Z",
+      "step": 2,
+      "tokens": 3045,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-10-05T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "TUCSON",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I could not find an exact category check above, but this does sort of relate to cruise control. The Driver Attention Warning cannot be disabled even though there is an option to disable it. Turning it off has no affect. This is a warning that basically tells you to keep your eyes...",
+            "group": "adas",
+            "id": "2046155",
+            "make": "HYUNDAI",
+            "model": "TUCSON",
+            "score": 1.9419,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-05T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-05T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-05T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-05T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-05T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-05T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-05T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

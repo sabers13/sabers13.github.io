@@ -1,0 +1,249 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2059654",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD HYBRID",
+    "narrative": "When car has been stopped, in traffic or parking lot, the parking/emergency brake has engaged automatically (NOT engaged manually or intentionally by driver) and will not disengage automatically when accelerator is pressed to go forward. It is difficult to disengage the brake when this occurs. This has happened on 3 occasions.  The safety risk for crash includes being hit from behind if brake engages unintentionally in traffic or on highway, or potentially sudden unintentional stopping while driving at moderate or high speeds.  The issue was reported to dealer after twice occurring and full DTC check performed. Dealer says all diagnostics normal and could not identify any problems with parking/emergency brake or Collision Mitigation Braking System. The issue has occurred one time since the dealer inspection.  The red light on the emergency break switch (console) comes on when this occurs, but no prior warning lamps or messages.",
+    "received_at": "2025-01-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2059654",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2059654",
+    "decided_at": "2025-01-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2059654",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "parking/emergency brake has engaged automatically"
+      },
+      {
+        "kind": "symptom",
+        "quote": "will not disengage automatically when accelerator is pressed to go forward"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It is difficult to disengage the brake when this occurs."
+      },
+      {
+        "kind": "condition",
+        "quote": "When car has been stopped, in traffic or parking lot"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has happened on 3 occasions."
+      },
+      {
+        "kind": "safety",
+        "quote": "The safety risk for crash includes being hit from behind if brake engages unintentionally in traffic or on highway"
+      },
+      {
+        "kind": "safety",
+        "quote": "potentially sudden unintentional stopping while driving at moderate or high speeds"
+      },
+      {
+        "kind": "other",
+        "quote": "The issue was reported to dealer after twice occurring and full DTC check performed."
+      },
+      {
+        "kind": "other",
+        "quote": "Dealer says all diagnostics normal and could not identify any problems with parking/emergency brake or Collision Mitigation Braking System."
+      },
+      {
+        "kind": "condition",
+        "quote": "The issue has occurred one time since the dealer inspection."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The red light on the emergency break switch (console) comes on when this occurs"
+      },
+      {
+        "kind": "other",
+        "quote": "no prior warning lamps or messages"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS forward collision avoidance/automatic emergency braking; parking/emergency brake auto-engages when stopped and will not release on accelerator; intermittent and occurred after dealer inspection.",
+    "symptoms": [
+      "parking/emergency brake engages automatically without driver intent",
+      "brake will not disengage automatically when accelerator is pressed",
+      "difficult to disengage the brake",
+      "red light on emergency brake switch console comes on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2059654",
+    "created_at": "2025-01-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001438,
+      "duration_ms": 22583,
+      "reason": "ADAS forward collision avoidance/automatic emergency braking; parking/emergency brake auto-engages when stopped and will not release on accelerator; intermittent and occurred after dealer inspection.",
+      "started_at": "2025-01-26T07:00:01Z",
+      "step": 2,
+      "tokens": 3000,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD HYBRID",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

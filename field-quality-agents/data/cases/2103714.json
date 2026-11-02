@@ -1,0 +1,362 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2103714",
+    "make": "DODGE",
+    "mileage": null,
+    "model": "JOURNEY",
+    "narrative": "My ABS, traction control and Emergency brake dash lights are on. When I researched the problem it did show a recall on the ABS control module and wiring harness from certain 2015 Dodge Journeys. I did take my car to a dodge dealership and they did confirm the ABS module needs to be replaced but they told me my particular VIN wasn't included in the current recall. If my car model from the same year has an active recall for the part included in the recall and it is being effective by the same problem listed in the recall how do I get my car included in that recall. I am currently still waiting for the new part to come in with the dealership to have it replaced.",
+    "received_at": "2025-06-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2103714",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2103714",
+    "decided_at": "2025-06-25T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2103714",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My ABS, traction control and Emergency brake dash lights are on."
+      },
+      {
+        "kind": "component_group",
+        "quote": "ABS module"
+      },
+      {
+        "kind": "other",
+        "quote": "they did confirm the ABS module needs to be replaced"
+      },
+      {
+        "kind": "other",
+        "quote": "my particular VIN wasn't included in the current recall"
+      },
+      {
+        "kind": "other",
+        "quote": "I am currently still waiting for the new part to come in with the dealership to have it replaced."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "2015 Dodge Journey with ABS, traction control and emergency-brake lights on and a dealer-confirmed ABS module failure; no rulebook entry or similar case matches, so propose the standard ABS diagnostics with VIN/recall verification.",
+    "symptoms": [
+      "ABS warning light on",
+      "traction control warning light on",
+      "emergency brake warning light on"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2103714",
+    "created_at": "2025-06-25T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "My ABS, traction control and Emergency brake dash lights are on.",
+        "source_id": "2103714",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "ABS module",
+        "source_id": "2103714",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "they did confirm the ABS module needs to be replaced",
+        "source_id": "2103714",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "my particular VIN wasn't included in the current recall",
+        "source_id": "2103714",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I am currently still waiting for the new part to come in with the dealership to have it replaced.",
+        "source_id": "2103714",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports three warning lights (ABS, traction control, emergency brake) and states the dealership confirmed the ABS module needs replacement, with the part on order. The vehicle is a 2015 Dodge Journey, and the owner notes the ABS control module/wiring harness recall does not cover this VIN. The only recall returned covers cruise-control disengagement (18V332000), not the ABS module or harness, and the rulebook returned no matching entry, so no targeted load test can be justified. Standard ABS diagnostic testing is appropriate, and the recall coverage question is a separate administrative matter for the desk.",
+    "requested_info": [],
+    "summary": "2015 Dodge Journey with ABS, traction control and emergency-brake lights on and a dealer-confirmed ABS module failure; no rulebook entry or similar case matches, so propose the standard ABS diagnostics with VIN/recall verification.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "18V332000",
+      "match": true,
+      "open_date": "2018-05-17",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00068635,
+      "duration_ms": 8529,
+      "reason": "2015 Dodge Journey ADAS/ABS: ABS, traction control and emergency brake dash lights on; dealer confirmed ABS module replacement; VIN not in recall; awaiting part.",
+      "started_at": "2025-06-25T07:00:01Z",
+      "step": 2,
+      "tokens": 1715,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-06-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-06-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-06-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "My ABS, traction control and Emergency brake dash lights are on. When I researched the problem it did show a recall on the ABS control module and wiring harness from certain 2015 Dodge Journeys. I did take my car to a dodge dealership and they did confirm the ABS module needs to be replaced but they told me my particular VIN wasn't included in the current recall. If my car model from the same year has an active recall for the part included in the recall and it is being effective by the same prob"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-25T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "VEHICLE SPEED CONTROL:CRUISE CONTROL",
+            "group": "adas",
+            "id": "18V332000",
+            "make": "DODGE",
+            "model": "JOURNEY",
+            "open_date": "2018-05-17",
+            "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jeep Wrangler vehicles.  These vehicles are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver may not be able to shut off the cruise control either by depressing the brake pedal or manually turning the system off once it has been engaged, resulting in either the vehicle maintaining its current speed or possibly accelerating.",
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-25T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "DODGE",
+        "model": "JOURNEY",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-25T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00054345,
+      "duration_ms": 5036,
+      "reason": "The narrative reports three warning lights (ABS, traction control, emergency brake) and states the dealership confirmed the ABS module needs replacement, with the part on order. The vehicle is a 2015 Dodge Journey, and the owner notes the ABS control module/wiring harness recall does not cover this VIN. The only recall returned covers cruise-control disengagement (18V332000), not the ABS module or harness, and the rulebook returned no matching entry, so no targeted load test can be justified. Standard ABS diagnostic testing is appropriate, and the recall coverage question is a separate administrative matter for the desk.",
+      "started_at": "2025-06-25T07:00:09Z",
+      "step": 10,
+      "tokens": 1808,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-06-25T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "My ABS, traction control and Emergency brake dash lights are on.",
+          "ABS module",
+          "they did confirm the ABS module needs to be replaced",
+          "my particular VIN wasn't included in the current recall",
+          "I am currently still waiting for the new part to come in with the dealership to have it replaced."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-25T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-25T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-25T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-25T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

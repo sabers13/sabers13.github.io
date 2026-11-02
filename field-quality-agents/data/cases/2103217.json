@@ -1,0 +1,306 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2103217",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "My Ram has the ETorque Generator that failed. It has caused the vehicle to suddenly stop and lose power. It first lost all electrical components in the interior. Then driving function shut off which includes the power steering. I was then driving down the street and it suddenly stopped and grinded into the park position of the transmission. The engine bay was very hot and I was surprised a fire didn't start. I hooked up jumper cables to another vehicle to get it off the road way as you couldn't shift it into neutral when the battery was dead. Pretty much all of the warning lights came on as I was still moving and they are still on. I took it into the ram dealer locally and they said there is 4379 that are in the same boat. There is no outlook to get replacement parts. I then took the Etorque generator out and tried having it rebuilt as there was no answer from Ram when it could be fixed. The place I took it to specializes in rebuilding alternators and they were able to fix the bearing problem in the generator but were unable to fix the function of recharging the batteries in the vehicle. So I have to put my truck on a charger every night so its charged up enough to make it to and from work. The vehicle has been inspected by a member of the Fergus Falls Fire Department and he is concerned with constant charging of the battery and electrical issues.",
+    "received_at": "2025-06-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2103217",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2103217",
+    "decided_at": "2025-06-23T07:01:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2103217",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ETorque Generator that failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "suddenly stop and lose power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lost all electrical components in the interior"
+      },
+      {
+        "kind": "symptom",
+        "quote": "driving function shut off which includes the power steering"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it suddenly stopped and grinded into the park position of the transmission"
+      },
+      {
+        "kind": "condition",
+        "quote": "The engine bay was very hot"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was surprised a fire didn't start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Pretty much all of the warning lights came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "unable to fix the function of recharging the batteries"
+      },
+      {
+        "kind": "condition",
+        "quote": "put my truck on a charger every night"
+      },
+      {
+        "kind": "condition",
+        "quote": "constant charging of the battery and electrical issues"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2021 RAM 1500 eTorque generator failure causing sudden power loss, steering loss, park engagement, engine-bay heat, and battery recharge failure with nightly charging.",
+    "symptoms": [
+      "eTorque generator failure",
+      "sudden loss of power and vehicle stop",
+      "loss of interior electrical components",
+      "driving functions including power steering shut off",
+      "transmission grinded into park",
+      "engine bay very hot",
+      "warning lights illuminated",
+      "battery recharging function failed",
+      "requires nightly charging"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2103217",
+    "created_at": "2025-06-23T07:01:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When I started my vehicle the starter failed to disengage. The vehicle was unable to shut off. The only way to turn the vehicle off was to remove the battery cables. If I reattach the battery cable to the engine the vehicle try's to start on its own but is unable to, it just keep...",
+      "group": "electrical_general",
+      "id": "1878823",
+      "make": "RAM",
+      "model": "1500",
+      "score": 36.047,
+      "year": 2021
+    },
+    {
+      "excerpt": "While driving on the freeway the truck lost all engine power and power steering. I was traveling with the flow of traffic but had to quickly try and get my vehicle onto the shoulder and away from other vehicles still traveling at freeway speeds to attempt to restart the truck. Th...",
+      "group": "electrical_general",
+      "id": "1835993",
+      "make": "RAM",
+      "model": "1500",
+      "score": 33.1159,
+      "year": 2021
+    },
+    {
+      "excerpt": "When closing the drivers side window with the auto function the window will go up about a 1/4\" then go back down 1/4\" and stop. A number of times when open/closing the window with the auto window function it will also opens/closes the passenger window. Either way this presents a...",
+      "group": "electrical_general",
+      "id": "1988129",
+      "make": "RAM",
+      "model": "1500",
+      "score": 28.5175,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-23T07:01:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008029,
+      "duration_ms": 9275,
+      "reason": "2021 RAM 1500 eTorque generator failure causing sudden power loss, steering loss, park engagement, engine-bay heat, and battery recharge failure with nightly charging.",
+      "started_at": "2025-06-23T07:01:15Z",
+      "step": 2,
+      "tokens": 2006,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-23T07:01:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I started my vehicle the starter failed to disengage. The vehicle was unable to shut off. The only way to turn the vehicle off was to remove the battery cables. If I reattach the battery cable to the engine the vehicle try's to start on its own but is unable to, it just keep...",
+            "group": "electrical_general",
+            "id": "1878823",
+            "make": "RAM",
+            "model": "1500",
+            "score": 36.047,
+            "year": 2021
+          },
+          {
+            "excerpt": "While driving on the freeway the truck lost all engine power and power steering. I was traveling with the flow of traffic but had to quickly try and get my vehicle onto the shoulder and away from other vehicles still traveling at freeway speeds to attempt to restart the truck. Th...",
+            "group": "electrical_general",
+            "id": "1835993",
+            "make": "RAM",
+            "model": "1500",
+            "score": 33.1159,
+            "year": 2021
+          },
+          {
+            "excerpt": "When closing the drivers side window with the auto function the window will go up about a 1/4\" then go back down 1/4\" and stop. A number of times when open/closing the window with the auto window function it will also opens/closes the passenger window. Either way this presents a...",
+            "group": "electrical_general",
+            "id": "1988129",
+            "make": "RAM",
+            "model": "1500",
+            "score": 28.5175,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-23T07:01:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-23T07:01:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-23T07:01:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-23T07:01:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-23T07:01:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-23T07:01:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-23T07:01:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

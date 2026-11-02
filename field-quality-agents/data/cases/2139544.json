@@ -1,0 +1,245 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2139544",
+    "make": "GENESIS",
+    "mileage": null,
+    "model": "GV80",
+    "narrative": "Condensation has appeared in the driver side headlight. It has caused the headlight and blinker to stop working. In addition, several warning lights have appeared on the dash indicating the following operations are no longer working.... Driver Attention Warning System, Forward Safety System, Lane Change Assist system, Lane Departure Warning System and High Beam Assist. While the driving assist systems may be optional functions, the lack of headlight and blinker are, in my opinion, safety issues. Certainly, the car would not pass a safety inspection in the state of Virginia and, as a result, I would not be able to register the vehicle. Genesis has known of the headlight condensation problem for years and has issued several TSB's, yet they continue to build cars with a known safety issue. In my opinion, a safety recall should be implemented and Genesis should be required to repair the problem at their expense.",
+    "received_at": "2025-10-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2139544",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2139544",
+    "decided_at": "2025-10-14T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2139544",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "condition",
+        "quote": "Condensation has appeared in the driver side headlight."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It has caused the headlight and blinker to stop working."
+      },
+      {
+        "kind": "symptom",
+        "quote": "several warning lights have appeared on the dash"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Driver Attention Warning System, Forward Safety System, Lane Change Assist system, Lane Departure Warning System and High Beam Assist"
+      },
+      {
+        "kind": "safety",
+        "quote": "the lack of headlight and blinker are, in my opinion, safety issues"
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting: driver-side headlight condensation caused headlight and blinker failure and multiple driver-assist warning lights.",
+    "symptoms": [
+      "condensation in driver side headlight",
+      "headlight stopped working",
+      "blinker stopped working",
+      "warning lights on dash",
+      "Driver Attention Warning System not working",
+      "Forward Safety System not working",
+      "Lane Change Assist system not working",
+      "Lane Departure Warning System not working",
+      "High Beam Assist not working"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2139544",
+    "created_at": "2025-10-14T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There are cracks on the driver side headlamp due to design flaw. My light went completely off causing the front headlamp to turn off and disable certain things that are crucial forndriving. the dealer will not replace the headlamp saying it is external factors. Other have the sam...",
+      "group": "lighting",
+      "id": "1991602",
+      "make": "GENESIS",
+      "model": "GV80",
+      "score": 1.1507,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-14T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007909,
+      "duration_ms": 12124,
+      "reason": "Exterior lighting: driver-side headlight condensation caused headlight and blinker failure and multiple driver-assist warning lights.",
+      "started_at": "2025-10-14T07:00:16Z",
+      "step": 2,
+      "tokens": 1911,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-10-14T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GENESIS",
+        "model": "GV80",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There are cracks on the driver side headlamp due to design flaw. My light went completely off causing the front headlamp to turn off and disable certain things that are crucial forndriving. the dealer will not replace the headlamp saying it is external factors. Other have the sam...",
+            "group": "lighting",
+            "id": "1991602",
+            "make": "GENESIS",
+            "model": "GV80",
+            "score": 1.1507,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-10-14T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-14T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-14T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-14T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-14T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-14T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-14T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2136177",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TRAVERSE",
+    "narrative": "electrical codes saying power steering failure which could cause loss of control of vehicle catalytic converter failure - leading to oxygen sensor failure and burnt spark plugs. engine sputters. If you look online its non-stop reports of this same year having the same issues of catalytic converter failures. health concern, emissions concern, safety concern. GM needs to recall and replace these",
+    "received_at": "2025-10-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2136177",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2136177",
+    "decided_at": "2025-10-03T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2136177",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "power steering failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "loss of control"
+      },
+      {
+        "kind": "symptom",
+        "quote": "catalytic converter failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "oxygen sensor failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "burnt spark plugs"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine sputters"
+      },
+      {
+        "kind": "safety",
+        "quote": "safety concern"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: power steering failure with possible loss of control; catalytic converter failure leading to oxygen sensor failure and burnt spark plugs; engine sputters.",
+    "symptoms": [
+      "power steering failure",
+      "catalytic converter failure",
+      "oxygen sensor failure",
+      "burnt spark plugs",
+      "engine sputters"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2136177",
+    "created_at": "2025-10-03T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The driver information display indicates the vehicle is not in park when it is shifted in park and engine is turned off. A warning chime goes off and will not stop until the button on the shifter is flipped multiple times. I talked to the service manager and he indicated that man...",
+      "group": "electrical_general",
+      "id": "1842516",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 12.9382,
+      "year": 2018
+    },
+    {
+      "excerpt": "BOUGHT 2018 NEW. TWO DAYS AFTER DRIVING OFF LOT PASSENGER SEAT MELTED ELECTRICAL CONNECTION CAUSING SEAT FAILURE. GM FIXED FOUR DAYS LATER DRIVER SEAT SAME THING. WEEK LATER HEADLIGHT CONNECTION MELTED AND HAD TO BE FIXED SPENT A WEEK IN SHOP. STARTED CLAIM AT GM TO TAKE CAR BACK...",
+      "group": "electrical_general",
+      "id": "1698031",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 10.6408,
+      "year": 2018
+    },
+    {
+      "excerpt": "POWER STEERING FAILED ON VEHICLE WHILE IN MOTION. ELECTRIC POWER STEERING MODULE FAILED CAUSING EXTREME DIFFICULTY GETTING THE VEHICLE PARKED. STEERING RACK HAD TO BE REPLACED AND COMPUTER RE-PROGRAMMED. VEHICLE IS BACK AT THE DEALER WITH A SIMILAR TROUBLE CODE FOR A FOLLOW UP TO...",
+      "group": "electrical_general",
+      "id": "1663723",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 10.523,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-03T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00086455,
+      "duration_ms": 8255,
+      "reason": "Electrical system: power steering failure with possible loss of control; catalytic converter failure leading to oxygen sensor failure and burnt spark plugs; engine sputters.",
+      "started_at": "2025-10-03T07:00:36Z",
+      "step": 2,
+      "tokens": 1955,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-03T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The driver information display indicates the vehicle is not in park when it is shifted in park and engine is turned off. A warning chime goes off and will not stop until the button on the shifter is flipped multiple times. I talked to the service manager and he indicated that man...",
+            "group": "electrical_general",
+            "id": "1842516",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 12.9382,
+            "year": 2018
+          },
+          {
+            "excerpt": "BOUGHT 2018 NEW. TWO DAYS AFTER DRIVING OFF LOT PASSENGER SEAT MELTED ELECTRICAL CONNECTION CAUSING SEAT FAILURE. GM FIXED FOUR DAYS LATER DRIVER SEAT SAME THING. WEEK LATER HEADLIGHT CONNECTION MELTED AND HAD TO BE FIXED SPENT A WEEK IN SHOP. STARTED CLAIM AT GM TO TAKE CAR BACK...",
+            "group": "electrical_general",
+            "id": "1698031",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 10.6408,
+            "year": 2018
+          },
+          {
+            "excerpt": "POWER STEERING FAILED ON VEHICLE WHILE IN MOTION. ELECTRIC POWER STEERING MODULE FAILED CAUSING EXTREME DIFFICULTY GETTING THE VEHICLE PARKED. STEERING RACK HAD TO BE REPLACED AND COMPUTER RE-PROGRAMMED. VEHICLE IS BACK AT THE DEALER WITH A SIMILAR TROUBLE CODE FOR A FOLLOW UP TO...",
+            "group": "electrical_general",
+            "id": "1663723",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 10.523,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-10-03T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-03T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-03T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-03T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-03T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-03T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-03T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

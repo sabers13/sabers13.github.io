@@ -1,0 +1,462 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: REARVIEW SYSTEM BRAKING",
+    "group": "adas",
+    "id": "2121837",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "CAMRY",
+    "narrative": "The rear camera has stopped working. It started working intermittently approximately 6 months ago and now it does not work at all. The warning light saying that it was not available would come on when it first started having a problem but that stopped when it stopped working completely. It will show rear cross traffic alert at times but no picture and not every time there is traffic. It has been inspected for any sign of damage to camera wiring, none found",
+    "received_at": "2025-08-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2121837",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2121837",
+    "decided_at": "2025-08-19T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2121837",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "rear camera"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The rear camera has stopped working."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The warning light saying that it was not available would come on when it first started having a problem but that stopped when it stopped working completely."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It will show rear cross traffic alert at times but no picture and not every time there is traffic."
+      },
+      {
+        "kind": "other",
+        "quote": "It has been inspected for any sign of damage to camera wiring, none found"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the 2021 Toyota Camry rearview camera fault with a long-run power cycling test because the failure began intermittently and is now permanent.",
+    "symptoms": [
+      "rear camera stopped working",
+      "intermittent operation before complete failure",
+      "rearview system unavailable warning initially",
+      "rear cross traffic alert without camera picture"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2121837",
+    "created_at": "2025-08-19T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "rear camera",
+        "source_id": "2121837",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The rear camera has stopped working.",
+        "source_id": "2121837",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The warning light saying that it was not available would come on when it first started having a problem but that stopped when it stopped working completely.",
+        "source_id": "2121837",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It will show rear cross traffic alert at times but no picture and not every time there is traffic.",
+        "source_id": "2121837",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It has been inspected for any sign of damage to camera wiring, none found",
+        "source_id": "2121837",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports the rear camera worked intermittently for about six months before stopping completely, with an initial unavailable warning and intermittent rear cross traffic alert but no picture. No camera wiring damage was found. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test the 2021 Toyota Camry rearview camera fault with a long-run power cycling test because the failure began intermittently and is now permanent.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports the rear camera worked intermittently for about six months before stopping completely, with an initial unavailable warning and intermittent rear cross traffic alert but no picture. No camera wiring damage was found. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When I turn off the LTA switch, it stays on..in other words the steering is affected, and warning beeps sound when I cross into another lane. This is both irritating and dangerous. I brought it in to Orland Toyota for service. The service advisor related that the Technician who w...",
+      "group": "adas",
+      "id": "1942617",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 5.1445,
+      "year": 2021
+    },
+    {
+      "excerpt": "To the best of my knowledge the following information is true. The car accident was on June 1, 2022. My vehicle is at the Collision repair shop. Will provide their phone # upon request. It would be great if the black box was checked regarding brake assist and other safety feature...",
+      "group": "adas",
+      "id": "1819819",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 3.6618,
+      "year": 2021
+    },
+    {
+      "excerpt": "When I do these checks I have my hands lightly on the wheel ready to correct the car when needed. The lane control assist tends to stay to the left of the lane, crossing over the left side lane markers, it also tends to head towards the right side of the lane, crossing over the r...",
+      "group": "adas",
+      "id": "2013157",
+      "make": "TOYOTA",
+      "model": "CAMRY",
+      "score": 2.6808,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000685,
+      "duration_ms": 8472,
+      "reason": "2021 Toyota Camry rearview camera stopped working after intermittent operation for about 6 months; now no camera picture, intermittent rear cross traffic alert, and no wiring damage found.",
+      "started_at": "2025-08-19T07:00:01Z",
+      "step": 2,
+      "tokens": 1670,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I turn off the LTA switch, it stays on..in other words the steering is affected, and warning beeps sound when I cross into another lane. This is both irritating and dangerous. I brought it in to Orland Toyota for service. The service advisor related that the Technician who w...",
+            "group": "adas",
+            "id": "1942617",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 5.1445,
+            "year": 2021
+          },
+          {
+            "excerpt": "To the best of my knowledge the following information is true. The car accident was on June 1, 2022. My vehicle is at the Collision repair shop. Will provide their phone # upon request. It would be great if the black box was checked regarding brake assist and other safety feature...",
+            "group": "adas",
+            "id": "1819819",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 3.6618,
+            "year": 2021
+          },
+          {
+            "excerpt": "When I do these checks I have my hands lightly on the wheel ready to correct the car when needed. The lane control assist tends to stay to the left of the lane, crossing over the left side lane markers, it also tends to head towards the right side of the lane, crossing over the r...",
+            "group": "adas",
+            "id": "2013157",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 2.6808,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-08-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The rear camera has stopped working. It started working intermittently approximately 6 months ago and now it does not work at all. The warning light saying that it was not available would come on when it first started having a problem but that stopped when it stopped working completely. It will show rear cross traffic alert at times but no picture and not every time there is traffic. It has been inspected for any sign of damage to camera wiring, none found"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I turn off the LTA switch, it stays on..in other words the steering is affected, and warning beeps sound when I cross into another lane. This is both irritating and dangerous. I brought it in to Orland Toyota for service. The service advisor related that the Technician who w...",
+            "group": "adas",
+            "id": "1942617",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 5.1445,
+            "year": 2021
+          },
+          {
+            "excerpt": "To the best of my knowledge the following information is true. The car accident was on June 1, 2022. My vehicle is at the Collision repair shop. Will provide their phone # upon request. It would be great if the black box was checked regarding brake assist and other safety feature...",
+            "group": "adas",
+            "id": "1819819",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 3.6618,
+            "year": 2021
+          },
+          {
+            "excerpt": "When I do these checks I have my hands lightly on the wheel ready to correct the car when needed. The lane control assist tends to stay to the left of the lane, crossing over the left side lane markers, it also tends to head towards the right side of the lane, crossing over the r...",
+            "group": "adas",
+            "id": "2013157",
+            "make": "TOYOTA",
+            "model": "CAMRY",
+            "score": 2.6808,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-19T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-19T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "TOYOTA",
+        "model": "CAMRY",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-19T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00067425,
+      "duration_ms": 5741,
+      "reason": "The narrative reports the rear camera worked intermittently for about six months before stopping completely, with an initial unavailable warning and intermittent rear cross traffic alert but no picture. No camera wiring damage was found. The rulebook matches the intermittent condition to a long-run power cycling test, which reproduces faults that appear after repeated wake and sleep cycles.",
+      "started_at": "2025-08-19T07:00:09Z",
+      "step": 10,
+      "tokens": 2095,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 1 dropped",
+      "started_at": "2025-08-19T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "rear camera",
+          "The rear camera has stopped working.",
+          "intermittently",
+          "The warning light saying that it was not available would come on when it first started having a problem but that stopped when it stopped working completely.",
+          "It will show rear cross traffic alert at times but no picture and not every time there is traffic.",
+          "It has been inspected for any sign of damage to camera wiring, none found"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 1,
+        "verified": 5
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-08-19T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-19T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-19T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-19T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-19T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

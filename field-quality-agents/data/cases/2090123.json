@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2090123",
+    "make": "RAM",
+    "mileage": null,
+    "model": "1500",
+    "narrative": "I am filing a formal complaint regarding a critical safety defect in my 2019 Ram eTorque, which posed a severe risk to my pregnant wife while she was driving. The vehicle’s battery unexpectedly failed, resulting in a complete loss of power steering and all safety functions, creating a hazardous situation in the middle of the roadway that could have led to a serious accident. This defect is not isolated. My truck has been at the repair shop for over two months, as the necessary replacement part is on backorder due to over 3,000 reported vehicles affected by the same issue. The widespread nature of this defect and the unavailability of parts amplify the risk of injury or fatality to drivers and passengers. I urge the Safety Advisory Board to investigate this defect urgently, focusing on the significant safety implications and the high number of affected vehicles. Immediate action is needed to prevent potential harm.",
+    "received_at": "2025-05-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2090123",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2090123",
+    "decided_at": "2025-05-08T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2090123",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "safety",
+        "quote": "critical safety defect"
+      },
+      {
+        "kind": "safety",
+        "quote": "severe risk to my pregnant wife while she was driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "battery unexpectedly failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "complete loss of power steering and all safety functions"
+      },
+      {
+        "kind": "condition",
+        "quote": "while she was driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "hazardous situation in the middle of the roadway"
+      },
+      {
+        "kind": "safety",
+        "quote": "could have led to a serious accident"
+      },
+      {
+        "kind": "safety",
+        "quote": "risk of injury or fatality"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system battery failure causing loss of power steering and safety functions while driving, with risk of accident.",
+    "symptoms": [
+      "battery unexpectedly failed",
+      "complete loss of power steering",
+      "loss of all safety functions"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2090123",
+    "created_at": "2025-05-08T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving the truck, driving 80mph on highway the truck disengaged from Drive to neutral, with a notice on the dash to pullover and shift to park to drive. When truck disengaged from Drive while in motion I lost all acceleration power, and had to coast over to side of road to...",
+      "group": "electrical_general",
+      "id": "1855476",
+      "make": "RAM",
+      "model": "1500",
+      "score": 27.6259,
+      "year": 2019
+    },
+    {
+      "excerpt": "Driving the vehicle and out of no where the power steer failed and the steering wheel locked up. Had 3 young children in the car with me and was blocking traffic due to being unable to drive the vehicle. The dealer inspected the vehicle and said it would need a new power steering...",
+      "group": "electrical_general",
+      "id": "1997161",
+      "make": "RAM",
+      "model": "1500",
+      "score": 23.5618,
+      "year": 2019
+    },
+    {
+      "excerpt": "I was driving my 2019 Ram 1500 Bighorn (60,000 miles) when the wiper blades came on and every possible warning light and error message came on in my truck. I was able to pull over before i crashed. The wipers and warnings lights would not stop, and after that the vehicle shut off...",
+      "group": "electrical_general",
+      "id": "2025492",
+      "make": "RAM",
+      "model": "1500",
+      "score": 21.8236,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-08T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010894,
+      "duration_ms": 17643,
+      "reason": "Electrical system battery failure causing loss of power steering and safety functions while driving, with risk of accident.",
+      "started_at": "2025-05-08T07:00:01Z",
+      "step": 2,
+      "tokens": 2407,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-08T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "1500",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving the truck, driving 80mph on highway the truck disengaged from Drive to neutral, with a notice on the dash to pullover and shift to park to drive. When truck disengaged from Drive while in motion I lost all acceleration power, and had to coast over to side of road to...",
+            "group": "electrical_general",
+            "id": "1855476",
+            "make": "RAM",
+            "model": "1500",
+            "score": 27.6259,
+            "year": 2019
+          },
+          {
+            "excerpt": "Driving the vehicle and out of no where the power steer failed and the steering wheel locked up. Had 3 young children in the car with me and was blocking traffic due to being unable to drive the vehicle. The dealer inspected the vehicle and said it would need a new power steering...",
+            "group": "electrical_general",
+            "id": "1997161",
+            "make": "RAM",
+            "model": "1500",
+            "score": 23.5618,
+            "year": 2019
+          },
+          {
+            "excerpt": "I was driving my 2019 Ram 1500 Bighorn (60,000 miles) when the wiper blades came on and every possible warning light and error message came on in my truck. I was able to pull over before i crashed. The wipers and warnings lights would not stop, and after that the vehicle shut off...",
+            "group": "electrical_general",
+            "id": "2025492",
+            "make": "RAM",
+            "model": "1500",
+            "score": 21.8236,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-08T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-08T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-08T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-08T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-08T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-08T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-08T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

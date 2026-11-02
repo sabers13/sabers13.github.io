@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2073250",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "My vehicle started flashing my seatbelt light when I was driving and I was buckled and then my airbag light came on and my automatic start and stop light came on and have stayed on. I took it into Chrysler Dodge Jeep ram and they charged me $203 to tell me that I don’t have any shorts in the seatbelt wire harness and they found a O.L (over limit) indicating that I have a internal open within the seat, buckle itself,causing the codes and the lights on the dash and that it’ll cost $541.26 to fix and it is not covered under any warranty, even though I just purchased the vehicle eight months ago and I’m under the 100,000 miles and just approaching the first 5 years. I should be covered. Now my airbags will not work and neither will my auto on and off features. This is a safety concern that should have a recall on it or be covered by Mopar.",
+    "received_at": "2025-03-12",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2073250",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2073250",
+    "decided_at": "2025-03-12T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2073250",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My vehicle started flashing my seatbelt light when I was driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my airbag light came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my automatic start and stop light came on and have stayed on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my airbags will not work and neither will my auto on and off features"
+      },
+      {
+        "kind": "other",
+        "quote": "internal open within the seat, buckle itself"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a safety concern"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2020 Jeep Grand Cherokee air bag/restraint: seatbelt light flashing while driving and buckled, airbag and auto start-stop lights stayed on; seat buckle internal open, airbags and auto start-stop inoperative.",
+    "symptoms": [
+      "seatbelt warning light flashing while driving and buckled",
+      "airbag warning light on and stayed on",
+      "automatic start/stop warning light on and stayed on",
+      "airbags inoperative",
+      "automatic start/stop features inoperative"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2073250",
+    "created_at": "2025-03-12T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My driver and passenger side front seatbelts won't retract properly. Dealer just diagnosed the problem as a weak retractor. This will be the THIRD time the driver side has to be replaced since I bought the vehicle in May of 2020. It will be the SECOND time the passenger side has...",
+      "group": "restraints",
+      "id": "2017604",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 16.3375,
+      "year": 2020
+    },
+    {
+      "excerpt": "My husband was driving our 2020 jeep and was going 70mph on the turn pike and BAM all the air bags went off, curtain air bags everything! He broke some ribs and some other things and went to the hospital. I have contact Chrysler and they sent out a mechanical engineer to read the...",
+      "group": "restraints",
+      "id": "2015827",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 7.357,
+      "year": 2020
+    },
+    {
+      "excerpt": "I was in a head on collision in my 2020 Jeep Grand Cherokee and another driver crossed the center line. I braked at approximately 40 mph the other car was driving the same speed downhill and made impact with the front drivers side bumper. Busting the headlight, washer fluid reser...",
+      "group": "restraints",
+      "id": "1950757",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 3.985,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-12T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00174535,
+      "duration_ms": 35944,
+      "reason": "2020 Jeep Grand Cherokee air bag/restraint: seatbelt light flashing while driving and buckled, airbag and auto start-stop lights stayed on; seat buckle internal open, airbags and auto start-stop inoperative.",
+      "started_at": "2025-03-12T07:00:01Z",
+      "step": 2,
+      "tokens": 3519,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-12T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My driver and passenger side front seatbelts won't retract properly. Dealer just diagnosed the problem as a weak retractor. This will be the THIRD time the driver side has to be replaced since I bought the vehicle in May of 2020. It will be the SECOND time the passenger side has...",
+            "group": "restraints",
+            "id": "2017604",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 16.3375,
+            "year": 2020
+          },
+          {
+            "excerpt": "My husband was driving our 2020 jeep and was going 70mph on the turn pike and BAM all the air bags went off, curtain air bags everything! He broke some ribs and some other things and went to the hospital. I have contact Chrysler and they sent out a mechanical engineer to read the...",
+            "group": "restraints",
+            "id": "2015827",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 7.357,
+            "year": 2020
+          },
+          {
+            "excerpt": "I was in a head on collision in my 2020 Jeep Grand Cherokee and another driver crossed the center line. I braked at approximately 40 mph the other car was driving the same speed downhill and made impact with the front drivers side bumper. Busting the headlight, washer fluid reser...",
+            "group": "restraints",
+            "id": "1950757",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 3.985,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-12T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-12T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-12T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-12T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-12T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-12T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-12T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

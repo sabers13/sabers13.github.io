@@ -1,0 +1,288 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: WARNING",
+    "group": "adas",
+    "id": "2066483",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "The problem with the LKAS manifests in the following ways:  The system unexpectedly disengages without warning, failing to provide lane-keeping assistance.  Erratic steering corrections occur even when the vehicle is properly centered in the lane, causing instability.  The system frequently displays error messages indicating LKAS failure, requiring manual intervention to reset or disable the feature.  At times, the system does not activate as intended, even when road conditions and markings are clear and well-defined.  I have attempted to troubleshoot the issue by ensuring that the vehicle’s sensors and cameras are clean and unobstructed. However, the problem persists. I have also reported the issue to a Honda dealership, but they have not been able to provide a definitive resolution.  This malfunction creates a serious safety concern, as an unpredictable LKAS system can lead to unintentional lane drifting or sudden corrective actions that may startle the driver or lead to a loss of control. Given that LKAS is a key component of Honda's driver-assistance technology, I believe this issue warrants further investigation by NHTSA to determine whether it constitutes a broader defect in the 2017 Honda Accord Hybrid model.  I respectfully request that NHTSA investigate this matter and determine if similar complaints have been reported. If this issue is determined to be a widespread defect, I urge NHTSA to take appropriate action, including a potential recall or mandatory software update from Honda.  Thank you for your time and attention to this matter. I would appreciate any updates regarding your findings and any further steps I should take. Please feel free to contact me at the information provided above.",
+    "received_at": "2025-02-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2066483",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2066483",
+    "decided_at": "2025-02-17T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2066483",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LKAS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system unexpectedly disengages without warning, failing to provide lane-keeping assistance."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Erratic steering corrections occur even when the vehicle is properly centered in the lane, causing instability."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system frequently displays error messages indicating LKAS failure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "At times, the system does not activate as intended"
+      },
+      {
+        "kind": "condition",
+        "quote": "unexpectedly disengages without warning"
+      },
+      {
+        "kind": "condition",
+        "quote": "even when road conditions and markings are clear and well-defined"
+      },
+      {
+        "kind": "safety",
+        "quote": "This malfunction creates a serious safety concern"
+      },
+      {
+        "kind": "safety",
+        "quote": "loss of control"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2017 Honda Accord Hybrid LKAS/ADAS: unexpected disengagement without warning, erratic steering corrections, LKAS failure messages, and failure to activate with clear lane markings.",
+    "symptoms": [
+      "LKAS unexpectedly disengages without warning and stops lane-keeping assistance",
+      "Erratic steering corrections occur even when the vehicle is centered, causing instability",
+      "Error messages indicate LKAS failure and require manual reset or disable",
+      "LKAS does not activate as intended even with clear road markings"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2066483",
+    "created_at": "2025-02-17T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hello I am proudly owner of honda since 2003 i only buy honda cars and recently on my 2017 honda we have issues with sensing system this error codes come and goes and i went to dealer and they told me to replace sensing Camara in front but I think it is just manufacturing defects...",
+      "group": "adas",
+      "id": "1907713",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 22.3952,
+      "year": 2017
+    },
+    {
+      "excerpt": "I was driving my vehicle and it began displaying messages that my collision mitigation system, road departure mitigation system, adaptive cruise control system, and lane keep assist system all have problems. Simultaneously, my backup camera has ceased working. This is causing my...",
+      "group": "adas",
+      "id": "1873235",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 22.0133,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Honda Accord. The contact stated while driving at an undisclosed speed, the Forward Collision Avoidance Dynamic Brake Assist activated unexpectedly. The contact stated that the message “BRAKE” was displayed. The vehicle was taken to a dealer to be diagnose...",
+      "group": "adas",
+      "id": "2004753",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 17.8348,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-17T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00184605,
+      "duration_ms": 18484,
+      "reason": "2017 Honda Accord Hybrid LKAS/ADAS: unexpected disengagement without warning, erratic steering corrections, LKAS failure messages, and failure to activate with clear lane markings.",
+      "started_at": "2025-02-17T07:00:36Z",
+      "step": 2,
+      "tokens": 3691,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-17T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello I am proudly owner of honda since 2003 i only buy honda cars and recently on my 2017 honda we have issues with sensing system this error codes come and goes and i went to dealer and they told me to replace sensing Camara in front but I think it is just manufacturing defects...",
+            "group": "adas",
+            "id": "1907713",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 22.3952,
+            "year": 2017
+          },
+          {
+            "excerpt": "I was driving my vehicle and it began displaying messages that my collision mitigation system, road departure mitigation system, adaptive cruise control system, and lane keep assist system all have problems. Simultaneously, my backup camera has ceased working. This is causing my...",
+            "group": "adas",
+            "id": "1873235",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 22.0133,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Honda Accord. The contact stated while driving at an undisclosed speed, the Forward Collision Avoidance Dynamic Brake Assist activated unexpectedly. The contact stated that the message “BRAKE” was displayed. The vehicle was taken to a dealer to be diagnose...",
+            "group": "adas",
+            "id": "2004753",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 17.8348,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-17T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-17T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-17T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-17T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-17T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-17T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-17T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

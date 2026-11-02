@@ -1,0 +1,464 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2088862",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "SONATA",
+    "narrative": "Electrical needs to be reconnected a reprogrammed. Steering wheel horn doesn’t blow.",
+    "received_at": "2025-05-04",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2088862",
+    "status": "decided",
+    "year": 2011
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2088862",
+    "decided_at": "2025-05-04T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2088862",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Electrical needs to be reconnected a reprogrammed."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Steering wheel horn doesn’t blow."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the horn circuit and electrical connections/reprogramming because the horn does not sound and the system reportedly needs reconnection and reprogramming.",
+    "symptoms": [
+      "horn does not sound",
+      "electrical system needs reconnection and reprogramming"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "PE19003",
+      "match": true,
+      "open_date": "2019-03-29",
+      "summary": "During this Preliminary Evaluation (PE), the Office of Defects Investigation (ODI) assessed the scope, frequency and potential safety-related consequences of non-crash vehicle fires caused by both engine failures and failures of other vehicle systems/components in model year (MY) 2011-2014 Hyundai Sonata and Santa Fe vehicles equipped with Theta II and Lambda II engines (approximately 1.3 million vehicles). ODI also reviewed field data of other Hyundai vehicles equipped with Theta II, Gamma, Nu and Lambda engines (approximately 4.8 million). As a result of this PE, Hyundai has issued NHTSA Recalls 20V-746 and 21V-727 to address potential engine failures and fires in certain Hyundai vehicles equipped with various engine types. Additional information on these and other related recall actions is available in the downloadable version of this resume available at NHTSA.gov. In addition, ODI has upgraded this PE to an Engineering Analysis (EA) 21-003 which will focus on potential recall scope concerns and recall remedy concerns related to the engine failure rewlated recalls mentioned above and conducted previously. See the EA21-003 Opening Resume available at NHTSA.gov for more information. Also available in the downloadable version of this resume is a list of the reference numbers for the 302 ODI reports, or Vehicle Owner Questionnaires (VOQs), cited above which ODI received through mid-November 2021. Note that the Manufacturer reports cited above are customer complaints received through March 2019."
+    },
+    {
+      "id": "DP18003",
+      "match": true,
+      "open_date": "2018-08-21",
+      "summary": "In a letter dated June 11, 2018, the Center for Auto Safety (CAS) petitioned the National Highway Traffic Safety Administration (NHTSA) to initiate a safety defect investigation into non-collision related fires on model year (MY) 2011-2014 Kia Optima and Sorento, and Hyundai Sonata and Santa Fe vehicles. In a letter dated July 24, 2018, CAS requested that MY 2010-2015 Kia Soul vehicles be added to the petition. CAS stated that there is a higher number of complaints to NHTSA regarding non-crash fires on these vehicles compared to other similar vehicles. The Office of Defects Investigation (ODI) had already opened Recall Queries (RQ17-003 and RQ17-004) on all Kia and Hyundai vehicles equipped with Theta II engines for engine failures that may cause stalling and fires.The queries cover most of the petition subject Optima, Sorento, Sonata, and Santa Fe vehicles but not any of the subject Soul vehicles.On August 21, 2018, ODI opened a Defect Petition (DP18-003) to evaluate whether to grant or deny the CAS petition. ODI sent Information Request letters to Kia and Hyundai (September and October 2018) requesting information on all engine and non-engine related fires in the petition vehicles.ODI performed extensive analysis on the information obtained from Kia and Hyundai. During the DP18-003 analysis, Kia and Hyundai each initiated three additional safety recalls related to engine compartment fires on certain petitioned and non-petitioned vehicles (nearly 740,000 total vehicles: Recalls 18V-907, 18V-934, 19V-101, 19V-063, 19V-120, and 19V-204). Based on ODI?s review of the applicable materials, including responses to Information Requests sent to multiple manufacturers, Vehicle Owner Questionnaires (VOQ), and Early Warning Data, NHTSA decided to grant the petition.The CAS petition was granted on March 29, 2019. Preliminary Evaluations (PE19-003 on Hyundai and PE19-004 on Kia) have been opened to assess the scope, frequency, and potential safety-related consequences of alleged defects relating to non-collision vehicle fires in the 2011-2014 Kia Optima and Sorento, 2011-2014 Hyundai Sonata and Santa Fe, and 2010-2015 Kia Soul.Attached is a list of the reference numbers for the 404 VOQs cited above."
+    }
+  ],
+  "proposal": {
+    "case_id": "2088862",
+    "created_at": "2025-05-04T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Electrical needs to be reconnected a reprogrammed.",
+        "source_id": "2088862",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Steering wheel horn doesn’t blow.",
+        "source_id": "2088862",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The case reports an inoperative steering-wheel horn and that the electrical system needs reconnection and reprogramming. No rulebook entry or recall matches these conditions, so a standard electrical diagnostic and function test is appropriate rather than a targeted load test.",
+    "requested_info": [],
+    "summary": "Test the horn circuit and electrical connections/reprogramming because the horn does not sound and the system reportedly needs reconnection and reprogramming.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Was driving fine for a few minutes, made a stop at a light then when I proceed to make my left turn, my steering wheel was completely hard to turn. A light EPS came on right away and I was able to move forward but made it completely hard to turn towards my destination. Drive my c...",
+      "group": "electrical_general",
+      "id": "1787547",
+      "make": "HYUNDAI",
+      "model": "SONATA",
+      "score": 7.73,
+      "year": 2011
+    },
+    {
+      "excerpt": "TAIL LIGHT BURNS OUT AFTER BEING REPLACED. BRAKE LIGHTS OUT; GOT HIT FROM REAR. WINDOW BRAKE LIGHT CAME ON IN THE MIDDLE OF NIGHT WHILE CAR WAS PARKED... I WAS INDOORS, HAPPENED TO NOTICE IT WHILE LOOKING OUT HOUSE WINDOW, APPARENTLY HAD BEEN ON FOR HOURS UNTIL I WENT OUTSIDE AND...",
+      "group": "electrical_general",
+      "id": "1681586",
+      "make": "HYUNDAI",
+      "model": "SONATA",
+      "score": 2.8718,
+      "year": 2011
+    },
+    {
+      "excerpt": "2020 wiring harness overheated and melted - replaced taillight 6 times in 1 year. Hyundai fixed. 2021 tailight out again - Hyundai stated the taillight assembly melted, needs to be replaced (403.00) light bulb cannot be replaced (warped). Safety issue is what is causing things to...",
+      "group": "electrical_general",
+      "id": "1860720",
+      "make": "HYUNDAI",
+      "model": "SONATA",
+      "score": 1.9552,
+      "year": 2011
+    },
+    {
+      "excerpt": "Engine seized at 87337 miles today. Fuel gauge wrong. Left us stranded on the interstate for 3 hours. Couldn't get it off highyway without pushing. No warning or lights before engine blew. All fluid levels correct. Silver Rock and Carvana refuse repair.",
+      "group": "electrical_general",
+      "id": "1900250",
+      "make": "HYUNDAI",
+      "model": "SONATA",
+      "score": 1.7145,
+      "year": 2011
+    },
+    {
+      "excerpt": "Hyundai has refused to get back to me about my car it's been months they don't return my phone calls or emails or anything. The motor recall had caused me and my children to be stranded in the busy highway after just shutting down 2 times. Amongst other things this is unacceptabl...",
+      "group": "electrical_general",
+      "id": "1857101",
+      "make": "HYUNDAI",
+      "model": "SONATA",
+      "score": 1.604,
+      "year": 2011
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-04T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0004453,
+      "duration_ms": 8642,
+      "reason": "Electrical system fault: horn does not sound and electrical connections/reprogramming are needed.",
+      "started_at": "2025-05-04T07:00:16Z",
+      "step": 2,
+      "tokens": 1215,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-04T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "SONATA",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Was driving fine for a few minutes, made a stop at a light then when I proceed to make my left turn, my steering wheel was completely hard to turn. A light EPS came on right away and I was able to move forward but made it completely hard to turn towards my destination. Drive my c...",
+            "group": "electrical_general",
+            "id": "1787547",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 7.73,
+            "year": 2011
+          },
+          {
+            "excerpt": "TAIL LIGHT BURNS OUT AFTER BEING REPLACED. BRAKE LIGHTS OUT; GOT HIT FROM REAR. WINDOW BRAKE LIGHT CAME ON IN THE MIDDLE OF NIGHT WHILE CAR WAS PARKED... I WAS INDOORS, HAPPENED TO NOTICE IT WHILE LOOKING OUT HOUSE WINDOW, APPARENTLY HAD BEEN ON FOR HOURS UNTIL I WENT OUTSIDE AND...",
+            "group": "electrical_general",
+            "id": "1681586",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 2.8718,
+            "year": 2011
+          },
+          {
+            "excerpt": "2020 wiring harness overheated and melted - replaced taillight 6 times in 1 year. Hyundai fixed. 2021 tailight out again - Hyundai stated the taillight assembly melted, needs to be replaced (403.00) light bulb cannot be replaced (warped). Safety issue is what is causing things to...",
+            "group": "electrical_general",
+            "id": "1860720",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 1.9552,
+            "year": 2011
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-05-04T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-04T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-04T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Electrical needs to be reconnected a reprogrammed. Steering wheel horn doesn’t blow."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Was driving fine for a few minutes, made a stop at a light then when I proceed to make my left turn, my steering wheel was completely hard to turn. A light EPS came on right away and I was able to move forward but made it completely hard to turn towards my destination. Drive my c...",
+            "group": "electrical_general",
+            "id": "1787547",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 7.73,
+            "year": 2011
+          },
+          {
+            "excerpt": "TAIL LIGHT BURNS OUT AFTER BEING REPLACED. BRAKE LIGHTS OUT; GOT HIT FROM REAR. WINDOW BRAKE LIGHT CAME ON IN THE MIDDLE OF NIGHT WHILE CAR WAS PARKED... I WAS INDOORS, HAPPENED TO NOTICE IT WHILE LOOKING OUT HOUSE WINDOW, APPARENTLY HAD BEEN ON FOR HOURS UNTIL I WENT OUTSIDE AND...",
+            "group": "electrical_general",
+            "id": "1681586",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 2.8718,
+            "year": 2011
+          },
+          {
+            "excerpt": "2020 wiring harness overheated and melted - replaced taillight 6 times in 1 year. Hyundai fixed. 2021 tailight out again - Hyundai stated the taillight assembly melted, needs to be replaced (403.00) light bulb cannot be replaced (warped). Safety issue is what is causing things to...",
+            "group": "electrical_general",
+            "id": "1860720",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 1.9552,
+            "year": 2011
+          },
+          {
+            "excerpt": "Engine seized at 87337 miles today. Fuel gauge wrong. Left us stranded on the interstate for 3 hours. Couldn't get it off highyway without pushing. No warning or lights before engine blew. All fluid levels correct. Silver Rock and Carvana refuse repair.",
+            "group": "electrical_general",
+            "id": "1900250",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 1.7145,
+            "year": 2011
+          },
+          {
+            "excerpt": "Hyundai has refused to get back to me about my car it's been months they don't return my phone calls or emails or anything. The motor recall had caused me and my children to be stranded in the busy highway after just shutting down 2 times. Amongst other things this is unacceptabl...",
+            "group": "electrical_general",
+            "id": "1857101",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "score": 1.604,
+            "year": 2011
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-04T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HYUNDAI",
+        "model": "SONATA",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-04T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HYUNDAI",
+        "model": "SONATA",
+        "year": 2011
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "ELECTRICAL SYSTEM",
+            "group": "electrical_general",
+            "id": "PE19003",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "open_date": "2019-03-29",
+            "summary": "During this Preliminary Evaluation (PE), the Office of Defects Investigation (ODI) assessed the scope, frequency and potential safety-related consequences of non-crash vehicle fires caused by both engine failures and failures of other vehicle systems/components in model year (MY) 2011-2014 Hyundai Sonata and Santa Fe vehicles equipped with Theta II and Lambda II engines (approximately 1.3 million vehicles). ODI also reviewed field data of other Hyundai vehicles equipped with Theta II, Gamma, Nu and Lambda engines (approximately 4.8 million). As a result of this PE, Hyundai has issued NHTSA Recalls 20V-746 and 21V-727 to address potential engine failures and fires in certain Hyundai vehicles equipped with various engine types. Additional information on these and other related recall actions is available in the downloadable version of this resume available at NHTSA.gov. In addition, ODI has upgraded this PE to an Engineering Analysis (EA) 21-003 which will focus on potential recall scope concerns and recall remedy concerns related to the engine failure rewlated recalls mentioned above and conducted previously. See the EA21-003 Opening Resume available at NHTSA.gov for more information. Also available in the downloadable version of this resume is a list of the reference numbers for the 302 ODI reports, or Vehicle Owner Questionnaires (VOQs), cited above which ODI received through mid-November 2021. Note that the Manufacturer reports cited above are customer complaints received through March 2019.",
+            "year": 2011
+          },
+          {
+            "component": "ELECTRICAL SYSTEM",
+            "group": "electrical_general",
+            "id": "DP18003",
+            "make": "HYUNDAI",
+            "model": "SONATA",
+            "open_date": "2018-08-21",
+            "summary": "In a letter dated June 11, 2018, the Center for Auto Safety (CAS) petitioned the National Highway Traffic Safety Administration (NHTSA) to initiate a safety defect investigation into non-collision related fires on model year (MY) 2011-2014 Kia Optima and Sorento, and Hyundai Sonata and Santa Fe vehicles. In a letter dated July 24, 2018, CAS requested that MY 2010-2015 Kia Soul vehicles be added to the petition. CAS stated that there is a higher number of complaints to NHTSA regarding non-crash fires on these vehicles compared to other similar vehicles. The Office of Defects Investigation (ODI) had already opened Recall Queries (RQ17-003 and RQ17-004) on all Kia and Hyundai vehicles equipped with Theta II engines for engine failures that may cause stalling and fires.The queries cover most of the petition subject Optima, Sorento, Sonata, and Santa Fe vehicles but not any of the subject Soul vehicles.On August 21, 2018, ODI opened a Defect Petition (DP18-003) to evaluate whether to grant or deny the CAS petition. ODI sent Information Request letters to Kia and Hyundai (September and October 2018) requesting information on all engine and non-engine related fires in the petition vehicles.ODI performed extensive analysis on the information obtained from Kia and Hyundai. During the DP18-003 analysis, Kia and Hyundai each initiated three additional safety recalls related to engine compartment fires on certain petitioned and non-petitioned vehicles (nearly 740,000 total vehicles: Recalls 18V-907, 18V-934, 19V-101, 19V-063, 19V-120, and 19V-204). Based on ODI?s review of the applicable materials, including responses to Information Requests sent to multiple manufacturers, Vehicle Owner Questionnaires (VOQ), and Early Warning Data, NHTSA decided to grant the petition.The CAS petition was granted on March 29, 2019. Preliminary Evaluations (PE19-003 on Hyundai and PE19-004 on Kia) have been opened to assess the scope, frequency, and potential safety-related consequences of alleged defects relating to non-collision vehicle fires in the 2011-2014 Kia Optima and Sorento, 2011-2014 Hyundai Sonata and Santa Fe, and 2010-2015 Kia Soul.Attached is a list of the reference numbers for the 404 VOQs cited above.",
+            "year": 2011
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-04T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008502,
+      "duration_ms": 7165,
+      "reason": "The case reports an inoperative steering-wheel horn and that the electrical system needs reconnection and reprogramming. No rulebook entry or recall matches these conditions, so a standard electrical diagnostic and function test is appropriate rather than a targeted load test.",
+      "started_at": "2025-05-04T07:00:24Z",
+      "step": 10,
+      "tokens": 3133,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 verified, 0 dropped",
+      "started_at": "2025-05-04T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Electrical needs to be reconnected a reprogrammed.",
+          "Steering wheel horn doesn’t blow."
+        ]
+      },
+      "tool_output": {
+        "checked": 2,
+        "dropped": 0,
+        "verified": 2
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-04T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-04T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-04T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-04T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

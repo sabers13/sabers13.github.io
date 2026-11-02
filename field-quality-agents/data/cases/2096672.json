@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2096672",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WAGONEER",
+    "narrative": "2022 Jeep Wagoneer 5.7 Etorque  On [XXX] at approximately [XXX],  The Jeep Wagoneer was traveling northbound on [XXX] at an estimated speed of 45 MPH, the vehicle suddenly stalled and lost power. The vehicle came to a complete stop, and the emergency brakes were activated. Despite multiple attempts, the vehicle would not restart, and the instrument panel was intermittently turning off.  As a result, the vehicle became inoperable, causing a road hazard and impeding traffic. Officer McKinnon (#334) from the Merced Police Department (Incident #[XXX]) was dispatched to the scene to assist with traffic control and manage the situation.  The vehicle was later towed to my residence and subsequently serviced at Razzari Jeep in Merced, CA. The vehicle had 100 mile of fuel remaining in the gas tank. The vehicle had no prior issues and was operated earlier in the day.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-06-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2096672",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2096672",
+    "decided_at": "2025-06-01T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2096672",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle suddenly stalled and lost power"
+      },
+      {
+        "kind": "condition",
+        "quote": "at an estimated speed of 45 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Despite multiple attempts, the vehicle would not restart"
+      },
+      {
+        "kind": "symptom",
+        "quote": "instrument panel was intermittently turning off"
+      },
+      {
+        "kind": "safety",
+        "quote": "causing a road hazard and impeding traffic"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system sudden stall and loss of power at about 45 MPH; no restart and intermittent instrument panel shutoff",
+    "symptoms": [
+      "vehicle suddenly stalled and lost power",
+      "vehicle would not restart",
+      "instrument panel intermittently turning off"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2096672",
+    "created_at": "2025-06-01T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I started my 2022 series ll Wagoneer in my driveway and began driving away. I realized I forgot something and had to run back into my house. My [XXX] mother in law was I. The passenger seat and remained there while I ran in the house. I opened my drivers side door, left the Jeep...",
+      "group": "electrical_general",
+      "id": "1955880",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 26.6825,
+      "year": 2022
+    },
+    {
+      "excerpt": "First, I lost my radio, then my GPS, then my air conditioner, then I lost everything - no power steering, no engine. This was in heavy , high speed traffic on the interstate. I did manage to get the vehicle off the road. Towed to a dealership, 6 hours from my home. This happened...",
+      "group": "electrical_general",
+      "id": "1921241",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 22.4297,
+      "year": 2022
+    },
+    {
+      "excerpt": "Service Shifter Stop Safely Shut Off Engine to Engage Park Brand new Wagoneer and this error message has popped up multiple times. Have to turn vehicle off and let it sit for a few minutes before turning back on. Sometime message goes away, sometimes it doesn’t.",
+      "group": "electrical_general",
+      "id": "1834414",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 10.5217,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-01T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00064825,
+      "duration_ms": 8215,
+      "reason": "Electrical system sudden stall and loss of power at about 45 MPH; no restart and intermittent instrument panel shutoff",
+      "started_at": "2025-06-01T07:00:16Z",
+      "step": 2,
+      "tokens": 1710,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-01T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WAGONEER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I started my 2022 series ll Wagoneer in my driveway and began driving away. I realized I forgot something and had to run back into my house. My [XXX] mother in law was I. The passenger seat and remained there while I ran in the house. I opened my drivers side door, left the Jeep...",
+            "group": "electrical_general",
+            "id": "1955880",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 26.6825,
+            "year": 2022
+          },
+          {
+            "excerpt": "First, I lost my radio, then my GPS, then my air conditioner, then I lost everything - no power steering, no engine. This was in heavy , high speed traffic on the interstate. I did manage to get the vehicle off the road. Towed to a dealership, 6 hours from my home. This happened...",
+            "group": "electrical_general",
+            "id": "1921241",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 22.4297,
+            "year": 2022
+          },
+          {
+            "excerpt": "Service Shifter Stop Safely Shut Off Engine to Engage Park Brand new Wagoneer and this error message has popped up multiple times. Have to turn vehicle off and let it sit for a few minutes before turning back on. Sometime message goes away, sometimes it doesn’t.",
+            "group": "electrical_general",
+            "id": "1834414",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 10.5217,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-01T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-01T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-01T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-01T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-01T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-01T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-01T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

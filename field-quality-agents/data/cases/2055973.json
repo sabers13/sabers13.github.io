@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2055973",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "KONA",
+    "narrative": "Vehicle was service at a Hyundai Dealer for routine required maintenance to continue the warranty.  Less than 24 hours later I was driving my special needs, handicap daughter to breakfast and pulled into a handicap parking space and placed my foot on the brake.  The pedal seemed to not have any tension and go to the floor.  The emergency collision warning went off, but the brakes did not work.  The vehicle jumped over a parking curb, knocking over a handicap sign, going across the sidewalk, hitting a garbage can and finally coming to a stop in a brick building.",
+    "received_at": "2025-01-15",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2055973",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2055973",
+    "decided_at": "2025-01-15T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2055973",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The pedal seemed to not have any tension and go to the floor."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brakes did not work"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The emergency collision warning went off"
+      },
+      {
+        "kind": "condition",
+        "quote": "Less than 24 hours later"
+      },
+      {
+        "kind": "safety",
+        "quote": "The vehicle jumped over a parking curb, knocking over a handicap sign, going across the sidewalk, hitting a garbage can and finally coming to a stop in a brick building."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Hyundai Kona forward collision avoidance/automatic emergency braking; brake pedal went to floor with no tension and brakes failed after dealer service; vehicle crossed curb/sidewalk and hit a building.",
+    "symptoms": [
+      "brake pedal had no tension and went to the floor",
+      "brakes did not work",
+      "emergency collision warning activated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2055973",
+    "created_at": "2025-01-15T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Forward Safety Mode is the default setting on every time you start the vehicle and this mode when entering from side streets or any strip center or lane into on coming traffic lanes the vehicle senses you crossing the road lines and kills the Accelerator ! When trying to enter on...",
+      "group": "adas",
+      "id": "1996137",
+      "make": "HYUNDAI",
+      "model": "KONA",
+      "score": 8.5236,
+      "year": 2023
+    },
+    {
+      "excerpt": "While driving on the highway on an extended trip my cruise control dropped its speed from 71 to 65 without warning. On one occasion it happened while I was in the passing lane with a lot of traffic behind me. It created a very dangerous situation before I could get into the right...",
+      "group": "adas",
+      "id": "1942638",
+      "make": "HYUNDAI",
+      "model": "KONA",
+      "score": 5.3027,
+      "year": 2023
+    },
+    {
+      "excerpt": "i was driving at 45mph and a deer came in front of my car . We hit the deer in front of car , deer approximitly 100 lbs no warning like brake sytem lane obstruction or air bags deployed ? I bought this car based Hyundai telling me how safe of car it is . When obiously it is not I...",
+      "group": "adas",
+      "id": "1887127",
+      "make": "HYUNDAI",
+      "model": "KONA",
+      "score": 2.9191,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-15T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008182,
+      "duration_ms": 13890,
+      "reason": "2023 Hyundai Kona forward collision avoidance/automatic emergency braking; brake pedal went to floor with no tension and brakes failed after dealer service; vehicle crossed curb/sidewalk and hit a building.",
+      "started_at": "2025-01-15T07:00:01Z",
+      "step": 2,
+      "tokens": 1916,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-15T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "KONA",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Forward Safety Mode is the default setting on every time you start the vehicle and this mode when entering from side streets or any strip center or lane into on coming traffic lanes the vehicle senses you crossing the road lines and kills the Accelerator ! When trying to enter on...",
+            "group": "adas",
+            "id": "1996137",
+            "make": "HYUNDAI",
+            "model": "KONA",
+            "score": 8.5236,
+            "year": 2023
+          },
+          {
+            "excerpt": "While driving on the highway on an extended trip my cruise control dropped its speed from 71 to 65 without warning. On one occasion it happened while I was in the passing lane with a lot of traffic behind me. It created a very dangerous situation before I could get into the right...",
+            "group": "adas",
+            "id": "1942638",
+            "make": "HYUNDAI",
+            "model": "KONA",
+            "score": 5.3027,
+            "year": 2023
+          },
+          {
+            "excerpt": "i was driving at 45mph and a deer came in front of my car . We hit the deer in front of car , deer approximitly 100 lbs no warning like brake sytem lane obstruction or air bags deployed ? I bought this car based Hyundai telling me how safe of car it is . When obiously it is not I...",
+            "group": "adas",
+            "id": "1887127",
+            "make": "HYUNDAI",
+            "model": "KONA",
+            "score": 2.9191,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-15T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-15T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-15T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-15T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-15T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-15T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-15T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

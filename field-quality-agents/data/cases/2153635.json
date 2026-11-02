@@ -1,0 +1,224 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2153635",
+    "make": "CADILLAC",
+    "mileage": null,
+    "model": "OPTIQ",
+    "narrative": "On November 24, 2025, I discovered that multiple connected and safety-related systems on my 2025 Cadillac Optiq had stopped functioning. We believe a GM over-the-air software update was installed the weekend prior, and the dealer has inferred that the update may have caused the failure.  We brought the car into the dealership on November 26th. The car was \"fixeed\" and we picked it up on December 2nd. Before we were able to leave the lot, the telematic system broke again.  The dealership inspected the vehicle and confirmed that the telematics module had failed. We left the vehicle at the dealership,.  There were no warning lights, error messages, or other indications before the failure occurred. After the failure, several critical safety and driver-assistance systems became inoperable or severely impaired. These include, but are not limited to:  OnStar emergency services  Automatic crash notification  Steering assistance  Cruise and speed control  Lane-change and driver-assist systems  GPS and navigation functions  Bluetooth, Wi-Fi, and vehicle internet connectivity  Although the vehicle is technically drivable, the loss of these systems poses a significant safety risk to occupants and others on the road. The vehicle cannot contact emergency services in a collision, cannot send diagnostic data, and lacks essential driver-assistance and navigation capabilities.  The dealer has confirmed the problem, but the replacement telematics module is currently backordered with no clear timeline, and they stated the delay could last weeks or longer. Because the failure appears to have been caused by a GM-issued OTA update, and because essential safety systems are offline, I am concerned about both the defect itself and the extended inability to repair it due to unavailable parts.  UNKNOWN whether GM has conducted a broader inspection or analysis of this update or component, but the failure has been reproduced and confirmed by the dealer’s service department.",
+    "received_at": "2025-12-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2153635",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2153635",
+    "decided_at": "2025-12-03T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2153635",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple connected and safety-related systems on my 2025 Cadillac Optiq had stopped functioning"
+      },
+      {
+        "kind": "condition",
+        "quote": "We believe a GM over-the-air software update was installed the weekend prior"
+      },
+      {
+        "kind": "condition",
+        "quote": "Before we were able to leave the lot, the telematic system broke again."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the telematics module had failed"
+      },
+      {
+        "kind": "safety",
+        "quote": "poses a significant safety risk to occupants and others on the road"
+      },
+      {
+        "kind": "safety",
+        "quote": "cannot contact emergency services in a collision"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: telematics module failure caused multiple safety and driver-assistance systems to stop after an OTA update and again after dealer repair.",
+    "symptoms": [
+      "multiple connected and safety-related systems stopped functioning",
+      "telematics module failed",
+      "safety and driver-assistance systems became inoperable or severely impaired",
+      "no warning lights or error messages before the failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2153635",
+    "created_at": "2025-12-03T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-03T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009583,
+      "duration_ms": 11123,
+      "reason": "Electrical system: telematics module failure caused multiple safety and driver-assistance systems to stop after an OTA update and again after dealer repair.",
+      "started_at": "2025-12-03T07:00:15Z",
+      "step": 2,
+      "tokens": 2346,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-03T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CADILLAC",
+        "model": "OPTIQ",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-12-03T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-03T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-03T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-03T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-03T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-03T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-03T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

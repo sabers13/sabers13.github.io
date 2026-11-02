@@ -1,0 +1,340 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+    "group": "lighting",
+    "id": "2154079",
+    "make": "FORD",
+    "mileage": 5629,
+    "model": "MAVERICK",
+    "narrative": "The contact owns a 2025 Ford Maverick. The contact stated that while the vehicle was parked, the contact inspected the vehicle and noticed that the brake light located near the rear window was inoperable and the brake light had melted. The dealer was contacted; however, the vehicle was not diagnosed or repaired. The manufacturer was not made aware of the failure. The approximate failure mileage was 5,629",
+    "received_at": "2025-12-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154079",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154079",
+    "decided_at": "2025-12-04T07:00:27Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154079",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the brake light located near the rear window was inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brake light had melted"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the vehicle was parked"
+      },
+      {
+        "kind": "other",
+        "quote": "the vehicle was not diagnosed or repaired"
+      }
+    ],
+    "conditions": [
+      "while the vehicle was parked",
+      "approximate failure mileage 5,629"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Inspect and function-test the rear-window brake-light circuit for overheating and inoperability; the melted lamp indicates a possible electrical/thermal fault and safety concern.",
+    "symptoms": [
+      "rear-window brake light inoperable",
+      "brake light melted"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154079",
+    "created_at": "2025-12-04T07:00:25Z",
+    "evidence": [
+      {
+        "quote": "the brake light located near the rear window was inoperable",
+        "source_id": "2154079",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the brake light had melted",
+        "source_id": "2154079",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while the vehicle was parked",
+        "source_id": "2154079",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle was not diagnosed or repaired",
+        "source_id": "2154079",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "No rulebook entry or similar case matches. The narrative reports a 2025 Ford Maverick whose rear-window brake light was inoperable and had melted while the vehicle was parked, pointing to an electrical or thermal fault in that brake-light circuit. A recall exists for trailer-module brake/turn-signal loss on 2025 Maverick, but it does not describe a melted rear-window brake lamp, so a standard circuit inspection and functional test is appropriate. Because the brake light failed and melted, this is safety-relevant and should be reviewed by a human before any test is booked.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "26V104000",
+      "match": true,
+      "open_date": "2026-02-20",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss of brake function. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \" Lamps, Reflective Devices, and Associated Equipment.\""
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-04T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000835,
+      "duration_ms": 11385,
+      "reason": "2025 Ford Maverick exterior brake lighting: rear-window brake light inoperable and melted while parked.",
+      "started_at": "2025-12-04T07:00:16Z",
+      "step": 2,
+      "tokens": 1917,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-04T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MAVERICK",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-04T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-12-04T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2025 Ford Maverick. The contact stated that while the vehicle was parked, the contact inspected the vehicle and noticed that the brake light located near the rear window was inoperable and the brake light had melted. The dealer was contacted; however, the vehicle was not diagnosed or repaired. The manufacturer was not made aware of the failure. The approximate failure mileage was 5,629"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-04T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "FORD",
+        "model": "MAVERICK",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "EXTERIOR LIGHTING:TAIL LIGHTS",
+            "group": "lighting",
+            "id": "26V104000",
+            "make": "FORD",
+            "model": "MAVERICK",
+            "open_date": "2026-02-20",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss of brake function. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \" Lamps, Reflective Devices, and Associated Equipment.\"",
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-04T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "FORD",
+        "model": "MAVERICK",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-04T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00140475,
+      "duration_ms": 15686,
+      "reason": "No rulebook entry or similar case matches. The narrative reports a 2025 Ford Maverick whose rear-window brake light was inoperable and had melted while the vehicle was parked, pointing to an electrical or thermal fault in that brake-light circuit. A recall exists for trailer-module brake/turn-signal loss on 2025 Maverick, but it does not describe a melted rear-window brake lamp, so a standard circuit inspection and functional test is appropriate. Because the brake light failed and melted, this is safety-relevant and should be reviewed by a human before any test is booked.",
+      "started_at": "2025-12-04T07:00:23Z",
+      "step": 9,
+      "tokens": 3110,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-12-04T07:00:24Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "the brake light located near the rear window was inoperable",
+          "the brake light had melted",
+          "while the vehicle was parked",
+          "the vehicle was not diagnosed or repaired"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-04T07:00:26Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-04T07:00:28Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-04T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-04T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

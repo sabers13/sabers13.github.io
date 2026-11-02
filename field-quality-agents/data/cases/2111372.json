@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2111372",
+    "make": "GMC",
+    "mileage": null,
+    "model": "ACADIA",
+    "narrative": "Component/System: Transmission selector / electrical system (“Shift to Park” defect) Yes, vehicle is available for inspection upon request. I own a 2018 GMC Acadia. Since I purchased the vehicle used in June 2019, the car has frequently displayed a “Shift to Park” message even when the vehicle is in park and the gear shifter is fully engaged. This message prevents the car from turning off completely, leaving electrical systems running, the ignition on, and draining the battery. This issue has persisted nearly daily for the past five years. I brought the vehicle to a GM dealership in September 2020, while it was still under factory warranty, but the problem was not diagnosed or repaired at the time. The dealership could not reproduce the issue, but it continued regularly afterward. I am now paying nearly $900 out of pocket to have it repaired. Safety Risks: The vehicle does not fully shut down, increasing risk of electrical malfunction or battery failure. I am often unsure whether the car is truly “off,” which could pose a fire hazard or lead to the car rolling unexpectedly if the system misreads the gear position. This defect has also caused me to get stuck in unsafe areas, repeatedly turning the car off and on, jiggling the shifter until the system registers park. The constant battery drain has left me stranded with a dead vehicle multiple times. Reproduction / Confirmation: The issue has been reproduced by an independent repair shop and will be fixed at my expense next week. A GM dealership inspected it in 2020 but failed to diagnose or confirm the issue at that time. Inspection: The vehicle has been inspected by a GM-authorized service center. Not inspected by police or insurance representatives. Warning Messages or Symptoms: The “Shift to Park” message appears on the dashboard even after the vehicle is correctly shifted into park. This began shortly after purchasing the vehicle in June 2019, worsened over time, & still has the inability to turn off properly.",
+    "received_at": "2025-07-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2111372",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2111372",
+    "decided_at": "2025-07-17T07:01:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2111372",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "electrical system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car has frequently displayed a “Shift to Park” message even when the vehicle is in park and the gear shifter is fully engaged"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This message prevents the car from turning off completely, leaving electrical systems running, the ignition on, and draining the battery."
+      },
+      {
+        "kind": "condition",
+        "quote": "This issue has persisted nearly daily for the past five years."
+      },
+      {
+        "kind": "condition",
+        "quote": "The dealership could not reproduce the issue, but it continued regularly afterward."
+      },
+      {
+        "kind": "safety",
+        "quote": "could pose a fire hazard or lead to the car rolling unexpectedly if the system misreads the gear position"
+      },
+      {
+        "kind": "safety",
+        "quote": "The constant battery drain has left me stranded with a dead vehicle multiple times."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2018 GMC Acadia electrical system: frequent “Shift to Park” message in park prevents complete shutdown and drains battery; fire/rollaway risk claimed.",
+    "symptoms": [
+      "Shift to Park message displayed while vehicle is in park and shifter fully engaged",
+      "vehicle cannot be turned off completely",
+      "electrical systems remain running and ignition stays on",
+      "battery drains",
+      "risk of car rolling unexpectedly if gear position is misread",
+      "stranded with dead vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2111372",
+    "created_at": "2025-07-17T07:01:10Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "For months after putting car in park it displays a \"Shift to Park\" message. It won't let you fully shut down vehicle. Some times I can start it again, back up a little, put it back in park for it to shut off. Not one time though. You have to do it repeatedly. Maybe 6 or 7 times b...",
+      "group": "electrical_general",
+      "id": "1873819",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 26.7915,
+      "year": 2018
+    },
+    {
+      "excerpt": "\"SHIFT TO PARK\" ISSUE. WHEN OUR 2018 GMC ACADIA IS PLACED IN PARK, THE DIC DISPLAYS THAT THE VEHICLE IS NOT IN PARK WHEN IT IS INDEED IN PARK. NEVER SURE IF TRANSMISSION IS TRULY IN THE PARK POSITION AND CANNOT ROLL, BUT THERE IS NO CONFIRMATION OF THIS. THIS INDICATION FAILURE P...",
+      "group": "electrical_general",
+      "id": "1685319",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 23.3268,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 GMC Acadia. The contact stated while parking the vehicle, the gear shifter was shifted to the park position however, the gear shift indicator failed to show that the vehicle was in park. There were several attempts made before the shift indicator showed th...",
+      "group": "electrical_general",
+      "id": "1755106",
+      "make": "GMC",
+      "model": "ACADIA",
+      "score": 21.8977,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-17T07:01:04Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00121105,
+      "duration_ms": 13928,
+      "reason": "2018 GMC Acadia electrical system: frequent “Shift to Park” message in park prevents complete shutdown and drains battery; fire/rollaway risk claimed.",
+      "started_at": "2025-07-17T07:01:05Z",
+      "step": 2,
+      "tokens": 2792,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-17T07:01:06Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "ACADIA",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "For months after putting car in park it displays a \"Shift to Park\" message. It won't let you fully shut down vehicle. Some times I can start it again, back up a little, put it back in park for it to shut off. Not one time though. You have to do it repeatedly. Maybe 6 or 7 times b...",
+            "group": "electrical_general",
+            "id": "1873819",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 26.7915,
+            "year": 2018
+          },
+          {
+            "excerpt": "\"SHIFT TO PARK\" ISSUE. WHEN OUR 2018 GMC ACADIA IS PLACED IN PARK, THE DIC DISPLAYS THAT THE VEHICLE IS NOT IN PARK WHEN IT IS INDEED IN PARK. NEVER SURE IF TRANSMISSION IS TRULY IN THE PARK POSITION AND CANNOT ROLL, BUT THERE IS NO CONFIRMATION OF THIS. THIS INDICATION FAILURE P...",
+            "group": "electrical_general",
+            "id": "1685319",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 23.3268,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 GMC Acadia. The contact stated while parking the vehicle, the gear shifter was shifted to the park position however, the gear shift indicator failed to show that the vehicle was in park. There were several attempts made before the shift indicator showed th...",
+            "group": "electrical_general",
+            "id": "1755106",
+            "make": "GMC",
+            "model": "ACADIA",
+            "score": 21.8977,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-07-17T07:01:07Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-17T07:01:08Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-17T07:01:09Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-17T07:01:11Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-17T07:01:13Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-17T07:01:14Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-17T07:01:15Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

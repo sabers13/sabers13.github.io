@@ -1,0 +1,270 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2121408",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "KICKS",
+    "narrative": "The front crash warning will come on and then the car will just cut off. This has happened multiple times while driving. It’s dangerous because it happens without any warning and there is nothing going on with traffic to trigger the warning light.",
+    "received_at": "2025-08-17",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2121408",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2121408",
+    "decided_at": "2025-08-17T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2121408",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "front crash warning will come on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car will just cut off"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has happened multiple times while driving."
+      },
+      {
+        "kind": "safety",
+        "quote": "It’s dangerous because it happens without any warning"
+      },
+      {
+        "kind": "other",
+        "quote": "nothing is going on with traffic to trigger the warning light"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance warnings: front crash warning illuminates then the vehicle cuts off, repeatedly while driving.",
+    "symptoms": [
+      "front crash warning comes on",
+      "vehicle cuts off while driving"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2121408",
+    "created_at": "2025-08-17T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Car has an issue where the automatic emergency braking system (AEB) and the vehicle dynamic control off(VDC) lights simultaneously go on the dashboard. Shortly after the car will stall while idle at red lights. Car will also have trouble going above 2500 rpm when this happens. Ca...",
+      "group": "adas",
+      "id": "1961657",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 8.6842,
+      "year": 2019
+    },
+    {
+      "excerpt": "Vehicle is new, the collision sensors come on for no reason, 3 times a month, sensors come on car stalls and turns off, once restarted sensor warning is gone, then your able to drive, keeps happening.",
+      "group": "adas",
+      "id": "1841706",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 7.5997,
+      "year": 2019
+    },
+    {
+      "excerpt": "FRONT IMPACT WARNING LIGHT COMES ON AND AFFECTS THE CRUISE CONTROL AND TRIES TO STOP WITHOUT ANYTHING IN FRONT OF CAR. THIS CAR ONLY HAS 4200 MILES AND HAS BEEN IN SHOP 5 FIVES FOR THE SAME THING AND ALL NISSAN DEALERSHIP DOES IS CLEAR CODE, ADJUST SENSORS AND/OR CALIBRATE SENSOR...",
+      "group": "adas",
+      "id": "1714013",
+      "make": "NISSAN",
+      "model": "KICKS",
+      "score": 7.1353,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006949,
+      "duration_ms": 12302,
+      "reason": "Forward collision avoidance warnings: front crash warning illuminates then the vehicle cuts off, repeatedly while driving.",
+      "started_at": "2025-08-17T07:00:01Z",
+      "step": 2,
+      "tokens": 1658,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "KICKS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Car has an issue where the automatic emergency braking system (AEB) and the vehicle dynamic control off(VDC) lights simultaneously go on the dashboard. Shortly after the car will stall while idle at red lights. Car will also have trouble going above 2500 rpm when this happens. Ca...",
+            "group": "adas",
+            "id": "1961657",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 8.6842,
+            "year": 2019
+          },
+          {
+            "excerpt": "Vehicle is new, the collision sensors come on for no reason, 3 times a month, sensors come on car stalls and turns off, once restarted sensor warning is gone, then your able to drive, keeps happening.",
+            "group": "adas",
+            "id": "1841706",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 7.5997,
+            "year": 2019
+          },
+          {
+            "excerpt": "FRONT IMPACT WARNING LIGHT COMES ON AND AFFECTS THE CRUISE CONTROL AND TRIES TO STOP WITHOUT ANYTHING IN FRONT OF CAR. THIS CAR ONLY HAS 4200 MILES AND HAS BEEN IN SHOP 5 FIVES FOR THE SAME THING AND ALL NISSAN DEALERSHIP DOES IS CLEAR CODE, ADJUST SENSORS AND/OR CALIBRATE SENSOR...",
+            "group": "adas",
+            "id": "1714013",
+            "make": "NISSAN",
+            "model": "KICKS",
+            "score": 7.1353,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-17T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-17T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-17T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-17T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2135018",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON",
+    "narrative": "The contact owns a 2023 GMC Yukon. The contact stated that while driving at an undisclosed speed, the Forward Collision Avoidance sensor failed to function as intended. The contact stated that the failure occurred while exiting a parking space. The contact stated that the images on the screen displayed a wider distance between the two vehicles.  The contact stated that because of the failure, the passenger’s side rear bumper crashed into the front driver’s side bumper of another vehicle. The vehicle was taken to the dealer. The vehicle was repaired. The failure reoccurred. In addition, the contact stated that the Forward Collision Avoidance sensor and the back-over prevention camera system were not functioning as intended. The contact stated that the failure had occurred while reversing and while driving forward. The contact stated that the images were displayed at an incorrect distance. The contact stated that the failure was persistent. The dealer was made aware of the failure; however, the contact was informed that the repair was not covered under an unknown recall. The manufacturer was not made aware of the failure. The failure mileage was unknown.",
+    "received_at": "2025-09-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135018",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135018",
+    "decided_at": "2025-09-29T07:01:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135018",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Forward Collision Avoidance sensor failed to function as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the Forward Collision Avoidance sensor and the back-over prevention camera system were not functioning as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the images on the screen displayed a wider distance between the two vehicles"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the images were displayed at an incorrect distance"
+      },
+      {
+        "kind": "condition",
+        "quote": "the failure occurred while exiting a parking space"
+      },
+      {
+        "kind": "condition",
+        "quote": "the failure had occurred while reversing and while driving forward"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was repaired. The failure reoccurred."
+      },
+      {
+        "kind": "condition",
+        "quote": "the failure was persistent"
+      },
+      {
+        "kind": "safety",
+        "quote": "the passenger’s side rear bumper crashed into the front driver’s side bumper of another vehicle"
+      }
+    ],
+    "conditions": [
+      "exiting a parking space",
+      "reversing",
+      "driving forward",
+      "after service",
+      "persistent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "BACK OVER PREVENTION/ADAS: forward collision avoidance sensor and back-over prevention camera failed, showing incorrect vehicle distance; occurred exiting a parking space, reversing and driving forward, and recurred after repair.",
+    "symptoms": [
+      "Forward Collision Avoidance sensor failed to function as intended",
+      "Back-over prevention camera system not functioning as intended",
+      "Screen images displayed an incorrect/wider distance between vehicles",
+      "Vehicle collided with another vehicle while exiting a parking space"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135018",
+    "created_at": "2025-09-29T07:01:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The vehicle was crawling to a stop in preparation to park in front of my garage door. When I move my hand across the steering wheel, my hand must have come in contact with the toggle/scroll for the “resume speed” function of the cruise control. The vehicle abruptly began accelera...",
+      "group": "adas",
+      "id": "1968162",
+      "make": "GMC",
+      "model": "YUKON",
+      "score": 3.4499,
+      "year": 2023
+    },
+    {
+      "excerpt": "Brand new vehicle, at about 5k miles the backup camera went out in April 2023. It is now December of 2023 and I have not had any sort of resolution. I have 3 children ages 2, 4 and 5 and it is very concerning for me and my wife to not have a backup camera especially at night.",
+      "group": "adas",
+      "id": "1951450",
+      "make": "GMC",
+      "model": "YUKON",
+      "score": 2.2476,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-29T07:01:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0018451,
+      "duration_ms": 14684,
+      "reason": "BACK OVER PREVENTION/ADAS: forward collision avoidance sensor and back-over prevention camera failed, showing incorrect vehicle distance; occurred exiting a parking space, reversing and driving forward, and recurred after repair.",
+      "started_at": "2025-09-29T07:01:01Z",
+      "step": 2,
+      "tokens": 3701,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-09-29T07:01:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The vehicle was crawling to a stop in preparation to park in front of my garage door. When I move my hand across the steering wheel, my hand must have come in contact with the toggle/scroll for the “resume speed” function of the cruise control. The vehicle abruptly began accelera...",
+            "group": "adas",
+            "id": "1968162",
+            "make": "GMC",
+            "model": "YUKON",
+            "score": 3.4499,
+            "year": 2023
+          },
+          {
+            "excerpt": "Brand new vehicle, at about 5k miles the backup camera went out in April 2023. It is now December of 2023 and I have not had any sort of resolution. I have 3 children ages 2, 4 and 5 and it is very concerning for me and my wife to not have a backup camera especially at night.",
+            "group": "adas",
+            "id": "1951450",
+            "make": "GMC",
+            "model": "YUKON",
+            "score": 2.2476,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-29T07:01:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-29T07:01:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-29T07:01:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-29T07:01:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-29T07:01:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-29T07:01:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-29T07:01:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

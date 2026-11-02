@@ -1,0 +1,289 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2131861",
+    "make": "CHRYSLER",
+    "mileage": null,
+    "model": "PACIFICA",
+    "narrative": "On multiple occasions, from 2023-2025 our vehicle has had issues where all the gauges and warning lights go off and vehicle stops and turns off regardless of driving conditions.  Recently happened yesterday.  The culprit is the can c bus connectors that Chrysler is using.  They short out causing the issue and because so many systems codes get tripped after nearly a year of back and forth with dealerships unable to diagnose issue I went to a pacifica forum where there are 1000s same reported issue. The issue is caused by the cancam bus connectors - specifically under the dashboard in our case, due to Chrysler using zinc based soldering that cannot handle the heatand elements. These solders use to be made out of lead that can handle the elements.  We are replacing them for the 2nd time in less than a year after,as mentioned before, my wife and daughter had van completely stop and shutoff in the middle of traffic.  This has happened recently every couple days for the last 3 weeks - previous time happened off and on while waiting for answers from dealership for over a year, they cannot recreate issue because it's random and therefore will not chae the issues or listen when I asked to specifically check item. (Files uploaded are from video my wife captured)",
+    "received_at": "2025-09-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131861",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131861",
+    "decided_at": "2025-09-19T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131861",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "all the gauges and warning lights go off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle stops and turns off regardless of driving conditions"
+      },
+      {
+        "kind": "symptom",
+        "quote": "They short out causing the issue"
+      },
+      {
+        "kind": "symptom",
+        "quote": "van completely stop and shutoff in the middle of traffic"
+      },
+      {
+        "kind": "condition",
+        "quote": "cannot handle the heatand elements"
+      },
+      {
+        "kind": "condition",
+        "quote": "it's random"
+      },
+      {
+        "kind": "condition",
+        "quote": "every couple days for the last 3 weeks"
+      },
+      {
+        "kind": "component_group",
+        "quote": "can c bus connectors"
+      },
+      {
+        "kind": "safety",
+        "quote": "van completely stop and shutoff in the middle of traffic"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system CAN bus connectors: gauges/warning lights go off and vehicle stops and turns off, including in traffic; heat-related solder failure with random recurrence.",
+    "symptoms": [
+      "all gauges and warning lights go off",
+      "vehicle stops and turns off",
+      "van completely stop and shutoff in the middle of traffic",
+      "CAN bus connectors short out causing the issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131861",
+    "created_at": "2025-09-19T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The Start/Stop battery on the Pacifica is a problem. I owned a 2017 model that failed 3 times. I traded that can in for the 2020 model and in less than 2 years it failed. I had it repaired under warranty on 09/27/2022 and it has failed again less than one month after the repair....",
+      "group": "electrical_general",
+      "id": "1846787",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 24.2216,
+      "year": 2020
+    },
+    {
+      "excerpt": "My problem started about a year ago with the auto start/stop light coming on- said it needed serviced. They replaced my auxiliary battery. Mind you, my van was only about 2.5 years old at this point (bought it brand new). So then about a month ago, same warnings. Stop/start isn’t...",
+      "group": "electrical_general",
+      "id": "2014583",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 22.3785,
+      "year": 2020
+    },
+    {
+      "excerpt": "Driving from PA to GA when after 775+ miles, and twenty five minutes from our destination we received an message indicating to pull over safety as the vehicle was coming to a stop. Three kids in car seats stuck on the highway waiting for a tow is not comforting. The car dealershi...",
+      "group": "electrical_general",
+      "id": "1806976",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 18.0868,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-19T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00126115,
+      "duration_ms": 11512,
+      "reason": "Electrical system CAN bus connectors: gauges/warning lights go off and vehicle stops and turns off, including in traffic; heat-related solder failure with random recurrence.",
+      "started_at": "2025-09-19T07:00:01Z",
+      "step": 2,
+      "tokens": 2760,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-19T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The Start/Stop battery on the Pacifica is a problem. I owned a 2017 model that failed 3 times. I traded that can in for the 2020 model and in less than 2 years it failed. I had it repaired under warranty on 09/27/2022 and it has failed again less than one month after the repair....",
+            "group": "electrical_general",
+            "id": "1846787",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 24.2216,
+            "year": 2020
+          },
+          {
+            "excerpt": "My problem started about a year ago with the auto start/stop light coming on- said it needed serviced. They replaced my auxiliary battery. Mind you, my van was only about 2.5 years old at this point (bought it brand new). So then about a month ago, same warnings. Stop/start isn’t...",
+            "group": "electrical_general",
+            "id": "2014583",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 22.3785,
+            "year": 2020
+          },
+          {
+            "excerpt": "Driving from PA to GA when after 775+ miles, and twenty five minutes from our destination we received an message indicating to pull over safety as the vehicle was coming to a stop. Three kids in car seats stuck on the highway waiting for a tow is not comforting. The car dealershi...",
+            "group": "electrical_general",
+            "id": "1806976",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 18.0868,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-19T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-19T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-19T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-19T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-19T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-19T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-19T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

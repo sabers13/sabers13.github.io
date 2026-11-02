@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "group": "adas",
+    "id": "2109648",
+    "make": "POLESTAR",
+    "mileage": null,
+    "model": "POLESTAR 2",
+    "narrative": "Despite receiving the recent software update intended to fix ongoing issues with the backup camera, the center stack remains woefully inadequate, hardware-wise, to properly handle all of the vehicle data. Sometimes now, the reverse camera is fine until halfway during my backup procedure when I'm halfway out in traffic and it suddenly shuts off.  If anything the unpredictable nature of the failures makes this a worse problem than before. Before the software update I could at least sit in the car for a minute or two and then try backing up and it would work most of the time. Now, it works a good amount of the time but randomly fails.",
+    "received_at": "2025-07-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2109648",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2109648",
+    "decided_at": "2025-07-13T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2109648",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the reverse camera is fine until halfway during my backup procedure when I'm halfway out in traffic and it suddenly shuts off"
+      },
+      {
+        "kind": "condition",
+        "quote": "randomly fails"
+      },
+      {
+        "kind": "condition",
+        "quote": "Despite receiving the recent software update"
+      },
+      {
+        "kind": "safety",
+        "quote": "halfway out in traffic"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Back over prevention camera: reverse camera intermittently shuts off mid-backup, including in traffic, after software update.",
+    "symptoms": [
+      "reverse backup camera shuts off unexpectedly during backing up",
+      "backup camera operation is intermittent and unpredictable"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2109648",
+    "created_at": "2025-07-13T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+      "group": "adas",
+      "id": "2030284",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 11.8092,
+      "year": 2022
+    },
+    {
+      "excerpt": "Modem failed on vehicle on 02/04/222. Vehicle went in for diagnostic service on that issue on 02/14/2022. Manufacturer installed new software update which added Auto Brake part of Cross Traffic Alert is to stop the vehicle in the shortest possible distance to avoid collision and...",
+      "group": "adas",
+      "id": "1797262",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 11.0679,
+      "year": 2022
+    },
+    {
+      "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+      "group": "adas",
+      "id": "2033379",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 7.05,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-13T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013324,
+      "duration_ms": 16561,
+      "reason": "Back over prevention camera: reverse camera intermittently shuts off mid-backup, including in traffic, after software update.",
+      "started_at": "2025-07-13T07:00:01Z",
+      "step": 2,
+      "tokens": 2779,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-13T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+            "group": "adas",
+            "id": "2030284",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 11.8092,
+            "year": 2022
+          },
+          {
+            "excerpt": "Modem failed on vehicle on 02/04/222. Vehicle went in for diagnostic service on that issue on 02/14/2022. Manufacturer installed new software update which added Auto Brake part of Cross Traffic Alert is to stop the vehicle in the shortest possible distance to avoid collision and...",
+            "group": "adas",
+            "id": "1797262",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 11.0679,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033379",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 7.05,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-13T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-13T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-13T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-13T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-13T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-13T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-13T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

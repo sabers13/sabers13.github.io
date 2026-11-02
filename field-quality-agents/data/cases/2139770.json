@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "SERVICE BRAKES, AIR:ANTILOCK",
+    "group": "safety_systems",
+    "id": "2139770",
+    "make": "JEEP",
+    "mileage": 59647,
+    "model": "GRAND CHEROKEE L",
+    "narrative": "The contact owns a 2023 Jeep Grand Cherokee L. The contact stated that while driving at 60 MPH, the vehicle failed to accelerate as intended while depressing the accelerator pedal. In addition, a burnt odor was emitting from the interior of the vehicle.  No warning lights were illuminated. The contact was able to pull to the side of the vehicle. Upon inspection, the contact noticed flames were emitting from the brake caliper assembly, and the brake rotor was red on the front passenger-side tire. The contact used a giant water bottle to extinguish the flames. The contact, her mother, and her daughter were not injured.  The insurance company was contacted, and the contact requested a tow truck. However, the contact called roadside assistance. The driver, from roadside assistance, disconnected an unknown wire from the brake caliper. When the vehicle was restarted, the parking brake lever was engaged but failed to function as intended, and the ABS warning light was illuminated. The contact was able to drive very slowly and took the vehicle to a family member's residence. The contact noticed that smoke was emitting from the front driver-side tire. The contact took the vehicle to Pep Boys, where it was diagnosed that the front brake calipers failed. However, the mechanic refused to repair the vehicle. The contact called the insurance company to have the vehicle towed to the dealer, where it was diagnosed that the power brake booster was faulty, the vehicle had no brakes, the hydraulic control unit failed to build pressure, and an unknown internal leak was found. And the hydraulic brake system had a leak; the left front wheel had caught on fire, which caused damage to the left front brake caliper, the rotor pads, and the brake hose, and the rear rotors were glazed.  The contact was informed that the brake booster, ABS module, brake caliper, brake line, gaskets, front brake pads, front rotors, rear brake pads, rear rotors, and adapter plate needed to be replaced. The DTC codes the diagnostic showed were C0050-00, which i",
+    "received_at": "2025-10-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2139770",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2139770",
+    "decided_at": "2025-10-14T07:00:37Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2139770",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SERVICE BRAKES, AIR:ANTILOCK"
+      },
+      {
+        "kind": "symptom",
+        "quote": "failed to accelerate as intended while depressing the accelerator pedal"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at 60 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a burnt odor was emitting from the interior of the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "No warning lights were illuminated."
+      },
+      {
+        "kind": "symptom",
+        "quote": "flames were emitting from the brake caliper assembly"
+      },
+      {
+        "kind": "condition",
+        "quote": "the brake rotor was red on the front passenger-side tire"
+      },
+      {
+        "kind": "safety",
+        "quote": "The contact used a giant water bottle to extinguish the flames."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the parking brake lever was engaged but failed to function as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the ABS warning light was illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke was emitting from the front driver-side tire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the front brake calipers failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the power brake booster was faulty"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle had no brakes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the hydraulic control unit failed to build pressure"
+      },
+      {
+        "kind": "symptom",
+        "quote": "an unknown internal leak was found"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the hydraulic brake system had a leak"
+      },
+      {
+        "kind": "safety",
+        "quote": "the left front wheel had caught on fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the rear rotors were glazed"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "C0050-00"
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [
+      "C0050-00"
+    ],
+    "group": "safety_systems",
+    "safety_relevant": true,
+    "summary": "2023 Jeep Grand Cherokee L service brakes/ABS: at 60 mph failed acceleration, burnt odor and brake caliper/rotor flames/smoke, ABS light, diagnoses of caliper/booster/HCU leak; no injuries.",
+    "symptoms": [
+      "failed to accelerate as intended while depressing the accelerator pedal",
+      "burnt odor from the interior",
+      "flames from the brake caliper assembly; front passenger brake rotor red",
+      "parking brake lever engaged but failed to function as intended",
+      "ABS warning light illuminated",
+      "smoke from the front driver-side tire",
+      "front brake calipers failed",
+      "power brake booster faulty",
+      "no brakes",
+      "hydraulic control unit failed to build pressure",
+      "unknown internal leak in hydraulic brake system",
+      "left front wheel caught fire causing damage to caliper, rotor pads, and brake hose",
+      "rear rotors glazed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2139770",
+    "created_at": "2025-10-14T07:00:35Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-14T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00267265,
+      "duration_ms": 25804,
+      "reason": "2023 Jeep Grand Cherokee L service brakes/ABS: at 60 mph failed acceleration, burnt odor and brake caliper/rotor flames/smoke, ABS light, diagnoses of caliper/booster/HCU leak; no injuries.",
+      "started_at": "2025-10-14T07:00:31Z",
+      "step": 2,
+      "tokens": 5246,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-14T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE L",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-14T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-14T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-14T07:00:36Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-14T07:00:38Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-14T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-14T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

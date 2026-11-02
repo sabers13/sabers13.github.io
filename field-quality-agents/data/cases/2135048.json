@@ -1,0 +1,318 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2135048",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "PALISADE",
+    "narrative": "I am unsure what exact component malfunctioned but in 5 separate times within the past 2 months, the vehicle has failed to stop at a normal time when pressing the brakes and a loud rumbling occurs. It feels as if I am sliding on ice.Two of the times it occurred on uneven road surfaces, however 3 times I could not identify an issue with the road. They all occured when coming to a stoplight/stop sign or when I had to stop due to a vehicle slowing down or stopping in front of me. In each occurrence I was going under 20 mph. The safety of others could have definitely been impacted as it took a few seconds to actually stop the vehicle more than it should have. Someone could have been walking and crossing the street in front of me. Or if I was too close to the car in front of me it could have hit it. No warning messages appeared on the dashboard prior, but during the occurrence in the last time, I noticed the word \"shift\" appear. This word could have shown up during the first few times and I could have missed it. On Tuesday September 9th I took it to the dealership and they checked everything out and the vehicle did not produce the same symptoms when they tested it out over the hour I was there. They said they reported the issue but they did not know the reason it was occuring.",
+    "received_at": "2025-09-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135048",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135048",
+    "decided_at": "2025-09-29T07:01:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135048",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "failed to stop at a normal time when pressing the brakes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a loud rumbling occurs"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It feels as if I am sliding on ice."
+      },
+      {
+        "kind": "condition",
+        "quote": "in 5 separate times within the past 2 months"
+      },
+      {
+        "kind": "condition",
+        "quote": "Two of the times it occurred on uneven road surfaces"
+      },
+      {
+        "kind": "condition",
+        "quote": "They all occured when coming to a stoplight/stop sign"
+      },
+      {
+        "kind": "condition",
+        "quote": "I was going under 20 mph"
+      },
+      {
+        "kind": "safety",
+        "quote": "The safety of others could have definitely been impacted"
+      },
+      {
+        "kind": "safety",
+        "quote": "Someone could have been walking and crossing the street in front of me."
+      },
+      {
+        "kind": "safety",
+        "quote": "it could have hit it"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning messages appeared on the dashboard prior"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I noticed the word \"shift\" appear"
+      },
+      {
+        "kind": "other",
+        "quote": "I am unsure what exact component malfunctioned"
+      },
+      {
+        "kind": "other",
+        "quote": "the vehicle did not produce the same symptoms when they tested it out"
+      },
+      {
+        "kind": "other",
+        "quote": "they did not know the reason it was occuring"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS automatic emergency braking: intermittent failure to stop normally with loud rumbling/sliding sensation during low-speed stops, sometimes on uneven roads.",
+    "symptoms": [
+      "failed to stop at a normal time when pressing the brakes",
+      "loud rumbling while braking",
+      "feels as if sliding on ice",
+      "took a few seconds longer to stop",
+      "no warning messages before the event",
+      "the word \"shift\" appeared during the last event"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135048",
+    "created_at": "2025-09-29T07:01:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Brake or ABS failure when driving at a moderate speed between 10 to 20 mph over an uneven ground, slightly bumpy road, which makes the car shake and lurch forward while brake pedal becomes unavailable to press/hit . This has happened around 6 times within the last 10 months since...",
+      "group": "adas",
+      "id": "2037448",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 22.105,
+      "year": 2024
+    },
+    {
+      "excerpt": "This has happened to me on 6 different occasions. While driving at slow speeds, and applying the brakes, the vehicles ABS system kicks in for no reason. However, while doing this, the vehicle is not slowing down and feels as though it will not stop. The only thing that stops the...",
+      "group": "adas",
+      "id": "2043743",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 21.1315,
+      "year": 2024
+    },
+    {
+      "excerpt": "When braking on an uneven surface, the anti-lock braking system will sometimes kick in, causing the car to shake and not deliver the stopping power the driver expects. I've nearly rear ended multiple people and have glided out into intersections before. Typically happens when lea...",
+      "group": "adas",
+      "id": "2024284",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 10.3964,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-29T07:01:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0024703,
+      "duration_ms": 22006,
+      "reason": "ADAS automatic emergency braking: intermittent failure to stop normally with loud rumbling/sliding sensation during low-speed stops, sometimes on uneven roads.",
+      "started_at": "2025-09-29T07:01:31Z",
+      "step": 2,
+      "tokens": 4794,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-29T07:01:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "PALISADE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Brake or ABS failure when driving at a moderate speed between 10 to 20 mph over an uneven ground, slightly bumpy road, which makes the car shake and lurch forward while brake pedal becomes unavailable to press/hit . This has happened around 6 times within the last 10 months since...",
+            "group": "adas",
+            "id": "2037448",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 22.105,
+            "year": 2024
+          },
+          {
+            "excerpt": "This has happened to me on 6 different occasions. While driving at slow speeds, and applying the brakes, the vehicles ABS system kicks in for no reason. However, while doing this, the vehicle is not slowing down and feels as though it will not stop. The only thing that stops the...",
+            "group": "adas",
+            "id": "2043743",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 21.1315,
+            "year": 2024
+          },
+          {
+            "excerpt": "When braking on an uneven surface, the anti-lock braking system will sometimes kick in, causing the car to shake and not deliver the stopping power the driver expects. I've nearly rear ended multiple people and have glided out into intersections before. Typically happens when lea...",
+            "group": "adas",
+            "id": "2024284",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 10.3964,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-29T07:01:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-29T07:01:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-29T07:01:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-29T07:01:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-29T07:01:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-29T07:01:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-29T07:01:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2074789",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "This is a known problem with Jeep. Service Shifter error message. I have had this repaired 3x and no one can seem to fix it. The car only has 50k miles on it. There are tons of message board stating that Jeep has a serious issue with their shifter module. Please get Jeep to do something about this.",
+    "received_at": "2025-03-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2074789",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2074789",
+    "decided_at": "2025-03-18T07:00:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2074789",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Service Shifter error message"
+      },
+      {
+        "kind": "condition",
+        "quote": "I have had this repaired 3x and no one can seem to fix it."
+      },
+      {
+        "kind": "other",
+        "quote": "The car only has 50k miles on it."
+      },
+      {
+        "kind": "symptom",
+        "quote": "serious issue with their shifter module"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the shifter module installation and connectors for a recurring Service Shifter error after three repairs.",
+    "symptoms": [
+      "Service Shifter error message",
+      "shifter module issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2074789",
+    "created_at": "2025-03-18T07:00:10Z",
+    "evidence": [
+      {
+        "quote": "Service Shifter error message",
+        "source_id": "2074789",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I have had this repaired 3x and no one can seem to fix it.",
+        "source_id": "2074789",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The car only has 50k miles on it.",
+        "source_id": "2074789",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "serious issue with their shifter module",
+        "source_id": "2074789",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a 'Service Shifter error message' that has recurred despite three repair attempts, matching the rulebook condition 'after service'; the rulebook directs an installation check before test.",
+    "requested_info": [],
+    "summary": "Test the shifter module installation and connectors for a recurring Service Shifter error after three repairs.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative reports a 'Service Shifter error message' that has recurred despite three repair attempts, matching the rulebook condition 'after service'; the rulebook directs an installation check before test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "WEDNESDAY, AUGUST 5 2020, WAS DRIVING ABOUT 3 MILES FROM MY HOUSE WHEN I NOTICED MESSAGE ON DASHBOARD \"PLACE CAR IN PARK TO START CAR\". THOUGHT IT WAS ODD BECAUSE I WAS DRIVING. I THEN NOTICED CAR WAS OFF SO PLACED IN PARK (ON THE ROAD BTW) AND STARTED IT UP AGAIN. NO MORE ISSUES...",
+      "group": "electrical_general",
+      "id": "1683140",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 6.6202,
+      "year": 2020
+    },
+    {
+      "excerpt": "WHILE DRIVING 60 MILES PER HOUR ALONG THE SOUTHBOUND EXPRESS LANE OF GARDEN STATE PARKWAY MY NEW 2020 JEEP GRAND CHEROKEE STARTED SHAKING. WITHIN SECONDS, I PULLED ON TO THE GRASSY AREA NEXT TO THE FAST LANE WHERE MY VEHICLE DIED. AFTER GETTING TOWED TO THE DEALERSHIP, I WAS NOTI...",
+      "group": "electrical_general",
+      "id": "1709448",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 5.4278,
+      "year": 2020
+    },
+    {
+      "excerpt": "Delamination of the front screen of the car. The screen is delaminating at a rapid pace and I have no reason for the issue to arise other than a manufacture issue with the screen. It continues to get every day. Causing an obstruction and not being able to see my review back up ca...",
+      "group": "electrical_general",
+      "id": "2009935",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 5.1909,
+      "year": 2020
+    },
+    {
+      "excerpt": "The check engine light started appearing on the dash and the adaptive cruise control kept appearing that it was off. The light would go off and come on again and the transmission would not shift gears and I could not go in reverse. I drove vehicle to Marino Jeep and they notified...",
+      "group": "electrical_general",
+      "id": "1897656",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 4.8537,
+      "year": 2020
+    },
+    {
+      "excerpt": "I am reporting significant safety issues with my 2020 Jeep Grand Cherokee Limited X. The vehicle has repeatedly experienced failures in critical safety systems such as Adaptive Cruise Control (ACC), ParkSense, and Lane Departure, which randomly disable while driving, particularly...",
+      "group": "electrical_general",
+      "id": "2022556",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 4.3607,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00059125,
+      "duration_ms": 8412,
+      "reason": "Electrical system/shifter: Service Shifter error message recurring after three repairs at about 50k miles",
+      "started_at": "2025-03-18T07:00:01Z",
+      "step": 2,
+      "tokens": 1498,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WEDNESDAY, AUGUST 5 2020, WAS DRIVING ABOUT 3 MILES FROM MY HOUSE WHEN I NOTICED MESSAGE ON DASHBOARD \"PLACE CAR IN PARK TO START CAR\". THOUGHT IT WAS ODD BECAUSE I WAS DRIVING. I THEN NOTICED CAR WAS OFF SO PLACED IN PARK (ON THE ROAD BTW) AND STARTED IT UP AGAIN. NO MORE ISSUES...",
+            "group": "electrical_general",
+            "id": "1683140",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 6.6202,
+            "year": 2020
+          },
+          {
+            "excerpt": "WHILE DRIVING 60 MILES PER HOUR ALONG THE SOUTHBOUND EXPRESS LANE OF GARDEN STATE PARKWAY MY NEW 2020 JEEP GRAND CHEROKEE STARTED SHAKING. WITHIN SECONDS, I PULLED ON TO THE GRASSY AREA NEXT TO THE FAST LANE WHERE MY VEHICLE DIED. AFTER GETTING TOWED TO THE DEALERSHIP, I WAS NOTI...",
+            "group": "electrical_general",
+            "id": "1709448",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 5.4278,
+            "year": 2020
+          },
+          {
+            "excerpt": "Delamination of the front screen of the car. The screen is delaminating at a rapid pace and I have no reason for the issue to arise other than a manufacture issue with the screen. It continues to get every day. Causing an obstruction and not being able to see my review back up ca...",
+            "group": "electrical_general",
+            "id": "2009935",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 5.1909,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-03-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-03-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "This is a known problem with Jeep. Service Shifter error message. I have had this repaired 3x and no one can seem to fix it. The car only has 50k miles on it. There are tons of message board stating that Jeep has a serious issue with their shifter module. Please get Jeep to do something about this."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WEDNESDAY, AUGUST 5 2020, WAS DRIVING ABOUT 3 MILES FROM MY HOUSE WHEN I NOTICED MESSAGE ON DASHBOARD \"PLACE CAR IN PARK TO START CAR\". THOUGHT IT WAS ODD BECAUSE I WAS DRIVING. I THEN NOTICED CAR WAS OFF SO PLACED IN PARK (ON THE ROAD BTW) AND STARTED IT UP AGAIN. NO MORE ISSUES...",
+            "group": "electrical_general",
+            "id": "1683140",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 6.6202,
+            "year": 2020
+          },
+          {
+            "excerpt": "WHILE DRIVING 60 MILES PER HOUR ALONG THE SOUTHBOUND EXPRESS LANE OF GARDEN STATE PARKWAY MY NEW 2020 JEEP GRAND CHEROKEE STARTED SHAKING. WITHIN SECONDS, I PULLED ON TO THE GRASSY AREA NEXT TO THE FAST LANE WHERE MY VEHICLE DIED. AFTER GETTING TOWED TO THE DEALERSHIP, I WAS NOTI...",
+            "group": "electrical_general",
+            "id": "1709448",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 5.4278,
+            "year": 2020
+          },
+          {
+            "excerpt": "Delamination of the front screen of the car. The screen is delaminating at a rapid pace and I have no reason for the issue to arise other than a manufacture issue with the screen. It continues to get every day. Causing an obstruction and not being able to see my review back up ca...",
+            "group": "electrical_general",
+            "id": "2009935",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 5.1909,
+            "year": 2020
+          },
+          {
+            "excerpt": "The check engine light started appearing on the dash and the adaptive cruise control kept appearing that it was off. The light would go off and come on again and the transmission would not shift gears and I could not go in reverse. I drove vehicle to Marino Jeep and they notified...",
+            "group": "electrical_general",
+            "id": "1897656",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 4.8537,
+            "year": 2020
+          },
+          {
+            "excerpt": "I am reporting significant safety issues with my 2020 Jeep Grand Cherokee Limited X. The vehicle has repeatedly experienced failures in critical safety systems such as Adaptive Cruise Control (ACC), ParkSense, and Lane Departure, which randomly disable while driving, particularly...",
+            "group": "electrical_general",
+            "id": "2022556",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 4.3607,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-03-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-03-18T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-03-18T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.000813,
+      "duration_ms": 11192,
+      "reason": "The narrative reports a 'Service Shifter error message' that has recurred despite three repair attempts, matching the rulebook condition 'after service'; the rulebook directs an installation check before test.",
+      "started_at": "2025-03-18T07:00:08Z",
+      "step": 9,
+      "tokens": 2477,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-03-18T07:00:09Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Service Shifter error message",
+          "I have had this repaired 3x and no one can seem to fix it.",
+          "The car only has 50k miles on it.",
+          "serious issue with their shifter module"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-18T07:00:11Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-03-18T07:00:13Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-18T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-18T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

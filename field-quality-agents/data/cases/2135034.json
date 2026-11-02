@@ -1,0 +1,277 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2135034",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "While at a red light, my car was stopped with Tesla Full Self-Driving (FSD) on. When the car in front of me nudged forward, my car, still in FSD , accelerated and drove into the car in front. Looking at the event report of my car, the automatic emergency break did engage but too late. This means the sensors in front failed to recognize the vehicle ahead.",
+    "received_at": "2025-09-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135034",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135034",
+    "decided_at": "2025-09-29T07:01:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135034",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "While at a red light, my car was stopped with Tesla Full Self-Driving (FSD) on."
+      },
+      {
+        "kind": "condition",
+        "quote": "When the car in front of me nudged forward, my car, still in FSD , accelerated and drove into the car in front."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the automatic emergency break did engage but too late"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the sensors in front failed to recognize the vehicle ahead"
+      },
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "safety",
+        "quote": "drove into the car in front"
+      }
+    ],
+    "conditions": [
+      "stopped at red light",
+      "FSD active",
+      "vehicle ahead nudged forward"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance / automatic emergency braking on a 2022 Tesla Model 3: while stopped at a red light in FSD, the car accelerated into the vehicle ahead when it nudged forward; AEB engaged too late.",
+    "symptoms": [
+      "vehicle accelerated into the car ahead while FSD was active",
+      "automatic emergency braking engaged too late",
+      "front sensors failed to recognize the vehicle ahead"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135034",
+    "created_at": "2025-09-29T07:01:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Tesla summons was used to summons the car. Vehicle drove forward as directed and failed to clear car on left when pulling out of the parking space to go left. Vision systems and ultrasonic sensors failed to detect and perform safety measures resulting in vehicle collision.",
+      "group": "adas",
+      "id": "1991326",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 22.1004,
+      "year": 2022
+    },
+    {
+      "excerpt": "I am renting this Tesla Model 3 on monthly basis Rental from Hertz. ON SEP 5TH, 2022 I was at a stop sign fully stopped and all of a sudden the car started accelarating by itself. I try to call Tesla about it and their answer was as I am not the owner they won't even talk to me....",
+      "group": "adas",
+      "id": "1841333",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 21.3816,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was hit by a woman driving a Tesla with autopilot turned on. The system did not detect the red light, and she hit the right front quarter panel of my vehicle, totally my vehicle. The autopilot system malfunctioned and should have detected both the red light and the collision wh...",
+      "group": "adas",
+      "id": "1831727",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 15.9668,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-29T07:01:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00079825,
+      "duration_ms": 7405,
+      "reason": "Forward collision avoidance / automatic emergency braking on a 2022 Tesla Model 3: while stopped at a red light in FSD, the car accelerated into the vehicle ahead when it nudged forward; AEB engaged too late.",
+      "started_at": "2025-09-29T07:01:16Z",
+      "step": 2,
+      "tokens": 1858,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-29T07:01:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Tesla summons was used to summons the car. Vehicle drove forward as directed and failed to clear car on left when pulling out of the parking space to go left. Vision systems and ultrasonic sensors failed to detect and perform safety measures resulting in vehicle collision.",
+            "group": "adas",
+            "id": "1991326",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 22.1004,
+            "year": 2022
+          },
+          {
+            "excerpt": "I am renting this Tesla Model 3 on monthly basis Rental from Hertz. ON SEP 5TH, 2022 I was at a stop sign fully stopped and all of a sudden the car started accelarating by itself. I try to call Tesla about it and their answer was as I am not the owner they won't even talk to me....",
+            "group": "adas",
+            "id": "1841333",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 21.3816,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was hit by a woman driving a Tesla with autopilot turned on. The system did not detect the red light, and she hit the right front quarter panel of my vehicle, totally my vehicle. The autopilot system malfunctioned and should have detected both the red light and the collision wh...",
+            "group": "adas",
+            "id": "1831727",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 15.9668,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-29T07:01:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-29T07:01:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-29T07:01:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-29T07:01:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-29T07:01:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-29T07:01:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-29T07:01:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

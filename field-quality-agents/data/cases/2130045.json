@@ -1,0 +1,287 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2130045",
+    "make": "ACURA",
+    "mileage": null,
+    "model": "MDX",
+    "narrative": "I was driving to work yesterday morning- busiest time of day on probably the busiest road in our area. My car started freaking out randomly. It popped up numerous errors. The steering wheel locked up. The brakes weren’t working well. I had a car behind me. THANKFULLY they were paying attention because they were very close to rear ending me. But they dodged me. I finally jerked the wheel and got it pulled over to the side of the road until someone could come get me and take me to work. There could have been a different outcome. After being hit head on in February of this year, this incident was NOT good for my PTSD!!!! My anxiety has been through the roof since this incident with a car that I bought SIX MONTHS AGO! As soon as I can trade this car off and get something else, I will be. We still don’t know what it’s wrong with it. We are going to have it towed somewhere on Monday. This was a major safety risk for me AND for the others on the road!!! If my kids had been in the car, I would’ve been even more upset over the situation.",
+    "received_at": "2025-09-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2130045",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2130045",
+    "decided_at": "2025-09-13T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2130045",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: ASSIST"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My car started freaking out randomly."
+      },
+      {
+        "kind": "symptom",
+        "quote": "It popped up numerous errors."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The steering wheel locked up."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The brakes weren’t working well."
+      },
+      {
+        "kind": "condition",
+        "quote": "randomly"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving to work yesterday morning"
+      },
+      {
+        "kind": "safety",
+        "quote": "very close to rear ending me"
+      },
+      {
+        "kind": "safety",
+        "quote": "major safety risk"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2022 Acura MDX lane departure assist: random multiple errors, steering wheel lockup and weak brakes while driving to work; intermittent and safety-critical.",
+    "symptoms": [
+      "random multiple errors",
+      "steering wheel locked up",
+      "brakes not working well"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2130045",
+    "created_at": "2025-09-13T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Observation 1: Lane-keeping assistance is unreliable and the results of its operation are highly variable. In optimum conditions (daylight, wide lanes which are clearly marked; good contract between lane markings & pavement; no more than very gentle, wide-radius curves), this fea...",
+      "group": "adas",
+      "id": "1804094",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 10.724,
+      "year": 2022
+    },
+    {
+      "excerpt": "As I was approaching an intersection the car engaged the brakes without reason and I was unable to drive the car. It forced the car to stop in the middle of a busy intersection. Thankfully no one else was around or behind my car, but this could have resulted in a very bad acciden...",
+      "group": "adas",
+      "id": "1901088",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 7.4926,
+      "year": 2022
+    },
+    {
+      "excerpt": "On 8/20/23 heading south on I-294 in Chicago : in center lane with cruise control on and no cars close in front of me when the car suddenly started a hard braking without warning. No orange warning to brake came on but engine warning light of left of dashboard was on. Immediately...",
+      "group": "adas",
+      "id": "1921952",
+      "make": "ACURA",
+      "model": "MDX",
+      "score": 6.9282,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-13T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013891,
+      "duration_ms": 14058,
+      "reason": "2022 Acura MDX lane departure assist: random multiple errors, steering wheel lockup and weak brakes while driving to work; intermittent and safety-critical.",
+      "started_at": "2025-09-13T07:00:16Z",
+      "step": 2,
+      "tokens": 2962,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-13T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "MDX",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Observation 1: Lane-keeping assistance is unreliable and the results of its operation are highly variable. In optimum conditions (daylight, wide lanes which are clearly marked; good contract between lane markings & pavement; no more than very gentle, wide-radius curves), this fea...",
+            "group": "adas",
+            "id": "1804094",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 10.724,
+            "year": 2022
+          },
+          {
+            "excerpt": "As I was approaching an intersection the car engaged the brakes without reason and I was unable to drive the car. It forced the car to stop in the middle of a busy intersection. Thankfully no one else was around or behind my car, but this could have resulted in a very bad acciden...",
+            "group": "adas",
+            "id": "1901088",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 7.4926,
+            "year": 2022
+          },
+          {
+            "excerpt": "On 8/20/23 heading south on I-294 in Chicago : in center lane with cruise control on and no cars close in front of me when the car suddenly started a hard braking without warning. No orange warning to brake came on but engine warning light of left of dashboard was on. Immediately...",
+            "group": "adas",
+            "id": "1921952",
+            "make": "ACURA",
+            "model": "MDX",
+            "score": 6.9282,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-13T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-13T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-13T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-13T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-13T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-13T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-13T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

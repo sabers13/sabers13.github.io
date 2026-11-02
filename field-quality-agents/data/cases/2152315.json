@@ -1,0 +1,469 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2152315",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "Fords around the 2017 year have an issue with their backup cameras not working which is the issue mine is having. When putting truck in reverse backup camera is fully fuzzy with green lines or just goes fully back. It still beeps and can detect something close, but the actual camera doesn't work anymore.",
+    "received_at": "2025-11-27",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2152315",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2152315",
+    "decided_at": "2025-11-27T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2152315",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "backup cameras not working"
+      },
+      {
+        "kind": "condition",
+        "quote": "When putting truck in reverse"
+      },
+      {
+        "kind": "symptom",
+        "quote": "backup camera is fully fuzzy with green lines"
+      },
+      {
+        "kind": "symptom",
+        "quote": "actual camera doesn't work anymore"
+      },
+      {
+        "kind": "other",
+        "quote": "It still beeps and can detect something close"
+      }
+    ],
+    "conditions": [
+      "when in reverse"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the 2017 Ford F-150 backup camera circuit/display when reverse is selected, because the camera image is fuzzy with green lines or fails while proximity alert still works.",
+    "symptoms": [
+      "backup camera not working",
+      "camera image fuzzy with green lines",
+      "camera display goes fully back",
+      "actual camera does not work anymore"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2152315",
+    "created_at": "2025-11-27T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "backup cameras not working",
+        "source_id": "2152315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "When putting truck in reverse",
+        "source_id": "2152315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "backup camera is fully fuzzy with green lines",
+        "source_id": "2152315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "actual camera doesn't work anymore",
+        "source_id": "2152315",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It still beeps and can detect something close",
+        "source_id": "2152315",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative describes backup camera failure only when the truck is put in reverse: the image is fuzzy with green lines or the display goes fully back, and the camera no longer works. The proximity beep/detection still functions, pointing to the camera or its display/circuit rather than the reverse-detection alert path. No rulebook entry, recall, or investigation supports a targeted load test, so the standard electrical diagnostic test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the 2017 Ford F-150 backup camera circuit/display when reverse is selected, because the camera image is fuzzy with green lines or fails while proximity alert still works.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "ELECTRICAL : RADIO WILL RANDOMLY CUT OUT. TYPICALLY WHEN TRUCK STARTS RADIO WONT WORK. HAVE TO EITHER WAIT HOUR, OR DISCONNECT BATTERY. SEEMS LIKE TYPICAL ISSUE. SEATBELT : PASSENGER SEATBELT WONT RETRACT BACK. CAN HAND FEED THEN PULL OUT BY HAND. CALLED DEALER SAID 3 YEAR 60 THO...",
+      "group": "electrical_general",
+      "id": "1731243",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 8.6406,
+      "year": 2017
+    },
+    {
+      "excerpt": "AIRBAG WARNING FAILURE A know issue with Ford F-150 and other products with the Blind Spot senor module in the rear tail lights. The vehicle has an issue with water or fluid leaking into the tail light housing causing many of the advanced features to stop working. The vehicle sho...",
+      "group": "electrical_general",
+      "id": "1922625",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 7.6005,
+      "year": 2017
+    },
+    {
+      "excerpt": "Similar to the 10-14 f150 recall for the 6r80 transmission lead frame failure. Driving down the freeway at speeds of 50-70 in 6th gear truck has down shifted into first causing loss of control. Transmission then disengages entirely and loses power mid driving. After turning truck...",
+      "group": "electrical_general",
+      "id": "2048241",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 5.9184,
+      "year": 2017
+    },
+    {
+      "excerpt": "I had the recall done for unintended tailgate opening. However, twice now while pulling out of my driveway the tailgate has opened on its own. I have video from my ring camera showing the tailgate opening as I am proceeding out of my driveway into the street on both occasions.",
+      "group": "electrical_general",
+      "id": "1956840",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 3.0243,
+      "year": 2017
+    },
+    {
+      "excerpt": "Used remote starter; about 2 minutes later my family entered the vehicle with my 2 small kids secured in their child seats in back seat. We left our home, made about 1-mile down the road when back window suddenly popped and shattered. Nothing struck or hit the window to break it....",
+      "group": "electrical_general",
+      "id": "1780493",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 3.0203,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-27T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00076555,
+      "duration_ms": 9148,
+      "reason": "2017 Ford F-150 backup camera not working when in reverse; image is fuzzy with green lines or the display fails, while proximity alert still works.",
+      "started_at": "2025-11-27T07:00:01Z",
+      "step": 2,
+      "tokens": 1781,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-27T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ELECTRICAL : RADIO WILL RANDOMLY CUT OUT. TYPICALLY WHEN TRUCK STARTS RADIO WONT WORK. HAVE TO EITHER WAIT HOUR, OR DISCONNECT BATTERY. SEEMS LIKE TYPICAL ISSUE. SEATBELT : PASSENGER SEATBELT WONT RETRACT BACK. CAN HAND FEED THEN PULL OUT BY HAND. CALLED DEALER SAID 3 YEAR 60 THO...",
+            "group": "electrical_general",
+            "id": "1731243",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 8.6406,
+            "year": 2017
+          },
+          {
+            "excerpt": "AIRBAG WARNING FAILURE A know issue with Ford F-150 and other products with the Blind Spot senor module in the rear tail lights. The vehicle has an issue with water or fluid leaking into the tail light housing causing many of the advanced features to stop working. The vehicle sho...",
+            "group": "electrical_general",
+            "id": "1922625",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 7.6005,
+            "year": 2017
+          },
+          {
+            "excerpt": "Similar to the 10-14 f150 recall for the 6r80 transmission lead frame failure. Driving down the freeway at speeds of 50-70 in 6th gear truck has down shifted into first causing loss of control. Transmission then disengages entirely and loses power mid driving. After turning truck...",
+            "group": "electrical_general",
+            "id": "2048241",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 5.9184,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-27T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-27T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-11-27T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Fords around the 2017 year have an issue with their backup cameras not working which is the issue mine is having. When putting truck in reverse backup camera is fully fuzzy with green lines or just goes fully back. It still beeps and can detect something close, but the actual camera doesn't work anymore."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "ELECTRICAL : RADIO WILL RANDOMLY CUT OUT. TYPICALLY WHEN TRUCK STARTS RADIO WONT WORK. HAVE TO EITHER WAIT HOUR, OR DISCONNECT BATTERY. SEEMS LIKE TYPICAL ISSUE. SEATBELT : PASSENGER SEATBELT WONT RETRACT BACK. CAN HAND FEED THEN PULL OUT BY HAND. CALLED DEALER SAID 3 YEAR 60 THO...",
+            "group": "electrical_general",
+            "id": "1731243",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 8.6406,
+            "year": 2017
+          },
+          {
+            "excerpt": "AIRBAG WARNING FAILURE A know issue with Ford F-150 and other products with the Blind Spot senor module in the rear tail lights. The vehicle has an issue with water or fluid leaking into the tail light housing causing many of the advanced features to stop working. The vehicle sho...",
+            "group": "electrical_general",
+            "id": "1922625",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 7.6005,
+            "year": 2017
+          },
+          {
+            "excerpt": "Similar to the 10-14 f150 recall for the 6r80 transmission lead frame failure. Driving down the freeway at speeds of 50-70 in 6th gear truck has down shifted into first causing loss of control. Transmission then disengages entirely and loses power mid driving. After turning truck...",
+            "group": "electrical_general",
+            "id": "2048241",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 5.9184,
+            "year": 2017
+          },
+          {
+            "excerpt": "I had the recall done for unintended tailgate opening. However, twice now while pulling out of my driveway the tailgate has opened on its own. I have video from my ring camera showing the tailgate opening as I am proceeding out of my driveway into the street on both occasions.",
+            "group": "electrical_general",
+            "id": "1956840",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 3.0243,
+            "year": 2017
+          },
+          {
+            "excerpt": "Used remote starter; about 2 minutes later my family entered the vehicle with my 2 small kids secured in their child seats in back seat. We left our home, made about 1-mile down the road when back window suddenly popped and shattered. Nothing struck or hit the window to break it....",
+            "group": "electrical_general",
+            "id": "1780493",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 3.0203,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-27T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-27T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-27T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "when in reverse"
+        ]
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006801,
+      "duration_ms": 6098,
+      "reason": "The narrative describes backup camera failure only when the truck is put in reverse: the image is fuzzy with green lines or the display goes fully back, and the camera no longer works. The proximity beep/detection still functions, pointing to the camera or its display/circuit rather than the reverse-detection alert path. No rulebook entry, recall, or investigation supports a targeted load test, so the standard electrical diagnostic test is appropriate.",
+      "started_at": "2025-11-27T07:00:09Z",
+      "step": 10,
+      "tokens": 2209,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-11-27T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "backup cameras not working",
+          "When putting truck in reverse",
+          "backup camera is fully fuzzy with green lines",
+          "actual camera doesn't work anymore",
+          "It still beeps and can detect something close"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-27T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-27T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-27T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-27T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

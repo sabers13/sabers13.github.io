@@ -1,0 +1,241 @@
+{
+  "case": {
+    "component": "SEAT BELTS:FRONT:RETRACTOR",
+    "group": "restraints",
+    "id": "2075593",
+    "make": "FORD",
+    "mileage": 89000,
+    "model": "FUSION",
+    "narrative": "The contact owned a 2018 Ford Fusion. The contact stated that while driving at 65 MPH, the front driver side seat belt did not buckle appropriately, another vehicle driving at an unknown speed moved to the left lane, then the other vehicle changed lanes again moving in front of the contact, and the other vehicle abruptly depressed on the brakes causing the contact to rear end him. The vehicle came to a stop and merged into the shoulder. The vehicle was damaged on the front driver's and passenger's side. There were no warning lights illuminated. The driver’s and passenger’s side air bags did deploy however the seat belt did not retract the contact, causing the contact to be injured. There was no property damage. A police report was filed. The contact sustained a concussion and his eyes swelled shut. It was unknown if the other driver in the other vehicle sustained any injuries. The insurance company towed the vehicle to an impound lot and then towed it to Copart. The vehicle was deemed a total loss by the insurance company. The manufacturer was not notified of the failure. The dealer was not made aware of the failure. The failure mileage was 89,000.",
+    "received_at": "2025-03-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2075593",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2075593",
+    "decided_at": "2025-03-20T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2075593",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS:FRONT:RETRACTOR"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the front driver side seat belt did not buckle appropriately"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the seat belt did not retract the contact"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at 65 MPH"
+      },
+      {
+        "kind": "condition",
+        "quote": "the other vehicle abruptly depressed on the brakes causing the contact to rear end him"
+      },
+      {
+        "kind": "safety",
+        "quote": "The contact sustained a concussion and his eyes swelled shut."
+      },
+      {
+        "kind": "other",
+        "quote": "side air bags did deploy"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2018 Ford Fusion front driver seat belt retractor did not buckle/retract in a 65 MPH rear-end crash; airbags deployed and the occupant was injured.",
+    "symptoms": [
+      "front driver side seat belt did not buckle appropriately",
+      "seat belt did not retract the contact",
+      "occupant sustained a concussion and eyes swelled shut"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2075593",
+    "created_at": "2025-03-20T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I WAS HIT BY A TOYOTA HIGHLANDER ON HWY 12 CA WHILE WAITING FOR THE LIGHT TO TURN GREEN. THE TRUCKS APPOX. SPEED 40 TO 50 MILES AN HOUR,SPRAIN NECK,LOWER BACK SEVER PAIN REPTURED BREAST IMPLANT KNOCKED FRONT TOOTH IMPLANT OUT ..AIR BAGS DID NOT COME OUT CAR IS TOTALLED.I WAS AT A...",
+      "group": "restraints",
+      "id": "1744629",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 2.5891,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011719,
+      "duration_ms": 14299,
+      "reason": "2018 Ford Fusion front driver seat belt retractor did not buckle/retract in a 65 MPH rear-end crash; airbags deployed and the occupant was injured.",
+      "started_at": "2025-03-20T07:00:01Z",
+      "step": 2,
+      "tokens": 2600,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-03-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I WAS HIT BY A TOYOTA HIGHLANDER ON HWY 12 CA WHILE WAITING FOR THE LIGHT TO TURN GREEN. THE TRUCKS APPOX. SPEED 40 TO 50 MILES AN HOUR,SPRAIN NECK,LOWER BACK SEVER PAIN REPTURED BREAST IMPLANT KNOCKED FRONT TOOTH IMPLANT OUT ..AIR BAGS DID NOT COME OUT CAR IS TOTALLED.I WAS AT A...",
+            "group": "restraints",
+            "id": "1744629",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 2.5891,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-03-20T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-20T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-20T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-20T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-20T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-20T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-20T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2131874",
+    "make": "FORD",
+    "mileage": null,
+    "model": "FUSION",
+    "narrative": "The in-dash backup camera stopped functioning about 2 years ago. The errors are random and range from glitching video, delay in activating, not switching off(driving forward with rearview camera activated), and a error code pop-up to contact the dealer.  100 percent of the time, the image is displayed in reverse making backing up impossible.",
+    "received_at": "2025-09-19",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2131874",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131874",
+    "decided_at": "2025-09-19T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2131874",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The in-dash backup camera stopped functioning about 2 years ago."
+      },
+      {
+        "kind": "condition",
+        "quote": "The errors are random"
+      },
+      {
+        "kind": "symptom",
+        "quote": "glitching video"
+      },
+      {
+        "kind": "symptom",
+        "quote": "delay in activating"
+      },
+      {
+        "kind": "symptom",
+        "quote": "not switching off(driving forward with rearview camera activated)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "error code pop-up to contact the dealer"
+      },
+      {
+        "kind": "symptom",
+        "quote": "100 percent of the time, the image is displayed in reverse making backing up impossible."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the backup-camera circuit with a long-run power-cycling test to reproduce the intermittent random display faults.",
+    "symptoms": [
+      "backup camera stopped functioning",
+      "glitching video",
+      "delay in activating",
+      "rearview camera not switching off while driving forward",
+      "error code pop-up to contact the dealer",
+      "image displayed in reverse"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131874",
+    "created_at": "2025-09-19T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "The in-dash backup camera stopped functioning about 2 years ago.",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The errors are random",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "glitching video",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "delay in activating",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "not switching off(driving forward with rearview camera activated)",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "error code pop-up to contact the dealer",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "100 percent of the time, the image is displayed in reverse making backing up impossible.",
+        "source_id": "2131874",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports random, intermittent backup-camera glitching, delayed activation, failure to switch off while driving forward, a dealer error pop-up, and a consistently reversed image. The rulebook matches the intermittent condition to a long-run power-cycling test, so a targeted test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the backup-camera circuit with a long-run power-cycling test to reproduce the intermittent random display faults.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports random, intermittent backup-camera glitching, delayed activation, failure to switch off while driving forward, a dealer error pop-up, and a consistently reversed image. The rulebook matches the intermittent condition to a long-run power-cycling test, so a targeted test is appropriate."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When driving my 2016 Ford Fusion, the Transmission Not In Park light comes on without any other warnings. This is unsafe because it stops accelerating. Most times I'm on the freeway. This is a safety issue that has been happening for about 2 years now. The dealerships tell me tha...",
+      "group": "electrical_general",
+      "id": "1905370",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 7.9814,
+      "year": 2016
+    },
+    {
+      "excerpt": "Our camera cuts in and out. We took it to Ford initially to run a diagnostic but they killed our battery doing the test and never finished. Now the camera is showing things opposite..our mailbox is on our right backing out but camea shows left. Same when a car pulled to our right...",
+      "group": "electrical_general",
+      "id": "1902629",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 6.529,
+      "year": 2016
+    },
+    {
+      "excerpt": "Backup Camera hasn’t worked since the day I bought it and it had only 35,000 miles when I bought it.",
+      "group": "electrical_general",
+      "id": "1762077",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 6.1999,
+      "year": 2016
+    },
+    {
+      "excerpt": "AS I WAS DRIVING THE WRENCH SYMBOL CAME ON (SEE MANUAL), THEN ABS, TRACTION CONTROL, ENGINE FLUID TEMP, NO DIRECTIONALS, NO HEAT OR DIRECTIONALS, NO DASH LIGHTS, LOW TIRE PRESSURE, AND HILL ASSIST LIGHTS ALL CAME ON AND OFF. I WAS DOING HIGHWAY SPEEDS. WHILE THIS IS A NEW TO ME C...",
+      "group": "electrical_general",
+      "id": "1725317",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 6.1753,
+      "year": 2016
+    },
+    {
+      "excerpt": "WHILE DRIVING HIGHWAY SPEED (70 MPH) THE CAR SUDDENLY LOST POWER AS I WAS GOING UP HILL AND IN RUSH HOUR TRAFFIC. I HAD TO MERGE ALL THE WAY TO THE SHOULDER AND COAST DOWN THE HILL 2 MILES TO GET TO A SAFE LOCATION BEFORE PULLING OVER AND GETTING OUT OF THE CAR. THANKFULLY A POLI...",
+      "group": "electrical_general",
+      "id": "1695911",
+      "make": "FORD",
+      "model": "FUSION",
+      "score": 5.4,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-19T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00066535,
+      "duration_ms": 7348,
+      "reason": "2016 Ford Fusion in-dash backup camera stopped working about 2 years ago; random glitching, delayed activation, failure to switch off, dealer error pop-up, and reversed image 100% of the time.",
+      "started_at": "2025-09-19T07:00:16Z",
+      "step": 2,
+      "tokens": 1620,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-19T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When driving my 2016 Ford Fusion, the Transmission Not In Park light comes on without any other warnings. This is unsafe because it stops accelerating. Most times I'm on the freeway. This is a safety issue that has been happening for about 2 years now. The dealerships tell me tha...",
+            "group": "electrical_general",
+            "id": "1905370",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 7.9814,
+            "year": 2016
+          },
+          {
+            "excerpt": "Our camera cuts in and out. We took it to Ford initially to run a diagnostic but they killed our battery doing the test and never finished. Now the camera is showing things opposite..our mailbox is on our right backing out but camea shows left. Same when a car pulled to our right...",
+            "group": "electrical_general",
+            "id": "1902629",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 6.529,
+            "year": 2016
+          },
+          {
+            "excerpt": "Backup Camera hasn’t worked since the day I bought it and it had only 35,000 miles when I bought it.",
+            "group": "electrical_general",
+            "id": "1762077",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 6.1999,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-09-19T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-19T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-09-19T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The in-dash backup camera stopped functioning about 2 years ago. The errors are random and range from glitching video, delay in activating, not switching off(driving forward with rearview camera activated), and a error code pop-up to contact the dealer.  100 percent of the time, the image is displayed in reverse making backing up impossible."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When driving my 2016 Ford Fusion, the Transmission Not In Park light comes on without any other warnings. This is unsafe because it stops accelerating. Most times I'm on the freeway. This is a safety issue that has been happening for about 2 years now. The dealerships tell me tha...",
+            "group": "electrical_general",
+            "id": "1905370",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 7.9814,
+            "year": 2016
+          },
+          {
+            "excerpt": "Our camera cuts in and out. We took it to Ford initially to run a diagnostic but they killed our battery doing the test and never finished. Now the camera is showing things opposite..our mailbox is on our right backing out but camea shows left. Same when a car pulled to our right...",
+            "group": "electrical_general",
+            "id": "1902629",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 6.529,
+            "year": 2016
+          },
+          {
+            "excerpt": "Backup Camera hasn’t worked since the day I bought it and it had only 35,000 miles when I bought it.",
+            "group": "electrical_general",
+            "id": "1762077",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 6.1999,
+            "year": 2016
+          },
+          {
+            "excerpt": "AS I WAS DRIVING THE WRENCH SYMBOL CAME ON (SEE MANUAL), THEN ABS, TRACTION CONTROL, ENGINE FLUID TEMP, NO DIRECTIONALS, NO HEAT OR DIRECTIONALS, NO DASH LIGHTS, LOW TIRE PRESSURE, AND HILL ASSIST LIGHTS ALL CAME ON AND OFF. I WAS DOING HIGHWAY SPEEDS. WHILE THIS IS A NEW TO ME C...",
+            "group": "electrical_general",
+            "id": "1725317",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 6.1753,
+            "year": 2016
+          },
+          {
+            "excerpt": "WHILE DRIVING HIGHWAY SPEED (70 MPH) THE CAR SUDDENLY LOST POWER AS I WAS GOING UP HILL AND IN RUSH HOUR TRAFFIC. I HAD TO MERGE ALL THE WAY TO THE SHOULDER AND COAST DOWN THE HILL 2 MILES TO GET TO A SAFE LOCATION BEFORE PULLING OVER AND GETTING OUT OF THE CAR. THANKFULLY A POLI...",
+            "group": "electrical_general",
+            "id": "1695911",
+            "make": "FORD",
+            "model": "FUSION",
+            "score": 5.4,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-19T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-19T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "FUSION",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-19T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0010824,
+      "duration_ms": 9514,
+      "reason": "The narrative reports random, intermittent backup-camera glitching, delayed activation, failure to switch off while driving forward, a dealer error pop-up, and a consistently reversed image. The rulebook matches the intermittent condition to a long-run power-cycling test, so a targeted test is appropriate.",
+      "started_at": "2025-09-19T07:00:24Z",
+      "step": 10,
+      "tokens": 2980,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-09-19T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The in-dash backup camera stopped functioning about 2 years ago.",
+          "The errors are random",
+          "glitching video",
+          "delay in activating",
+          "not switching off(driving forward with rearview camera activated)",
+          "error code pop-up to contact the dealer",
+          "100 percent of the time, the image is displayed in reverse making backing up impossible."
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-19T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-19T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-19T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-19T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

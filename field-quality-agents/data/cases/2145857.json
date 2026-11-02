@@ -1,0 +1,298 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: WARNING",
+    "group": "adas",
+    "id": "2145857",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ODYSSEY",
+    "narrative": "I have 6 error lights on my dash board. Road departure mitigation system problem, auto high-beam problem, collision mitigation system problem, lane keeping assist problem, Ada pat I’ve cruise control problem. My car was rear ended from an insured from Utica National insurance group. After my car was rear ended these error message came up. They fixed the car but refused to fix to have the lights removed because they said that these error lights do not come on after a rear end accident.",
+    "received_at": "2025-11-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2145857",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2145857",
+    "decided_at": "2025-11-04T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2145857",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "I have 6 error lights on my dash board"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Road departure mitigation system problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "auto high-beam problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "collision mitigation system problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lane keeping assist problem"
+      },
+      {
+        "kind": "symptom",
+        "quote": "cruise control problem"
+      },
+      {
+        "kind": "condition",
+        "quote": "My car was rear ended"
+      },
+      {
+        "kind": "condition",
+        "quote": "After my car was rear ended these error message came up"
+      },
+      {
+        "kind": "condition",
+        "quote": "They fixed the car"
+      },
+      {
+        "kind": "safety",
+        "quote": "My car was rear ended from an insured from Utica National insurance group"
+      },
+      {
+        "kind": "component_group",
+        "quote": "lane keeping assist"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2018 Honda Odyssey ADAS lane-departure warning: six dash error lights (road departure mitigation, auto high-beam, collision mitigation, lane keeping assist, adaptive cruise) appeared after a rear-end collision and persisted after body repair",
+    "symptoms": [
+      "six error lights on the dashboard",
+      "road departure mitigation system problem message",
+      "auto high-beam problem message",
+      "collision mitigation system problem message",
+      "lane keeping assist problem message",
+      "adaptive cruise control problem message"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2145857",
+    "created_at": "2025-11-04T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When driving the vehicle on September 8, 2023 LKAS (lane keeping assist problem), collision mitigation system problem, road departure mitigation system problem, blind spot info system problem, auto high beam problem and ACC (adaptive cruise control problem) came on. Pulled over a...",
+      "group": "adas",
+      "id": "1930656",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 26.8229,
+      "year": 2018
+    },
+    {
+      "excerpt": "My vehicle started to show warning: Collision MitigationSystem Problem/ Road Departure Mitigation System Problem/ Adaptive Cruise Control Problem / Lane Keeping Assist Problem/ Auto High-Beam Problem. I took it back to Honda dealership and was told the Multipurpose Camera is dama...",
+      "group": "adas",
+      "id": "2007400",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 19.2431,
+      "year": 2018
+    },
+    {
+      "excerpt": "My vehicle started to show warning: Collision MitigationSystem Problem/ Road Departure Mitigation System Problem/ Adaptive Cruise Control Problem / Lane Keeping Assist Problem/ Auto High-Beam Problem. I took it back to Honda dealership and was told the Multipurpose Camera is dama...",
+      "group": "adas",
+      "id": "2007401",
+      "make": "HONDA",
+      "model": "ODYSSEY",
+      "score": 19.2431,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-04T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0004612,
+      "duration_ms": 6500,
+      "reason": "2018 Honda Odyssey ADAS lane-departure warning: six dash error lights (road departure mitigation, auto high-beam, collision mitigation, lane keeping assist, adaptive cruise) appeared after a rear-end collision and persisted after body repair",
+      "started_at": "2025-11-04T07:00:31Z",
+      "step": 2,
+      "tokens": 1303,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-04T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ODYSSEY",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When driving the vehicle on September 8, 2023 LKAS (lane keeping assist problem), collision mitigation system problem, road departure mitigation system problem, blind spot info system problem, auto high beam problem and ACC (adaptive cruise control problem) came on. Pulled over a...",
+            "group": "adas",
+            "id": "1930656",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 26.8229,
+            "year": 2018
+          },
+          {
+            "excerpt": "My vehicle started to show warning: Collision MitigationSystem Problem/ Road Departure Mitigation System Problem/ Adaptive Cruise Control Problem / Lane Keeping Assist Problem/ Auto High-Beam Problem. I took it back to Honda dealership and was told the Multipurpose Camera is dama...",
+            "group": "adas",
+            "id": "2007400",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.2431,
+            "year": 2018
+          },
+          {
+            "excerpt": "My vehicle started to show warning: Collision MitigationSystem Problem/ Road Departure Mitigation System Problem/ Adaptive Cruise Control Problem / Lane Keeping Assist Problem/ Auto High-Beam Problem. I took it back to Honda dealership and was told the Multipurpose Camera is dama...",
+            "group": "adas",
+            "id": "2007401",
+            "make": "HONDA",
+            "model": "ODYSSEY",
+            "score": 19.2431,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-11-04T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-04T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-04T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-04T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-04T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-04T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-04T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

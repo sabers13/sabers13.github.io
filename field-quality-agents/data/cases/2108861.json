@@ -1,0 +1,472 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2108861",
+    "make": "KIA",
+    "mileage": null,
+    "model": "CARNIVAL",
+    "narrative": "My front windshield on my 2022 Kia Carnival has shattered in two places from a small hit.  I have owned lots of cars and never had a windshield break in two places all the way across.  There must be an issue or problem.",
+    "received_at": "2025-07-11",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2108861",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108861",
+    "decided_at": "2025-07-11T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2108861",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My front windshield on my 2022 Kia Carnival has shattered in two places from a small hit."
+      },
+      {
+        "kind": "condition",
+        "quote": "from a small hit"
+      },
+      {
+        "kind": "symptom",
+        "quote": "never had a windshield break in two places all the way across"
+      },
+      {
+        "kind": "other",
+        "quote": "There must be an issue or problem."
+      }
+    ],
+    "conditions": [
+      "small hit"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Test the 2022 Kia Carnival windshield for abnormal crack propagation after a small impact; no rulebook match, so use the standard inspection rather than a targeted load test.",
+    "symptoms": [
+      "front windshield shattered in two places",
+      "windshield break all the way across in two places"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108861",
+    "created_at": "2025-07-11T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "My front windshield on my 2022 Kia Carnival has shattered in two places from a small hit.",
+        "source_id": "2108861",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "from a small hit",
+        "source_id": "2108861",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "never had a windshield break in two places all the way across",
+        "source_id": "2108861",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "There must be an issue or problem.",
+        "source_id": "2108861",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a front windshield shattered in two places from a small hit, with the owner noting it broke all the way across in two places. No rulebook entry matches these conditions, and the available recall concerns a sliding-door latch, not the windshield. Similar cases for the same model/year describe windshield cracking, but without a rulebook-targeted procedure the standard field-quality inspection is appropriate.",
+    "requested_info": [],
+    "summary": "Test the 2022 Kia Carnival windshield for abnormal crack propagation after a small impact; no rulebook match, so use the standard inspection rather than a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "21V908000",
+      "match": true,
+      "open_date": "2021-11-19",
+      "summary": "Kia Motors America (Kia) is recalling certain 2022 Carnival vehicles.  The remote controller assembly for the passenger-side power sliding door may malfunction, preventing the passenger-side sliding door from securely latching."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Windshield crack without major incident. No debris or rocks noted hitting. Cracked all the way across the windshield within a week. Adaptive cruise control keeps failing. Says radar is being blocked, usually when attempting to start cruise but sometimes when cruise control is alr...",
+      "group": "body_controls",
+      "id": "1844458",
+      "make": "KIA",
+      "model": "CARNIVAL",
+      "score": 5.1686,
+      "year": 2022
+    },
+    {
+      "excerpt": "1st incident May 2022: Driving in the highway when a small rock hit the windshield. At that time there was a crack (3-4 cm wide) on the windshield. A technician came out to repair the area of injury. 2nd incident July 2022: Driving in the highway when I heard something hit the wi...",
+      "group": "body_controls",
+      "id": "1829452",
+      "make": "KIA",
+      "model": "CARNIVAL",
+      "score": 3.4169,
+      "year": 2022
+    },
+    {
+      "excerpt": "The windshield cracked while driving. Nothing hit it, it just cracked. Was 8inches long and now covers half the windshield. Obvious defect in the windshield. It is availability to see or I can take a picture. Safety is compromised by a cracked windshield that could get worse and...",
+      "group": "body_controls",
+      "id": "1963677",
+      "make": "KIA",
+      "model": "CARNIVAL",
+      "score": 1.0941,
+      "year": 2022
+    },
+    {
+      "excerpt": "The rear side passenger window busted from the bottom. Only top half of window remained while driving down the road. No warnings. I only knew this was possible with car due to Facebook group and others having this happen to them. Big bomb sound no one else on road car is 2022 bou...",
+      "group": "body_controls",
+      "id": "1950634",
+      "make": "KIA",
+      "model": "CARNIVAL",
+      "score": 0.9351,
+      "year": 2022
+    },
+    {
+      "excerpt": "During a road trip, I stopped at a gas station to fill up. I went inside to get a drink and a large 12 inch crack appeared in the windshield about midway down on the passenger side. It was not there previously and nothing appears to have hit it either. The crack now spans to the...",
+      "group": "body_controls",
+      "id": "1906900",
+      "make": "KIA",
+      "model": "CARNIVAL",
+      "score": 0.8137,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-11T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00123085,
+      "duration_ms": 14684,
+      "reason": "VISIBILITY/WIPER: front windshield shattered in two places from a small hit on a 2022 Kia Carnival.",
+      "started_at": "2025-07-11T07:00:16Z",
+      "step": 2,
+      "tokens": 2549,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-11T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "CARNIVAL",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Windshield crack without major incident. No debris or rocks noted hitting. Cracked all the way across the windshield within a week. Adaptive cruise control keeps failing. Says radar is being blocked, usually when attempting to start cruise but sometimes when cruise control is alr...",
+            "group": "body_controls",
+            "id": "1844458",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 5.1686,
+            "year": 2022
+          },
+          {
+            "excerpt": "1st incident May 2022: Driving in the highway when a small rock hit the windshield. At that time there was a crack (3-4 cm wide) on the windshield. A technician came out to repair the area of injury. 2nd incident July 2022: Driving in the highway when I heard something hit the wi...",
+            "group": "body_controls",
+            "id": "1829452",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 3.4169,
+            "year": 2022
+          },
+          {
+            "excerpt": "The windshield cracked while driving. Nothing hit it, it just cracked. Was 8inches long and now covers half the windshield. Obvious defect in the windshield. It is availability to see or I can take a picture. Safety is compromised by a cracked windshield that could get worse and...",
+            "group": "body_controls",
+            "id": "1963677",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 1.0941,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-11T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-11T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-07-11T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "My front windshield on my 2022 Kia Carnival has shattered in two places from a small hit.  I have owned lots of cars and never had a windshield break in two places all the way across.  There must be an issue or problem."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Windshield crack without major incident. No debris or rocks noted hitting. Cracked all the way across the windshield within a week. Adaptive cruise control keeps failing. Says radar is being blocked, usually when attempting to start cruise but sometimes when cruise control is alr...",
+            "group": "body_controls",
+            "id": "1844458",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 5.1686,
+            "year": 2022
+          },
+          {
+            "excerpt": "1st incident May 2022: Driving in the highway when a small rock hit the windshield. At that time there was a crack (3-4 cm wide) on the windshield. A technician came out to repair the area of injury. 2nd incident July 2022: Driving in the highway when I heard something hit the wi...",
+            "group": "body_controls",
+            "id": "1829452",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 3.4169,
+            "year": 2022
+          },
+          {
+            "excerpt": "The windshield cracked while driving. Nothing hit it, it just cracked. Was 8inches long and now covers half the windshield. Obvious defect in the windshield. It is availability to see or I can take a picture. Safety is compromised by a cracked windshield that could get worse and...",
+            "group": "body_controls",
+            "id": "1963677",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 1.0941,
+            "year": 2022
+          },
+          {
+            "excerpt": "The rear side passenger window busted from the bottom. Only top half of window remained while driving down the road. No warnings. I only knew this was possible with car due to Facebook group and others having this happen to them. Big bomb sound no one else on road car is 2022 bou...",
+            "group": "body_controls",
+            "id": "1950634",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 0.9351,
+            "year": 2022
+          },
+          {
+            "excerpt": "During a road trip, I stopped at a gas station to fill up. I went inside to get a drink and a large 12 inch crack appeared in the windshield about midway down on the passenger side. It was not there previously and nothing appears to have hit it either. The crack now spans to the...",
+            "group": "body_controls",
+            "id": "1906900",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "score": 0.8137,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-11T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "KIA",
+        "model": "CARNIVAL",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "LATCHES/LOCKS/LINKAGES:ELECTRONIC LOCK/LATCH ACTUATOR",
+            "group": "body_controls",
+            "id": "21V908000",
+            "make": "KIA",
+            "model": "CARNIVAL",
+            "open_date": "2021-11-19",
+            "summary": "Kia Motors America (Kia) is recalling certain 2022 Carnival vehicles.  The remote controller assembly for the passenger-side power sliding door may malfunction, preventing the passenger-side sliding door from securely latching.",
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-11T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "KIA",
+        "model": "CARNIVAL",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-11T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00094725,
+      "duration_ms": 9474,
+      "reason": "The narrative reports a front windshield shattered in two places from a small hit, with the owner noting it broke all the way across in two places. No rulebook entry matches these conditions, and the available recall concerns a sliding-door latch, not the windshield. Similar cases for the same model/year describe windshield cracking, but without a rulebook-targeted procedure the standard field-quality inspection is appropriate.",
+      "started_at": "2025-07-11T07:00:24Z",
+      "step": 10,
+      "tokens": 2694,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-07-11T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "My front windshield on my 2022 Kia Carnival has shattered in two places from a small hit.",
+          "from a small hit",
+          "never had a windshield break in two places all the way across",
+          "There must be an issue or problem."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-11T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-07-11T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-11T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-11T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

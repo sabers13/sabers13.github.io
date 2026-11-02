@@ -1,0 +1,210 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:INFOTAINMENT",
+    "group": "infotainment",
+    "id": "2148623",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EDGE",
+    "narrative": "See attached document for complaint.  I am writing to file a formal complaint regarding the handling of safety recalls 25V572 and 25V544 on my vehicle, and to urgently request your assistance in having all repairs authorized at a local Ford dealership, due to the profound unprofessionalism and neglect I have experienced from the selling dealership, Pure Honda Ferndale. My vehicle is a 2016 Ford Edge Sport with approximately 101,003 miles. I purchased it from Pure Honda Ferndale just prior to being notified of these active recalls, after which the vehicle was understandably grounded. The core of my issue lies with the conduct of the dealership's management. Before the recall notice and the vehicle being pulled from sale, I was in direct communication with the General Manager, Mr. Sheldon Taylor. He personally assured me that he would resolve several preexisting issues, including arranging for a vehicle exchange or repairs. These issues include the dealership selling me defective and outdated tires and a rim package that no local tire shop will service, as well as a noticeable and hazardous defect in the SYNC system where the screen experiences complete blackouts, particularly when using the navigation and radio. However, once the reca ll was enforced, Mr. Taylor ceased all communication and delegated my case to a sales representative, who has since also ignored my repeated calls and the recall notices I have provided. I have been left with a vehicle I cannot safely drive due to the open recalls and an infotainment system that fails unpredictably, creating significant distraction and safety risk. The dealership that sold me this problematic vehicle now refuses to take responsibility for its prior promises. Given the complete breakdown in communication and the lack of professional accountability from Pure Honda Ferndale, I do not trust them to manage my vehicle's critical safety repairs or address this additional SYNC system defect. Therefore, I respectfully request that the NHTSA assist me in obtaining permission t",
+    "received_at": "2025-11-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2148623",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2148623",
+    "decided_at": "2025-11-14T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2148623",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SYNC system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "noticeable and hazardous defect in the SYNC system where the screen experiences complete blackouts, particularly when using the navigation and radio"
+      },
+      {
+        "kind": "condition",
+        "quote": "fails unpredictably"
+      },
+      {
+        "kind": "condition",
+        "quote": "particularly when using the navigation and radio"
+      },
+      {
+        "kind": "safety",
+        "quote": "creating significant distraction and safety risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "vehicle I cannot safely drive due to the open recalls"
+      },
+      {
+        "kind": "other",
+        "quote": "safety recalls 25V572 and 25V544"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": true,
+    "summary": "2016 Ford Edge Sport infotainment/SYNC screen blackouts when using navigation and radio, with unpredictable failures and open recalls 25V572/25V544.",
+    "symptoms": [
+      "SYNC screen experiences complete blackouts",
+      "blackouts particularly when using navigation and radio",
+      "infotainment system fails unpredictably"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2148623",
+    "created_at": "2025-11-14T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-14T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00123535,
+      "duration_ms": 13612,
+      "reason": "2016 Ford Edge Sport infotainment/SYNC screen blackouts when using navigation and radio, with unpredictable failures and open recalls 25V572/25V544.",
+      "started_at": "2025-11-14T07:00:16Z",
+      "step": 2,
+      "tokens": 2813,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-14T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EDGE",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-14T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-14T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-14T07:00:21Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-14T07:00:23Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-14T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-14T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

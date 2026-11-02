@@ -1,0 +1,351 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2144259",
+    "make": "FCCC",
+    "mileage": null,
+    "model": "XCR",
+    "narrative": "The dash gauge display is developing  bubbles and cracks in the display screen. It’s becoming difficult to monitor gauges on screen. Confirmed by Fliner dealer. Took in for inspection.  Seeing multiple display failures on rv units. First appeared March 2025",
+    "received_at": "2025-10-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2144259",
+    "status": "decided",
+    "year": 2008
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2144259",
+    "decided_at": "2025-10-29T07:00:34Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2144259",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "bubbles and cracks in the display screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "difficult to monitor gauges on screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple display failures on rv units"
+      },
+      {
+        "kind": "other",
+        "quote": "First appeared March 2025"
+      }
+    ],
+    "conditions": [
+      "display screen bubbling and cracking",
+      "gauge visibility compromised"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Inspect dash gauge display for bubbling/cracking that obscures gauge visibility; no rulebook match or recall evidence found.",
+    "symptoms": [
+      "bubbles in display screen",
+      "cracks in display screen",
+      "difficult to monitor gauges on screen",
+      "multiple display failures on rv units"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2144259",
+    "created_at": "2025-10-29T07:00:32Z",
+    "evidence": [
+      {
+        "quote": "bubbles and cracks in the display screen",
+        "source_id": "2144259",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "difficult to monitor gauges on screen",
+        "source_id": "2144259",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "multiple display failures on rv units",
+        "source_id": "2144259",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "First appeared March 2025",
+        "source_id": "2144259",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the dash gauge display developing bubbles and cracks, making gauges difficult to monitor, with multiple display failures on RV units first appearing March 2025. The dealer confirmed the condition. No matching rulebook entry, recall, investigation, or similar case was returned, so a targeted load test is not indicated.",
+    "requested_info": [],
+    "summary": "Inspect dash gauge display for bubbling/cracking that obscures gauge visibility; no rulebook match or recall evidence found.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-29T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006886,
+      "duration_ms": 8002,
+      "reason": "Dash gauge display screen bubbling and cracking, making gauges difficult to monitor; first appeared March 2025.",
+      "started_at": "2025-10-29T07:00:21Z",
+      "step": 2,
+      "tokens": 1649,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-29T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FCCC",
+        "model": "XCR",
+        "year": 2008
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-10-29T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-29T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-10-29T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The dash gauge display is developing  bubbles and cracks in the display screen. It’s becoming difficult to monitor gauges on screen. Confirmed by Fliner dealer. Took in for inspection.  Seeing multiple display failures on rv units. First appeared March 2025"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-29T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FCCC",
+        "model": "XCR",
+        "year": 2008
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-29T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FCCC",
+        "model": "XCR",
+        "year": 2008
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-29T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006225,
+      "duration_ms": 6959,
+      "reason": "The narrative reports the dash gauge display developing bubbles and cracks, making gauges difficult to monitor, with multiple display failures on RV units first appearing March 2025. The dealer confirmed the condition. No matching rulebook entry, recall, investigation, or similar case was returned, so a targeted load test is not indicated.",
+      "started_at": "2025-10-29T07:00:29Z",
+      "step": 10,
+      "tokens": 1627,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 1 dropped",
+      "started_at": "2025-10-29T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "ELECTRICAL SYSTEM",
+          "bubbles and cracks in the display screen",
+          "difficult to monitor gauges on screen",
+          "multiple display failures on rv units",
+          "First appeared March 2025"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 1,
+        "verified": 4
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-10-29T07:00:31Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-29T07:00:33Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-29T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-29T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-29T07:00:37Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

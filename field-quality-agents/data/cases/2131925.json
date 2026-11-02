@@ -1,0 +1,285 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2131925",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "While driving to an appointment on 11 August 2025 the yellow CEL light came on and the Jeep Wrangler 4xe stopped operating in hybrid mode. A few miles later the Jeep went into limp mode with a red turtle, red wrench, and red battery light. Pulled into the left center turn lane to allow faster traffic to pass and then made a left turn off of a busy 4-lane highway. I then proceeded down the hill and at the next traffic light I was turning right when the Jeep stopped and the gas engine completely shut down and the Jeep stopped moving halfway through the intersection. Putting the vehicle in park, I attempted to restart the vehicle while it sat in the middle of the intersection but it wouldn’t restart. I then turned on my flashers and exited the vehicle so I could call a tow truck. After the vehicle was towed to the nearest Jeep dealership I learned two days later that the hybrid battery pack had failed and it needed to be replaced. As of 18 September and the vehicle is still at the dealership awaiting authorization from the Jeep engineering team so the technician at the dealership can order a special part!",
+    "received_at": "2025-09-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131925",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131925",
+    "decided_at": "2025-09-19T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131925",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "yellow CEL light came on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "stopped operating in hybrid mode"
+      },
+      {
+        "kind": "symptom",
+        "quote": "went into limp mode with a red turtle, red wrench, and red battery light"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the gas engine completely shut down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the Jeep stopped moving halfway through the intersection"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it wouldn’t restart"
+      },
+      {
+        "kind": "other",
+        "quote": "hybrid battery pack had failed"
+      },
+      {
+        "kind": "safety",
+        "quote": "the Jeep stopped and the gas engine completely shut down and the Jeep stopped moving halfway through the intersection"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: yellow CEL and loss of hybrid mode while driving, then limp mode with red turtle/wrench/battery lights; gas engine shut down and vehicle would not restart in an intersection; hybrid battery pack failed.",
+    "symptoms": [
+      "yellow CEL light came on",
+      "stopped operating in hybrid mode",
+      "limp mode with red turtle, red wrench, and red battery light",
+      "gas engine completely shut down",
+      "vehicle stopped moving halfway through the intersection",
+      "would not restart",
+      "hybrid battery pack failed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131925",
+    "created_at": "2025-09-19T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "In October, my brand new car straight from factory with only 3900 miles on it broke down at a gas station. The dashboard said “service charging system”. The car would not move or allow me to switch gears. It was locked. It took 3.5 hours for a tow truck to come. The car was in th...",
+      "group": "electrical_general",
+      "id": "1853732",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 36.5803,
+      "year": 2022
+    },
+    {
+      "excerpt": "My 2022 4xe Rubicon has been at the shop for 60 days now for slamming in to a dead stop while driving over 8 -18 mph. This happened 4 times early in the morning trying to drive to work. The dealership towed it in that morning, but failed to look at it for over 2 weeks. - they tho...",
+      "group": "electrical_general",
+      "id": "1928954",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 23.8846,
+      "year": 2022
+    },
+    {
+      "excerpt": "On February 14, 2023, as I was driving home from work at 4:30 pm, and luckily stopped at a traffic light, my Jeep shut down and showed a charging fault while I was nowhere near a charger. I was eventually able to restart the vehicle and make it the rest of the way home. We had th...",
+      "group": "electrical_general",
+      "id": "2033784",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 22.0391,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-19T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00114205,
+      "duration_ms": 10804,
+      "reason": "Electrical system: yellow CEL and loss of hybrid mode while driving, then limp mode with red turtle/wrench/battery lights; gas engine shut down and vehicle would not restart in an intersection; hybrid battery pack failed.",
+      "started_at": "2025-09-19T07:00:36Z",
+      "step": 2,
+      "tokens": 2539,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-19T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "In October, my brand new car straight from factory with only 3900 miles on it broke down at a gas station. The dashboard said “service charging system”. The car would not move or allow me to switch gears. It was locked. It took 3.5 hours for a tow truck to come. The car was in th...",
+            "group": "electrical_general",
+            "id": "1853732",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 36.5803,
+            "year": 2022
+          },
+          {
+            "excerpt": "My 2022 4xe Rubicon has been at the shop for 60 days now for slamming in to a dead stop while driving over 8 -18 mph. This happened 4 times early in the morning trying to drive to work. The dealership towed it in that morning, but failed to look at it for over 2 weeks. - they tho...",
+            "group": "electrical_general",
+            "id": "1928954",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 23.8846,
+            "year": 2022
+          },
+          {
+            "excerpt": "On February 14, 2023, as I was driving home from work at 4:30 pm, and luckily stopped at a traffic light, my Jeep shut down and showed a charging fault while I was nowhere near a charger. I was eventually able to restart the vehicle and make it the rest of the way home. We had th...",
+            "group": "electrical_general",
+            "id": "2033784",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 22.0391,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-19T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-19T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-19T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-19T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-19T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-19T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-19T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

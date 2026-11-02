@@ -1,0 +1,274 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2089617",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "BEETLE",
+    "narrative": "The airbags deployed on their own on 7-4-2023 in my daughter’s 2013 VW Beetle.  My daughter and her friend were both injured (physically/mentally) as a result of both front airbags (steering wheel and dashboard airbags) deploying on their own causing over $10,000 USD damage to the beetle and injury to my daughter and her friend who was a passenger in the front seat.   Volkswagen never sent out a recall notice to us even though we have owned the car since 9-13-2019 and the airbag recall notice was determined on 12-16-2020 by NHTSA and announced on that date.  I only became aware of this recall through investigation, after the accident happened and during repairing of the car.  The vehicle was not inspected by the manufacturer, or police, or insurance even though Progressive Insurance paid out over $20,000 in damages to the parked cars that were struck after the airbags deployed causing the vw beetle to crash into two parked cars in a residential neighborhood.  There was a sparse accident report that was filed by Colorado State police.  There were not any warning lamps, messages, or other symptoms of the problem prior to the Tatanka airbag failure and recall.",
+    "received_at": "2025-05-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089617",
+    "status": "decided",
+    "year": 2013
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089617",
+    "decided_at": "2025-05-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089617",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "front airbags"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The airbags deployed on their own"
+      },
+      {
+        "kind": "symptom",
+        "quote": "both front airbags (steering wheel and dashboard airbags) deploying on their own"
+      },
+      {
+        "kind": "safety",
+        "quote": "My daughter and her friend were both injured"
+      },
+      {
+        "kind": "safety",
+        "quote": "causing the vw beetle to crash into two parked cars"
+      },
+      {
+        "kind": "symptom",
+        "quote": "There were not any warning lamps, messages, or other symptoms of the problem prior to the Tatanka airbag failure and recall."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2013 VW Beetle airbags deployed on their own, injuring driver and passenger and causing a crash into parked cars; no prior warning.",
+    "symptoms": [
+      "airbags deployed on their own",
+      "driver and passenger injured",
+      "vehicle crashed into two parked cars",
+      "no warning lamps or messages before failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089617",
+    "created_at": "2025-05-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Takata recall. The contact owns a 2013 Volkswagen Beetle. The contact received notification of NHTSA Campaign Number: 20V785000 (Air Bags) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer exceeded a reasonable amount of time for...",
+      "group": "restraints",
+      "id": "1749995",
+      "make": "VOLKSWAGEN",
+      "model": "BEETLE",
+      "score": 8.8462,
+      "year": 2013
+    },
+    {
+      "excerpt": "2013 VOLKSWAGEN BEETLE. CONSUMER WRITES IN REGARDS TO TAKATA AIRBAG SAFETY RECALL.",
+      "group": "restraints",
+      "id": "1792507",
+      "make": "VOLKSWAGEN",
+      "model": "BEETLE",
+      "score": 6.808,
+      "year": 2013
+    },
+    {
+      "excerpt": "BOUGHT CAR ONE YEAR AND A HALF AGO. BUY CAR USED WITH 40,000 MILES ON IT. STARTED HAVING ISSUES WITH THE POWER STEERING AND LEANING AT IDLE. CAR SKIDS VERY EASILY AND RAIN, CAN EASILY CAUSE CRASHES. CAR AIRBAGS WERE RECALLED.",
+      "group": "restraints",
+      "id": "1693393",
+      "make": "VOLKSWAGEN",
+      "model": "BEETLE",
+      "score": 5.1967,
+      "year": 2013
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009526,
+      "duration_ms": 10837,
+      "reason": "2013 VW Beetle airbags deployed on their own, injuring driver and passenger and causing a crash into parked cars; no prior warning.",
+      "started_at": "2025-05-06T07:00:01Z",
+      "step": 2,
+      "tokens": 2245,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "BEETLE",
+        "year": 2013
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Takata recall. The contact owns a 2013 Volkswagen Beetle. The contact received notification of NHTSA Campaign Number: 20V785000 (Air Bags) however, the part to do the recall repair was unavailable. The contact stated that the manufacturer exceeded a reasonable amount of time for...",
+            "group": "restraints",
+            "id": "1749995",
+            "make": "VOLKSWAGEN",
+            "model": "BEETLE",
+            "score": 8.8462,
+            "year": 2013
+          },
+          {
+            "excerpt": "2013 VOLKSWAGEN BEETLE. CONSUMER WRITES IN REGARDS TO TAKATA AIRBAG SAFETY RECALL.",
+            "group": "restraints",
+            "id": "1792507",
+            "make": "VOLKSWAGEN",
+            "model": "BEETLE",
+            "score": 6.808,
+            "year": 2013
+          },
+          {
+            "excerpt": "BOUGHT CAR ONE YEAR AND A HALF AGO. BUY CAR USED WITH 40,000 MILES ON IT. STARTED HAVING ISSUES WITH THE POWER STEERING AND LEANING AT IDLE. CAR SKIDS VERY EASILY AND RAIN, CAN EASILY CAUSE CRASHES. CAR AIRBAGS WERE RECALLED.",
+            "group": "restraints",
+            "id": "1693393",
+            "make": "VOLKSWAGEN",
+            "model": "BEETLE",
+            "score": 5.1967,
+            "year": 2013
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-05-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

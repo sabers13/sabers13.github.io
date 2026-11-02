@@ -1,0 +1,494 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2149522",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "LEAF",
+    "narrative": "The contact owns a 2019 Nissan Leaf. The contact received notification of NHTSA Campaign Number: 24V700000 (Electrical System); however, the part to do the recall repair was unavailable. The dealer was contacted; however, the contact was informed that parts were unavailable. The contact stated that the parts had not been available for more than a year and a half. In addition, the contact stated it was an inconvenience not to be able to use the fast charge because of the unrepaired recall. The manufacturer was not contacted. The contact had not experienced a failure.",
+    "received_at": "2025-11-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2149522",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2149522",
+    "decided_at": "2025-11-17T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2149522",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "24V700000"
+      },
+      {
+        "kind": "symptom",
+        "quote": "not to be able to use the fast charge because of the unrepaired recall"
+      },
+      {
+        "kind": "condition",
+        "quote": "fast charge"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "other",
+        "quote": "the parts had not been available for more than a year and a half"
+      }
+    ],
+    "conditions": [
+      "fast charge"
+    ],
+    "fault_codes": [
+      "24V700000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the charging path with an electrical load test because fast charge is unavailable pending recall 24V700000, though no failure has occurred.",
+    "symptoms": [
+      "not to be able to use the fast charge because of the unrepaired recall"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2149522",
+    "created_at": "2025-11-17T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Electrical System",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "24V700000",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "not to be able to use the fast charge because of the unrepaired recall",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "fast charge",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the parts had not been available for more than a year and a half",
+        "source_id": "2149522",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports a charging-related condition—fast charge cannot be used because of the unrepaired recall 24V700000—and the rulebook matches 'charging' to an Electrical load test. The parts have been unavailable for more than a year and a half, and no failure was experienced, so the targeted load test is the appropriate diagnostic.",
+    "requested_info": [],
+    "summary": "Test the charging path with an electrical load test because fast charge is unavailable pending recall 24V700000, though no failure has occurred.",
+    "targeted_test": {
+      "conditions": [
+        "fast charge"
+      ],
+      "name": "Electrical load test",
+      "reason": "The narrative reports a charging-related condition—fast charge cannot be used because of the unrepaired recall 24V700000—and the rulebook matches 'charging' to an Electrical load test. The parts have been unavailable for more than a year and a half, and no failure was experienced, so the targeted load test is the appropriate diagnostic."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+      "group": "electrical_general",
+      "id": "2032992",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 14.2853,
+      "year": 2019
+    },
+    {
+      "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+      "group": "electrical_general",
+      "id": "1795256",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 4.9515,
+      "year": 2019
+    },
+    {
+      "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+      "group": "electrical_general",
+      "id": "1902945",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 3.5837,
+      "year": 2019
+    },
+    {
+      "excerpt": "On 7/19/2024 while charging the car at Chargepoint Johns Creek, I heard a \"clunk\" sound as if something had popped off from beneath the body of the Leaf. At the same time, the charging emergency stopped. Smoke started to come out from under the Leaf. There was a smell as if somet...",
+      "group": "electrical_general",
+      "id": "2015834",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 2.9834,
+      "year": 2019
+    },
+    {
+      "excerpt": "LEAF BACKUP SCREEN TURNS PINK WHEN IN REVERSE. UNABLE TO BACKUP SAFELY!!! CALLED AND DROVE LEAF TO DEALER WHO INSPECTED THE LEAF.. DEALER SAID THERE WOULD BE A 'BOX DELIVERED NEXT WEEK' AND THEY WOULD CALL ME. *TR",
+      "group": "electrical_general",
+      "id": "1664081",
+      "make": "NISSAN",
+      "model": "LEAF",
+      "score": 2.5245,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00137605,
+      "duration_ms": 16929,
+      "reason": "2019 Nissan Leaf electrical system recall 24V700000; fast charge cannot be used due to unrepaired recall, parts unavailable over 1.5 years, no failure reported.",
+      "started_at": "2025-11-17T07:00:01Z",
+      "step": 2,
+      "tokens": 2839,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+            "group": "electrical_general",
+            "id": "2032992",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 14.2853,
+            "year": 2019
+          },
+          {
+            "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+            "group": "electrical_general",
+            "id": "1795256",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 4.9515,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+            "group": "electrical_general",
+            "id": "1902945",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 3.5837,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-11-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2019 Nissan Leaf. The contact received notification of NHTSA Campaign Number: 24V700000 (Electrical System); however, the part to do the recall repair was unavailable. The dealer was contacted; however, the contact was informed that parts were unavailable. The contact stated that the parts had not been available for more than a year and a half. In addition, the contact stated it was an inconvenience not to be able to use the fast charge because of the unrepaired recall. The ma"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Received a notification from Nissan Corporation that my 2019 Leaf is the subject of a safety recall concerning risk of lithium ion battery fire during Level 3 charging. The notice explains that the vehicle's lithium-ion battery may experience \"excessive lithium deposits within ce...",
+            "group": "electrical_general",
+            "id": "2032992",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 14.2853,
+            "year": 2019
+          },
+          {
+            "excerpt": "1. The vehicle infotainment screen has been rebooting multiple times over the last few months while driving and the navigation maps screen goes black during the reboot, this is very distracting . 2. The navigation map turn by turn directions intermittently stops working independe...",
+            "group": "electrical_general",
+            "id": "1795256",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 4.9515,
+            "year": 2019
+          },
+          {
+            "excerpt": "Fron passenger lock has been faulty. Door will either latch or unlatch randomly. Dealership has reviewed and stated it is faulty but not their fault despite no evidence of driver responisbility. Car has various electrical issues including auto braking triggering and this lock iss...",
+            "group": "electrical_general",
+            "id": "1902945",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 3.5837,
+            "year": 2019
+          },
+          {
+            "excerpt": "On 7/19/2024 while charging the car at Chargepoint Johns Creek, I heard a \"clunk\" sound as if something had popped off from beneath the body of the Leaf. At the same time, the charging emergency stopped. Smoke started to come out from under the Leaf. There was a smell as if somet...",
+            "group": "electrical_general",
+            "id": "2015834",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 2.9834,
+            "year": 2019
+          },
+          {
+            "excerpt": "LEAF BACKUP SCREEN TURNS PINK WHEN IN REVERSE. UNABLE TO BACKUP SAFELY!!! CALLED AND DROVE LEAF TO DEALER WHO INSPECTED THE LEAF.. DEALER SAID THERE WOULD BE A 'BOX DELIVERED NEXT WEEK' AND THEY WOULD CALL ME. *TR",
+            "group": "electrical_general",
+            "id": "1664081",
+            "make": "NISSAN",
+            "model": "LEAF",
+            "score": 2.5245,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-17T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-17T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "NISSAN",
+        "model": "LEAF",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-17T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0011319,
+      "duration_ms": 10229,
+      "reason": "The narrative reports a charging-related condition—fast charge cannot be used because of the unrepaired recall 24V700000—and the rulebook matches 'charging' to an Electrical load test. The parts have been unavailable for more than a year and a half, and no failure was experienced, so the targeted load test is the appropriate diagnostic.",
+      "started_at": "2025-11-17T07:00:09Z",
+      "step": 10,
+      "tokens": 2995,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-11-17T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Electrical System",
+          "24V700000",
+          "not to be able to use the fast charge because of the unrepaired recall",
+          "fast charge",
+          "The contact had not experienced a failure.",
+          "the parts had not been available for more than a year and a half"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-17T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-17T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-17T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-17T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2148319",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "The windshield wipers on my 2021 Ford F-150 are inoperable. The wipers suddenly stopped working with no warning. The vehicle had already received Recall 23S10, which was supposed to replace the defective wiper motor arm. However, the wipers have failed again, suggesting the recall remedy was inadequate or that defective components are still being used. Ford and the servicing dealer refuse to reopen the recall or provide coverage, even though this is clearly the same safety issue. Without functioning wipers, the vehicle is unsafe to drive in rain or snow.  I request that NHTSA investigate whether Ford’s recall 23S10 remedy is effective and whether additional corrective action or a new recall should be issued to address continued wiper motor failures on these vehicles.",
+    "received_at": "2025-11-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2148319",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2148319",
+    "decided_at": "2025-11-13T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2148319",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VISIBILITY/WIPER"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The windshield wipers on my 2021 Ford F-150 are inoperable."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The wipers suddenly stopped working with no warning."
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle had already received Recall 23S10"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the wipers have failed again"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "Recall 23S10"
+      },
+      {
+        "kind": "condition",
+        "quote": "rain or snow"
+      },
+      {
+        "kind": "safety",
+        "quote": "Without functioning wipers, the vehicle is unsafe to drive in rain or snow."
+      },
+      {
+        "kind": "other",
+        "quote": "same safety issue"
+      },
+      {
+        "kind": "symptom",
+        "quote": "wiper motor failures"
+      }
+    ],
+    "conditions": [
+      "after service",
+      "moisture"
+    ],
+    "fault_codes": [
+      "23S10"
+    ],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "VISIBILITY/WIPER: windshield wipers are inoperable and suddenly stopped with no warning; failed again after Recall 23S10; unsafe in rain or snow.",
+    "symptoms": [
+      "wipers inoperable",
+      "wipers suddenly stopped working with no warning",
+      "wipers failed again after recall remedy"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2148319",
+    "created_at": "2025-11-13T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Ford F-150. The contact stated that while driving at an undisclosed speed in the rain, the front windshield wipers stopped working without warning. The contact restarted the vehicle. The contact called the local dealer but the vehicle was not diagnosed or...",
+      "group": "body_controls",
+      "id": "1813853",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 18.5122,
+      "year": 2021
+    },
+    {
+      "excerpt": "Wiper blade recall 22V250 for F-150 - have tried scheduling to get recall fixed with Koons Ford Sterling, VA since May. They are still unable to fix recall due to inadequate scheduling and unavalialbe parts. Same issue with unintended tailgate opening recall number 21M08.",
+      "group": "body_controls",
+      "id": "1847975",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 15.7382,
+      "year": 2021
+    },
+    {
+      "excerpt": "My windshield wipers stopped working. It seems the wiper motor still kicks on and I can hear it move, but the wipers don’t move and are stuck. It’s almost as if the wipers are off track or something. Once my vehicle was stopped, I was able to move the wipers back down, but it won...",
+      "group": "body_controls",
+      "id": "1980298",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 15.1212,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-13T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00174985,
+      "duration_ms": 19625,
+      "reason": "VISIBILITY/WIPER: windshield wipers are inoperable and suddenly stopped with no warning; failed again after Recall 23S10; unsafe in rain or snow.",
+      "started_at": "2025-11-13T07:00:16Z",
+      "step": 2,
+      "tokens": 3495,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-13T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Ford F-150. The contact stated that while driving at an undisclosed speed in the rain, the front windshield wipers stopped working without warning. The contact restarted the vehicle. The contact called the local dealer but the vehicle was not diagnosed or...",
+            "group": "body_controls",
+            "id": "1813853",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 18.5122,
+            "year": 2021
+          },
+          {
+            "excerpt": "Wiper blade recall 22V250 for F-150 - have tried scheduling to get recall fixed with Koons Ford Sterling, VA since May. They are still unable to fix recall due to inadequate scheduling and unavalialbe parts. Same issue with unintended tailgate opening recall number 21M08.",
+            "group": "body_controls",
+            "id": "1847975",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 15.7382,
+            "year": 2021
+          },
+          {
+            "excerpt": "My windshield wipers stopped working. It seems the wiper motor still kicks on and I can hear it move, but the wipers don’t move and are stuck. It’s almost as if the wipers are off track or something. Once my vehicle was stopped, I was able to move the wipers back down, but it won...",
+            "group": "body_controls",
+            "id": "1980298",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 15.1212,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-13T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-13T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-13T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-13T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-13T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-13T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-13T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

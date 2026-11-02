@@ -1,0 +1,289 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2124085",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "PILOT",
+    "narrative": "The 2021 Honda Pilot would randomly flash brake, which would lock up the steering wheel, electronic warnings going off when nothing was there, and then all of the CMBS warnings  came on. Dealer charged for diagnosis, and requires $2,300.00 to fix the sensor. The vehicle was never in an accident, and various ghost electronic issues would be present over the last few years before the system failed with multiple warnings.",
+    "received_at": "2025-08-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2124085",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124085",
+    "decided_at": "2025-08-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2124085",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: ASSIST"
+      },
+      {
+        "kind": "symptom",
+        "quote": "randomly flash brake"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lock up the steering wheel"
+      },
+      {
+        "kind": "safety",
+        "quote": "lock up the steering wheel"
+      },
+      {
+        "kind": "symptom",
+        "quote": "electronic warnings going off when nothing was there"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all of the CMBS warnings"
+      },
+      {
+        "kind": "symptom",
+        "quote": "ghost electronic issues"
+      },
+      {
+        "kind": "condition",
+        "quote": "over the last few years"
+      },
+      {
+        "kind": "symptom",
+        "quote": "multiple warnings"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2021 Honda Pilot lane departure assist/ADAS: random brake flash, steering wheel lock-up, ghost electronic and CMBS warnings, intermittent over recent years",
+    "symptoms": [
+      "random brake warning flash",
+      "steering wheel lock-up",
+      "nuisance electronic warnings when nothing is there",
+      "CMBS warnings",
+      "ghost electronic issues"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124085",
+    "created_at": "2025-08-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The CMBS regularly activates with the brake warning lights, audible, and steering wheel shaking. There has never been anything in front of the vehicle when the CMBS activates. Most recently, the CMBS activated and applied the brakes when driving approximately 40 mph for no reason...",
+      "group": "adas",
+      "id": "1866252",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 20.7827,
+      "year": 2021
+    },
+    {
+      "excerpt": "With the auto idle feature engaged (disengaging requires manually turning off the system with each vehicle start) while at a stop light the auto idle feature shut the engine off. Typically, when you release the brake the car start back up and you can begin to accelerate. Over the...",
+      "group": "adas",
+      "id": "1837843",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 17.6525,
+      "year": 2021
+    },
+    {
+      "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+      "group": "adas",
+      "id": "1920912",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 15.8934,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006094,
+      "duration_ms": 6954,
+      "reason": "2021 Honda Pilot lane departure assist/ADAS: random brake flash, steering wheel lock-up, ghost electronic and CMBS warnings, intermittent over recent years",
+      "started_at": "2025-08-26T07:00:01Z",
+      "step": 2,
+      "tokens": 1541,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The CMBS regularly activates with the brake warning lights, audible, and steering wheel shaking. There has never been anything in front of the vehicle when the CMBS activates. Most recently, the CMBS activated and applied the brakes when driving approximately 40 mph for no reason...",
+            "group": "adas",
+            "id": "1866252",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 20.7827,
+            "year": 2021
+          },
+          {
+            "excerpt": "With the auto idle feature engaged (disengaging requires manually turning off the system with each vehicle start) while at a stop light the auto idle feature shut the engine off. Typically, when you release the brake the car start back up and you can begin to accelerate. Over the...",
+            "group": "adas",
+            "id": "1837843",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 17.6525,
+            "year": 2021
+          },
+          {
+            "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+            "group": "adas",
+            "id": "1920912",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 15.8934,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

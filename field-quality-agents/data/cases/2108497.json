@@ -1,0 +1,259 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2108497",
+    "make": "FORD",
+    "mileage": null,
+    "model": "MUSTANG MACH E",
+    "narrative": "The contact owns a 2024 Ford Mustang Mach-E. The contact received notification of NHTSA Campaign Number: 25V404000 (Electrical System, Latches/Locks/Linkages); however, the part to do the recall repair was not yet available. The local dealer was contacted. The contact was concerned for her safety and the safety of her baby because there was no mechanism that could temporarily override the failure in the event the failure occurred in significantly hot weather. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The manufacturer was made aware of the issue. The contact had not experienced a failure. The VIN was not available.",
+    "received_at": "2025-07-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2108497",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108497",
+    "decided_at": "2025-07-10T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2108497",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "component_group",
+        "quote": "Electrical System, Latches/Locks/Linkages"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 25V404000"
+      },
+      {
+        "kind": "condition",
+        "quote": "significantly hot weather"
+      },
+      {
+        "kind": "safety",
+        "quote": "concerned for her safety and the safety of her baby"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "other",
+        "quote": "the part to do the recall repair was not yet available"
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [
+      "25V404000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2024 Ford Mustang Mach-E electrical system and latch/lock recall 25V404000; repair part unavailable; hot-weather safety concern; no failure experienced.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108497",
+    "created_at": "2025-07-10T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Completely locked out of car without any access. No way of unlocking car. I tried via key fob, key pad, approach, mobile app. The locks are completely electronic, so no way to mechanically unlock. Had to call a tow truck to tow it to the dealership where I bought it just a couple...",
+      "group": "electrical_general",
+      "id": "2009286",
+      "make": "FORD",
+      "model": "MUSTANG MACH E",
+      "score": 4.9347,
+      "year": 2024
+    },
+    {
+      "excerpt": "While driving the vehicle electrical console started flashing then lost power and stopped dead in the road. The battery was reading between 70% to 80% prior with a range of over 250 miles still available. Due to complete lack of any power the car could not be moved or placed into...",
+      "group": "electrical_general",
+      "id": "2026947",
+      "make": "FORD",
+      "model": "MUSTANG MACH E",
+      "score": 2.7553,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-10T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00123025,
+      "duration_ms": 13678,
+      "reason": "2024 Ford Mustang Mach-E electrical system and latch/lock recall 25V404000; repair part unavailable; hot-weather safety concern; no failure experienced.",
+      "started_at": "2025-07-10T07:00:01Z",
+      "step": 2,
+      "tokens": 2614,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-07-10T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MUSTANG MACH E",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Completely locked out of car without any access. No way of unlocking car. I tried via key fob, key pad, approach, mobile app. The locks are completely electronic, so no way to mechanically unlock. Had to call a tow truck to tow it to the dealership where I bought it just a couple...",
+            "group": "electrical_general",
+            "id": "2009286",
+            "make": "FORD",
+            "model": "MUSTANG MACH E",
+            "score": 4.9347,
+            "year": 2024
+          },
+          {
+            "excerpt": "While driving the vehicle electrical console started flashing then lost power and stopped dead in the road. The battery was reading between 70% to 80% prior with a range of over 250 miles still available. Due to complete lack of any power the car could not be moved or placed into...",
+            "group": "electrical_general",
+            "id": "2026947",
+            "make": "FORD",
+            "model": "MUSTANG MACH E",
+            "score": 2.7553,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-07-10T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-10T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-10T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-10T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-10T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-10T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-10T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2089215",
+    "make": "FORD",
+    "mileage": null,
+    "model": "ECOSPORT",
+    "narrative": "2021 Ford EcoSport SES 2.0L gets an Engine Coolant Over-Temperature and Service Engine Soon Warning. In each instance, the Ford service center replaced the engine coolant temperature sensor and/or its associated wiring. In a short time after the repair, the same issue reoccurs (over six times now). Engine is not actually experiencing an over-temp issue, it is just that the sensor/wiring is faulty. When the issue occurs, the car is put into limp mode with reduced power/acceleration, sometimes at highway speeds or when accelerating onto the highway. I've been caught in traffic at highway speed then the car suddenly loses power in limp-mode forcing me to move over to slow lane or to pull over to the shoulder to avoid impeding traffic.",
+    "received_at": "2025-05-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089215",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089215",
+    "decided_at": "2025-05-05T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089215",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Engine Coolant Over-Temperature and Service Engine Soon Warning"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sensor/wiring is faulty"
+      },
+      {
+        "kind": "symptom",
+        "quote": "limp mode with reduced power/acceleration"
+      },
+      {
+        "kind": "condition",
+        "quote": "at highway speeds"
+      },
+      {
+        "kind": "condition",
+        "quote": "after the repair, the same issue reoccurs"
+      },
+      {
+        "kind": "safety",
+        "quote": "suddenly loses power in limp-mode"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2021 Ford EcoSport electrical coolant temperature sensor/wiring fault causing over-temperature and Service Engine Soon warnings, limp mode with reduced power, and sudden power loss at highway speed; recurring after repair.",
+    "symptoms": [
+      "engine coolant over-temperature warning",
+      "Service Engine Soon warning",
+      "faulty engine coolant temperature sensor/wiring",
+      "limp mode with reduced power/acceleration",
+      "sudden loss of power at highway speed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089215",
+    "created_at": "2025-05-05T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Check engine light came on at 24k miles. Alert on Ford Pass app said the engine wasn't heating up to operating temperature fast enough. Had a second Alert come up the next time I drove the car saying there was an electrical issue in the vehicle causing anti lock breaks and other...",
+      "group": "electrical_general",
+      "id": "1948535",
+      "make": "FORD",
+      "model": "ECOSPORT",
+      "score": 6.2554,
+      "year": 2021
+    },
+    {
+      "excerpt": "Several times now my engine has shut off while driving and in the middle of coming to a stop. Luckily my breaks still worked with the vehicle shut down. I'd have to put in park and manually restart the vehicle to continue driving. This is something that puts myself and others on...",
+      "group": "electrical_general",
+      "id": "1948544",
+      "make": "FORD",
+      "model": "ECOSPORT",
+      "score": 4.1477,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Ford Ecosport. The contact stated while driving 65 MPH, the vehicle stalled. The contact stated that a message to shift to park(P) and restart the vehicle was displayed. The contact pulled over and restarted the vehicle however, the failure recurred. The v...",
+      "group": "electrical_general",
+      "id": "1819861",
+      "make": "FORD",
+      "model": "ECOSPORT",
+      "score": 3.9463,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-05T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007753,
+      "duration_ms": 10602,
+      "reason": "2021 Ford EcoSport electrical coolant temperature sensor/wiring fault causing over-temperature and Service Engine Soon warnings, limp mode with reduced power, and sudden power loss at highway speed; recurring after repair.",
+      "started_at": "2025-05-05T07:00:15Z",
+      "step": 2,
+      "tokens": 1867,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-05T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ECOSPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Check engine light came on at 24k miles. Alert on Ford Pass app said the engine wasn't heating up to operating temperature fast enough. Had a second Alert come up the next time I drove the car saying there was an electrical issue in the vehicle causing anti lock breaks and other...",
+            "group": "electrical_general",
+            "id": "1948535",
+            "make": "FORD",
+            "model": "ECOSPORT",
+            "score": 6.2554,
+            "year": 2021
+          },
+          {
+            "excerpt": "Several times now my engine has shut off while driving and in the middle of coming to a stop. Luckily my breaks still worked with the vehicle shut down. I'd have to put in park and manually restart the vehicle to continue driving. This is something that puts myself and others on...",
+            "group": "electrical_general",
+            "id": "1948544",
+            "make": "FORD",
+            "model": "ECOSPORT",
+            "score": 4.1477,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Ford Ecosport. The contact stated while driving 65 MPH, the vehicle stalled. The contact stated that a message to shift to park(P) and restart the vehicle was displayed. The contact pulled over and restarted the vehicle however, the failure recurred. The v...",
+            "group": "electrical_general",
+            "id": "1819861",
+            "make": "FORD",
+            "model": "ECOSPORT",
+            "score": 3.9463,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-05T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-05T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-05T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-05T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-05T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-05T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-05T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

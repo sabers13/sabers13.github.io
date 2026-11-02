@@ -1,0 +1,228 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2079762",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "SIENNA",
+    "narrative": "I have had this car for 7 years. Started having issues a year ago and despite bringing it to Toyota 2x, they cannot tell me what the issue is. I will be driving on a regular flat paved road when the car will suddenly brake and pull me towards the side of the road. I get the ABS code sometimes and also the slip indicator light.   I've explained this each x I've brought it in and they have told me it's due to me \"driving too fast\" or \"accidentally having my foot on the brake.\" LOL I am a typical soccer mom and drive conservatively and don't brake when I don't have to. It will do it on curving roads as well as straight roads.   When this happens, it is terrifying!  I have gone to different mechanics as well and no one can determine this issue. I've replaced the ABS sensors on this and am still having this issue. I  don't know what else to do, as this is unsafe and unsafe to the extent that I no longer allow my 17 year old to drive it. Please help!!!!!!!!",
+    "received_at": "2025-04-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2079762",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2079762",
+    "decided_at": "2025-04-02T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2079762",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car will suddenly brake and pull me towards the side of the road"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I get the ABS code sometimes and also the slip indicator light."
+      },
+      {
+        "kind": "condition",
+        "quote": "driving on a regular flat paved road"
+      },
+      {
+        "kind": "condition",
+        "quote": "It will do it on curving roads as well as straight roads."
+      },
+      {
+        "kind": "safety",
+        "quote": "When this happens, it is terrifying!"
+      },
+      {
+        "kind": "safety",
+        "quote": "this is unsafe and unsafe to the extent that I no longer allow my 17 year old to drive it"
+      },
+      {
+        "kind": "other",
+        "quote": "I've replaced the ABS sensors on this and am still having this issue."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2015 Toyota Sienna ADAS automatic emergency braking; sudden braking and pull to side on flat, curving and straight roads with intermittent ABS/slip lights.",
+    "symptoms": [
+      "sudden braking",
+      "vehicle pulls toward side of road",
+      "ABS code appears sometimes",
+      "slip indicator light appears"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2079762",
+    "created_at": "2025-04-02T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-02T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00133975,
+      "duration_ms": 14412,
+      "reason": "2015 Toyota Sienna ADAS automatic emergency braking; sudden braking and pull to side on flat, curving and straight roads with intermittent ABS/slip lights.",
+      "started_at": "2025-04-02T07:00:01Z",
+      "step": 2,
+      "tokens": 2870,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-04-02T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "SIENNA",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-02T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-02T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-02T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-02T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-02T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-02T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-02T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

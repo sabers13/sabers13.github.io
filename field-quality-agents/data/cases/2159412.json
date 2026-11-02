@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2159412",
+    "make": "KIA",
+    "mileage": null,
+    "model": "EV6",
+    "narrative": "The vehicle experienced a total power failure resulting in complete inoperability (no start, no unlock, no electrical response). This is the second occurrence within approximately five weeks. The most recent incident occurred after the vehicle was fully charged and driven the day prior. There were no warning lights or messages before the failure. The vehicle was previously inspected by an authorized dealer and a manufacturer service campaign related to the charging/low-voltage system was performed, after which the problem recurred. This condition can strand the driver without warning and poses a safety concern.",
+    "received_at": "2025-12-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2159412",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2159412",
+    "decided_at": "2025-12-21T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2159412",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle experienced a total power failure resulting in complete inoperability (no start, no unlock, no electrical response)."
+      },
+      {
+        "kind": "condition",
+        "quote": "This is the second occurrence within approximately five weeks."
+      },
+      {
+        "kind": "condition",
+        "quote": "The most recent incident occurred after the vehicle was fully charged and driven the day prior."
+      },
+      {
+        "kind": "symptom",
+        "quote": "There were no warning lights or messages before the failure."
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was previously inspected by an authorized dealer and a manufacturer service campaign related to the charging/low-voltage system was performed, after which the problem recurred."
+      },
+      {
+        "kind": "safety",
+        "quote": "This condition can strand the driver without warning and poses a safety concern."
+      }
+    ],
+    "conditions": [
+      "charging",
+      "after service",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system total power failure and complete inoperability, recurring within five weeks after full charging and a prior dealer service campaign.",
+    "symptoms": [
+      "total power failure",
+      "complete inoperability with no start, no unlock, and no electrical response",
+      "no warning lights or messages before the failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2159412",
+    "created_at": "2025-12-21T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hello NHTSA, I hope this message finds you well. I would like to provide specific details regarding the issues with my car as per your guidelines: 1. **Failed Component or System:** The charging system has malfunctioned, leading to extreme range decrease, constant charging failur...",
+      "group": "electrical_general",
+      "id": "1952175",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 22.7474,
+      "year": 2023
+    },
+    {
+      "excerpt": "I purchased my EV6 in April 2023, after 2 months, my charging abruptly stops, I will restart it and it fails minutes later. I have taken the car to the dealership 2x and they are unable to find the cause, I did further research and found an update that was applied on the second v...",
+      "group": "electrical_general",
+      "id": "1905481",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 12.9495,
+      "year": 2023
+    },
+    {
+      "excerpt": "The contact owns a 2023 Kia EV6. The contact stated that the controls for the heating and cooling system on the steering wheel were too close and were a distraction. The contact stated that sunlight made it difficult to check the controls. While checking the features, the contact...",
+      "group": "electrical_general",
+      "id": "2009902",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 12.6271,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-21T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006952,
+      "duration_ms": 7794,
+      "reason": "Electrical system total power failure and complete inoperability, recurring within five weeks after full charging and a prior dealer service campaign.",
+      "started_at": "2025-12-21T07:00:01Z",
+      "step": 2,
+      "tokens": 1696,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-21T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "EV6",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hello NHTSA, I hope this message finds you well. I would like to provide specific details regarding the issues with my car as per your guidelines: 1. **Failed Component or System:** The charging system has malfunctioned, leading to extreme range decrease, constant charging failur...",
+            "group": "electrical_general",
+            "id": "1952175",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 22.7474,
+            "year": 2023
+          },
+          {
+            "excerpt": "I purchased my EV6 in April 2023, after 2 months, my charging abruptly stops, I will restart it and it fails minutes later. I have taken the car to the dealership 2x and they are unable to find the cause, I did further research and found an update that was applied on the second v...",
+            "group": "electrical_general",
+            "id": "1905481",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 12.9495,
+            "year": 2023
+          },
+          {
+            "excerpt": "The contact owns a 2023 Kia EV6. The contact stated that the controls for the heating and cooling system on the steering wheel were too close and were a distraction. The contact stated that sunlight made it difficult to check the controls. While checking the features, the contact...",
+            "group": "electrical_general",
+            "id": "2009902",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 12.6271,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-21T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-21T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-21T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-21T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-21T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-21T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-21T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

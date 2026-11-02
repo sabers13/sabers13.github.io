@@ -1,0 +1,289 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2134932",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "RIDGELINE",
+    "narrative": "The rearview camera continues to fail after recall for the issue was completed.  Estimate 6 months+ since recall was performed to replace camera tailgate wire harness.  It has begun random failures again.  There is no indication from the dash of an error.  When placed in reverse, the camera display in the dash goes nearly black or totally black; sometimes lane back lines are present, sometimes not. The current problem is entirely consistent with the failure conditions and symptoms prior to the recall update to replace the wire harness. The problem can fairly routinely be triggered by multiple uses of the dual-action tailgate movement.  A few flat down and back up, then a few swing-gate actions will generally trigger the failure.  When the camera monitor does have a normal picture, it will stay that way indefinitely -until you again have repeated tailgate movements using the dual-action feature. It is generally possible to perform several dual-action movements of the tailgate and restore the camera monitor to a functional view. The recall and replacement with an \"improved\" wire harness has failed to last; the identical problem is recurring.   The vehicle was at a Honda dealer today.  They report no error codes, they report no continuity issues with the wire harness.  Proposed remedy is to replace the camera unit, despite no error codes.  The only basis seems to be that they could not \"see\" a problem with the harness.  Nor can they explain why the circumstances are identical to what caused the initial recall, but still feel it's not the cable.  Nor can they explain why my repeated movements of the tailgate can make the display work again.   This is a considerable safety issue as it's extremely difficult to back up the vehicle if you can't see behind/below the tailgate.  Mirrors are not enough; safe backing requires the use of the rear view camera.",
+    "received_at": "2025-09-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2134932",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2134932",
+    "decided_at": "2025-09-29T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2134932",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rearview camera continues to fail after recall for the issue was completed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It has begun random failures again."
+      },
+      {
+        "kind": "symptom",
+        "quote": "When placed in reverse, the camera display in the dash goes nearly black or totally black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "sometimes lane back lines are present, sometimes not"
+      },
+      {
+        "kind": "condition",
+        "quote": "triggered by multiple uses of the dual-action tailgate movement"
+      },
+      {
+        "kind": "condition",
+        "quote": "The recall and replacement with an \"improved\" wire harness has failed to last; the identical problem is recurring."
+      },
+      {
+        "kind": "other",
+        "quote": "They report no error codes"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a considerable safety issue as it's extremely difficult to back up the vehicle if you can't see behind/below the tailgate."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM / rearview camera: intermittent black or near-black reverse display and missing lane lines after recall harness replacement, triggered by dual-action tailgate movement; no dash error.",
+    "symptoms": [
+      "rearview camera fails intermittently",
+      "reverse camera display goes nearly black or totally black",
+      "lane back lines sometimes absent",
+      "no dash error indication"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2134932",
+    "created_at": "2025-09-29T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "1- The GPS unit doesn't understand me. Im told it cannot be repaired. Honda won't repair it. This is a safety hazard because I have to scramble for my phone to get directions. 2- The charging pad doesn't work. Again, Honda admits to the problem but has no fix. I must look away to...",
+      "group": "electrical_general",
+      "id": "1989874",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 7.2601,
+      "year": 2023
+    },
+    {
+      "excerpt": "Wireless Charger Doesn't Work with or without a case on my Samsung 22 Ultra (which works on every other of the 4 wireless chargers I have). So I just purchased the 23 RTL-E on 09/28/23. Upon taking possession of the vehicle, got in adjusted and began setting things up to my likin...",
+      "group": "electrical_general",
+      "id": "1932032",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 7.2594,
+      "year": 2023
+    },
+    {
+      "excerpt": "I have been getting recall notices and each time I've called (beginning of the recall and just now dec 11th) My Honda location has told me Honda has not released the the parts yet another notice will be sent to advise when they will be available for repair. This is very frustrati...",
+      "group": "electrical_general",
+      "id": "2047452",
+      "make": "HONDA",
+      "model": "RIDGELINE",
+      "score": 3.4302,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-29T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.001942,
+      "duration_ms": 15674,
+      "reason": "ELECTRICAL SYSTEM / rearview camera: intermittent black or near-black reverse display and missing lane lines after recall harness replacement, triggered by dual-action tailgate movement; no dash error.",
+      "started_at": "2025-09-29T07:00:16Z",
+      "step": 2,
+      "tokens": 3981,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-29T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "RIDGELINE",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "1- The GPS unit doesn't understand me. Im told it cannot be repaired. Honda won't repair it. This is a safety hazard because I have to scramble for my phone to get directions. 2- The charging pad doesn't work. Again, Honda admits to the problem but has no fix. I must look away to...",
+            "group": "electrical_general",
+            "id": "1989874",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 7.2601,
+            "year": 2023
+          },
+          {
+            "excerpt": "Wireless Charger Doesn't Work with or without a case on my Samsung 22 Ultra (which works on every other of the 4 wireless chargers I have). So I just purchased the 23 RTL-E on 09/28/23. Upon taking possession of the vehicle, got in adjusted and began setting things up to my likin...",
+            "group": "electrical_general",
+            "id": "1932032",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 7.2594,
+            "year": 2023
+          },
+          {
+            "excerpt": "I have been getting recall notices and each time I've called (beginning of the recall and just now dec 11th) My Honda location has told me Honda has not released the the parts yet another notice will be sent to advise when they will be available for repair. This is very frustrati...",
+            "group": "electrical_general",
+            "id": "2047452",
+            "make": "HONDA",
+            "model": "RIDGELINE",
+            "score": 3.4302,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-29T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-29T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-29T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-29T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-29T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-29T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-29T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

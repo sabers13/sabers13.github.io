@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2154792",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "\"Vehicle is subject to Recall 68C (Fire Risk). Manufacturer states remedy is 'Not Yet Available.' I am instructed not to charge the battery and to park away from structures. I cannot safely park the vehicle at my home or use the electric propulsion I am paying for. The vehicle presents an immediate fire hazard while parked.\"",
+    "received_at": "2025-12-06",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154792",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154792",
+    "decided_at": "2025-12-06T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154792",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "Recall 68C"
+      },
+      {
+        "kind": "safety",
+        "quote": "Fire Risk"
+      },
+      {
+        "kind": "safety",
+        "quote": "immediate fire hazard while parked"
+      },
+      {
+        "kind": "symptom",
+        "quote": "fire hazard while parked"
+      },
+      {
+        "kind": "condition",
+        "quote": "instructed not to charge the battery"
+      },
+      {
+        "kind": "condition",
+        "quote": "park away from structures"
+      },
+      {
+        "kind": "other",
+        "quote": "electric propulsion"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [
+      "68C"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: fire-risk recall 68C with no remedy, instructed not to charge battery and park away from structures.",
+    "symptoms": [
+      "fire risk",
+      "fire hazard while parked"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154792",
+    "created_at": "2025-12-06T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I am writing to express my serious concerns regarding the safety recall issued for my 2023 Jeep Wrangler Plug-In Hybrid Electric Vehicle (PHEV) under Recall Number 95B/NHTSA 24V-720. The recall highlights a critical defect in the High Voltage (HV) battery, which poses a severe ri...",
+      "group": "electrical_general",
+      "id": "2042085",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 21.0314,
+      "year": 2023
+    },
+    {
+      "excerpt": "The safety of this vehicle is a ticking time bomb. We are instructed not to park in or near a structure, near other vehicles, or charge it. Even if I don’t not charge it how am I supposed to park at my own home? How am I supposed to park at work? You are putting several lives at...",
+      "group": "electrical_general",
+      "id": "2036712",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 15.0403,
+      "year": 2023
+    },
+    {
+      "excerpt": "Open 95B recall. High voltage battery safety issue, can cause fire. Advised not to charge, not to park indoors, and away from structures. There is no root cause, no parts, no firm timeline and I the manufacturer has been unresponsive. Initial contact was 10/31, and I have not yet...",
+      "group": "electrical_general",
+      "id": "2039503",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 14.9653,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-06T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00149125,
+      "duration_ms": 17218,
+      "reason": "Electrical system: fire-risk recall 68C with no remedy, instructed not to charge battery and park away from structures.",
+      "started_at": "2025-12-06T07:00:01Z",
+      "step": 2,
+      "tokens": 2995,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-06T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I am writing to express my serious concerns regarding the safety recall issued for my 2023 Jeep Wrangler Plug-In Hybrid Electric Vehicle (PHEV) under Recall Number 95B/NHTSA 24V-720. The recall highlights a critical defect in the High Voltage (HV) battery, which poses a severe ri...",
+            "group": "electrical_general",
+            "id": "2042085",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 21.0314,
+            "year": 2023
+          },
+          {
+            "excerpt": "The safety of this vehicle is a ticking time bomb. We are instructed not to park in or near a structure, near other vehicles, or charge it. Even if I don’t not charge it how am I supposed to park at my own home? How am I supposed to park at work? You are putting several lives at...",
+            "group": "electrical_general",
+            "id": "2036712",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 15.0403,
+            "year": 2023
+          },
+          {
+            "excerpt": "Open 95B recall. High voltage battery safety issue, can cause fire. Advised not to charge, not to park indoors, and away from structures. There is no root cause, no parts, no firm timeline and I the manufacturer has been unresponsive. Initial contact was 10/31, and I have not yet...",
+            "group": "electrical_general",
+            "id": "2039503",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 14.9653,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-06T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-06T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-06T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-06T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-06T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-06T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-06T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

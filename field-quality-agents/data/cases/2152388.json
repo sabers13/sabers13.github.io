@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2152388",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "SUBURBAN",
+    "narrative": "While driving a 2023 Chevrolet Suburban (VIN: [XXX] ), my [XXX]  son was seated in the second-row center seat and was properly buckled in with the factory shoulder/lap belt. He turned around briefly to grab something from the back of the vehicle, and during that movement the seatbelt fully extended and then locked in the automatic locking mode. The retractor would not release tension afterward. The belt continued tightening around his torso, and no amount of slack could be pulled back out.  The belt became so tight that he was unable to breathe comfortably or free himself, and the locking mechanism would not disengage even after the vehicle was stopped and turned off. The seatbelt remained fully cinched and would not retract or loosen under any circumstances.  Because the belt created a serious entrapment hazard and my child could not safely be removed, I was forced to cut the seatbelt to free him. This appears to be a dangerous malfunction of the seatbelt retractor/locking system and presents a significant safety risk, especially for children who may shift or turn in their seats during normal use. INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-11-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2152388",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2152388",
+    "decided_at": "2025-11-27T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2152388",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "condition",
+        "quote": "While driving a 2023 Chevrolet Suburban"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the seatbelt fully extended and then locked in the automatic locking mode"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The retractor would not release tension afterward."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The belt continued tightening around his torso"
+      },
+      {
+        "kind": "symptom",
+        "quote": "he was unable to breathe comfortably or free himself"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the locking mechanism would not disengage even after the vehicle was stopped and turned off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The seatbelt remained fully cinched and would not retract or loosen under any circumstances."
+      },
+      {
+        "kind": "safety",
+        "quote": "serious entrapment hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was forced to cut the seatbelt to free him"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2023 Chevrolet Suburban seat belt retractor locked and tightened around a child while driving, causing entrapment; the belt was cut to free him.",
+    "symptoms": [
+      "seat belt locked in automatic locking mode",
+      "retractor would not release tension",
+      "belt continued tightening around torso",
+      "child unable to breathe comfortably or free himself",
+      "locking mechanism would not disengage after vehicle was stopped and turned off",
+      "seat belt would not retract or loosen",
+      "seat belt had to be cut to free the child"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2152388",
+    "created_at": "2025-11-27T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Vehicle was purchased new, has 2900 miles on it. The service safety restraint system light came on. I know this has been on going issue in past on these vehicles and want it reported and documented.",
+      "group": "restraints",
+      "id": "1896717",
+      "make": "CHEVROLET",
+      "model": "SUBURBAN",
+      "score": 0.863,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-27T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010201,
+      "duration_ms": 10912,
+      "reason": "2023 Chevrolet Suburban seat belt retractor locked and tightened around a child while driving, causing entrapment; the belt was cut to free him.",
+      "started_at": "2025-11-27T07:00:51Z",
+      "step": 2,
+      "tokens": 2353,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-11-27T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "SUBURBAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Vehicle was purchased new, has 2900 miles on it. The service safety restraint system light came on. I know this has been on going issue in past on these vehicles and want it reported and documented.",
+            "group": "restraints",
+            "id": "1896717",
+            "make": "CHEVROLET",
+            "model": "SUBURBAN",
+            "score": 0.863,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-11-27T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-27T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-27T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-27T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-27T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-27T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-27T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

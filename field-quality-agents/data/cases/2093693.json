@@ -1,0 +1,460 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2093693",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "BLAZER",
+    "narrative": "when you put your Blazer in Park you get the warning light and chime to 'shift it into park'. So far it has happened to me 5 or 6 times in the past couple days. I can jiggle the shifter handle to get the chime to stop but it has me concerned.   I have seen numerous posts about this same problem.",
+    "received_at": "2025-05-20",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2093693",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2093693",
+    "decided_at": "2025-05-20T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2093693",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "when you put your Blazer in Park you get the warning light and chime to 'shift it into park'."
+      },
+      {
+        "kind": "condition",
+        "quote": "5 or 6 times in the past couple days"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I can jiggle the shifter handle to get the chime to stop"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Run a long-run power-cycling test because the false \"shift into park\" warning/chime is intermittent and the rulebook maps intermittent faults to that test.",
+    "symptoms": [
+      "warning light and chime to shift into park while the vehicle is in Park",
+      "chime stops when the shifter handle is jiggled"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2093693",
+    "created_at": "2025-05-20T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "when you put your Blazer in Park you get the warning light and chime to 'shift it into park'.",
+        "source_id": "2093693",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "5 or 6 times in the past couple days",
+        "source_id": "2093693",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I can jiggle the shifter handle to get the chime to stop",
+        "source_id": "2093693",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports the warning light and chime occurring while the Blazer is in Park, happening 5 or 6 times in the past couple days, and stopping when the shifter handle is jiggled. The extracted condition is intermittent, which matches the rulebook entry requiring a long-run power-cycling test to reproduce faults after repeated wake/sleep cycles.",
+    "requested_info": [],
+    "summary": "Run a long-run power-cycling test because the false \"shift into park\" warning/chime is intermittent and the rulebook maps intermittent faults to that test.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports the warning light and chime occurring while the Blazer is in Park, happening 5 or 6 times in the past couple days, and stopping when the shifter handle is jiggled. The extracted condition is intermittent, which matches the rulebook entry requiring a long-run power-cycling test to reproduce faults after repeated wake/sleep cycles."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When I parked and tried to turn off car it would continue to run. I had to put it in park and drive back to park several times before car would turn off. There’s a recall for this issue on other blazers and I feel 2020 blazers should be included. The dealer replaced the shifter a...",
+      "group": "electrical_general",
+      "id": "2046291",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 5.8818,
+      "year": 2020
+    },
+    {
+      "excerpt": "Vehicle keeps throwing “steering assistance reduced please drive with care” message. It causes my car fan to constantly run. It also causes the coolant gauge to not work the needle drops below that cool like it’s not on and then the car won’t blow cold air from the vents. This me...",
+      "group": "electrical_general",
+      "id": "2034748",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 4.7464,
+      "year": 2020
+    },
+    {
+      "excerpt": "I am getting the message \"Shift to Park\" displayed while vehicle in park after turning the vehicle off. Looking online, it seems to be a common issue with Blazers as well as other GM vehicles. I found online that \"the cause of the condition may be that the park switch in the tran...",
+      "group": "electrical_general",
+      "id": "2038482",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 2.4725,
+      "year": 2020
+    },
+    {
+      "excerpt": "We have experienced 2 issues that are very well known issues, I will list them here. First, is the Shift to Park issue, that involves an electrical switch and wiring harness on the shifter assembly. Second, is regarding a \"driver assist reduced drive with care\" alert message that...",
+      "group": "electrical_general",
+      "id": "2044614",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 2.199,
+      "year": 2020
+    },
+    {
+      "excerpt": "Shift to park displays despite being in park. I cannot turn off the car or lock the doors.",
+      "group": "electrical_general",
+      "id": "1831743",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 2.1663,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00073,
+      "duration_ms": 12970,
+      "reason": "Electrical system false 'shift into park' warning light/chime while in Park, intermittent over past couple days; jiggling shifter stops chime.",
+      "started_at": "2025-05-20T07:00:01Z",
+      "step": 2,
+      "tokens": 1733,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "BLAZER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I parked and tried to turn off car it would continue to run. I had to put it in park and drive back to park several times before car would turn off. There’s a recall for this issue on other blazers and I feel 2020 blazers should be included. The dealer replaced the shifter a...",
+            "group": "electrical_general",
+            "id": "2046291",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 5.8818,
+            "year": 2020
+          },
+          {
+            "excerpt": "Vehicle keeps throwing “steering assistance reduced please drive with care” message. It causes my car fan to constantly run. It also causes the coolant gauge to not work the needle drops below that cool like it’s not on and then the car won’t blow cold air from the vents. This me...",
+            "group": "electrical_general",
+            "id": "2034748",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 4.7464,
+            "year": 2020
+          },
+          {
+            "excerpt": "I am getting the message \"Shift to Park\" displayed while vehicle in park after turning the vehicle off. Looking online, it seems to be a common issue with Blazers as well as other GM vehicles. I found online that \"the cause of the condition may be that the park switch in the tran...",
+            "group": "electrical_general",
+            "id": "2038482",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 2.4725,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-20T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-20T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-20T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "when you put your Blazer in Park you get the warning light and chime to 'shift it into park'. So far it has happened to me 5 or 6 times in the past couple days. I can jiggle the shifter handle to get the chime to stop but it has me concerned.   I have seen numerous posts about this same problem."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I parked and tried to turn off car it would continue to run. I had to put it in park and drive back to park several times before car would turn off. There’s a recall for this issue on other blazers and I feel 2020 blazers should be included. The dealer replaced the shifter a...",
+            "group": "electrical_general",
+            "id": "2046291",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 5.8818,
+            "year": 2020
+          },
+          {
+            "excerpt": "Vehicle keeps throwing “steering assistance reduced please drive with care” message. It causes my car fan to constantly run. It also causes the coolant gauge to not work the needle drops below that cool like it’s not on and then the car won’t blow cold air from the vents. This me...",
+            "group": "electrical_general",
+            "id": "2034748",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 4.7464,
+            "year": 2020
+          },
+          {
+            "excerpt": "I am getting the message \"Shift to Park\" displayed while vehicle in park after turning the vehicle off. Looking online, it seems to be a common issue with Blazers as well as other GM vehicles. I found online that \"the cause of the condition may be that the park switch in the tran...",
+            "group": "electrical_general",
+            "id": "2038482",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 2.4725,
+            "year": 2020
+          },
+          {
+            "excerpt": "We have experienced 2 issues that are very well known issues, I will list them here. First, is the Shift to Park issue, that involves an electrical switch and wiring harness on the shifter assembly. Second, is regarding a \"driver assist reduced drive with care\" alert message that...",
+            "group": "electrical_general",
+            "id": "2044614",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 2.199,
+            "year": 2020
+          },
+          {
+            "excerpt": "Shift to park displays despite being in park. I cannot turn off the car or lock the doors.",
+            "group": "electrical_general",
+            "id": "1831743",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 2.1663,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-20T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHEVROLET",
+        "model": "BLAZER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-20T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "CHEVROLET",
+        "model": "BLAZER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-20T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006243,
+      "duration_ms": 6168,
+      "reason": "The narrative reports the warning light and chime occurring while the Blazer is in Park, happening 5 or 6 times in the past couple days, and stopping when the shifter handle is jiggled. The extracted condition is intermittent, which matches the rulebook entry requiring a long-run power-cycling test to reproduce faults after repeated wake/sleep cycles.",
+      "started_at": "2025-05-20T07:00:09Z",
+      "step": 10,
+      "tokens": 2122,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-05-20T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "when you put your Blazer in Park you get the warning light and chime to 'shift it into park'.",
+          "5 or 6 times in the past couple days",
+          "I can jiggle the shifter handle to get the chime to stop"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-20T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-20T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-20T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-20T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

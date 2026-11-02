@@ -1,0 +1,262 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2144327",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "BLAZER",
+    "narrative": "Incident Description:  While my wife was driving our 2022 Chevy Blazer at approximately 40 miles per hour, the vehicle’s dashboard suddenly went dark and became unresponsive. Multiple warning lights illuminated simultaneously, including the check engine light, ABS light, and other system alerts. The dashboard appeared to flicker as though it was repeatedly shutting down and restarting.  When the brake pedal was applied, it offered no resistance and traveled completely to the floor without slowing the vehicle. To bring the vehicle to a stop, my wife shifted into neutral and allowed it to coast until it came to a complete stop. Fortunately, there were no intersections or other vehicles in front of her at the time, preventing a potential accident.  This incident raises serious safety concerns, as both electrical and braking systems appeared to fail simultaneously.",
+    "received_at": "2025-10-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2144327",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2144327",
+    "decided_at": "2025-10-29T07:01:04Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2144327",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "dashboard suddenly went dark and became unresponsive"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Multiple warning lights illuminated simultaneously"
+      },
+      {
+        "kind": "condition",
+        "quote": "The dashboard appeared to flicker as though it was repeatedly shutting down and restarting."
+      },
+      {
+        "kind": "condition",
+        "quote": "at approximately 40 miles per hour"
+      },
+      {
+        "kind": "symptom",
+        "quote": "When the brake pedal was applied, it offered no resistance and traveled completely to the floor without slowing the vehicle."
+      },
+      {
+        "kind": "safety",
+        "quote": "This incident raises serious safety concerns, as both electrical and braking systems appeared to fail simultaneously."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: dashboard went dark/unresponsive with warning lights and flicker; brake pedal went to floor without slowing while driving about 40 mph.",
+    "symptoms": [
+      "dashboard went dark and became unresponsive",
+      "multiple warning lights illuminated simultaneously",
+      "dashboard flickered as if repeatedly shutting down and restarting",
+      "brake pedal had no resistance and traveled to the floor without slowing the vehicle"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2144327",
+    "created_at": "2025-10-29T07:01:02Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On June 1 I parked my blazer in the driveway and went into the house and came back out to my car in flames. I have had lots of electrical issues with the vehicle had it in the dealer to be repaired and reset several times. It was never fixed and now it has gone up in flames.",
+      "group": "electrical_general",
+      "id": "1817184",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 2.9998,
+      "year": 2022
+    },
+    {
+      "excerpt": "The DIC (Driver Information Center) keeps failing since I bought the car. The volume shoots up, the controls will not work, the screen freezes and then goes black, the rear camera stays on in forward motion, it does not always reset after turning off vehicle and opening door. My...",
+      "group": "electrical_general",
+      "id": "1911825",
+      "make": "CHEVROLET",
+      "model": "BLAZER",
+      "score": 1.4773,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-29T07:00:56Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00082855,
+      "duration_ms": 9346,
+      "reason": "Electrical system: dashboard went dark/unresponsive with warning lights and flicker; brake pedal went to floor without slowing while driving about 40 mph.",
+      "started_at": "2025-10-29T07:00:57Z",
+      "step": 2,
+      "tokens": 1967,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-10-29T07:00:58Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "BLAZER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On June 1 I parked my blazer in the driveway and went into the house and came back out to my car in flames. I have had lots of electrical issues with the vehicle had it in the dealer to be repaired and reset several times. It was never fixed and now it has gone up in flames.",
+            "group": "electrical_general",
+            "id": "1817184",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 2.9998,
+            "year": 2022
+          },
+          {
+            "excerpt": "The DIC (Driver Information Center) keeps failing since I bought the car. The volume shoots up, the controls will not work, the screen freezes and then goes black, the rear camera stays on in forward motion, it does not always reset after turning off vehicle and opening door. My...",
+            "group": "electrical_general",
+            "id": "1911825",
+            "make": "CHEVROLET",
+            "model": "BLAZER",
+            "score": 1.4773,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-10-29T07:00:59Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-29T07:01:00Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-29T07:01:01Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-29T07:01:03Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-29T07:01:05Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-29T07:01:06Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-29T07:01:07Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2059752",
+    "make": "KIA",
+    "mileage": null,
+    "model": "SELTOS",
+    "narrative": "On Wednesday [XXX], at [XXX]. I started to drive to work.  I noticed the instrument cluster on my 2024 Kia Seltos SX was completely dark.  I couldn't see the speedometer, fuel gauge, engine temperature, or any other function that should show on the instrument cluster.  I turned around and returned home.  I called the Kia dealer's service department and got an appointment for the car to be checked that afternoon.  This service center is about 30 miles from my home.  I drove there with a totally black screen for the instrument cluster--not able to see my speed or any other information about the car.  I left the car running when I arrived at the service center.  The service manager confirmed the issue.  I also told her I'd been getting warnings that the key fob batteries were drained.  She checked the key fobs and told me the batteries were sending strong signals.  She also told me the odometer mileage had been deleted and that it was illegal to drive the car in that condition.  She said that the instrument cluster unit had to be replaced but there wasn't a replacement unit anywhere in the U.S.  She gave me a loaner vehicle but warned me she had no idea when she could get a new instrument cluster.  I notice in online searches that instrument cluster failures for Kias are not unusual.  I also notice that some Kia models have been recalled for this reason.  Why isn't the Seltos on the list of recalled vehicles?  It doesn't appear that Kia knows how to correct the problem.  My instrument cluster screen has been repeatedly dimming and brightening for no obvious reason.  That problem is longstanding and intermittent.  When the car was restarted at the Kia dealership on Wednesday, the screen suddenly came back up with the service manager with me.  I am unwilling to drive the car if it is not reliable or safe to drive.   It has about 34,000 miles on the odometer and is less than two years old.  Is this a design problem or the result of faulty components?  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOI",
+    "received_at": "2025-01-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2059752",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2059752",
+    "decided_at": "2025-01-26T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2059752",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "instrument cluster on my 2024 Kia Seltos SX was completely dark"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I couldn't see the speedometer, fuel gauge, engine temperature, or any other function that should show on the instrument cluster"
+      },
+      {
+        "kind": "symptom",
+        "quote": "totally black screen for the instrument cluster--not able to see my speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "repeatedly dimming and brightening for no obvious reason"
+      },
+      {
+        "kind": "symptom",
+        "quote": "warnings that the key fob batteries were drained"
+      },
+      {
+        "kind": "condition",
+        "quote": "longstanding and intermittent"
+      },
+      {
+        "kind": "safety",
+        "quote": "not able to see my speed"
+      },
+      {
+        "kind": "safety",
+        "quote": "safe to drive"
+      },
+      {
+        "kind": "other",
+        "quote": "about 34,000 miles"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2024 Kia Seltos electrical/instrument cluster: completely dark cluster with no speed/fuel/temp display; intermittent dimming/brightening.",
+    "symptoms": [
+      "instrument cluster completely dark",
+      "cannot see speedometer, fuel gauge, engine temperature, or other cluster functions",
+      "intermittent screen dimming and brightening",
+      "warnings that key fob batteries were drained"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2059752",
+    "created_at": "2025-01-26T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-26T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00188335,
+      "duration_ms": 29433,
+      "reason": "2024 Kia Seltos electrical/instrument cluster: completely dark cluster with no speed/fuel/temp display; intermittent dimming/brightening.",
+      "started_at": "2025-01-26T07:00:16Z",
+      "step": 2,
+      "tokens": 3941,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-26T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "SELTOS",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-01-26T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-26T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-26T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-26T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-26T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-26T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-26T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

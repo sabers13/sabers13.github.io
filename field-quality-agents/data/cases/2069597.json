@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2069597",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "I am writing to formally express my frustration and deep concern regarding Recall 94B, which affects my 2019 Jeep Grand Cherokee Altitude and currently has no available remedy. This recall, as confirmed by Fox Chrysler Jeep in Southfield, MI, directly impacts critical safety features, including the Anti-lock Brake System (ABS) and other key functions essential for the safe operation of my vehicle. Given the severity of this issue—especially during Michigan’s harsh winter months—I find it unacceptable that no resolution is currently available.  Fox Chrysler Jeep has verified that all warning lights on my dashboard are related to this recall, yet they have informed me there is nothing they can do at this time. As a loyal Jeep owner, I am extremely disappointed that Stellantis has not yet provided a solution to an issue that directly compromises my safety and that of others on the road.  Given the circumstances, I am requesting immediate assistance from Stellantis to explore options for getting out of my current vehicle and into a new or used vehicle that is not subject to such serious, unresolved recalls. I cannot continue to drive a vehicle that poses such a significant safety risk, and I believe Stellantis has a responsibility to provide a viable alternative for affected customers.",
+    "received_at": "2025-02-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2069597",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2069597",
+    "decided_at": "2025-02-27T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2069597",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "all warning lights on my dashboard are related to this recall"
+      },
+      {
+        "kind": "symptom",
+        "quote": "directly impacts critical safety features, including the Anti-lock Brake System (ABS)"
+      },
+      {
+        "kind": "condition",
+        "quote": "Michigan’s harsh winter months"
+      },
+      {
+        "kind": "safety",
+        "quote": "directly compromises my safety and that of others on the road"
+      },
+      {
+        "kind": "safety",
+        "quote": "poses such a significant safety risk"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "Recall 94B"
+      }
+    ],
+    "conditions": [
+      "cold"
+    ],
+    "fault_codes": [
+      "94B"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: ABS and dashboard warning lights affected by Recall 94B with no remedy, in Michigan winter conditions.",
+    "symptoms": [
+      "dashboard warning lights",
+      "anti-lock brake system affected",
+      "safety features compromised"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2069597",
+    "created_at": "2025-02-27T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I was driving on a highway on June 18, 2021, from Houston to Galveston (TX), at approx. 30 mph given traffic at that time, and suddenly the dash board started blinking and malfunctioning, I realized I lost the speedometer showing me only horizontal lines, the brake light turned o...",
+      "group": "electrical_general",
+      "id": "1755641",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 16.6945,
+      "year": 2019
+    },
+    {
+      "excerpt": "The driver's side door lock will no longer operate using the key fob, lock/unlock button inside, or automatically lock when driving. It will only operate to unlock when the handle is pulled. It is available for inspection. It is a safety hazard due to not having a locked door whe...",
+      "group": "electrical_general",
+      "id": "1886157",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 15.8533,
+      "year": 2019
+    },
+    {
+      "excerpt": "While driving, my 2019 Jeep Grand Cherokee Laredo began smelling like burnt plastic, then a red warning triangle came on in the speedometer saying, ‘stop safely vehicle shut off soon’. At the same time, the engine warning light, battery warning light, and skid warning lights came...",
+      "group": "electrical_general",
+      "id": "1910503",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 15.7339,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-27T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017928,
+      "duration_ms": 16964,
+      "reason": "Electrical system: ABS and dashboard warning lights affected by Recall 94B with no remedy, in Michigan winter conditions.",
+      "started_at": "2025-02-27T07:00:01Z",
+      "step": 2,
+      "tokens": 3549,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-27T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I was driving on a highway on June 18, 2021, from Houston to Galveston (TX), at approx. 30 mph given traffic at that time, and suddenly the dash board started blinking and malfunctioning, I realized I lost the speedometer showing me only horizontal lines, the brake light turned o...",
+            "group": "electrical_general",
+            "id": "1755641",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 16.6945,
+            "year": 2019
+          },
+          {
+            "excerpt": "The driver's side door lock will no longer operate using the key fob, lock/unlock button inside, or automatically lock when driving. It will only operate to unlock when the handle is pulled. It is available for inspection. It is a safety hazard due to not having a locked door whe...",
+            "group": "electrical_general",
+            "id": "1886157",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 15.8533,
+            "year": 2019
+          },
+          {
+            "excerpt": "While driving, my 2019 Jeep Grand Cherokee Laredo began smelling like burnt plastic, then a red warning triangle came on in the speedometer saying, ‘stop safely vehicle shut off soon’. At the same time, the engine warning light, battery warning light, and skid warning lights came...",
+            "group": "electrical_general",
+            "id": "1910503",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 15.7339,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-27T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-27T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-27T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-27T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-27T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-27T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-27T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

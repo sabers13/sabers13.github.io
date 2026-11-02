@@ -1,0 +1,253 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2120059",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WAGONEER",
+    "narrative": "Vehicle: 2022 Jeep Wagoneer (25,000 miles, VIN:  [XXX] ) Issue: Engine stalls at low speed – occurred three times approaching stoplights. Safety hazard as it could cause a crash. Dates: Vehicle dropped off at Folsom Lake CDJR on Aug 8, 2025. Problem discussed with service advisor Aug 9, 2025. No repairs performed due to dispute over diagnostic charges. Notes: This vehicle matches the description of ongoing NHTSA investigation into 2022 Wagoneer eTorque stalling. Request inclusion in investigation data. Contact: [XXX] , [XXX] , [XXX] , [XXX]  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2120059",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2120059",
+    "decided_at": "2025-08-13T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2120059",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Engine stalls at low speed"
+      },
+      {
+        "kind": "condition",
+        "quote": "occurred three times approaching stoplights"
+      },
+      {
+        "kind": "safety",
+        "quote": "Safety hazard as it could cause a crash."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS (forward collision avoidance/adaptive cruise control); engine stalls at low speed approaching stoplights three times; safety hazard of crash",
+    "symptoms": [
+      "engine stalls at low speed",
+      "repeated stalling approaching stoplights"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2120059",
+    "created_at": "2025-08-13T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "None of the issues with this vehicle have ever been addressed by the manufacturer. We have had a STAR case opened and shut with no resolution. The infotainment system glitches, completely goes black, radio doesn't work and the back-up camera will fail on occasion. The blind spot...",
+      "group": "adas",
+      "id": "1888489",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 10.144,
+      "year": 2022
+    },
+    {
+      "excerpt": "the truck is shutting off on it own while driving it has happen about 5 times already dealership cannot keep the issue and keep returning the vehicle to me. I feel unsafe for me and my family to be driving this vehicle. And Jeep services is no help. I have a case manager who keep...",
+      "group": "adas",
+      "id": "2017040",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 8.1329,
+      "year": 2022
+    },
+    {
+      "excerpt": "Today 30JUN2022 my wife had a forward collision. She T-boned a Hyundai Sonata on the passenger door the Hyundai’s side airbags deployed and the jaws of life had to be used to get the passenger door open. My wife’s speed was about 5-10 MPH it was in a parking lot. None of the safe...",
+      "group": "adas",
+      "id": "1822839",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 7.2795,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-13T07:00:21Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00100705,
+      "duration_ms": 16333,
+      "reason": "ADAS (forward collision avoidance/adaptive cruise control); engine stalls at low speed approaching stoplights three times; safety hazard of crash",
+      "started_at": "2025-08-13T07:00:22Z",
+      "step": 2,
+      "tokens": 2275,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-13T07:00:23Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WAGONEER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "None of the issues with this vehicle have ever been addressed by the manufacturer. We have had a STAR case opened and shut with no resolution. The infotainment system glitches, completely goes black, radio doesn't work and the back-up camera will fail on occasion. The blind spot...",
+            "group": "adas",
+            "id": "1888489",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 10.144,
+            "year": 2022
+          },
+          {
+            "excerpt": "the truck is shutting off on it own while driving it has happen about 5 times already dealership cannot keep the issue and keep returning the vehicle to me. I feel unsafe for me and my family to be driving this vehicle. And Jeep services is no help. I have a case manager who keep...",
+            "group": "adas",
+            "id": "2017040",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 8.1329,
+            "year": 2022
+          },
+          {
+            "excerpt": "Today 30JUN2022 my wife had a forward collision. She T-boned a Hyundai Sonata on the passenger door the Hyundai’s side airbags deployed and the jaws of life had to be used to get the passenger door open. My wife’s speed was about 5-10 MPH it was in a parking lot. None of the safe...",
+            "group": "adas",
+            "id": "1822839",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 7.2795,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-13T07:00:24Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-13T07:00:25Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-13T07:00:27Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-13T07:00:29Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-13T07:00:30Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-13T07:00:31Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

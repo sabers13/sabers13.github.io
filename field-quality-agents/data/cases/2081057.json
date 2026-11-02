@@ -1,0 +1,297 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:ADAS:AUTONOMOUS/SELF DRIVING",
+    "group": "adas",
+    "id": "2081057",
+    "make": "TESLA",
+    "mileage": 79000,
+    "model": "MODEL S",
+    "narrative": "The contact owns a 2016 Tesla Model S. The contact stated while attempting to park the vehicle, the brake pedal was depressed and failed to respond. There were no warning lights illuminated. The contact depressed the brake and the vehicle kept rolling forward. The contact opened the door for the vehicle to come to a stop. On another occasion, the contact stated that the ADAS feature engaged and while driving at various speeds, and the vehicle failed to recognize stop signs, traffic lights, or pedestrians. The contact stated that the function was a paid feature; however, the system failed to operate as designed. On another occasion, the contact stated that the steering will shift to one side while driving at various speeds, and the vehicle became difficult to steer.  The vehicle was not taken to the dealer to be diagnosed or repaired. The dealer was made aware, and the contact had a pending appointment scheduled. The manufacturer was not made aware of the failure. The failure mileage was approximately 79,000.",
+    "received_at": "2025-04-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2081057",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2081057",
+    "decided_at": "2025-04-07T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2081057",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "the brake pedal was depressed and failed to respond"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle kept rolling forward"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to recognize stop signs, traffic lights, or pedestrians"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the steering will shift to one side while driving at various speeds"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle became difficult to steer"
+      },
+      {
+        "kind": "condition",
+        "quote": "while attempting to park"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at various speeds"
+      },
+      {
+        "kind": "condition",
+        "quote": "On another occasion"
+      },
+      {
+        "kind": "safety",
+        "quote": "The contact opened the door for the vehicle to come to a stop"
+      },
+      {
+        "kind": "component_group",
+        "quote": "ADAS feature"
+      },
+      {
+        "kind": "other",
+        "quote": "There were no warning lights illuminated."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2016 Tesla Model S ADAS: brake pedal failed to respond while parking and vehicle rolled forward; ADAS failed to recognize stop signs/traffic lights/pedestrians at various speeds; steering shifted to one side and became difficult to steer.",
+    "symptoms": [
+      "brake pedal failed to respond",
+      "vehicle kept rolling forward",
+      "ADAS failed to recognize stop signs, traffic lights, or pedestrians",
+      "steering shifted to one side",
+      "difficult to steer"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2081057",
+    "created_at": "2025-04-07T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "TL* THE CONTACT OWNS A 2016 TESLA MODEL S. THE CONTACT RECEIVED NOTIFICATION OF NHTSA CAMPAIGN NUMBER: 21V035000 (BACK OVER PREVENTION, VISIBILITY, EXTERIOR LIGHTING) HOWEVER, THE PART TO DO THE RECALL REPAIR WAS NOT YET AVAILABLE. THE CONTACT STATED THAT THE MANUFACTURER HAD EXC...",
+      "group": "adas",
+      "id": "1743983",
+      "make": "TESLA",
+      "model": "MODEL S",
+      "score": 37.0897,
+      "year": 2016
+    },
+    {
+      "excerpt": "The contact owns a 2016 Tesla Model S. The contact stated that the display screen had gone completely blank without warning while driving. The contact was unable to use certain electrical features. The contact then received a recall notice for NHTSA Campaign Number: 21V035000 (Ba...",
+      "group": "adas",
+      "id": "1764713",
+      "make": "TESLA",
+      "model": "MODEL S",
+      "score": 33.6934,
+      "year": 2016
+    },
+    {
+      "excerpt": "THE MCU (MASTER CONTROL UNIT) IS THE 17\" TOUCH SCREEN DISPLAY THAT CONTROLS MOST OF THE FUNCTIONS OF THE VEHICLE. VEHICLE HAS BEEN PLAGUED OVER IT'S LIVE WITH FREEZE UP'S AND REBOOTS. APRIL 2019, SCREEN LOCKED UP AND WOULD NOT RESTART, WHICH CAUSED VEHICLE TO LOOSE PROPULTION, PO...",
+      "group": "adas",
+      "id": "1704449",
+      "make": "TESLA",
+      "model": "MODEL S",
+      "score": 22.0433,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-07T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0018052,
+      "duration_ms": 22225,
+      "reason": "2016 Tesla Model S ADAS: brake pedal failed to respond while parking and vehicle rolled forward; ADAS failed to recognize stop signs/traffic lights/pedestrians at various speeds; steering shifted to one side and became difficult to steer.",
+      "started_at": "2025-04-07T07:00:01Z",
+      "step": 2,
+      "tokens": 3624,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-07T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL S",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "TL* THE CONTACT OWNS A 2016 TESLA MODEL S. THE CONTACT RECEIVED NOTIFICATION OF NHTSA CAMPAIGN NUMBER: 21V035000 (BACK OVER PREVENTION, VISIBILITY, EXTERIOR LIGHTING) HOWEVER, THE PART TO DO THE RECALL REPAIR WAS NOT YET AVAILABLE. THE CONTACT STATED THAT THE MANUFACTURER HAD EXC...",
+            "group": "adas",
+            "id": "1743983",
+            "make": "TESLA",
+            "model": "MODEL S",
+            "score": 37.0897,
+            "year": 2016
+          },
+          {
+            "excerpt": "The contact owns a 2016 Tesla Model S. The contact stated that the display screen had gone completely blank without warning while driving. The contact was unable to use certain electrical features. The contact then received a recall notice for NHTSA Campaign Number: 21V035000 (Ba...",
+            "group": "adas",
+            "id": "1764713",
+            "make": "TESLA",
+            "model": "MODEL S",
+            "score": 33.6934,
+            "year": 2016
+          },
+          {
+            "excerpt": "THE MCU (MASTER CONTROL UNIT) IS THE 17\" TOUCH SCREEN DISPLAY THAT CONTROLS MOST OF THE FUNCTIONS OF THE VEHICLE. VEHICLE HAS BEEN PLAGUED OVER IT'S LIVE WITH FREEZE UP'S AND REBOOTS. APRIL 2019, SCREEN LOCKED UP AND WOULD NOT RESTART, WHICH CAUSED VEHICLE TO LOOSE PROPULTION, PO...",
+            "group": "adas",
+            "id": "1704449",
+            "make": "TESLA",
+            "model": "MODEL S",
+            "score": 22.0433,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-04-07T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-07T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-07T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-07T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-07T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-07T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-07T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

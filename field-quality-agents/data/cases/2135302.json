@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2135302",
+    "make": "KIA",
+    "mileage": null,
+    "model": "EV6",
+    "narrative": "Prior to midnight on 9/25/2025 I stopped at a Sheetz in  Stephen\"s City , Va to charge my 2022 Kia EV6. Upon pulling into the charging area I discovered construction fencing around the area with the chargers removed. I then drove to the other side of the store and parked next to the building to take advantage of the lighting as I scanned my phone app for alternative chargers in the area. SUDDENLY, within the blink of an eye, my car lunged forward at MAXIMUM speed. It came to a sudden stop , prior to hitting the glass and brick wall of the building. I was stunned. My first reaction was to try to go into reverse to back away from the building and then I noticed people coming toward me. I rolled the window down and heard them ask if I was ok , if I needed help calling 911, and then they began to insist that I climb down out of the car as they feared it would catch on fire. I did not understand what they meant initially, until I realized I was LOOKING DOWN at them. With assistance, I got out of my car and realized it was impaled upon the metal barrier post located in the middle , front of the parking space. The local sheriff dept responded and after putting me through all the DUI tests/exercises realized that I , indeed , was sober and not responsible for the incident. The deputy called Clem's Garage/Towing who arrived 30-45 min latter with a standard tow truck - I tried to explain that tugging at my car from the rear would not release it from the pole ( the rear of the car pointed toward the pavement while the front pointed toward the sky) and that continuing to tug would only do more damage (I wanted to prevent my car further damage). He eventually called another  company who arrived with a large crane-like vehicle that lifted my car off the pole. The top portion of the pole was missing and apparently stuck in my car . My car was then towed to Clem's holding yard.",
+    "received_at": "2025-09-30",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2135302",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2135302",
+    "decided_at": "2025-09-30T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2135302",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "Prior to midnight on 9/25/2025 I stopped at a Sheetz in  Stephen\"s City , Va to charge my 2022 Kia EV6."
+      },
+      {
+        "kind": "condition",
+        "quote": "scanned my phone app for alternative chargers in the area"
+      },
+      {
+        "kind": "symptom",
+        "quote": "my car lunged forward at MAXIMUM speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It came to a sudden stop , prior to hitting the glass and brick wall of the building"
+      },
+      {
+        "kind": "safety",
+        "quote": "feared it would catch on fire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was impaled upon the metal barrier post located in the middle , front of the parking space"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2022 Kia EV6 electrical system: sudden unintended maximum-speed lunge forward while parked near a building after charger area was unavailable, stopping before wall and impaling on barrier post.",
+    "symptoms": [
+      "sudden unintended acceleration",
+      "vehicle lunged forward at maximum speed",
+      "vehicle impaled on metal barrier post"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2135302",
+    "created_at": "2025-09-30T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "While driving my car on March 7th, 2024 around 2:30pm an error message popped up \"Stop vehicle and check power supply\" and speed of the car was noticeably limited. Thankfully I was able to pull to side of the road and called road side assistance as car was undrivable, the 12 volt...",
+      "group": "electrical_general",
+      "id": "1974306",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 31.8887,
+      "year": 2022
+    },
+    {
+      "excerpt": "After starting the vehicle and beginning to back out of a parking space, a loud pop was heard from the rear of the vehicle. Immediately, a \"Check vehicle electrical system warning\" appeared on the dashboard, followed by \"Stop vehicle and check power supply\". While attempting to d...",
+      "group": "electrical_general",
+      "id": "1979023",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 28.1996,
+      "year": 2022
+    },
+    {
+      "excerpt": "The 12V battery on my Kia EV6 has died 5 times (May 9, May 23, Jun 18, July 3, July 5 2023). I bought the car in March 2022 and there were no issues until May 2023. Twice the 12V died when parked at home with the Lithium battery at 80% charge, twice when my wife was out and parke...",
+      "group": "electrical_general",
+      "id": "1910393",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 23.7294,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-30T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00147205,
+      "duration_ms": 13812,
+      "reason": "2022 Kia EV6 electrical system: sudden unintended maximum-speed lunge forward while parked near a building after charger area was unavailable, stopping before wall and impaling on barrier post.",
+      "started_at": "2025-09-30T07:00:16Z",
+      "step": 2,
+      "tokens": 3227,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-30T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "EV6",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "While driving my car on March 7th, 2024 around 2:30pm an error message popped up \"Stop vehicle and check power supply\" and speed of the car was noticeably limited. Thankfully I was able to pull to side of the road and called road side assistance as car was undrivable, the 12 volt...",
+            "group": "electrical_general",
+            "id": "1974306",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 31.8887,
+            "year": 2022
+          },
+          {
+            "excerpt": "After starting the vehicle and beginning to back out of a parking space, a loud pop was heard from the rear of the vehicle. Immediately, a \"Check vehicle electrical system warning\" appeared on the dashboard, followed by \"Stop vehicle and check power supply\". While attempting to d...",
+            "group": "electrical_general",
+            "id": "1979023",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 28.1996,
+            "year": 2022
+          },
+          {
+            "excerpt": "The 12V battery on my Kia EV6 has died 5 times (May 9, May 23, Jun 18, July 3, July 5 2023). I bought the car in March 2022 and there were no issues until May 2023. Twice the 12V died when parked at home with the Lithium battery at 80% charge, twice when my wife was out and parke...",
+            "group": "electrical_general",
+            "id": "1910393",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 23.7294,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-30T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-30T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-30T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-30T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-30T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-30T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-30T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

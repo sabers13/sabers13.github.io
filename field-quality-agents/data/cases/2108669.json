@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2108669",
+    "make": "KIA",
+    "mileage": null,
+    "model": "SORENTO",
+    "narrative": "I have now replaced the headlight bulbs in my 2016 KIA Sorento 6 times and it's getting worse as it gets older.   I believe it is a safety issue since the last time I was out of town, traveling in the middle of the night when it went out.  I had to wait until morning to find an auto parts store to buy and replace the bulb.  No inspections have been done by anyone. Yes, the warning lamp comes on and stays until reset.",
+    "received_at": "2025-07-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2108669",
+    "status": "decided",
+    "year": 2016
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2108669",
+    "decided_at": "2025-07-10T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2108669",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "headlight bulbs"
+      },
+      {
+        "kind": "symptom",
+        "quote": "replaced the headlight bulbs in my 2016 KIA Sorento 6 times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it's getting worse as it gets older"
+      },
+      {
+        "kind": "condition",
+        "quote": "traveling in the middle of the night"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the last time I was out of town, traveling in the middle of the night when it went out"
+      },
+      {
+        "kind": "safety",
+        "quote": "I believe it is a safety issue"
+      },
+      {
+        "kind": "symptom",
+        "quote": "warning lamp comes on and stays until reset"
+      },
+      {
+        "kind": "other",
+        "quote": "No inspections have been done by anyone"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting on 2016 Kia Sorento: repeated headlight bulb failures (6 replacements), worsening with age; failure occurred at night and warning lamp stays until reset.",
+    "symptoms": [
+      "headlight bulbs replaced 6 times",
+      "headlight bulb failure getting worse as vehicle ages",
+      "headlight went out at night",
+      "warning lamp comes on and stays until reset"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2108669",
+    "created_at": "2025-07-10T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Drive side brake light keeps burning out, even after several replacements. The bulb becomes black each time. Not sure if it's related, but headlight will intermittently turn off when in Auto light mode, even at night.",
+      "group": "lighting",
+      "id": "1853964",
+      "make": "KIA",
+      "model": "SORENTO",
+      "score": 13.4846,
+      "year": 2016
+    },
+    {
+      "excerpt": "I own a 2016 Sorento SXL AWD and this issue just started. I work evening shift and get off at 11pm. I always have the lights set to \"auto\", while driving home on a rural road at night and the headlights switch off on their own. I have to manually switch the lights off and back to...",
+      "group": "lighting",
+      "id": "2015234",
+      "make": "KIA",
+      "model": "SORENTO",
+      "score": 11.8259,
+      "year": 2016
+    },
+    {
+      "excerpt": "TL* THE CONTACT OWNS A 2016 KIA SORENTO. THE CONTACT STATED THAT THE PASSENGER'S SIDE HEADLAMP SUDDENLY FAILED TO ILLUMINATE OR WAS VERY DIM. THE BULB WAS REPLACED BY AN INDEPENDENT MECHANIC HOWEVER, THE FAILURE PERSISTED. ADDITIONALLY, THE DRIVER'S SIDE HEADLAMP EXPERIENCED THE...",
+      "group": "lighting",
+      "id": "1680280",
+      "make": "KIA",
+      "model": "SORENTO",
+      "score": 9.592,
+      "year": 2016
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-10T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012271,
+      "duration_ms": 13937,
+      "reason": "Exterior lighting on 2016 Kia Sorento: repeated headlight bulb failures (6 replacements), worsening with age; failure occurred at night and warning lamp stays until reset.",
+      "started_at": "2025-07-10T07:00:16Z",
+      "step": 2,
+      "tokens": 2581,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-10T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "SORENTO",
+        "year": 2016
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Drive side brake light keeps burning out, even after several replacements. The bulb becomes black each time. Not sure if it's related, but headlight will intermittently turn off when in Auto light mode, even at night.",
+            "group": "lighting",
+            "id": "1853964",
+            "make": "KIA",
+            "model": "SORENTO",
+            "score": 13.4846,
+            "year": 2016
+          },
+          {
+            "excerpt": "I own a 2016 Sorento SXL AWD and this issue just started. I work evening shift and get off at 11pm. I always have the lights set to \"auto\", while driving home on a rural road at night and the headlights switch off on their own. I have to manually switch the lights off and back to...",
+            "group": "lighting",
+            "id": "2015234",
+            "make": "KIA",
+            "model": "SORENTO",
+            "score": 11.8259,
+            "year": 2016
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNS A 2016 KIA SORENTO. THE CONTACT STATED THAT THE PASSENGER'S SIDE HEADLAMP SUDDENLY FAILED TO ILLUMINATE OR WAS VERY DIM. THE BULB WAS REPLACED BY AN INDEPENDENT MECHANIC HOWEVER, THE FAILURE PERSISTED. ADDITIONALLY, THE DRIVER'S SIDE HEADLAMP EXPERIENCED THE...",
+            "group": "lighting",
+            "id": "1680280",
+            "make": "KIA",
+            "model": "SORENTO",
+            "score": 9.592,
+            "year": 2016
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-10T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-10T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-10T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-10T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-10T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-10T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-10T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

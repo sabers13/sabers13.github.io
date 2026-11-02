@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2138590",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "EQUINOX",
+    "narrative": "Rear tailgate.  Borrowed vehicle from a friend for a trip.  When opening the tailgate with the external switch it opens all the way and immediately comes back down about 12 inches or so then it immediately goes back up and immediately comes all the way down.  My wife was almost trapped between the bottom of the tailgate and the floor of the storage compartment. When I tried it, I tried to hold it up when it started down for the second time and it was impossible for me to stop the tailgate from closing.  It substantially overpowered me.  There is a PROBABILITY that it could have broken her back or strangled her.  Even more so if she was packing the car by herself.  I exerted all my strength trying to stop the tailgate as I indicated before. I have not contacted anyone about this situation.  The vehicle has a little over 84K miles and is in excellent condition.  When I called my friend about the problem she said she was aware of it and is living with it because it would cost over $1,000.00 to fix it. I know she bought it used from Ferman Chevrolet in Tampa a few years ago.  I was hoping to get it fixed for her before returning the car to her.",
+    "received_at": "2025-10-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2138590",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2138590",
+    "decided_at": "2025-10-11T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2138590",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Rear tailgate."
+      },
+      {
+        "kind": "symptom",
+        "quote": "When opening the tailgate with the external switch it opens all the way and immediately comes back down about 12 inches or so then it immediately goes back up and immediately comes all the way down."
+      },
+      {
+        "kind": "safety",
+        "quote": "My wife was almost trapped between the bottom of the tailgate and the floor of the storage compartment."
+      },
+      {
+        "kind": "symptom",
+        "quote": "it was impossible for me to stop the tailgate from closing."
+      },
+      {
+        "kind": "safety",
+        "quote": "It substantially overpowered me."
+      },
+      {
+        "kind": "safety",
+        "quote": "There is a PROBABILITY that it could have broken her back or strangled her."
+      },
+      {
+        "kind": "other",
+        "quote": "The vehicle has a little over 84K miles"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Power tailgate on 2012 Chevrolet Equinox opens fully, reverses about 12 inches, then closes forcefully, nearly trapping an occupant and overpowering the user.",
+    "symptoms": [
+      "tailgate opens all the way then immediately comes back down about 12 inches",
+      "tailgate goes back up then immediately comes all the way down",
+      "tailgate closing cannot be stopped and substantially overpowers a person",
+      "occupant nearly trapped between tailgate and storage compartment floor"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2138590",
+    "created_at": "2025-10-11T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "On dec. 29,2021 I started my car and while I was warming the engine(idle) the following lights came on: Engine,Break, ABS, TCS/StabiliTrak, Service All Wheel Drive, Service StabliTrak & all the gauges except the fuel were moving up & down. Also on the shifter the P was blinking....",
+      "group": "electrical_general",
+      "id": "1787100",
+      "make": "CHEVROLET",
+      "model": "EQUINOX",
+      "score": 17.0141,
+      "year": 2012
+    },
+    {
+      "excerpt": "WHEN DRIVING DOWN THE ROAD, THE DASHBOARD LIGHTS GO OFF, THE RADIO GOES OFF AND READS 'LOST COMMUNICATION WITH TELEMATICS CONTROL MODULE'. DURING THIS TIME, THE CAR IS STILL RUNNING IN MOTION, THE DASHBOARD LIGHTS COME BACK ON, BUT THE GAUGES ARE AT 0. THE RADIO TURNS OFF COMPLET...",
+      "group": "electrical_general",
+      "id": "1656580",
+      "make": "CHEVROLET",
+      "model": "EQUINOX",
+      "score": 8.8045,
+      "year": 2012
+    },
+    {
+      "excerpt": "WHILE DRIVING MY CAR STOPPED IN THE MIDDLE OF THE THE INTERSECTION I TURNED CAR OFF AND BACK ON. MADE IT HOME AND CHECK ENGINE LIGHT COMES ON. SINCE I BOUGHT MY CAR MY CAR RATTLES AND MORE SO WHEN IN REVERSE",
+      "group": "electrical_general",
+      "id": "1659393",
+      "make": "CHEVROLET",
+      "model": "EQUINOX",
+      "score": 8.0847,
+      "year": 2012
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-11T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00115495,
+      "duration_ms": 11748,
+      "reason": "Power tailgate on 2012 Chevrolet Equinox opens fully, reverses about 12 inches, then closes forcefully, nearly trapping an occupant and overpowering the user.",
+      "started_at": "2025-10-11T07:00:16Z",
+      "step": 2,
+      "tokens": 2580,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-10-11T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "EQUINOX",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "On dec. 29,2021 I started my car and while I was warming the engine(idle) the following lights came on: Engine,Break, ABS, TCS/StabiliTrak, Service All Wheel Drive, Service StabliTrak & all the gauges except the fuel were moving up & down. Also on the shifter the P was blinking....",
+            "group": "electrical_general",
+            "id": "1787100",
+            "make": "CHEVROLET",
+            "model": "EQUINOX",
+            "score": 17.0141,
+            "year": 2012
+          },
+          {
+            "excerpt": "WHEN DRIVING DOWN THE ROAD, THE DASHBOARD LIGHTS GO OFF, THE RADIO GOES OFF AND READS 'LOST COMMUNICATION WITH TELEMATICS CONTROL MODULE'. DURING THIS TIME, THE CAR IS STILL RUNNING IN MOTION, THE DASHBOARD LIGHTS COME BACK ON, BUT THE GAUGES ARE AT 0. THE RADIO TURNS OFF COMPLET...",
+            "group": "electrical_general",
+            "id": "1656580",
+            "make": "CHEVROLET",
+            "model": "EQUINOX",
+            "score": 8.8045,
+            "year": 2012
+          },
+          {
+            "excerpt": "WHILE DRIVING MY CAR STOPPED IN THE MIDDLE OF THE THE INTERSECTION I TURNED CAR OFF AND BACK ON. MADE IT HOME AND CHECK ENGINE LIGHT COMES ON. SINCE I BOUGHT MY CAR MY CAR RATTLES AND MORE SO WHEN IN REVERSE",
+            "group": "electrical_general",
+            "id": "1659393",
+            "make": "CHEVROLET",
+            "model": "EQUINOX",
+            "score": 8.0847,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-10-11T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-11T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-11T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-11T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-11T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-11T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-11T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

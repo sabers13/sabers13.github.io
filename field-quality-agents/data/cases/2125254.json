@@ -1,0 +1,340 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2125254",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON",
+    "narrative": "we brought my 2023 gmc yukon into Parks GMC in greenville sc on july 26, 2025 for the engine recall that we received a letter from. We left it as we were going on vacation for the week and picked it up the following saturday august 2nd. the next week my engine light started lighting up and my husband contacted the dealership and we were asked to bring it back in. We did and were told that we now had a bad Telematics Communication Interface Control Module that was causing my engine light to come on and that we were going to have to pay $600.00 out of our pocket to have this repaired. After researching we found that this is a VERY common and widespread problem with a lot of owners right after they bring their vehicles in to be serviced. We declined the repair, one because they did not have the part in stock as that apparently is also a big problem of not being able to get the part in stock and two because we feel like we should not have to pay to have this part replaced as it appears to be a widespread issue that is happening. The dealership also charged me $182 for diagnostic charges that I once again feel like we should not have had ton pay. Please advise us asap. our contact info is [XXX]  [XXX]  & [XXX]  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2125254",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2125254",
+    "decided_at": "2025-08-29T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2125254",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "my engine light started lighting up"
+      },
+      {
+        "kind": "symptom",
+        "quote": "bad Telematics Communication Interface Control Module that was causing my engine light to come on"
+      },
+      {
+        "kind": "condition",
+        "quote": "after they bring their vehicles in to be serviced"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Check Telematics Communication Interface Control Module installation after recall service because the engine light appeared post-service.",
+    "symptoms": [
+      "engine light illuminated",
+      "Telematics Communication Interface Control Module diagnosed as cause"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2125254",
+    "created_at": "2025-08-29T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "my engine light started lighting up",
+        "source_id": "2125254",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "bad Telematics Communication Interface Control Module that was causing my engine light to come on",
+        "source_id": "2125254",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "after they bring their vehicles in to be serviced",
+        "source_id": "2125254",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative says the engine light started lighting up after the vehicle was serviced, and the dealer diagnosed a bad Telematics Communication Interface Control Module as the cause. The rulebook matches the condition 'after service' and calls for an installation check before testing.",
+    "requested_info": [],
+    "summary": "Check Telematics Communication Interface Control Module installation after recall service because the engine light appeared post-service.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative says the engine light started lighting up after the vehicle was serviced, and the dealer diagnosed a bad Telematics Communication Interface Control Module as the cause. The rulebook matches the condition 'after service' and calls for an installation check before testing."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008365,
+      "duration_ms": 9968,
+      "reason": "Electrical system: check engine light after recall service; dealer diagnosed Telematics Communication Interface Control Module as cause.",
+      "started_at": "2025-08-29T07:00:01Z",
+      "step": 2,
+      "tokens": 2083,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-08-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "we brought my 2023 gmc yukon into Parks GMC in greenville sc on july 26, 2025 for the engine recall that we received a letter from. We left it as we were going on vacation for the week and picked it up the following saturday august 2nd. the next week my engine light started lighting up and my husband contacted the dealership and we were asked to bring it back in. We did and were told that we now had a bad Telematics Communication Interface Control Module that was causing my engine light to come "
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-29T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-29T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-29T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0005808,
+      "duration_ms": 5344,
+      "reason": "The narrative says the engine light started lighting up after the vehicle was serviced, and the dealer diagnosed a bad Telematics Communication Interface Control Module as the cause. The rulebook matches the condition 'after service' and calls for an installation check before testing.",
+      "started_at": "2025-08-29T07:00:09Z",
+      "step": 10,
+      "tokens": 1766,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-08-29T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "my engine light started lighting up",
+          "bad Telematics Communication Interface Control Module that was causing my engine light to come on",
+          "after they bring their vehicles in to be serviced"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-29T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-29T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-29T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-29T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

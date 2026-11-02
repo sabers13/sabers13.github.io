@@ -1,0 +1,507 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2104510",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "PILOT",
+    "narrative": "In April 2021 Honda issued a warranty extension due to loose connection in the MOSTbus network causing. Popping or crackling and Network Loss. My vehicle was checked and nothing done. Then in  2023 recall-Due to improperly designed and manufactured connectors, the Media-oriented system transport (MOST) communication coaxial cable counter may have a poor connection. My car was taken in for this recall and this “repair” had not been resolved.",
+    "received_at": "2025-06-27",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2104510",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2104510",
+    "decided_at": "2025-06-27T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2104510",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Popping or crackling and Network Loss"
+      },
+      {
+        "kind": "condition",
+        "quote": "My vehicle was checked and nothing done."
+      },
+      {
+        "kind": "other",
+        "quote": "loose connection in the MOSTbus network"
+      },
+      {
+        "kind": "condition",
+        "quote": "improperly designed and manufactured connectors"
+      },
+      {
+        "kind": "other",
+        "quote": "may have a poor connection"
+      },
+      {
+        "kind": "condition",
+        "quote": "My car was taken in for this recall"
+      },
+      {
+        "kind": "condition",
+        "quote": "had not been resolved."
+      }
+    ],
+    "conditions": [
+      "after service",
+      "unresolved recall repair"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the MOST bus connector installation after an unresolved recall repair, because popping/crackling and network loss persist after service.",
+    "symptoms": [
+      "popping or crackling",
+      "network loss",
+      "poor connection"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2104510",
+    "created_at": "2025-06-27T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "Popping or crackling and Network Loss",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "My vehicle was checked and nothing done.",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "loose connection in the MOSTbus network",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "improperly designed and manufactured connectors",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "may have a poor connection",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "My car was taken in for this recall",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "had not been resolved.",
+        "source_id": "2104510",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports loose or poorly connected MOST bus connectors causing popping/crackling and network loss, and states the vehicle was taken in for the recall but the repair had not been resolved. The rulebook matches the after-service condition and calls for an installation check before test.",
+    "requested_info": [],
+    "summary": "Test the MOST bus connector installation after an unresolved recall repair, because popping/crackling and network loss persist after service.",
+    "targeted_test": {
+      "conditions": [
+        "after service",
+        "unresolved recall repair"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative reports loose or poorly connected MOST bus connectors causing popping/crackling and network loss, and states the vehicle was taken in for the recall but the repair had not been resolved. The rulebook matches the after-service condition and calls for an installation check before test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "NHTSA Recall Number 23V-431 calls for cable connectors to be changed out due to poor connections resulting in the rear view camera image to function intermittingly or not display at all. Per Honda engineering, this repair is not sufficient to fix the issue and the main head unit...",
+      "group": "electrical_general",
+      "id": "1941041",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 22.1827,
+      "year": 2020
+    },
+    {
+      "excerpt": "I received a recall notice from NHTSA about my Pilot. The MOST cable connected needs to be replaced. I am writing because I have contacted two different dealerships. They are unable to address the defect until January 2024 or April 2024 respectively. You letter said that if the r...",
+      "group": "electrical_general",
+      "id": "1924249",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 17.5081,
+      "year": 2020
+    },
+    {
+      "excerpt": "We had the recall repair done for the crackling speakers issue but it started again and is worse. The crackling sounds like rocks hitting the windshield and scares the heck out of everyone in the vehicle. Now when it does this we also get a network failure notice on the infotainm...",
+      "group": "electrical_general",
+      "id": "1899453",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.521,
+      "year": 2020
+    },
+    {
+      "excerpt": "WHILE DRIVING, CRACKLING AND POPPING STARTED COMING OUT OF SPEAKERS, EVEN WITH RADIO OFF. THE INFOTAINMENT SYSTEM THEN SAID \"NETWORK SIGNAL LOST\" AND THE DASHBOARD DISPLAY WITH THE SPEEDOMETER STARTED REBOOTING OVER AND OVER AGAIN UNTIL I SHUT THE CAR OFF AND TURNED IT BACK ON. T...",
+      "group": "electrical_general",
+      "id": "1652081",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.1689,
+      "year": 2020
+    },
+    {
+      "excerpt": "Third time now that my speakers have been popping and crackling. All this leads to \"Network Connection Lost\" and the entire NAV screen goes black, also the main dashboard display sometimes...very unsafe. First couple of repairs were the connectors in the dash being replaced. This...",
+      "group": "electrical_general",
+      "id": "1851340",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 11.8938,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-27T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007075,
+      "duration_ms": 13553,
+      "reason": "Electrical system (MOST bus) — popping/crackling and network loss linked to loose or poorly connected MOST connectors, with an unresolved recall repair.",
+      "started_at": "2025-06-27T07:00:16Z",
+      "step": 2,
+      "tokens": 1709,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-27T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "NHTSA Recall Number 23V-431 calls for cable connectors to be changed out due to poor connections resulting in the rear view camera image to function intermittingly or not display at all. Per Honda engineering, this repair is not sufficient to fix the issue and the main head unit...",
+            "group": "electrical_general",
+            "id": "1941041",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 22.1827,
+            "year": 2020
+          },
+          {
+            "excerpt": "I received a recall notice from NHTSA about my Pilot. The MOST cable connected needs to be replaced. I am writing because I have contacted two different dealerships. They are unable to address the defect until January 2024 or April 2024 respectively. You letter said that if the r...",
+            "group": "electrical_general",
+            "id": "1924249",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 17.5081,
+            "year": 2020
+          },
+          {
+            "excerpt": "We had the recall repair done for the crackling speakers issue but it started again and is worse. The crackling sounds like rocks hitting the windshield and scares the heck out of everyone in the vehicle. Now when it does this we also get a network failure notice on the infotainm...",
+            "group": "electrical_general",
+            "id": "1899453",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.521,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-06-27T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-27T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-06-27T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "In April 2021 Honda issued a warranty extension due to loose connection in the MOSTbus network causing. Popping or crackling and Network Loss. My vehicle was checked and nothing done. Then in  2023 recall-Due to improperly designed and manufactured connectors, the Media-oriented system transport (MOST) communication coaxial cable counter may have a poor connection. My car was taken in for this recall and this “repair” had not been resolved."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "NHTSA Recall Number 23V-431 calls for cable connectors to be changed out due to poor connections resulting in the rear view camera image to function intermittingly or not display at all. Per Honda engineering, this repair is not sufficient to fix the issue and the main head unit...",
+            "group": "electrical_general",
+            "id": "1941041",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 22.1827,
+            "year": 2020
+          },
+          {
+            "excerpt": "I received a recall notice from NHTSA about my Pilot. The MOST cable connected needs to be replaced. I am writing because I have contacted two different dealerships. They are unable to address the defect until January 2024 or April 2024 respectively. You letter said that if the r...",
+            "group": "electrical_general",
+            "id": "1924249",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 17.5081,
+            "year": 2020
+          },
+          {
+            "excerpt": "We had the recall repair done for the crackling speakers issue but it started again and is worse. The crackling sounds like rocks hitting the windshield and scares the heck out of everyone in the vehicle. Now when it does this we also get a network failure notice on the infotainm...",
+            "group": "electrical_general",
+            "id": "1899453",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.521,
+            "year": 2020
+          },
+          {
+            "excerpt": "WHILE DRIVING, CRACKLING AND POPPING STARTED COMING OUT OF SPEAKERS, EVEN WITH RADIO OFF. THE INFOTAINMENT SYSTEM THEN SAID \"NETWORK SIGNAL LOST\" AND THE DASHBOARD DISPLAY WITH THE SPEEDOMETER STARTED REBOOTING OVER AND OVER AGAIN UNTIL I SHUT THE CAR OFF AND TURNED IT BACK ON. T...",
+            "group": "electrical_general",
+            "id": "1652081",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.1689,
+            "year": 2020
+          },
+          {
+            "excerpt": "Third time now that my speakers have been popping and crackling. All this leads to \"Network Connection Lost\" and the entire NAV screen goes black, also the main dashboard display sometimes...very unsafe. First couple of repairs were the connectors in the dash being replaced. This...",
+            "group": "electrical_general",
+            "id": "1851340",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 11.8938,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-27T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-27T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-27T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00113475,
+      "duration_ms": 10841,
+      "reason": "The narrative reports loose or poorly connected MOST bus connectors causing popping/crackling and network loss, and states the vehicle was taken in for the recall but the repair had not been resolved. The rulebook matches the after-service condition and calls for an installation check before test.",
+      "started_at": "2025-06-27T07:00:24Z",
+      "step": 10,
+      "tokens": 3005,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-06-27T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Popping or crackling and Network Loss",
+          "My vehicle was checked and nothing done.",
+          "loose connection in the MOSTbus network",
+          "improperly designed and manufactured connectors",
+          "may have a poor connection",
+          "My car was taken in for this recall",
+          "had not been resolved."
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-27T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-27T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-27T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-27T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

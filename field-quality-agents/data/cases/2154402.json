@@ -1,0 +1,294 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2154402",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "FORESTER",
+    "narrative": "Passenger airbag sensor intermittently works and turns off when passenger is in the seat. Dashboard light for airbag is constantly on and passenger airbag is constantly off. Issues with seat sensor going off when no one is sitting in the passenger seat. Abs system error message. All identical to recall symptoms.",
+    "received_at": "2025-12-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154402",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154402",
+    "decided_at": "2025-12-05T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154402",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Passenger airbag sensor intermittently works"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently"
+      },
+      {
+        "kind": "symptom",
+        "quote": "turns off when passenger is in the seat"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Dashboard light for airbag is constantly on"
+      },
+      {
+        "kind": "symptom",
+        "quote": "passenger airbag is constantly off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Issues with seat sensor going off when no one is sitting in the passenger seat."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Abs system error message."
+      },
+      {
+        "kind": "safety",
+        "quote": "passenger airbag is constantly off"
+      },
+      {
+        "kind": "other",
+        "quote": "All identical to recall symptoms."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "AIR BAGS: passenger airbag sensor intermittently works, airbag light stays on, passenger airbag stays off, seat sensor false occupancy, ABS error; intermittent.",
+    "symptoms": [
+      "passenger airbag sensor intermittently works",
+      "passenger airbag turns off when passenger is in the seat",
+      "airbag dashboard light constantly on",
+      "passenger airbag constantly off",
+      "seat sensor goes off when no one is sitting in the passenger seat",
+      "ABS system error message"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154402",
+    "created_at": "2025-12-05T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "BEEN HAVING REPEATED ISSUES WITH THE PASSENGER AIR BAG SENSOR THINKING SOMEONE IS IN THE PASSENGER SEAT WHEN UNOCCUPIED AND THE SEATBELT LIGHT AND TONE BEEPS. THEN THE AIRBAG SRS LIGHT ILLUMINATES ON THE DASHBOARD SHOWING PASSENGER AIRBAG OFF. MY VEHICLE HAS HEATED SEATS BUT IS N...",
+      "group": "restraints",
+      "id": "1693868",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 12.9891,
+      "year": 2015
+    },
+    {
+      "excerpt": "THE PASSENGER SIDE SEAT REGISTERS THAT NO ONE IS SITTING IN THE SEAT AND IT DISABLES THE AIRBAG SYSTEM. SOMEONE CAN BE SITTING IN THE SEAT BUCKLED UP AND THEN IT WILL RANDOMLY POP-UP WITH A WARNING MESSAGE THAT THERE IS AN AIRBAG ISSUE AND THAT NO ONE IS SITTING IN THE SEAT.",
+      "group": "restraints",
+      "id": "1638912",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 10.6135,
+      "year": 2015
+    },
+    {
+      "excerpt": "The error message for air bag/seat belt warning comes on and off. It turns the passenger side air bag to off. It seems to be activated by weight on the seat.",
+      "group": "restraints",
+      "id": "1947148",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 9.1586,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-05T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00090595,
+      "duration_ms": 15417,
+      "reason": "AIR BAGS: passenger airbag sensor intermittently works, airbag light stays on, passenger airbag stays off, seat sensor false occupancy, ABS error; intermittent.",
+      "started_at": "2025-12-05T07:00:01Z",
+      "step": 2,
+      "tokens": 2012,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-05T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "FORESTER",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "BEEN HAVING REPEATED ISSUES WITH THE PASSENGER AIR BAG SENSOR THINKING SOMEONE IS IN THE PASSENGER SEAT WHEN UNOCCUPIED AND THE SEATBELT LIGHT AND TONE BEEPS. THEN THE AIRBAG SRS LIGHT ILLUMINATES ON THE DASHBOARD SHOWING PASSENGER AIRBAG OFF. MY VEHICLE HAS HEATED SEATS BUT IS N...",
+            "group": "restraints",
+            "id": "1693868",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 12.9891,
+            "year": 2015
+          },
+          {
+            "excerpt": "THE PASSENGER SIDE SEAT REGISTERS THAT NO ONE IS SITTING IN THE SEAT AND IT DISABLES THE AIRBAG SYSTEM. SOMEONE CAN BE SITTING IN THE SEAT BUCKLED UP AND THEN IT WILL RANDOMLY POP-UP WITH A WARNING MESSAGE THAT THERE IS AN AIRBAG ISSUE AND THAT NO ONE IS SITTING IN THE SEAT.",
+            "group": "restraints",
+            "id": "1638912",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 10.6135,
+            "year": 2015
+          },
+          {
+            "excerpt": "The error message for air bag/seat belt warning comes on and off. It turns the passenger side air bag to off. It seems to be activated by weight on the seat.",
+            "group": "restraints",
+            "id": "1947148",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 9.1586,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-05T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-05T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-05T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-05T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-05T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-05T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-05T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

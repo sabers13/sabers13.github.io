@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2131063",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL Y",
+    "narrative": "Vehicle shut down and individual was locked in the car. Unable to release the doors. Incident occurred on June 23rd with a temp of 95 degrees and higher heat index. Individual was Stuck in the car in a parking garage with no one around to hear screams for help. Called home for assistance to come to the parking garage to help free them. Informed by online article about the Model Y 2021 model having other incidents of the same. We thought it was just a freak occurrence of our vehicle until reading about the probe.  No warning indications that the auxiliary battery needed replacing that controls such functions. Tesla's Repair Notes: \"The vehicle was unable to power on when parked, which was verified by the technician's inspection and the customer's report. The issue was caused by a failing 12V battery. The technician replaced the 12V battery to resolve the problem. After the replacement, all systems were checked and confirmed to be running properly\"",
+    "received_at": "2025-09-16",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2131063",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2131063",
+    "decided_at": "2025-09-16T07:01:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2131063",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Vehicle shut down and individual was locked in the car."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Unable to release the doors."
+      },
+      {
+        "kind": "condition",
+        "quote": "temp of 95 degrees and higher heat index"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning indications that the auxiliary battery needed replacing that controls such functions."
+      },
+      {
+        "kind": "component_group",
+        "quote": "failing 12V battery"
+      },
+      {
+        "kind": "safety",
+        "quote": "Individual was Stuck in the car in a parking garage with no one around to hear screams for help."
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": true,
+    "summary": "12V battery failure caused vehicle shutdown and door lockout in high heat, with no warning that the auxiliary battery needed replacement.",
+    "symptoms": [
+      "vehicle shut down",
+      "occupant locked in car unable to release doors",
+      "no warning that auxiliary battery needed replacing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2131063",
+    "created_at": "2025-09-16T07:01:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated after placing the children in the vehicle, he was unable to enter the vehicle. The contact stated that the vehicle lost electric power while attempting to open the door with the key fob and with the phone App however, the...",
+      "group": "power_and_wiring",
+      "id": "2002795",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 7.1308,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated while driving 20–45 MPH on a six-lane highway, the contact attempted a hard acceleration, and there was an abnormal banging sound heard. The battery was disconnected. The pyrotechnic fuse went into failure mode. There were...",
+      "group": "power_and_wiring",
+      "id": "1993241",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 6.1341,
+      "year": 2021
+    },
+    {
+      "excerpt": "While driving on ice and snow covered roads the regenerative braking feature comes in so strongly that it makes driving dangerous as the car loses traction and control every time the foot is removed from the accelerator. The regenerative braking automatically applies once the foo...",
+      "group": "power_and_wiring",
+      "id": "1788258",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 2.92,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-16T07:01:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016144,
+      "duration_ms": 16591,
+      "reason": "12V battery failure caused vehicle shutdown and door lockout in high heat, with no warning that the auxiliary battery needed replacement.",
+      "started_at": "2025-09-16T07:01:01Z",
+      "step": 2,
+      "tokens": 3303,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-16T07:01:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated after placing the children in the vehicle, he was unable to enter the vehicle. The contact stated that the vehicle lost electric power while attempting to open the door with the key fob and with the phone App however, the...",
+            "group": "power_and_wiring",
+            "id": "2002795",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 7.1308,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Tesla Model Y. The contact stated while driving 20–45 MPH on a six-lane highway, the contact attempted a hard acceleration, and there was an abnormal banging sound heard. The battery was disconnected. The pyrotechnic fuse went into failure mode. There were...",
+            "group": "power_and_wiring",
+            "id": "1993241",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 6.1341,
+            "year": 2021
+          },
+          {
+            "excerpt": "While driving on ice and snow covered roads the regenerative braking feature comes in so strongly that it makes driving dangerous as the car loses traction and control every time the foot is removed from the accelerator. The regenerative braking automatically applies once the foo...",
+            "group": "power_and_wiring",
+            "id": "1788258",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 2.92,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-16T07:01:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-16T07:01:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-16T07:01:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-16T07:01:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-16T07:01:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-16T07:01:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-16T07:01:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

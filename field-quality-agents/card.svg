@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Field quality agents</title>
+  <desc id="desc">A complaint report becomes verified evidence and a proposed test, with an engineer making the decision.</desc>
+  <rect width="1200" height="630" fill="#f3f4f6"/>
+  <g font-family="Inter, system-ui, sans-serif">
+    <text x="72" y="112" font-size="42" font-weight="600" fill="#111827">Field quality agents</text>
+    <text x="72" y="162" font-size="26" fill="#374151">From a complaint to a test worth reviewing.</text>
+    <g stroke="#626b78" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M388 342h46m-10-10 10 10-10 10M766 342h46m-10-10 10 10-10 10"/>
+    </g>
+    <rect x="72" y="236" width="300" height="230" rx="24" fill="#ffffff"/>
+    <rect x="450" y="236" width="300" height="230" rx="24" fill="#ffffff"/>
+    <rect x="828" y="236" width="300" height="230" rx="24" fill="#eff6ff"/>
+    <g fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M102 267h22l12 12v33h-34zM124 267v13h12M110 291h16M110 302h12"/>
+      <path d="M480 276h16v15h-9c0 8 3 12 9 15M510 276h16v15h-9c0 8 3 12 9 15"/>
+      <path d="m882 265 23 9v16c0 15-10 25-23 30-13-5-23-15-23-30v-16zM872 290l7 7 14-17"/>
+    </g>
+    <g fill="#111827" font-size="25" font-weight="600">
+      <text x="102" y="358">Complaint report</text>
+      <text x="480" y="358">Verified evidence</text>
+      <text x="858" y="358">Engineer decision</text>
+    </g>
+    <g fill="#374151" font-size="21">
+      <text x="102" y="402">Public NHTSA reports</text>
+      <text x="480" y="402">Check quotes.</text><text x="480" y="433">Propose a test.</text>
+      <text x="858" y="402">Review the proposal.</text><text x="858" y="433">Keep the final say.</text>
+    </g>
+    <text x="72" y="553" font-size="21" fill="#626b78">Recorded demonstration · Simulated engineer</text>
+  </g>
+</svg>

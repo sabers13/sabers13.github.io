@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2055979",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS CROSS SPORT",
+    "narrative": "This vehicle has an issue where the engine stalls when operating a slow speeds/a stop. When the engine stalls, a message appears on the dashboard stating that you must put the car in park, turn off the ignition, restart the car, and then put it back into drive. This has posed as a significant risk to myself, my wife, and our [XXX]  daughter. Additionally, my wife is currently [XXX]. The engine has stalled on us in the middle of an 8 lane intersection when attempting to turn left, when merging onto a highway, and numerous other very dangerous situations. This issue begin about 1 year after purchasing the car (brand new) from Volkswagen. Since then, we have brought the car back to the dealership where we purchased it (Heritage Volkswagen Parkville) over 5 times to have them look into this issue. They have attempted to replace the gas tank (claimed it had shrunk) and reset the computer system, yet neither of these things have worked. Neither myself or the dealership can \"make\" the car stall as it happens very randomly (which increases the risk that this issue poses) and now we are stuck - where Volkswagen has won't continue to research the issue/attempt to fix it yet my family is still left at risk with a car we purchased brand new off of their lot. The vehicle has not been inspected by the police, insurance, or any other people outside of Volkswagen and the vehicle has no warning signals that there is an issue and no code that they have been able to pull at the dealership.  INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-01-15",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2055979",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2055979",
+    "decided_at": "2025-01-15T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2055979",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine stalls when operating a slow speeds/a stop"
+      },
+      {
+        "kind": "symptom",
+        "quote": "message appears on the dashboard stating that you must put the car in park, turn off the ignition, restart the car, and then put it back into drive"
+      },
+      {
+        "kind": "safety",
+        "quote": "This has posed as a significant risk to myself, my wife, and our [XXX]  daughter."
+      },
+      {
+        "kind": "safety",
+        "quote": "The engine has stalled on us in the middle of an 8 lane intersection when attempting to turn left, when merging onto a highway, and numerous other very dangerous situations."
+      },
+      {
+        "kind": "condition",
+        "quote": "happens very randomly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no warning signals that there is an issue and no code that they have been able to pull at the dealership"
+      },
+      {
+        "kind": "condition",
+        "quote": "over 5 times to have them look into this issue"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: engine stalls at slow speeds/stops, randomly and intermittently, with a dashboard restart message and no stored code.",
+    "symptoms": [
+      "engine stalls at slow speeds or when stopped",
+      "dashboard message instructs to put car in park, turn off ignition, restart, and return to drive",
+      "stall occurs randomly and cannot be reproduced",
+      "no warning signals or stored fault code"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2055979",
+    "created_at": "2025-01-15T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I have a 6 month old Volkswagen Atlas Cross Sport (purchased in July/2022), only 5,000 miles on it. When driving, the front driver's side door warning light kept coming on, even though the door was fully closed. The car continued to beep and a warning message was displayed asking...",
+      "group": "electrical_general",
+      "id": "1873576",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS CROSS SPORT",
+      "score": 30.2133,
+      "year": 2022
+    },
+    {
+      "excerpt": "Just bought the vehicle within the first day the radio systems turned off and cannot turn on again after 8 turn on the vehicle it affects all the safety systems because it's all connected to the radio. Vehicle was taken back to dealership which was reprogrammed and given back aft...",
+      "group": "electrical_general",
+      "id": "1801751",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS CROSS SPORT",
+      "score": 19.551,
+      "year": 2022
+    },
+    {
+      "excerpt": "Slowing down as I pulled into a turning lane. The vehicle lost power and cut off with a warning light saying please restart engine manually. I did start engine manually to begin with. I had to throw my car in park in the middle of the road. And restart it. The vehicle restarted a...",
+      "group": "electrical_general",
+      "id": "2017341",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS CROSS SPORT",
+      "score": 14.045,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-15T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012193,
+      "duration_ms": 20650,
+      "reason": "Electrical system: engine stalls at slow speeds/stops, randomly and intermittently, with a dashboard restart message and no stored code.",
+      "started_at": "2025-01-15T07:00:16Z",
+      "step": 2,
+      "tokens": 2754,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-15T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS CROSS SPORT",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have a 6 month old Volkswagen Atlas Cross Sport (purchased in July/2022), only 5,000 miles on it. When driving, the front driver's side door warning light kept coming on, even though the door was fully closed. The car continued to beep and a warning message was displayed asking...",
+            "group": "electrical_general",
+            "id": "1873576",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS CROSS SPORT",
+            "score": 30.2133,
+            "year": 2022
+          },
+          {
+            "excerpt": "Just bought the vehicle within the first day the radio systems turned off and cannot turn on again after 8 turn on the vehicle it affects all the safety systems because it's all connected to the radio. Vehicle was taken back to dealership which was reprogrammed and given back aft...",
+            "group": "electrical_general",
+            "id": "1801751",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS CROSS SPORT",
+            "score": 19.551,
+            "year": 2022
+          },
+          {
+            "excerpt": "Slowing down as I pulled into a turning lane. The vehicle lost power and cut off with a warning light saying please restart engine manually. I did start engine manually to begin with. I had to throw my car in park in the middle of the road. And restart it. The vehicle restarted a...",
+            "group": "electrical_general",
+            "id": "2017341",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS CROSS SPORT",
+            "score": 14.045,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-15T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-15T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-15T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-15T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-15T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-15T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-15T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

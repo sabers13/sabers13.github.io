@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "SEAT BELTS",
+    "group": "restraints",
+    "id": "2057626",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "With the past year, have had 2 dangerous safety issues pop up. 1. April 2024, seat belt malfunctioned causing an error message.  From what the VW dealer told me, the seat belt would not lock, therefore requiring a replacement of the entire assembly  Had to drive home several hours with this error message.  Should a 5 year old car have such issues? 2. January 2025, steering began to feel very sloppy.  Was informed Steering rack assembly had excessive play inside the steering gear.  Presume losing steering at highway speeds would be quite dangerous.  Replacing seat belt assembly cost $1261.25, the steering rack assembly replacement will cost $1988.75.  Both should be recall items and covered by VW.",
+    "received_at": "2025-01-20",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2057626",
+    "status": "decided",
+    "year": 2019
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2057626",
+    "decided_at": "2025-01-20T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2057626",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "SEAT BELTS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "seat belt malfunctioned causing an error message"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the seat belt would not lock"
+      },
+      {
+        "kind": "symptom",
+        "quote": "steering began to feel very sloppy"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Steering rack assembly had excessive play inside the steering gear"
+      },
+      {
+        "kind": "condition",
+        "quote": "at highway speeds"
+      },
+      {
+        "kind": "safety",
+        "quote": "losing steering at highway speeds would be quite dangerous"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "SEAT BELTS/restraints: seat belt malfunction with error message and would not lock; steering feels sloppy with excessive play in steering rack; at highway speeds; reported April 2024 and January 2025.",
+    "symptoms": [
+      "seat belt malfunction causing an error message",
+      "seat belt would not lock",
+      "steering feels sloppy",
+      "excessive play in steering rack/steering gear"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2057626",
+    "created_at": "2025-01-20T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I own a 2019 VW Atlas SE, purchased it new. The car has never been in an accident of any sort. While away from town this weekend, on Saturday an \"airbag error\" popped up on the car when starting the car Saturday morning. Had no idea, texted my VW dealership and brought the car in...",
+      "group": "restraints",
+      "id": "2035922",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 43.8448,
+      "year": 2019
+    },
+    {
+      "excerpt": "First issues started with the engine surging at low speeds or coming to a stop which progressed into complete engine stalls. Had the car at the dealer 3 different times, it doesn’t stall anymore but still surges. Have had multiple occurrences of instrument panel indicators going...",
+      "group": "restraints",
+      "id": "1808127",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 16.7377,
+      "year": 2019
+    },
+    {
+      "excerpt": "I purchased my 2019 VW ATLAS IN 2021 and was not aware there was an airbag recall issue. I moved to Florida from California last year and brought my vehicle to Gunther VW in Daytona FL because of this issue about 5 months ago. Mike Taylor the senior service manager acknowledge th...",
+      "group": "restraints",
+      "id": "1953110",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 16.5451,
+      "year": 2019
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-20T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016804,
+      "duration_ms": 27855,
+      "reason": "SEAT BELTS/restraints: seat belt malfunction with error message and would not lock; steering feels sloppy with excessive play in steering rack; at highway speeds; reported April 2024 and January 2025.",
+      "started_at": "2025-01-20T07:00:01Z",
+      "step": 2,
+      "tokens": 3380,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-20T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2019
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I own a 2019 VW Atlas SE, purchased it new. The car has never been in an accident of any sort. While away from town this weekend, on Saturday an \"airbag error\" popped up on the car when starting the car Saturday morning. Had no idea, texted my VW dealership and brought the car in...",
+            "group": "restraints",
+            "id": "2035922",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 43.8448,
+            "year": 2019
+          },
+          {
+            "excerpt": "First issues started with the engine surging at low speeds or coming to a stop which progressed into complete engine stalls. Had the car at the dealer 3 different times, it doesn’t stall anymore but still surges. Have had multiple occurrences of instrument panel indicators going...",
+            "group": "restraints",
+            "id": "1808127",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 16.7377,
+            "year": 2019
+          },
+          {
+            "excerpt": "I purchased my 2019 VW ATLAS IN 2021 and was not aware there was an airbag recall issue. I moved to Florida from California last year and brought my vehicle to Gunther VW in Daytona FL because of this issue about 5 months ago. Mike Taylor the senior service manager acknowledge th...",
+            "group": "restraints",
+            "id": "1953110",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 16.5451,
+            "year": 2019
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-20T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-20T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-20T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-20T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-20T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-20T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-20T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

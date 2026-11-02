@@ -1,0 +1,516 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2161154",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TRAVERSE",
+    "narrative": "I am experiencing a recurring battery/charging system detection warning with my vehicle that has not been resolved despite multiple service visits. The warning continues to reappear after the vehicle is returned to me, indicating the issue has not been properly diagnosed or repaired.  My vehicle has been in the shop approximately 5 times for this same issue. Each time, I am told the problem is resolved or that they cannot replicate the issue, yet the warning returns shortly afterward. To date, no permanent fix has been provided, and the underlying problem has not been remedied.  I have made repeated attempts to work with GM and the dealership, but meaningful assistance or escalation has not occurred. This ongoing electrical issue raises concerns about the reliability and safety of the vehicle, as well as GM’s failure to correct a known, documented problem.  I am requesting appropriate escalation and resolution, including further diagnostic intervention by a regional service manager or field engineer, or consideration of alternative remedies if the issue cannot be permanently repaired.",
+    "received_at": "2025-12-29",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2161154",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2161154",
+    "decided_at": "2025-12-29T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2161154",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "recurring battery/charging system detection warning"
+      },
+      {
+        "kind": "condition",
+        "quote": "The warning continues to reappear after the vehicle is returned to me"
+      },
+      {
+        "kind": "condition",
+        "quote": "has not been resolved despite multiple service visits"
+      },
+      {
+        "kind": "condition",
+        "quote": "cannot replicate the issue"
+      },
+      {
+        "kind": "condition",
+        "quote": "My vehicle has been in the shop approximately 5 times for this same issue"
+      },
+      {
+        "kind": "other",
+        "quote": "ongoing electrical issue"
+      }
+    ],
+    "conditions": [
+      "charging",
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test for an intermittent charging-system warning that returns after service and cannot be replicated, using a load test on the supply path.",
+    "symptoms": [
+      "recurring battery/charging system detection warning",
+      "warning reappears after the vehicle is returned from service",
+      "dealer cannot replicate the issue"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2161154",
+    "created_at": "2025-12-29T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "recurring battery/charging system detection warning",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The warning continues to reappear after the vehicle is returned to me",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "has not been resolved despite multiple service visits",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "cannot replicate the issue",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "My vehicle has been in the shop approximately 5 times for this same issue",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "ongoing electrical issue",
+        "source_id": "2161154",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The owner reports a recurring battery/charging system detection warning that reappears after the vehicle is returned from service, has survived roughly five shop visits, and is often not reproducible by the dealer. The rulebook matches the recorded conditions 'charging', 'intermittent' and 'after service': charging and high-current loads stress the supply path, connectors and protection circuits (Electrical load test), repeated wake/sleep cycles reproduce faults that only appear intermittently (Long-run power cycling test), and faults appearing after service are first checked for connector seating, pin damage and correct part fit (Installation check before test). Because a charging-related supply fault is the reported symptom, an electrical load test is the targeted test, preceded by the installation check for the after-service recurrence. No recalls or investigations were returned for this vehicle.",
+    "requested_info": [],
+    "summary": "Test for an intermittent charging-system warning that returns after service and cannot be replicated, using a load test on the supply path.",
+    "targeted_test": {
+      "conditions": [
+        "charging",
+        "intermittent",
+        "after service"
+      ],
+      "name": "Electrical load test",
+      "reason": "The owner reports a recurring battery/charging system detection warning that reappears after the vehicle is returned from service, has survived roughly five shop visits, and is often not reproducible by the dealer. The rulebook matches the recorded conditions 'charging', 'intermittent' and 'after service': charging and high-current loads stress the supply path, connectors and protection circuits (Electrical load test), repeated wake/sleep cycles reproduce faults that only appear intermittently (Long-run power cycling test), and faults appearing after service are first checked for connector seating, pin damage and correct part fit (Installation check before test). Because a charging-related supply fault is the reported symptom, an electrical load test is the targeted test, preceded by the installation check for the after-service recurrence. No recalls or investigations were returned for this vehicle."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+      "group": "adas",
+      "id": "2032767",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 11.4545,
+      "year": 2024
+    },
+    {
+      "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+      "group": "adas",
+      "id": "2032769",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 11.4545,
+      "year": 2024
+    },
+    {
+      "excerpt": "1. When reversing, the emergency braking is very sensitive. On 6/20, it was pouring rain and every time I tried to back out the car kept slamming on the brakes thinking there was an object in the way. it also happened when we were leaving an appointment that same day. It wasn’t p...",
+      "group": "adas",
+      "id": "2001280",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 9.1076,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 Chevrolet Traverse. The contact stated while driving approximately 15 MPH, the brake pedal was depressed, and the vehicle jolted forward with two unknown warning lights illuminated. The contact stated that the Forward Collision Avoidance and 4WD Unavailabl...",
+      "group": "adas",
+      "id": "2042282",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 7.306,
+      "year": 2024
+    },
+    {
+      "excerpt": "Transmission issue: Dealer was not able to replicate issue due to it only happening periodically. When putting into drive mode and going to accelerate it feels as if the transmission is slipping and give a big jerk. Also will sometime make a loud noise like tranmission is \"droppi...",
+      "group": "adas",
+      "id": "2008192",
+      "make": "CHEVROLET",
+      "model": "TRAVERSE",
+      "score": 7.2431,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00062605,
+      "duration_ms": 7098,
+      "reason": "ADAS forward collision avoidance warnings with a recurring battery/charging system detection warning that returns after service and cannot be replicated.",
+      "started_at": "2025-12-29T07:00:01Z",
+      "step": 2,
+      "tokens": 1658,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+            "group": "adas",
+            "id": "2032767",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 11.4545,
+            "year": 2024
+          },
+          {
+            "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+            "group": "adas",
+            "id": "2032769",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 11.4545,
+            "year": 2024
+          },
+          {
+            "excerpt": "1. When reversing, the emergency braking is very sensitive. On 6/20, it was pouring rain and every time I tried to back out the car kept slamming on the brakes thinking there was an object in the way. it also happened when we were leaving an appointment that same day. It wasn’t p...",
+            "group": "adas",
+            "id": "2001280",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 9.1076,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-29T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-29T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-12-29T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "I am experiencing a recurring battery/charging system detection warning with my vehicle that has not been resolved despite multiple service visits. The warning continues to reappear after the vehicle is returned to me, indicating the issue has not been properly diagnosed or repaired.  My vehicle has been in the shop approximately 5 times for this same issue. Each time, I am told the problem is resolved or that they cannot replicate the issue, yet the warning returns shortly afterward. To date, n"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+            "group": "adas",
+            "id": "2032767",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 11.4545,
+            "year": 2024
+          },
+          {
+            "excerpt": "This vehicle was advertised as having the Super Cruise feature along with \"following distance indicator\", \"forward collision alert\", \"lane keep assist with lane departure warning\" and \"intellibeam\" (auto headlamp dimming feature). We purchased the vehicle expecting all of these t...",
+            "group": "adas",
+            "id": "2032769",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 11.4545,
+            "year": 2024
+          },
+          {
+            "excerpt": "1. When reversing, the emergency braking is very sensitive. On 6/20, it was pouring rain and every time I tried to back out the car kept slamming on the brakes thinking there was an object in the way. it also happened when we were leaving an appointment that same day. It wasn’t p...",
+            "group": "adas",
+            "id": "2001280",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 9.1076,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 Chevrolet Traverse. The contact stated while driving approximately 15 MPH, the brake pedal was depressed, and the vehicle jolted forward with two unknown warning lights illuminated. The contact stated that the Forward Collision Avoidance and 4WD Unavailabl...",
+            "group": "adas",
+            "id": "2042282",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 7.306,
+            "year": 2024
+          },
+          {
+            "excerpt": "Transmission issue: Dealer was not able to replicate issue due to it only happening periodically. When putting into drive mode and going to accelerate it feels as if the transmission is slipping and give a big jerk. Also will sometime make a loud noise like tranmission is \"droppi...",
+            "group": "adas",
+            "id": "2008192",
+            "make": "CHEVROLET",
+            "model": "TRAVERSE",
+            "score": 7.2431,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-29T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-29T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-29T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service",
+          "intermittent",
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          },
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008265,
+      "duration_ms": 12167,
+      "reason": "The owner reports a recurring battery/charging system detection warning that reappears after the vehicle is returned from service, has survived roughly five shop visits, and is often not reproducible by the dealer. The rulebook matches the recorded conditions 'charging', 'intermittent' and 'after service': charging and high-current loads stress the supply path, connectors and protection circuits (Electrical load test), repeated wake/sleep cycles reproduce faults that only appear intermittently (Long-run power cycling test), and faults appearing after service are first checked for connector seating, pin damage and correct part fit (Installation check before test). Because a charging-related supply fault is the reported symptom, an electrical load test is the targeted test, preceded by the installation check for the after-service recurrence. No recalls or investigations were returned for this vehicle.",
+      "started_at": "2025-12-29T07:00:09Z",
+      "step": 10,
+      "tokens": 2636,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-12-29T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "recurring battery/charging system detection warning",
+          "The warning continues to reappear after the vehicle is returned to me",
+          "has not been resolved despite multiple service visits",
+          "cannot replicate the issue",
+          "My vehicle has been in the shop approximately 5 times for this same issue",
+          "ongoing electrical issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-29T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-29T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-29T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-29T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

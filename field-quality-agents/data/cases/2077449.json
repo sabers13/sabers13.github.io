@@ -1,0 +1,392 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2077449",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "HIGHLANDER HYBRID",
+    "narrative": "The contact owns a 2020 Toyota Highlander Hybrid. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was made aware of the issue and confirmed that parts were not yet available. The manufacturer was made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-03-26",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2077449",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2077449",
+    "decided_at": "2025-03-26T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2077449",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Air Bags"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "23V865000"
+      },
+      {
+        "kind": "condition",
+        "quote": "the part to do the recall repair was not yet available"
+      },
+      {
+        "kind": "condition",
+        "quote": "confirmed that parts were not yet available"
+      },
+      {
+        "kind": "other",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "condition",
+        "quote": "VIN tool confirms parts not available."
+      }
+    ],
+    "conditions": [
+      "recall repair part not yet available",
+      "dealer confirmed parts were not yet available",
+      "manufacturer exceeded a reasonable amount of time for the recall repair",
+      "VIN tool confirms parts not available"
+    ],
+    "fault_codes": [
+      "23V865000"
+    ],
+    "group": "restraints",
+    "safety_relevant": false,
+    "summary": "No failure reported; recall 23V865000 air-bag remedy parts were unavailable, so run the standard field-quality test to confirm recall remedy status because no targeted rulebook test applies.",
+    "symptoms": []
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2077449",
+    "created_at": "2025-03-26T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Air Bags",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "23V865000",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the part to do the recall repair was not yet available",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "confirmed that parts were not yet available",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "VIN tool confirms parts not available.",
+        "source_id": "2077449",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative says the owner received notice of NHTSA campaign 23V865000 for air bags, but the repair part was not available and the dealer confirmed parts were still unavailable. The contact had not experienced a failure. No rulebook entry, similar case, or investigation supports a targeted load test, so this is a standard non-targeted field-quality check and not a safety case.",
+    "requested_info": [],
+    "summary": "No failure reported; recall 23V865000 air-bag remedy parts were unavailable, so run the standard field-quality test to confirm recall remedy status because no targeted rulebook test applies.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "23V865000",
+      "match": true,
+      "open_date": "2023-12-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short circuit may develop in the Occupant Classification System (OCS) sensor, preventing the front passenger air bag from deploying."
+    },
+    {
+      "id": "20V633000",
+      "match": true,
+      "open_date": "2020-10-14",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020 Highlander and Highlander hybrid vehicles.  Incorrect seat trim covers on one or both of the front seats can prevent the seat-mounted side air bag from deploying properly."
+    }
+  ],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010864,
+      "duration_ms": 19346,
+      "reason": "AIR BAGS: no failure experienced; recall 23V865000 repair parts not yet available.",
+      "started_at": "2025-03-26T07:00:01Z",
+      "step": 2,
+      "tokens": 2351,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-03-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "HIGHLANDER HYBRID",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-03-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-03-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2020 Toyota Highlander Hybrid. The contact received notification of NHTSA Campaign Number: 23V865000 (Air Bags); however, the part to do the recall repair was not yet available. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was made aware of the issue and confirmed that parts were not yet available. The manufacturer was made aware of the issue. The contact had not experienced a failure. VIN tool confirms par"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-03-26T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "TOYOTA",
+        "model": "HIGHLANDER HYBRID",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+            "group": "restraints",
+            "id": "23V865000",
+            "make": "TOYOTA",
+            "model": "HIGHLANDER HYBRID",
+            "open_date": "2023-12-20",
+            "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short circuit may develop in the Occupant Classification System (OCS) sensor, preventing the front passenger air bag from deploying.",
+            "year": 2020
+          },
+          {
+            "component": "AIR BAGS",
+            "group": "restraints",
+            "id": "20V633000",
+            "make": "TOYOTA",
+            "model": "HIGHLANDER HYBRID",
+            "open_date": "2020-10-14",
+            "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020 Highlander and Highlander hybrid vehicles.  Incorrect seat trim covers on one or both of the front seats can prevent the seat-mounted side air bag from deploying properly.",
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-03-26T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "restraints",
+        "make": "TOYOTA",
+        "model": "HIGHLANDER HYBRID",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-03-26T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0010152,
+      "duration_ms": 15755,
+      "reason": "The narrative says the owner received notice of NHTSA campaign 23V865000 for air bags, but the repair part was not available and the dealer confirmed parts were still unavailable. The contact had not experienced a failure. No rulebook entry, similar case, or investigation supports a targeted load test, so this is a standard non-targeted field-quality check and not a safety case.",
+      "started_at": "2025-03-26T07:00:09Z",
+      "step": 10,
+      "tokens": 2532,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-03-26T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Air Bags",
+          "23V865000",
+          "the part to do the recall repair was not yet available",
+          "confirmed that parts were not yet available",
+          "The contact had not experienced a failure.",
+          "VIN tool confirms parts not available."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-26T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-03-26T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-26T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-26T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

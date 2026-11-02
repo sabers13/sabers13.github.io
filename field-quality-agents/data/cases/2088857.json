@@ -1,0 +1,280 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2088857",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "CHEROKEE",
+    "narrative": "My vehicle - at random - will switch to traction control, 4x4, and will slow down while driving, and will not allow me to go above 45 mph, with the engine rpm’s revved as  high as if I’m driving 85 mph. No mechanic has been able to accurately diagnose it, and I continue to pay for different repairs, without getting the problem actually solved.",
+    "received_at": "2025-05-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2088857",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2088857",
+    "decided_at": "2025-05-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2088857",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "at random"
+      },
+      {
+        "kind": "symptom",
+        "quote": "will switch to traction control, 4x4"
+      },
+      {
+        "kind": "symptom",
+        "quote": "will slow down while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "will not allow me to go above 45 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "engine rpm’s revved as  high as if I’m driving 85 mph"
+      },
+      {
+        "kind": "safety",
+        "quote": "will slow down while driving"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: random traction-control/4x4 engagement with vehicle slowing and speed limited to 45 mph while engine RPM runs high.",
+    "symptoms": [
+      "random switch to traction control and 4x4",
+      "vehicle slows down while driving",
+      "speed limited to 45 mph",
+      "engine RPM high relative to road speed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2088857",
+    "created_at": "2025-05-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "WAS DRIVING DOWN ROAD AND CAR SHUTS DOWN AND SAYS MUST BE IN PARK TO SHIFT THEN TRACTION LIGHT ENGINE LIGHT BATTERY/ALTERNATOR LIGHT COMES ON HAVE TO PULL OVER TURN CAR OFF TAKE KEY OUT PUT BACK IN LET IN TRY TO TURN OVER A FEW TIMES THEN WILL START I WILL BE GOING ANYWHERE FROM...",
+      "group": "electrical_general",
+      "id": "1641997",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 15.7526,
+      "year": 2015
+    },
+    {
+      "excerpt": "Jeep has never been in accident properly and regularly maintained when driving on freeway all of the sudden out of nowhere service airbag system and service park brake pop up I was fearful for my life when getting home not knowing if airbags will work heaven forbid I get in car a...",
+      "group": "electrical_general",
+      "id": "1995284",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 12.4004,
+      "year": 2015
+    },
+    {
+      "excerpt": "THE VEHICLE STALLS AND LOOSES POWER. THUMPING IN CERTAIN GEARS. STALLS AND THEN JERKS FORWARD . SOMETIMES DOES NOT WANT TO PICK UP SPEED EVEN WHEN HITTING GAS. THIS HAPPENS MOSTLY ON CITY STREETS. RIDES SMOOTH WHEN ON HIGHWAY GOING HIGH SPEEDS. AT LOW SPEEDS JERKS AND STALLS. ALS...",
+      "group": "electrical_general",
+      "id": "1738549",
+      "make": "JEEP",
+      "model": "CHEROKEE",
+      "score": 9.3013,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010453,
+      "duration_ms": 12002,
+      "reason": "Electrical system: random traction-control/4x4 engagement with vehicle slowing and speed limited to 45 mph while engine RPM runs high.",
+      "started_at": "2025-05-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2266,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "CHEROKEE",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WAS DRIVING DOWN ROAD AND CAR SHUTS DOWN AND SAYS MUST BE IN PARK TO SHIFT THEN TRACTION LIGHT ENGINE LIGHT BATTERY/ALTERNATOR LIGHT COMES ON HAVE TO PULL OVER TURN CAR OFF TAKE KEY OUT PUT BACK IN LET IN TRY TO TURN OVER A FEW TIMES THEN WILL START I WILL BE GOING ANYWHERE FROM...",
+            "group": "electrical_general",
+            "id": "1641997",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 15.7526,
+            "year": 2015
+          },
+          {
+            "excerpt": "Jeep has never been in accident properly and regularly maintained when driving on freeway all of the sudden out of nowhere service airbag system and service park brake pop up I was fearful for my life when getting home not knowing if airbags will work heaven forbid I get in car a...",
+            "group": "electrical_general",
+            "id": "1995284",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 12.4004,
+            "year": 2015
+          },
+          {
+            "excerpt": "THE VEHICLE STALLS AND LOOSES POWER. THUMPING IN CERTAIN GEARS. STALLS AND THEN JERKS FORWARD . SOMETIMES DOES NOT WANT TO PICK UP SPEED EVEN WHEN HITTING GAS. THIS HAPPENS MOSTLY ON CITY STREETS. RIDES SMOOTH WHEN ON HIGHWAY GOING HIGH SPEEDS. AT LOW SPEEDS JERKS AND STALLS. ALS...",
+            "group": "electrical_general",
+            "id": "1738549",
+            "make": "JEEP",
+            "model": "CHEROKEE",
+            "score": 9.3013,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

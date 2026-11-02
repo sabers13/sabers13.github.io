@@ -1,0 +1,237 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2093431",
+    "make": "NISSAN",
+    "mileage": null,
+    "model": "TITAN",
+    "narrative": "Bought my 2023 Nissan Titan Pro-4x from dealership May of 2023. Never been involved in a collision. So there should be no reason it feels as if something is loose on the underside.  There have been similar reports of this vibration/shaking such as this one: “Nissan Titan Pro-4X 4WD was bought new from dealership. Have had issues with the truck downshifting hard when slowing down since purchase. The truck lurches forward under 5MPH - 10MPH and feels like you are being rearended by another vehicle. Identical issue to NHTSA complaints 11578467 and 11539769.”  I have also had it happen once so far. I have been driving no more than maybe 10MPH and it recognized something in front of the sensor and the truck slammed on the brakes to a stop. Mind you I was in an empty parking lot.  On long drives, my forward collision sensor will randomly illuminate for no reason. It was do it in all season but more frequently in the winter.  I used to own a 2017 Nissan Titan SV. Never once had an issue. I’m not sure what’s going on with Nissans quality control but this is insane. I would honestly like some sort of remedy before I have no other choice than to trade the truck in..",
+    "received_at": "2025-05-19",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2093431",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2093431",
+    "decided_at": "2025-05-19T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2093431",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "feels as if something is loose on the underside"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vibration/shaking"
+      },
+      {
+        "kind": "symptom",
+        "quote": "downshifting hard when slowing down since purchase"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The truck lurches forward under 5MPH - 10MPH and feels like you are being rearended by another vehicle."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I have been driving no more than maybe 10MPH and it recognized something in front of the sensor and the truck slammed on the brakes to a stop."
+      },
+      {
+        "kind": "symptom",
+        "quote": "On long drives, my forward collision sensor will randomly illuminate for no reason."
+      },
+      {
+        "kind": "condition",
+        "quote": "more frequently in the winter"
+      },
+      {
+        "kind": "safety",
+        "quote": "truck slammed on the brakes to a stop"
+      }
+    ],
+    "conditions": [
+      "cold",
+      "intermittent",
+      "vibration"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Nissan Titan Pro-4X ADAS automatic emergency braking: random forward-collision warnings and unexpected low-speed braking, plus hard downshifts/lurching and underside vibration, more frequent in winter.",
+    "symptoms": [
+      "underside feels loose",
+      "vibration/shaking",
+      "hard downshift when slowing",
+      "lurching forward at 5-10 MPH",
+      "unexpected automatic emergency braking at low speed",
+      "forward collision sensor randomly illuminates",
+      "warning more frequent in winter"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2093431",
+    "created_at": "2025-05-19T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-19T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00155365,
+      "duration_ms": 17093,
+      "reason": "2023 Nissan Titan Pro-4X ADAS automatic emergency braking: random forward-collision warnings and unexpected low-speed braking, plus hard downshifts/lurching and underside vibration, more frequent in winter.",
+      "started_at": "2025-05-19T07:00:21Z",
+      "step": 2,
+      "tokens": 3276,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-05-19T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "TITAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-05-19T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-19T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-19T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-19T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-19T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-19T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-19T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

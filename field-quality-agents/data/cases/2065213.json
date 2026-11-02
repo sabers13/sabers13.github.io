@@ -1,0 +1,539 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2065213",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "After an over the air 2.2 software update, performed about 3 months ago, the vehicle lost connectivity to the internet. The Wifi and cellular connection no longer function (indication and function are absent) and the NFC reader for door access and vehicle operation no longer respond to the NFC card. Also, intermittent repetitive Blind Spot System failure and Collision Avoidance System failure alerts occur throughout a trip.",
+    "received_at": "2025-02-13",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2065213",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065213",
+    "decided_at": "2025-02-13T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2065213",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "After an over the air 2.2 software update"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lost connectivity to the internet"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Wifi and cellular connection no longer function (indication and function are absent)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the NFC reader for door access and vehicle operation no longer respond to the NFC card"
+      },
+      {
+        "kind": "symptom",
+        "quote": "intermittent repetitive Blind Spot System failure and Collision Avoidance System failure alerts occur throughout a trip"
+      },
+      {
+        "kind": "other",
+        "quote": "about 3 months ago"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test intermittent ADAS failure alerts after the OTA 2.2 update with a long-run power cycling test, after an installation/connector check.",
+    "symptoms": [
+      "loss of internet connectivity",
+      "WiFi and cellular connection no longer function",
+      "NFC reader no longer responds to NFC card for door access and vehicle operation",
+      "intermittent repetitive Blind Spot System failure alerts",
+      "intermittent repetitive Collision Avoidance System failure alerts"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "PE24013",
+      "match": true,
+      "open_date": "2024-05-08",
+      "summary": "On May 8, 2024, the Oﬃce of Defects Investigation (ODI) opened PE24013 to investigate reports of inadvertent activation of the automatic emergency braking (AEB) system in model year (MY) 2023 Fisker Ocean vehicles manufactured by Fisker Group Inc. (Fisker). The complaints allege the activation of AEB without an apparent roadway obstruction in the vehicle’s forward path, resulting in sudden vehicle deceleration. This sudden deceleration occurs without adequate warning or input from the driver. The braking applications range from momentary, partial application resulting in rapid loss of speed to full application, which brings the vehicle to a complete stop in the travel lane. ODI sent Fisker an Information Request (IR) letter on May 20, 2024. On June 17 and 19, 2024, Fisker and its affiliates filed a voluntary petition for relief under chapter 11 of the Bankruptcy Code. Fisker provided an incomplete response to the IR on July 1, 2024. Limited information pertaining to system validation and failure data was provided. Fisker subsequently requested more time to provide additional responsive files due to limited available resources. Fisker sent additional responsive files on September 9, 2024, September 17, 2024, and December 16, 2024, but Fisker’s response did not contain sufficient information for ODI to fully evaluate the alleged safety defect. Further, on December 27, 2024, the Fisker employees with whom ODI had been corresponding informed ODI that all Fisker employees were being “dismissed” as of that date. ODI therefore does not anticipate receiving any further responsive submissions such that it can fully evaluate the reports that led to this investigation. ODI performed phone interviews and sent a survey to consumers to obtain more information and validate the allegations. Additionally, ODI reviewed allegations of the alleged safety defect that were submitted to various online forums. Most of these reports were similar in nature to the reports received by ODI. Some of the reports in online forums appear to be duplicative reports that were also submitted to ODI. Based on the responses received and analysis of similar online reporting, there was no clear trend in the following factors pertaining to the allegations: reoccurrence of events (i.e., single or multiple incidents), speed immediately prior to the event, whether the event concluded in a reduction of speed or a full stop, roadway conditions, and warning immediately prior to the event. To date, between the reports provided by Fisker and complaints made directly to the agency, ODI is aware of over 20 reports alleging inadvertent AEB activation. Before the employees were dismissed, Fisker’s testing done in response to the inadvertent AEB allegations reportedly did not result in any inadvertent AEB activations. The “Manufacturer” and “Total” counts in the above table have been left blank because of a pending request for confidential treatment by Fisker that could not be timely addressed given the company’s status. This information factored into ODI’s investigation and analysis. The available information does not warrant further action at this time.  The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. Additionally, the Agency notes that the Vehicle Safety Act states: “A manufacturer’s filing of a petition in bankruptcy under chapter 7 or chapter 11 of title 11 does not negate the manufacturer’s duty to comply with section 30112 or sections 30115 through 30120 of this title,” which include the recall provisions of the Act. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    }
+  ],
+  "proposal": {
+    "case_id": "2065213",
+    "created_at": "2025-02-13T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "After an over the air 2.2 software update",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "lost connectivity to the internet",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The Wifi and cellular connection no longer function (indication and function are absent)",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the NFC reader for door access and vehicle operation no longer respond to the NFC card",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "intermittent repetitive Blind Spot System failure and Collision Avoidance System failure alerts occur throughout a trip",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "about 3 months ago",
+        "source_id": "2065213",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports intermittent repetitive Blind Spot System and Collision Avoidance System failure alerts after an over-the-air 2.2 software update. The rulebook's intermittent entry calls for a long-run power cycling test to reproduce faults that appear after repeated wake and sleep cycles, and its after-service entry calls for an installation check before testing.",
+    "requested_info": [],
+    "summary": "Test intermittent ADAS failure alerts after the OTA 2.2 update with a long-run power cycling test, after an installation/connector check.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent",
+        "after service"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports intermittent repetitive Blind Spot System and Collision Avoidance System failure alerts after an over-the-air 2.2 software update. The rulebook's intermittent entry calls for a long-run power cycling test to reproduce faults that appear after repeated wake and sleep cycles, and its after-service entry calls for an installation check before testing."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The vehicle has several major faults that Fisker is now ignoring and no one has come to fix in the past 2 months. I've submitted multiple tickets and claims. Issue 1: ADAS system. My ADAS system is and has been down since the beginning of February. I have received software update...",
+      "group": "adas",
+      "id": "1978767",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 18.6993,
+      "year": 2023
+    },
+    {
+      "excerpt": "I've had an ADAS fail indication on my instrument cluster for over a month now. Along with this happening, I've lost my automatic emergency braking, my blind spot warnings, my forward collision warnings, and my rear cross-traffic warnings.",
+      "group": "adas",
+      "id": "2021641",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 18.3983,
+      "year": 2023
+    },
+    {
+      "excerpt": "I have several service tickets open for my Fisker Ocean One that have not been addressed, many going back over 3 months. 1 - the vents on my Ocean are malfunctioning. They were supposed to have been replaced before the car was delivered to me in October 2023, but they were not. 2...",
+      "group": "adas",
+      "id": "2003679",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 16.5855,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025575",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 13.6667,
+      "year": 2023
+    },
+    {
+      "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+      "group": "adas",
+      "id": "2025576",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 13.6667,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-13T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00157665,
+      "duration_ms": 16161,
+      "reason": "Forward collision avoidance warnings (ADAS): after OTA 2.2 update, loss of internet/WiFi/cellular and NFC access, with intermittent blind spot and collision avoidance failure alerts.",
+      "started_at": "2025-02-13T07:00:01Z",
+      "step": 2,
+      "tokens": 3059,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-13T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The vehicle has several major faults that Fisker is now ignoring and no one has come to fix in the past 2 months. I've submitted multiple tickets and claims. Issue 1: ADAS system. My ADAS system is and has been down since the beginning of February. I have received software update...",
+            "group": "adas",
+            "id": "1978767",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 18.6993,
+            "year": 2023
+          },
+          {
+            "excerpt": "I've had an ADAS fail indication on my instrument cluster for over a month now. Along with this happening, I've lost my automatic emergency braking, my blind spot warnings, my forward collision warnings, and my rear cross-traffic warnings.",
+            "group": "adas",
+            "id": "2021641",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 18.3983,
+            "year": 2023
+          },
+          {
+            "excerpt": "I have several service tickets open for my Fisker Ocean One that have not been addressed, many going back over 3 months. 1 - the vents on my Ocean are malfunctioning. They were supposed to have been replaced before the car was delivered to me in October 2023, but they were not. 2...",
+            "group": "adas",
+            "id": "2003679",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 16.5855,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-02-13T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-13T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-02-13T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "After an over the air 2.2 software update, performed about 3 months ago, the vehicle lost connectivity to the internet. The Wifi and cellular connection no longer function (indication and function are absent) and the NFC reader for door access and vehicle operation no longer respond to the NFC card. Also, intermittent repetitive Blind Spot System failure and Collision Avoidance System failure alerts occur throughout a trip."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The vehicle has several major faults that Fisker is now ignoring and no one has come to fix in the past 2 months. I've submitted multiple tickets and claims. Issue 1: ADAS system. My ADAS system is and has been down since the beginning of February. I have received software update...",
+            "group": "adas",
+            "id": "1978767",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 18.6993,
+            "year": 2023
+          },
+          {
+            "excerpt": "I've had an ADAS fail indication on my instrument cluster for over a month now. Along with this happening, I've lost my automatic emergency braking, my blind spot warnings, my forward collision warnings, and my rear cross-traffic warnings.",
+            "group": "adas",
+            "id": "2021641",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 18.3983,
+            "year": 2023
+          },
+          {
+            "excerpt": "I have several service tickets open for my Fisker Ocean One that have not been addressed, many going back over 3 months. 1 - the vents on my Ocean are malfunctioning. They were supposed to have been replaced before the car was delivered to me in October 2023, but they were not. 2...",
+            "group": "adas",
+            "id": "2003679",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 16.5855,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025575",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 13.6667,
+            "year": 2023
+          },
+          {
+            "excerpt": "My Fisker Ocean has recalls and although they continue to mail me the recall letters and state that someone will call me to help me find a repair shop that will fix the recall, and they provide a number for me to call, no one has ever answered that phone number and they will not...",
+            "group": "adas",
+            "id": "2025576",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 13.6667,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-13T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-13T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+            "group": "adas",
+            "id": "PE24013",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "open_date": "2024-05-08",
+            "summary": "On May 8, 2024, the Oﬃce of Defects Investigation (ODI) opened PE24013 to investigate reports of inadvertent activation of the automatic emergency braking (AEB) system in model year (MY) 2023 Fisker Ocean vehicles manufactured by Fisker Group Inc. (Fisker). The complaints allege the activation of AEB without an apparent roadway obstruction in the vehicle’s forward path, resulting in sudden vehicle deceleration. This sudden deceleration occurs without adequate warning or input from the driver. The braking applications range from momentary, partial application resulting in rapid loss of speed to full application, which brings the vehicle to a complete stop in the travel lane. ODI sent Fisker an Information Request (IR) letter on May 20, 2024. On June 17 and 19, 2024, Fisker and its affiliates filed a voluntary petition for relief under chapter 11 of the Bankruptcy Code. Fisker provided an incomplete response to the IR on July 1, 2024. Limited information pertaining to system validation and failure data was provided. Fisker subsequently requested more time to provide additional responsive files due to limited available resources. Fisker sent additional responsive files on September 9, 2024, September 17, 2024, and December 16, 2024, but Fisker’s response did not contain sufficient information for ODI to fully evaluate the alleged safety defect. Further, on December 27, 2024, the Fisker employees with whom ODI had been corresponding informed ODI that all Fisker employees were being “dismissed” as of that date. ODI therefore does not anticipate receiving any further responsive submissions such that it can fully evaluate the reports that led to this investigation. ODI performed phone interviews and sent a survey to consumers to obtain more information and validate the allegations. Additionally, ODI reviewed allegations of the alleged safety defect that were submitted to various online forums. Most of these reports were similar in nature to the reports received by ODI. Some of the reports in online forums appear to be duplicative reports that were also submitted to ODI. Based on the responses received and analysis of similar online reporting, there was no clear trend in the following factors pertaining to the allegations: reoccurrence of events (i.e., single or multiple incidents), speed immediately prior to the event, whether the event concluded in a reduction of speed or a full stop, roadway conditions, and warning immediately prior to the event. To date, between the reports provided by Fisker and complaints made directly to the agency, ODI is aware of over 20 reports alleging inadvertent AEB activation. Before the employees were dismissed, Fisker’s testing done in response to the inadvertent AEB allegations reportedly did not result in any inadvertent AEB activations. The “Manufacturer” and “Total” counts in the above table have been left blank because of a pending request for confidential treatment by Fisker that could not be timely addressed given the company’s status. This information factored into ODI’s investigation and analysis. The available information does not warrant further action at this time.  The closing of this investigation does not constitute a finding by NHTSA that a safety-related defect does not exist. Additionally, the Agency notes that the Vehicle Safety Act states: “A manufacturer’s filing of a petition in bankruptcy under chapter 7 or chapter 11 of title 11 does not negate the manufacturer’s duty to comply with section 30112 or sections 30115 through 30120 of this title,” which include the recall provisions of the Act. The Agency reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-13T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent",
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00197115,
+      "duration_ms": 16690,
+      "reason": "The narrative reports intermittent repetitive Blind Spot System and Collision Avoidance System failure alerts after an over-the-air 2.2 software update. The rulebook's intermittent entry calls for a long-run power cycling test to reproduce faults that appear after repeated wake and sleep cycles, and its after-service entry calls for an installation check before testing.",
+      "started_at": "2025-02-13T07:00:09Z",
+      "step": 10,
+      "tokens": 5176,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 1 dropped",
+      "started_at": "2025-02-13T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "After an over the air 2.2 software update",
+          "intermittent",
+          "lost connectivity to the internet",
+          "The Wifi and cellular connection no longer function (indication and function are absent)",
+          "the NFC reader for door access and vehicle operation no longer respond to the NFC card",
+          "intermittent repetitive Blind Spot System failure and Collision Avoidance System failure alerts occur throughout a trip",
+          "about 3 months ago"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 1,
+        "verified": 6
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-02-13T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-13T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-13T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-13T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-13T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

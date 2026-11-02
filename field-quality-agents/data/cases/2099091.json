@@ -1,0 +1,283 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2099091",
+    "make": "MAZDA",
+    "mileage": null,
+    "model": "CX-50",
+    "narrative": "I have had my 2023 Mazda CX-50 for almost two years. Since I got the car, I have had no issues with the i-Activsense until June 2025. The reason I got the newer car was to ensure the safety of my family; however, Mazda failed to do their part. My car was recently involved in a car accident due to a faulty system. It appears that the newer Mazda CX-50s were included in a recall, but the 2023 model was not and it should be.  On the day of the accident, my daughter was driving my car. The traffic was slowing down, and two lanes of traffic had to merge to one lane due to construction and all of a sudden, the car in front of her slammed on their breaks and the car could not stop in time before hitting them. My car never sent an alert until contact was made with the other car, and the emergency breaking did not activate. After my car hit the other car, an alert came on screen that indicated the i-Activsense was disabled. Once the car was turned off and then back on the alert disappeared.   Additionally, I am now having issues with the rear camera not alerting if someone is behind me (car or pedestrian). I have a 2019 Jeep Grand Cherokee that will slam on the break for you if you get too close to an object when you are in reverse. Isn't that what the Mazda CX-50 should be doing?",
+    "received_at": "2025-06-09",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2099091",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2099091",
+    "decided_at": "2025-06-09T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2099091",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "safety",
+        "quote": "My car was recently involved in a car accident due to a faulty system."
+      },
+      {
+        "kind": "symptom",
+        "quote": "My car never sent an alert until contact was made with the other car, and the emergency breaking did not activate."
+      },
+      {
+        "kind": "symptom",
+        "quote": "After my car hit the other car, an alert came on screen that indicated the i-Activsense was disabled."
+      },
+      {
+        "kind": "condition",
+        "quote": "Once the car was turned off and then back on the alert disappeared."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I am now having issues with the rear camera not alerting if someone is behind me (car or pedestrian)."
+      },
+      {
+        "kind": "other",
+        "quote": "The traffic was slowing down, and two lanes of traffic had to merge to one lane due to construction"
+      },
+      {
+        "kind": "safety",
+        "quote": "the car could not stop in time before hitting them."
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Mazda CX-50 forward collision avoidance/AEB failed to alert or brake in slowing merging traffic before a rear-end collision; i-Activsense disabled alert cleared after restart; rear camera not alerting to people/vehicles behind.",
+    "symptoms": [
+      "Automatic emergency braking did not activate and no alert was given before contact",
+      "i-Activsense disabled alert appeared after impact and cleared after restart",
+      "Rear camera does not alert when someone is behind the vehicle (car or pedestrian)"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2099091",
+    "created_at": "2025-06-09T07:00:26Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We were driving in a snowstorm during the daytime on a 2-lane highway with directional passing lanes (where it opens and closes, not crossing into oncoming lane to pass) from CO to UT. While passing a semi truck, with traffic in the oncoming lane, and behind us, the auto-braking...",
+      "group": "adas",
+      "id": "1947181",
+      "make": "MAZDA",
+      "model": "CX-50",
+      "score": 16.7466,
+      "year": 2023
+    },
+    {
+      "excerpt": "When driving, the car automatically apply the brakes even though there is no car or any obstruction in front of the vehicle. This happens 3-4 times in the last year. The i-ACTIVESENSE System malfunction. The brake system malfunction. Now I am receiving a Critical Vehicle Malfunct...",
+      "group": "adas",
+      "id": "2050143",
+      "make": "MAZDA",
+      "model": "CX-50",
+      "score": 13.5086,
+      "year": 2023
+    },
+    {
+      "excerpt": "The Collision Avoidance System did not activate, to avoid a front-end collision. The vehicle in front of me stopped, making a right-hand turn onto another road. I moved forward, not seeing him stop. My car rear-ended the vehicle in front of me, with no warning or activation from...",
+      "group": "adas",
+      "id": "2027181",
+      "make": "MAZDA",
+      "model": "CX-50",
+      "score": 10.153,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-09T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00224725,
+      "duration_ms": 29080,
+      "reason": "2023 Mazda CX-50 forward collision avoidance/AEB failed to alert or brake in slowing merging traffic before a rear-end collision; i-Activsense disabled alert cleared after restart; rear camera not alerting to people/vehicles behind.",
+      "started_at": "2025-06-09T07:00:21Z",
+      "step": 2,
+      "tokens": 4441,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-09T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MAZDA",
+        "model": "CX-50",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We were driving in a snowstorm during the daytime on a 2-lane highway with directional passing lanes (where it opens and closes, not crossing into oncoming lane to pass) from CO to UT. While passing a semi truck, with traffic in the oncoming lane, and behind us, the auto-braking...",
+            "group": "adas",
+            "id": "1947181",
+            "make": "MAZDA",
+            "model": "CX-50",
+            "score": 16.7466,
+            "year": 2023
+          },
+          {
+            "excerpt": "When driving, the car automatically apply the brakes even though there is no car or any obstruction in front of the vehicle. This happens 3-4 times in the last year. The i-ACTIVESENSE System malfunction. The brake system malfunction. Now I am receiving a Critical Vehicle Malfunct...",
+            "group": "adas",
+            "id": "2050143",
+            "make": "MAZDA",
+            "model": "CX-50",
+            "score": 13.5086,
+            "year": 2023
+          },
+          {
+            "excerpt": "The Collision Avoidance System did not activate, to avoid a front-end collision. The vehicle in front of me stopped, making a right-hand turn onto another road. I moved forward, not seeing him stop. My car rear-ended the vehicle in front of me, with no warning or activation from...",
+            "group": "adas",
+            "id": "2027181",
+            "make": "MAZDA",
+            "model": "CX-50",
+            "score": 10.153,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-06-09T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-09T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-09T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-09T07:00:27Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-09T07:00:29Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-09T07:00:30Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-09T07:00:31Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2117179",
+    "make": "MAZDA",
+    "mileage": null,
+    "model": "CX-70",
+    "narrative": "On multiple occasions I have had driver assistance system failures with the most recent occurring this past Saturday 8/2/25, which I have on dashcam. In this incident, I had adaptive cruise control set to short following distance. I had about 5 or 6 car lengths in front of me at highway speed and the lead car was far enough ahead that the car was not showing it on the interactive display. Another car changed lanes from the right to left in front of me right behind the lead vehicle. The car that changed lanes was not detected by the vehicle even though it was right in front of me. I was approaching the vehicle at a higher rate of speed and the car never attempted to slow eventually requiring me to depress the brake to cancel the cruise as the car was not responding to the fact that I was now right behind the car and had to brake to avoid a collision.   On a separate incident a month or so ago, I was entering a center turn lane, waiting to turn into a gas station which required crossing of 2 lanes of traffic in the opposite direction. As I was entering the center lane with my signal on, the car detected the opposing traffic and slammed on the breaks nearly causing me to get rear-ended by the traffic behind me that expected me to enter the turn lane at the rate of speed I was going.  Routinely, the car fails to detect vehicles in the blind spot. I can approach, pass, and clear a vehicle on the left (vehicle to my right) and the car will never detect that a car was there in the first place. Additionally, if a car is detected and then stays in the blind spot long enough, the car loses it and thinks the car is no longer in the blind spot.",
+    "received_at": "2025-08-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2117179",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2117179",
+    "decided_at": "2025-08-04T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2117179",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "condition",
+        "quote": "On multiple occasions"
+      },
+      {
+        "kind": "condition",
+        "quote": "I had adaptive cruise control set to short following distance"
+      },
+      {
+        "kind": "condition",
+        "quote": "at highway speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car that changed lanes was not detected by the vehicle even though it was right in front of me"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car never attempted to slow eventually requiring me to depress the brake to cancel the cruise"
+      },
+      {
+        "kind": "safety",
+        "quote": "had to brake to avoid a collision"
+      },
+      {
+        "kind": "condition",
+        "quote": "I was entering a center turn lane"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the car detected the opposing traffic and slammed on the breaks nearly causing me to get rear-ended"
+      },
+      {
+        "kind": "safety",
+        "quote": "nearly causing me to get rear-ended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Routinely, the car fails to detect vehicles in the blind spot"
+      },
+      {
+        "kind": "condition",
+        "quote": "if a car is detected and then stays in the blind spot long enough, the car loses it"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "highway speed",
+      "short following distance",
+      "lane change",
+      "center turn lane",
+      "opposing traffic",
+      "blind spot"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2025 Mazda CX-70 ADAS/adaptive cruise control intermittently fails to detect lane-changing and blind-spot vehicles; unintended braking in a center turn lane",
+    "symptoms": [
+      "adaptive cruise control did not detect a vehicle that changed lanes directly ahead",
+      "vehicle did not slow and required driver braking to avoid collision",
+      "vehicle braked unexpectedly while entering a center turn lane, nearly causing a rear-end collision",
+      "blind-spot detection routinely fails to detect vehicles",
+      "blind-spot detection loses a vehicle that remains in the blind spot"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2117179",
+    "created_at": "2025-08-04T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Often, when I drive on highways, I find that the blind spot indicator turns on when there are no cars around. It creates unnecessary panic and confusion during long road trips, increasing driver's stress and anxiety.",
+      "group": "adas",
+      "id": "2048152",
+      "make": "MAZDA",
+      "model": "CX-70",
+      "score": 1.1507,
+      "year": 2025
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-04T07:00:14Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0014179,
+      "duration_ms": 16346,
+      "reason": "2025 Mazda CX-70 ADAS/adaptive cruise control intermittently fails to detect lane-changing and blind-spot vehicles; unintended braking in a center turn lane",
+      "started_at": "2025-08-04T07:00:15Z",
+      "step": 2,
+      "tokens": 3094,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-08-04T07:00:16Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MAZDA",
+        "model": "CX-70",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Often, when I drive on highways, I find that the blind spot indicator turns on when there are no cars around. It creates unnecessary panic and confusion during long road trips, increasing driver's stress and anxiety.",
+            "group": "adas",
+            "id": "2048152",
+            "make": "MAZDA",
+            "model": "CX-70",
+            "score": 1.1507,
+            "year": 2025
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-08-04T07:00:17Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-04T07:00:18Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-04T07:00:19Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-04T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-04T07:00:23Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-04T07:00:24Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-04T07:00:25Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

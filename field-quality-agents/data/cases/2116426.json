@@ -1,0 +1,275 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2116426",
+    "make": "MERCEDES BENZ",
+    "mileage": 180000,
+    "model": "C300",
+    "narrative": "The contact owns a 2008 Mercedes-Benz C300. The contact stated while at the car wash and attempting to wash the vehicle, there was popping sound coming from the vehicle, and the contact saw smoke coming from the speakers and called the Fire Department however, no damages were found. The vehicle was taken to the residence and an independent mechanic inspected the vehicle but found no issues with the vehicle. The trunk was opened, and the contact became aware of water inside the taillight housings. No warning light was illuminated. The vehicle was not taken to the dealer or an independent mechanic to be diagnosed. The vehicle was not repaired. The manufacturer was not notified of the failure. The failure mileage was 180,000.",
+    "received_at": "2025-08-01",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116426",
+    "status": "decided",
+    "year": 2008
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116426",
+    "decided_at": "2025-08-01T07:01:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116426",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "popping sound coming from the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "smoke coming from the speakers"
+      },
+      {
+        "kind": "condition",
+        "quote": "at the car wash"
+      },
+      {
+        "kind": "condition",
+        "quote": "water inside the taillight housings"
+      },
+      {
+        "kind": "safety",
+        "quote": "called the Fire Department"
+      }
+    ],
+    "conditions": [
+      "moisture"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2008 Mercedes-Benz C300 ELECTRICAL SYSTEM: popping sound and smoke from speakers during car wash, with water inside taillight housings.",
+    "symptoms": [
+      "popping sound from the vehicle",
+      "smoke coming from the speakers",
+      "water inside the taillight housings"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116426",
+    "created_at": "2025-08-01T07:01:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "MY 2008 C300 HAD THE RIGHT TAIL BREAK LIGHT + REAR RIGHT TURN SIGNAL LIGHT ERROR MESSAGE THESE FEW DAYS, I REPLACE THE LIGHT BULBS WHICH DID NOT FIX THE PROBLEM THEN I FOUND THE BROWN WIRE AT CONNECTOR MELT BADLY, I GOOGLE THIS ISSUE ON THE WEB AND FOUND ALL 2008/2009 MERCEDEZ C...",
+      "group": "electrical_general",
+      "id": "1658626",
+      "make": "MERCEDES BENZ",
+      "model": "C300",
+      "score": 4.0809,
+      "year": 2008
+    },
+    {
+      "excerpt": "DROVE 4 BLOCKS AWAY FROM MY HOME TO THE STORE IN MERCED CA ON GST AND 20TH..WHEN I TRIED TO START THE CAR IT DIDN'T START AND MY STEERING WHEEL WAS LOCKED.AND I COULDN'T TAKE IT OUT OF PARK. I HAVE HAD TO REPLACE TAIL LIGHTS A FEW TIMES THIS LAST MONTH. ## VIN PASSED ## MERCEDES-...",
+      "group": "electrical_general",
+      "id": "1747283",
+      "make": "MERCEDES BENZ",
+      "model": "C300",
+      "score": 3.6112,
+      "year": 2008
+    },
+    {
+      "excerpt": "The tail left bulb mount carrier part Number 204-820-15-00-64, one of the terminal in the back, is corroded. Also, one of the cable is burnt. In short, the tail lamp doesn’t work. It is a hazard problem since it affects the brake signaling, turning signaling and all other tail la...",
+      "group": "electrical_general",
+      "id": "1821313",
+      "make": "MERCEDES BENZ",
+      "model": "C300",
+      "score": 1.3262,
+      "year": 2008
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-01T07:01:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009382,
+      "duration_ms": 10487,
+      "reason": "2008 Mercedes-Benz C300 ELECTRICAL SYSTEM: popping sound and smoke from speakers during car wash, with water inside taillight housings.",
+      "started_at": "2025-08-01T07:01:01Z",
+      "step": 2,
+      "tokens": 2134,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-01T07:01:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "MERCEDES BENZ",
+        "model": "C300",
+        "year": 2008
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "MY 2008 C300 HAD THE RIGHT TAIL BREAK LIGHT + REAR RIGHT TURN SIGNAL LIGHT ERROR MESSAGE THESE FEW DAYS, I REPLACE THE LIGHT BULBS WHICH DID NOT FIX THE PROBLEM THEN I FOUND THE BROWN WIRE AT CONNECTOR MELT BADLY, I GOOGLE THIS ISSUE ON THE WEB AND FOUND ALL 2008/2009 MERCEDEZ C...",
+            "group": "electrical_general",
+            "id": "1658626",
+            "make": "MERCEDES BENZ",
+            "model": "C300",
+            "score": 4.0809,
+            "year": 2008
+          },
+          {
+            "excerpt": "DROVE 4 BLOCKS AWAY FROM MY HOME TO THE STORE IN MERCED CA ON GST AND 20TH..WHEN I TRIED TO START THE CAR IT DIDN'T START AND MY STEERING WHEEL WAS LOCKED.AND I COULDN'T TAKE IT OUT OF PARK. I HAVE HAD TO REPLACE TAIL LIGHTS A FEW TIMES THIS LAST MONTH. ## VIN PASSED ## MERCEDES-...",
+            "group": "electrical_general",
+            "id": "1747283",
+            "make": "MERCEDES BENZ",
+            "model": "C300",
+            "score": 3.6112,
+            "year": 2008
+          },
+          {
+            "excerpt": "The tail left bulb mount carrier part Number 204-820-15-00-64, one of the terminal in the back, is corroded. Also, one of the cable is burnt. In short, the tail lamp doesn’t work. It is a hazard problem since it affects the brake signaling, turning signaling and all other tail la...",
+            "group": "electrical_general",
+            "id": "1821313",
+            "make": "MERCEDES BENZ",
+            "model": "C300",
+            "score": 1.3262,
+            "year": 2008
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-08-01T07:01:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-01T07:01:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-01T07:01:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-01T07:01:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-01T07:01:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-01T07:01:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-01T07:01:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

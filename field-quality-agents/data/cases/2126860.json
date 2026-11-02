@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2126860",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "I own a 2017 Honda Accord “Touring” model that has developed an intermittent audio problem (described below) that is a safety issue because it causes serious driver distraction and impatience to reach a destination to turn the car off. There is NO WAY for the driver to stop the problem without turning the car completely off. Despite numerous reports from others (documented below), Honda has not issued a recall. It is hoping that a “goodwill discount” of 40% or so (offered only if the owner knows to demand it) will prevent a recall. The ONLY fix is to have a Honda dealer replace the OEM  “audio head unit”.  Without the “goodwill discount”, the installed cost is $1,400 - $1,600 to fix a condition that is obviously out of warranty.    The problem is that in hot (85+) weather, even with the audio system turned OFF, a modest “scratching” sound begins from all speakers, gradually becoming a loud, continuous static which lasts for 3 or 4 minutes and then gradually tapers off to silence. If I turn audio power ON while this is occurring, the static instantly becomes intolerably loud until I turn audio power off; then the scratching continues for a few more minutes until it gradually disappears. When this problem is not occurring, the audio system plays normally.  This problem is significantly frequent. 10,000 to 15,000 such cars were sold. •CarComplaints.com  lists 170 such complaints under the Electrical System and Other Problems categories. •CarProblemZoo.com lists 99 general equipment complaints; the static noise issue stands out as the most common recent problem.. •DriveAccord.net, a popular owner forum: “2017 Accord Radio Static” has around 470 posts. That is a total of about 700+ reports of this problem, on 5 -7% of these vehicles. That is a safety problem that must be recalled!  Problem first occurred in May 2025. More frequent in hot weather: 3 times in last 3 days. Symptoms occur randomly and don't last long enough to reach a dealer for diagnosis.",
+    "received_at": "2025-09-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2126860",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2126860",
+    "decided_at": "2025-09-04T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2126860",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "intermittent audio problem"
+      },
+      {
+        "kind": "condition",
+        "quote": "in hot (85+) weather"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a modest “scratching” sound begins from all speakers"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loud, continuous static which lasts for 3 or 4 minutes"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the static instantly becomes intolerably loud until I turn audio power off"
+      },
+      {
+        "kind": "safety",
+        "quote": "serious driver distraction"
+      },
+      {
+        "kind": "condition",
+        "quote": "More frequent in hot weather: 3 times in last 3 days."
+      },
+      {
+        "kind": "condition",
+        "quote": "Symptoms occur randomly and don't last long enough to reach a dealer for diagnosis."
+      },
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2017 Honda Accord Touring electrical/audio fault: intermittent scratching/static from all speakers in hot weather (85+), even with audio off, lasting minutes and recurring.",
+    "symptoms": [
+      "intermittent audio problem",
+      "scratching sound from all speakers",
+      "loud continuous static",
+      "static becomes intolerably loud when audio power is turned on",
+      "driver distraction"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2126860",
+    "created_at": "2025-09-04T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The audio unit on my 2107 Honda Accord will (seemingly) randomly produce loud, increasing static noise from the speakers that last from 5-10 minutes. There is no way to stop the noise other than to pull over and turn off the car. While that noise is happening nothing else can be...",
+      "group": "electrical_general",
+      "id": "2028297",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 37.7722,
+      "year": 2017
+    },
+    {
+      "excerpt": "while driving 40 MPH, I was unable to hear the sirens of an emergency vehicle because there was a loud static noise coming through the speakers. Even, I already turned off audio. loud static noise still persisted. It will distract driver's attention. The failure was intermittent....",
+      "group": "electrical_general",
+      "id": "2043688",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 27.0985,
+      "year": 2017
+    },
+    {
+      "excerpt": "The contact owns a 2017 Honda Accord. The contact stated while driving at approximately 35 MPH, the speaker system was broadcasting abnormal and extremely loud white noise and static popping. The contact stated that the abnormal sound was so loud that even conversational speech w...",
+      "group": "electrical_general",
+      "id": "2042162",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 23.8057,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008455,
+      "duration_ms": 9053,
+      "reason": "2017 Honda Accord Touring electrical/audio fault: intermittent scratching/static from all speakers in hot weather (85+), even with audio off, lasting minutes and recurring.",
+      "started_at": "2025-09-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2230,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The audio unit on my 2107 Honda Accord will (seemingly) randomly produce loud, increasing static noise from the speakers that last from 5-10 minutes. There is no way to stop the noise other than to pull over and turn off the car. While that noise is happening nothing else can be...",
+            "group": "electrical_general",
+            "id": "2028297",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 37.7722,
+            "year": 2017
+          },
+          {
+            "excerpt": "while driving 40 MPH, I was unable to hear the sirens of an emergency vehicle because there was a loud static noise coming through the speakers. Even, I already turned off audio. loud static noise still persisted. It will distract driver's attention. The failure was intermittent....",
+            "group": "electrical_general",
+            "id": "2043688",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 27.0985,
+            "year": 2017
+          },
+          {
+            "excerpt": "The contact owns a 2017 Honda Accord. The contact stated while driving at approximately 35 MPH, the speaker system was broadcasting abnormal and extremely loud white noise and static popping. The contact stated that the abnormal sound was so loud that even conversational speech w...",
+            "group": "electrical_general",
+            "id": "2042162",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 23.8057,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-09-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-04T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-04T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-04T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

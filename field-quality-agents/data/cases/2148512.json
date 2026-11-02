@@ -1,0 +1,265 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2148512",
+    "make": "KIA",
+    "mileage": null,
+    "model": "FORTE",
+    "narrative": "The crankshaft position sensor keeps going bad and it make the forward collision trigger and it loses power and the dash stops working and causes the car to shut off",
+    "received_at": "2025-11-13",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2148512",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2148512",
+    "decided_at": "2025-11-13T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2148512",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The crankshaft position sensor keeps going bad"
+      },
+      {
+        "kind": "symptom",
+        "quote": "forward collision trigger"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loses power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the dash stops working"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causes the car to shut off"
+      },
+      {
+        "kind": "safety",
+        "quote": "loses power"
+      },
+      {
+        "kind": "safety",
+        "quote": "causes the car to shut off"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: crankshaft position sensor keeps failing, causing forward collision trigger, power loss, dash failure, and car shutoff",
+    "symptoms": [
+      "crankshaft position sensor keeps going bad",
+      "forward collision trigger",
+      "loses power",
+      "dash stops working",
+      "car shuts off"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2148512",
+    "created_at": "2025-11-13T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I leased car 2020 Illinois. No problems. I had car transported to in 2022 to Los Angeles, and after a few months, the car would check engine light ALL lights I believe, and car suddenly stops and dies out at each stop light. This happened 3 times and frightened me. It happened ev...",
+      "group": "electrical_general",
+      "id": "1889346",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 2.4294,
+      "year": 2020
+    },
+    {
+      "excerpt": "WATER LEAKING INTO TRUNK CAUSING MALFUNCTION TO SECURITY ALARM SYSTEM AUTO TRUNK RELEASE AND TRUNK LID OPEN SYMBOL TRUNK MALFUNCTION WARNIG SYMBOLS AND ALARM STAYED ON COULD NOT HERE ANY SAFTEY ALARMS WATER IN TRUNK DAMAGED SENSOR COULD NOT LOCK OR UNLOCK TRUNK REMOTLY COULD NOT...",
+      "group": "electrical_general",
+      "id": "1746512",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 0.8354,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-13T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00066145,
+      "duration_ms": 8389,
+      "reason": "Electrical system: crankshaft position sensor keeps failing, causing forward collision trigger, power loss, dash failure, and car shutoff",
+      "started_at": "2025-11-13T07:00:31Z",
+      "step": 2,
+      "tokens": 1585,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-11-13T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "FORTE",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I leased car 2020 Illinois. No problems. I had car transported to in 2022 to Los Angeles, and after a few months, the car would check engine light ALL lights I believe, and car suddenly stops and dies out at each stop light. This happened 3 times and frightened me. It happened ev...",
+            "group": "electrical_general",
+            "id": "1889346",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 2.4294,
+            "year": 2020
+          },
+          {
+            "excerpt": "WATER LEAKING INTO TRUNK CAUSING MALFUNCTION TO SECURITY ALARM SYSTEM AUTO TRUNK RELEASE AND TRUNK LID OPEN SYMBOL TRUNK MALFUNCTION WARNIG SYMBOLS AND ALARM STAYED ON COULD NOT HERE ANY SAFTEY ALARMS WATER IN TRUNK DAMAGED SENSOR COULD NOT LOCK OR UNLOCK TRUNK REMOTLY COULD NOT...",
+            "group": "electrical_general",
+            "id": "1746512",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 0.8354,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-13T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-13T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-13T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-13T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-13T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-13T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-13T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

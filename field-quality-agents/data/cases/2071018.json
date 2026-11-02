@@ -1,0 +1,257 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2071018",
+    "make": "KIA",
+    "mileage": null,
+    "model": "FORTE",
+    "narrative": "Headlights have become very yellow and cracking formed on them. This effects evening /night time driving and you see ads to purchase cleaners that I have tried and it has done nothing. Not sure why this has not been remedied or made a recall to replace these as defective materials or what one can do to solve this with positive results or recommendations people can do with out equipment. This seems to be a big problem with a lot of vehicles mine included. Thx you for listening and thought I would report this issue as another safety concern",
+    "received_at": "2025-03-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2071018",
+    "status": "decided",
+    "year": 2010
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2071018",
+    "decided_at": "2025-03-04T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2071018",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "EXTERIOR LIGHTING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Headlights have become very yellow"
+      },
+      {
+        "kind": "symptom",
+        "quote": "cracking formed on them"
+      },
+      {
+        "kind": "condition",
+        "quote": "evening /night time driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "another safety concern"
+      },
+      {
+        "kind": "other",
+        "quote": "cleaners that I have tried and it has done nothing"
+      }
+    ],
+    "conditions": [
+      "night driving"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Exterior lighting headlights yellowing and cracking, affecting evening/night driving.",
+    "symptoms": [
+      "headlights turning yellow",
+      "cracking on headlights",
+      "reduced evening/night visibility"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2071018",
+    "created_at": "2025-03-04T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2010 Kia Forte. The contact stated while driving and while at a complete stop, she noticed an abnormal burning odor. There was no warning light illuminated. The vehicle was taken to an independent mechanic, where it was diagnosed that the third brake light asse...",
+      "group": "lighting",
+      "id": "1894213",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 1.7471,
+      "year": 2010
+    },
+    {
+      "excerpt": "As I am driving my car losses speed slows to almost stop. I keep my foot on the gas pedal very lightly pressing acceleration to keep it going.",
+      "group": "lighting",
+      "id": "1868913",
+      "make": "KIA",
+      "model": "FORTE",
+      "score": 1.241,
+      "year": 2010
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-04T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007956,
+      "duration_ms": 9085,
+      "reason": "Exterior lighting headlights yellowing and cracking, affecting evening/night driving.",
+      "started_at": "2025-03-04T07:00:31Z",
+      "step": 2,
+      "tokens": 1770,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-03-04T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "FORTE",
+        "year": 2010
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2010 Kia Forte. The contact stated while driving and while at a complete stop, she noticed an abnormal burning odor. There was no warning light illuminated. The vehicle was taken to an independent mechanic, where it was diagnosed that the third brake light asse...",
+            "group": "lighting",
+            "id": "1894213",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 1.7471,
+            "year": 2010
+          },
+          {
+            "excerpt": "As I am driving my car losses speed slows to almost stop. I keep my foot on the gas pedal very lightly pressing acceleration to keep it going.",
+            "group": "lighting",
+            "id": "1868913",
+            "make": "KIA",
+            "model": "FORTE",
+            "score": 1.241,
+            "year": 2010
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-04T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-04T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-04T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-04T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-04T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-04T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-04T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

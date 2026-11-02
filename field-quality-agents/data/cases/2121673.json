@@ -1,0 +1,287 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2121673",
+    "make": "TESLA",
+    "mileage": null,
+    "model": "MODEL 3",
+    "narrative": "Component/System involved: Advanced Driver Assistance Systems — FSD (Supervised)/Autosteer (Lane Keeping Assistance) and Adaptive Cruise Control. Possible failure to warn/stop (FCW/AEB). Vehicle and data are available for inspection upon request. I preserved dashcam files and requested Tesla to preserve engineering logs and EDR.  What happened & safety risk: On [XXX] at ~[XXX] PDT on [XXX] near East Palo Alto, CA, with FSD (Supervised) engaged, the system appeared to misinterpret an exit ramp/gore area as a continuing lane at a highway fork and maintained ~60 mph (posted ~70). As soon as I saw the trajectory was unsafe, I braked and began manual steering takeover, but the vehicle contacted a roadside sign near the gore/shoulder before I could complete the maneuver. I then stopped safely. No other vehicles were struck. Airbags did not deploy. This posed a serious collision risk to me, my passenger, and nearby traffic.  Reproduction/confirmation: NOT REPRODUCED. I have not attempted to reproduce the event. UNKNOWN whether the issue has been reproduced by Tesla or a service center yet.  Inspection to date: Police responded (report pending). My insurer has opened a claim. I opened a Tesla Service request asking to PRESERVE Autopilot/FSD engineering logs for the incident window and to coordinate EDR extraction; engineering review pending. Vehicle remains drivable.  Warnings or symptoms before failure: No audible/visual forward-collision warning was perceived by me and I did not observe automatic emergency braking. No prior warning lamps/messages were noticed before the departure toward the gore. UNKNOWN whether any internal/partial interventions were recorded in logs.  Evidence available: Four-camera Tesla dashcam footage saved and backed up (see [XXX] ); precise time window ~[XXX] PDT on [XXX]. I can provide files and cooperate with data retrieval/inspection upon request.   INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-08-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2121673",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2121673",
+    "decided_at": "2025-08-18T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2121673",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Advanced Driver Assistance Systems"
+      },
+      {
+        "kind": "condition",
+        "quote": "FSD (Supervised) engaged"
+      },
+      {
+        "kind": "symptom",
+        "quote": "misinterpret an exit ramp/gore area as a continuing lane"
+      },
+      {
+        "kind": "symptom",
+        "quote": "maintained ~60 mph"
+      },
+      {
+        "kind": "symptom",
+        "quote": "No audible/visual forward-collision warning was perceived by me"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I did not observe automatic emergency braking"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle contacted a roadside sign"
+      },
+      {
+        "kind": "safety",
+        "quote": "serious collision risk"
+      },
+      {
+        "kind": "other",
+        "quote": "NOT REPRODUCED"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2021 Tesla Model 3 FSD/Autosteer reportedly misinterpreted an exit ramp/gore as a continuing lane at a highway fork, maintained ~60 mph, gave no perceived FCW/AEB, and contacted a roadside sign during takeover.",
+    "symptoms": [
+      "FSD/Autosteer misinterpreted an exit ramp/gore area as a continuing lane",
+      "maintained about 60 mph at a highway fork",
+      "no forward-collision warning perceived",
+      "no automatic emergency braking observed",
+      "vehicle contacted a roadside sign during manual takeover"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2121673",
+    "created_at": "2025-08-18T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Autonomous Driving Problem [XXX] Driving from Cornelia, GA to Commerce, GA on [XXX] at 60 mph driving on the right lane with very lite traffic. 6 different times the FSD (Full Self Driving) (Supervised) 2021 Tesla Model 3 starts signaling left and changes lanes with no traffic or...",
+      "group": "adas",
+      "id": "1980896",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 79.6892,
+      "year": 2021
+    },
+    {
+      "excerpt": "Ever since Tesla rolled out an update for everyone to beta test FSD, the adaptive cruise control has been changing speeds when near interstate type exits and entrances. I've had it change from 75 down to 40 mph which is dangerous in traffic. This change in speed some times is jus...",
+      "group": "adas",
+      "id": "2001199",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 69.9221,
+      "year": 2021
+    },
+    {
+      "excerpt": "My Tesla was operating in Full-Self-Driving Beta when it experienced a sudden uncontrolled accelration event. I was driving on [XXX] at approximatley [XXX] this morning. The road speed limit was 40 mph. The car display was correctly showing that the road speed limit was 40mph. Th...",
+      "group": "adas",
+      "id": "2035409",
+      "make": "TESLA",
+      "model": "MODEL 3",
+      "score": 60.2601,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-18T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00100345,
+      "duration_ms": 15073,
+      "reason": "2021 Tesla Model 3 FSD/Autosteer reportedly misinterpreted an exit ramp/gore as a continuing lane at a highway fork, maintained ~60 mph, gave no perceived FCW/AEB, and contacted a roadside sign during takeover.",
+      "started_at": "2025-08-18T07:00:01Z",
+      "step": 2,
+      "tokens": 2461,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-18T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL 3",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Autonomous Driving Problem [XXX] Driving from Cornelia, GA to Commerce, GA on [XXX] at 60 mph driving on the right lane with very lite traffic. 6 different times the FSD (Full Self Driving) (Supervised) 2021 Tesla Model 3 starts signaling left and changes lanes with no traffic or...",
+            "group": "adas",
+            "id": "1980896",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 79.6892,
+            "year": 2021
+          },
+          {
+            "excerpt": "Ever since Tesla rolled out an update for everyone to beta test FSD, the adaptive cruise control has been changing speeds when near interstate type exits and entrances. I've had it change from 75 down to 40 mph which is dangerous in traffic. This change in speed some times is jus...",
+            "group": "adas",
+            "id": "2001199",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 69.9221,
+            "year": 2021
+          },
+          {
+            "excerpt": "My Tesla was operating in Full-Self-Driving Beta when it experienced a sudden uncontrolled accelration event. I was driving on [XXX] at approximatley [XXX] this morning. The road speed limit was 40 mph. The car display was correctly showing that the road speed limit was 40mph. Th...",
+            "group": "adas",
+            "id": "2035409",
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "score": 60.2601,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-08-18T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-18T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-18T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-18T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-18T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-18T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-18T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

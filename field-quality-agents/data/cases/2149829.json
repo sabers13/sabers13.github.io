@@ -1,0 +1,365 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "group": "instrumentation",
+    "id": "2149829",
+    "make": "FORD",
+    "mileage": 50000,
+    "model": "ECOSPORT",
+    "narrative": "The contact owns a 2021 Ford EcoSport. The contact stated that while driving 30-40 MPH, the messages \"Save the Battery\", \"Turn off Engine\", and \"Restart\" were displayed. The program restarted, and the screen went blank, and the instrument cluster became inoperable.  Additionally, the contact was informed about NHTSA Campaign Number: 25V126000 (Power Train). The vehicle was taken to the local dealer, who was unable to duplicate the failure. The vehicle was taken to the local dealer again, where it was diagnosed and determined that the alternator, engine, transmission, and computer needed to be replaced. The mechanic informed the contact that there was no warranty coverage for the failure. The vehicle was repaired, but the failure reoccurred. The manufacturer was not notified of the failure. The failure mileage was approximately 50,000.",
+    "received_at": "2025-11-18",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2149829",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2149829",
+    "decided_at": "2025-11-18T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2149829",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "while driving 30-40 MPH, the messages \"Save the Battery\", \"Turn off Engine\", and \"Restart\" were displayed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The program restarted, and the screen went blank, and the instrument cluster became inoperable."
+      },
+      {
+        "kind": "condition",
+        "quote": "unable to duplicate the failure"
+      },
+      {
+        "kind": "condition",
+        "quote": "The vehicle was repaired, but the failure reoccurred."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": false,
+    "summary": "Run a long-run power cycling test after an installation check because the instrument-cluster fault is intermittent and recurred after repair.",
+    "symptoms": [
+      "battery-saving and engine-off/restart messages displayed",
+      "program restarted",
+      "screen went blank",
+      "instrument cluster became inoperable",
+      "failure reoccurred after repair"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2149829",
+    "created_at": "2025-11-18T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "while driving 30-40 MPH, the messages \"Save the Battery\", \"Turn off Engine\", and \"Restart\" were displayed",
+        "source_id": "2149829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The program restarted, and the screen went blank, and the instrument cluster became inoperable.",
+        "source_id": "2149829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "unable to duplicate the failure",
+        "source_id": "2149829",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The vehicle was repaired, but the failure reoccurred.",
+        "source_id": "2149829",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports battery-saving, engine-off and restart messages while driving, then a blank screen and inoperable instrument cluster. The fault was intermittent because the dealer could not duplicate it, and it reoccurred after the vehicle was repaired. These conditions match the rulebook entries for intermittent faults and after-service faults, so the targeted long-run power cycling test is appropriate, with connector seating and installation checked first.",
+    "requested_info": [],
+    "summary": "Run a long-run power cycling test after an installation check because the instrument-cluster fault is intermittent and recurred after repair.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent",
+        "after service"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports battery-saving, engine-off and restart messages while driving, then a blank screen and inoperable instrument cluster. The fault was intermittent because the dealer could not duplicate it, and it reoccurred after the vehicle was repaired. These conditions match the rulebook entries for intermittent faults and after-service faults, so the targeted long-run power cycling test is appropriate, with connector seating and installation checked first."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-18T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00176215,
+      "duration_ms": 19787,
+      "reason": "2021 Ford EcoSport instrument cluster: battery/engine restart messages, blank screen and inoperable cluster while driving 30-40 MPH; recurred after repair.",
+      "started_at": "2025-11-18T07:00:16Z",
+      "step": 2,
+      "tokens": 3538,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-18T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ECOSPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-11-18T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-11-18T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-11-18T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2021 Ford EcoSport. The contact stated that while driving 30-40 MPH, the messages \"Save the Battery\", \"Turn off Engine\", and \"Restart\" were displayed. The program restarted, and the screen went blank, and the instrument cluster became inoperable.  Additionally, the contact was informed about NHTSA Campaign Number: 25V126000 (Power Train). The vehicle was taken to the local dealer, who was unable to duplicate the failure. The vehicle was taken to the local dealer again, where i"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-11-18T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "ECOSPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-11-18T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "instrumentation",
+        "make": "FORD",
+        "model": "ECOSPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-11-18T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent",
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          },
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00127635,
+      "duration_ms": 18362,
+      "reason": "The narrative reports battery-saving, engine-off and restart messages while driving, then a blank screen and inoperable instrument cluster. The fault was intermittent because the dealer could not duplicate it, and it reoccurred after the vehicle was repaired. These conditions match the rulebook entries for intermittent faults and after-service faults, so the targeted long-run power cycling test is appropriate, with connector seating and installation checked first.",
+      "started_at": "2025-11-18T07:00:24Z",
+      "step": 10,
+      "tokens": 2962,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-11-18T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "while driving 30-40 MPH, the messages \"Save the Battery\", \"Turn off Engine\", and \"Restart\" were displayed",
+          "The program restarted, and the screen went blank, and the instrument cluster became inoperable.",
+          "unable to duplicate the failure",
+          "The vehicle was repaired, but the failure reoccurred."
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-18T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-11-18T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-18T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-18T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

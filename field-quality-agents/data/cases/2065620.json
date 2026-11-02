@@ -1,0 +1,428 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2065620",
+    "make": "FORD",
+    "mileage": null,
+    "model": "EXPEDITION",
+    "narrative": "Wipers are the recalled version missing the little block. HOWEVER,  the recall is not for my VIN.  Coolant keeps disappearing.  Hard shifting and or no movement at all while transmission is cold.",
+    "received_at": "2025-02-14",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2065620",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2065620",
+    "decided_at": "2025-02-14T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2065620",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Wipers are the recalled version missing the little block."
+      },
+      {
+        "kind": "other",
+        "quote": "the recall is not for my VIN."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Coolant keeps disappearing."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Hard shifting and or no movement at all while transmission is cold."
+      },
+      {
+        "kind": "condition",
+        "quote": "while transmission is cold"
+      }
+    ],
+    "conditions": [
+      "cold"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": false,
+    "summary": "Test the cold-dependent transmission hard-shifting/no-movement complaint with a low-temperature cycling test; the wiper recall mismatch is noted but not covered for this VIN.",
+    "symptoms": [
+      "recalled wiper version missing the little block",
+      "coolant keeps disappearing",
+      "hard shifting while transmission is cold",
+      "no movement at all while transmission is cold"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2065620",
+    "created_at": "2025-02-14T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "Wipers are the recalled version missing the little block.",
+        "source_id": "2065620",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the recall is not for my VIN.",
+        "source_id": "2065620",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Coolant keeps disappearing.",
+        "source_id": "2065620",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Hard shifting and or no movement at all while transmission is cold.",
+        "source_id": "2065620",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while transmission is cold",
+        "source_id": "2065620",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports hard shifting and possible no movement while the transmission is cold, and the rulebook matches the condition \"cold\" to a low-temperature cycling test because cold-soak and cold-start behaviour separates a temperature-dependent fault from a permanent one. The wiper concern is described as a recalled version missing a block, but the narrative also states the recall is not for this VIN. No explicit risk to people is shown in the narrative.",
+    "requested_info": [],
+    "summary": "Test the cold-dependent transmission hard-shifting/no-movement complaint with a low-temperature cycling test; the wiper recall mismatch is noted but not covered for this VIN.",
+    "targeted_test": {
+      "conditions": [
+        "cold"
+      ],
+      "name": "Low-temperature cycling test",
+      "reason": "The narrative reports hard shifting and possible no movement while the transmission is cold, and the rulebook matches the condition \"cold\" to a low-temperature cycling test because cold-soak and cold-start behaviour separates a temperature-dependent fault from a permanent one. The wiper concern is described as a recalled version missing a block, but the narrative also states the recall is not for this VIN. No explicit risk to people is shown in the narrative."
+    }
+  },
+  "recalls": [
+    {
+      "id": "26V204000",
+      "match": true,
+      "open_date": "2026-03-31",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Lincoln Navigator, Expedition, and 2022-2023 F-250 SD, F-350 SD, F-450 SD, F-550 SD, and F-600 SD vehicles. The windshield wiper arms may break, causing the wipers to fail."
+    },
+    {
+      "id": "25V729000",
+      "match": true,
+      "open_date": "2025-10-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the vehicle."
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "I was driving in the express lane NB I-15 in Utah. I was at highway speeds with no one around me. I had the visor that closed on my sunroof when all of a sudden I hear a loud explosion, it scared me and I immediately slowed and pulled off the road. I first thought maybe it was a...",
+      "group": "body_controls",
+      "id": "1835609",
+      "make": "FORD",
+      "model": "EXPEDITION",
+      "score": 0.3956,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00069765,
+      "duration_ms": 7206,
+      "reason": "VISIBILITY/WIPER: recalled wiper version missing the little block, coolant loss, and cold transmission hard shifting/no movement",
+      "started_at": "2025-02-14T07:00:01Z",
+      "step": 2,
+      "tokens": 1561,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-02-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPEDITION",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I was driving in the express lane NB I-15 in Utah. I was at highway speeds with no one around me. I had the visor that closed on my sunroof when all of a sudden I hear a loud explosion, it scared me and I immediately slowed and pulled off the road. I first thought maybe it was a...",
+            "group": "body_controls",
+            "id": "1835609",
+            "make": "FORD",
+            "model": "EXPEDITION",
+            "score": 0.3956,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-02-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-02-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Wipers are the recalled version missing the little block. HOWEVER,  the recall is not for my VIN.  Coolant keeps disappearing.  Hard shifting and or no movement at all while transmission is cold."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I was driving in the express lane NB I-15 in Utah. I was at highway speeds with no one around me. I had the visor that closed on my sunroof when all of a sudden I hear a loud explosion, it scared me and I immediately slowed and pulled off the road. I first thought maybe it was a...",
+            "group": "body_controls",
+            "id": "1835609",
+            "make": "FORD",
+            "model": "EXPEDITION",
+            "score": 0.3956,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 recall(s) for the same vehicle and group",
+      "started_at": "2025-02-14T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "FORD",
+        "model": "EXPEDITION",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+            "group": "body_controls",
+            "id": "26V204000",
+            "make": "FORD",
+            "model": "EXPEDITION",
+            "open_date": "2026-03-31",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Lincoln Navigator, Expedition, and 2022-2023 F-250 SD, F-350 SD, F-450 SD, F-550 SD, and F-600 SD vehicles. The windshield wiper arms may break, causing the wipers to fail.",
+            "year": 2022
+          },
+          {
+            "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+            "group": "body_controls",
+            "id": "25V729000",
+            "make": "FORD",
+            "model": "EXPEDITION",
+            "open_date": "2025-10-24",
+            "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the vehicle.",
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-02-14T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "body_controls",
+        "make": "FORD",
+        "model": "EXPEDITION",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-02-14T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "cold"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "cold",
+            "matched_conditions": [
+              "cold"
+            ],
+            "reason": "Cold-soak and cold-start behaviour separates a temperature-dependent fault from a permanent one.",
+            "test": "Low-temperature cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007065,
+      "duration_ms": 6577,
+      "reason": "The narrative reports hard shifting and possible no movement while the transmission is cold, and the rulebook matches the condition \"cold\" to a low-temperature cycling test because cold-soak and cold-start behaviour separates a temperature-dependent fault from a permanent one. The wiper concern is described as a recalled version missing a block, but the narrative also states the recall is not for this VIN. No explicit risk to people is shown in the narrative.",
+      "started_at": "2025-02-14T07:00:09Z",
+      "step": 10,
+      "tokens": 2139,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-02-14T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Wipers are the recalled version missing the little block.",
+          "the recall is not for my VIN.",
+          "Coolant keeps disappearing.",
+          "Hard shifting and or no movement at all while transmission is cold.",
+          "while transmission is cold"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-14T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-02-14T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-14T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-14T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

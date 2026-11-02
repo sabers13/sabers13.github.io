@@ -1,0 +1,217 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: WARNINGS",
+    "group": "adas",
+    "id": "2147509",
+    "make": "WESTERN STAR",
+    "mileage": null,
+    "model": "4700",
+    "narrative": "What component or system failed or malfunctioned, and is it available for inspection upon request?  - Automated emergency breaking ABS Forward collision warning, potentially others. Unsure if the vehicle is available for inspection due to insurance claim.  How was your safety or the safety of others put at risk? Collision mitigation system error.  Has the vehicle or component been inspected by the manufacturer, police, insurance representatives or others? Police and Insurance representative.  Were there any warning lamps, messages or other symptoms of the problem prior to the failure, and when did they first appear? Yes, vehicle was sent to a certified manufacturer maintenance partner for active MIL/check engine lamp. Documentation of services performed describes a situation related to a fault code specifically regarding the collision mitigation system that the technicians were unable to diagnose with the tools available. Vehicle was released without any further modifications. The receipt with written detail is attached to this form.",
+    "received_at": "2025-11-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2147509",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2147509",
+    "decided_at": "2025-11-10T07:00:58Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2147509",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Automated emergency breaking ABS Forward collision warning, potentially others."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Collision mitigation system error."
+      },
+      {
+        "kind": "symptom",
+        "quote": "active MIL/check engine lamp"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "fault code specifically regarding the collision mitigation system"
+      },
+      {
+        "kind": "safety",
+        "quote": "How was your safety or the safety of others put at risk? Collision mitigation system error."
+      },
+      {
+        "kind": "other",
+        "quote": "Vehicle was released without any further modifications."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance/automated emergency braking/ABS with collision mitigation system error and active MIL/check engine lamp; no conditions stated.",
+    "symptoms": [
+      "automated emergency braking, ABS, and forward collision warning affected, potentially others",
+      "collision mitigation system error",
+      "active MIL/check engine lamp"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2147509",
+    "created_at": "2025-11-10T07:00:56Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-10T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00096805,
+      "duration_ms": 11886,
+      "reason": "Forward collision avoidance/automated emergency braking/ABS with collision mitigation system error and active MIL/check engine lamp; no conditions stated.",
+      "started_at": "2025-11-10T07:00:51Z",
+      "step": 2,
+      "tokens": 2213,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-11-10T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "WESTERN STAR",
+        "model": "4700",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-10T07:00:53Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-10T07:00:54Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-10T07:00:55Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-10T07:00:57Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-10T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-10T07:01:00Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-10T07:01:01Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2057928",
+    "make": "FORD",
+    "mileage": 4500,
+    "model": "MAVERICK",
+    "narrative": "The contact owns a 2024 Ford Maverick. The contact received notification of NHTSA Campaign Number: 24V684000 (Back Over Prevention) however, the part to do the recall repair was not yet available. One day in an attempt to exit a gas station, the contact realized he had pulled out too far into oncoming traffic. As the contact was reversing the vehicle, the backup camera froze which resulted in the contact hitting a vehicle that had quickly pulled up behind him. No injuries were reported and a police report was not filed. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair which resulted in the accident. The manufacturer was made aware of the issue and referred the contact to the NHTSA Hotline to file a complaint. The failure mileage was approximately 4,500. VIN tool confirms parts not available.",
+    "received_at": "2025-01-21",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2057928",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2057928",
+    "decided_at": "2025-01-21T07:00:22Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2057928",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Back Over Prevention"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the backup camera froze"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hitting a vehicle that had quickly pulled up behind him"
+      },
+      {
+        "kind": "condition",
+        "quote": "reversing the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "resulted in the contact hitting a vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "the part to do the recall repair was not yet available"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Back Over Prevention backup camera froze while reversing, causing a collision; recall repair parts were unavailable.",
+    "symptoms": [
+      "backup camera froze",
+      "collision with a vehicle behind while reversing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2057928",
+    "created_at": "2025-01-21T07:00:20Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Upon exiting my garage I always stop to close the door. My driveway has incline. I begin to roll back, hit the breaks several times with no engagement, begin pumping the brake pedal several times, no response. Continued to roll in reverse going across the street and hit neighbor'...",
+      "group": "adas",
+      "id": "2031868",
+      "make": "FORD",
+      "model": "MAVERICK",
+      "score": 2.9847,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-21T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00089095,
+      "duration_ms": 15526,
+      "reason": "Back Over Prevention backup camera froze while reversing, causing a collision; recall repair parts were unavailable.",
+      "started_at": "2025-01-21T07:00:16Z",
+      "step": 2,
+      "tokens": 2074,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-01-21T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MAVERICK",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Upon exiting my garage I always stop to close the door. My driveway has incline. I begin to roll back, hit the breaks several times with no engagement, begin pumping the brake pedal several times, no response. Continued to roll in reverse going across the street and hit neighbor'...",
+            "group": "adas",
+            "id": "2031868",
+            "make": "FORD",
+            "model": "MAVERICK",
+            "score": 2.9847,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-21T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-21T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-21T07:00:21Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-21T07:00:23Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-21T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-21T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

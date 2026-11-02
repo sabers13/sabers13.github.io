@@ -1,0 +1,295 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2058728",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "My 2017 Ford F-150 demonstrates every single aspect of an existing recall for 2017 F150 vehicles. However my VIN number is not included in the recall. My truck shifts suddenly in and out of gear causing me to have momentary instances of no power. This has happened, for example, turning left on busy roads with acceleration disappearing in critical moments. The vehicle downshifts suddenly on occasion. The gear indicator moves rapidly between gear 10 and gear 1. The vehicle routinely does not downshift to 1st gear at stoplights. The vehicle often shifts hard from gear to gear. The vehicle sometimes cannot go to the next gear, say from 7 to 8, and will be in some version of neutral during this time before finally connecting. Electronic issue plague this particular vehicle. All of these items have been noted in the existing recall. I am requesting an expansion of the recall to include all 2017 Ford F150's with 10 speed transmission. Ford dealer has indicated I need to replace the transmission for close to $10K. And they noted they see this problem constants - showing me a stack of folios in their repair facility for the same reason. The problem has been diagnosed by Ford dealer and an independent qualified transmission specialist shop This is an ongoing issue - per the questions below there is no specific date associated with the issue.",
+    "received_at": "2025-01-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2058728",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2058728",
+    "decided_at": "2025-01-23T07:00:38Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2058728",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "My truck shifts suddenly in and out of gear causing me to have momentary instances of no power."
+      },
+      {
+        "kind": "safety",
+        "quote": "acceleration disappearing in critical moments"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle downshifts suddenly on occasion."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The gear indicator moves rapidly between gear 10 and gear 1."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle routinely does not downshift to 1st gear at stoplights."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle often shifts hard from gear to gear."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The vehicle sometimes cannot go to the next gear, say from 7 to 8, and will be in some version of neutral during this time before finally connecting."
+      },
+      {
+        "kind": "condition",
+        "quote": "on occasion"
+      },
+      {
+        "kind": "condition",
+        "quote": "This is an ongoing issue"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system group: 2017 Ford F-150 with sudden/erratic 10-speed transmission shifting and momentary power loss, intermittent",
+    "symptoms": [
+      "shifts suddenly in and out of gear",
+      "momentary loss of power",
+      "downshifts suddenly",
+      "gear indicator moves rapidly between gear 10 and gear 1",
+      "does not downshift to 1st gear at stoplights",
+      "shifts hard from gear to gear",
+      "cannot go to next gear and stays in neutral before connecting"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2058728",
+    "created_at": "2025-01-23T07:00:36Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Similar to the 10-14 f150 recall for the 6r80 transmission lead frame failure. Driving down the freeway at speeds of 50-70 in 6th gear truck has down shifted into first causing loss of control. Transmission then disengages entirely and loses power mid driving. After turning truck...",
+      "group": "electrical_general",
+      "id": "2048241",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 33.2475,
+      "year": 2017
+    },
+    {
+      "excerpt": "Used remote starter; about 2 minutes later my family entered the vehicle with my 2 small kids secured in their child seats in back seat. We left our home, made about 1-mile down the road when back window suddenly popped and shattered. Nothing struck or hit the window to break it....",
+      "group": "electrical_general",
+      "id": "1780493",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 13.8762,
+      "year": 2017
+    },
+    {
+      "excerpt": "AIRBAG WARNING FAILURE A know issue with Ford F-150 and other products with the Blind Spot senor module in the rear tail lights. The vehicle has an issue with water or fluid leaking into the tail light housing causing many of the advanced features to stop working. The vehicle sho...",
+      "group": "electrical_general",
+      "id": "1922625",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 13.6473,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-23T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00148095,
+      "duration_ms": 23124,
+      "reason": "Electrical system group: 2017 Ford F-150 with sudden/erratic 10-speed transmission shifting and momentary power loss, intermittent",
+      "started_at": "2025-01-23T07:00:31Z",
+      "step": 2,
+      "tokens": 3039,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-23T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Similar to the 10-14 f150 recall for the 6r80 transmission lead frame failure. Driving down the freeway at speeds of 50-70 in 6th gear truck has down shifted into first causing loss of control. Transmission then disengages entirely and loses power mid driving. After turning truck...",
+            "group": "electrical_general",
+            "id": "2048241",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 33.2475,
+            "year": 2017
+          },
+          {
+            "excerpt": "Used remote starter; about 2 minutes later my family entered the vehicle with my 2 small kids secured in their child seats in back seat. We left our home, made about 1-mile down the road when back window suddenly popped and shattered. Nothing struck or hit the window to break it....",
+            "group": "electrical_general",
+            "id": "1780493",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 13.8762,
+            "year": 2017
+          },
+          {
+            "excerpt": "AIRBAG WARNING FAILURE A know issue with Ford F-150 and other products with the Blind Spot senor module in the rear tail lights. The vehicle has an issue with water or fluid leaking into the tail light housing causing many of the advanced features to stop working. The vehicle sho...",
+            "group": "electrical_general",
+            "id": "1922625",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 13.6473,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-01-23T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-23T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-23T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-23T07:00:37Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-23T07:00:39Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-23T07:00:40Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-23T07:00:41Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2100597",
+    "make": "HONDA",
+    "mileage": null,
+    "model": "ACCORD",
+    "narrative": "Right front turn signal does not work also fm/am radio does not work as well as trunk release button on trunk itself. Had both head lights replaced thinking it was an LED issue with turn signal and was told by mechanic that BCM is the issue. Called Honda regarding the recall to the BCM and was told my car is not apart of said recall because it didn’t come from a certain region but seems to be all of Honda accords have this issue regardless of plant manufacturer",
+    "received_at": "2025-06-14",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2100597",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2100597",
+    "decided_at": "2025-06-14T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2100597",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Right front turn signal does not work also fm/am radio does not work as well as trunk release button on trunk itself."
+      },
+      {
+        "kind": "condition",
+        "quote": "Had both head lights replaced"
+      },
+      {
+        "kind": "other",
+        "quote": "was told by mechanic that BCM is the issue"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the electrical/BCM installation with an installation check before test, because several electrical functions failed after headlight replacement and a mechanic attributed the issue to the BCM.",
+    "symptoms": [
+      "right front turn signal does not work",
+      "FM/AM radio does not work",
+      "trunk release button on trunk does not work"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2100597",
+    "created_at": "2025-06-14T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "Right front turn signal does not work also fm/am radio does not work as well as trunk release button on trunk itself.",
+        "source_id": "2100597",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Had both head lights replaced",
+        "source_id": "2100597",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "was told by mechanic that BCM is the issue",
+        "source_id": "2100597",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports that the right front turn signal, FM/AM radio, and trunk release button do not work, and that both headlights were replaced before a mechanic identified the BCM as the issue. The matched rulebook condition 'after service' requires checking connector seating, pin damage, and correct part fit first.",
+    "requested_info": [],
+    "summary": "Test the electrical/BCM installation with an installation check before test, because several electrical functions failed after headlight replacement and a mechanic attributed the issue to the BCM.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The narrative reports that the right front turn signal, FM/AM radio, and trunk release button do not work, and that both headlights were replaced before a mechanic identified the BCM as the issue. The matched rulebook condition 'after service' requires checking connector seating, pin damage, and correct part fit first."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact's father owns a 2020 Honda Accord. The contact stated that following a short drive, the vehicle was parked on the street. The contact said that neighbors tried to alert him that the vehicle was on fire. The contact is hearing impaired and did not hear his neighbors kn...",
+      "group": "electrical_general",
+      "id": "1943468",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 8.0714,
+      "year": 2020
+    },
+    {
+      "excerpt": "Bought the car back in 2020 after less than a year electrical problems caused the car to malfunction got it fixed and constantly after that more electrical problems changed the sensors and the car still continued to lose power. While driving on the highway the car completely lost...",
+      "group": "electrical_general",
+      "id": "1986759",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 5.4708,
+      "year": 2020
+    },
+    {
+      "excerpt": "I received a recall notice that there is a safety recall on my vehicle for a circuit board under the PASSENGER seat. Manufacturer Recall #XHP, NHTSA recall number 24V064. I utilize my vehicle to provide a source of income. My local dealership informed me after I called them that...",
+      "group": "electrical_general",
+      "id": "1965629",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 4.5998,
+      "year": 2020
+    },
+    {
+      "excerpt": "Several times my car has slammed the brakes on its own when I have not touched the brakes and also when there is no car in front of me for it to detect the need to brake. The most recent time on 4/8 on the freeway.",
+      "group": "electrical_general",
+      "id": "1806580",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 4.093,
+      "year": 2020
+    },
+    {
+      "excerpt": "The contact owns a 2020 Honda Accord. The contact stated while driving at 25 MPH, the front driver's side air bag, the front passenger's side air bag, and the knee air bags were deployed unintendedly. Additionally, there was a significant amount of chemical smoke inside the vehic...",
+      "group": "electrical_general",
+      "id": "1983442",
+      "make": "HONDA",
+      "model": "ACCORD",
+      "score": 4.035,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011899,
+      "duration_ms": 13774,
+      "reason": "2020 Honda Accord electrical fault: right front turn signal, FM/AM radio, and trunk release button do not work; mechanic says BCM is the issue and Honda says car is not in BCM recall.",
+      "started_at": "2025-06-14T07:00:01Z",
+      "step": 2,
+      "tokens": 2516,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact's father owns a 2020 Honda Accord. The contact stated that following a short drive, the vehicle was parked on the street. The contact said that neighbors tried to alert him that the vehicle was on fire. The contact is hearing impaired and did not hear his neighbors kn...",
+            "group": "electrical_general",
+            "id": "1943468",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 8.0714,
+            "year": 2020
+          },
+          {
+            "excerpt": "Bought the car back in 2020 after less than a year electrical problems caused the car to malfunction got it fixed and constantly after that more electrical problems changed the sensors and the car still continued to lose power. While driving on the highway the car completely lost...",
+            "group": "electrical_general",
+            "id": "1986759",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 5.4708,
+            "year": 2020
+          },
+          {
+            "excerpt": "I received a recall notice that there is a safety recall on my vehicle for a circuit board under the PASSENGER seat. Manufacturer Recall #XHP, NHTSA recall number 24V064. I utilize my vehicle to provide a source of income. My local dealership informed me after I called them that...",
+            "group": "electrical_general",
+            "id": "1965629",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 4.5998,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-06-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-06-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Right front turn signal does not work also fm/am radio does not work as well as trunk release button on trunk itself. Had both head lights replaced thinking it was an LED issue with turn signal and was told by mechanic that BCM is the issue. Called Honda regarding the recall to the BCM and was told my car is not apart of said recall because it didn’t come from a certain region but seems to be all of Honda accords have this issue regardless of plant manufacturer"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact's father owns a 2020 Honda Accord. The contact stated that following a short drive, the vehicle was parked on the street. The contact said that neighbors tried to alert him that the vehicle was on fire. The contact is hearing impaired and did not hear his neighbors kn...",
+            "group": "electrical_general",
+            "id": "1943468",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 8.0714,
+            "year": 2020
+          },
+          {
+            "excerpt": "Bought the car back in 2020 after less than a year electrical problems caused the car to malfunction got it fixed and constantly after that more electrical problems changed the sensors and the car still continued to lose power. While driving on the highway the car completely lost...",
+            "group": "electrical_general",
+            "id": "1986759",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 5.4708,
+            "year": 2020
+          },
+          {
+            "excerpt": "I received a recall notice that there is a safety recall on my vehicle for a circuit board under the PASSENGER seat. Manufacturer Recall #XHP, NHTSA recall number 24V064. I utilize my vehicle to provide a source of income. My local dealership informed me after I called them that...",
+            "group": "electrical_general",
+            "id": "1965629",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 4.5998,
+            "year": 2020
+          },
+          {
+            "excerpt": "Several times my car has slammed the brakes on its own when I have not touched the brakes and also when there is no car in front of me for it to detect the need to brake. The most recent time on 4/8 on the freeway.",
+            "group": "electrical_general",
+            "id": "1806580",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 4.093,
+            "year": 2020
+          },
+          {
+            "excerpt": "The contact owns a 2020 Honda Accord. The contact stated while driving at 25 MPH, the front driver's side air bag, the front passenger's side air bag, and the knee air bags were deployed unintendedly. Additionally, there was a significant amount of chemical smoke inside the vehic...",
+            "group": "electrical_general",
+            "id": "1983442",
+            "make": "HONDA",
+            "model": "ACCORD",
+            "score": 4.035,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-14T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-14T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "HONDA",
+        "model": "ACCORD",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-14T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008268,
+      "duration_ms": 7756,
+      "reason": "The narrative reports that the right front turn signal, FM/AM radio, and trunk release button do not work, and that both headlights were replaced before a mechanic identified the BCM as the issue. The matched rulebook condition 'after service' requires checking connector seating, pin damage, and correct part fit first.",
+      "started_at": "2025-06-14T07:00:09Z",
+      "step": 10,
+      "tokens": 2464,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 1 dropped",
+      "started_at": "2025-06-14T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Right front turn signal does not work also fm/am radio does not work as well as trunk release button on trunk itself.",
+          "Had both head lights replaced",
+          "BCM",
+          "was told by mechanic that BCM is the issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 1,
+        "verified": 3
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-06-14T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-14T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-14T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-14T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-14T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

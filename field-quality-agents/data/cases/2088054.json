@@ -1,0 +1,474 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING",
+    "group": "lighting",
+    "id": "2088054",
+    "make": "VOLKSWAGEN",
+    "mileage": null,
+    "model": "ATLAS",
+    "narrative": "We were pulled over yesterday for having a headlight out, but it ended up not being a headlight, it was the LED runner light on the passenger-side headlight assembly. Our vehicle is only at 68,214 miles. The Volkswagen dealership quoted me about $1,800.00 to have it replaced, which I thought was exorbitant. In doing research on this issue, most 2021 Atlas have the identical issue, the LED runner lights going out at the 50k - 70k mile mark. Currently it is impossible to even find stock of new headlight assemblies because of the number of vehicles that have had this issue. This should be a recall due to a defective headlight assembly, not a cost to the consumer. I've driven several vehicles past the 200k mile mark and I have never had to have a headlight assembly replaced, and especially not after only 68k miles. It would be unusual to have to replace a headlight at that many miles, let alone an LED strip, which should essentially last the life of the vehicle. There is a group considering bringing a class-action lawsuit against VW for the faulty electrical systems in the 2021 Atlas, so I hope this gets addressed quickly.",
+    "received_at": "2025-05-01",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2088054",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2088054",
+    "decided_at": "2025-05-01T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2088054",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "it was the LED runner light on the passenger-side headlight assembly"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the LED runner lights going out at the 50k - 70k mile mark"
+      },
+      {
+        "kind": "condition",
+        "quote": "Our vehicle is only at 68,214 miles."
+      },
+      {
+        "kind": "other",
+        "quote": "most 2021 Atlas have the identical issue"
+      }
+    ],
+    "conditions": [
+      "2021 Volkswagen Atlas",
+      "68,214 miles",
+      "reported LED runner failures at 50k-70k miles"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": false,
+    "summary": "Run a standard exterior lighting inspection of the passenger-side headlight assembly to confirm the reported LED runner light outage at 68,214 miles.",
+    "symptoms": [
+      "passenger-side LED runner light out",
+      "LED runner lights going out"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2088054",
+    "created_at": "2025-05-01T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "it was the LED runner light on the passenger-side headlight assembly",
+        "source_id": "2088054",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the LED runner lights going out at the 50k - 70k mile mark",
+        "source_id": "2088054",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Our vehicle is only at 68,214 miles.",
+        "source_id": "2088054",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "most 2021 Atlas have the identical issue",
+        "source_id": "2088054",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the passenger-side LED runner light in the headlight assembly is out at 68,214 miles, and similar 2021 Atlas cases describe LED daytime running light failures around the 50k-70k mile range. No rulebook entry names a targeted load test, so the standard exterior lighting inspection is appropriate. The available recall concerns headlight aim, not this LED runner failure.",
+    "requested_info": [],
+    "summary": "Run a standard exterior lighting inspection of the passenger-side headlight assembly to confirm the reported LED runner light outage at 68,214 miles.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "20V504000",
+      "match": true,
+      "open_date": "2020-08-26",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2020 Atlas Cross Sports and 2021 Atlas vehicles.  The driver's side headlight may have been aimed too low during production.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "VW Atlas front LED daytime running lamps stop working within first 4 years of ownership. Daytime running lamps are a standard safety feature of most new vehicles. VW dealership cost to repair $1,000, replace the entire headlight assembly. VW needs to extend warranty on this impor...",
+      "group": "lighting",
+      "id": "2013814",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 14.9793,
+      "year": 2021
+    },
+    {
+      "excerpt": "My passenger side LED daytime running light failed. We just crossed over 50k miles. This is a 1300 part. After reading online it seems this is a major issue with these vehicles and around this mileage. This appears to be something that needs to be investigated and the manufacture...",
+      "group": "lighting",
+      "id": "2049879",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 11.4669,
+      "year": 2021
+    },
+    {
+      "excerpt": "LED strip for day time running light went out in both headlight assemblies within 9 months/14k miles of each other. Had to replace entire headlight assemblies. Passenger side at 49k September 2023 and driver side at 63k June 2024.",
+      "group": "lighting",
+      "id": "1997593",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 10.2771,
+      "year": 2021
+    },
+    {
+      "excerpt": "LED daytime running lights went out a few weeks ago at the same time, then yesterday both headlights went out at the same time as well. There have been no damages or wrecks in my vehicle and I am the only owner. There are no warning lights and according to the MyVW app, everythin...",
+      "group": "lighting",
+      "id": "1941615",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 8.9066,
+      "year": 2021
+    },
+    {
+      "excerpt": "When on level ground, head lights aim towards the ground at about 10-15 yards from vehicle. When this happens you can’t see the upcoming road or side of the road. It appears as if you’re doing too fast and over running the head lights. In the attached picture, there’s light from...",
+      "group": "lighting",
+      "id": "1781523",
+      "make": "VOLKSWAGEN",
+      "model": "ATLAS",
+      "score": 5.982,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-01T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0011608,
+      "duration_ms": 12651,
+      "reason": "Exterior lighting: passenger-side LED runner light out on a 2021 VW Atlas at 68,214 miles, with similar failures reported at 50k-70k miles.",
+      "started_at": "2025-05-01T07:00:21Z",
+      "step": 2,
+      "tokens": 2583,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-01T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "VW Atlas front LED daytime running lamps stop working within first 4 years of ownership. Daytime running lamps are a standard safety feature of most new vehicles. VW dealership cost to repair $1,000, replace the entire headlight assembly. VW needs to extend warranty on this impor...",
+            "group": "lighting",
+            "id": "2013814",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 14.9793,
+            "year": 2021
+          },
+          {
+            "excerpt": "My passenger side LED daytime running light failed. We just crossed over 50k miles. This is a 1300 part. After reading online it seems this is a major issue with these vehicles and around this mileage. This appears to be something that needs to be investigated and the manufacture...",
+            "group": "lighting",
+            "id": "2049879",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 11.4669,
+            "year": 2021
+          },
+          {
+            "excerpt": "LED strip for day time running light went out in both headlight assemblies within 9 months/14k miles of each other. Had to replace entire headlight assemblies. Passenger side at 49k September 2023 and driver side at 63k June 2024.",
+            "group": "lighting",
+            "id": "1997593",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 10.2771,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions; analysis can proceed",
+      "started_at": "2025-05-01T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-05-01T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-05-01T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "We were pulled over yesterday for having a headlight out, but it ended up not being a headlight, it was the LED runner light on the passenger-side headlight assembly. Our vehicle is only at 68,214 miles. The Volkswagen dealership quoted me about $1,800.00 to have it replaced, which I thought was exorbitant. In doing research on this issue, most 2021 Atlas have the identical issue, the LED runner lights going out at the 50k - 70k mile mark. Currently it is impossible to even find stock of new hea"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "VW Atlas front LED daytime running lamps stop working within first 4 years of ownership. Daytime running lamps are a standard safety feature of most new vehicles. VW dealership cost to repair $1,000, replace the entire headlight assembly. VW needs to extend warranty on this impor...",
+            "group": "lighting",
+            "id": "2013814",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 14.9793,
+            "year": 2021
+          },
+          {
+            "excerpt": "My passenger side LED daytime running light failed. We just crossed over 50k miles. This is a 1300 part. After reading online it seems this is a major issue with these vehicles and around this mileage. This appears to be something that needs to be investigated and the manufacture...",
+            "group": "lighting",
+            "id": "2049879",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 11.4669,
+            "year": 2021
+          },
+          {
+            "excerpt": "LED strip for day time running light went out in both headlight assemblies within 9 months/14k miles of each other. Had to replace entire headlight assemblies. Passenger side at 49k September 2023 and driver side at 63k June 2024.",
+            "group": "lighting",
+            "id": "1997593",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 10.2771,
+            "year": 2021
+          },
+          {
+            "excerpt": "LED daytime running lights went out a few weeks ago at the same time, then yesterday both headlights went out at the same time as well. There have been no damages or wrecks in my vehicle and I am the only owner. There are no warning lights and according to the MyVW app, everythin...",
+            "group": "lighting",
+            "id": "1941615",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 8.9066,
+            "year": 2021
+          },
+          {
+            "excerpt": "When on level ground, head lights aim towards the ground at about 10-15 yards from vehicle. When this happens you can’t see the upcoming road or side of the road. It appears as if you’re doing too fast and over running the head lights. In the attached picture, there’s light from...",
+            "group": "lighting",
+            "id": "1781523",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "score": 5.982,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 recall(s) for the same vehicle and group",
+      "started_at": "2025-05-01T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "EXTERIOR LIGHTING:HEADLIGHTS",
+            "group": "lighting",
+            "id": "20V504000",
+            "make": "VOLKSWAGEN",
+            "model": "ATLAS",
+            "open_date": "2020-08-26",
+            "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2020 Atlas Cross Sports and 2021 Atlas vehicles.  The driver's side headlight may have been aimed too low during production.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\"",
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-05-01T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "VOLKSWAGEN",
+        "model": "ATLAS",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-05-01T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0011091,
+      "duration_ms": 15648,
+      "reason": "The narrative reports the passenger-side LED runner light in the headlight assembly is out at 68,214 miles, and similar 2021 Atlas cases describe LED daytime running light failures around the 50k-70k mile range. No rulebook entry names a targeted load test, so the standard exterior lighting inspection is appropriate. The available recall concerns headlight aim, not this LED runner failure.",
+      "started_at": "2025-05-01T07:00:29Z",
+      "step": 10,
+      "tokens": 3134,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 0 dropped",
+      "started_at": "2025-05-01T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "it was the LED runner light on the passenger-side headlight assembly",
+          "the LED runner lights going out at the 50k - 70k mile mark",
+          "Our vehicle is only at 68,214 miles.",
+          "most 2021 Atlas have the identical issue"
+        ]
+      },
+      "tool_output": {
+        "checked": 4,
+        "dropped": 0,
+        "verified": 4
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-01T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-05-01T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-01T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-01T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

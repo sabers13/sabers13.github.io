@@ -1,0 +1,291 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2081195",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WAGONEER",
+    "narrative": "Driving vehicle home on main highway at 55MPH, had been driving for about 15 miles. vehicle completely shut down. Engine shut off, power steering failed, lights shut off, everything electric shut down. was unable to steer the vehicle to the shoulder and it rolled to a stop in the middle of the 2 lane road in the dark. once it stopped it locked into park and couldnt be pushed off the road. Hazard lights would not work either car was completely blacked out in the middle of the road, and would not restart. Car behind us saw us in time and stopped and turned on their hazard lights till the fire department arrived to flag traffic. towed vehicle to dealership. at dealership the next day the vehicle started like nothing was wrong, showed no codes. Dealership kept vehicle for 10 days and couldnt get the vehicle to duplicate the incident. they drove the car almost 100 mile and found nothing.",
+    "received_at": "2025-04-08",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2081195",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2081195",
+    "decided_at": "2025-04-08T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2081195",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "Driving vehicle home on main highway at 55MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle completely shut down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Engine shut off, power steering failed, lights shut off, everything electric shut down."
+      },
+      {
+        "kind": "symptom",
+        "quote": "was unable to steer the vehicle to the shoulder"
+      },
+      {
+        "kind": "safety",
+        "quote": "rolled to a stop in the middle of the 2 lane road in the dark"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Hazard lights would not work either"
+      },
+      {
+        "kind": "symptom",
+        "quote": "would not restart"
+      },
+      {
+        "kind": "condition",
+        "quote": "couldnt get the vehicle to duplicate the incident"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: complete electrical shutdown at 55 mph after about 15 miles, no restart, then normal next day with no codes.",
+    "symptoms": [
+      "complete electrical shutdown",
+      "engine shut off",
+      "power steering failed",
+      "lights shut off",
+      "hazard lights inoperative",
+      "vehicle would not restart",
+      "vehicle locked in park"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2081195",
+    "created_at": "2025-04-08T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "First, I lost my radio, then my GPS, then my air conditioner, then I lost everything - no power steering, no engine. This was in heavy , high speed traffic on the interstate. I did manage to get the vehicle off the road. Towed to a dealership, 6 hours from my home. This happened...",
+      "group": "electrical_general",
+      "id": "1921241",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 23.6881,
+      "year": 2022
+    },
+    {
+      "excerpt": "I was driving on the highway when suddenly, my car started acting up. The lights on the dashboard started flashing one by one, from the check engine light to the battery light, and then everything went black. The infotainment system also went out, and I couldn’t control the car a...",
+      "group": "electrical_general",
+      "id": "2043344",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 20.511,
+      "year": 2022
+    },
+    {
+      "excerpt": "This is the second time this issue has happened. 1st time it happened about 1 year ago and jeep replaced some parts in relation to the ECM and etorque system. The issue happened today once again. Our jeep wagoner will just stall out our sputter in a manor to almost stall. Today i...",
+      "group": "electrical_general",
+      "id": "2036465",
+      "make": "JEEP",
+      "model": "WAGONEER",
+      "score": 18.8267,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-08T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00067255,
+      "duration_ms": 10039,
+      "reason": "Electrical system: complete electrical shutdown at 55 mph after about 15 miles, no restart, then normal next day with no codes.",
+      "started_at": "2025-04-08T07:00:01Z",
+      "step": 2,
+      "tokens": 1722,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-08T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WAGONEER",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "First, I lost my radio, then my GPS, then my air conditioner, then I lost everything - no power steering, no engine. This was in heavy , high speed traffic on the interstate. I did manage to get the vehicle off the road. Towed to a dealership, 6 hours from my home. This happened...",
+            "group": "electrical_general",
+            "id": "1921241",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 23.6881,
+            "year": 2022
+          },
+          {
+            "excerpt": "I was driving on the highway when suddenly, my car started acting up. The lights on the dashboard started flashing one by one, from the check engine light to the battery light, and then everything went black. The infotainment system also went out, and I couldn’t control the car a...",
+            "group": "electrical_general",
+            "id": "2043344",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 20.511,
+            "year": 2022
+          },
+          {
+            "excerpt": "This is the second time this issue has happened. 1st time it happened about 1 year ago and jeep replaced some parts in relation to the ECM and etorque system. The issue happened today once again. Our jeep wagoner will just stall out our sputter in a manor to almost stall. Today i...",
+            "group": "electrical_general",
+            "id": "2036465",
+            "make": "JEEP",
+            "model": "WAGONEER",
+            "score": 18.8267,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-08T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-08T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-08T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-08T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-08T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-08T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-08T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

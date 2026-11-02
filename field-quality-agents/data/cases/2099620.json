@@ -1,0 +1,278 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2099620",
+    "make": "TESLA",
+    "mileage": 16011,
+    "model": "MODEL Y",
+    "narrative": "The contact owned a 2024 Tesla Model Y. The contact's daughter was driving at approximately 30 MPH when the vehicle had independently accelerated. The contact said that her daughter drove through an intersection and crashed into another vehicle. The contact's vehicle crashed into the other vehicle's driver's left front door. The contact stated that her vehicle's front end was crushed, and the other vehicle's driver's side door, driver's side rear wheel, and tailgate were damaged. The contact stated that both vehicles had to be towed. The contact stated that the air bags had deployed in her vehicle. The contact stated she drove her daughter to the hospital. The daughter only had pain in her neck and shoulders; there were no cuts or abrasions. The police arrived and issued an incident report. The vehicle was towed to an impound lot, and the contact was advised by her insurance provider that the vehicle was a total loss. The manufacturer was not informed of the failure. The failure mileage was 16,011.",
+    "received_at": "2025-06-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2099620",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2099620",
+    "decided_at": "2025-06-11T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2099620",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "independently accelerated"
+      },
+      {
+        "kind": "condition",
+        "quote": "driving at approximately 30 MPH"
+      },
+      {
+        "kind": "symptom",
+        "quote": "crashed into another vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "air bags had deployed"
+      },
+      {
+        "kind": "safety",
+        "quote": "pain in her neck and shoulders"
+      },
+      {
+        "kind": "other",
+        "quote": "total loss"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM: 2024 Tesla Model Y independently accelerated at about 30 MPH, crashed into another vehicle, airbags deployed, minor neck/shoulder pain.",
+    "symptoms": [
+      "independent acceleration",
+      "crash into another vehicle",
+      "airbags deployed",
+      "neck and shoulder pain"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2099620",
+    "created_at": "2025-06-11T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2024 Tesla Model Y. The contact stated that while at an undisclosed speed, the vehicle had accelerated independently. No warning lights were illuminated. On another occasion, while exiting a parking lot the vehicle unintendedly accelerated causing it to crash i...",
+      "group": "electrical_general",
+      "id": "2031768",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 30.8192,
+      "year": 2024
+    },
+    {
+      "excerpt": "The contact owns a 2024 Tesla Model Y. The contact stated that the vehicle was experiencing abnormal battery drainage and was not operating based on the designed mileage. Additionally, the contact stated that the vehicle was overheating, and the failure persisted after the vehicl...",
+      "group": "electrical_general",
+      "id": "1995810",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 21.3515,
+      "year": 2024
+    },
+    {
+      "excerpt": "Vehicle Information: • Make: Tesla • Model: Model Y • Year: 2024 Description of the Problem: After a software update pushed by Tesla, the AP4 computer in my 2024 Tesla Model Y shorted out, causing a complete failure of all systems controlled by this computer. The following safety...",
+      "group": "electrical_general",
+      "id": "2048851",
+      "make": "TESLA",
+      "model": "MODEL Y",
+      "score": 12.0528,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-11T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00120115,
+      "duration_ms": 13634,
+      "reason": "ELECTRICAL SYSTEM: 2024 Tesla Model Y independently accelerated at about 30 MPH, crashed into another vehicle, airbags deployed, minor neck/shoulder pain.",
+      "started_at": "2025-06-11T07:00:01Z",
+      "step": 2,
+      "tokens": 2615,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-11T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TESLA",
+        "model": "MODEL Y",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2024 Tesla Model Y. The contact stated that while at an undisclosed speed, the vehicle had accelerated independently. No warning lights were illuminated. On another occasion, while exiting a parking lot the vehicle unintendedly accelerated causing it to crash i...",
+            "group": "electrical_general",
+            "id": "2031768",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 30.8192,
+            "year": 2024
+          },
+          {
+            "excerpt": "The contact owns a 2024 Tesla Model Y. The contact stated that the vehicle was experiencing abnormal battery drainage and was not operating based on the designed mileage. Additionally, the contact stated that the vehicle was overheating, and the failure persisted after the vehicl...",
+            "group": "electrical_general",
+            "id": "1995810",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 21.3515,
+            "year": 2024
+          },
+          {
+            "excerpt": "Vehicle Information: • Make: Tesla • Model: Model Y • Year: 2024 Description of the Problem: After a software update pushed by Tesla, the AP4 computer in my 2024 Tesla Model Y shorted out, causing a complete failure of all systems controlled by this computer. The following safety...",
+            "group": "electrical_general",
+            "id": "2048851",
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "score": 12.0528,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-06-11T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-11T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-11T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-11T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-11T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-11T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-11T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

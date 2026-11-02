@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2147582",
+    "make": "ALFA ROMEO",
+    "mileage": null,
+    "model": "GIULIA",
+    "narrative": "What component or system failed or malfunctioned, and is it available for inspection upon request? - THE MANUFACTER HAS ACKNOWLEDGED THAT THE FUEL PUMP IS FLAWED. THERE IS NO RESOLUTION PROVIDED AT THIS TIME FOR INSPECTION OR REPAIRS TO BE PERFORMED. How was your safety or the safety of others put at risk? - I AM DEEPLY CONCERN ABOUT THE POTENTIAL RISKS ASSOCIATED WITH THIS DEFECT. A SUDDEN LOSS OF POWER WHILE DRIVING COULD LEAD TO A DANGEROUS SITUATION ON THE ROAD. Has the problem been reproduced or confirmed by a dealer or independent service center? -YES, THE DEALERSHIP IS AWARE OF THIS ISSUE. Has the vehicle or component been inspected by the manufacturer, police, insurance representatives or others? -VEHICLE HAS NOT BEEN FURTHER INSPECTED AS THERE IS NO RESOLUTION TO THIS MATTER AT THIS TIME. FOR THAT REASON, I AM VERY HESITANT TO OPERATE THE VEHICLE UNTIL THIS ISSUE IS PROPERTLY RESOLVED. IS SIGNIFICANT SAFETLY CONCERN FOR ME, MY PASSANGERS AND OTHERS IN THE ROAD AS WELL. Were there any warning lamps, messages or other symptoms of the problem prior to the failure, and when did they first appear? - NO DIRECT WARNING OR MESSAGE HOWEVER, ELECTRICAL ISSUES HAVE BEEN AN ONGOING PROBLEM BUT NO MAIN SOURCE HAVE EVER BEEN FOUND, EVEN AFTER MULTIPLES APPOINMENTS AND REPAIRS AT THE SHOP. MORE RECENTLY, THE ELECTRICAL ISSUES ARE BECOMING FRECUENT AND I'M AFFRAID ALL IS RELATED TO THIS PUMP ISSUE.",
+    "received_at": "2025-11-11",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2147582",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2147582",
+    "decided_at": "2025-11-11T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2147582",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "THE FUEL PUMP"
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE MANUFACTER HAS ACKNOWLEDGED THAT THE FUEL PUMP IS FLAWED."
+      },
+      {
+        "kind": "symptom",
+        "quote": "ELECTRICAL ISSUES HAVE BEEN AN ONGOING PROBLEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "THE ELECTRICAL ISSUES ARE BECOMING FRECUENT"
+      },
+      {
+        "kind": "symptom",
+        "quote": "NO DIRECT WARNING OR MESSAGE"
+      },
+      {
+        "kind": "safety",
+        "quote": "A SUDDEN LOSS OF POWER WHILE DRIVING COULD LEAD TO A DANGEROUS SITUATION ON THE ROAD."
+      },
+      {
+        "kind": "safety",
+        "quote": "IS SIGNIFICANT SAFETLY CONCERN FOR ME, MY PASSANGERS AND OTHERS IN THE ROAD AS WELL."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: manufacturer-acknowledged flawed fuel pump, ongoing frequent electrical issues, potential sudden loss of power while driving.",
+    "symptoms": [
+      "fuel pump is flawed per manufacturer",
+      "ongoing electrical issues with no main source found",
+      "electrical issues becoming frequent",
+      "no direct warning lamp or message",
+      "potential sudden loss of power while driving"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2147582",
+    "created_at": "2025-11-11T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The brake by wire system failed, and another component caused the vehicle to accelerate when I hit the brake pedal. I didn't have any proof on the last complaint, but I have it now. This brake failure caused me to rear end someone, which caused a multiple vehicle accident. The de...",
+      "group": "electrical_general",
+      "id": "1781587",
+      "make": "ALFA ROMEO",
+      "model": "GIULIA",
+      "score": 13.2227,
+      "year": 2017
+    },
+    {
+      "excerpt": "Car was being driven on a highway going around a turn and message for “ATV Service” appeared. Shortly after power to the steering wheel and lost jerked the car and came back. All electric lighting flickered and several other messages for service engine and transmission appeared.",
+      "group": "electrical_general",
+      "id": "1818128",
+      "make": "ALFA ROMEO",
+      "model": "GIULIA",
+      "score": 8.2007,
+      "year": 2017
+    },
+    {
+      "excerpt": "Car started itself. Vehicle was sitting in garage and was Locked. The radiator fans came on and vehicle started on its own. it continued to run until we unlocked and hit the stop button. Since this has happened it does not turnover on the first attempt. It has set several codes,...",
+      "group": "electrical_general",
+      "id": "1800093",
+      "make": "ALFA ROMEO",
+      "model": "GIULIA",
+      "score": 5.5305,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-11T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0012619,
+      "duration_ms": 12791,
+      "reason": "Electrical system: manufacturer-acknowledged flawed fuel pump, ongoing frequent electrical issues, potential sudden loss of power while driving.",
+      "started_at": "2025-11-11T07:00:01Z",
+      "step": 2,
+      "tokens": 2858,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-11T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ALFA ROMEO",
+        "model": "GIULIA",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The brake by wire system failed, and another component caused the vehicle to accelerate when I hit the brake pedal. I didn't have any proof on the last complaint, but I have it now. This brake failure caused me to rear end someone, which caused a multiple vehicle accident. The de...",
+            "group": "electrical_general",
+            "id": "1781587",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "score": 13.2227,
+            "year": 2017
+          },
+          {
+            "excerpt": "Car was being driven on a highway going around a turn and message for “ATV Service” appeared. Shortly after power to the steering wheel and lost jerked the car and came back. All electric lighting flickered and several other messages for service engine and transmission appeared.",
+            "group": "electrical_general",
+            "id": "1818128",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "score": 8.2007,
+            "year": 2017
+          },
+          {
+            "excerpt": "Car started itself. Vehicle was sitting in garage and was Locked. The radiator fans came on and vehicle started on its own. it continued to run until we unlocked and hit the stop button. Since this has happened it does not turnover on the first attempt. It has set several codes,...",
+            "group": "electrical_general",
+            "id": "1800093",
+            "make": "ALFA ROMEO",
+            "model": "GIULIA",
+            "score": 5.5305,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-11-11T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-11T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-11T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-11T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-11T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-11T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-11T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2158773",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "TRAVERSE",
+    "narrative": "2025 Traverse ABS brake system failed, and master cylinder broke at 12K. All of the safety features, Lane Departure, Forward Crash detection, blind spot, automatic braking system all stop working with no signs that it was failing! Extremely unsafe! Traverse are meant to be family vehicles, well with major functions failures this kind of problem is going be recipe for disaster if not recalled ASAP.",
+    "received_at": "2025-12-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2158773",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2158773",
+    "decided_at": "2025-12-18T07:01:12Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2158773",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "ABS brake system failed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "master cylinder broke at 12K"
+      },
+      {
+        "kind": "symptom",
+        "quote": "All of the safety features, Lane Departure, Forward Crash detection, blind spot, automatic braking system all stop working with no signs that it was failing!"
+      },
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "other",
+        "quote": "at 12K"
+      },
+      {
+        "kind": "safety",
+        "quote": "Extremely unsafe!"
+      },
+      {
+        "kind": "safety",
+        "quote": "recipe for disaster"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Forward collision avoidance/automatic emergency braking and ABS: brake system and master cylinder failed at 12K; lane departure, forward crash detection, blind spot and automatic braking all stopped working without warning.",
+    "symptoms": [
+      "ABS brake system failed",
+      "master cylinder broke",
+      "lane departure stopped working",
+      "forward crash detection stopped working",
+      "blind spot stopped working",
+      "automatic braking system stopped working",
+      "no warning signs of failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2158773",
+    "created_at": "2025-12-18T07:01:10Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-18T07:01:04Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00092815,
+      "duration_ms": 10673,
+      "reason": "Forward collision avoidance/automatic emergency braking and ABS: brake system and master cylinder failed at 12K; lane departure, forward crash detection, blind spot and automatic braking all stopped working without warning.",
+      "started_at": "2025-12-18T07:01:05Z",
+      "step": 2,
+      "tokens": 2076,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-12-18T07:01:06Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "TRAVERSE",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-12-18T07:01:07Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-18T07:01:08Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-18T07:01:09Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-18T07:01:11Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-18T07:01:13Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-18T07:01:14Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-18T07:01:15Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

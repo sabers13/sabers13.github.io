@@ -1,0 +1,292 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING",
+    "group": "adas",
+    "id": "2114268",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "PALISADE",
+    "narrative": "On multiple occasions, my 2024 Hyundai Palisade (VIN  [XXX] ) has experienced a serious safety issue involving the anti-lock braking system (ABS). While traveling at low speeds (approximately 5–15 mph) over bumps or uneven surfaces, the ABS has unexpectedly activated, preventing the vehicle from slowing or stopping when the brakes are pressed. In each case, the vehicle continued to move for an additional 10–16 feet before the brakes finally engaged.  This issue has occurred repeatedly, including on:  [XXX]  [XXX]  [XXX]  Each incident created an extremely dangerous situation. I narrowly avoided a collision by swerving to avoid hitting the vehicle in front of me. Fortunately, no pedestrians or oncoming vehicles were in the immediate area—otherwise, the outcome could have been catastrophic.  I reported the issue to Koeppel Hyundai in Long Island City, NY, on July 14, 2025, and brought the vehicle in for inspection that day. A technician acknowledged that other Palisade owners had reported similar incidents. Their only recommendation was to disable the \"Auto Hold\" feature, suggesting it might be contributing to the problem. I followed this guidance, but the issue reoccurred on [XXX] despite Auto Hold being turned off.  This is a critical safety concern that requires immediate attention and a definitive repair—not just a workaround. Until Hyundai identifies and resolves the underlying issue, this defect puts drivers, passengers, and pedestrians at significant risk.  Please advise on the next steps for a full investigation and proper resolution. INFORMATION REDACTED PURSUANT TO THE FREEDOM OF INFORMATION ACT (FOIA), 5 U.S.C. 552(B)(6)",
+    "received_at": "2025-07-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2114268",
+    "status": "decided",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2114268",
+    "decided_at": "2025-07-26T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2114268",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: AUTOMATIC EMERGENCY BRAKING"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the ABS has unexpectedly activated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "preventing the vehicle from slowing or stopping when the brakes are pressed"
+      },
+      {
+        "kind": "condition",
+        "quote": "over bumps or uneven surfaces"
+      },
+      {
+        "kind": "condition",
+        "quote": "at low speeds (approximately 5–15 mph)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "continued to move for an additional 10–16 feet before the brakes finally engaged"
+      },
+      {
+        "kind": "condition",
+        "quote": "This issue has occurred repeatedly"
+      },
+      {
+        "kind": "safety",
+        "quote": "Each incident created an extremely dangerous situation."
+      },
+      {
+        "kind": "safety",
+        "quote": "I narrowly avoided a collision by swerving to avoid hitting the vehicle in front of me."
+      },
+      {
+        "kind": "condition",
+        "quote": "despite Auto Hold being turned off"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2024 Hyundai Palisade forward collision avoidance/ABS: unexpected ABS activation at low speed over bumps or uneven surfaces prevented slowing/stopping; repeated near-collision risk.",
+    "symptoms": [
+      "ABS activated unexpectedly",
+      "vehicle failed to slow or stop when brakes were pressed",
+      "vehicle continued moving 10–16 feet before brakes engaged",
+      "issue recurred after Auto Hold was disabled"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2114268",
+    "created_at": "2025-07-26T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When braking on an uneven surface, the anti-lock braking system will sometimes kick in, causing the car to shake and not deliver the stopping power the driver expects. I've nearly rear ended multiple people and have glided out into intersections before. Typically happens when lea...",
+      "group": "adas",
+      "id": "2024284",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 21.1935,
+      "year": 2024
+    },
+    {
+      "excerpt": "This has happened to me on 6 different occasions. While driving at slow speeds, and applying the brakes, the vehicles ABS system kicks in for no reason. However, while doing this, the vehicle is not slowing down and feels as though it will not stop. The only thing that stops the...",
+      "group": "adas",
+      "id": "2043743",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 15.1075,
+      "year": 2024
+    },
+    {
+      "excerpt": "Brake or ABS failure when driving at a moderate speed between 10 to 20 mph over an uneven ground, slightly bumpy road, which makes the car shake and lurch forward while brake pedal becomes unavailable to press/hit . This has happened around 6 times within the last 10 months since...",
+      "group": "adas",
+      "id": "2037448",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 13.6408,
+      "year": 2024
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00150475,
+      "duration_ms": 16823,
+      "reason": "2024 Hyundai Palisade forward collision avoidance/ABS: unexpected ABS activation at low speed over bumps or uneven surfaces prevented slowing/stopping; repeated near-collision risk.",
+      "started_at": "2025-07-26T07:00:01Z",
+      "step": 2,
+      "tokens": 3244,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "PALISADE",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When braking on an uneven surface, the anti-lock braking system will sometimes kick in, causing the car to shake and not deliver the stopping power the driver expects. I've nearly rear ended multiple people and have glided out into intersections before. Typically happens when lea...",
+            "group": "adas",
+            "id": "2024284",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 21.1935,
+            "year": 2024
+          },
+          {
+            "excerpt": "This has happened to me on 6 different occasions. While driving at slow speeds, and applying the brakes, the vehicles ABS system kicks in for no reason. However, while doing this, the vehicle is not slowing down and feels as though it will not stop. The only thing that stops the...",
+            "group": "adas",
+            "id": "2043743",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 15.1075,
+            "year": 2024
+          },
+          {
+            "excerpt": "Brake or ABS failure when driving at a moderate speed between 10 to 20 mph over an uneven ground, slightly bumpy road, which makes the car shake and lurch forward while brake pedal becomes unavailable to press/hit . This has happened around 6 times within the last 10 months since...",
+            "group": "adas",
+            "id": "2037448",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 13.6408,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-26T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-26T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-26T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

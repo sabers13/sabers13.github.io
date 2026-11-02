@@ -1,0 +1,304 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: BLIND SPOT DETECTION",
+    "group": "adas",
+    "id": "2071500",
+    "make": "FISKER",
+    "mileage": null,
+    "model": "OCEAN",
+    "narrative": "Description of Incident(s) On March 5, 2025, I discovered that my 2023 Fisker Ocean had undergone an unauthorized over-the-air (OTA) software update to version 2.2.2 without my knowledge or consent. I received no prior notification from Fisker or American Leasing, the current entity managing Fisker vehicles following the company’s bankruptcy in 2024. Additionally, I have no access to the vehicle’s cloud system or update logs to understand what changes were implemented, leaving me unable to assess the scope or purpose of the update. Following this update, I experienced two significant safety-related issues with my vehicle, detailed below. Driver’s Door Handle Overheating After the 2.2.2 update, the driver’s side door handle began exhibiting extreme overheating, reaching temperatures exceeding 130°F as measured with a non-contact infrared thermometer. This poses a serious burn hazard and makes the handle unsafe to touch for entry or exit. The issue appears to be electrical in nature, potentially related to a malfunction in the door handle actuator or power management system altered by the software update. The handle remains excessively hot even when the vehicle is powered off, suggesting a persistent fault. This defect compromises safe access to the vehicle and presents a risk of injury.  Rearview Mirror Fan Constantly Running Since the update, the fan associated with the vehicle’s digital rearview mirror now runs continuously, regardless of whether the mirror is in use or the vehicle’s thermal conditions warrant cooling. This creates unnecessary noise, potential wear on the fan component, and a possible drain on the vehicle’s battery. While the digital mirror functionality remains operational, the constant fan operation suggests a software glitch affecting thermal regulation or sensor feedback loops, likely introduced by the 2.2.2 update. This issue, while not immediately hazardous, indicates broader concerns with the stability of the vehicle’s software systems post-",
+    "received_at": "2025-03-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2071500",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2071500",
+    "decided_at": "2025-03-05T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2071500",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "LANE DEPARTURE: BLIND SPOT DETECTION"
+      },
+      {
+        "kind": "other",
+        "quote": "unauthorized over-the-air (OTA) software update to version 2.2.2"
+      },
+      {
+        "kind": "symptom",
+        "quote": "driver’s side door handle began exhibiting extreme overheating"
+      },
+      {
+        "kind": "symptom",
+        "quote": "reaching temperatures exceeding 130°F"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The handle remains excessively hot even when the vehicle is powered off"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the fan associated with the vehicle’s digital rearview mirror now runs continuously"
+      },
+      {
+        "kind": "symptom",
+        "quote": "regardless of whether the mirror is in use or the vehicle’s thermal conditions warrant cooling"
+      },
+      {
+        "kind": "symptom",
+        "quote": "possible drain on the vehicle’s battery"
+      },
+      {
+        "kind": "condition",
+        "quote": "Following this update"
+      },
+      {
+        "kind": "condition",
+        "quote": "Since the update"
+      },
+      {
+        "kind": "safety",
+        "quote": "serious burn hazard"
+      },
+      {
+        "kind": "safety",
+        "quote": "risk of injury"
+      },
+      {
+        "kind": "other",
+        "quote": "software glitch affecting thermal regulation or sensor feedback loops"
+      }
+    ],
+    "conditions": [
+      "heat",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2023 Fisker Ocean ADAS report: after unauthorized OTA 2.2.2, driver door handle overheats above 130°F and rearview mirror fan runs continuously.",
+    "symptoms": [
+      "driver’s side door handle extreme overheating exceeding 130°F",
+      "door handle remains excessively hot when vehicle is powered off",
+      "rearview mirror fan runs continuously regardless of mirror use or thermal conditions"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2071500",
+    "created_at": "2025-03-05T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "We have experienced a consistent issue on a local street by our elementary child's school. We have contacted Fisker no fewer than 5-6 times since December 2023 about this issue. Fisker has consistently stated that an upcoming over the air (OTA) software update would fix this issu...",
+      "group": "adas",
+      "id": "1990522",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 30.2023,
+      "year": 2023
+    },
+    {
+      "excerpt": "Advanced Driver Assistance System (ADAS called Fi-Pilot in Fisker) and Sensor Malfunction: On multiple occasions, I have experienced instances where multiple warnings would come up such as regenerative braking, front collision system unavailable, front cameras not functional, sid...",
+      "group": "adas",
+      "id": "1980238",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 29.5782,
+      "year": 2023
+    },
+    {
+      "excerpt": "The vehicle has several major faults that Fisker is now ignoring and no one has come to fix in the past 2 months. I've submitted multiple tickets and claims. Issue 1: ADAS system. My ADAS system is and has been down since the beginning of February. I have received software update...",
+      "group": "adas",
+      "id": "1978767",
+      "make": "FISKER",
+      "model": "OCEAN",
+      "score": 29.0534,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-05T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0021129,
+      "duration_ms": 22121,
+      "reason": "2023 Fisker Ocean ADAS report: after unauthorized OTA 2.2.2, driver door handle overheats above 130°F and rearview mirror fan runs continuously.",
+      "started_at": "2025-03-05T07:00:16Z",
+      "step": 2,
+      "tokens": 4201,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-05T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FISKER",
+        "model": "OCEAN",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "We have experienced a consistent issue on a local street by our elementary child's school. We have contacted Fisker no fewer than 5-6 times since December 2023 about this issue. Fisker has consistently stated that an upcoming over the air (OTA) software update would fix this issu...",
+            "group": "adas",
+            "id": "1990522",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 30.2023,
+            "year": 2023
+          },
+          {
+            "excerpt": "Advanced Driver Assistance System (ADAS called Fi-Pilot in Fisker) and Sensor Malfunction: On multiple occasions, I have experienced instances where multiple warnings would come up such as regenerative braking, front collision system unavailable, front cameras not functional, sid...",
+            "group": "adas",
+            "id": "1980238",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 29.5782,
+            "year": 2023
+          },
+          {
+            "excerpt": "The vehicle has several major faults that Fisker is now ignoring and no one has come to fix in the past 2 months. I've submitted multiple tickets and claims. Issue 1: ADAS system. My ADAS system is and has been down since the beginning of February. I have received software update...",
+            "group": "adas",
+            "id": "1978767",
+            "make": "FISKER",
+            "model": "OCEAN",
+            "score": 29.0534,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-03-05T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-03-05T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-03-05T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-05T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-03-05T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-05T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-05T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

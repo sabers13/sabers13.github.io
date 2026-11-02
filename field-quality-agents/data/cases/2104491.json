@@ -1,0 +1,294 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2104491",
+    "make": "CHRYSLER",
+    "mileage": null,
+    "model": "PACIFICA",
+    "narrative": "1. This vehicle was recalled for a software update due to the rear camera failing to operate at times. The software was updated by the dealer. However, this did not completely fix the problem. While the camera fails less frequently, it still does not energize at times. I took the vehicle back to the dealer. I was then informed that there is water intrusion into the rear lift gate, which causes the electrical to short out. I was told that I would have to replace the wiring harness which energizes the camera as well as the rear vehicle lights. I have not noticed any problem with the lighting as of yet. However, I have been told that this is a problem with the Pacifica in general, as well as the Durango. I was told that replacing the harness would not guarantee that the problem would be solved as there would still be water intrusion, which could cause the problem again, even with replacing the harness.  This is obviously a safety issue, as the camera fails to operate at times, and there is a potential of losing lighting on the back of the vehicle. This is also a known defect by Chrysler.  2. When using the Adaptive Cruise Control on streets and highways with multiple lanes traveling the same direction, the vehicle will brake suddenly and hard when the vehicle in front of me changes lanes. This occurs after the vehicle in front of me has completely changed lanes and is not impeding my forward progress whatsoever. My vehicle speeds up to the set speed and then violently brakes as if it is about to crash into the vehicle ahead of me, even thought the lane is completely clear. The vehicle has been inspected for this scenario. I was told that it didn't perform as described above when the technician drove it.  This is a safety issue as the vehicle suddenly and violently brakes at highway speeds, with traffic behind me.",
+    "received_at": "2025-06-27",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2104491",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2104491",
+    "decided_at": "2025-06-27T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2104491",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rear camera failing to operate at times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it still does not energize at times"
+      },
+      {
+        "kind": "condition",
+        "quote": "water intrusion into the rear lift gate"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causes the electrical to short out"
+      },
+      {
+        "kind": "condition",
+        "quote": "software was updated by the dealer"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle will brake suddenly and hard"
+      },
+      {
+        "kind": "symptom",
+        "quote": "violently brakes"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is obviously a safety issue"
+      },
+      {
+        "kind": "safety",
+        "quote": "This is a safety issue as the vehicle suddenly and violently brakes at highway speeds"
+      }
+    ],
+    "conditions": [
+      "moisture",
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: intermittent rear camera failure and adaptive cruise sudden hard braking, with water intrusion and after software update.",
+    "symptoms": [
+      "rear camera fails to operate intermittently",
+      "electrical short due to water intrusion in rear lift gate",
+      "adaptive cruise control suddenly and violently brakes at highway speeds when lane ahead is clear",
+      "potential rear vehicle lighting loss"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2104491",
+    "created_at": "2025-06-27T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There have been several incidents that have to do with the electrical components site, such as the adaptive cruise control not working the lanes assist going off, stating that my hands are on the wheel. When my hands are on the wheel, there have been problems when I go to put it...",
+      "group": "electrical_general",
+      "id": "1928130",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 35.0314,
+      "year": 2021
+    },
+    {
+      "excerpt": "Without any prior warning or predisposing symptoms, my vehicle lost all power when I was driving in the carpool lane at 70 miles per hour. I had to \"coast\" across 5 lanes of freeway and come to stop in the emergency lane. When I applied the brakes I had no power to brakes which m...",
+      "group": "electrical_general",
+      "id": "1959621",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 31.0953,
+      "year": 2021
+    },
+    {
+      "excerpt": "On Sunday, 12/4/2022, I went on a few errands not intending to drive very far on the highway since most of my stops were local. I entered the I-94 west bound from Moorland Rd in Brookfield WI and drove about 1 mile reaching about 65 mph during the busy traffic hours. The car sudd...",
+      "group": "electrical_general",
+      "id": "1857281",
+      "make": "CHRYSLER",
+      "model": "PACIFICA",
+      "score": 30.0277,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-27T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010234,
+      "duration_ms": 11022,
+      "reason": "Electrical system: intermittent rear camera failure and adaptive cruise sudden hard braking, with water intrusion and after software update.",
+      "started_at": "2025-06-27T07:00:01Z",
+      "step": 2,
+      "tokens": 2444,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-27T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHRYSLER",
+        "model": "PACIFICA",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There have been several incidents that have to do with the electrical components site, such as the adaptive cruise control not working the lanes assist going off, stating that my hands are on the wheel. When my hands are on the wheel, there have been problems when I go to put it...",
+            "group": "electrical_general",
+            "id": "1928130",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 35.0314,
+            "year": 2021
+          },
+          {
+            "excerpt": "Without any prior warning or predisposing symptoms, my vehicle lost all power when I was driving in the carpool lane at 70 miles per hour. I had to \"coast\" across 5 lanes of freeway and come to stop in the emergency lane. When I applied the brakes I had no power to brakes which m...",
+            "group": "electrical_general",
+            "id": "1959621",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 31.0953,
+            "year": 2021
+          },
+          {
+            "excerpt": "On Sunday, 12/4/2022, I went on a few errands not intending to drive very far on the highway since most of my stops were local. I entered the I-94 west bound from Moorland Rd in Brookfield WI and drove about 1 mile reaching about 65 mph during the busy traffic hours. The car sudd...",
+            "group": "electrical_general",
+            "id": "1857281",
+            "make": "CHRYSLER",
+            "model": "PACIFICA",
+            "score": 30.0277,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-06-27T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-27T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-27T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-27T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-27T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-27T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-27T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

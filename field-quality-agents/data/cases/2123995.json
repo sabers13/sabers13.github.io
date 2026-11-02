@@ -1,0 +1,225 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: ASSIST",
+    "group": "adas",
+    "id": "2123995",
+    "make": "TOYOTA",
+    "mileage": null,
+    "model": "COROLLA",
+    "narrative": "Vehicle driving thru a city street with no lights at 7 mph around 10pm when the Lane Keeping Assistance read a trash can on the left and pickup truck on the right on the narrow street pulling it completed to the right  side and hitting a parked vehicle.  Vehicle presented initial issues with quick light and noise the day before the incident.  Damages does not reflect a vehicle driving at 7mph(GPS tracker video available but unable to upload)  Vehicle manufactures ran a completed FTS inspection on 08/22/25 at local dealership - Results will not be provided for another 45 - 60 days.",
+    "received_at": "2025-08-25",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2123995",
+    "status": "decided",
+    "year": 2025
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2123995",
+    "decided_at": "2025-08-25T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2123995",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Lane Keeping Assistance"
+      },
+      {
+        "kind": "symptom",
+        "quote": "read a trash can on the left and pickup truck on the right"
+      },
+      {
+        "kind": "condition",
+        "quote": "city street with no lights at 7 mph around 10pm"
+      },
+      {
+        "kind": "condition",
+        "quote": "narrow street"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hitting a parked vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "hitting a parked vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "initial issues with quick light and noise"
+      },
+      {
+        "kind": "other",
+        "quote": "FTS inspection on 08/22/25"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Lane Keeping Assistance misread a trash can and pickup truck on a narrow unlit city street at 7 mph at night, steering the Corolla into a parked vehicle; prior quick light/noise.",
+    "symptoms": [
+      "Lane Keeping Assistance read a trash can on the left and pickup truck on the right",
+      "vehicle pulled to the right side and hit a parked vehicle",
+      "quick light and noise the day before the incident"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2123995",
+    "created_at": "2025-08-25T07:00:51Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-25T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0010075,
+      "duration_ms": 10998,
+      "reason": "Lane Keeping Assistance misread a trash can and pickup truck on a narrow unlit city street at 7 mph at night, steering the Corolla into a parked vehicle; prior quick light/noise.",
+      "started_at": "2025-08-25T07:00:46Z",
+      "step": 2,
+      "tokens": 2233,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-25T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "COROLLA",
+        "year": 2025
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-25T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-25T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-25T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-25T07:00:52Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-25T07:00:54Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-25T07:00:55Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-25T07:00:56Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2067005",
+    "make": "SUBARU",
+    "mileage": null,
+    "model": "FORESTER",
+    "narrative": "1. The car shut off several times, with the steering wheel locking up and becoming stiff, the brakes failing to respond, and loud, erratic sounds emanating from the vehicle. The car is available for inspection.  2. Yes, the car crashed resulting in damage to the car, driver, and other driver (e.g. car in front).  3.  This is the second time the car has been brought to the dealership (the second time being Subaru South Hill in Pennsylvania) and they cannot identify the problem.  4. The vehicle was not inspected by police, or insurance, as far as I am aware.  5. There were no warning signs before the failure.",
+    "received_at": "2025-02-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2067005",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2067005",
+    "decided_at": "2025-02-18T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2067005",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The car shut off several times"
+      },
+      {
+        "kind": "symptom",
+        "quote": "steering wheel locking up and becoming stiff"
+      },
+      {
+        "kind": "symptom",
+        "quote": "brakes failing to respond"
+      },
+      {
+        "kind": "symptom",
+        "quote": "loud, erratic sounds emanating from the vehicle"
+      },
+      {
+        "kind": "condition",
+        "quote": "several times"
+      },
+      {
+        "kind": "safety",
+        "quote": "the car crashed resulting in damage to the car, driver, and other driver"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "ELECTRICAL SYSTEM: car shut off several times with steering lock, brake failure and erratic noises; crash occurred.",
+    "symptoms": [
+      "vehicle shut off repeatedly",
+      "steering wheel locked and became stiff",
+      "brakes failed to respond",
+      "loud erratic sounds",
+      "crash"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2067005",
+    "created_at": "2025-02-18T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Purchased brand new from dealer. Less than 3 months later a tiny pebble came up and hit the center of the windshield, immediately you could see an indentation and a spider web. Now the whole windshield has multiple spider web cracks. The splits go from edge of driver's side all t...",
+      "group": "electrical_general",
+      "id": "1803797",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 6.4323,
+      "year": 2021
+    },
+    {
+      "excerpt": "The contact owns a 2021 Subaru Forester. The contact stated that while waiting at a traffic light, the accelerator pedal was depressed, and the vehicle immediately shut off. During the failure, the message \"Eyesight Disabled\" was displayed and the vehicle could not immediately be...",
+      "group": "electrical_general",
+      "id": "2030007",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 5.6913,
+      "year": 2021
+    },
+    {
+      "excerpt": "The batteries drained overnight 3 times within 7 months after the purchase of the new vehicle. Battery was jumped each time by Subaru Roadside Assistant. The dealer checked the battery and it was fine. It is the electrical (CAN) problem that drained the battery.",
+      "group": "electrical_general",
+      "id": "1763210",
+      "make": "SUBARU",
+      "model": "FORESTER",
+      "score": 5.5962,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-18T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00090735,
+      "duration_ms": 9543,
+      "reason": "ELECTRICAL SYSTEM: car shut off several times with steering lock, brake failure and erratic noises; crash occurred.",
+      "started_at": "2025-02-18T07:00:36Z",
+      "step": 2,
+      "tokens": 1981,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-02-18T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "SUBARU",
+        "model": "FORESTER",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Purchased brand new from dealer. Less than 3 months later a tiny pebble came up and hit the center of the windshield, immediately you could see an indentation and a spider web. Now the whole windshield has multiple spider web cracks. The splits go from edge of driver's side all t...",
+            "group": "electrical_general",
+            "id": "1803797",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 6.4323,
+            "year": 2021
+          },
+          {
+            "excerpt": "The contact owns a 2021 Subaru Forester. The contact stated that while waiting at a traffic light, the accelerator pedal was depressed, and the vehicle immediately shut off. During the failure, the message \"Eyesight Disabled\" was displayed and the vehicle could not immediately be...",
+            "group": "electrical_general",
+            "id": "2030007",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 5.6913,
+            "year": 2021
+          },
+          {
+            "excerpt": "The batteries drained overnight 3 times within 7 months after the purchase of the new vehicle. Battery was jumped each time by Subaru Roadside Assistant. The dealer checked the battery and it was fine. It is the electrical (CAN) problem that drained the battery.",
+            "group": "electrical_general",
+            "id": "1763210",
+            "make": "SUBARU",
+            "model": "FORESTER",
+            "score": 5.5962,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-02-18T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-18T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-18T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-18T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-18T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-18T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-18T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

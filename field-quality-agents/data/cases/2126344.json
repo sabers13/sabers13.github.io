@@ -1,0 +1,273 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2126344",
+    "make": "FORD",
+    "mileage": null,
+    "model": "MUSTANG",
+    "narrative": "The rearview camera display threw up a blue screen then proceeded to throw up a back screen and told me “Camera is unavailable. Please contact dealership.” From my knowledge, there is a current recall out for this particular issue. I was attempting to back into a parking spot when this happened and I was surrounded by vehicles when this happened. There were no warnings on the vehicle dash or in the app. I would like this fixed as soon as possible.",
+    "received_at": "2025-09-02",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2126344",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2126344",
+    "decided_at": "2025-09-02T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2126344",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The rearview camera display threw up a blue screen then proceeded to throw up a back screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Camera is unavailable. Please contact dealership."
+      },
+      {
+        "kind": "condition",
+        "quote": "I was attempting to back into a parking spot"
+      },
+      {
+        "kind": "safety",
+        "quote": "I was attempting to back into a parking spot when this happened and I was surrounded by vehicles when this happened."
+      },
+      {
+        "kind": "other",
+        "quote": "there is a current recall out for this particular issue"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Rearview camera display showed a blue then back screen and 'Camera is unavailable' while reversing into a parking spot surrounded by vehicles.",
+    "symptoms": [
+      "rearview camera display blue screen",
+      "rearview camera display back screen",
+      "camera unavailable message"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2126344",
+    "created_at": "2025-09-02T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "- The light of the airbag and seatbelt came on my dashboard, went to the dealership and they told me that there's an issue with the control module, apparently there is a recall for that but since my car wasn't called they could repair. - Backup camera goes completely off when try...",
+      "group": "electrical_general",
+      "id": "2027913",
+      "make": "FORD",
+      "model": "MUSTANG",
+      "score": 7.8087,
+      "year": 2020
+    },
+    {
+      "excerpt": "I hope this letter finds you well. I am writing to bring to your attention some serious safety issues that I have encountered with a 2020 Mustang that I purchased from CarMAX, West Valley on September 24, 2023. Soon after taking possession of the vehicle, I noticed a malfunction...",
+      "group": "electrical_general",
+      "id": "1933150",
+      "make": "FORD",
+      "model": "MUSTANG",
+      "score": 5.0818,
+      "year": 2020
+    },
+    {
+      "excerpt": "While driving at about 75mph the passenger door unlocked and opened by itself. We got an door not closed warning light on the dash and the warning chime in addition the horn was blowing in intervals of 2 quick beeps and repeated until we were able to pull over and reclose the doo...",
+      "group": "electrical_general",
+      "id": "1986290",
+      "make": "FORD",
+      "model": "MUSTANG",
+      "score": 3.4824,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-02T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0022147,
+      "duration_ms": 23783,
+      "reason": "Rearview camera display showed a blue then back screen and 'Camera is unavailable' while reversing into a parking spot surrounded by vehicles.",
+      "started_at": "2025-09-02T07:00:16Z",
+      "step": 2,
+      "tokens": 4221,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-02T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "MUSTANG",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "- The light of the airbag and seatbelt came on my dashboard, went to the dealership and they told me that there's an issue with the control module, apparently there is a recall for that but since my car wasn't called they could repair. - Backup camera goes completely off when try...",
+            "group": "electrical_general",
+            "id": "2027913",
+            "make": "FORD",
+            "model": "MUSTANG",
+            "score": 7.8087,
+            "year": 2020
+          },
+          {
+            "excerpt": "I hope this letter finds you well. I am writing to bring to your attention some serious safety issues that I have encountered with a 2020 Mustang that I purchased from CarMAX, West Valley on September 24, 2023. Soon after taking possession of the vehicle, I noticed a malfunction...",
+            "group": "electrical_general",
+            "id": "1933150",
+            "make": "FORD",
+            "model": "MUSTANG",
+            "score": 5.0818,
+            "year": 2020
+          },
+          {
+            "excerpt": "While driving at about 75mph the passenger door unlocked and opened by itself. We got an door not closed warning light on the dash and the warning chime in addition the horn was blowing in intervals of 2 quick beeps and repeated until we were able to pull over and reclose the doo...",
+            "group": "electrical_general",
+            "id": "1986290",
+            "make": "FORD",
+            "model": "MUSTANG",
+            "score": 3.4824,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-09-02T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-02T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-02T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-02T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-02T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-02T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-02T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

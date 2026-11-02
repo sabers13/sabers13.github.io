@@ -1,0 +1,475 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2156317",
+    "make": "GMC",
+    "mileage": null,
+    "model": "TERRAIN",
+    "narrative": "The infotainment system will just randomly start going haywire and when it happens, you cannot use the touchscreen. It will try to randomly delete app icons such as the camera, it will try to delete connected phones, it will try to delete radio favorites and it will move app icons all around. These are just a few examples of things that happen.",
+    "received_at": "2025-12-11",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2156317",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2156317",
+    "decided_at": "2025-12-11T07:00:14Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2156317",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "infotainment system will just randomly start going haywire"
+      },
+      {
+        "kind": "symptom",
+        "quote": "you cannot use the touchscreen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "It will try to randomly delete app icons such as the camera"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it will try to delete connected phones"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it will try to delete radio favorites"
+      },
+      {
+        "kind": "symptom",
+        "quote": "it will move app icons all around"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test for intermittent infotainment malfunctions by running a long power-cycling test, because the touchscreen and stored settings randomly fail.",
+    "symptoms": [
+      "infotainment system randomly goes haywire",
+      "touchscreen cannot be used",
+      "app icons are randomly deleted",
+      "connected phones are deleted",
+      "radio favorites are deleted",
+      "app icons are moved around"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2156317",
+    "created_at": "2025-12-11T07:00:12Z",
+    "evidence": [
+      {
+        "quote": "infotainment system will just randomly start going haywire",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "you cannot use the touchscreen",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "It will try to randomly delete app icons such as the camera",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "it will try to delete connected phones",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "it will try to delete radio favorites",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "it will move app icons all around",
+        "source_id": "2156317",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports intermittent electrical behavior: the infotainment system randomly goes haywire, the touchscreen becomes unusable, and app icons, connected phones, and radio favorites are deleted or moved. The rulebook matches the condition \"intermittent\" to the Long-run power cycling test, which is intended to reproduce faults that appear after repeated wake and sleep cycles.",
+    "requested_info": [],
+    "summary": "Test for intermittent infotainment malfunctions by running a long power-cycling test, because the touchscreen and stored settings randomly fail.",
+    "targeted_test": {
+      "conditions": [
+        "intermittent"
+      ],
+      "name": "Long-run power cycling test",
+      "reason": "The narrative reports intermittent electrical behavior: the infotainment system randomly goes haywire, the touchscreen becomes unusable, and app icons, connected phones, and radio favorites are deleted or moved. The rulebook matches the condition \"intermittent\" to the Long-run power cycling test, which is intended to reproduce faults that appear after repeated wake and sleep cycles."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "CAR SHUTS OFF COMPLETELY AT A STOP AND NO POWER AT ALL UNTILL IT IS JUMP STARTED.",
+      "group": "electrical_general",
+      "id": "1717097",
+      "make": "GMC",
+      "model": "TERRAIN",
+      "score": 1.4307,
+      "year": 2018
+    },
+    {
+      "excerpt": "Radio, hands free calling, and light on mirror shorting out. None of them work. It’s like it has a short in the wiring.",
+      "group": "electrical_general",
+      "id": "1819103",
+      "make": "GMC",
+      "model": "TERRAIN",
+      "score": 1.2744,
+      "year": 2018
+    },
+    {
+      "excerpt": "Safety was put at risk when brakes went out without warning, and unable to use emergency brake at that time. Car was serviced for over $1700, with the mechanics stating that the piece “blew up.”",
+      "group": "electrical_general",
+      "id": "1991308",
+      "make": "GMC",
+      "model": "TERRAIN",
+      "score": 1.0877,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-11T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00053545,
+      "duration_ms": 6553,
+      "reason": "Infotainment system randomly malfunctions, disabling touchscreen and deleting/moving icons, phone connections, and radio favorites",
+      "started_at": "2025-12-11T07:00:01Z",
+      "step": 2,
+      "tokens": 1405,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-11T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "TERRAIN",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "CAR SHUTS OFF COMPLETELY AT A STOP AND NO POWER AT ALL UNTILL IT IS JUMP STARTED.",
+            "group": "electrical_general",
+            "id": "1717097",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.4307,
+            "year": 2018
+          },
+          {
+            "excerpt": "Radio, hands free calling, and light on mirror shorting out. None of them work. It’s like it has a short in the wiring.",
+            "group": "electrical_general",
+            "id": "1819103",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.2744,
+            "year": 2018
+          },
+          {
+            "excerpt": "Safety was put at risk when brakes went out without warning, and unable to use emergency brake at that time. Car was serviced for over $1700, with the mechanics stating that the piece “blew up.”",
+            "group": "electrical_general",
+            "id": "1991308",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.0877,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-12-11T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-11T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) in the knowledge base",
+      "started_at": "2025-12-11T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The infotainment system will just randomly start going haywire and when it happens, you cannot use the touchscreen. It will try to randomly delete app icons such as the camera, it will try to delete connected phones, it will try to delete radio favorites and it will move app icons all around. These are just a few examples of things that happen."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "CAR SHUTS OFF COMPLETELY AT A STOP AND NO POWER AT ALL UNTILL IT IS JUMP STARTED.",
+            "group": "electrical_general",
+            "id": "1717097",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.4307,
+            "year": 2018
+          },
+          {
+            "excerpt": "Radio, hands free calling, and light on mirror shorting out. None of them work. It’s like it has a short in the wiring.",
+            "group": "electrical_general",
+            "id": "1819103",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.2744,
+            "year": 2018
+          },
+          {
+            "excerpt": "Safety was put at risk when brakes went out without warning, and unable to use emergency brake at that time. Car was serviced for over $1700, with the mechanics stating that the piece “blew up.”",
+            "group": "electrical_general",
+            "id": "1991308",
+            "make": "GMC",
+            "model": "TERRAIN",
+            "score": 1.0877,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-11T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "GMC",
+        "model": "TERRAIN",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-11T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "GMC",
+        "model": "TERRAIN",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-11T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00074955,
+      "duration_ms": 6105,
+      "reason": "The narrative reports intermittent electrical behavior: the infotainment system randomly goes haywire, the touchscreen becomes unusable, and app icons, connected phones, and radio favorites are deleted or moved. The rulebook matches the condition \"intermittent\" to the Long-run power cycling test, which is intended to reproduce faults that appear after repeated wake and sleep cycles.",
+      "started_at": "2025-12-11T07:00:09Z",
+      "step": 10,
+      "tokens": 2153,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 1 dropped",
+      "started_at": "2025-12-11T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "infotainment system will just randomly start going haywire",
+          "you cannot use the touchscreen",
+          "It will try to randomly delete app icons such as the camera",
+          "it will try to delete connected phones",
+          "it will try to delete radio favorites",
+          "it will move app icons all around",
+          "randomly"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 1,
+        "verified": 6
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-12-11T07:00:11Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-11T07:00:13Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-12-11T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-11T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-11T07:00:17Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

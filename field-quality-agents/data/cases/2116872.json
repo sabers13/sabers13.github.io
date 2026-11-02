@@ -1,0 +1,211 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "group": "instrumentation",
+    "id": "2116872",
+    "make": "ACURA",
+    "mileage": 67000,
+    "model": "TLX",
+    "narrative": "The contact's client owns a 2015 Acura TLX. The contact stated while the client was driving 65 MPH, the vehicle shut down in the middle of traffic. There were no warning lights illuminated. The contact stated that the transmission failed to shift into drive or reverse. Additionally, there was an unknown failure with the brakes and transmission. The contact stated that the failure was related to NHTSA Campaign Number: 23V751000 (Engine and Engine Cooling). The vehicle was towed to the local dealer, where it was diagnosed and determined that the instrument cluster had failed and needed to be replaced. Additionally, the catalytic converter needed to be replaced. The contact stated that the driver suffered a stroke after the failure, and medical attention was provided. The manufacturer was contacted and opened a case. The failure mileage was approximately 67,000.",
+    "received_at": "2025-08-04",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2116872",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2116872",
+    "decided_at": "2025-08-04T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2116872",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL"
+      },
+      {
+        "kind": "condition",
+        "quote": "while the client was driving 65 MPH, the vehicle shut down in the middle of traffic"
+      },
+      {
+        "kind": "symptom",
+        "quote": "There were no warning lights illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the transmission failed to shift into drive or reverse"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the instrument cluster had failed and needed to be replaced"
+      },
+      {
+        "kind": "safety",
+        "quote": "the driver suffered a stroke after the failure"
+      },
+      {
+        "kind": "other",
+        "quote": "the failure was related to NHTSA Campaign Number: 23V751000"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "instrumentation",
+    "safety_relevant": true,
+    "summary": "2015 Acura TLX instrument cluster failure after vehicle shut down at 65 MPH; no warning lights, transmission would not shift into drive/reverse, brake/transmission fault, driver stroke.",
+    "symptoms": [
+      "vehicle shut down while driving at 65 MPH",
+      "no warning lights illuminated",
+      "transmission failed to shift into drive or reverse",
+      "unknown brake and transmission failure",
+      "instrument cluster failed",
+      "driver suffered a stroke after the failure"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2116872",
+    "created_at": "2025-08-04T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-04T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00108685,
+      "duration_ms": 12532,
+      "reason": "2015 Acura TLX instrument cluster failure after vehicle shut down at 65 MPH; no warning lights, transmission would not shift into drive/reverse, brake/transmission fault, driver stroke.",
+      "started_at": "2025-08-04T07:00:01Z",
+      "step": 2,
+      "tokens": 2405,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-08-04T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "ACURA",
+        "model": "TLX",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-08-04T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-08-04T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-04T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-08-04T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-04T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-04T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

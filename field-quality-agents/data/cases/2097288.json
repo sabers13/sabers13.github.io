@@ -1,0 +1,251 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2097288",
+    "make": "NISSAN",
+    "mileage": 113615,
+    "model": "ROGUE",
+    "narrative": "The contact owns a 2015 Nissan Rogue. The contact stated that while starting the vehicle, the air bag warning light was illuminated and blinking. The contact called the independent mechanic where the vehicle was purchased and was informed that the vehicle needed to be serviced. The vehicle was taken to the local dealer where it was diagnosed and determined that the air bags were missing. The vehicle was not repaired. The manufacturer was not contacted. The failure mileage was approximately 113,615.",
+    "received_at": "2025-06-03",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2097288",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2097288",
+    "decided_at": "2025-06-03T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2097288",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "symptom",
+        "quote": "air bag warning light was illuminated and blinking"
+      },
+      {
+        "kind": "condition",
+        "quote": "while starting the vehicle"
+      },
+      {
+        "kind": "safety",
+        "quote": "air bags were missing"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "Air bags: warning light illuminated and blinking while starting; diagnosed as air bags missing.",
+    "symptoms": [
+      "air bag warning light illuminated and blinking",
+      "air bags missing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2097288",
+    "created_at": "2025-06-03T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 Nissan Rogue. The contact stated while driving at an undisclosed speed, the front passenger's side air bag warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the fai...",
+      "group": "restraints",
+      "id": "1974143",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 42.0263,
+      "year": 2015
+    },
+    {
+      "excerpt": "TL* THE CONTACT OWNED A 2015 NISSAN ROGUE. THE CONTACT STATED WHILE DRIVING AT 35 MPH, WHEN ANOTHER VEHICLE RAN A RED LIGHT AND CRASHED INTO THE FRONT PASSENGER SIDE OF THE VEHICLE. THE CONTACT STATED THE AIR BAGS DID NOT DEPLOY AND THE SEAT BELT FAILED TO RETRACT. THE CONTACT SH...",
+      "group": "restraints",
+      "id": "1697797",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 24.7424,
+      "year": 2015
+    },
+    {
+      "excerpt": "The contact owns a 2015 Nissan Rogue. The contact stated that the passenger’s side seat belt failed to extend and seized in the retracted position. The dealer was notified of the failure and provided an estimate for a diagnostic test. The vehicle was not repaired. The failure mil...",
+      "group": "restraints",
+      "id": "1824350",
+      "make": "NISSAN",
+      "model": "ROGUE",
+      "score": 20.5963,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-03T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0008077,
+      "duration_ms": 9684,
+      "reason": "Air bags: warning light illuminated and blinking while starting; diagnosed as air bags missing.",
+      "started_at": "2025-06-03T07:00:01Z",
+      "step": 2,
+      "tokens": 1876,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-03T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "NISSAN",
+        "model": "ROGUE",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Nissan Rogue. The contact stated while driving at an undisclosed speed, the front passenger's side air bag warning light illuminated. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. The manufacturer was made aware of the fai...",
+            "group": "restraints",
+            "id": "1974143",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 42.0263,
+            "year": 2015
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNED A 2015 NISSAN ROGUE. THE CONTACT STATED WHILE DRIVING AT 35 MPH, WHEN ANOTHER VEHICLE RAN A RED LIGHT AND CRASHED INTO THE FRONT PASSENGER SIDE OF THE VEHICLE. THE CONTACT STATED THE AIR BAGS DID NOT DEPLOY AND THE SEAT BELT FAILED TO RETRACT. THE CONTACT SH...",
+            "group": "restraints",
+            "id": "1697797",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 24.7424,
+            "year": 2015
+          },
+          {
+            "excerpt": "The contact owns a 2015 Nissan Rogue. The contact stated that the passenger’s side seat belt failed to extend and seized in the retracted position. The dealer was notified of the failure and provided an estimate for a diagnostic test. The vehicle was not repaired. The failure mil...",
+            "group": "restraints",
+            "id": "1824350",
+            "make": "NISSAN",
+            "model": "ROGUE",
+            "score": 20.5963,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-06-03T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-06-03T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-03T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-06-03T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-03T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-03T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "case": {
+    "component": "EXTERIOR LIGHTING:HAZARD FLASHING WARNING LIGHTS",
+    "group": "lighting",
+    "id": "2111612",
+    "make": "FORD",
+    "mileage": 87000,
+    "model": "EXPLORER",
+    "narrative": "The contact owns a 2012 Ford Explorer. The contact stated that while driving at an undisclosed speed, the contact pressed the hazard warning light icon on the display screen to pull over, but the hazard warning lights were inoperable. The vehicle was taken to the dealer, who determined that an unknown unit in the dashboard needed to be replaced. The vehicle was not repaired. The manufacturer was made aware of the failure. The failure mileage was approximately 87,000.",
+    "received_at": "2025-07-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2111612",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2111612",
+    "decided_at": "2025-07-18T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2111612",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "hazard warning light icon on the display screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the hazard warning lights were inoperable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "pressed the hazard warning light icon on the display screen to pull over"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "other",
+        "quote": "an unknown unit in the dashboard needed to be replaced"
+      },
+      {
+        "kind": "safety",
+        "quote": "to pull over"
+      }
+    ],
+    "conditions": [
+      "while driving at an undisclosed speed",
+      "hazard warning light icon pressed on the display screen"
+    ],
+    "fault_codes": [],
+    "group": "lighting",
+    "safety_relevant": true,
+    "summary": "Test the hazard warning light function because the display-screen hazard icon did not activate the lights while driving, and the dealer identified an unknown dashboard unit.",
+    "symptoms": [
+      "hazard warning lights inoperable when the display-screen hazard icon is pressed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2111612",
+    "created_at": "2025-07-18T07:00:41Z",
+    "evidence": [
+      {
+        "quote": "hazard warning light icon on the display screen",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the hazard warning lights were inoperable",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "pressed the hazard warning light icon on the display screen to pull over",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "while driving at an undisclosed speed",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "an unknown unit in the dashboard needed to be replaced",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "to pull over",
+        "source_id": "2111612",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "No rulebook entry, recall, or investigation match was returned. The narrative reports that pressing the hazard warning light icon on the display screen while driving did not make the hazard warning lights operate, and the dealer determined that an unknown dashboard unit needed replacement. A similar 2012 Explorer case in the results also describes a nonfunctional hazard light switch. Because the hazard lights were inoperable when the driver intended to pull over, the case is treated as safety-relevant and should be reviewed by a human before any test is booked.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Hazard Light switch is not functional. Hazard lights that are inoperable causes high risk for vehicle occupants and others on the road when traffic flow is altered. The issue has been reproduced by the dealer and another repair shop. The main symptom is the ability to not turn on...",
+      "group": "lighting",
+      "id": "1811416",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 1.9984,
+      "year": 2012
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-18T07:00:30Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00122305,
+      "duration_ms": 15064,
+      "reason": "2012 Ford Explorer exterior lighting/hazard warning lights; hazard lights inoperable when icon pressed while driving; dealer says unknown dashboard unit needs replacement.",
+      "started_at": "2025-07-18T07:00:31Z",
+      "step": 2,
+      "tokens": 2578,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-07-18T07:00:32Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hazard Light switch is not functional. Hazard lights that are inoperable causes high risk for vehicle occupants and others on the road when traffic flow is altered. The issue has been reproduced by the dealer and another repair shop. The main symptom is the ability to not turn on...",
+            "group": "lighting",
+            "id": "1811416",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 1.9984,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-07-18T07:00:33Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-07-18T07:00:34Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-07-18T07:00:35Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2012 Ford Explorer. The contact stated that while driving at an undisclosed speed, the contact pressed the hazard warning light icon on the display screen to pull over, but the hazard warning lights were inoperable. The vehicle was taken to the dealer, who determined that an unknown unit in the dashboard needed to be replaced. The vehicle was not repaired. The manufacturer was made aware of the failure. The failure mileage was approximately 87,000."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Hazard Light switch is not functional. Hazard lights that are inoperable causes high risk for vehicle occupants and others on the road when traffic flow is altered. The issue has been reproduced by the dealer and another repair shop. The main symptom is the ability to not turn on...",
+            "group": "lighting",
+            "id": "1811416",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 1.9984,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-07-18T07:00:36Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-07-18T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "lighting",
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-07-18T07:00:38Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00125535,
+      "duration_ms": 13980,
+      "reason": "No rulebook entry, recall, or investigation match was returned. The narrative reports that pressing the hazard warning light icon on the display screen while driving did not make the hazard warning lights operate, and the dealer determined that an unknown dashboard unit needed replacement. A similar 2012 Explorer case in the results also describes a nonfunctional hazard light switch. Because the hazard lights were inoperable when the driver intended to pull over, the case is treated as safety-relevant and should be reviewed by a human before any test is booked.",
+      "started_at": "2025-07-18T07:00:39Z",
+      "step": 10,
+      "tokens": 2810,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-07-18T07:00:40Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "hazard warning light icon on the display screen",
+          "the hazard warning lights were inoperable",
+          "pressed the hazard warning light icon on the display screen to pull over",
+          "while driving at an undisclosed speed",
+          "an unknown unit in the dashboard needed to be replaced",
+          "to pull over"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-18T07:00:42Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-18T07:00:44Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-18T07:00:45Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-18T07:00:46Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,547 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "group": "adas",
+    "id": "2103775",
+    "make": "POLESTAR",
+    "mileage": null,
+    "model": "POLESTAR 2",
+    "narrative": "Backup camera often displays message \"Camera Temporarily Unavailable\".  This has been an ongoing problem, and I have the most updated software 3.6.4.  I received a recall notice (25V-280) that outlines this problem, but it states that my car is ineligible because I have the latest software.    In fact, the problem is WORSE with the latest software. This issue happens virtually every time I put the car into reverse. On prior software versions, the problem existed but was not as pronounced.",
+    "received_at": "2025-06-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2103775",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2103775",
+    "decided_at": "2025-06-25T07:00:33Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2103775",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "Camera Temporarily Unavailable"
+      },
+      {
+        "kind": "symptom",
+        "quote": "This issue happens virtually every time I put the car into reverse."
+      },
+      {
+        "kind": "condition",
+        "quote": "I have the most updated software 3.6.4."
+      },
+      {
+        "kind": "other",
+        "quote": "the problem is WORSE with the latest software"
+      },
+      {
+        "kind": "other",
+        "quote": "I received a recall notice (25V-280)"
+      },
+      {
+        "kind": "condition",
+        "quote": "On prior software versions, the problem existed but was not as pronounced."
+      }
+    ],
+    "conditions": [
+      "Vehicle put into reverse",
+      "Software version 3.6.4 installed",
+      "Recall 25V-280 notice received but vehicle stated ineligible"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": false,
+    "summary": "Test the backup camera on a 2022 Polestar 2 that repeatedly shows 'Camera Temporarily Unavailable' when reversing on software 3.6.4.",
+    "symptoms": [
+      "Backup camera displays 'Camera Temporarily Unavailable'",
+      "Camera unavailable virtually every time the car is put into reverse",
+      "Problem worse on latest software 3.6.4"
+    ]
+  },
+  "investigations": [
+    {
+      "id": "RQ25004",
+      "match": true,
+      "open_date": "2025-07-09",
+      "summary": "On July 9, 2025, the Office of Defects Investigation (ODI) opened Recall Query (RQ) 25004 to investigate and review the effectiveness of the remedy for Recall 25V-280.Polestar initiated Recall 25V-280 to address shortcomings in the remedy for Recall 24V-477, which intended to address rear camera outage conditions. Consumer complaint traffic reporting rear-view camera outages after receiving the remedy for 25V-280prompted the RQ opening. On July 7, 2024, Polestar initiated Recall 24V-477 to address issues with the rear-view camera display in certain Model Year (MY) 2021-2024 Polestar 2 vehicles. According to Polestar, this failure was due to a memory allocation error in the IHU. To address this error, the remedy, provided by an over-the-air (OTA) software update , shortened the retry times of the camera streams and removed the rendering of the map in the driver display during backing events to release the graphic memory for the rear-view camera. On April 25, 2025, Polestar initiated Recall 25V-280 to address similar issues with the rear-view camera display in certain MY 2021-2025 Polestar 2 vehicles. The recall remedy consisted of an OTA software update intended to correct a synchronization error between the Parking Assist Camera (PAC) and the Infotainment Head Unit (IHU). The updated software would maintain the high-speed signal connection between the PAC and IHU, instead of toggling on and off by request. ODI has received two hundred seventy-five (275) Vehicle Owner Questionnaires (VOQ) alleging failure of the rear-view camera to display after receiving the remedy for Recall 25V-280. Consumers reported that the rear-view camera failed to display once the vehicle was initially placed in reverse, as well as losing the rear-view image while the vehicle was traveling in reverse . Failure to display the rearview image will reduce the driver’s visibility in a backing event, increasing the risk of a crash. On July 18, 2025, ODI sent Polestar an Information Request (IR) letter requesting data for vehicle production, field incidents, and any modifications related to the backup camera and its software. ODI also requested information pertaining to Polestar’s internal assessments, problem resolutions, and their assessment of the alleged defect. On September 15, 2025, Polestar issued Recall 25V-615, which sought to remedy the failure of Recall 25V-280. Polestar acknowledged that the prior remedy was insufficient and that further engineering analysis would be required for final software development and validation. Polestar worked with its supplier (Volvo) and began validation of the new software in February 2026. On April 20, 2026, Polestar released the remedy for Recall 25V-615 via an OTA software update. The update provided general stability improvements to the operating system, as well as bug fixes for the rear-view camera. Since the deployment of the 25V-615 remedy, ODI has received only 3 VOQs alleging a rear camera outage, yielding a complaint rate of 0.01% for Recall 25V-615. ODI assessed the conditions that led to the 25V-280 remedy failures and the countermeasures deployed to prevent recurrence in vehicles that received the remedy for 25V-615. To measure its efficacy, ODI analyzed materials produced by Polestar in its responses to ODI’s July 18, 2025, IR letter and additional materials Polestar furnished in response to email requests and a technical meeting in 2026.ODI also reviewed information Polestar provided in response to another IR letter NHTSA sent on March 25, 2026, requesting additional information related to the decision-making process for correcting the remedy failure of Recall 25V-280. On June 10, 2026, at the request of ODI, Polestar presented a technical briefing of the remedy for Recall 25V-615, which included both completion rates and remedy failure counts. ODI has monitored the remedy for Recall 25V-615 since April 2026 and has observed the failure rate to remain low. ODI is closing this RQ following manufacturer action in the form of Recall 25V-615. The Agency will continue to monitor the remedy and reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov."
+    }
+  ],
+  "proposal": {
+    "case_id": "2103775",
+    "created_at": "2025-06-25T07:00:31Z",
+    "evidence": [
+      {
+        "quote": "Camera Temporarily Unavailable",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "This issue happens virtually every time I put the car into reverse.",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I have the most updated software 3.6.4.",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the problem is WORSE with the latest software",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "I received a recall notice (25V-280)",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "On prior software versions, the problem existed but was not as pronounced.",
+        "source_id": "2103775",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports the camera-unavailable message almost every time reverse is engaged, persists despite the latest software 3.6.4, and is worse than on prior software; the vehicle also references recall 25V-280. No rulebook entry matches, so the standard backup-camera operation test is appropriate rather than a targeted rulebook test.",
+    "requested_info": [],
+    "summary": "Test the backup camera on a 2022 Polestar 2 that repeatedly shows 'Camera Temporarily Unavailable' when reversing on software 3.6.4.",
+    "targeted_test": null
+  },
+  "recalls": [
+    {
+      "id": "25V615000",
+      "match": true,
+      "open_date": "2025-09-15",
+      "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2025 Polestar 2 vehicles. The rearview camera image may not display when the vehicle is placed in reverse."
+    },
+    {
+      "id": "25V280000",
+      "match": true,
+      "open_date": "2025-04-25",
+      "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2025 Polestar 2 vehicles.  The rearview camera image may not display when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+    },
+    {
+      "id": "24V477000",
+      "match": true,
+      "open_date": "2024-06-26",
+      "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2024 Polestar 2 vehicles.  The Infotainment Head Unit (IHU) software may prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+    }
+  ],
+  "similar_cases": [
+    {
+      "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+      "group": "adas",
+      "id": "2030284",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 6.3012,
+      "year": 2022
+    },
+    {
+      "excerpt": "The backup camera has frequent delays in activating -- approximately 5 seconds and regularly shows an error message with a black screen stating that the \"camera is temporarily unavailable.\" I'm providing documentation from a November 22nd incident, but it happens more frequently.",
+      "group": "adas",
+      "id": "2047431",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 6.025,
+      "year": 2022
+    },
+    {
+      "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+      "group": "adas",
+      "id": "2033379",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 5.3406,
+      "year": 2022
+    },
+    {
+      "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+      "group": "adas",
+      "id": "2033380",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 5.3406,
+      "year": 2022
+    },
+    {
+      "excerpt": "Constantly displaying camera is temporary unavailable when I go in reverse. I am short and the hatchback feature makes it so I can’t see behind me. This happens multiple times a day. 9/10 times I can guarantee I get this message when I reverse",
+      "group": "adas",
+      "id": "2011737",
+      "make": "POLESTAR",
+      "model": "POLESTAR 2",
+      "score": 4.4144,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-25T07:00:20Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016372,
+      "duration_ms": 22067,
+      "reason": "Backup camera shows \"Camera Temporarily Unavailable\" almost every time reversing, worse on latest software 3.6.4.",
+      "started_at": "2025-06-25T07:00:21Z",
+      "step": 2,
+      "tokens": 3275,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-06-25T07:00:22Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+            "group": "adas",
+            "id": "2030284",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.3012,
+            "year": 2022
+          },
+          {
+            "excerpt": "The backup camera has frequent delays in activating -- approximately 5 seconds and regularly shows an error message with a black screen stating that the \"camera is temporarily unavailable.\" I'm providing documentation from a November 22nd incident, but it happens more frequently.",
+            "group": "adas",
+            "id": "2047431",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.025,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033379",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 5.3406,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-06-25T07:00:23Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-25T07:00:24Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-06-25T07:00:25Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "Backup camera often displays message \"Camera Temporarily Unavailable\".  This has been an ongoing problem, and I have the most updated software 3.6.4.  I received a recall notice (25V-280) that outlines this problem, but it states that my car is ineligible because I have the latest software.    In fact, the problem is WORSE with the latest software. This issue happens virtually every time I put the car into reverse. On prior software versions, the problem existed but was not as pronounced."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Since the latest software update, rear view camera is occasionally unavailable. I have the latest software installed on the car. Since this happens occasionally and I live about an hour away from the service center, I didn't take it to the service center. Before the latest softwa...",
+            "group": "adas",
+            "id": "2030284",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.3012,
+            "year": 2022
+          },
+          {
+            "excerpt": "The backup camera has frequent delays in activating -- approximately 5 seconds and regularly shows an error message with a black screen stating that the \"camera is temporarily unavailable.\" I'm providing documentation from a November 22nd incident, but it happens more frequently.",
+            "group": "adas",
+            "id": "2047431",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 6.025,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033379",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 5.3406,
+            "year": 2022
+          },
+          {
+            "excerpt": "Backup camera fails to activate instead a message on the screen appears saying 'Camera is temporary unavailable'. Without cameras it's difficult to see directly behind the car and around blind spots endangering pedestrians. This occurs at least once a week and I've started docume...",
+            "group": "adas",
+            "id": "2033380",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 5.3406,
+            "year": 2022
+          },
+          {
+            "excerpt": "Constantly displaying camera is temporary unavailable when I go in reverse. I am short and the hatchback feature makes it so I can’t see behind me. This happens multiple times a day. 9/10 times I can guarantee I get this message when I reverse",
+            "group": "adas",
+            "id": "2011737",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "score": 4.4144,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-25T07:00:26Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION:SOFTWARE",
+            "group": "adas",
+            "id": "25V615000",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "open_date": "2025-09-15",
+            "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2025 Polestar 2 vehicles. The rearview camera image may not display when the vehicle is placed in reverse.",
+            "year": 2022
+          },
+          {
+            "component": "BACK OVER PREVENTION:SOFTWARE",
+            "group": "adas",
+            "id": "25V280000",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "open_date": "2025-04-25",
+            "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2025 Polestar 2 vehicles.  The rearview camera image may not display when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+            "year": 2022
+          },
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "24V477000",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "open_date": "2024-06-26",
+            "summary": "Polestar Automotive USA, Inc. (Polestar) is recalling certain 2021-2024 Polestar 2 vehicles.  The Infotainment Head Unit (IHU) software may prevent the rearview camera image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-25T07:00:27Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "adas",
+        "make": "POLESTAR",
+        "model": "POLESTAR 2",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+            "group": "adas",
+            "id": "RQ25004",
+            "make": "POLESTAR",
+            "model": "POLESTAR 2",
+            "open_date": "2025-07-09",
+            "summary": "On July 9, 2025, the Office of Defects Investigation (ODI) opened Recall Query (RQ) 25004 to investigate and review the effectiveness of the remedy for Recall 25V-280.Polestar initiated Recall 25V-280 to address shortcomings in the remedy for Recall 24V-477, which intended to address rear camera outage conditions. Consumer complaint traffic reporting rear-view camera outages after receiving the remedy for 25V-280prompted the RQ opening. On July 7, 2024, Polestar initiated Recall 24V-477 to address issues with the rear-view camera display in certain Model Year (MY) 2021-2024 Polestar 2 vehicles. According to Polestar, this failure was due to a memory allocation error in the IHU. To address this error, the remedy, provided by an over-the-air (OTA) software update , shortened the retry times of the camera streams and removed the rendering of the map in the driver display during backing events to release the graphic memory for the rear-view camera. On April 25, 2025, Polestar initiated Recall 25V-280 to address similar issues with the rear-view camera display in certain MY 2021-2025 Polestar 2 vehicles. The recall remedy consisted of an OTA software update intended to correct a synchronization error between the Parking Assist Camera (PAC) and the Infotainment Head Unit (IHU). The updated software would maintain the high-speed signal connection between the PAC and IHU, instead of toggling on and off by request. ODI has received two hundred seventy-five (275) Vehicle Owner Questionnaires (VOQ) alleging failure of the rear-view camera to display after receiving the remedy for Recall 25V-280. Consumers reported that the rear-view camera failed to display once the vehicle was initially placed in reverse, as well as losing the rear-view image while the vehicle was traveling in reverse . Failure to display the rearview image will reduce the driver’s visibility in a backing event, increasing the risk of a crash. On July 18, 2025, ODI sent Polestar an Information Request (IR) letter requesting data for vehicle production, field incidents, and any modifications related to the backup camera and its software. ODI also requested information pertaining to Polestar’s internal assessments, problem resolutions, and their assessment of the alleged defect. On September 15, 2025, Polestar issued Recall 25V-615, which sought to remedy the failure of Recall 25V-280. Polestar acknowledged that the prior remedy was insufficient and that further engineering analysis would be required for final software development and validation. Polestar worked with its supplier (Volvo) and began validation of the new software in February 2026. On April 20, 2026, Polestar released the remedy for Recall 25V-615 via an OTA software update. The update provided general stability improvements to the operating system, as well as bug fixes for the rear-view camera. Since the deployment of the 25V-615 remedy, ODI has received only 3 VOQs alleging a rear camera outage, yielding a complaint rate of 0.01% for Recall 25V-615. ODI assessed the conditions that led to the 25V-280 remedy failures and the countermeasures deployed to prevent recurrence in vehicles that received the remedy for 25V-615. To measure its efficacy, ODI analyzed materials produced by Polestar in its responses to ODI’s July 18, 2025, IR letter and additional materials Polestar furnished in response to email requests and a technical meeting in 2026.ODI also reviewed information Polestar provided in response to another IR letter NHTSA sent on March 25, 2026, requesting additional information related to the decision-making process for correcting the remedy failure of Recall 25V-280. On June 10, 2026, at the request of ODI, Polestar presented a technical briefing of the remedy for Recall 25V-615, which included both completion rates and remedy failure counts. ODI has monitored the remedy for Recall 25V-615 since April 2026 and has observed the failure rate to remain low. ODI is closing this RQ following manufacturer action in the form of Recall 25V-615. The Agency will continue to monitor the remedy and reserves the right to take additional action if warranted by future circumstances. To review the ODI reports cited in the Closing Resume ODI Report Identification Number document, go to NHTSA.gov.",
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-25T07:00:28Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00189585,
+      "duration_ms": 24973,
+      "reason": "The narrative reports the camera-unavailable message almost every time reverse is engaged, persists despite the latest software 3.6.4, and is worse than on prior software; the vehicle also references recall 25V-280. No rulebook entry matches, so the standard backup-camera operation test is appropriate rather than a targeted rulebook test.",
+      "started_at": "2025-06-25T07:00:29Z",
+      "step": 10,
+      "tokens": 5304,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-06-25T07:00:30Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Camera Temporarily Unavailable",
+          "This issue happens virtually every time I put the car into reverse.",
+          "I have the most updated software 3.6.4.",
+          "the problem is WORSE with the latest software",
+          "I received a recall notice (25V-280)",
+          "On prior software versions, the problem existed but was not as pronounced."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-25T07:00:32Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-25T07:00:34Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-25T07:00:35Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-25T07:00:36Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

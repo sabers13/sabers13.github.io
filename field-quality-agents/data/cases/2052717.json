@@ -1,0 +1,407 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2052717",
+    "make": "BMW",
+    "mileage": null,
+    "model": "428I",
+    "narrative": "The contact owns a 2015 BMW 428I. The contact received notification of NHTSA Campaign Number: 24V608000 (Engine and Engine Cooling, Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was contacted and confirmed that parts were not yet available. The manufacturer was not made aware of the issue. The contact had not experienced a failure. VIN tool confirms parts not available.",
+    "received_at": "2025-01-02",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2052717",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2052717",
+    "decided_at": "2025-01-02T07:00:29Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2052717",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Electrical System"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The contact had not experienced a failure."
+      },
+      {
+        "kind": "condition",
+        "quote": "manufacturer had exceeded a reasonable amount of time for the recall repair"
+      },
+      {
+        "kind": "other",
+        "quote": "The dealer was contacted and confirmed that parts were not yet available."
+      }
+    ],
+    "conditions": [
+      "recall repair parts unavailable",
+      "manufacturer exceeded reasonable time for recall repair"
+    ],
+    "fault_codes": [
+      "24V608000"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "No failure has been reported; with recall repair parts unavailable, perform a standard electrical system functional check rather than a targeted load test.",
+    "symptoms": [
+      "no failure reported"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2052717",
+    "created_at": "2025-01-02T07:00:27Z",
+    "evidence": [
+      {
+        "quote": "Electrical System",
+        "source_id": "2052717",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The contact had not experienced a failure.",
+        "source_id": "2052717",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "manufacturer had exceeded a reasonable amount of time for the recall repair",
+        "source_id": "2052717",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The dealer was contacted and confirmed that parts were not yet available.",
+        "source_id": "2052717",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports an electrical-system recall campaign and says the contact had not experienced a failure. The dealer confirmed parts were not yet available, and the manufacturer exceeded a reasonable time for the recall repair. No rulebook entry matched, so no targeted test is justified.",
+    "requested_info": [],
+    "summary": "No failure has been reported; with recall repair parts unavailable, perform a standard electrical system functional check rather than a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2014 BMW 428I. The contact stated while driving at an undisclosed speed, the contact noticed a smoky odor coming from the vehicle and the contact noticed smoke coming from the engine compartment. The contact pulled the vehicle over and turned the vehicle off. T...",
+      "group": "electrical_general",
+      "id": "2051958",
+      "make": "BMW",
+      "model": "428I",
+      "score": 23.4194,
+      "year": 2015
+    },
+    {
+      "excerpt": "The water pump electrical connector on my 2015 BMW 428i failed, as identified in Recall Campaign No. 24V-608. This defect caused repeated engine overheating, leading to damage to the oil pan gasket and valve cover gaskets. An independent service center confirmed the damage was du...",
+      "group": "electrical_general",
+      "id": "2039594",
+      "make": "BMW",
+      "model": "428I",
+      "score": 4.9651,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-02T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00083365,
+      "duration_ms": 16650,
+      "reason": "Electrical system recall 24V608000 on 2015 BMW 428I; repair parts unavailable; no failure experienced.",
+      "started_at": "2025-01-02T07:00:16Z",
+      "step": 2,
+      "tokens": 1926,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-01-02T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BMW",
+        "model": "428I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2014 BMW 428I. The contact stated while driving at an undisclosed speed, the contact noticed a smoky odor coming from the vehicle and the contact noticed smoke coming from the engine compartment. The contact pulled the vehicle over and turned the vehicle off. T...",
+            "group": "electrical_general",
+            "id": "2051958",
+            "make": "BMW",
+            "model": "428I",
+            "score": 23.4194,
+            "year": 2015
+          },
+          {
+            "excerpt": "The water pump electrical connector on my 2015 BMW 428i failed, as identified in Recall Campaign No. 24V-608. This defect caused repeated engine overheating, leading to damage to the oil pan gasket and valve cover gaskets. An independent service center confirmed the damage was du...",
+            "group": "electrical_general",
+            "id": "2039594",
+            "make": "BMW",
+            "model": "428I",
+            "score": 4.9651,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-02T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-01-02T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) in the knowledge base",
+      "started_at": "2025-01-02T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2015 BMW 428I. The contact received notification of NHTSA Campaign Number: 24V608000 (Engine and Engine Cooling, Electrical System); however, the part to do the recall repair was unavailable. The contact stated that the manufacturer had exceeded a reasonable amount of time for the recall repair. The dealer was contacted and confirmed that parts were not yet available. The manufacturer was not made aware of the issue. The contact had not experienced a failure. VIN tool confirms"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2014 BMW 428I. The contact stated while driving at an undisclosed speed, the contact noticed a smoky odor coming from the vehicle and the contact noticed smoke coming from the engine compartment. The contact pulled the vehicle over and turned the vehicle off. T...",
+            "group": "electrical_general",
+            "id": "2051958",
+            "make": "BMW",
+            "model": "428I",
+            "score": 23.4194,
+            "year": 2015
+          },
+          {
+            "excerpt": "The water pump electrical connector on my 2015 BMW 428i failed, as identified in Recall Campaign No. 24V-608. This defect caused repeated engine overheating, leading to damage to the oil pan gasket and valve cover gaskets. An independent service center confirmed the damage was du...",
+            "group": "electrical_general",
+            "id": "2039594",
+            "make": "BMW",
+            "model": "428I",
+            "score": 4.9651,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-01-02T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "428I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-01-02T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "BMW",
+        "model": "428I",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-01-02T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00133755,
+      "duration_ms": 19768,
+      "reason": "The narrative reports an electrical-system recall campaign and says the contact had not experienced a failure. The dealer confirmed parts were not yet available, and the manufacturer exceeded a reasonable time for the recall repair. No rulebook entry matched, so no targeted test is justified.",
+      "started_at": "2025-01-02T07:00:24Z",
+      "step": 10,
+      "tokens": 3007,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "4 verified, 1 dropped",
+      "started_at": "2025-01-02T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "Electrical System",
+          "the part to the recall repair was unavailable",
+          "The contact had not experienced a failure.",
+          "manufacturer had exceeded a reasonable amount of time for the recall repair",
+          "The dealer was contacted and confirmed that parts were not yet available."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 1,
+        "verified": 4
+      }
+    },
+    {
+      "action": "drop_unverified_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 clue(s) failed quote verification and are not evidence",
+      "started_at": "2025-01-02T07:00:26Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-02T07:00:28Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-01-02T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-02T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-02T07:00:32Z",
+      "step": 16,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

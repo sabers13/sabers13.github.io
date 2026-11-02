@@ -1,0 +1,282 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2058957",
+    "make": "FORD",
+    "mileage": null,
+    "model": "BRONCO SPORT",
+    "narrative": "This has been an ongoing issue since I purchased the vehicle in July 2024.  It has become so bad  that the vehicle is nearly un-driveable.   FORD states it is a non-issue, non safety related and there is no know fix at this time.  FORD has been buying vehicles back due to this \"secret recall\" but after numerous calls and visits to both dealers and the Ford customer care line, nothing is being done.  And while FORD might state it is an \"inconvenience\", when driving on the highway and a cylinder just randomly shuts down, the vehicle loses power and backfires and vibrates it is a safety concern.  I have been EXTREMELY patience and professional in all my dealings with FORD on this matter, yet they refuse to offer me any help or come to a resolution in my case.",
+    "received_at": "2025-01-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2058957",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2058957",
+    "decided_at": "2025-01-23T07:00:53Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2058957",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "condition",
+        "quote": "This has been an ongoing issue since I purchased the vehicle in July 2024."
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle is nearly un-driveable"
+      },
+      {
+        "kind": "condition",
+        "quote": "when driving on the highway"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a cylinder just randomly shuts down"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle loses power and backfires and vibrates"
+      },
+      {
+        "kind": "safety",
+        "quote": "it is a safety concern"
+      }
+    ],
+    "conditions": [
+      "highway driving",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: intermittent cylinder shutdown at highway speed causing loss of power, backfire and vibration; ongoing since July 2024.",
+    "symptoms": [
+      "cylinder randomly shuts down",
+      "loss of power",
+      "backfires",
+      "vibrates",
+      "nearly undriveable"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2058957",
+    "created_at": "2025-01-23T07:00:51Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Recall notice 24S24 was completed on 6/14/2024 as notified. However, due to the recall vehicle did not notify me of low battery issue. Since low battery alert was never indicated at any time, I did not have the opportunity to replace with a fresh battery (which would have been do...",
+      "group": "electrical_general",
+      "id": "2006086",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 24.0812,
+      "year": 2021
+    },
+    {
+      "excerpt": "This vehicle is just two years old and has 38,000 miles. Meticulously maintained from day one. It is equipped with the start/stop feature. On July 8, 2023 when stopping for traffic at a U-turn lane on a heavy traveled highway the engine shut off and the entire vehicle went dead,...",
+      "group": "electrical_general",
+      "id": "1908231",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 21.2633,
+      "year": 2021
+    },
+    {
+      "excerpt": "I am currently on my Third battery. Prior to getting this third car battery, there was numerous electrical issues randomly occurring. I read that there is a current investigation going on with Bronco Sports just stopping, could it be batteries failing and not being g detected?? J...",
+      "group": "electrical_general",
+      "id": "1965044",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 20.7472,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-23T07:00:45Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013129,
+      "duration_ms": 20266,
+      "reason": "Electrical system: intermittent cylinder shutdown at highway speed causing loss of power, backfire and vibration; ongoing since July 2024.",
+      "started_at": "2025-01-23T07:00:46Z",
+      "step": 2,
+      "tokens": 2781,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-01-23T07:00:47Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Recall notice 24S24 was completed on 6/14/2024 as notified. However, due to the recall vehicle did not notify me of low battery issue. Since low battery alert was never indicated at any time, I did not have the opportunity to replace with a fresh battery (which would have been do...",
+            "group": "electrical_general",
+            "id": "2006086",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 24.0812,
+            "year": 2021
+          },
+          {
+            "excerpt": "This vehicle is just two years old and has 38,000 miles. Meticulously maintained from day one. It is equipped with the start/stop feature. On July 8, 2023 when stopping for traffic at a U-turn lane on a heavy traveled highway the engine shut off and the entire vehicle went dead,...",
+            "group": "electrical_general",
+            "id": "1908231",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 21.2633,
+            "year": 2021
+          },
+          {
+            "excerpt": "I am currently on my Third battery. Prior to getting this third car battery, there was numerous electrical issues randomly occurring. I read that there is a current investigation going on with Bronco Sports just stopping, could it be batteries failing and not being g detected?? J...",
+            "group": "electrical_general",
+            "id": "1965044",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 20.7472,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-01-23T07:00:48Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-01-23T07:00:49Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-01-23T07:00:50Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-23T07:00:52Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-01-23T07:00:54Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-23T07:00:55Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-01-23T07:00:56Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

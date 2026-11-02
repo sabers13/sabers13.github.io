@@ -1,0 +1,352 @@
+{
+  "case": {
+    "component": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+    "group": "safety_systems",
+    "id": "2133849",
+    "make": "TOYOTA",
+    "mileage": 90200,
+    "model": "HIGHLANDER",
+    "narrative": "The contact owns a 2012 Toyota Highlander. The contact stated that the TPMS warning light was illuminated. The vehicle was taken to a Tire Center, which was unable to determine the cause of the failure. Upon further investigation, the contact linked the failure to NHTSA Campaign Number: 24V452000 (Tires). The local dealer was not contacted. The vehicle was not diagnosed or repaired. The manufacturer was contacted and referred the contact to the NHTSA Hotline. The failure mileage was approximately 90,200.",
+    "received_at": "2025-09-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2133849",
+    "status": "decided",
+    "year": 2012
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2133849",
+    "decided_at": "2025-09-25T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2133849",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "TPMS warning light was illuminated"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 24V452000"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was approximately 90,200."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [
+      "24V452000"
+    ],
+    "group": "safety_systems",
+    "safety_relevant": false,
+    "summary": "Run a standard TPMS diagnostic on the 2012 Toyota Highlander because the TPMS warning lamp is illuminated and the cause remains undetermined.",
+    "symptoms": [
+      "TPMS warning light illuminated"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2133849",
+    "created_at": "2025-09-25T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "TPMS warning light was illuminated",
+        "source_id": "2133849",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "NHTSA Campaign Number: 24V452000",
+        "source_id": "2133849",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The failure mileage was approximately 90,200.",
+        "source_id": "2133849",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports an illuminated TPMS warning light at about 90,200 miles, a tire center unable to determine the cause, and the owner linking the issue to NHTSA Campaign Number 24V452000. No rulebook entry supports a targeted load test, so the standard TPMS diagnostic is appropriate.",
+    "requested_info": [],
+    "summary": "Run a standard TPMS diagnostic on the 2012 Toyota Highlander because the TPMS warning lamp is illuminated and the cause remains undetermined.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "2012 TOYOTA HIGHLANDER. CONSUMER WRITES REGARDING A DEFECT WITH TIRE PRESSURE MONITOR. *LD THE CONSUMER STATED THE TIRE PRESSURE WARNING LIGHT WAS ILLUMINATED, BUT THE TIRES ARE ALL AT THE CORRECT PRESSURE LEVELS. THE CONSUMER REQUESTED TO HAVE THE TPMS DEACTIVATED UNTIL A FIX WA...",
+      "group": "safety_systems",
+      "id": "1723335",
+      "make": "TOYOTA",
+      "model": "HIGHLANDER",
+      "score": 2.9847,
+      "year": 2012
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000703,
+      "duration_ms": 7276,
+      "reason": "TPMS warning light illuminated on a 2012 Toyota Highlander at about 90,200 miles; cause undetermined and linked to NHTSA campaign 24V452000.",
+      "started_at": "2025-09-25T07:00:01Z",
+      "step": 2,
+      "tokens": 1724,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-09-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "TOYOTA",
+        "model": "HIGHLANDER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2012 TOYOTA HIGHLANDER. CONSUMER WRITES REGARDING A DEFECT WITH TIRE PRESSURE MONITOR. *LD THE CONSUMER STATED THE TIRE PRESSURE WARNING LIGHT WAS ILLUMINATED, BUT THE TIRES ARE ALL AT THE CORRECT PRESSURE LEVELS. THE CONSUMER REQUESTED TO HAVE THE TPMS DEACTIVATED UNTIL A FIX WA...",
+            "group": "safety_systems",
+            "id": "1723335",
+            "make": "TOYOTA",
+            "model": "HIGHLANDER",
+            "score": 2.9847,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-09-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-09-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-09-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2012 Toyota Highlander. The contact stated that the TPMS warning light was illuminated. The vehicle was taken to a Tire Center, which was unable to determine the cause of the failure. Upon further investigation, the contact linked the failure to NHTSA Campaign Number: 24V452000 (Tires). The local dealer was not contacted. The vehicle was not diagnosed or repaired. The manufacturer was contacted and referred the contact to the NHTSA Hotline. The failure mileage was approximatel"
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "2012 TOYOTA HIGHLANDER. CONSUMER WRITES REGARDING A DEFECT WITH TIRE PRESSURE MONITOR. *LD THE CONSUMER STATED THE TIRE PRESSURE WARNING LIGHT WAS ILLUMINATED, BUT THE TIRES ARE ALL AT THE CORRECT PRESSURE LEVELS. THE CONSUMER REQUESTED TO HAVE THE TPMS DEACTIVATED UNTIL A FIX WA...",
+            "group": "safety_systems",
+            "id": "1723335",
+            "make": "TOYOTA",
+            "model": "HIGHLANDER",
+            "score": 2.9847,
+            "year": 2012
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-09-25T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "TOYOTA",
+        "model": "HIGHLANDER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-09-25T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "TOYOTA",
+        "model": "HIGHLANDER",
+        "year": 2012
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-09-25T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00069615,
+      "duration_ms": 5987,
+      "reason": "The narrative reports an illuminated TPMS warning light at about 90,200 miles, a tire center unable to determine the cause, and the owner linking the issue to NHTSA Campaign Number 24V452000. No rulebook entry supports a targeted load test, so the standard TPMS diagnostic is appropriate.",
+      "started_at": "2025-09-25T07:00:09Z",
+      "step": 10,
+      "tokens": 1911,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-09-25T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "TPMS warning light was illuminated",
+          "NHTSA Campaign Number: 24V452000",
+          "The failure mileage was approximately 90,200."
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-25T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-09-25T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-25T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-25T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

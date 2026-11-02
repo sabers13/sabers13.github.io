@@ -1,0 +1,197 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2111751",
+    "make": "KIA",
+    "mileage": null,
+    "model": "NIRO",
+    "narrative": "I was driving my 2023 Kia Niro PHEV into my garage after running an errand, going very slowly. Suddenly the vehicle--all on its own--surged forward, slammed into the rear wall (triggering air bags), ricocheted backward across the street, and struck a neighbor's fence. I was able to get out of the car but I was in shock; paramedics were called. Ultimately, my injuries were found to be limited to bruised ribs, but it has been very painful and limiting.  The vehicle was towed to a repair shop where it was pronounced a total loss. I received a settlement check from my insurance company, but I am out-of-pocket for the deductible, costs relating to getting a new vehicle, and of course the pain and suffering.   I was told there was an event data recorder (EDR) on the vehicle, and my insurance adjuster will tell me what it reveals (I hope). There was no warning of any kind that this was about to happen. I was fortunate that it happened where it did; had I been driving the vehicle on the street, I could have killed someone (including myself).",
+    "received_at": "2025-07-18",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2111751",
+    "status": "needs_engineer",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2111751",
+    "decided_at": "2025-07-18T07:00:56Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2111751",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "surged forward"
+      },
+      {
+        "kind": "condition",
+        "quote": "going very slowly"
+      },
+      {
+        "kind": "safety",
+        "quote": "triggering air bags"
+      },
+      {
+        "kind": "safety",
+        "quote": "bruised ribs"
+      },
+      {
+        "kind": "other",
+        "quote": "There was no warning of any kind"
+      },
+      {
+        "kind": "other",
+        "quote": "total loss"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2023 Kia Niro PHEV electrical/general: sudden unintended acceleration while slowly entering garage, collision with wall/fence, airbags deployed, minor injuries.",
+    "symptoms": [
+      "sudden unintended acceleration",
+      "vehicle surged forward on its own",
+      "no warning before event"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2111751",
+    "created_at": "2025-07-18T07:00:53Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-18T07:00:50Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006775,
+      "duration_ms": 8617,
+      "reason": "2023 Kia Niro PHEV electrical/general: sudden unintended acceleration while slowly entering garage, collision with wall/fence, airbags deployed, minor injuries.",
+      "started_at": "2025-07-18T07:00:51Z",
+      "step": 2,
+      "tokens": 1767,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-18T07:00:52Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "NIRO",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-07-18T07:00:54Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-18T07:00:55Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-07-18T07:00:57Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-18T07:00:58Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-07-18T07:00:59Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "case": {
+    "component": "VISIBILITY/WIPER",
+    "group": "body_controls",
+    "id": "2081496",
+    "make": "FORD",
+    "mileage": null,
+    "model": "BRONCO SPORT",
+    "narrative": "The bronco sport badlands has a purely cosmetic strip on the dash that is a reflective bright orange. Its like a thin ribbon that travels around the drivers area, when the sun is raising or setting that strip reflects back onto the inside of the windshield blocking vision. It changes depth perception massively and creates a line straight across the drivers field of vision.  When the sun is up and clear it just normal reflects and can be blocked with sun glasses or such but the reflection periods absolutely can not.   I am not alone in this, reddit, ford forums etc have multiple mentions of this. I have already been hit twice (both accidents other driver at fault) but I believe I could have avoided them with clear field of visions.",
+    "received_at": "2025-04-09",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2081496",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2081496",
+    "decided_at": "2025-04-09T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2081496",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "strip on the dash"
+      },
+      {
+        "kind": "symptom",
+        "quote": "reflects back onto the inside of the windshield blocking vision"
+      },
+      {
+        "kind": "symptom",
+        "quote": "changes depth perception massively"
+      },
+      {
+        "kind": "symptom",
+        "quote": "creates a line straight across the drivers field of vision"
+      },
+      {
+        "kind": "condition",
+        "quote": "when the sun is raising or setting"
+      },
+      {
+        "kind": "condition",
+        "quote": "reflection periods"
+      },
+      {
+        "kind": "safety",
+        "quote": "I have already been hit twice (both accidents other driver at fault)"
+      },
+      {
+        "kind": "other",
+        "quote": "purely cosmetic strip on the dash that is a reflective bright orange"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "body_controls",
+    "safety_relevant": true,
+    "summary": "2023 Ford Bronco Sport Badlands: reflective orange dash strip reflects into the windshield at low sun angles, blocking driver vision and depth perception.",
+    "symptoms": [
+      "reflective dash strip",
+      "windshield reflection blocking vision",
+      "altered depth perception",
+      "line across driver's field of vision"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2081496",
+    "created_at": "2025-04-09T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "When I was driving at about 40mph another car cut me off and launched a pebble to my windshield. When I got home I saw a tiny chip in the windshield at mid-height in line with the front seat passenger's sight line. Over the next month or so a crack developed spontaneously and spr...",
+      "group": "body_controls",
+      "id": "1983004",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 4.0806,
+      "year": 2023
+    },
+    {
+      "excerpt": "The contact owns a 2023 Ford Bronco Sport. The contact stated while driving approximately 70 MPH with the sunroof closed, he heard the sunroof glass explode. No warning lights were illuminated. The vehicle was taken to a local dealer; however, the contact stated that only photos...",
+      "group": "body_controls",
+      "id": "1876512",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 1.41,
+      "year": 2023
+    },
+    {
+      "excerpt": "The contact owns a 2023 Ford Bronco Sport. The contact stated that while the vehicle was parked, the rear passenger’s side window was stuck. The vehicle had not been diagnosed by an independent mechanic or dealer. The vehicle had not been repaired by an independent mechanic or de...",
+      "group": "body_controls",
+      "id": "1941785",
+      "make": "FORD",
+      "model": "BRONCO SPORT",
+      "score": 1.3635,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-09T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0013426,
+      "duration_ms": 21897,
+      "reason": "2023 Ford Bronco Sport Badlands: reflective orange dash strip reflects into the windshield at low sun angles, blocking driver vision and depth perception.",
+      "started_at": "2025-04-09T07:00:01Z",
+      "step": 2,
+      "tokens": 2808,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-09T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "BRONCO SPORT",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "When I was driving at about 40mph another car cut me off and launched a pebble to my windshield. When I got home I saw a tiny chip in the windshield at mid-height in line with the front seat passenger's sight line. Over the next month or so a crack developed spontaneously and spr...",
+            "group": "body_controls",
+            "id": "1983004",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 4.0806,
+            "year": 2023
+          },
+          {
+            "excerpt": "The contact owns a 2023 Ford Bronco Sport. The contact stated while driving approximately 70 MPH with the sunroof closed, he heard the sunroof glass explode. No warning lights were illuminated. The vehicle was taken to a local dealer; however, the contact stated that only photos...",
+            "group": "body_controls",
+            "id": "1876512",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 1.41,
+            "year": 2023
+          },
+          {
+            "excerpt": "The contact owns a 2023 Ford Bronco Sport. The contact stated that while the vehicle was parked, the rear passenger’s side window was stuck. The vehicle had not been diagnosed by an independent mechanic or dealer. The vehicle had not been repaired by an independent mechanic or de...",
+            "group": "body_controls",
+            "id": "1941785",
+            "make": "FORD",
+            "model": "BRONCO SPORT",
+            "score": 1.3635,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-04-09T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-04-09T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-04-09T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-09T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-04-09T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-09T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-09T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

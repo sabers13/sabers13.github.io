@@ -1,0 +1,292 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2148612",
+    "make": "KIA",
+    "mileage": 62000,
+    "model": "OPTIMA",
+    "narrative": "The contact owned a 2015 Kia Optima. The contact stated that while at a complete stop at the red traffic light, another vehicle, driving off a highway ramp at an undisclosed speed, crashed into the rear-end of the vehicle. An unknown red warning light was flashing. The air bags did not deploy. The seat belts failed to restrain the contact as needed, causing the contact to hit her forehead against the steering wheel, which propelled the contact's head back to the headrest, and then the contact hit her forehead against the steering wheel for a second time. The contact was able to exit the vehicle but felt dizzy and off balance. A police officer filed a report and informed the contact that the vehicle was safe to drive. The contact was able to drive the vehicle to the nearby hospital, where the contact received medical assistance. The vehicle was later driven to the residence, where it remained parked. The contact sustained a concussion, bruises on the forehead, neck, and lower back back pain, a worsening of the contact's generative bone disease condition. The contact might undergo a back surgery. The vehicle was towed to an independent mechanic two months later. Both the mechanic and the insurance company confirmed that the vehicle was totaled. The manufacturer was notified of the failure and informed the contact that the vehicle operated as designed during the incident. The contact was referred to the owner's manual. The failure mileage was approximately 62,000.",
+    "received_at": "2025-11-14",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2148612",
+    "status": "decided",
+    "year": 2015
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2148612",
+    "decided_at": "2025-11-14T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2148612",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "AIR BAGS"
+      },
+      {
+        "kind": "condition",
+        "quote": "while at a complete stop at the red traffic light"
+      },
+      {
+        "kind": "safety",
+        "quote": "crashed into the rear-end of the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "An unknown red warning light was flashing."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The air bags did not deploy."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The seat belts failed to restrain the contact as needed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "causing the contact to hit her forehead against the steering wheel"
+      },
+      {
+        "kind": "symptom",
+        "quote": "felt dizzy and off balance"
+      },
+      {
+        "kind": "safety",
+        "quote": "The contact sustained a concussion, bruises on the forehead, neck, and lower back back pain, a worsening of the contact's generative bone disease condition."
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was approximately 62,000."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2015 Kia Optima: air bags did not deploy and seat belts failed to restrain in a rear-end crash while stopped; occupant injured.",
+    "symptoms": [
+      "air bags did not deploy",
+      "seat belts failed to restrain occupant",
+      "unknown red warning light flashing",
+      "occupant hit forehead on steering wheel",
+      "dizziness and off balance",
+      "concussion, bruises, and back pain"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2148612",
+    "created_at": "2025-11-14T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2015 Kia Optima. The contact stated while driving approximately 45 MPH, the air bag warning light was illuminated. The contact stated while driving at various speeds, the vehicle was jerking. The contact stated that while depressing the brake pedal, the vehicle...",
+      "group": "restraints",
+      "id": "1860508",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 28.6042,
+      "year": 2015
+    },
+    {
+      "excerpt": "TL* THE CONTACT OWNS A 2015 KIA OPTIMA. THE CONTACT STATED THAT WHILE DRIVING APPROXIMATELY 35 MPH THE FRONT DRIVER SEAT AIR BAG AND DRIVER SIDE FRONT AND REAR CURTAIN AIR BAGS DEPLOYED INDEPENDENTLY ALTHOUGH NO COLLISION HAD OCCURRED. THE VEHICLE WAS TOWED TO THE HOME. NO INJURI...",
+      "group": "restraints",
+      "id": "1641629",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 24.017,
+      "year": 2015
+    },
+    {
+      "excerpt": "I purchased a kia turbo optima from bob's lamphere's beaverton oregon kia dealership 9 days later I felt the acceleration awkwardly bi wanted to return it or exchange but was told no contract was only within 5 days. I took it to kia dealership for diagnostic 3 times I had it for...",
+      "group": "restraints",
+      "id": "1865433",
+      "make": "KIA",
+      "model": "OPTIMA",
+      "score": 22.4688,
+      "year": 2015
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-14T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00101035,
+      "duration_ms": 11084,
+      "reason": "2015 Kia Optima: air bags did not deploy and seat belts failed to restrain in a rear-end crash while stopped; occupant injured.",
+      "started_at": "2025-11-14T07:00:01Z",
+      "step": 2,
+      "tokens": 2357,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-11-14T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "OPTIMA",
+        "year": 2015
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2015 Kia Optima. The contact stated while driving approximately 45 MPH, the air bag warning light was illuminated. The contact stated while driving at various speeds, the vehicle was jerking. The contact stated that while depressing the brake pedal, the vehicle...",
+            "group": "restraints",
+            "id": "1860508",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 28.6042,
+            "year": 2015
+          },
+          {
+            "excerpt": "TL* THE CONTACT OWNS A 2015 KIA OPTIMA. THE CONTACT STATED THAT WHILE DRIVING APPROXIMATELY 35 MPH THE FRONT DRIVER SEAT AIR BAG AND DRIVER SIDE FRONT AND REAR CURTAIN AIR BAGS DEPLOYED INDEPENDENTLY ALTHOUGH NO COLLISION HAD OCCURRED. THE VEHICLE WAS TOWED TO THE HOME. NO INJURI...",
+            "group": "restraints",
+            "id": "1641629",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 24.017,
+            "year": 2015
+          },
+          {
+            "excerpt": "I purchased a kia turbo optima from bob's lamphere's beaverton oregon kia dealership 9 days later I felt the acceleration awkwardly bi wanted to return it or exchange but was told no contract was only within 5 days. I took it to kia dealership for diagnostic 3 times I had it for...",
+            "group": "restraints",
+            "id": "1865433",
+            "make": "KIA",
+            "model": "OPTIMA",
+            "score": 22.4688,
+            "year": 2015
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-11-14T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-14T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-14T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-14T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-14T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-14T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-14T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

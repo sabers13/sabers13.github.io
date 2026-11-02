@@ -1,0 +1,290 @@
+{
+  "case": {
+    "component": "VEHICLE SPEED CONTROL:CRUISE CONTROL",
+    "group": "adas",
+    "id": "2154483",
+    "make": "RAM",
+    "mileage": 40000,
+    "model": "3500",
+    "narrative": "The contact owns a 2018 Ram 3500. The contact stated that while driving at an undisclosed speed, the brake, cruise control, and ABS warning lights illuminated. The contact stated that the cruise control and ABS failed to function as intended. The contact stated that when the brake pedal was depressed, the vehicle failed to stop as intended. In addition, the contact stated that a beeping sound was persistent. The contact was annoyed by the persistent beeping while driving. The vehicle was taken to the dealer several times; however, the cause of the failure was not determined. The vehicle was not diagnosed or repaired by an independent mechanic or dealer. In addition, the contact was informed that parts were not available to repair the vehicle. The contact received notification of NHTSA Campaign Number: 24V896000 (Service Brakes, Hydraulic); however, the part for the recall repair was not available. The contact stated that the vehicle could not be traded because of the unrepaired recall. In addition, the contact stated that the failure started two years ago, and the recall was initiated a year later. The manufacturer was made aware of the failure but provided no assistance. In addition, the contact stated that the manufacturer was contacted several times and informed the contact that the parts were not yet available. The failure mileage was approximately 40,000.",
+    "received_at": "2025-12-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2154483",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2154483",
+    "decided_at": "2025-12-05T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2154483",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "VEHICLE SPEED CONTROL:CRUISE CONTROL"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the brake, cruise control, and ABS warning lights illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the cruise control and ABS failed to function as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "when the brake pedal was depressed, the vehicle failed to stop as intended"
+      },
+      {
+        "kind": "safety",
+        "quote": "the vehicle failed to stop as intended"
+      },
+      {
+        "kind": "symptom",
+        "quote": "a beeping sound was persistent"
+      },
+      {
+        "kind": "other",
+        "quote": "NHTSA Campaign Number: 24V896000 (Service Brakes, Hydraulic)"
+      },
+      {
+        "kind": "other",
+        "quote": "parts were not available to repair the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "the failure started two years ago"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Cruise control/ABS/brake warning lights with cruise and ABS inoperative and brake pedal failing to stop vehicle while driving at undisclosed speed; persistent beep.",
+    "symptoms": [
+      "brake, cruise control, and ABS warning lights illuminated",
+      "cruise control and ABS failed to function",
+      "vehicle failed to stop as intended when brake pedal depressed",
+      "persistent beeping sound"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2154483",
+    "created_at": "2025-12-05T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2018 Ram 3500. The contact stated while driving approximately 70-75 MPH with the cruise control engaged, the cruise control independently deactivated and the vehicle decelerated. The “Service ABS” message was displayed. The contact continued to drive and after...",
+      "group": "adas",
+      "id": "1876714",
+      "make": "RAM",
+      "model": "3500",
+      "score": 43.7654,
+      "year": 2018
+    },
+    {
+      "excerpt": "The contact owns a 2018 Ram 3500. The contact stated that while operating the vehicle, the ABS and traction control warning messages were displayed, and the cruise control feature became inoperable. The cause of the failure was not yet determined. The manufacturer and local deale...",
+      "group": "adas",
+      "id": "2010366",
+      "make": "RAM",
+      "model": "3500",
+      "score": 35.9153,
+      "year": 2018
+    },
+    {
+      "excerpt": "The service ABS braking system warning flashes on with a chime frequently when driving. This started 3 weeks ago. According to the Ram Forums this is a common problem with 2018 trucks. My truck is a 2018 with 352623 miles on it and according to the Dick Hannah dealership a part t...",
+      "group": "adas",
+      "id": "1922927",
+      "make": "RAM",
+      "model": "3500",
+      "score": 16.1716,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-05T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0016099,
+      "duration_ms": 18084,
+      "reason": "Cruise control/ABS/brake warning lights with cruise and ABS inoperative and brake pedal failing to stop vehicle while driving at undisclosed speed; persistent beep.",
+      "started_at": "2025-12-05T07:00:16Z",
+      "step": 2,
+      "tokens": 3348,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-05T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "RAM",
+        "model": "3500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2018 Ram 3500. The contact stated while driving approximately 70-75 MPH with the cruise control engaged, the cruise control independently deactivated and the vehicle decelerated. The “Service ABS” message was displayed. The contact continued to drive and after...",
+            "group": "adas",
+            "id": "1876714",
+            "make": "RAM",
+            "model": "3500",
+            "score": 43.7654,
+            "year": 2018
+          },
+          {
+            "excerpt": "The contact owns a 2018 Ram 3500. The contact stated that while operating the vehicle, the ABS and traction control warning messages were displayed, and the cruise control feature became inoperable. The cause of the failure was not yet determined. The manufacturer and local deale...",
+            "group": "adas",
+            "id": "2010366",
+            "make": "RAM",
+            "model": "3500",
+            "score": 35.9153,
+            "year": 2018
+          },
+          {
+            "excerpt": "The service ABS braking system warning flashes on with a chime frequently when driving. This started 3 weeks ago. According to the Ram Forums this is a common problem with 2018 trucks. My truck is a 2018 with 352623 miles on it and according to the Dick Hannah dealership a part t...",
+            "group": "adas",
+            "id": "1922927",
+            "make": "RAM",
+            "model": "3500",
+            "score": 16.1716,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-12-05T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-12-05T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-12-05T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-05T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-05T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-05T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-05T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

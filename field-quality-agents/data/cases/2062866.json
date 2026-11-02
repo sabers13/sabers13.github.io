@@ -1,0 +1,234 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2062866",
+    "make": "FORD",
+    "mileage": null,
+    "model": "ESCAPE HYBRID",
+    "narrative": "The lane keeping system in my 2023 ford escape hybrid platinum keeps me too far to the left. When driving the lane keeping system keeps me too close to the center lane marker. I believe it is a potential safety issue for my car to be so close to the left side lane marker, often with the edge of my rear view mirror only inches from the left side lane marker. My local ford dealer says the lane keeping system can not be recalibrated to center the vehicle about 6 inches more to the right (passenger) side to provide a lager safety buffer on the left side of the car. I believe the lane keeping system should be capable of being calibrated.",
+    "received_at": "2025-02-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2062866",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2062866",
+    "decided_at": "2025-02-05T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2062866",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The lane keeping system in my 2023 ford escape hybrid platinum keeps me too far to the left."
+      },
+      {
+        "kind": "symptom",
+        "quote": "When driving the lane keeping system keeps me too close to the center lane marker."
+      },
+      {
+        "kind": "condition",
+        "quote": "When driving"
+      },
+      {
+        "kind": "safety",
+        "quote": "I believe it is a potential safety issue for my car to be so close to the left side lane marker"
+      },
+      {
+        "kind": "other",
+        "quote": "My local ford dealer says the lane keeping system can not be recalibrated"
+      }
+    ],
+    "conditions": [
+      "driving"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Lane keeping system in 2023 Ford Escape Hybrid Platinum keeps vehicle too far left/too close to center lane marker while driving.",
+    "symptoms": [
+      "lane keeping system keeps vehicle too far to the left",
+      "lane keeping system keeps vehicle too close to the center lane marker"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2062866",
+    "created_at": "2025-02-05T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "Starting on July 12th, 2023, my audio control module stopped working, so there was no sound in my car. I took it into my primary dealership (Bob Maxey Ford of Howell) on July 19th, 2023, they deemed that it was the ACM and order a new one. My navigation and my adaptive cruise con...",
+      "group": "adas",
+      "id": "1912868",
+      "make": "FORD",
+      "model": "ESCAPE HYBRID",
+      "score": 2.1302,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-02-05T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00104245,
+      "duration_ms": 20629,
+      "reason": "Lane keeping system in 2023 Ford Escape Hybrid Platinum keeps vehicle too far left/too close to center lane marker while driving.",
+      "started_at": "2025-02-05T07:00:01Z",
+      "step": 2,
+      "tokens": 2307,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-02-05T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "ESCAPE HYBRID",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "Starting on July 12th, 2023, my audio control module stopped working, so there was no sound in my car. I took it into my primary dealership (Bob Maxey Ford of Howell) on July 19th, 2023, they deemed that it was the ACM and order a new one. My navigation and my adaptive cruise con...",
+            "group": "adas",
+            "id": "1912868",
+            "make": "FORD",
+            "model": "ESCAPE HYBRID",
+            "score": 2.1302,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-02-05T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-02-05T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-02-05T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-02-05T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-02-05T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-02-05T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-02-05T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

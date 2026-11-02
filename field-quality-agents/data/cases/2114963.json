@@ -1,0 +1,288 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2114963",
+    "make": "HYUNDAI",
+    "mileage": null,
+    "model": "PALISADE",
+    "narrative": "My car was making a rattling noise from the engine and would stutter at a stop and sometimes kick into park or turn off. No warning lights would turn on, on the dash board warning i was low on oil. The back passenger brake light warning light turned on. The Third seat middle seatbelt does not lock. I took into Hyundai to get it serviced and I had to pay for my car to be put on a diagnostic test. I was told I was low on oil. I never had any warning lights go on, on my Dashboard. My motor could have blown out. The only warning light I got was my back light is out. I never had any warning signal go on my dashboard saying my seatbelt doesn’t lock. I had it serviced 2025 and again the same back tail light is out. I have kept my vehicle maintenance up to date. I am going to have to schedule another appointment for my back tail light ( same side) to get repaired",
+    "received_at": "2025-07-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2114963",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2114963",
+    "decided_at": "2025-07-28T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2114963",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My car was making a rattling noise from the engine and would stutter at a stop and sometimes kick into park or turn off."
+      },
+      {
+        "kind": "symptom",
+        "quote": "No warning lights would turn on, on the dash board warning i was low on oil."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The back passenger brake light warning light turned on."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Third seat middle seatbelt does not lock."
+      },
+      {
+        "kind": "symptom",
+        "quote": "I had it serviced 2025 and again the same back tail light is out."
+      },
+      {
+        "kind": "condition",
+        "quote": "sometimes kick into park or turn off"
+      },
+      {
+        "kind": "safety",
+        "quote": "sometimes kick into park or turn off"
+      },
+      {
+        "kind": "other",
+        "quote": "My motor could have blown out."
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2022 Hyundai Palisade electrical system reports engine rattle, stutter at stop, intermittent park/turn-off, low-oil warning, rear brake/tail light warnings and third-row middle seatbelt not locking.",
+    "symptoms": [
+      "rattling noise from engine",
+      "stutter at stop",
+      "sometimes kicks into park or turns off",
+      "low oil warning",
+      "rear passenger brake light warning",
+      "third-row middle seatbelt does not lock",
+      "rear tail light out"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2114963",
+    "created_at": "2025-07-28T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2022 Hyundai Palisade. The contact stated that after his wife started the vehicle there were several warning messages displayed on the instrument panel including the check engine light, traction control, fuel-saving, forward collision, and master warning lights...",
+      "group": "electrical_general",
+      "id": "1792443",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 7.9543,
+      "year": 2022
+    },
+    {
+      "excerpt": "Child safety locks fail more frequently than they work. At any given time the locks star making a rapid clicking sound and then a “child safety lock malfunction” message appears on the dash. I have three young children who can reach the window buttons and handles while buckled pu...",
+      "group": "electrical_general",
+      "id": "1903449",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 6.8538,
+      "year": 2022
+    },
+    {
+      "excerpt": "Was (thankfully) driving on a completely straight 2 lane highway when the collision avoidance system gave an error message to check it. My steering wheel became completely immobilized and couldn't be turned in either direction more than an inch or so. I eventually pulled off to t...",
+      "group": "electrical_general",
+      "id": "1886779",
+      "make": "HYUNDAI",
+      "model": "PALISADE",
+      "score": 6.703,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-28T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00139525,
+      "duration_ms": 18426,
+      "reason": "2022 Hyundai Palisade electrical system reports engine rattle, stutter at stop, intermittent park/turn-off, low-oil warning, rear brake/tail light warnings and third-row middle seatbelt not locking.",
+      "started_at": "2025-07-28T07:00:01Z",
+      "step": 2,
+      "tokens": 2937,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-07-28T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HYUNDAI",
+        "model": "PALISADE",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2022 Hyundai Palisade. The contact stated that after his wife started the vehicle there were several warning messages displayed on the instrument panel including the check engine light, traction control, fuel-saving, forward collision, and master warning lights...",
+            "group": "electrical_general",
+            "id": "1792443",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 7.9543,
+            "year": 2022
+          },
+          {
+            "excerpt": "Child safety locks fail more frequently than they work. At any given time the locks star making a rapid clicking sound and then a “child safety lock malfunction” message appears on the dash. I have three young children who can reach the window buttons and handles while buckled pu...",
+            "group": "electrical_general",
+            "id": "1903449",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 6.8538,
+            "year": 2022
+          },
+          {
+            "excerpt": "Was (thankfully) driving on a completely straight 2 lane highway when the collision avoidance system gave an error message to check it. My steering wheel became completely immobilized and couldn't be turned in either direction more than an inch or so. I eventually pulled off to t...",
+            "group": "electrical_general",
+            "id": "1886779",
+            "make": "HYUNDAI",
+            "model": "PALISADE",
+            "score": 6.703,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-07-28T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-28T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-28T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-28T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-28T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-28T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-28T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

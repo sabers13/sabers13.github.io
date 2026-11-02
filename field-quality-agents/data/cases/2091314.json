@@ -1,0 +1,239 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2091314",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON",
+    "narrative": "I am experiencing ongoing issues with the infotainment system in my vehicle, which has remained unresolved despite multiple service visits. The system frequently blacks out, reboots while driving, and fails to function entirely at times, for days at a time.  This is more than an inconvenience — it presents several serious safety concerns, including: •Loss of the rearview camera and parking assist features, making reversing hazardous. •Inability to access hands-free calling and navigation, increasing the risk of driver distraction and noncompliance with hands-free driving laws. •Disruption of access to climate controls and safety alerts that are routed through the infotainment system. •Frequent system crashes while driving, which divert my attention from the road.  These issues compromise both the safety and usability of the vehicle, and I am requesting immediate action to resolve the problem under warranty.",
+    "received_at": "2025-05-12",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2091314",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2091314",
+    "decided_at": "2025-05-12T07:00:36Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2091314",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The system frequently blacks out, reboots while driving, and fails to function entirely at times, for days at a time."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Loss of the rearview camera and parking assist features, making reversing hazardous."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Inability to access hands-free calling and navigation"
+      },
+      {
+        "kind": "symptom",
+        "quote": "Disruption of access to climate controls and safety alerts that are routed through the infotainment system."
+      },
+      {
+        "kind": "condition",
+        "quote": "reboots while driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "fails to function entirely at times, for days at a time"
+      },
+      {
+        "kind": "safety",
+        "quote": "it presents several serious safety concerns"
+      },
+      {
+        "kind": "safety",
+        "quote": "Frequent system crashes while driving, which divert my attention from the road."
+      },
+      {
+        "kind": "other",
+        "quote": "has remained unresolved despite multiple service visits"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Infotainment/electrical system: blacks out, reboots while driving, and intermittently fails for days; loss of rearview camera, parking assist, hands-free calling, navigation, climate controls, and safety alerts.",
+    "symptoms": [
+      "infotainment system blacks out",
+      "reboots while driving",
+      "fails to function entirely at times for days",
+      "loss of rearview camera and parking assist",
+      "inability to access hands-free calling and navigation",
+      "disruption of climate controls and safety alerts",
+      "frequent system crashes while driving"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2091314",
+    "created_at": "2025-05-12T07:00:34Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-12T07:00:28Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00178045,
+      "duration_ms": 17620,
+      "reason": "Infotainment/electrical system: blacks out, reboots while driving, and intermittently fails for days; loss of rearview camera, parking assist, hands-free calling, navigation, climate controls, and safety alerts.",
+      "started_at": "2025-05-12T07:00:29Z",
+      "step": 2,
+      "tokens": 3567,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-05-12T07:00:30Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage; analysis can proceed",
+      "started_at": "2025-05-12T07:00:31Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-12T07:00:32Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-12T07:00:33Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-12T07:00:35Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-12T07:00:37Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-12T07:00:38Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-12T07:00:39Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

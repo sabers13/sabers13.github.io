@@ -1,0 +1,265 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2147431",
+    "make": "VOLKSWAGEN",
+    "mileage": 355000,
+    "model": "PASSAT",
+    "narrative": "The contact owns a 2017 Volkswagen Passat. The contact stated that while driving at an undisclosed speed, the vehicle lost motive power, with the check engine warning light and an unknown warning light illuminated. The contact was able to restart the vehicle; however, the failure recurred, causing the vehicle to intermittently start and stop. The vehicle was taken to an independent mechanic, but was not diagnosed. The mechanic informed the contact that the failure could be related to an electrical malfunction. The vehicle was not repaired. The dealer was contacted. The vehicle was not diagnosed or repaired by the dealer. The manufacturer was not made aware of the failure. The approximate failure mileage was 355,000.",
+    "received_at": "2025-11-10",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2147431",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2147431",
+    "decided_at": "2025-11-10T07:00:43Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2147431",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "lost motive power"
+      },
+      {
+        "kind": "symptom",
+        "quote": "check engine warning light and an unknown warning light illuminated"
+      },
+      {
+        "kind": "symptom",
+        "quote": "intermittently start and stop"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving at an undisclosed speed"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently"
+      },
+      {
+        "kind": "safety",
+        "quote": "while driving at an undisclosed speed, the vehicle lost motive power"
+      },
+      {
+        "kind": "other",
+        "quote": "the failure could be related to an electrical malfunction"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "2017 Volkswagen Passat electrical system: lost motive power while driving with check engine and unknown warning lights, then intermittent start/stop.",
+    "symptoms": [
+      "lost motive power",
+      "check engine warning light and unknown warning light illuminated",
+      "intermittently start and stop"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2147431",
+    "created_at": "2025-11-10T07:00:41Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "WHILE MY WIFE WAS DRIVING TO WORK AND GETTING READY TO GET ON THE INTERSTATE, A CAUTION LIGHT AND ALERT TONE SUDDENLY CAME ON. DISPLAY READ \"FRONT ASSIST: NO SENSOR VIEW.\" NOTHING ELSE HAPPENED AND THE ALERT TURNED OFF AFTER A FEW MILES. THIS IS THE SYSTEM THAT AUTOMATICALLY APPL...",
+      "group": "electrical_general",
+      "id": "1713604",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 3.9814,
+      "year": 2017
+    },
+    {
+      "excerpt": "ON 1/12/21 WHILE TURNING INTO A FAST FOOD RESTAURANT I HEARD CLICKING IN THE STEERING COLUMN AND THEN THE AIR BAG LIGHT CAME ON AND ERROR CODES ACROSS THE DIGITAL SCREEN AND A CLOCK EMBLEM SIGNAL CAME ON. PULLED OVER AND LOOKED AT MY MANUAL. DROVE ON HOME AND DID RESEARCH AND FOU...",
+      "group": "electrical_general",
+      "id": "1722674",
+      "make": "VOLKSWAGEN",
+      "model": "PASSAT",
+      "score": 3.586,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-11-10T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00102145,
+      "duration_ms": 16397,
+      "reason": "2017 Volkswagen Passat electrical system: lost motive power while driving with check engine and unknown warning lights, then intermittent start/stop.",
+      "started_at": "2025-11-10T07:00:36Z",
+      "step": 2,
+      "tokens": 2269,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-11-10T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLKSWAGEN",
+        "model": "PASSAT",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "WHILE MY WIFE WAS DRIVING TO WORK AND GETTING READY TO GET ON THE INTERSTATE, A CAUTION LIGHT AND ALERT TONE SUDDENLY CAME ON. DISPLAY READ \"FRONT ASSIST: NO SENSOR VIEW.\" NOTHING ELSE HAPPENED AND THE ALERT TURNED OFF AFTER A FEW MILES. THIS IS THE SYSTEM THAT AUTOMATICALLY APPL...",
+            "group": "electrical_general",
+            "id": "1713604",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 3.9814,
+            "year": 2017
+          },
+          {
+            "excerpt": "ON 1/12/21 WHILE TURNING INTO A FAST FOOD RESTAURANT I HEARD CLICKING IN THE STEERING COLUMN AND THEN THE AIR BAG LIGHT CAME ON AND ERROR CODES ACROSS THE DIGITAL SCREEN AND A CLOCK EMBLEM SIGNAL CAME ON. PULLED OVER AND LOOKED AT MY MANUAL. DROVE ON HOME AND DID RESEARCH AND FOU...",
+            "group": "electrical_general",
+            "id": "1722674",
+            "make": "VOLKSWAGEN",
+            "model": "PASSAT",
+            "score": 3.586,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date; analysis can proceed",
+      "started_at": "2025-11-10T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-11-10T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-11-10T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-11-10T07:00:42Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-11-10T07:00:44Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-11-10T07:00:45Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-11-10T07:00:46Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "case": {
+    "component": "ELECTRONIC STABILITY CONTROL (ESC)",
+    "group": "safety_systems",
+    "id": "2102999",
+    "make": "BUICK",
+    "mileage": 147000,
+    "model": "ENCORE",
+    "narrative": "The contact owns a 2018 Chevrolet Encore. The contact stated that while operating the vehicle, the transmission malfunctioned while in first gear, and the vehicle hesitated to accelerate from being stationary. Additionally, the message \"Stabilizer\" was displayed. The cause of the failure was not yetbeen  determined. The manufacturer was notified of the failure, but no assistance was offered. The local dealer was not contacted. The failure mileage was 147,000.",
+    "received_at": "2025-06-23",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2102999",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2102999",
+    "decided_at": "2025-06-23T07:00:48Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2102999",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "transmission malfunctioned while in first gear"
+      },
+      {
+        "kind": "symptom",
+        "quote": "hesitated to accelerate from being stationary"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the message \"Stabilizer\" was displayed"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "safety_systems",
+    "safety_relevant": false,
+    "summary": "Test the ESC/Stabilizer warning with transmission malfunction and hesitation from stationary using the standard field-quality test because no rulebook entry supports a targeted load test.",
+    "symptoms": [
+      "transmission malfunctioned while in first gear",
+      "hesitated to accelerate from being stationary",
+      "Stabilizer message displayed"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2102999",
+    "created_at": "2025-06-23T07:00:46Z",
+    "evidence": [
+      {
+        "quote": "transmission malfunctioned while in first gear",
+        "source_id": "2102999",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "hesitated to accelerate from being stationary",
+        "source_id": "2102999",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the message \"Stabilizer\" was displayed",
+        "source_id": "2102999",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a transmission malfunction while in first gear, hesitation to accelerate from stationary, and a \"Stabilizer\" message. No rulebook match, fault code, recall, or investigation identifies a targeted test, so the standard test is appropriate. The similar Encore case excerpt concerns unrelated electrical/module issues and does not establish a targeted procedure.",
+    "requested_info": [],
+    "summary": "Test the ESC/Stabilizer warning with transmission malfunction and hesitation from stationary using the standard field-quality test because no rulebook entry supports a targeted load test.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "SINCE I BOUGHT THIS CAR IN 04/2018 I HAD MANY PROBLEMS PROBLEMS AS THE ENGINE SENSOR HAD TO BE REPLACED, HEADLIGHTS GOING OUT WHEN I WAS DRIVING, THEY COULD NOT REPRODUCE THE PROBLEM AT THE DEALERSHIP , NOW THE BACK WHEEL DRIVER MODULE IS BAD,IT WILL NEED TO BE REPLACED ,AND FINA...",
+      "group": "safety_systems",
+      "id": "1660156",
+      "make": "BUICK",
+      "model": "ENCORE",
+      "score": 0.5754,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-06-23T07:00:35Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0007702,
+      "duration_ms": 9291,
+      "reason": "ESC/Stabilizer message with transmission malfunction in first gear and hesitation from stationary; 2018 Encore at 147,000 miles.",
+      "started_at": "2025-06-23T07:00:36Z",
+      "step": 2,
+      "tokens": 1815,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) within the same vehicle",
+      "started_at": "2025-06-23T07:00:37Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "BUICK",
+        "model": "ENCORE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "SINCE I BOUGHT THIS CAR IN 04/2018 I HAD MANY PROBLEMS PROBLEMS AS THE ENGINE SENSOR HAD TO BE REPLACED, HEADLIGHTS GOING OUT WHEN I WAS DRIVING, THEY COULD NOT REPRODUCE THE PROBLEM AT THE DEALERSHIP , NOW THE BACK WHEEL DRIVER MODULE IS BAD,IT WILL NEED TO BE REPLACED ,AND FINA...",
+            "group": "safety_systems",
+            "id": "1660156",
+            "make": "BUICK",
+            "model": "ENCORE",
+            "score": 0.5754,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits conditions, date; analysis can proceed",
+      "started_at": "2025-06-23T07:00:38Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-06-23T07:00:39Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 similar case(s) in the knowledge base",
+      "started_at": "2025-06-23T07:00:40Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2018 Chevrolet Encore. The contact stated that while operating the vehicle, the transmission malfunctioned while in first gear, and the vehicle hesitated to accelerate from being stationary. Additionally, the message \"Stabilizer\" was displayed. The cause of the failure was not yetbeen  determined. The manufacturer was notified of the failure, but no assistance was offered. The local dealer was not contacted. The failure mileage was 147,000."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "SINCE I BOUGHT THIS CAR IN 04/2018 I HAD MANY PROBLEMS PROBLEMS AS THE ENGINE SENSOR HAD TO BE REPLACED, HEADLIGHTS GOING OUT WHEN I WAS DRIVING, THEY COULD NOT REPRODUCE THE PROBLEM AT THE DEALERSHIP , NOW THE BACK WHEEL DRIVER MODULE IS BAD,IT WILL NEED TO BE REPLACED ,AND FINA...",
+            "group": "safety_systems",
+            "id": "1660156",
+            "make": "BUICK",
+            "model": "ENCORE",
+            "score": 0.5754,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-06-23T07:00:41Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "BUICK",
+        "model": "ENCORE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-06-23T07:00:42Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "safety_systems",
+        "make": "BUICK",
+        "model": "ENCORE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-06-23T07:00:43Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0007857,
+      "duration_ms": 8506,
+      "reason": "The narrative reports a transmission malfunction while in first gear, hesitation to accelerate from stationary, and a \"Stabilizer\" message. No rulebook match, fault code, recall, or investigation identifies a targeted test, so the standard test is appropriate. The similar Encore case excerpt concerns unrelated electrical/module issues and does not establish a targeted procedure.",
+      "started_at": "2025-06-23T07:00:44Z",
+      "step": 10,
+      "tokens": 2034,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 verified, 0 dropped",
+      "started_at": "2025-06-23T07:00:45Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "transmission malfunctioned while in first gear",
+          "hesitated to accelerate from being stationary",
+          "the message \"Stabilizer\" was displayed"
+        ]
+      },
+      "tool_output": {
+        "checked": 3,
+        "dropped": 0,
+        "verified": 3
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-06-23T07:00:47Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-06-23T07:00:49Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-06-23T07:00:50Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-06-23T07:00:51Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

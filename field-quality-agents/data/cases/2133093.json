@@ -1,0 +1,279 @@
+{
+  "case": {
+    "component": "BACK OVER PREVENTION",
+    "group": "adas",
+    "id": "2133093",
+    "make": "HONDA",
+    "mileage": 48000,
+    "model": "PILOT",
+    "narrative": "The contact owns a 2021 Honda Pilot. The contact stated that the infotainment system had turned off unintendedly while driving. Additionally, the rearview camera image was black while reversing. The vehicle was taken to the dealer, where the contact was informed that the repair could not be covered under  NHTSA Campaign Number: 23V431000 (Back Over Prevention), which was previously performed on the vehicle. The contact stated that the recall repair failed to correct the failure. The vehicle was not diagnosed or repaired. The manufacturer was not contacted. The failure mileage was approximately 48,000.",
+    "received_at": "2025-09-23",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2133093",
+    "status": "decided",
+    "year": 2021
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2133093",
+    "decided_at": "2025-09-23T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2133093",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Back Over Prevention"
+      },
+      {
+        "kind": "symptom",
+        "quote": "infotainment system had turned off unintendedly while driving"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "rearview camera image was black while reversing"
+      },
+      {
+        "kind": "condition",
+        "quote": "while reversing"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "NHTSA Campaign Number: 23V431000"
+      },
+      {
+        "kind": "condition",
+        "quote": "previously performed on the vehicle"
+      },
+      {
+        "kind": "other",
+        "quote": "recall repair failed to correct the failure"
+      },
+      {
+        "kind": "safety",
+        "quote": "rearview camera image was black while reversing"
+      },
+      {
+        "kind": "other",
+        "quote": "The failure mileage was approximately 48,000."
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [
+      "23V431000"
+    ],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "2021 Honda Pilot ADAS/back-over prevention: infotainment turned off while driving and rearview camera image was black while reversing; prior recall repair failed to correct.",
+    "symptoms": [
+      "infotainment system turned off unintendedly while driving",
+      "rearview camera image was black while reversing"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2133093",
+    "created_at": "2025-09-23T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2021 Honda Pilot. The contact received notification of NHTSA Campaign Number: 23V431000 (Back Over Prevention) however, the part to do the recall repair was unavailable. The dealer was made aware of the issue and confirmed that parts were not yet available. The...",
+      "group": "adas",
+      "id": "1933628",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 51.4272,
+      "year": 2021
+    },
+    {
+      "excerpt": "My car started stating that 6 systems were having problems. The adaptive cruise control system, automatic high beam system, blind spot information system, road departure mitigation system, collision mitigation system, and lane keep assist system. I took the car to the Honda deale...",
+      "group": "adas",
+      "id": "2024326",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 14.5671,
+      "year": 2021
+    },
+    {
+      "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+      "group": "adas",
+      "id": "1920912",
+      "make": "HONDA",
+      "model": "PILOT",
+      "score": 12.471,
+      "year": 2021
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-09-23T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00278155,
+      "duration_ms": 24158,
+      "reason": "2021 Honda Pilot ADAS/back-over prevention: infotainment turned off while driving and rearview camera image was black while reversing; prior recall repair failed to correct.",
+      "started_at": "2025-09-23T07:00:01Z",
+      "step": 2,
+      "tokens": 5186,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-09-23T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "HONDA",
+        "model": "PILOT",
+        "year": 2021
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2021 Honda Pilot. The contact received notification of NHTSA Campaign Number: 23V431000 (Back Over Prevention) however, the part to do the recall repair was unavailable. The dealer was made aware of the issue and confirmed that parts were not yet available. The...",
+            "group": "adas",
+            "id": "1933628",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 51.4272,
+            "year": 2021
+          },
+          {
+            "excerpt": "My car started stating that 6 systems were having problems. The adaptive cruise control system, automatic high beam system, blind spot information system, road departure mitigation system, collision mitigation system, and lane keep assist system. I took the car to the Honda deale...",
+            "group": "adas",
+            "id": "2024326",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 14.5671,
+            "year": 2021
+          },
+          {
+            "excerpt": "On Friday, August 18th, 2023, I started up my 2021 Honda Pilot EX and all safety system warning lights (ACC, LKAS, CBWS, etc) came on. I called Metro Honda Montclair and a service advisor asked me to bring the car in to them as soon as possible. I asked if it was safe to drive, a...",
+            "group": "adas",
+            "id": "1920912",
+            "make": "HONDA",
+            "model": "PILOT",
+            "score": 12.471,
+            "year": 2021
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-09-23T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-09-23T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-09-23T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-09-23T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-09-23T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-09-23T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

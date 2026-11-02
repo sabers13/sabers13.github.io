@@ -1,0 +1,252 @@
+{
+  "case": {
+    "component": "AIR BAGS",
+    "group": "restraints",
+    "id": "2089140",
+    "make": "FORD",
+    "mileage": 45000,
+    "model": "EXPLORER",
+    "narrative": "The contact owns a 2017 Ford Explorer. The contact stated that the rear driver’s side air bag warning light was intermittently illuminated while driving at various speeds. The vehicle was taken to the dealer for a diagnostic, and the contact was informed that the air bag wiring harness needed to be replaced. The vehicle was not repaired. The manufacturer was notified of the failure,e and a case was filed. The contact was then referred to the NHTSA Hotline to report the failure. The failure mileage was 45,000.",
+    "received_at": "2025-05-05",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2089140",
+    "status": "decided",
+    "year": 2017
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2089140",
+    "decided_at": "2025-05-05T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2089140",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "rear driver’s side air bag warning light was intermittently illuminated while driving at various speeds"
+      },
+      {
+        "kind": "condition",
+        "quote": "intermittently illuminated"
+      },
+      {
+        "kind": "component_group",
+        "quote": "air bag wiring harness"
+      },
+      {
+        "kind": "safety",
+        "quote": "air bag warning light"
+      }
+    ],
+    "conditions": [
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "restraints",
+    "safety_relevant": true,
+    "summary": "2017 Ford Explorer rear driver’s side air bag warning light intermittently illuminated at various speeds; dealer diagnosed air bag wiring harness replacement.",
+    "symptoms": [
+      "rear driver’s side air bag warning light intermittently illuminated while driving at various speeds"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2089140",
+    "created_at": "2025-05-05T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "The contact owns a 2017 Ford Explorer. The contact stated that the driver’s side seat belt would not latch after multiple attempts. The seat belt chime sensor would active due to the seat belt not latching securely. The vehicle was not taken to a dealer nor an independent mechani...",
+      "group": "restraints",
+      "id": "1757164",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 20.3108,
+      "year": 2017
+    },
+    {
+      "excerpt": "THE SRS WARNING LIGHT ON THE DASH IS ILLUMINATED INDICATING THAT IN THE EVENT OF A COLLISION THE AIRBAGS WILL NOT DEPLOY. VEHICLE WAS TAKEN TO LOCAL FORD DEALER WHERE FAULT CODES INDICATE THAT TWO WIRE HARNESSES OR CONNECTORS NEED TO BE REPLACED. COST OF SERVICE WAS QUOTED AS $16...",
+      "group": "restraints",
+      "id": "1697162",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 8.5517,
+      "year": 2017
+    },
+    {
+      "excerpt": "THE REAR SUSPENSION STARTED WITH A LOWER NOISE IN THE REAR PASSENGER SIDE, WHENEVER I MAKE TURNS OR THE ROAD IS A LITTLE ROUGH. TO THIS DAY IS GETTING A LOT WORSE, MORE NOISE AND UNSTABLE WHEN I TAKE TURNS. ALSO THE SEAT BELT LIGHT COME ON, AND I WAS TOLD THAT THE MODULE IS MALFU...",
+      "group": "restraints",
+      "id": "1740657",
+      "make": "FORD",
+      "model": "EXPLORER",
+      "score": 2.9725,
+      "year": 2017
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-05T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00167065,
+      "duration_ms": 27024,
+      "reason": "2017 Ford Explorer rear driver’s side air bag warning light intermittently illuminated at various speeds; dealer diagnosed air bag wiring harness replacement.",
+      "started_at": "2025-05-05T07:00:01Z",
+      "step": 2,
+      "tokens": 3324,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-05-05T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "EXPLORER",
+        "year": 2017
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "The contact owns a 2017 Ford Explorer. The contact stated that the driver’s side seat belt would not latch after multiple attempts. The seat belt chime sensor would active due to the seat belt not latching securely. The vehicle was not taken to a dealer nor an independent mechani...",
+            "group": "restraints",
+            "id": "1757164",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 20.3108,
+            "year": 2017
+          },
+          {
+            "excerpt": "THE SRS WARNING LIGHT ON THE DASH IS ILLUMINATED INDICATING THAT IN THE EVENT OF A COLLISION THE AIRBAGS WILL NOT DEPLOY. VEHICLE WAS TAKEN TO LOCAL FORD DEALER WHERE FAULT CODES INDICATE THAT TWO WIRE HARNESSES OR CONNECTORS NEED TO BE REPLACED. COST OF SERVICE WAS QUOTED AS $16...",
+            "group": "restraints",
+            "id": "1697162",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 8.5517,
+            "year": 2017
+          },
+          {
+            "excerpt": "THE REAR SUSPENSION STARTED WITH A LOWER NOISE IN THE REAR PASSENGER SIDE, WHENEVER I MAKE TURNS OR THE ROAD IS A LITTLE ROUGH. TO THIS DAY IS GETTING A LOT WORSE, MORE NOISE AND UNSTABLE WHEN I TAKE TURNS. ALSO THE SEAT BELT LIGHT COME ON, AND I WAS TOLD THAT THE MODULE IS MALFU...",
+            "group": "restraints",
+            "id": "1740657",
+            "make": "FORD",
+            "model": "EXPLORER",
+            "score": 2.9725,
+            "year": 2017
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-05T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-05T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-05T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-05T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-05T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-05T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

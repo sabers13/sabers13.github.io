@@ -1,0 +1,496 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2124200",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "GRAND CHEROKEE",
+    "narrative": "CAM shaft and yes it is available to be looked at. The vehicle was misdiagnosed multiple times and sent back home with the same error code while fixing other items that were not the root cause of the issue. The engine light was on with the misfire code when I brought it in and was repeatedly sent home and within 20 miles the same code returned.",
+    "received_at": "2025-08-26",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2124200",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2124200",
+    "decided_at": "2025-08-26T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2124200",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "The engine light was on with the misfire code"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "misfire code"
+      },
+      {
+        "kind": "symptom",
+        "quote": "within 20 miles the same code returned"
+      },
+      {
+        "kind": "condition",
+        "quote": "sent back home with the same error code while fixing other items that were not the root cause of the issue"
+      },
+      {
+        "kind": "other",
+        "quote": "misdiagnosed multiple times"
+      },
+      {
+        "kind": "other",
+        "quote": "CAM shaft"
+      }
+    ],
+    "conditions": [
+      "after service"
+    ],
+    "fault_codes": [
+      "misfire code"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Check the misfire-code repair after repeated service visits, starting with installation and connector integrity before testing.",
+    "symptoms": [
+      "engine light on",
+      "misfire code",
+      "same code returns within 20 miles"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2124200",
+    "created_at": "2025-08-26T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "The engine light was on with the misfire code",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "misfire code",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "within 20 miles the same code returned",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "sent back home with the same error code while fixing other items that were not the root cause of the issue",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "misdiagnosed multiple times",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "CAM shaft",
+        "source_id": "2124200",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The engine light and misfire code returned within 20 miles after the vehicle was sent home repeatedly with the same error code while unrelated items were addressed. The rulebook matches the after-service condition and calls for an installation check before test.",
+    "requested_info": [],
+    "summary": "Check the misfire-code repair after repeated service visits, starting with installation and connector integrity before testing.",
+    "targeted_test": {
+      "conditions": [
+        "after service"
+      ],
+      "name": "Installation check before test",
+      "reason": "The engine light and misfire code returned within 20 miles after the vehicle was sent home repeatedly with the same error code while unrelated items were addressed. The rulebook matches the after-service condition and calls for an installation check before test."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "All-wheel drive is no longer working due to messages stating \"service anti-lock brake system,\" \"service air suspension immediately,\" and check engine light. All lights and cautionary messages came on at the exact same moment while coming out of park over a year ago. I have had th...",
+      "group": "electrical_general",
+      "id": "2045994",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 14.378,
+      "year": 2018
+    },
+    {
+      "excerpt": "The UConnect radio has delaminated and is available for inspection. Due to the delamination of the UConnect system it will randomly change channels, replace channels, and will skip around to other parts of the system. This issue does not always occur and is random and unkown when...",
+      "group": "electrical_general",
+      "id": "1878667",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 12.9399,
+      "year": 2018
+    },
+    {
+      "excerpt": "AFTER WIDE OPEN THROTTLE ACCELERATION, VEHICLE CONTINUES TO ACCELERATE EVEN AFTER LETTING OFF OF THROTTLE. HAD TO IMMEDIATELY DEPRESS BRAKE TO ITS MAXIMUM CAPACITY TO SLOW/STALL THE UNINTENDED RAPID ACCELERATION. IT HAS DUPLICATED THIS BEHAVIOR TWICE IN THE LAST 100 MILES. THE JE...",
+      "group": "electrical_general",
+      "id": "1734244",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 10.0061,
+      "year": 2018
+    },
+    {
+      "excerpt": "My pre-owned 2018 Jeep Grand Cherokee 4x4 Trailhawk is unsafe and unreliable because the vehicle ** would not start ** on three occasions within 18 months of ownership. Also, the \"auto start\" feature on the key fob works intermittently. Thankfully, I was in safe locations when th...",
+      "group": "electrical_general",
+      "id": "1831466",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 9.3312,
+      "year": 2018
+    },
+    {
+      "excerpt": "The component I am reporting is the Uconnect touch screen/control panel within the head unit of the car. The screen is delaminating, which is resulting in distorted images during use (quite noticeable when using the backup camera). Also, while the vehicle is in motion, random but...",
+      "group": "electrical_general",
+      "id": "1769096",
+      "make": "JEEP",
+      "model": "GRAND CHEROKEE",
+      "score": 9.2354,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-08-26T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0017557,
+      "duration_ms": 18958,
+      "reason": "Electrical system: engine light on with misfire code; same code returns within 20 miles after repeated misdiagnosis and unrelated repairs.",
+      "started_at": "2025-08-26T07:00:16Z",
+      "step": 2,
+      "tokens": 3441,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-08-26T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "All-wheel drive is no longer working due to messages stating \"service anti-lock brake system,\" \"service air suspension immediately,\" and check engine light. All lights and cautionary messages came on at the exact same moment while coming out of park over a year ago. I have had th...",
+            "group": "electrical_general",
+            "id": "2045994",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 14.378,
+            "year": 2018
+          },
+          {
+            "excerpt": "The UConnect radio has delaminated and is available for inspection. Due to the delamination of the UConnect system it will randomly change channels, replace channels, and will skip around to other parts of the system. This issue does not always occur and is random and unkown when...",
+            "group": "electrical_general",
+            "id": "1878667",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 12.9399,
+            "year": 2018
+          },
+          {
+            "excerpt": "AFTER WIDE OPEN THROTTLE ACCELERATION, VEHICLE CONTINUES TO ACCELERATE EVEN AFTER LETTING OFF OF THROTTLE. HAD TO IMMEDIATELY DEPRESS BRAKE TO ITS MAXIMUM CAPACITY TO SLOW/STALL THE UNINTENDED RAPID ACCELERATION. IT HAS DUPLICATED THIS BEHAVIOR TWICE IN THE LAST 100 MILES. THE JE...",
+            "group": "electrical_general",
+            "id": "1734244",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 10.0061,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-08-26T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-08-26T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-08-26T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "CAM shaft and yes it is available to be looked at. The vehicle was misdiagnosed multiple times and sent back home with the same error code while fixing other items that were not the root cause of the issue. The engine light was on with the misfire code when I brought it in and was repeatedly sent home and within 20 miles the same code returned."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "All-wheel drive is no longer working due to messages stating \"service anti-lock brake system,\" \"service air suspension immediately,\" and check engine light. All lights and cautionary messages came on at the exact same moment while coming out of park over a year ago. I have had th...",
+            "group": "electrical_general",
+            "id": "2045994",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 14.378,
+            "year": 2018
+          },
+          {
+            "excerpt": "The UConnect radio has delaminated and is available for inspection. Due to the delamination of the UConnect system it will randomly change channels, replace channels, and will skip around to other parts of the system. This issue does not always occur and is random and unkown when...",
+            "group": "electrical_general",
+            "id": "1878667",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 12.9399,
+            "year": 2018
+          },
+          {
+            "excerpt": "AFTER WIDE OPEN THROTTLE ACCELERATION, VEHICLE CONTINUES TO ACCELERATE EVEN AFTER LETTING OFF OF THROTTLE. HAD TO IMMEDIATELY DEPRESS BRAKE TO ITS MAXIMUM CAPACITY TO SLOW/STALL THE UNINTENDED RAPID ACCELERATION. IT HAS DUPLICATED THIS BEHAVIOR TWICE IN THE LAST 100 MILES. THE JE...",
+            "group": "electrical_general",
+            "id": "1734244",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 10.0061,
+            "year": 2018
+          },
+          {
+            "excerpt": "My pre-owned 2018 Jeep Grand Cherokee 4x4 Trailhawk is unsafe and unreliable because the vehicle ** would not start ** on three occasions within 18 months of ownership. Also, the \"auto start\" feature on the key fob works intermittently. Thankfully, I was in safe locations when th...",
+            "group": "electrical_general",
+            "id": "1831466",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 9.3312,
+            "year": 2018
+          },
+          {
+            "excerpt": "The component I am reporting is the Uconnect touch screen/control panel within the head unit of the car. The screen is delaminating, which is resulting in distorted images during use (quite noticeable when using the backup camera). Also, while the vehicle is in motion, random but...",
+            "group": "electrical_general",
+            "id": "1769096",
+            "make": "JEEP",
+            "model": "GRAND CHEROKEE",
+            "score": 9.2354,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-08-26T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-08-26T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "GRAND CHEROKEE",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-08-26T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "after service"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "after_service",
+            "matched_conditions": [
+              "after service"
+            ],
+            "reason": "A fault that appears after service is checked for connector seating, pin damage and correct part fit first.",
+            "test": "Installation check before test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0008115,
+      "duration_ms": 6616,
+      "reason": "The engine light and misfire code returned within 20 miles after the vehicle was sent home repeatedly with the same error code while unrelated items were addressed. The rulebook matches the after-service condition and calls for an installation check before test.",
+      "started_at": "2025-08-26T07:00:24Z",
+      "step": 10,
+      "tokens": 2491,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-08-26T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "The engine light was on with the misfire code",
+          "misfire code",
+          "within 20 miles the same code returned",
+          "sent back home with the same error code while fixing other items that were not the root cause of the issue",
+          "misdiagnosed multiple times",
+          "CAM shaft"
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-08-26T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-08-26T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-08-26T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-08-26T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

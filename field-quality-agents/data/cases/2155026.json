@@ -1,0 +1,463 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2155026",
+    "make": "JEEP",
+    "mileage": null,
+    "model": "WRANGLER",
+    "narrative": "My center dash cluster shorted out and went black and no longer shows speed, fuel and warning lights.  Known recall for center dash cluster, but not my vin. Dealership has diagnosed the problem and repairing at my expense.",
+    "received_at": "2025-12-07",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2155026",
+    "status": "decided",
+    "year": 2020
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2155026",
+    "decided_at": "2025-12-07T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2155026",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "center dash cluster shorted out and went black"
+      },
+      {
+        "kind": "symptom",
+        "quote": "no longer shows speed, fuel and warning lights"
+      },
+      {
+        "kind": "safety",
+        "quote": "no longer shows speed, fuel and warning lights"
+      },
+      {
+        "kind": "other",
+        "quote": "Known recall for center dash cluster, but not my vin."
+      },
+      {
+        "kind": "other",
+        "quote": "Dealership has diagnosed the problem and repairing at my expense."
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Run a standard electrical diagnostic on the center dash cluster blackout; no rulebook targeted test is available, and loss of speed/fuel/warning displays warrants human safety review.",
+    "symptoms": [
+      "center dash cluster shorted out and went black",
+      "no longer shows speed, fuel and warning lights"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2155026",
+    "created_at": "2025-12-07T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "center dash cluster shorted out and went black",
+        "source_id": "2155026",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "no longer shows speed, fuel and warning lights",
+        "source_id": "2155026",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "no longer shows speed, fuel and warning lights",
+        "source_id": "2155026",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Known recall for center dash cluster, but not my vin.",
+        "source_id": "2155026",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Dealership has diagnosed the problem and repairing at my expense.",
+        "source_id": "2155026",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "safety_priority",
+    "rationale": "No rulebook entry, recall, or investigation result was returned. The narrative reports a 2020 Jeep Wrangler center dash cluster short and blackout with loss of speed, fuel and warning lights, matching multiple similar electrical_general cluster-blank cases, and the customer notes a known recall that does not cover their VIN. Because the speed display and warning lights are lost, the case is treated as safety relevant and should go to a human before any test is booked.",
+    "requested_info": [],
+    "summary": "Safety-relevant: send to an engineer before any test is booked",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I have a 2020 Jeep Wrangler Unlimited Sport. The instrument cluster on my Jeep had been flashing for awhile back in 2022 and finally went completely black in December 2022. I could not see my digital speed, gas, etc. I finally took it to the dealership in July of 2023 after savin...",
+      "group": "electrical_general",
+      "id": "2044542",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 15.8224,
+      "year": 2020
+    },
+    {
+      "excerpt": "I had been driving my car off and on throughout the day without incidence. I stopped by the the grocery store and went in for a very short amount of time. I came out and cranked my car, it cranked as normal. I drove out of the parking lot into traffic and the car just started goi...",
+      "group": "electrical_general",
+      "id": "1842062",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 9.0664,
+      "year": 2020
+    },
+    {
+      "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+      "group": "electrical_general",
+      "id": "2031660",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 8.326,
+      "year": 2020
+    },
+    {
+      "excerpt": "My vehicle is still at the Jeep dealership service center being repaired, but so far, the reported issue includes a \"shorted\" fuse block. As I was driving the vehicle, I was approaching a red light when my vehicle abruptly halted. The cars behind & near me were forced to go aroun...",
+      "group": "electrical_general",
+      "id": "1837649",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 7.9886,
+      "year": 2020
+    },
+    {
+      "excerpt": "There is a current recall out for the dash panel failures. I have issues with my dash panel that would be described as a failure that I believe should fall under the recall for this issue, my make and model matches however my specific VIN # does not. I'm hoping to get that change...",
+      "group": "electrical_general",
+      "id": "2031258",
+      "make": "JEEP",
+      "model": "WRANGLER",
+      "score": 7.718,
+      "year": 2020
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-12-07T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00058975,
+      "duration_ms": 7498,
+      "reason": "Center dash cluster shorted out and went black, no speed/fuel/warning lights; no conditions given",
+      "started_at": "2025-12-07T07:00:16Z",
+      "step": 2,
+      "tokens": 1476,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-12-07T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have a 2020 Jeep Wrangler Unlimited Sport. The instrument cluster on my Jeep had been flashing for awhile back in 2022 and finally went completely black in December 2022. I could not see my digital speed, gas, etc. I finally took it to the dealership in July of 2023 after savin...",
+            "group": "electrical_general",
+            "id": "2044542",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 15.8224,
+            "year": 2020
+          },
+          {
+            "excerpt": "I had been driving my car off and on throughout the day without incidence. I stopped by the the grocery store and went in for a very short amount of time. I came out and cranked my car, it cranked as normal. I drove out of the parking lot into traffic and the car just started goi...",
+            "group": "electrical_general",
+            "id": "1842062",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 9.0664,
+            "year": 2020
+          },
+          {
+            "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+            "group": "electrical_general",
+            "id": "2031660",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 8.326,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, conditions; analysis can proceed",
+      "started_at": "2025-12-07T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-12-07T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-12-07T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "My center dash cluster shorted out and went black and no longer shows speed, fuel and warning lights.  Known recall for center dash cluster, but not my vin. Dealership has diagnosed the problem and repairing at my expense."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I have a 2020 Jeep Wrangler Unlimited Sport. The instrument cluster on my Jeep had been flashing for awhile back in 2022 and finally went completely black in December 2022. I could not see my digital speed, gas, etc. I finally took it to the dealership in July of 2023 after savin...",
+            "group": "electrical_general",
+            "id": "2044542",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 15.8224,
+            "year": 2020
+          },
+          {
+            "excerpt": "I had been driving my car off and on throughout the day without incidence. I stopped by the the grocery store and went in for a very short amount of time. I came out and cranked my car, it cranked as normal. I drove out of the parking lot into traffic and the car just started goi...",
+            "group": "electrical_general",
+            "id": "1842062",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 9.0664,
+            "year": 2020
+          },
+          {
+            "excerpt": "Instrument panel intermittently goes blank while driving. This has happened more than once. This is a known issue that has triggered a recall, but while I continue to check my vin for recalls, my vehicle is still not showing mine as being part of this recall.",
+            "group": "electrical_general",
+            "id": "2031660",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 8.326,
+            "year": 2020
+          },
+          {
+            "excerpt": "My vehicle is still at the Jeep dealership service center being repaired, but so far, the reported issue includes a \"shorted\" fuse block. As I was driving the vehicle, I was approaching a red light when my vehicle abruptly halted. The cars behind & near me were forced to go aroun...",
+            "group": "electrical_general",
+            "id": "1837649",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 7.9886,
+            "year": 2020
+          },
+          {
+            "excerpt": "There is a current recall out for the dash panel failures. I have issues with my dash panel that would be described as a failure that I believe should fall under the recall for this issue, my make and model matches however my specific VIN # does not. I'm hoping to get that change...",
+            "group": "electrical_general",
+            "id": "2031258",
+            "make": "JEEP",
+            "model": "WRANGLER",
+            "score": 7.718,
+            "year": 2020
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-12-07T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-12-07T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "JEEP",
+        "model": "WRANGLER",
+        "year": 2020
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-12-07T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0014145,
+      "duration_ms": 15533,
+      "reason": "No rulebook entry, recall, or investigation result was returned. The narrative reports a 2020 Jeep Wrangler center dash cluster short and blackout with loss of speed, fuel and warning lights, matching multiple similar electrical_general cluster-blank cases, and the customer notes a known recall that does not cover their VIN. Because the speed display and warning lights are lost, the case is treated as safety relevant and should go to a human before any test is booked.",
+      "started_at": "2025-12-07T07:00:24Z",
+      "step": 10,
+      "tokens": 3358,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-12-07T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "center dash cluster shorted out and went black",
+          "no longer shows speed, fuel and warning lights",
+          "no longer shows speed, fuel and warning lights",
+          "Known recall for center dash cluster, but not my vin.",
+          "Dealership has diagnosed the problem and repairing at my expense."
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-12-07T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-12-07T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-12-07T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-12-07T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

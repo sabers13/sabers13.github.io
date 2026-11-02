@@ -1,0 +1,245 @@
+{
+  "case": {
+    "component": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL",
+    "group": "adas",
+    "id": "2095424",
+    "make": "CHEVROLET",
+    "mileage": null,
+    "model": "SILVERADO 1500",
+    "narrative": "The airbag module is not connecting to the rest of the modules. There is a recall on this module in other VINs but not mine.",
+    "received_at": "2025-05-28",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2095424",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2095424",
+    "decided_at": "2025-05-28T07:00:08Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2095424",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "FORWARD COLLISION AVOIDANCE: ADAPTIVE CRUISE CONTROL"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The airbag module is not connecting to the rest of the modules."
+      },
+      {
+        "kind": "other",
+        "quote": "There is a recall on this module in other VINs but not mine."
+      },
+      {
+        "kind": "safety",
+        "quote": "airbag module is not connecting"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "ADAS forward collision avoidance/adaptive cruise control: airbag module not connecting to other modules; no conditions or fault code stated",
+    "symptoms": [
+      "airbag module not connecting to the rest of the modules"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2095424",
+    "created_at": "2025-05-28T07:00:06Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "My back up camera is blue. It works intermittently. There is a recall on the exact same problem for 2019 but not for mine. https://static.nhtsa.gov/odi/tsbs/2019/MC-10160418-9999.pdf I don't understand that but it is what it is. I am not paying for it to be fixed since it is an i...",
+      "group": "adas",
+      "id": "1894437",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 2.3499,
+      "year": 2018
+    },
+    {
+      "excerpt": "The following Recalls were found on Kelly bluebook, that matched the issues I have been having with my vehicle perfectly. When calling the recall center, they stated my vehicle year 2018 Chevy Silverado and serial number were not listed for this but it's the exact diagnosis of wh...",
+      "group": "adas",
+      "id": "1970681",
+      "make": "CHEVROLET",
+      "model": "SILVERADO 1500",
+      "score": 1.0835,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-05-28T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00114685,
+      "duration_ms": 14990,
+      "reason": "ADAS forward collision avoidance/adaptive cruise control: airbag module not connecting to other modules; no conditions or fault code stated",
+      "started_at": "2025-05-28T07:00:01Z",
+      "step": 2,
+      "tokens": 2403,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-05-28T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "CHEVROLET",
+        "model": "SILVERADO 1500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "My back up camera is blue. It works intermittently. There is a recall on the exact same problem for 2019 but not for mine. https://static.nhtsa.gov/odi/tsbs/2019/MC-10160418-9999.pdf I don't understand that but it is what it is. I am not paying for it to be fixed since it is an i...",
+            "group": "adas",
+            "id": "1894437",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 2.3499,
+            "year": 2018
+          },
+          {
+            "excerpt": "The following Recalls were found on Kelly bluebook, that matched the issues I have been having with my vehicle perfectly. When calling the recall center, they stated my vehicle year 2018 Chevy Silverado and serial number were not listed for this but it's the exact diagnosis of wh...",
+            "group": "adas",
+            "id": "1970681",
+            "make": "CHEVROLET",
+            "model": "SILVERADO 1500",
+            "score": 1.0835,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date, conditions; analysis can proceed",
+      "started_at": "2025-05-28T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-05-28T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-05-28T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-05-28T07:00:07Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-05-28T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-05-28T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-05-28T07:00:11Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2060603",
+    "make": "GMC",
+    "mileage": null,
+    "model": "YUKON XL",
+    "narrative": "Two weeks ago, while driving on the highway, our Yukon suddenly quit accelerating and flipped into neutral. We had to quickly pull over to the left shoulder with our entire family. We put the vehicle into park and tried to restart, which it wouldn’t do. We ended up having to call OnStar and having it towed to the nearest dealer. They “repaired it,” yet a week later, the same thing happened while pulling up to a stop light. This time we were 4 hours from home and on a weekend. While waiting for a tow truck, the police towed it to an impound lot. Lots of money, time and red tape to get it out of the impound lot to the nearest dealer to have it looked at. It’s been there almost a week and all I’ve heard is that it’s most likely the motor but they still haven’t confirmed.",
+    "received_at": "2025-01-29",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2060603",
+    "status": "needs_engineer",
+    "year": 2024
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2060603",
+    "decided_at": "2025-01-29T07:00:06Z",
+    "edited_proposal": null,
+    "proposal_kind": "request_info",
+    "rationale": "The report is incomplete; the information request is ready."
+  },
+  "extraction": {
+    "case_id": "2060603",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "ELECTRICAL SYSTEM"
+      },
+      {
+        "kind": "symptom",
+        "quote": "suddenly quit accelerating and flipped into neutral"
+      },
+      {
+        "kind": "symptom",
+        "quote": "which it wouldn’t do"
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving on the highway"
+      },
+      {
+        "kind": "condition",
+        "quote": "while pulling up to a stop light"
+      },
+      {
+        "kind": "condition",
+        "quote": "a week later"
+      },
+      {
+        "kind": "safety",
+        "quote": "with our entire family"
+      },
+      {
+        "kind": "other",
+        "quote": "most likely the motor but they still haven’t confirmed"
+      }
+    ],
+    "conditions": [
+      "intermittent",
+      "after service"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": true,
+    "summary": "Electrical system: sudden loss of acceleration and shift to neutral while driving, no restart; recurrence after dealer repair.",
+    "symptoms": [
+      "sudden loss of acceleration",
+      "shifted into neutral",
+      "no restart"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2060603",
+    "created_at": "2025-01-29T07:00:03Z",
+    "evidence": [],
+    "kind": "request_info",
+    "rationale": "The report is missing information the analysis needs.",
+    "requested_info": [
+      "component"
+    ],
+    "summary": "Information request: component",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-01-29T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00195865,
+      "duration_ms": 32937,
+      "reason": "Electrical system: sudden loss of acceleration and shift to neutral while driving, no restart; recurrence after dealer repair.",
+      "started_at": "2025-01-29T07:00:01Z",
+      "step": 2,
+      "tokens": 3873,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-01-29T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "YUKON XL",
+        "year": 2024
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "draft_info_request",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "missing essential information: component",
+      "started_at": "2025-01-29T07:00:04Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-01-29T07:00:05Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "The report is incomplete; the information request is ready.",
+      "started_at": "2025-01-29T07:00:07Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-01-29T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:needs_engineer",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "human decision was approve; the case stays with an engineer",
+      "started_at": "2025-01-29T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

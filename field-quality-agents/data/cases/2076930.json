@@ -1,0 +1,508 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2076930",
+    "make": "KIA",
+    "mileage": null,
+    "model": "EV6",
+    "narrative": "After charging vehicle using L2 charger, (max 7kw) vehicle threw two error messages on screen. 1) “check electrical system” & 2) “stop vehicle and check power supply” Using an OBDII reader, the car provided error code P1A9096. I also noticed the car stopped charging the 12V battery as the 12V state of charge was down to 22%. I towed it to the dealer and they are currently working on diagnosing the issue.",
+    "received_at": "2025-03-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2076930",
+    "status": "decided",
+    "year": 2022
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2076930",
+    "decided_at": "2025-03-25T07:00:28Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2076930",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "After charging vehicle using L2 charger"
+      },
+      {
+        "kind": "symptom",
+        "quote": "vehicle threw two error messages on screen"
+      },
+      {
+        "kind": "symptom",
+        "quote": "check electrical system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "stop vehicle and check power supply"
+      },
+      {
+        "kind": "fault_code",
+        "quote": "P1A9096"
+      },
+      {
+        "kind": "symptom",
+        "quote": "car stopped charging the 12V battery"
+      },
+      {
+        "kind": "symptom",
+        "quote": "12V state of charge was down to 22%"
+      }
+    ],
+    "conditions": [
+      "charging"
+    ],
+    "fault_codes": [
+      "P1A9096"
+    ],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test the electrical load path after L2 charging because the EV6 showed electrical/power-supply warnings and stopped charging the 12V battery with code P1A9096.",
+    "symptoms": [
+      "check electrical system warning",
+      "stop vehicle and check power supply warning",
+      "12V battery stopped charging",
+      "12V state of charge down to 22%"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2076930",
+    "created_at": "2025-03-25T07:00:26Z",
+    "evidence": [
+      {
+        "quote": "After charging vehicle using L2 charger",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "vehicle threw two error messages on screen",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "check electrical system",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "stop vehicle and check power supply",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "P1A9096",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "car stopped charging the 12V battery",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "12V state of charge was down to 22%",
+        "source_id": "2076930",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports the issue occurred after L2 charging, with “check electrical system” and “stop vehicle and check power supply” messages, fault code P1A9096, and the 12V battery no longer charging down to 22% state of charge. The reported condition matches the rulebook charging entry, where charging and high-current loads stress the supply path, connectors and protection circuits, so the targeted Electrical load test is appropriate.",
+    "requested_info": [],
+    "summary": "Test the electrical load path after L2 charging because the EV6 showed electrical/power-supply warnings and stopped charging the 12V battery with code P1A9096.",
+    "targeted_test": {
+      "conditions": [
+        "charging"
+      ],
+      "name": "Electrical load test",
+      "reason": "The narrative reports the issue occurred after L2 charging, with “check electrical system” and “stop vehicle and check power supply” messages, fault code P1A9096, and the 12V battery no longer charging down to 22% state of charge. The reported condition matches the rulebook charging entry, where charging and high-current loads stress the supply path, connectors and protection circuits, so the targeted Electrical load test is appropriate."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "To the questions listed: 1) For the last number of months the car will not fully charge when using a Level 2 charger (note: it will charge using a Level 3 charger). When charging I will get a message that \"Charge Interrupted\". When I go out to the car the charging has in fact sto...",
+      "group": "electrical_general",
+      "id": "1914404",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 18.7363,
+      "year": 2022
+    },
+    {
+      "excerpt": "Issue has been diagnosed by Kia and our dealership as a failed Integrated Control Charging Unit (ICCU). Parts are backordered indefinitely (we were told there's 106 on order nationally). Same issue as the Hyundai Ioniq 5 (which is built on the same platform): https://news.yahoo.c...",
+      "group": "electrical_general",
+      "id": "1902924",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 16.1941,
+      "year": 2022
+    },
+    {
+      "excerpt": "The car suddenly lost power and stalled to a max speed of 22mph. The car showed a check electrical system please stop vehicle. This is a known issue with the NHTSA. The car was towed to the nearest Kia dealer - Airport Kia in Naples FL.",
+      "group": "electrical_general",
+      "id": "1968307",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 15.9668,
+      "year": 2022
+    },
+    {
+      "excerpt": "ICCU or 12v system has failed and car died mid drive on the road. Car is currently at the dealership for repairs. With complete electrical failure the vehicle reduced speed and stopped on it's own. This happened at night and I didn't have lights in or on the car to see. Additiona...",
+      "group": "electrical_general",
+      "id": "1905133",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 14.6579,
+      "year": 2022
+    },
+    {
+      "excerpt": "Stop vehicle and check power supply light comes on. Car shows error message before battery dies while driving. And wont charge. If on the highway you have a few minutes before your battery completely dies although my battery is 100%",
+      "group": "electrical_general",
+      "id": "1967500",
+      "make": "KIA",
+      "model": "EV6",
+      "score": 14.1329,
+      "year": 2022
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-03-25T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0009181,
+      "duration_ms": 9656,
+      "reason": "Electrical system on 2022 Kia EV6: error messages and 12V battery not charging after L2 charging; code P1A9096.",
+      "started_at": "2025-03-25T07:00:16Z",
+      "step": 2,
+      "tokens": 2072,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-03-25T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "KIA",
+        "model": "EV6",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "To the questions listed: 1) For the last number of months the car will not fully charge when using a Level 2 charger (note: it will charge using a Level 3 charger). When charging I will get a message that \"Charge Interrupted\". When I go out to the car the charging has in fact sto...",
+            "group": "electrical_general",
+            "id": "1914404",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 18.7363,
+            "year": 2022
+          },
+          {
+            "excerpt": "Issue has been diagnosed by Kia and our dealership as a failed Integrated Control Charging Unit (ICCU). Parts are backordered indefinitely (we were told there's 106 on order nationally). Same issue as the Hyundai Ioniq 5 (which is built on the same platform): https://news.yahoo.c...",
+            "group": "electrical_general",
+            "id": "1902924",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 16.1941,
+            "year": 2022
+          },
+          {
+            "excerpt": "The car suddenly lost power and stalled to a max speed of 22mph. The car showed a check electrical system please stop vehicle. This is a known issue with the NHTSA. The car was towed to the nearest Kia dealer - Airport Kia in Naples FL.",
+            "group": "electrical_general",
+            "id": "1968307",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 15.9668,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-03-25T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-03-25T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-03-25T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "After charging vehicle using L2 charger, (max 7kw) vehicle threw two error messages on screen. 1) “check electrical system” & 2) “stop vehicle and check power supply” Using an OBDII reader, the car provided error code P1A9096. I also noticed the car stopped charging the 12V battery as the 12V state of charge was down to 22%. I towed it to the dealer and they are currently working on diagnosing the issue."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "To the questions listed: 1) For the last number of months the car will not fully charge when using a Level 2 charger (note: it will charge using a Level 3 charger). When charging I will get a message that \"Charge Interrupted\". When I go out to the car the charging has in fact sto...",
+            "group": "electrical_general",
+            "id": "1914404",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 18.7363,
+            "year": 2022
+          },
+          {
+            "excerpt": "Issue has been diagnosed by Kia and our dealership as a failed Integrated Control Charging Unit (ICCU). Parts are backordered indefinitely (we were told there's 106 on order nationally). Same issue as the Hyundai Ioniq 5 (which is built on the same platform): https://news.yahoo.c...",
+            "group": "electrical_general",
+            "id": "1902924",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 16.1941,
+            "year": 2022
+          },
+          {
+            "excerpt": "The car suddenly lost power and stalled to a max speed of 22mph. The car showed a check electrical system please stop vehicle. This is a known issue with the NHTSA. The car was towed to the nearest Kia dealer - Airport Kia in Naples FL.",
+            "group": "electrical_general",
+            "id": "1968307",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 15.9668,
+            "year": 2022
+          },
+          {
+            "excerpt": "ICCU or 12v system has failed and car died mid drive on the road. Car is currently at the dealership for repairs. With complete electrical failure the vehicle reduced speed and stopped on it's own. This happened at night and I didn't have lights in or on the car to see. Additiona...",
+            "group": "electrical_general",
+            "id": "1905133",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 14.6579,
+            "year": 2022
+          },
+          {
+            "excerpt": "Stop vehicle and check power supply light comes on. Car shows error message before battery dies while driving. And wont charge. If on the highway you have a few minutes before your battery completely dies although my battery is 100%",
+            "group": "electrical_general",
+            "id": "1967500",
+            "make": "KIA",
+            "model": "EV6",
+            "score": 14.1329,
+            "year": 2022
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-03-25T07:00:21Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "KIA",
+        "model": "EV6",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-03-25T07:00:22Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "KIA",
+        "model": "EV6",
+        "year": 2022
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "1 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-03-25T07:00:23Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "charging"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "charging",
+            "matched_conditions": [
+              "charging"
+            ],
+            "reason": "Charging and high-current loads stress the supply path, connectors and protection circuits.",
+            "test": "Electrical load test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00102,
+      "duration_ms": 10701,
+      "reason": "The narrative reports the issue occurred after L2 charging, with “check electrical system” and “stop vehicle and check power supply” messages, fault code P1A9096, and the 12V battery no longer charging down to 22% state of charge. The reported condition matches the rulebook charging entry, where charging and high-current loads stress the supply path, connectors and protection circuits, so the targeted Electrical load test is appropriate.",
+      "started_at": "2025-03-25T07:00:24Z",
+      "step": 10,
+      "tokens": 2843,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "7 verified, 0 dropped",
+      "started_at": "2025-03-25T07:00:25Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "After charging vehicle using L2 charger",
+          "vehicle threw two error messages on screen",
+          "check electrical system",
+          "stop vehicle and check power supply",
+          "P1A9096",
+          "car stopped charging the 12V battery",
+          "12V state of charge was down to 22%"
+        ]
+      },
+      "tool_output": {
+        "checked": 7,
+        "dropped": 0,
+        "verified": 7
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-03-25T07:00:27Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-03-25T07:00:29Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-03-25T07:00:30Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-03-25T07:00:31Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM",
+    "group": "electrical_general",
+    "id": "2086074",
+    "make": "FORD",
+    "mileage": null,
+    "model": "F-150",
+    "narrative": "My back up camera barely works now. Most of the times that I back up the screen is blue or black. Very rarely it will work. I brought it into my local for dealer and they said moisture somehow got into the sealed connector and started corroding the metal in there making it a bad connection. They told me I needed a new wire harness for over $500 and I don’t have the money to fix it. So now my back up camera is just broke.",
+    "received_at": "2025-04-25",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2086074",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2086074",
+    "decided_at": "2025-04-25T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "targeted_load_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2086074",
+    "clues": [
+      {
+        "kind": "symptom",
+        "quote": "My back up camera barely works now."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Most of the times that I back up the screen is blue or black."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Very rarely it will work."
+      },
+      {
+        "kind": "condition",
+        "quote": "moisture somehow got into the sealed connector"
+      },
+      {
+        "kind": "condition",
+        "quote": "started corroding the metal in there making it a bad connection"
+      }
+    ],
+    "conditions": [
+      "moisture",
+      "intermittent"
+    ],
+    "fault_codes": [],
+    "group": "electrical_general",
+    "safety_relevant": false,
+    "summary": "Test for moisture ingress/condensation in the backup-camera connector causing an intermittent blue/black screen.",
+    "symptoms": [
+      "backup camera barely works",
+      "screen is blue or black when reversing",
+      "camera rarely works",
+      "corroded connector causing a bad connection"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2086074",
+    "created_at": "2025-04-25T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "My back up camera barely works now.",
+        "source_id": "2086074",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Most of the times that I back up the screen is blue or black.",
+        "source_id": "2086074",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "Very rarely it will work.",
+        "source_id": "2086074",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "moisture somehow got into the sealed connector",
+        "source_id": "2086074",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "started corroding the metal in there making it a bad connection",
+        "source_id": "2086074",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "targeted_load_test",
+    "rationale": "The narrative reports moisture entering a sealed connector and corroding metal, creating a bad connection and intermittent backup-camera operation. These facts match the rulebook moisture and intermittent conditions.",
+    "requested_info": [],
+    "summary": "Test for moisture ingress/condensation in the backup-camera connector causing an intermittent blue/black screen.",
+    "targeted_test": {
+      "conditions": [
+        "moisture",
+        "intermittent"
+      ],
+      "name": "Humidity and condensation test",
+      "reason": "The narrative reports moisture entering a sealed connector and corroding metal, creating a bad connection and intermittent backup-camera operation. These facts match the rulebook moisture and intermittent conditions."
+    }
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "There is a noticeable lag in the infotainment system whenever an input from the steering wheel is changed or the screen is touched. The navigation screen shows \"no gps\" and the maps stop working frequently. There are times the touch screen is black and completely unresponsive. Th...",
+      "group": "electrical_general",
+      "id": "1856346",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 19.1532,
+      "year": 2018
+    },
+    {
+      "excerpt": "THIS TRUCK WAS PURCHASED NEW, FROM TEST DRIVE THRU 2 YEARS OF DRIVING 40,000 MILES I HAVE ALWAYS TURNED OFF START STOP AT EACH START UP. WHEN I FORGET TO TURN OFF IT HAS PREFORMED AS DESIGNED UNTIL LAST WEEK. NOW WHEN START/STOP IS ON AND I COME TO STOP AT RED LIGHT THAT CHANGES...",
+      "group": "electrical_general",
+      "id": "1681271",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 15.3769,
+      "year": 2018
+    },
+    {
+      "excerpt": "From the summer of the first year of purchasing the new vehicle on April 4, 2018, due to the very foul smell of urine when the air conditioner was operated, diagnosis and repairs were requested to more than 4 dealers in New York City, but only the opinion was presented that there...",
+      "group": "electrical_general",
+      "id": "1852488",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 12.8692,
+      "year": 2018
+    },
+    {
+      "excerpt": "I was riding down the road the truck started to run hot then it slammed on brakes the power steering went out the panel the instrument panel was black I couldn't roll my windows down the truck was in drive but it wouldn't go and the motor was still running though and then it came...",
+      "group": "electrical_general",
+      "id": "1986287",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 12.07,
+      "year": 2018
+    },
+    {
+      "excerpt": "I was recently driving the vehicle with no issues and all systems running normally. Suddenly, every light in the cabin and every dashboard indicator light started flashing with a chime through the speaker system which normally occurs when the keys are in the ignition. The vehicle...",
+      "group": "electrical_general",
+      "id": "1895521",
+      "make": "FORD",
+      "model": "F-150",
+      "score": 11.2475,
+      "year": 2018
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-04-25T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.0006082,
+      "duration_ms": 8308,
+      "reason": "2018 Ford F-150 backup camera barely works; screen often blue or black when reversing, caused by moisture corrosion in a sealed connector creating a bad connection.",
+      "started_at": "2025-04-25T07:00:01Z",
+      "step": 2,
+      "tokens": 1545,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "3 similar case(s) within the same vehicle",
+      "started_at": "2025-04-25T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There is a noticeable lag in the infotainment system whenever an input from the steering wheel is changed or the screen is touched. The navigation screen shows \"no gps\" and the maps stop working frequently. There are times the touch screen is black and completely unresponsive. Th...",
+            "group": "electrical_general",
+            "id": "1856346",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 19.1532,
+            "year": 2018
+          },
+          {
+            "excerpt": "THIS TRUCK WAS PURCHASED NEW, FROM TEST DRIVE THRU 2 YEARS OF DRIVING 40,000 MILES I HAVE ALWAYS TURNED OFF START STOP AT EACH START UP. WHEN I FORGET TO TURN OFF IT HAS PREFORMED AS DESIGNED UNTIL LAST WEEK. NOW WHEN START/STOP IS ON AND I COME TO STOP AT RED LIGHT THAT CHANGES...",
+            "group": "electrical_general",
+            "id": "1681271",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 15.3769,
+            "year": 2018
+          },
+          {
+            "excerpt": "From the summer of the first year of purchasing the new vehicle on April 4, 2018, due to the very foul smell of urine when the air conditioner was operated, diagnosis and repairs were requested to more than 4 dealers in New York City, but only the opinion was presented that there...",
+            "group": "electrical_general",
+            "id": "1852488",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 12.8692,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-04-25T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-04-25T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 similar case(s) in the knowledge base",
+      "started_at": "2025-04-25T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "My back up camera barely works now. Most of the times that I back up the screen is blue or black. Very rarely it will work. I brought it into my local for dealer and they said moisture somehow got into the sealed connector and started corroding the metal in there making it a bad connection. They told me I needed a new wire harness for over $500 and I don’t have the money to fix it. So now my back up camera is just broke."
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "There is a noticeable lag in the infotainment system whenever an input from the steering wheel is changed or the screen is touched. The navigation screen shows \"no gps\" and the maps stop working frequently. There are times the touch screen is black and completely unresponsive. Th...",
+            "group": "electrical_general",
+            "id": "1856346",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 19.1532,
+            "year": 2018
+          },
+          {
+            "excerpt": "THIS TRUCK WAS PURCHASED NEW, FROM TEST DRIVE THRU 2 YEARS OF DRIVING 40,000 MILES I HAVE ALWAYS TURNED OFF START STOP AT EACH START UP. WHEN I FORGET TO TURN OFF IT HAS PREFORMED AS DESIGNED UNTIL LAST WEEK. NOW WHEN START/STOP IS ON AND I COME TO STOP AT RED LIGHT THAT CHANGES...",
+            "group": "electrical_general",
+            "id": "1681271",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 15.3769,
+            "year": 2018
+          },
+          {
+            "excerpt": "From the summer of the first year of purchasing the new vehicle on April 4, 2018, due to the very foul smell of urine when the air conditioner was operated, diagnosis and repairs were requested to more than 4 dealers in New York City, but only the opinion was presented that there...",
+            "group": "electrical_general",
+            "id": "1852488",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 12.8692,
+            "year": 2018
+          },
+          {
+            "excerpt": "I was riding down the road the truck started to run hot then it slammed on brakes the power steering went out the panel the instrument panel was black I couldn't roll my windows down the truck was in drive but it wouldn't go and the motor was still running though and then it came...",
+            "group": "electrical_general",
+            "id": "1986287",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 12.07,
+            "year": 2018
+          },
+          {
+            "excerpt": "I was recently driving the vehicle with no issues and all systems running normally. Suddenly, every light in the cabin and every dashboard indicator light started flashing with a chime through the speaker system which normally occurs when the keys are in the ignition. The vehicle...",
+            "group": "electrical_general",
+            "id": "1895521",
+            "make": "FORD",
+            "model": "F-150",
+            "score": 11.2475,
+            "year": 2018
+          }
+        ]
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-04-25T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-04-25T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "electrical_general",
+        "make": "FORD",
+        "model": "F-150",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-04-25T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": [
+          "moisture",
+          "intermittent"
+        ]
+      },
+      "tool_output": {
+        "result": [
+          {
+            "id": "moisture",
+            "matched_conditions": [
+              "moisture"
+            ],
+            "reason": "Water ingress and condensation are the first suspects when moisture, damp or a leak is reported.",
+            "test": "Humidity and condensation test"
+          },
+          {
+            "id": "intermittent",
+            "matched_conditions": [
+              "intermittent"
+            ],
+            "reason": "A long power-cycling run reproduces faults that appear only after repeated wake and sleep cycles.",
+            "test": "Long-run power cycling test"
+          }
+        ]
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.00092295,
+      "duration_ms": 8964,
+      "reason": "The narrative reports moisture entering a sealed connector and corroding metal, creating a bad connection and intermittent backup-camera operation. These facts match the rulebook moisture and intermittent conditions.",
+      "started_at": "2025-04-25T07:00:09Z",
+      "step": 10,
+      "tokens": 2715,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "5 verified, 0 dropped",
+      "started_at": "2025-04-25T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "My back up camera barely works now.",
+          "Most of the times that I back up the screen is blue or black.",
+          "Very rarely it will work.",
+          "moisture somehow got into the sealed connector",
+          "started corroding the metal in there making it a bad connection"
+        ]
+      },
+      "tool_output": {
+        "checked": 5,
+        "dropped": 0,
+        "verified": 5
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-04-25T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-04-25T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-04-25T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-04-25T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

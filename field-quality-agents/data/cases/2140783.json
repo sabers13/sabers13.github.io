@@ -1,0 +1,358 @@
+{
+  "case": {
+    "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "group": "power_and_wiring",
+    "id": "2140783",
+    "make": "JEEP",
+    "mileage": 38074,
+    "model": "COMPASS",
+    "narrative": "The contact owns a 2023 Jeep Compass. The contact stated that while attempting to start the vehicle, the vehicle failed to start. The contact stated that the instrument panel was illuminated while attempting to start the vehicle. The vehicle was towed to the dealer, where the contact was informed that the battery had failed and needed to be charged. The vehicle was repaired; however, the failure recurred. The manufacturer was not made aware of the failure. The approximate failure mileage was 38,074.",
+    "received_at": "2025-10-17",
+    "safety_relevant": false,
+    "source": "nhtsa",
+    "source_id": "2140783",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2140783",
+    "decided_at": "2025-10-17T07:00:13Z",
+    "edited_proposal": null,
+    "proposal_kind": "standard_test",
+    "rationale": "Quotes verified and no hard rule is broken."
+  },
+  "extraction": {
+    "case_id": "2140783",
+    "clues": [
+      {
+        "kind": "condition",
+        "quote": "while attempting to start the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the vehicle failed to start"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the instrument panel was illuminated while attempting to start the vehicle"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the battery had failed and needed to be charged"
+      },
+      {
+        "kind": "symptom",
+        "quote": "the failure recurred"
+      },
+      {
+        "kind": "other",
+        "quote": "The approximate failure mileage was 38,074."
+      }
+    ],
+    "conditions": [
+      "while attempting to start the vehicle"
+    ],
+    "fault_codes": [],
+    "group": "power_and_wiring",
+    "safety_relevant": false,
+    "summary": "Test the battery and charging system on a 2023 Jeep Compass that failed to start with the instrument panel illuminated; the battery was charged but the failure recurred.",
+    "symptoms": [
+      "vehicle failed to start",
+      "instrument panel illuminated while attempting to start",
+      "battery failed and needed to be charged",
+      "failure recurred after repair"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2140783",
+    "created_at": "2025-10-17T07:00:11Z",
+    "evidence": [
+      {
+        "quote": "while attempting to start the vehicle",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the vehicle failed to start",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the instrument panel was illuminated while attempting to start the vehicle",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the battery had failed and needed to be charged",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "the failure recurred",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      },
+      {
+        "quote": "The approximate failure mileage was 38,074.",
+        "source_id": "2140783",
+        "source_type": "case",
+        "verified": true
+      }
+    ],
+    "kind": "standard_test",
+    "rationale": "The narrative reports a no-start condition with instrument-panel illumination, a dealer finding that the battery failed and needed charging, and recurrence after repair. No recall, investigation, or rulebook match was returned, so the standard battery/charging-system test is appropriate rather than a targeted rulebook test.",
+    "requested_info": [],
+    "summary": "Test the battery and charging system on a 2023 Jeep Compass that failed to start with the instrument panel illuminated; the battery was charged but the failure recurred.",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-17T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.000685,
+      "duration_ms": 7487,
+      "reason": "2023 Jeep Compass battery failure: no start with instrument panel illuminated; battery charged, failure recurred.",
+      "started_at": "2025-10-17T07:00:01Z",
+      "step": 2,
+      "tokens": 1685,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-10-17T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "JEEP",
+        "model": "COMPASS",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits date, conditions; analysis can proceed",
+      "started_at": "2025-10-17T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:analysis",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case normalised and no proposal yet: gather evidence (prompt p1)",
+      "started_at": "2025-10-17T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "search_similar_cases",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) in the knowledge base",
+      "started_at": "2025-10-17T07:00:05Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 5,
+        "text": "The contact owns a 2023 Jeep Compass. The contact stated that while attempting to start the vehicle, the vehicle failed to start. The contact stated that the instrument panel was illuminated while attempting to start the vehicle. The vehicle was towed to the dealer, where the contact was informed that the battery had failed and needed to be charged. The vehicle was repaired; however, the failure recurred. The manufacturer was not made aware of the failure. The approximate failure mileage was 38,"
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_recalls",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 recall(s) for the same vehicle and group",
+      "started_at": "2025-10-17T07:00:06Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": "recalls_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "JEEP",
+        "model": "COMPASS",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "lookup_investigations",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 investigation(s) for the same vehicle and group",
+      "started_at": "2025-10-17T07:00:07Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": "investigations_for",
+      "tool_input": {
+        "group": "power_and_wiring",
+        "make": "JEEP",
+        "model": "COMPASS",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "read_rulebook",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 targeted-test rule(s) matched the reported conditions",
+      "started_at": "2025-10-17T07:00:08Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": "rulebook",
+      "tool_input": {
+        "conditions": []
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "propose",
+      "agent": "analysis",
+      "cost_usd": 0.0006078,
+      "duration_ms": 5686,
+      "reason": "The narrative reports a no-start condition with instrument-panel illumination, a dealer finding that the battery failed and needed charging, and recurrence after repair. No recall, investigation, or rulebook match was returned, so the standard battery/charging-system test is appropriate rather than a targeted rulebook test.",
+      "started_at": "2025-10-17T07:00:09Z",
+      "step": 10,
+      "tokens": 1667,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "verify_quotes",
+      "agent": "analysis",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "6 verified, 0 dropped",
+      "started_at": "2025-10-17T07:00:10Z",
+      "step": 11,
+      "tokens": 0,
+      "tool": "verify_quotes",
+      "tool_input": {
+        "quotes": [
+          "while attempting to start the vehicle",
+          "the vehicle failed to start",
+          "the instrument panel was illuminated while attempting to start the vehicle",
+          "the battery had failed and needed to be charged",
+          "the failure recurred",
+          "The approximate failure mileage was 38,074."
+        ]
+      },
+      "tool_output": {
+        "checked": 6,
+        "dropped": 0,
+        "verified": 6
+      }
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-17T07:00:12Z",
+      "step": 12,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Quotes verified and no hard rule is broken.",
+      "started_at": "2025-10-17T07:00:14Z",
+      "step": 13,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-17T07:00:15Z",
+      "step": 14,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-17T07:00:16Z",
+      "step": 15,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

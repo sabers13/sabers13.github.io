@@ -1,0 +1,222 @@
+{
+  "case": {
+    "component": "EQUIPMENT:ELECTRICAL:NAVIGATIONAL SYSTEM(GLOBAL POSITIONING SYSTEM)",
+    "group": "infotainment",
+    "id": "2112956",
+    "make": "GMC",
+    "mileage": null,
+    "model": "SIERRA 1500",
+    "narrative": "The embedded navigation system in my 2018 GMC Sierra is no longer supported. Paid map updates were available until 2023, when General Motors discontinued them without notice. This system was marketed as a core feature and provided offline GPS guidance independent of cell reception. I discovered the change while attempting to purchase an update and was told there are no remaining copies and that no further updates will ever be made. I was never notified.  When I contacted support, I was transferred through six departments. One representative admitted that customers were supposed to be informed but were not. She stated they are trained to say “there’s nothing we can do” and acknowledged receiving hundreds of similar complaints. She also confirmed the final map update existed but was allowed to sell out.  This puts safety at risk, particularly for drivers in rural areas, areas with poor cell service, or while towing. The system is not CarPlay-based and does not rely on mobile data. It was the only in-vehicle routing system many drivers depended on during travel, including emergencies. Its quiet discontinuation means drivers no longer have access to accurate, integrated navigation—reducing their ability to safely plan or adjust routes while on the road.  The failure to maintain this system or provide reasonable access to the final update undermines long-term vehicle safety and owner trust. General Motors has not offered an inspection, recovery, or remedy.",
+    "received_at": "2025-07-22",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2112956",
+    "status": "decided",
+    "year": 2018
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2112956",
+    "decided_at": "2025-07-22T07:00:23Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2112956",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "embedded navigation system"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The embedded navigation system in my 2018 GMC Sierra is no longer supported."
+      },
+      {
+        "kind": "symptom",
+        "quote": "Paid map updates were available until 2023, when General Motors discontinued them without notice."
+      },
+      {
+        "kind": "symptom",
+        "quote": "no further updates will ever be made"
+      },
+      {
+        "kind": "symptom",
+        "quote": "I was never notified."
+      },
+      {
+        "kind": "condition",
+        "quote": "drivers in rural areas, areas with poor cell service, or while towing"
+      },
+      {
+        "kind": "safety",
+        "quote": "This puts safety at risk"
+      }
+    ],
+    "conditions": [],
+    "fault_codes": [],
+    "group": "infotainment",
+    "safety_relevant": true,
+    "summary": "2018 GMC Sierra embedded navigation system no longer supported after map updates were discontinued without notice; safety risk cited for rural areas, poor cell service, and towing.",
+    "symptoms": [
+      "navigation system no longer supported",
+      "map updates discontinued without notice",
+      "no further updates will ever be made",
+      "owner was never notified"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2112956",
+    "created_at": "2025-07-22T07:00:21Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-07-22T07:00:15Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00138475,
+      "duration_ms": 15693,
+      "reason": "2018 GMC Sierra embedded navigation system no longer supported after map updates were discontinued without notice; safety risk cited for rural areas, poor cell service, and towing.",
+      "started_at": "2025-07-22T07:00:16Z",
+      "step": 2,
+      "tokens": 2996,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "0 similar case(s) within the same vehicle",
+      "started_at": "2025-07-22T07:00:17Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "GMC",
+        "model": "SIERRA 1500",
+        "year": 2018
+      },
+      "tool_output": {
+        "result": []
+      }
+    },
+    {
+      "action": "note_missing_info",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "the report omits mileage, date; analysis can proceed",
+      "started_at": "2025-07-22T07:00:18Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-07-22T07:00:19Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-07-22T07:00:20Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-07-22T07:00:22Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-07-22T07:00:24Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-07-22T07:00:25Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-07-22T07:00:26Z",
+      "step": 10,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}

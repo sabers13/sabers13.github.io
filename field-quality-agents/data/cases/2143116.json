@@ -1,0 +1,268 @@
+{
+  "case": {
+    "component": "LANE DEPARTURE: BLIND SPOT DETECTION",
+    "group": "adas",
+    "id": "2143116",
+    "make": "VOLVO",
+    "mileage": null,
+    "model": "XC60",
+    "narrative": "Manufacturer: Volvo Car USA LLC | Initial Failure Mileage: 15,000 DEFECT DESCRIPTION: The Google built-in Infotainment Control Unit (ICU) and Audio Control Module (ACM) are repeatedly crashing/malfunctioning while driving. This system failure is a safety hazard because it simultaneously disables critical features:  * SAFETY SYSTEM FAILURE: The Rear Cross Traffic Alert (RCTA) is disabled, creating a high risk of collision when reversing.  * LOSS OF AUDITORY WARNINGS: All essential auditory cues, including the turn signal click and parking sensor sounds, are lost as the speakers go silent.  * Distraction: The screen goes black/unresponsive, requiring a dangerous manual reboot while driving. REPAIR HISTORY: The defect has been confirmed and documented by an authorized Volvo dealer (O'Steen Volvo) on two prior warranty attempts (6/18/24 & 12/19/24) but remains uncorrected. The dealer has admitted they have \"no way to fix this\" permanently. Corporate (Volvo Customer Care) has been notified. This is a recurring, safety-critical manufacturing defect. Most recent issue was 10/25/205",
+    "received_at": "2025-10-26",
+    "safety_relevant": true,
+    "source": "nhtsa",
+    "source_id": "2143116",
+    "status": "decided",
+    "year": 2023
+  },
+  "decision": {
+    "action": "approve",
+    "actor": "simulated_engineer",
+    "case_id": "2143116",
+    "decided_at": "2025-10-26T07:00:07Z",
+    "edited_proposal": null,
+    "proposal_kind": "safety_priority",
+    "rationale": "Safety flag stands; the case keeps priority for a live engineer."
+  },
+  "extraction": {
+    "case_id": "2143116",
+    "clues": [
+      {
+        "kind": "component_group",
+        "quote": "Infotainment Control Unit (ICU) and Audio Control Module (ACM)"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Google built-in Infotainment Control Unit (ICU) and Audio Control Module (ACM) are repeatedly crashing/malfunctioning while driving."
+      },
+      {
+        "kind": "condition",
+        "quote": "while driving"
+      },
+      {
+        "kind": "symptom",
+        "quote": "The Rear Cross Traffic Alert (RCTA) is disabled"
+      },
+      {
+        "kind": "condition",
+        "quote": "when reversing"
+      },
+      {
+        "kind": "safety",
+        "quote": "creating a high risk of collision when reversing"
+      },
+      {
+        "kind": "symptom",
+        "quote": "All essential auditory cues, including the turn signal click and parking sensor sounds, are lost as the speakers go silent."
+      },
+      {
+        "kind": "symptom",
+        "quote": "The screen goes black/unresponsive, requiring a dangerous manual reboot while driving."
+      },
+      {
+        "kind": "safety",
+        "quote": "safety-critical manufacturing defect"
+      },
+      {
+        "kind": "other",
+        "quote": "confirmed and documented by an authorized Volvo dealer"
+      },
+      {
+        "kind": "other",
+        "quote": "remains uncorrected"
+      }
+    ],
+    "conditions": [
+      "while driving",
+      "when reversing"
+    ],
+    "fault_codes": [],
+    "group": "adas",
+    "safety_relevant": true,
+    "summary": "Volvo XC60 ADAS/infotainment: ICU and ACM repeatedly crash while driving, disabling RCTA and audio warnings; screen goes black/unresponsive.",
+    "symptoms": [
+      "infotainment control unit and audio control module crash/malfunction repeatedly",
+      "rear cross traffic alert disabled",
+      "auditory warnings lost, including turn signal and parking sensor sounds",
+      "speakers go silent",
+      "screen goes black or unresponsive",
+      "manual reboot required while driving"
+    ]
+  },
+  "investigations": [],
+  "proposal": {
+    "case_id": "2143116",
+    "created_at": "2025-10-26T07:00:05Z",
+    "evidence": [],
+    "kind": "safety_priority",
+    "rationale": "The safety flag routes this case to a human first (PLAN §4).",
+    "requested_info": [],
+    "summary": "Safety-relevant report: send to an engineer before further testing",
+    "targeted_test": null
+  },
+  "recalls": [],
+  "similar_cases": [
+    {
+      "excerpt": "I've had my Volvo for 6 months and two weeks ago I started getting warning alerts that the braking system, lane departure system and other electrical systems were having issues (the doors wouldn't lock and car wouldn't start). I've taken the car to the Volvo dealership 3 times an...",
+      "group": "adas",
+      "id": "1895047",
+      "make": "VOLVO",
+      "model": "XC60",
+      "score": 4.0013,
+      "year": 2023
+    },
+    {
+      "excerpt": "The automatic breaking system was deployed while backing up in a parking lot. There were no obstacles, either stationary or moving, that should have triggered the braking. We have had several other times when the brake \"felt odd\" during reverse. It becomes very stiff and hard to...",
+      "group": "adas",
+      "id": "1921711",
+      "make": "VOLVO",
+      "model": "XC60",
+      "score": 1.777,
+      "year": 2023
+    }
+  ],
+  "trace": [
+    {
+      "action": "route:intake",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "no extraction yet: normalise the report first (prompt p1)",
+      "started_at": "2025-10-26T07:00:00Z",
+      "step": 1,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "extract",
+      "agent": "intake",
+      "cost_usd": 0.00112105,
+      "duration_ms": 11718,
+      "reason": "Volvo XC60 ADAS/infotainment: ICU and ACM repeatedly crash while driving, disabling RCTA and audio warnings; screen goes black/unresponsive.",
+      "started_at": "2025-10-26T07:00:01Z",
+      "step": 2,
+      "tokens": 2516,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "check_duplicates",
+      "agent": "intake",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "2 similar case(s) within the same vehicle",
+      "started_at": "2025-10-26T07:00:02Z",
+      "step": 3,
+      "tokens": 0,
+      "tool": "similar_cases",
+      "tool_input": {
+        "k": 3,
+        "make": "VOLVO",
+        "model": "XC60",
+        "year": 2023
+      },
+      "tool_output": {
+        "result": [
+          {
+            "excerpt": "I've had my Volvo for 6 months and two weeks ago I started getting warning alerts that the braking system, lane departure system and other electrical systems were having issues (the doors wouldn't lock and car wouldn't start). I've taken the car to the Volvo dealership 3 times an...",
+            "group": "adas",
+            "id": "1895047",
+            "make": "VOLVO",
+            "model": "XC60",
+            "score": 4.0013,
+            "year": 2023
+          },
+          {
+            "excerpt": "The automatic breaking system was deployed while backing up in a parking lot. There were no obstacles, either stationary or moving, that should have triggered the braking. We have had several other times when the brake \"felt odd\" during reverse. It becomes very stiff and hard to...",
+            "group": "adas",
+            "id": "1921711",
+            "make": "VOLVO",
+            "model": "XC60",
+            "score": 1.777,
+            "year": 2023
+          }
+        ]
+      }
+    },
+    {
+      "action": "route:safety",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "safety-relevant case: build the safety proposal before any test (prompt p1)",
+      "started_at": "2025-10-26T07:00:03Z",
+      "step": 4,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "draft_safety_proposal",
+      "agent": "safety",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "case is flagged safety-relevant; a human sees it before any test decision is taken",
+      "started_at": "2025-10-26T07:00:04Z",
+      "step": 5,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:human_gate",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a proposal needs a human decision (prompt p1)",
+      "started_at": "2025-10-26T07:00:06Z",
+      "step": 6,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "decision:approve",
+      "agent": "human",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "Safety flag stands; the case keeps priority for a live engineer.",
+      "started_at": "2025-10-26T07:00:08Z",
+      "step": 7,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "route:finish",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "work complete for this case (prompt p1)",
+      "started_at": "2025-10-26T07:00:09Z",
+      "step": 8,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    },
+    {
+      "action": "finish:decided",
+      "agent": "supervisor",
+      "cost_usd": 0.0,
+      "duration_ms": 0,
+      "reason": "a human approved a concrete proposal",
+      "started_at": "2025-10-26T07:00:10Z",
+      "step": 9,
+      "tokens": 0,
+      "tool": null,
+      "tool_input": null,
+      "tool_output": null
+    }
+  ]
+}
