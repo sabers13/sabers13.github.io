@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9fafb">
+  <title>Team AI Allowance · Saber Sojudi</title>
+  <meta name="description" content="Per-person AI coding budgets, off-hours caps, and in-terminal extra-budget requests on top of open-source LiteLLM. A recorded v1.0.0 showcase by Saber Sojudi.">
+  <meta property="og:title" content="Team AI Allowance · Saber Sojudi">
+  <meta property="og:description" content="Per-person AI coding budgets, off-hours caps, and in-terminal extra-budget requests on top of open-source LiteLLM. Tested with Claude Code, OpenCode, and Codex.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sabersojudi.com/team-ai-allowance/">
+  <meta property="og:image" content="https://sabersojudi.com/team-ai-allowance/card.svg">
+  <link rel="canonical" href="https://sabersojudi.com/team-ai-allowance/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%232563eb%22%2F%3E%3Cpath%20d%3D%22M16%206l8%203v6c0%205.5-3.4%208.8-8%2011-4.6-2.2-8-5.5-8-11V9z%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.2%22%2F%3E%3Cpath%20d%3D%22M12%2016l3%203%205-6%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.2%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="preload" href="assets/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/IBMPlexSans-Medium-Latin1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/page.css">
+  <script>
+    /* Each page opening starts in light mode unless ?theme=dark is explicitly requested. */
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        document.documentElement.dataset.theme = q === 'dark' ? 'dark' : 'light';
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="portfolio-brand" href="https://sabersojudi.com/" translate="no">Saber Sojudi</a>
+      <nav id="project-tabs" class="nav" aria-label="Page sections">
+        <a href="#overview" data-nav="overview" aria-current="location">Overview</a>
+        <a href="#walkthrough" data-nav="walkthrough">Walkthrough</a>
+        <a href="#evidence" data-nav="evidence">Results</a>
+        <a href="#method" data-nav="method">How it works</a>
+      </nav>
+      <div class="header-right">
+        <a class="project-badge" href="#overview" translate="no">Team AI Allowance</a>
+        <a class="portfolio-back" href="https://sabersojudi.com/#projects" aria-label="Back to main portfolio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"/></svg>
+          <span>Back</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <aside class="utility-rail" data-ui="utility-rail" aria-label="Theme and quick links">
+      <div class="seg" role="group" aria-label="Appearance">
+        <button type="button" data-theme-set="light" aria-pressed="true" aria-label="Light appearance" title="Light">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <button type="button" data-theme-set="dark" aria-pressed="false" aria-label="Dark appearance" title="Dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+      <nav class="seg rail-nav" aria-label="Jump to section">
+        <a href="#overview" data-sec-link aria-current="location" aria-label="Overview section" title="Overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+        </a>
+        <a href="#walkthrough" data-sec-link aria-label="Interactive walkthrough" title="Walkthrough">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+        </a>
+        <a href="#evidence" data-sec-link aria-label="Test results and simulation" title="Results">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        </a>
+        <a href="#method" data-sec-link aria-label="How it works and setup" title="How it works">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h5v5H4zM15 13h5v5h-5zM9 8h8v5M6.5 11v7H15"/></svg>
+        </a>
+        <a href="https://github.com/sabers13/team-ai-allowance" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <!-- SECTION 1: OVERVIEW -->
+      <section id="overview" class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="project-context reveal">Recorded v1.0.0 engineering showcase · 3 AI coding CLIs · LiteLLM v1.105.1 · 2026</p>
+            <h1 id="hero-title" class="reveal">Stop runaway <span class="accent-phrase">AI coding loops</span>.</h1>
+            <p class="lead reveal">
+              I built a team policy console, background spend watcher, and in-terminal request tool on top of open-source <span translate="no">LiteLLM</span> so every engineer gets a clear weekly AI allowance and forgotten night or weekend loops pause automatically.
+            </p>
+            <p class="hero-sub reveal">
+              When a small engineering team shares one raw API key across <span translate="no">Claude Code</span>, <span translate="no">OpenCode</span>, and <span translate="no">Codex</span>, a single stuck retry loop on Friday evening can quietly burn the month’s budget. Here, each engineer works on a virtual key with an <strong>80%</strong> soft warning, a <strong>5%</strong> grace buffer, and one-command top-up requests from the terminal.
+            </p>
+
+            <ul class="tags reveal" data-ui="skill-tags" aria-label="Skills demonstrated in this project">
+              <li title="Typed policy service, CLI and MCP server on Node.js 24">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 6 7-6 7M13 19h7"/></svg>
+                <span translate="no">TypeScript</span>
+              </li>
+              <li title="Server-rendered web console, REST API and 30-second spend watcher">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+                <span translate="no">Node.js</span>
+              </li>
+              <li title="Open-source AI gateway enforcing per-member virtual key budgets and model allowlists">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-3 8H4l7 12 3-8h6Z"/></svg>
+                <span translate="no">LiteLLM</span>
+              </li>
+              <li title="Model Context Protocol tools for checking budget and requesting top-ups inside the CLI">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="m7 11 9-5M7 13l9 5"/></svg>
+                <span translate="no">MCP</span>
+              </li>
+              <li title="Spend logs, team policy state, requests and chronological audit trail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+                <span translate="no">PostgreSQL</span>
+              </li>
+              <li title="Per-member allowances, off-hours caps, unattended loop pause and human approvals">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg>
+                <span>Cost control</span>
+              </li>
+            </ul>
+
+            <div class="cta reveal">
+              <a class="btn btn-primary" href="#walkthrough">
+                <span>Explore walkthrough</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-dark" href="https://github.com/sabers13/team-ai-allowance" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>View on GitHub</span>
+              </a>
+              <a class="btn btn-quiet" href="https://sabersojudi.com/#contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M8 7v14M16 7v14"/></svg>
+                <span>Hire Me</span>
+              </a>
+            </div>
+
+            <p class="fine reveal">
+              Static showcase of recorded v1.0.0 runs. No live model calls or cookies run in your browser.
+            </p>
+
+            <div class="boundary-callout reveal">
+              <strong>Human approval boundary:</strong> Routine work inside a member’s budget runs automatically. Soft warnings at <strong>80%</strong> notify without blocking, hard caps stop after a <strong>5%</strong> grace buffer, and temporary budget increases or model exceptions require a manager’s click in the console.
+            </div>
+          </div>
+
+          <!-- Concrete example in hero with LIVECell-style animated specimen callout -->
+          <div class="example-card reveal">
+            <div class="card-head">
+              <h2>Real example: hitting a cap</h2>
+              <span class="chip">Same terminal session</span>
+            </div>
+            <ol class="trace-list">
+              <li class="trace-item">
+                <div class="trace-top">
+                  <strong>1. Lena hits her weekly cap</strong>
+                  <span class="chip chip-stop">HTTP 422 · USD 21.00</span>
+                </div>
+                <p>Lena’s weekly allowance is <strong>USD 20.00</strong> with a <strong>5%</strong> grace buffer. At <strong>USD 21.00</strong>, the gateway pauses her key and returns a recovery command.</p>
+              </li>
+              <li class="trace-item">
+                <div class="trace-top">
+                  <strong>2. She asks for USD 5.00 from her CLI</strong>
+                  <span class="chip">MCP tool or CLI</span>
+                </div>
+                <p>Instead of chasing a manager in chat, she requests a top-up directly from her coding session:</p>
+                <div class="trace-code"><code>npx allowance request --amount 5 --reason "Finish release test suite"</code></div>
+              </li>
+              <li class="trace-item">
+                <div class="trace-top">
+                  <strong>3. Priya approves USD 3.00 until Friday</strong>
+                  <span class="chip chip-ok">+USD 3.00 approved</span>
+                </div>
+                <p>Manager Priya adjusts the grant to <strong>USD 3.00</strong> in the console. Lena’s next prompt in the same terminal succeeds immediately, and the audit log records both numbers.</p>
+              </li>
+            </ol>
+
+            <figure class="hero-shot-preview" data-ui="hero-preview">
+              <div class="specimen" id="hero-specimen">
+                <button type="button" class="shot-open" data-media-src="shots/step-05-priya-partly.png" data-media-title="5. Priya approves USD 3.00 of Lena’s USD 5.00 request" data-media-alt="Manager console screenshot showing Priya approving USD 3.00 on Lena’s USD 5.00 request." data-media-w="1280" data-media-h="1532" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge screenshot: Priya approves USD 3.00">
+                  <div class="image-overlay">
+                    <img src="shots/step-05-priya-partly.png" width="1280" height="1532" fetchpriority="high" draggable="false" alt="Manager console screenshot showing Priya approving USD 3.00 on Lena’s USD 5.00 request.">
+                  </div>
+                </button>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <!-- AI Privacy Filter-style Overview Media Carousel -->
+        <div class="overview-process reveal" id="overview-process" role="region" aria-label="Console and architecture carousel" aria-describedby="overview-carousel-help">
+          <p class="sr-only" id="overview-carousel-help">Swipe or use the arrow keys to change images. Select an image to enlarge it.</p>
+          <div class="media-track" id="overview-track" data-carousel-track data-ui="overview-track">
+            <button class="overview-preview" type="button" data-media-src="shots/overview-crew-1280-light.png" data-media-title="Crew Team Overview · 6 accounts, budgets, and pending requests" data-media-alt="Crew team overview screen showing 6 member accounts, active budgets, and pending requests." data-media-w="1280" data-media-h="1701" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Crew Team Overview screenshot">
+              <span class="overview-visual">
+                <img src="shots/overview-crew-1280-light.png" width="1280" height="1701" loading="lazy" alt="" aria-hidden="true" draggable="false">
+              </span>
+            </button>
+
+            <button class="overview-preview" type="button" data-media-src="shots/step-05-priya-partly.png" data-media-title="Partial Approval · Priya grants +USD 3.00 on Lena’s USD 5.00 request" data-media-alt="Manager console showing Priya partially approving USD 3.00 on Lena’s USD 5.00 budget request." data-media-w="1280" data-media-h="1532" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Partial Approval screenshot">
+              <span class="overview-visual">
+                <img src="shots/step-05-priya-partly.png" width="1280" height="1532" loading="lazy" alt="" aria-hidden="true" draggable="false">
+              </span>
+            </button>
+
+            <button class="overview-preview" type="button" data-media-src="shots/requests-history-crew-1280-light.png" data-media-title="Requests Queue & Decision History · 11 recorded Crew requests" data-media-alt="Crew team requests queue and decision history showing 11 member requests." data-media-w="1280" data-media-h="1893" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Requests Queue screenshot">
+              <span class="overview-visual">
+                <img src="shots/requests-history-crew-1280-light.png" width="1280" height="1893" loading="lazy" alt="" aria-hidden="true" draggable="false">
+              </span>
+            </button>
+
+            <button class="overview-preview" type="button" data-media-src="shots/step-10-usage.png" data-media-title="Per-Member Usage Breakdown · Spend by engineer and model" data-media-alt="Usage breakdown screen showing spend per member and model across the team." data-media-w="1280" data-media-h="1503" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Usage Breakdown screenshot">
+              <span class="overview-visual">
+                <img src="shots/step-10-usage.png" width="1280" height="1503" loading="lazy" alt="" aria-hidden="true" draggable="false">
+              </span>
+            </button>
+
+            <button class="overview-preview" type="button" data-media-svg="arch-pipeline-svg" data-media-title="Three-Stage Architecture · Member CLI → Team Gateway → Manager Console" data-media-alt="Architecture diagram showing Member CLI and MCP tools connecting to LiteLLM Gateway and Manager Console." data-media-w="1120" data-media-h="260" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Architecture Diagram">
+              <span class="overview-visual overview-visual-svg" id="overview-arch-slot" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-stat summary strip with LIVECell count-up support -->
+        <div class="facts-strip reveal" aria-label="Headline recorded results">
+          <div>
+            <strong>USD 144.97 → 0.55</strong>
+            <span>Simulated weekend runaway loop cut from <b class="num" data-count="5000">5,000</b> calls to <b class="num" data-count="40">40</b> calls when budget, off-hours cap, and 30-minute unattended pause combine.</span>
+          </div>
+          <div>
+            <strong>3 CLIs · <span data-count="18">18</span> / 18</strong>
+            <span>Live verification passed across Claude Code (2.1.316), OpenCode (v2.1.3), and Codex (0.165.0) at USD 0.170827 total gateway spend.</span>
+          </div>
+          <div>
+            <strong><span data-count="69">69</span> audit events</strong>
+            <span>Recorded across 6 Crew accounts and 11 requests in a real 4-agent team test (USD 0.082512 metered across 369 spend rows).</span>
+          </div>
+          <div>
+            <strong><span data-count="317">317</span> / 369 rows</strong>
+            <span>Honest finding: streamed CLI responses logged USD 0 cost across 12,896,452 tokens, exposing a streaming cost-metering gap.</span>
+          </div>
+        </div>
+
+        <!-- What I built strip -->
+        <div class="built-strip reveal">
+          <div>
+            <h2>What I built</h2>
+            <p>
+              Open-source <span translate="no">LiteLLM v1.105.1</span> enforces per-key hard budgets, but its built-in per-user management screens and approval workflows sit behind the enterprise license. I built the missing team layer using only open-source endpoints.
+            </p>
+            <p class="skills" aria-label="Skills used">
+              <span translate="no">TypeScript</span>
+              <span translate="no">Node.js 24</span>
+              <span translate="no">LiteLLM</span>
+              <span translate="no">MCP</span>
+              <span translate="no">PostgreSQL</span>
+              <span translate="no">Playwright</span>
+            </p>
+          </div>
+          <ul class="built-points">
+            <li>
+              <strong>Manager &amp; member web console</strong>
+              Server-rendered console on port <code>18080</code> with Overview, Member detail, Requests queue, Usage breakdown, Audit log, and CSV/JSON export.
+            </li>
+            <li>
+              <strong>Background spend &amp; off-hours watcher</strong>
+              Polls spend every <code>30</code> seconds, fires <code>80%</code> soft warnings, blocks keys outside working hours once off-hours caps cross, and expires temporary grants.
+            </li>
+            <li>
+              <strong>In-terminal MCP &amp; CLI request tools</strong>
+              Engineers check remaining allowance (<code>allowance_status</code>), ask for more budget (<code>allowance_request_more</code>), or check approval status without leaving their editor.
+            </li>
+            <li>
+              <strong>OpenCode unattended loop guard</strong>
+              Local plugin pauses a session after <code>30</code> minutes (<code>40</code> calls at one call every <code>45</code> seconds) without a fresh human message.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 2: INTERACTIVE 10-STEP WALKTHROUGH + CAROUSEL -->
+      <section id="walkthrough" class="section">
+        <div class="section-head reveal">
+          <h2>Ten-step product walkthrough</h2>
+          <p>
+            Follow how engineers Lena, Omar, and Jonas interact with team manager Priya across ten recorded screens. Filter by scenario, swipe the screenshot carousel, or click any screen to zoom and pan.
+          </p>
+        </div>
+
+        <div class="walkthrough-panel reveal">
+          <div id="walkthrough-live" class="sr-only" aria-live="polite"></div>
+
+          <div class="walkthrough-toolbar">
+            <div class="filter-group" role="group" aria-label="Filter walkthrough steps">
+              <button type="button" data-step-filter="all" aria-pressed="true">All 10 steps</button>
+              <button type="button" data-step-filter="budget" aria-pressed="false">Budget &amp; approval (1–6)</button>
+              <button type="button" data-step-filter="model" aria-pressed="false">Model denial (7)</button>
+              <button type="button" data-step-filter="offhours" aria-pressed="false">Off-hours cap (8)</button>
+              <button type="button" data-step-filter="audit" aria-pressed="false">Audit &amp; usage (9–10)</button>
+            </div>
+            <div class="step-nav-controls">
+              <button type="button" id="step-prev" disabled>← Previous</button>
+              <button type="button" id="step-next">Next →</button>
+            </div>
+          </div>
+
+          <div class="walkthrough-grid">
+            <div class="step-list" role="tablist" aria-label="Walkthrough steps">
+              <button type="button" class="step-btn" role="tab" data-step-id="1" aria-selected="true">
+                <span class="step-num">1</span>
+                <span class="step-title">Lena works inside budget</span>
+                <span class="step-tag">36%</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="2" aria-selected="false" tabindex="-1">
+                <span class="step-num">2</span>
+                <span class="step-title">Soft warning at 80%</span>
+                <span class="step-tag">Alert</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="3" aria-selected="false" tabindex="-1">
+                <span class="step-num">3</span>
+                <span class="step-title">Hard stop at USD 21.00</span>
+                <span class="step-tag">422</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="4" aria-selected="false" tabindex="-1">
+                <span class="step-num">4</span>
+                <span class="step-title">Lena requests USD 5.00</span>
+                <span class="step-tag">MCP</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="5" aria-selected="false" tabindex="-1">
+                <span class="step-num">5</span>
+                <span class="step-title">Priya approves USD 3.00</span>
+                <span class="step-tag">+USD 3</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="6" aria-selected="false" tabindex="-1">
+                <span class="step-num">6</span>
+                <span class="step-title">Lena continues in terminal</span>
+                <span class="step-tag">Active</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="7" aria-selected="false" tabindex="-1">
+                <span class="step-num">7</span>
+                <span class="step-title">Omar denied restricted model</span>
+                <span class="step-tag">403</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="8" aria-selected="false" tabindex="-1">
+                <span class="step-num">8</span>
+                <span class="step-title">Jonas hits off-hours cap</span>
+                <span class="step-tag">Night</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="9" aria-selected="false" tabindex="-1">
+                <span class="step-num">9</span>
+                <span class="step-title">Full chronological audit log</span>
+                <span class="step-tag">Audit</span>
+              </button>
+              <button type="button" class="step-btn" role="tab" data-step-id="10" aria-selected="false" tabindex="-1">
+                <span class="step-num">10</span>
+                <span class="step-title">Per-member usage breakdown</span>
+                <span class="step-tag">Export</span>
+              </button>
+            </div>
+
+            <div class="step-stage" id="step-stage" role="tabpanel" aria-live="off">
+              <div class="stage-head">
+                <div>
+                  <h3 id="stage-title">1. Lena works inside budget</h3>
+                  <p id="stage-meta" class="stage-meta">Actor: Lena (Member) · Weekly budget: USD 20.00 · Spend: USD 7.20 (36%)</p>
+                </div>
+                <span id="stage-chip" class="chip chip-ok">Allowed · 200 OK</span>
+              </div>
+
+              <div class="stage-copy-grid">
+                <div class="stage-box">
+                  <strong>What happened</strong>
+                  <p id="stage-happened">
+                    Lena runs her normal AI coding CLI against the team gateway on port 14000. Because her weekly spend (USD 7.20) is well below the 80% warning mark, the gateway forwards the request with zero extra prompts.
+                  </p>
+                </div>
+                <div class="stage-box">
+                  <strong>What to notice in the screenshot</strong>
+                  <p id="stage-notice">
+                    In the manager overview, Lena shows a healthy green status bar at 36% of her USD 20.00 weekly allowance.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swipeable / expandable carousel of all 11 walkthrough screenshots -->
+              <div class="stage-carousel-wrap" data-ui="walkthrough-carousel" role="region" aria-label="Walkthrough screenshot carousel">
+                <div class="media-track stage-media-track" id="walkthrough-track" data-carousel-track>
+                  <button type="button" class="stage-slide" data-walk-slide="1" data-media-src="shots/step-01-lena-works.png" data-media-title="1. Lena works inside budget" data-media-alt="Team AI Allowance console showing Lena at USD 7.20 of her USD 20.00 weekly budget with green status." data-media-w="1280" data-media-h="1548" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 1 screenshot: Lena works inside budget">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-01-lena-works.png" width="1280" height="1548" loading="lazy" draggable="false" alt="Team AI Allowance console showing Lena at USD 7.20 of her USD 20.00 weekly budget with green status.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="2" data-media-src="shots/step-02-lena-soft.png" data-media-title="2. Soft warning at 80%" data-media-alt="Console showing Lena at 82% of her weekly budget after the 80% soft warning threshold triggered." data-media-w="1280" data-media-h="1664" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 2 screenshot: Soft warning at 80%">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-02-lena-soft.png" width="1280" height="1664" loading="lazy" draggable="false" alt="Console showing Lena at 82% of her weekly budget after the 80% soft warning threshold triggered.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="3" data-media-src="shots/step-03-lena-hard.png" data-media-title="3. Hard stop at USD 21.00" data-media-alt="Console showing Lena blocked at her hard budget limit with zero remaining allowance." data-media-w="1280" data-media-h="1548" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 3 screenshot: Hard stop at USD 21.00">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-03-lena-hard.png" width="1280" height="1548" loading="lazy" draggable="false" alt="Console showing Lena blocked at her hard budget limit with zero remaining allowance.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="4" data-media-src="shots/step-04-lena-request.png" data-media-title="4. Requesting USD 5.00 in CLI" data-media-alt="Requests queue showing Lena asking for USD 5.00 extra budget to finish the release test suite." data-media-w="1280" data-media-h="1132" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 4 screenshot: Lena requests USD 5.00">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-04-lena-request.png" width="1280" height="1132" loading="lazy" draggable="false" alt="Requests queue showing Lena asking for USD 5.00 extra budget to finish the release test suite.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="5" data-media-src="shots/step-05-priya-partly.png" data-media-title="5. Priya approves USD 3.00" data-media-alt="Manager console showing Priya partially approving USD 3.00 on Lena’s USD 5.00 budget request." data-media-w="1280" data-media-h="1532" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 5 screenshot: Priya approves USD 3.00">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-05-priya-partly.png" width="1280" height="1532" loading="lazy" draggable="false" alt="Manager console showing Priya partially approving USD 3.00 on Lena’s USD 5.00 budget request.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="6" data-media-src="shots/step-06-lena-continues.png" data-media-title="6. Lena continues in terminal" data-media-alt="Console showing Lena active again with her USD 3.00 temporary budget grant applied." data-media-w="1280" data-media-h="1548" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 6 screenshot: Lena continues in terminal">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-06-lena-continues.png" width="1280" height="1548" loading="lazy" draggable="false" alt="Console showing Lena active again with her USD 3.00 temporary budget grant applied.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="7" data-media-src="shots/step-07-omar-denied.png" data-media-title="7. Omar denied restricted model" data-media-alt="Request history showing Omar’s model access request denied by manager Priya with a written reason." data-media-w="1280" data-media-h="1220" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 7 screenshot: Omar denied restricted model">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-07-omar-denied.png" width="1280" height="1220" loading="lazy" draggable="false" alt="Request history showing Omar’s model access request denied by manager Priya with a written reason.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="8" data-media-src="shots/step-08-jonas-offhours.png" data-media-title="8a. Jonas hits off-hours cap" data-media-alt="Console view showing Jonas paused by the off-hours spending cap." data-media-w="1280" data-media-h="1771" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 8a screenshot: Jonas hits off-hours cap">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-08-jonas-offhours.png" width="1280" height="1771" loading="lazy" draggable="false" alt="Console view showing Jonas paused by the off-hours spending cap.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="8b" data-media-src="shots/step-08b-jonas-unblocked.png" data-media-title="8b. Jonas unblocked after override" data-media-alt="Console view showing Jonas unblocked after an off-hours override grant." data-media-w="1280" data-media-h="1782" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 8b screenshot: Jonas unblocked after override">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-08b-jonas-unblocked.png" width="1280" height="1782" loading="lazy" draggable="false" alt="Console view showing Jonas unblocked after an off-hours override grant.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="9" data-media-src="shots/step-09-audit.png" data-media-title="9. Chronological team audit log" data-media-alt="Audit log page listing chronological budget warnings, requests, approvals, and policy actions." data-media-w="1280" data-media-h="2592" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 9 screenshot: Chronological team audit log">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-09-audit.png" width="1280" height="2592" loading="lazy" draggable="false" alt="Audit log page listing chronological budget warnings, requests, approvals, and policy actions.">
+                    </span>
+                  </button>
+
+                  <button type="button" class="stage-slide" data-walk-slide="10" data-media-src="shots/step-10-usage.png" data-media-title="10. Per-member usage breakdown" data-media-alt="Usage breakdown screen showing spend per member and model across the team." data-media-w="1280" data-media-h="1503" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge step 10 screenshot: Per-member usage breakdown">
+                    <span class="stage-shot-frame">
+                      <img src="shots/step-10-usage.png" width="1280" height="1503" loading="lazy" draggable="false" alt="Usage breakdown screen showing spend per member and model across the team.">
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <noscript>
+            <p class="fine" style="margin-top:16px;">JavaScript is disabled. Direct links to all 11 walkthrough screenshots: <a href="shots/step-01-lena-works.png">1. Lena works</a>, <a href="shots/step-02-lena-soft.png">2. Soft warning</a>, <a href="shots/step-03-lena-hard.png">3. Hard stop</a>, <a href="shots/step-04-lena-request.png">4. Request</a>, <a href="shots/step-05-priya-partly.png">5. Partial approval</a>, <a href="shots/step-06-lena-continues.png">6. Continues</a>, <a href="shots/step-07-omar-denied.png">7. Model denied</a>, <a href="shots/step-08-jonas-offhours.png">8a. Off-hours cap</a>, <a href="shots/step-08b-jonas-unblocked.png">8b. Unblocked</a>, <a href="shots/step-09-audit.png">9. Audit log</a>, <a href="shots/step-10-usage.png">10. Usage</a>.</p>
+          </noscript>
+        </div>
+      </section>
+
+      <!-- SECTION 3: RESULTS, SIMULATION & REAL TEAM TEST -->
+      <section id="evidence" class="section">
+        <div class="section-head reveal">
+          <h2>Measured results &amp; honest limits</h2>
+          <p>
+            Tested in three ways: a deterministic weekend runaway-loop simulation, a live 3-CLI verification against <code translate="no">deepseek-v4.1-flash</code>, and a 4-agent team test that exposed a real streaming cost-metering bug.
+          </p>
+        </div>
+
+        <!-- 3A: Weekend runaway simulation with LIVECell-style hatched animated bars -->
+        <div class="sim-card reveal">
+          <div class="sim-banner">
+            <div>
+              <h3>Weekend runaway-loop simulation</h3>
+              <p>
+                What happens when an engineer leaves an autonomous retry loop running from Friday 17:30 to Monday 08:00 (<span translate="no">Europe/Berlin</span>, one call every 45 seconds, capped at 5,000 steps)?
+              </p>
+            </div>
+            <div class="filter-group" role="group" aria-label="Highlight protection layer">
+              <button type="button" data-sim-focus="all" aria-pressed="true">Compare all 4</button>
+              <button type="button" data-sim-focus="none" aria-pressed="false">No limits</button>
+              <button type="button" data-sim-focus="budget" aria-pressed="false">Budget only</button>
+              <button type="button" data-sim-focus="offhours" aria-pressed="false">Off-hours</button>
+              <button type="button" data-sim-focus="full" aria-pressed="false">Full stack</button>
+            </div>
+          </div>
+
+          <div class="sim-bars" role="list" aria-label="Weekend simulation comparison bars">
+            <div class="sim-row" role="listitem" data-sim-layer="none">
+              <div class="sim-row-head">
+                <strong>1. No limits (shared raw key)</strong>
+                <div class="sim-metrics">
+                  <span class="sim-steps">5,000 steps · Ran until Mon 08:00</span>
+                  <span class="sim-cost">USD 144.97</span>
+                </div>
+              </div>
+              <div class="hbar-track" role="img" aria-label="100% of unguarded weekend spend: USD 144.97 across 5,000 steps">
+                <span class="bar-fill bar-danger" data-pct="100" style="width:100%"></span>
+              </div>
+              <p class="sim-reason">Every retry succeeded all weekend until Monday morning arrival.</p>
+            </div>
+
+            <div class="sim-row" role="listitem" data-sim-layer="budget">
+              <div class="sim-row-head">
+                <strong>2. Weekly member budget only (USD 20.00 + 5% grace)</strong>
+                <div class="sim-metrics">
+                  <span class="sim-steps">740 steps · Stopped Fri 23:02</span>
+                  <span class="sim-cost">USD 21.03</span>
+                </div>
+              </div>
+              <div class="hbar-track" role="img" aria-label="14.5% of unguarded spend: USD 21.03 across 740 steps">
+                <span class="bar-fill bar-warn" data-pct="14.5" style="width:14.5%"></span>
+              </div>
+              <p class="sim-reason">Hard budget stopped the loop once cumulative spend crossed the USD 21.00 grace limit (saving USD 123.94 vs. unguarded).</p>
+            </div>
+
+            <div class="sim-row" role="listitem" data-sim-layer="offhours">
+              <div class="sim-row-head">
+                <strong>3. Off-hours cap only (USD 5.00 after 19:00)</strong>
+                <div class="sim-metrics">
+                  <span class="sim-steps">289 steps · Stopped Fri 19:36</span>
+                  <span class="sim-cost">USD 8.03</span>
+                </div>
+              </div>
+              <div class="hbar-track" role="img" aria-label="5.5% of unguarded spend: USD 8.03 across 289 steps">
+                <span class="bar-fill bar-accent" data-pct="5.5" style="width:5.5%"></span>
+              </div>
+              <p class="sim-reason">USD 3.02 spent during work hours (17:30–19:00) plus USD 5.01 after 19:00 before the off-hours cap paused the key.</p>
+            </div>
+
+            <div class="sim-row is-best" role="listitem" data-sim-layer="full">
+              <div class="sim-row-head">
+                <strong>4. Budget + off-hours cap + 30-minute unattended pause</strong>
+                <div class="sim-metrics">
+                  <span class="sim-steps">40 steps · Paused Fri 18:00</span>
+                  <span class="sim-cost">USD 0.55</span>
+                </div>
+              </div>
+              <div class="hbar-track" role="img" aria-label="0.4% of unguarded spend: USD 0.55 across 40 steps">
+                <span class="bar-fill bar-ok" data-pct="1.4" style="width:1.4%"></span>
+              </div>
+              <p class="sim-reason">The OpenCode plugin noticed 30 minutes without a human message and paused the loop after 40 calls.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <caption>Recorded weekend simulation outcomes (Friday 17:30 to Monday 08:00 Europe/Berlin, 45s interval)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Protection configuration</th>
+                <th scope="col" class="text-cell">Stop trigger</th>
+                <th scope="col">Calls</th>
+                <th scope="col">Spend (USD)</th>
+                <th scope="col">Saved (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No limits</td>
+                <td class="text-cell">None · ran until Monday 08:00</td>
+                <td>5,000</td>
+                <td>144.97</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>Member budget only</td>
+                <td class="text-cell">Weekly hard limit (USD 20.00 + 5% grace = USD 21.00)</td>
+                <td>740</td>
+                <td>21.03</td>
+                <td>123.94</td>
+              </tr>
+              <tr>
+                <td>Off-hours cap only</td>
+                <td class="text-cell">Off-hours cap (USD 5.00 after 19:00 reached at USD 5.01)</td>
+                <td>289</td>
+                <td>8.03</td>
+                <td>136.94</td>
+              </tr>
+              <tr>
+                <td>Budget + off-hours + unattended rule</td>
+                <td class="text-cell">Unattended pause after 30 minutes without user input</td>
+                <td>40</td>
+                <td>0.55</td>
+                <td>144.42</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 3B: Live 3-CLI verification & 4-agent team test -->
+        <div class="evidence-split reveal">
+          <div class="panel-card">
+            <div class="card-head">
+              <h3>Live verification across 3 CLIs</h3>
+              <span class="chip chip-ok">18 / 18 steps passed</span>
+            </div>
+            <p>
+              Each real coding CLI ran the same 6-step live check against <code translate="no">deepseek-v4.1-flash</code> with a test budget of <strong>USD 0.05</strong>: allowed call, blocked model (HTTP <code>403</code>), budget/key stop (HTTP <code>422</code>/<code>401</code>), MCP extra-budget request, manager approval in the web console, and a working retry.
+            </p>
+            <div class="cli-list">
+              <div class="cli-row">
+                <strong translate="no">Claude Code · 2.1.316 (Claude Code)</strong>
+                <span class="cli-spend">USD 0.056733</span>
+                <span class="cli-meta">6 / 6 steps passed · Allowed call, 403 model block, budget stop, MCP request, approval, retry</span>
+              </div>
+              <div class="cli-row">
+                <strong translate="no">OpenCode · opencode v2.1.3</strong>
+                <span class="cli-spend">USD 0.058732</span>
+                <span class="cli-meta">6 / 6 steps passed · Plus OpenCode plugin unattended rule check (USD 0.000025)</span>
+              </div>
+              <div class="cli-row">
+                <strong translate="no">Codex · codex-cli 0.165.0</strong>
+                <span class="cli-spend">USD 0.055337</span>
+                <span class="cli-meta">6 / 6 steps passed · Virtual key updated in place without restarting CLI</span>
+              </div>
+            </div>
+            <p class="fine" style="margin-top:16px;">
+              Total live-verification gateway spend across all 3 CLIs and the plugin check: <strong>USD 0.170827</strong> (01 Nov 2026, using elevated test token pricing so a <strong>USD 0.05</strong> budget is reached in two calls).
+            </p>
+          </div>
+
+          <div class="panel-card">
+            <div class="card-head">
+              <h3>Real 4-agent team test</h3>
+              <span class="chip">5 / 7 probes passed</span>
+            </div>
+            <p>
+              Four AI coding workers and a team manager ran through the live gateway across two teams: <strong>Crew</strong> (<strong>6</strong> accounts: 5 workers + 1 leader, <strong>11</strong> requests, <strong>69</strong> audit events) and <strong>Night</strong> (<strong>3</strong> accounts: 2 workers + 1 leader, <strong>0</strong> requests). Total gateway spend was <strong>USD 0.082512</strong> across <strong>369</strong> spend rows (including <strong>USD 0.022452</strong> from scripted feature probes).
+            </p>
+            <div class="member-grid">
+              <div class="member-card">
+                <div class="member-head">
+                  <strong>Mira (Crew)</strong>
+                  <span>USD 0.056181</span>
+                </div>
+                <p>Hit her USD 0.05 test budget, requested USD 0.20, received a partial USD 0.10 approval, and continued working.</p>
+              </div>
+              <div class="member-card">
+                <div class="member-head">
+                  <strong>Nils (Crew)</strong>
+                  <span>USD 0.000019</span>
+                </div>
+                <p>Blocked from an unapproved model (HTTP 403), submitted a model access request, and received a manager denial with a note.</p>
+              </div>
+              <div class="member-card">
+                <div class="member-head">
+                  <strong>Edda (Crew)</strong>
+                  <span>USD 0.000000</span>
+                </div>
+                <p>Exercised MCP status checks and request cancellation; all 48 of her streamed CLI calls recorded USD 0 cost.</p>
+              </div>
+              <div class="member-card">
+                <div class="member-head">
+                  <strong>Bo (Night)</strong>
+                  <span>USD 0.002574</span>
+                </div>
+                <p>Ran off-hours probes; non-streaming probe calls metered USD 0.002574 while streamed CLI calls recorded USD 0.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3C: Honest defect report -->
+        <div class="defect-banner reveal">
+          <div>
+            <h3>What went wrong: streaming USD 0 rows</h3>
+            <p style="margin-top:10px;">
+              The most valuable result of running a real multi-agent team through the proxy was catching a metering failure that unit tests missed. Out of <strong>369</strong> gateway spend rows in <code translate="no">LiteLLM_SpendLogs</code>, <strong>317</strong> rows recorded <strong>USD 0</strong> cost even though they carried <strong>12,896,452</strong> tokens.
+            </p>
+            <p>
+              <strong>Why it happened:</strong> Interactive CLI sessions use server-sent event (SSE) streaming against <code translate="no">deepseek-v4.1-flash</code> via an OpenAI-compatible upstream. When the upstream stream omitted final usage-cost metadata matching the custom model price map, <span translate="no">LiteLLM v1.105.1</span> wrote the token counts to Postgres with <code>spend = 0</code>. Non-streaming calls priced accurately, which is why Mira’s hard limit (<strong>USD 0.056181</strong>) and the <strong>18 / 18</strong> live CLI checks triggered as designed, whereas Bo’s <strong>Night</strong> off-hours cap did not trip during streamed turns (leaving <strong>5</strong> of <strong>7</strong> scripted probes passing).
+            </p>
+          </div>
+          <div class="defect-highlight">
+            <strong>317 of 369 rows</strong>
+            <p>
+              Recorded <strong>USD 0</strong> cost while carrying <strong>12,896,452</strong> streamed tokens during the 4-agent team test. Disclosed in full so anyone adopting open-source LiteLLM with custom OpenAI-compatible streaming endpoints knows to verify stream usage accounting (<code>stream_options: {"include_usage": true}</code>).
+            </p>
+          </div>
+        </div>
+
+        <!-- 3D: Captured Web Console Views Carousel (1280px desktop & 360px mobile) -->
+        <div class="console-card reveal" role="region" aria-label="Captured web console views carousel">
+          <div class="walkthrough-toolbar" style="margin-bottom:14px;">
+            <div>
+              <h3>Captured web console views</h3>
+              <p class="fine">Swipe or drag the carousel to inspect the Crew console screens after the 4-agent run. Click any screen to zoom and pan.</p>
+            </div>
+            <div class="console-toolbar-right">
+              <div class="filter-group" id="console-view-group" role="group" aria-label="Console screenshot viewport">
+                <button type="button" data-console-size="1280" aria-pressed="true">Desktop (1280px)</button>
+                <button type="button" data-console-size="360" aria-pressed="false">Mobile (360px)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="media-track console-media-track" id="console-track" data-carousel-track data-ui="console-track">
+            <div class="console-shot-item">
+              <button type="button" class="shot-open console-shot-frame" data-media-src="shots/overview-crew-1280-light.png" data-media-title="Crew Team Overview (1280px)" data-media-alt="Crew team overview screen showing 6 member accounts, active budgets, and pending requests." data-media-w="1280" data-media-h="1701" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Crew Team Overview">
+                <img src="shots/overview-crew-1280-light.png" width="1280" height="1701" loading="lazy" decoding="async" draggable="false"
+                  data-shot-desktop="shots/overview-crew-1280-light.png" data-w-desktop="1280" data-h-desktop="1701"
+                  data-shot-mobile="shots/overview-crew-360-light.png" data-w-mobile="360" data-h-mobile="3541"
+                  alt="Crew team overview screen showing 6 member accounts, active budgets, and pending requests.">
+              </button>
+            </div>
+
+            <div class="console-shot-item">
+              <button type="button" class="shot-open console-shot-frame" data-media-src="shots/requests-history-crew-1280-light.png" data-media-title="Crew Requests & Decision History" data-media-alt="Crew team requests queue and decision history showing 11 member requests." data-media-w="1280" data-media-h="1893" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Requests and Decision History">
+                <img src="shots/requests-history-crew-1280-light.png" width="1280" height="1893" loading="lazy" decoding="async" draggable="false"
+                  data-shot-desktop="shots/requests-history-crew-1280-light.png" data-w-desktop="1280" data-h-desktop="1893"
+                  data-shot-mobile="shots/requests-history-crew-360-light.png" data-w-mobile="360" data-h-mobile="2173"
+                  alt="Crew team requests queue and decision history showing 11 member requests.">
+              </button>
+            </div>
+
+            <div class="console-shot-item">
+              <button type="button" class="shot-open console-shot-frame" data-media-src="shots/member-m1-crew-1280-light.png" data-media-title="Member Detail · Mira (Crew)" data-media-alt="Member detail screen for Mira showing USD 0.056181 spend, active grants, and key controls." data-media-w="1280" data-media-h="1666" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Member Detail for Mira">
+                <img src="shots/member-m1-crew-1280-light.png" width="1280" height="1666" loading="lazy" decoding="async" draggable="false"
+                  data-shot-desktop="shots/member-m1-crew-1280-light.png" data-w-desktop="1280" data-h-desktop="1666"
+                  data-shot-mobile="shots/member-m1-crew-360-light.png" data-w-mobile="360" data-h-mobile="3078"
+                  alt="Member detail screen for Mira showing USD 0.056181 spend, active grants, and key controls.">
+              </button>
+            </div>
+
+            <div class="console-shot-item">
+              <button type="button" class="shot-open console-shot-frame" data-media-src="shots/audit-crew-1280-light.png" data-media-title="Crew Team Audit Log (69 events)" data-media-alt="Crew team audit log showing 69 chronological events across members and managers." data-media-w="1280" data-media-h="5332" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge Crew Team Audit Log">
+                <img src="shots/audit-crew-1280-light.png" width="1280" height="5332" loading="lazy" decoding="async" draggable="false"
+                  data-shot-desktop="shots/audit-crew-1280-light.png" data-w-desktop="1280" data-h-desktop="5332"
+                  data-shot-mobile="shots/audit-crew-360-light.png" data-w-mobile="360" data-h-mobile="12702"
+                  alt="Crew team audit log showing 69 chronological events across members and managers.">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: HOW IT WORKS, KNOWN LIMITS & SETUP -->
+      <section id="method" class="section">
+        <div class="section-head reveal">
+          <h2>How the architecture works</h2>
+          <p>
+            Budget enforcement happens on the team gateway rather than trusting the developer’s laptop, while local CLI helpers and MCP tools keep requests fast inside the terminal.
+          </p>
+        </div>
+
+        <!-- Expandable SVG Architecture Diagram + 3-stage explanation -->
+        <div class="how-card reveal">
+          <button type="button" class="workflow-open" data-ui="arch-diagram" data-media-svg="arch-pipeline-svg" data-media-title="Three-Stage Architecture · Member CLI → Team Gateway → Manager Console" data-media-alt="Five-node flow: Member CLI, Local MCP & Plugin, LiteLLM Gateway, 30s Spend Watcher, Manager Console" data-media-w="1120" data-media-h="260" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="Enlarge the architecture flow diagram">
+            <svg id="arch-pipeline-svg" class="how-h" viewBox="0 0 1120 260" role="img" aria-labelledby="arch-svg-title">
+              <title id="arch-svg-title">Architecture flow: Member CLI and MCP tools connect to LiteLLM Gateway, 30-second Spend Watcher, and Manager Console</title>
+              <defs>
+                <marker id="arch-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0 10 5 0 10z" fill="var(--muted)"/>
+                </marker>
+              </defs>
+              <line class="how-line" x1="154" y1="96" x2="288" y2="96" marker-end="url(#arch-arrow)"/>
+              <line class="how-line" x1="382" y1="96" x2="512" y2="96" marker-end="url(#arch-arrow)"/>
+              <line class="how-line" x1="608" y1="96" x2="738" y2="96" marker-end="url(#arch-arrow)"/>
+              <line class="how-line" x1="832" y1="96" x2="962" y2="96" marker-end="url(#arch-arrow)"/>
+              <circle class="how-node" cx="110" cy="96" r="40"/>
+              <circle class="how-node" cx="335" cy="96" r="40"/>
+              <circle class="how-node net" cx="560" cy="96" r="40"/>
+              <circle class="how-node" cx="785" cy="96" r="40"/>
+              <circle class="how-node" cx="1010" cy="96" r="40"/>
+              <text class="how-num" x="110" y="102" text-anchor="middle">1</text>
+              <text class="how-num" x="335" y="102" text-anchor="middle">2</text>
+              <text class="how-num net" x="560" y="102" text-anchor="middle">3</text>
+              <text class="how-num" x="785" y="102" text-anchor="middle">4</text>
+              <text class="how-num" x="1010" y="102" text-anchor="middle">5</text>
+              <text class="how-title" x="110" y="168" text-anchor="middle">Member CLI</text>
+              <text class="how-title" x="335" y="168" text-anchor="middle">MCP &amp; Plugin</text>
+              <text class="how-title" x="560" y="168" text-anchor="middle">LiteLLM :14000</text>
+              <text class="how-title" x="785" y="168" text-anchor="middle">Watcher (30s)</text>
+              <text class="how-title" x="1010" y="168" text-anchor="middle">Console :18080</text>
+              <text class="how-desc" x="110" y="192" text-anchor="middle">Claude, OpenCode, Codex</text>
+              <text class="how-desc" x="335" y="192" text-anchor="middle">30m pause &amp; top-up ask</text>
+              <text class="how-desc" x="560" y="192" text-anchor="middle">hard cap &amp; model check</text>
+              <text class="how-desc" x="785" y="192" text-anchor="middle">80% warn &amp; off-hours</text>
+              <text class="how-desc" x="1010" y="192" text-anchor="middle">manager grant &amp; audit</text>
+            </svg>
+          </button>
+
+          <div class="architecture" aria-label="Three-part architecture details">
+            <div class="arch-stage">
+              <strong>1. On the member machine</strong>
+              <p>
+                <span translate="no">Claude Code</span>, <span translate="no">OpenCode</span>, or <span translate="no">Codex</span> points at the gateway on <code>127.0.0.1:14000</code> using a member virtual key stored with <code>0600</code> permissions. The local MCP server exposes <code>allowance_status</code> and <code>allowance_request_more</code>, and the OpenCode plugin pauses unattended loops after <code>30</code> minutes.
+              </p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="arch-stage arch-core">
+              <strong>2. On the team server</strong>
+              <p>
+                Open-source <span translate="no">LiteLLM v1.105.1</span> and PostgreSQL (<code>127.0.0.1:15432</code>) enforce hard budgets and model allowlists on every call. The Team AI Allowance service (<code>127.0.0.1:18080</code>) runs a <code>30</code>-second watcher for <code>80%</code> soft alerts, off-hours caps, and grant expiry.
+              </p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="arch-stage">
+              <strong>3. For the manager</strong>
+              <p>
+                Managers review requests in the web console, approve full or partial top-ups with an expiration time, or deny with a written reason. Alerts deliver to local SMTP (<code>127.0.0.1:18025</code>) and webhook (<code>127.0.0.1:18090</code>) endpoints.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="limits-grid reveal" aria-label="Architectural boundaries and known limitations">
+          <div class="limit-item">
+            <h3>Why local edits cannot bypass a cap</h3>
+            <p>Even if an engineer disables the local OpenCode plugin or edits local config files, the virtual key’s hard budget and model allowlist live on the LiteLLM gateway and Postgres database.</p>
+          </div>
+          <div class="limit-item">
+            <h3>30-second watcher polling</h3>
+            <p>Hard budget caps block inline on the next gateway call, while off-hours caps and 80% soft warnings evaluate on the 30-second watcher tick.</p>
+          </div>
+          <div class="limit-item">
+            <h3>Single-host Docker stack</h3>
+            <p>Designed for a small engineering team running on a single Linux/macOS host with loopback-bound ports rather than multi-region federation.</p>
+          </div>
+          <div class="limit-item">
+            <h3>Open-source LiteLLM boundary</h3>
+            <p>Uses only open-source LiteLLM proxy key routes and Postgres spend tables, with zero dependency on enterprise-licensed modules.</p>
+          </div>
+        </div>
+
+        <!-- Expandable technical details -->
+        <details class="disclosure reveal">
+          <summary>
+            <span>Local setup &amp; verification</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="disclosure-body">
+            <p>
+              The stack runs on Node.js <code>24</code> and Docker Compose, binding all five services to <code>127.0.0.1</code> by default: console on <code>18080</code>, LiteLLM gateway on <code>14000</code>, PostgreSQL on <code>15432</code>, mail catcher on <code>18025</code>, and webhook catcher on <code>18090</code>.
+            </p>
+            <div class="code-grid">
+              <div>
+                <h4>Start the stack and seed demo data</h4>
+                <pre><code>git clone https://github.com/sabers13/team-ai-allowance.git
+cd team-ai-allowance
+make setup
+make demo
+# Open http://127.0.0.1:18080</code></pre>
+              </div>
+              <div>
+                <h4>Member CLI &amp; verification targets</h4>
+                <pre><code>node src/cli/index.ts status
+node src/cli/index.ts request more-budget --amount 5 --reason "Finish tests"
+make release-check
+make e2e
+make sim</code></pre>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="disclosure reveal">
+          <summary>
+            <span>LiteLLM boundary &amp; 9 limits</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="disclosure-body">
+            <p>
+              Team AI Allowance uses only open-source LiteLLM proxy routes (<code>/key/generate</code>, <code>/key/update</code>, <code>/key/info</code>, <code>/key/block</code>, <code>/key/unblock</code>) and its Postgres spend tables. Nine operational boundaries are documented:
+            </p>
+            <div class="table-wrap">
+              <table>
+                <caption>Nine documented operational boundaries in v1.0.0</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Boundary</th>
+                    <th scope="col" class="text-cell">Behavior in v1.0.0</th>
+                    <th scope="col" class="text-cell">Operational impact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1. Streaming USD 0 cost rows</td>
+                    <td class="text-cell">317 of 369 team-test rows logged USD 0 across 12,896,452 streamed tokens</td>
+                    <td class="text-cell">Upstream OpenAI-compatible streams must emit usage chunks or use token-count fallback pricing</td>
+                  </tr>
+                  <tr>
+                    <td>2. Watcher poll interval</td>
+                    <td class="text-cell">Off-hours caps and 80% warnings evaluate every 30 seconds</td>
+                    <td class="text-cell">A burst of calls inside one 30-second window can briefly overshoot an off-hours threshold</td>
+                  </tr>
+                  <tr>
+                    <td>3. Unattended plugin scope</td>
+                    <td class="text-cell">Client-side inactivity pause ships as an OpenCode plugin</td>
+                    <td class="text-cell">Claude Code and Codex rely on gateway hard budgets and off-hours caps unless wrapped</td>
+                  </tr>
+                  <tr>
+                    <td>4. Client-side plugin trust</td>
+                    <td class="text-cell">The unattended pause runs on the member workstation</td>
+                    <td class="text-cell">Treated as a convenience brake; hard financial enforcement stays on the server</td>
+                  </tr>
+                  <tr>
+                    <td>5. Shared team timezone</td>
+                    <td class="text-cell">Working hours are configured per team (e.g. Europe/Berlin)</td>
+                    <td class="text-cell">Distributed teams across continents should group members into regional teams</td>
+                  </tr>
+                  <tr>
+                    <td>6. Passphrase session auth</td>
+                    <td class="text-cell">Console uses role passphrases and HTTP-only session cookies</td>
+                    <td class="text-cell">Built for internal VPN/SSH access rather than public internet exposure without SSO</td>
+                  </tr>
+                  <tr>
+                    <td>7. In-flight call completion</td>
+                    <td class="text-cell">Budget checks happen before a model call starts</td>
+                    <td class="text-cell">A large single call that starts at 99% budget completes into the 5% grace buffer</td>
+                  </tr>
+                  <tr>
+                    <td>8. Single-node Postgres</td>
+                    <td class="text-cell">State lives in one local PostgreSQL container</td>
+                    <td class="text-cell">Requires standard volume backups for production durability</td>
+                  </tr>
+                  <tr>
+                    <td>9. Custom model price table</td>
+                    <td class="text-cell">Non-standard model IDs need explicit input/output token rates in LiteLLM config</td>
+                    <td class="text-cell">Unmapped models default to zero cost unless added to the gateway model list</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fine">
+              Project code and documentation are released under the MIT License (Copyright 2026 Saber Sojudi). Self-hosted typography and icons are used under their respective open licences:
+              <a href="assets/fonts/OFL-plex.txt">IBM Plex Sans (SIL OFL 1.1)</a>,
+              <a href="assets/fonts/OFL-inter.txt">Inter (SIL OFL 1.1)</a>, and
+              <a href="assets/icons/LICENSE-feather.txt">Feather Icons (MIT)</a>.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 Saber Sojudi · Team AI Allowance v1.0.0 · MIT License</p>
+        <div class="footer-links">
+          <a href="https://sabersojudi.com/#projects">All portfolio projects</a>
+          <a href="https://github.com/sabers13/team-ai-allowance" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+          <a href="https://sabersojudi.com/#contact">Contact</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Gesture-driven native zoom & pan viewer (adapted from AI Privacy Filter) -->
+  <dialog class="media-viewer" id="media-viewer" aria-labelledby="media-title" aria-describedby="media-help">
+    <p class="sr-only" id="media-title">Enlarged preview</p>
+    <p class="sr-only" id="media-help">Scroll or pinch to zoom; drag to pan. Double-click or double-tap to zoom in or fit. Use + and − to zoom, 0 to fit, and Escape to close.</p>
+    <button class="sr-only media-close" id="media-close" type="button">Close</button>
+    <div class="media-stage" id="media-stage" role="region" tabindex="0" aria-label="Enlarged interactive preview">
+      <div class="media-canvas" id="media-canvas"></div>
+    </div>
+  </dialog>
+
+  <script src="assets/page.js" defer></script>
+</body>
+</html>
