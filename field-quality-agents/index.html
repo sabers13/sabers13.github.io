@@ -9,13 +9,16 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>Field quality agents</title>
     <script>
+      // Light is the default; "auto" (follow the system) is an explicit choice.
+      let theme = "light";
       try {
-        const theme = localStorage.getItem("fqa-theme");
-        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+        const stored = localStorage.getItem("fqa-theme");
+        if (stored === "light" || stored === "dark" || stored === "auto") theme = stored;
       } catch { /* The opening state also works without storage access. */ }
+      if (theme !== "auto") document.documentElement.dataset.theme = theme;
     </script>
     <style>body{margin:0}.boot-screen{color:#111827;text-align:center;background:#f9fafb;place-content:center;justify-items:center;gap:24px;min-height:100svh;padding:32px;font:15px/1.6 Inter,system-ui,sans-serif;display:grid}.boot-screen svg{color:#2563eb}.boot-screen h1{letter-spacing:-.03em;margin:0;font-size:28px;font-weight:550;line-height:1.2}.boot-screen p{color:#626b78;margin:0}.boot-indicator{gap:8px;display:flex}.boot-indicator span{background:#2563eb;border-radius:8px;width:32px;height:4px}[data-theme=dark] .boot-screen{color:#f9fafb;background:#030712}[data-theme=dark] .boot-screen p{color:#a6afbd}[data-theme=dark] .boot-screen svg{color:#60a5fa}[data-theme=dark] .boot-indicator span{background:#60a5fa}@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .boot-screen{color:#f9fafb;background:#030712}:root:not([data-theme=light]) .boot-screen p{color:#a6afbd}:root:not([data-theme=light]) .boot-screen svg{color:#60a5fa}:root:not([data-theme=light]) .boot-indicator span{background:#60a5fa}}@keyframes boot-pulse{50%{opacity:.35}}@media (prefers-reduced-motion:no-preference){.boot-indicator{animation:1.2s ease-in-out 4 boot-pulse}}</style>
-    <script defer src="./assets/index-DdlhhmCt.js"></script>
+    <script defer src="./assets/index-QlJXvwN6.js"></script>
       <script src="./data/bundle.js"></script>
   </head>
   <body>
